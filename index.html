@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhatsMap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans JP',sans-serif;background:#0d0d0d;color:#f0f0f0;height:100vh;display:flex;flex-direction:column;overflow:hidden}
+#map{flex:1;z-index:1}
+.top-bar{position:absolute;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;gap:12px;padding:12px 16px;background:linear-gradient(to bottom,rgba(13,13,13,0.95),transparent)}
+.logo{font-family:'Space Mono',monospace;font-size:18px;font-weight:700;color:#4ade80;letter-spacing:-1px}
+.logo span{color:#f0f0f0}
+.room-badge{font-family:'Space Mono',monospace;font-size:10px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);padding:4px 10px;border-radius:20px;color:#aaa;cursor:pointer}
+.room-badge:hover{background:rgba(255,255,255,0.13)}
+.status-dot{width:7px;height:7px;border-radius:50%;background:#555;flex-shrink:0;transition:background 0.3s}
+.status-dot.online{background:#4ade80;box-shadow:0 0 6px #4ade80}
+.members-bar{position:absolute;top:60px;left:0;right:0;z-index:1000;display:flex;gap:8px;padding:0 16px;overflow-x:auto;scrollbar-width:none}
+.member-chip{display:flex;align-items:center;gap:6px;background:rgba(13,13,13,0.88);border:1px solid rgba(255,255,255,0.12);border-radius:20px;padding:5px 10px 5px 5px;white-space:nowrap;cursor:pointer;transition:border-color 0.2s}
+.member-chip:hover{border-color:rgba(255,255,255,0.35)}
+.member-chip.active{border-color:#4ade80}
+.avatar{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;color:#0d0d0d}
+.member-chip .name{font-size:11px;font-family:'Space Mono',monospace}
+.member-chip .time{font-size:9px;color:#666;margin-left:2px}
+.bottom-panel{position:absolute;bottom:0;left:0;right:0;z-index:1000;padding:16px;background:linear-gradient(to top,rgba(13,13,13,0.98),transparent 100%)}
+.chat-row{display:flex;gap:8px;align-items:flex-end}
+.nickname-input{font-family:'Space Mono',monospace;font-size:12px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);color:#f0f0f0;padding:10px 12px;border-radius:12px;width:100px;outline:none}
+.nickname-input:focus{border-color:#4ade80}
+.message-box{flex:1;background:rgba(30,30,30,0.95);border:1px solid rgba(255,255,255,0.15);border-radius:16px;display:flex;align-items:center;gap:8px;padding:8px 12px}
+.msg-input{flex:1;background:none;border:none;color:#f0f0f0;font-family:'Noto Sans JP',sans-serif;font-size:14px;outline:none;min-width:0}
+.msg-input::placeholder{color:#444}
+.send-btn{background:#4ade80;border:none;border-radius:10px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:background 0.2s}
+.send-btn:hover{background:#22c55e}
+.send-btn svg{width:16px;height:16px;fill:#0d0d0d}
+.msg-feed{position:absolute;left:16px;right:16px;bottom:90px;z-index:1000;display:flex;flex-direction:column;gap:6px;max-height:200px;overflow-y:auto;scrollbar-width:none}
+.msg-bubble{display:inline-flex;flex-direction:column;max-width:300px;background:rgba(20,20,20,0.92);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:8px 12px}
+.msg-bubble.me{align-self:flex-end;border-color:rgba(74,222,128,0.3)}
+.msg-sender{font-family:'Space Mono',monospace;font-size:9px;color:#4ade80;margin-bottom:3px}
+.msg-text{font-size:13px;line-height:1.5}
+.msg-loc{font-size:9px;color:#555;margin-top:3px;font-family:'Space Mono',monospace}
+.location-pill{display:inline-flex;align-items:center;gap:4px;font-size:9px;color:#4ade80;font-family:'Space Mono',monospace;margin-top:2px}
+.pulse-dot{width:6px;height:6px;border-radius:50%;background:#4ade80;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.8)}}
+.leaflet-popup-content-wrapper{background:#1a1a1a!important;color:#f0f0f0!important;border:1px solid rgba(255,255,255,0.15)!important;border-radius:10px!important;font-family:'Noto Sans JP',sans-serif!important;box-shadow:0 4px 20px rgba(0,0,0,0.6)!important}
+.leaflet-popup-tip{background:#1a1a1a!important}
+.leaflet-popup-content{margin:10px 14px!important;font-size:12px!important;line-height:1.6!important}
+.toast{position:absolute;top:100px;left:50%;transform:translateX(-50%);z-index:2000;background:rgba(74,222,128,0.15);border:1px solid rgba(74,222,128,0.4);color:#4ade80;font-family:'Space Mono',monospace;font-size:11px;padding:8px 16px;border-radius:20px;pointer-events:none;opacity:0;transition:opacity 0.3s;white-space:nowrap}
+.toast.show{opacity:1}
+</style>
+</head>
+<body>
+<div id="map"></div>
+<div class="top-bar">
+  <div class="logo">Whats<span>Map</span></div>
+  <div class="status-dot" id="statusDot"></div>
+  <div class="room-badge" onclick="copyRoomLink()">📋 URLをコピーして共有</div>
+</div>
+<div class="members-bar" id="membersBar"></div>
+<div class="msg-feed" id="msgFeed"></div>
+<div class="bottom-panel">
+  <div class="chat-row">
+    <input class="nickname-input" id="nicknameInput" placeholder="名前" maxlength="8">
+    <div class="message-box">
+      <input class="msg-input" id="msgInput" placeholder="メッセージを送信（位置情報を共有）" maxlength="100">
+      <button class="send-btn" onclick="sendMessage()">
+        <svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<!-- Firebase SDK -->
+<script type="module">
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
+import { getDatabase, ref, push, onValue, serverTimestamp, onDisconnect, set, remove } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDzJOEe--Jj6Gqos4BM9JpBdczoRxzbc-0",
+  authDomain: "whatsmap-f10e6.firebaseapp.com",
+  databaseURL: "https://whatsmap-f10e6-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "whatsmap-f10e6",
+  storageBucket: "whatsmap-f10e6.firebasestorage.app",
+  messagingSenderId: "749678460339",
+  appId: "1:749678460339:web:ac43b3111185e4a78f5fc6"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
+const COLORS=['#4ade80','#60a5fa','#f97316','#e879f9','#facc15','#fb7185','#34d399','#a78bfa'];
+const myId = 'user_'+Math.random().toString(36).slice(2,7);
+const todayKey = new Date().toISOString().slice(0,10); // YYYY-MM-DD
+
+const map = L.map('map',{zoomControl:false}).setView([35.6812,139.7671],14);
+L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors, Tiles by HOT',maxZoom:19}).addTo(map);
+L.control.zoom({position:'topright'}).addTo(map);
+
+const state = {members:{}};
+const layers = {markers:{},paths:{}};
+let memberColorMap = {};
+let colorIndex = 0;
+
+function getColor(id){
+  if(!memberColorMap[id]) memberColorMap[id]=COLORS[colorIndex++%COLORS.length];
+  return memberColorMap[id];
+}
+
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg; t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),2500);
+}
+
+function makeIcon(color,initial){
+  return L.divIcon({
+    className:'',
+    html:`<div style="width:34px;height:34px;border-radius:50%;background:${color};border:2.5px solid rgba(255,255,255,0.95);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:500;color:#0d0d0d;font-family:'Noto Sans JP',sans-serif;box-shadow:0 3px 12px rgba(0,0,0,0.6)">${initial}</div>`,
+    iconSize:[34,34],iconAnchor:[17,17]
+  });
+}
+
+function updateMemberOnMap(id, name, lat, lng, message, timeStr){
+  const color = getColor(id);
+  if(!state.members[id]) state.members[id]={name,color,history:[],message:'',time:timeStr};
+  const m = state.members[id];
+  m.name=name; m.time=timeStr;
+  if(message) m.message=message;
+
+  // 重複チェックして履歴追加
+  const last = m.history[m.history.length-1];
+  if(!last || last[0]!==lat || last[1]!==lng) m.history.push([lat,lng]);
+  if(m.history.length>100) m.history.shift();
+
+  if(layers.markers[id]) layers.markers[id].remove();
+  layers.markers[id]=L.marker([lat,lng],{icon:makeIcon(color,name[0]||'?')}).addTo(map);
+  layers.markers[id].bindPopup(
+    `<b style="color:${color};font-size:13px">${name}</b><br>`+
+    (m.message?`<span style="color:#ccc">${m.message}</span><br>`:'')+
+    `<span style="color:#555;font-size:10px;font-family:monospace">${timeStr}</span>`
+  );
+
+  if(layers.paths[id]) layers.paths[id].remove();
+  if(m.history.length>1){
+    layers.paths[id]=L.polyline(m.history,{color,weight:2.5,opacity:0.55,dashArray:'6 5'}).addTo(map);
+  }
+  renderMembersBar();
+}
+
+function renderMembersBar(){
+  const bar=document.getElementById('membersBar');
+  bar.innerHTML='';
+  for(const[id,m] of Object.entries(state.members)){
+    const chip=document.createElement('div');
+    chip.className='member-chip'+(id===myId?' active':'');
+    chip.innerHTML=`<div class="avatar" style="background:${m.color}">${m.name[0]||'?'}</div><span class="name">${m.name}</span><span class="time">${m.time}</span>`;
+    chip.onclick=()=>{
+      const h=m.history;
+      if(h.length) map.panTo(h[h.length-1],{animate:true});
+      if(layers.markers[id]) layers.markers[id].openPopup();
+    };
+    bar.appendChild(chip);
+  }
+}
+
+function addBubble(id,name,message,hasLocation,isMe){
+  const color=getColor(id);
+  const feed=document.getElementById('msgFeed');
+  const bubble=document.createElement('div');
+  bubble.className='msg-bubble'+(isMe?' me':'');
+  bubble.innerHTML=
+    `<div class="msg-sender" style="color:${color}">${name}</div>`+
+    `<div class="msg-text">${escHtml(message)}</div>`+
+    (hasLocation?`<div class="location-pill"><div class="pulse-dot"></div>位置共有済み</div>`:'')+
+    `<div class="msg-loc">${new Date().toLocaleTimeString('ja-JP',{hour:'2-digit',minute:'2-digit'})}</div>`;
+  feed.appendChild(bubble);
+  feed.scrollTop=feed.scrollHeight;
+  while(feed.children.length>30) feed.removeChild(feed.firstChild);
+}
+
+function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+
+// Firebase: メッセージをリアルタイム受信
+const msgsRef = ref(db, `rooms/main/messages/${todayKey}`);
+const seenMsgIds = new Set();
+
+onValue(msgsRef, snapshot=>{
+  document.getElementById('statusDot').classList.add('online');
+  const data = snapshot.val();
+  if(!data) return;
+  Object.entries(data).forEach(([msgId, msg])=>{
+    if(seenMsgIds.has(msgId)) return;
+    seenMsgIds.add(msgId);
+    const isMe = msg.userId===myId;
+    if(msg.lat && msg.lng){
+      updateMemberOnMap(msg.userId, msg.name, msg.lat, msg.lng, msg.text, msg.time||'--:--');
+    }
+    addBubble(msg.userId, msg.name, msg.text, !!(msg.lat&&msg.lng), isMe);
+  });
+});
+
+function sendMessage(){
+  const name=(document.getElementById('nicknameInput').value.trim()||'名無し');
+  const msg=document.getElementById('msgInput').value.trim();
+  if(!msg) return;
+  document.getElementById('msgInput').value='';
+
+  const now=new Date();
+  const timeStr=now.getHours().toString().padStart(2,'0')+':'+now.getMinutes().toString().padStart(2,'0');
+
+  const sendToFirebase=(lat,lng)=>{
+    const payload={
+      userId:myId, name, text:msg, time:timeStr,
+      timestamp:Date.now(),
+      ...(lat!=null?{lat,lng}:{})
+    };
+    push(msgsRef, payload);
+    if(lat!=null) map.panTo([lat,lng],{animate:true});
+  };
+
+  if(!navigator.geolocation){
+    showToast('位置情報に対応していません');
+    sendToFirebase(null,null);
+    return;
+  }
+  showToast('位置情報を取得中…');
+  navigator.geolocation.getCurrentPosition(
+    pos=>{
+      showToast('送信しました');
+      sendToFirebase(pos.coords.latitude, pos.coords.longitude);
+    },
+    ()=>{
+      showToast('⚠ 位置情報を取得できませんでした');
+      sendToFirebase(null,null);
+    },
+    {timeout:7000,enableHighAccuracy:true}
+  );
+}
+
+function copyRoomLink(){
+  const url=window.location.href;
+  if(navigator.clipboard){
+    navigator.clipboard.writeText(url)
+      .then(()=>showToast('URLをコピーしました！'))
+      .catch(()=>prompt('このURLをWhatsAppで共有してください:',url));
+  } else {
+    prompt('このURLをWhatsAppで共有してください:',url);
+  }
+}
+
+document.getElementById('msgInput').addEventListener('keydown',e=>{
+  if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendMessage();}
+});
+
+// 名前を保存・復元
+const savedName = localStorage.getItem('whatsmap_name');
+if(savedName) document.getElementById('nicknameInput').value = savedName;
+document.getElementById('nicknameInput').addEventListener('change', e=>{
+  const n = e.target.value.trim();
+  if(n) localStorage.setItem('whatsmap_name', n);
+});
+
+// グローバルに公開
+window.sendMessage=sendMessage;
+window.copyRoomLink=copyRoomLink;
+</script>
+</body>
+</html>
