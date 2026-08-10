@@ -38,6 +38,43 @@ Windows.
 - `images/` — generated figures plus the ADRC logo. A hand-saved `<key>_manual.png` always wins,
   so an official ShakeMap or SGC intensity map can be dropped in without touching the code.
 
+## Supplying photographs and official maps
+
+Drop the file into `images/` and rebuild — nothing else to edit for maps.
+
+**Replacing a generated figure** — name the file after the figure key:
+
+| Key | Figure it replaces |
+| --- | --- |
+| `locator_world` | world locator |
+| `locator_region` | NW South America locator |
+| `locator_epicentre` | epicentre / affected cities |
+| `slab_section` | Nazca-slab cross-section |
+| `mmi_distance` | distance vs. MMI chart |
+
+- `images/<key>_manual.png` (or `.jpg`) — used by **both** decks.
+- `images/<key>_manual_ja.png` / `_manual_en.png` — used by that language only (wins over the shared one).
+
+A hand-supplied file always beats the generated one, and the aspect ratio is preserved, so an
+official USGS ShakeMap or SGC intensity map can go straight in.
+
+**Adding photographs** — put the image files in `images/` and list them under `photos` in
+`data/report_data.json`; a "Damage Photographs / 被害状況写真" page (up to 6 per page, more pages
+added automatically) appears only when the list is non-empty:
+
+```json
+"photos": [
+  { "file": "pereira_airport.jpg",
+    "caption_en": "Partially collapsed terminal, Matecaña International Airport, Pereira",
+    "caption_ja": "一部倒壊したマテカニャ国際空港ターミナル（ペレイラ）",
+    "credit": "© photographer / agency",
+    "url": "https://source-page" }
+]
+```
+
+Always fill in `credit`, and confirm reuse permission before public release — press photographs
+are not free to redistribute.
+
 ## Updating for a later report
 
 1. Edit `data/report_data.json` — figures, timeline rows, damage rows, observations. Keep the

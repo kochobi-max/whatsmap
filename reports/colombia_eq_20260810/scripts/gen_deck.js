@@ -80,9 +80,16 @@ function imgSize(file) {
   return null;
 }
 function resolveImg(key) {
-  for (const ext of ["png", "jpg", "jpeg"]) {
-    const m = path.join(ROOT, "images", key + "_manual." + ext);
-    if (fs.existsSync(m)) return m;
+  if (key.startsWith("photo:")) {
+    const f = path.join(ROOT, "images", key.slice(6));
+    return fs.existsSync(f) ? f : null;
+  }
+  // hand-supplied images win over generated ones; a language-specific one wins over a shared one
+  for (const stem of [key + "_manual_" + LANG, key + "_manual"]) {
+    for (const ext of ["png", "jpg", "jpeg"]) {
+      const m = path.join(ROOT, "images", stem + "." + ext);
+      if (fs.existsSync(m)) return m;
+    }
   }
   // language-specific variant of a generated figure (images/<key>_ja.png)
   const loc = path.join(ROOT, "images", key + "_" + LANG + ".png");
@@ -528,6 +535,25 @@ noteBox(s, 0.4, 5.72, 12.5, 0.96, T("Pattern", "傾向"),
     "コロンビアで最も多くの死者を出した地震は、最大規模の地震ではない。1983年ポパヤン（M5.5）、1994年パエス（M6.8）、1999年アルメニア（M6.1〜6.2）はいずれも浅く市街地に近かった。一方、規模の大きい1906年・1979年の海域地震の死者はより少ない。被害を決めるのは規模だけでなく、深さと震源の近さである。"));
 srcLine(s, [linkBy("USGS - M 7.4"), linkBy("Servicio Geológico"), linkBy("GEM")]);
 footer(s);
+
+/* ============ 15b. Photographs (only if data.photos has entries) ============ */
+if ((d.photos || []).length) {
+  const PER = 6;
+  chunk(d.photos, PER).forEach((rows, pi, pages) => {
+    s = newSlide();
+    const suffix = pages.length > 1 ? T(` (${pi + 1}/${pages.length})`, `（${pi + 1}/${pages.length}）`) : "";
+    heading(s, "Damage Photographs" + suffix, "被害状況写真" + suffix);
+    subNote(s, "Credit is shown with each photograph. Check reuse permission before public release.",
+      "各写真にクレジットを表示。公開前に二次利用の可否を確認すること。");
+    const xs = [0.4, 4.72, 9.04], ys = [1.34, 4.06], cw = 3.9, ch = 2.6;
+    rows.forEach((ph, i) => {
+      const x = xs[i % 3], y = ys[Math.floor(i / 3)];
+      const cap = [L(ph, "caption"), ph.credit].filter(Boolean).join("   ");
+      imageSlot(s, x, y, cw, ch, "photo:" + ph.file, cap, ph.url || null);
+    });
+    footer(s);
+  });
+}
 
 /* ============ 16. Observations ============ */
 s = newSlide();
