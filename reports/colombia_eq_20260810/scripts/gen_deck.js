@@ -406,10 +406,10 @@ footer(s);
 s = newSlide();
 heading(s, "Overview of the Earthquake & Response Measures", "地震の概要と対応措置");
 s.addText([
-  { text: `${L(d.event, "origin_time_local")}  (${L(d.event, "origin_time_utc")} / ${L(d.event, "origin_time_jst")})    |    ${d.event.magnitude}    |    ${T("depth", "深さ")} ${d.event.depth_km} km    |    ${L(d.event, "max_intensity")}`, options: { fontSize: 11.5, bold: true, color: NAVY } },
-], { x: 0.4, y: 1.06, w: 12.5, h: 0.36, align: "left", fontFace: FONT, margin: 2 });
-s.addText(L(d.meta, "as_of"), { x: 0.4, y: 1.4, w: 12.5, h: 0.3, fontSize: 9.5, color: MUTED, italic: true, fontFace: FONT, margin: 2 });
-bulletsTier(s, 0.4, 1.78, 12.5, 4.9, d.response_measures, { base: 13.5 });
+  { text: `${L(d.event, "origin_time_short")}    |    ${d.event.magnitude}    |    ${T("depth", "深さ")} ${d.event.depth_km} km    |    ${L(d.event, "max_intensity")}`, options: { fontSize: 11.5, bold: true, color: NAVY } },
+], { x: 0.4, y: 1.04, w: 12.5, h: 0.42, align: "left", fontFace: FONT, margin: 2 });
+s.addText(L(d.meta, "as_of"), { x: 0.4, y: 1.46, w: 12.5, h: 0.3, fontSize: 9.5, color: MUTED, italic: true, fontFace: FONT, margin: 2 });
+bulletsTier(s, 0.4, 1.82, 12.5, 4.86, d.response_measures, { base: 13.5 });
 srcLine(s, [linkBy("UNGRD"), linkBy("Colombia One - Government"), linkBy("France 24")]);
 footer(s);
 

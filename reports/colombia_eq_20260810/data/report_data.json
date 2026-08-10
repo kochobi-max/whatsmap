@@ -8,12 +8,12 @@
     "edition_ja": "第1報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
-    "glide": "EQ-2026-XXXXXX-COL (TBC)",
+    "glide": "EQ-2026-000146-COL",
     "as_of_en": "Figures as of 10 Aug 2026, 17:00 COT (11 Aug 07:00 JST), approx. 9.5 hours after the earthquake. All figures are preliminary.",
     "as_of_ja": "数値は2026年8月10日17:00（コロンビア時間、日本時間8月11日07:00）現在、発災から約9時間半後。すべて速報値。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-08-11 08:12 JST",
+    "stamp": "2026-08-11 08:16 JST",
     "update_date": "11/08/2026",
     "title_es": "Terremoto del Chocó de 2026 (Colombia)",
     "subtitle_es": "M7.4, San José del Palmar, departamento del Chocó — 10 de agosto de 2026",
@@ -65,7 +65,10 @@
     "origin_time_jst_ja": "2026年8月10日 21:34（日本時間）",
     "origin_time_local_es": "10 de agosto de 2026, 07:34 COT (UTC-5)",
     "origin_time_utc_es": "10 de agosto de 2026, 12:34 UTC",
-    "origin_time_jst_es": "10 de agosto de 2026, 21:34 JST"
+    "origin_time_jst_es": "10 de agosto de 2026, 21:34 JST",
+    "origin_time_short_en": "10 Aug 2026, 07:34 COT (12:34 UTC / 21:34 JST)",
+    "origin_time_short_ja": "2026年8月10日 07:34 COT（12:34 UTC／21:34 JST）",
+    "origin_time_short_es": "10 ago. 2026, 07:34 COT (12:34 UTC / 21:34 JST)"
   },
   "tectonics": {
     "text_en": "Colombia lies at the junction of the Nazca, Caribbean and South America plates. Off the Pacific coast the Nazca plate subducts eastward beneath South America at roughly 50-60 mm/yr, and the descending slab reaches intermediate depths (70-300 km) beneath the Western and Central Cordilleras. This event ruptured inside that slab at about 107 km depth, which is why the shaking was felt over hundreds of kilometres - as far as Bogotá, Quito and Panamá City - while surface faulting and tsunami generation were absent. Intermediate-depth events radiate high-frequency energy efficiently and attenuate slowly, so damage tends to be distributed across many cities rather than concentrated in a narrow epicentral zone.",
@@ -154,10 +157,10 @@
       "es": "Las edificaciones averiadas, los cortes de energía y la interrupción de las comunicaciones retrasan la evaluación en las zonas del Chocó más cercanas al epicentro."
     },
     {
-      "tier": "tbc",
-      "en": "A GLIDE number for this event had not been confirmed at the time of writing; it will be added once issued.",
-      "ja": "本稿執筆時点でGLIDE番号は確認できていない。付番され次第記載する。",
-      "es": "Al momento de redactar este informe no se había confirmado un número GLIDE para este evento; se incorporará cuando se asigne."
+      "tier": "official",
+      "en": "GLIDE number assigned for this event: EQ-2026-000146-COL.",
+      "ja": "本災害のGLIDE番号が付番された：EQ-2026-000146-COL。",
+      "es": "Número GLIDE asignado a este evento: EQ-2026-000146-COL."
     }
   ],
   "timeline": [
@@ -1199,11 +1202,11 @@
       "label_es": "Americares: terremoto de Colombia, agosto de 2026"
     },
     {
-      "label_en": "GLIDEnumber (for the event identifier once issued)",
-      "label_ja": "GLIDE番号（付番後に参照）",
+      "label_en": "GLIDEnumber — EQ-2026-000146-COL (event identifier)",
+      "label_ja": "GLIDE番号 — EQ-2026-000146-COL（災害識別番号）",
       "url": "https://glidenumber.net/",
       "tier": "official",
-      "label_es": "GLIDEnumber (para el identificador del evento cuando se asigne)"
+      "label_es": "GLIDEnumber — EQ-2026-000146-COL (identificador del evento)"
     },
     {
       "label_en": "ADRC - Asian Disaster Reduction Center",

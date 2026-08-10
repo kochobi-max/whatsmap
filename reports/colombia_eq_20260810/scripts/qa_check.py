@@ -40,7 +40,9 @@ check(not missing, f"all linkBy() references resolve (unmatched: {missing})")
 blob = json.dumps(data, ensure_ascii=False)
 bad = [w for w in ("TODO", "FIXME", "Insert image", "lorem") if w in blob]
 check(not bad, f"no placeholder text left in the data ({bad})")
-check(blob.count("XXXXXX") <= 1, "the only XXXXXX left is the pending GLIDE number")
+check("XXXXXX" not in blob, "no placeholder GLIDE number left")
+check(re.fullmatch(r"[A-Z]{2}-\d{4}-\d{6}-[A-Z]{3}", data["meta"]["glide"]) is not None,
+      f"GLIDE number is well-formed ({data['meta']['glide']})")
 
 no_es = []
 def walk(o, path=""):

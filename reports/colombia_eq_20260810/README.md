@@ -86,8 +86,8 @@ are not free to redistribute.
    three languages for anything new; `scripts/qa_check.py` fails if a Spanish variant is missing.
    Keep the source hierarchy: do not overwrite an official figure with a media one, and mark
    unverified items `tbc`.
-2. Update `meta.as_of_en` / `as_of_ja` / `as_of_es` to the new cut-off time, and fill in `meta.glide` once the
-   GLIDE number is issued (currently `EQ-2026-XXXXXX-COL (TBC)`).
+2. Update `meta.as_of_en` / `as_of_ja` / `as_of_es` to the new cut-off time. The GLIDE number is
+   `EQ-2026-000146-COL`.
 3. Rebuild and run the QA script.
 
 ## Note on sources
