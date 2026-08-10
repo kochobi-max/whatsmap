@@ -22,7 +22,8 @@ const path = require("path");
 const HERE = __dirname;
 const ROOT = path.join(HERE, "..");
 const DATA = process.env.DATA || path.join(ROOT, "data", "report_data.json");
-const LANG = (process.env.LANG_OUT || "en").toLowerCase().startsWith("ja") ? "ja" : "en";
+const LANGS = ["en", "ja", "es"];
+const LANG = LANGS.find(l => (process.env.LANG_OUT || "en").toLowerCase().startsWith(l)) || "en";
 const OUT = process.env.OUT || path.join(ROOT, "output", `ADRC_EQ_COL_Choco_20260810_${LANG.toUpperCase()}.pptx`);
 const d = JSON.parse(fs.readFileSync(DATA, "utf8"));
 
@@ -35,7 +36,7 @@ const INK = "222222", MUTED = "6A6A6A", LINE = "D9D9D9", LIGHT = "EAF2F8", WHITE
 const ADRC_ORANGE = "E8A317";
 // Meiryo for Japanese (aliased to an installed CJK face at PDF time); Cambria for English headings.
 const FONT = LANG === "ja" ? "Meiryo" : "Calibri";
-const SERIF = LANG === "ja" ? "Meiryo" : "Cambria";
+const SERIF = LANG === "ja" ? "Meiryo" : "Cambria";  // Spanish sets like English
 let PAGE = 0;
 
 const JA = LANG === "ja";
@@ -49,8 +50,129 @@ function L(obj, key) {
 }
 /** pick from an object that has bare `en` / `ja` keys */
 function LL(obj) { return obj ? (obj[LANG] || obj.en || "") : ""; }
-/** UI label pairs */
-function T(en, ja) { return JA ? ja : en; }
+const UI_ES = {
+  "Sources: ": "Fuentes: ",
+  "Insert image before web release.": "Insertar la imagen antes de la publicación.",
+  "Disaster Report": "Informe de desastre",
+  "depth": "profundidad",
+  "(1) World / Colombia": "(1) Mundo / Colombia",
+  "(2) NW South America": "(2) Noroeste de Suramérica",
+  "(3) Epicentre & affected cities": "(3) Epicentro y ciudades afectadas",
+  "Base map: Natural Earth (110 m). Distances computed from published coordinates; the figures are schematic and are not official hazard maps.": "Mapa base: Natural Earth (110 m). Distancias calculadas a partir de coordenadas publicadas; las figuras son esquemáticas y no son mapas oficiales de amenaza.",
+  "Overview   ": "Resumen   ",
+  "Seismotectonic Setting: an intraslab earthquake": "Marco sismotectónico: un sismo intraplaca dentro de la losa",
+  "Schematic cross-section (ADRC)": "Corte esquemático (ADRC)",
+  "Overview of the Earthquake & Response Measures": "Resumen del sismo y medidas de respuesta",
+  "Chronology of the Response (10 August)": "Cronología de la respuesta (10 de agosto)",
+  "Times are Colombia time (COT, UTC-5). The earthquake occurred at 07:34 COT = 21:34 JST on 10 August.": "Las horas están en hora de Colombia (COT, UTC-5). El sismo ocurrió a las 07:34 COT = 21:34 JST del 10 de agosto.",
+  "Time": "Hora",
+  "Action": "Hecho",
+  "Source": "Fuente",
+  "Affected Departments & Cities": "Departamentos y ciudades afectados",
+  "Epicentral distances (ADRC)": "Distancias epicentrales (ADRC)",
+  "Why damage is dispersed": "Por qué los daños están dispersos",
+  "A 107 km-deep source puts every city in the region at a broadly similar hypocentral distance (108-200 km), so no single city sits in a narrow zone of extreme shaking.": "Una fuente a 107 km de profundidad deja a todas las ciudades de la región a una distancia hipocentral parecida (108-200 km), de modo que ninguna queda dentro de una franja estrecha de sacudimiento extremo.",
+  "Department": "Departamento",
+  "Main cities": "Ciudades principales",
+  "Dist.": "Dist.",
+  "Situation": "Situación",
+  "Event Parameters & Observed Shaking": "Parámetros del sismo y sacudimiento observado",
+  "Origin time (local)": "Hora de origen (local)",
+  "Origin time (UTC / JST)": "Hora de origen (UTC / JST)",
+  "Epicentre": "Epicentro",
+  "Coordinates": "Coordenadas",
+  "Magnitude": "Magnitud",
+  "Depth": "Profundidad",
+  "Mechanism": "Mecanismo focal",
+  "Max. shaking": "Sacudimiento máximo",
+  "Felt area": "Área sentida",
+  "Tsunami": "Tsunami",
+  "Alert level": "Nivel de alerta",
+  "Item": "Ítem",
+  "Value": "Valor",
+  "Distance vs. reported MMI (ADRC)": "Distancia frente a la MMI reportada (ADRC)",
+  "People exposed": "Personas expuestas",
+  "Population exposed by shaking level (millions, USGS PAGER)": "Población expuesta por nivel de sacudimiento (millones, PAGER del USGS)",
+  "Seismicity: Aftershocks": "Sismicidad: réplicas",
+  "Note": "Observación",
+  "Tier": "Categoría",
+  "Operational implication": "Implicación operativa",
+  "Buildings that survived the mainshock in a damaged state have lost capacity. Even moderate aftershocks can bring them down, so rapid habitability assessment before re-occupancy - and keeping people out of visibly damaged structures - matters as much as the aftershock statistics themselves.": "Las edificaciones que sobrevivieron al sismo principal en estado averiado han perdido capacidad. Incluso réplicas moderadas pueden derribarlas, de modo que la evaluación rápida de habitabilidad antes de volver a ocuparlas —y mantener a la gente fuera de las estructuras visiblemente averiadas— importa tanto como las estadísticas de réplicas.",
+  "Human Damage": "Afectación humana",
+  "Deaths": "Muertos",
+  "Injured": "Heridos",
+  "Buildings damaged": "Edificaciones afectadas",
+  "1,600+": "más de 1.600",
+  "Reported deaths by department (provisional)": "Muertos reportados por departamento (provisional)",
+  "Reading the numbers": "Cómo leer las cifras",
+  "Damage: Buildings, Services & Lifelines": "Daños: edificaciones, servicios y líneas vitales",
+  "All figures preliminary. Official (government) figures are primary; media-sourced items are labelled.": "Todas las cifras son preliminares. Las cifras oficiales (del Gobierno) son la fuente primaria; los datos de prensa están identificados.",
+  "Reported": "Cifra reportada",
+  "National Response": "Respuesta nacional",
+  "Legal basis": "Fundamento jurídico",
+  "The national disaster declaration activates the SNGRD established by Law 1523 of 2012, allowing UNGRD to direct resources and the national disaster fund (FNGRD) to be used without the ordinary procurement timelines.": "La declaratoria de desastre nacional activa el SNGRD creado por la Ley 1523 de 2012, lo que permite a la UNGRD dirigir recursos y usar el fondo nacional de gestión del riesgo (FNGRD) sin los plazos ordinarios de contratación.",
+  "International Support": "Apoyo internacional",
+  "Channelling": "Canalización",
+  "Offers of assistance are to be channelled through Colombia's Ministry of Foreign Affairs together with UNGRD.": "Los ofrecimientos de ayuda se canalizan a través de la Cancillería de Colombia junto con la UNGRD.",
+  "Satellite & Analytical Support": "Apoyo satelital y analítico",
+  "Organisation": "Entidad",
+  "Contribution": "Aporte",
+  "Status": "Estado",
+  "Note on Sentinel Asia": "Nota sobre Sentinel Asia",
+  "Sentinel Asia, for which ADRC serves as a joint project team member, covers the Asia-Pacific region. For a disaster in Colombia the equivalent international mechanisms are the International Charter 'Space and Major Disasters' and the Copernicus Emergency Management Service; UNOSAT/UNITAR rapid mapping is also commonly used in Latin America.": "Sentinel Asia, en cuyo equipo conjunto de proyecto participa el ADRC, cubre la región de Asia y el Pacífico. Para un desastre en Colombia, los mecanismos internacionales equivalentes son la Carta Internacional «Espacio y Grandes Catástrofes» y el Servicio de Gestión de Emergencias Copernicus; en América Latina también se emplea con frecuencia la cartografía rápida de UNOSAT/UNITAR.",
+  "Colombia's Disaster Risk Management System": "El sistema de gestión del riesgo de desastres de Colombia",
+  "The 1999 Armenia (Quindío) Earthquake & Recovery": "El terremoto de Armenia (Quindío) de 1999 y la reconstrucción",
+  "1999 impact": "Impacto en 1999",
+  "Figure": "Cifra",
+  "What followed / lessons": "Lo que siguió y las lecciones",
+  "Why this matters now": "Por qué importa ahora",
+  "Historical Earthquakes in Colombia": "Sismos históricos en Colombia",
+  "Year": "Año",
+  "Event": "Sismo",
+  "Mag.": "Mag.",
+  "Impact": "Impacto y rasgos",
+  "Pattern": "Patrón",
+  "Colombia's deadliest earthquakes have not been its largest. Popayán 1983 (M5.5), Páez 1994 (M6.8) and Armenia 1999 (M6.1-6.2) were all shallow and close to towns; the largest events, offshore in 1906 and 1979, killed fewer people. Depth and proximity, not magnitude alone, drive the toll.": "Los sismos más mortales de Colombia no han sido los de mayor magnitud. Popayán 1983 (M5.5), Páez 1994 (M6.8) y Armenia 1999 (M6.1-6.2) fueron someros y cercanos a los cascos urbanos; los eventos mayores, mar adentro en 1906 y 1979, dejaron menos víctimas. Lo que determina el saldo es la profundidad y la cercanía, no la magnitud por sí sola.",
+  "Damage Photographs": "Registro fotográfico de daños",
+  "Credit is shown with each photograph. Check reuse permission before public release.": "Cada fotografía lleva su crédito. Verificar la autorización de reutilización antes de la publicación.",
+  "Observations & Points to Watch": "Observaciones y puntos por seguir",
+  "Useful Links & Sources": "Enlaces útiles y fuentes",
+  "Source policy: ": "Política de fuentes: "
+};
+
+// Short labels that live in the data (source names, statuses) rather than in the code.
+const CELL = {
+  "USGS / SGC": { ja: "USGS／SGC", es: "USGS / SGC" },
+  "SGC": { ja: "SGC", es: "SGC" },
+  "UNGRD": { ja: "UNGRD", es: "UNGRD" },
+  "Mayor of Cali": { ja: "カリ市長", es: "Alcaldía de Cali" },
+  "Mayor of Manizales": { ja: "マニサレス市長", es: "Alcaldía de Manizales" },
+  "Aerocivil / media": { ja: "民間航空当局／報道", es: "Aerocivil / prensa" },
+  "Government": { ja: "政府", es: "Gobierno" },
+  "Presidency": { ja: "大統領府", es: "Presidencia" },
+  "Presidency / UNGRD": { ja: "大統領府／UNGRD", es: "Presidencia / UNGRD" },
+  "International media": { ja: "国際報道", es: "Prensa internacional" },
+  "Charter / Copernicus": { ja: "チャーター／コペルニクス", es: "Carta / Copernicus" },
+  "Published": { ja: "公開済み", es: "Publicado" },
+  "Reported / confirming": { ja: "報道あり・確認中", es: "Reportado / en verificación" },
+  "n/a": { ja: "対象外", es: "no aplica" },
+  "Morning": { ja: "午前", es: "Mañana" },
+  "Daytime": { ja: "日中", es: "Durante el día" },
+  "Afternoon": { ja: "午後", es: "Tarde" },
+  "Same day": { ja: "同日", es: "Mismo día" },
+};
+/** translate a short label that comes from the data; unknown labels pass through */
+function C(v) {
+  const e = CELL[v];
+  return e && e[LANG] !== undefined ? e[LANG] : v;
+}
+
+/** UI label pairs; Spanish is looked up by the English string (see UI_ES) */
+function T(en, ja) {
+  if (JA) return ja;
+  if (LANG === "es") return UI_ES[en] !== undefined ? UI_ES[en] : en;
+  return en;
+}
 
 function today_ddmmyyyy() {
   const t = new Date(Date.now() + 9 * 3600 * 1000); // JST
@@ -105,12 +227,12 @@ function resolveImg(key) {
 
 /* ---------------- source tiers ---------------- */
 const TIER = {
-  official: { en: "Official", ja: "公式", color: "1E7A34" },
-  media: { en: "Media", ja: "報道", color: "B8860B" },
-  tbc: { en: "TBC", ja: "確認中", color: "888888" },
+  official: { en: "Official", ja: "公式", es: "Oficial", color: "1E7A34" },
+  media: { en: "Media", ja: "報道", es: "Prensa", color: "B8860B" },
+  tbc: { en: "TBC", ja: "確認中", es: "Por confirmar", color: "888888" },
 };
 function tierColor(t) { return (TIER[t] || TIER.tbc).color; }
-function tierLabel(t) { const x = TIER[t] || TIER.tbc; return JA ? x.ja : x.en; }
+function tierLabel(t) { const x = TIER[t] || TIER.tbc; return x[LANG] || x.en; }
 function tierRun(t, size) {
   return { text: `[${tierLabel(t)}] `, options: { fontSize: size, bold: true, color: tierColor(t) } };
 }
@@ -165,8 +287,8 @@ function srcLine(slide, items) {
   });
   slide.addText(runs, { x: 0.4, y: 6.86, w: 12.5, h: 0.24, align: "left", fontFace: FONT, margin: 0, valign: "middle" });
 }
-function heading(slide, en, ja) {
-  slide.addText(T(en, ja), {
+function heading(slide, en, ja, extra) {
+  slide.addText(T(en, ja) + (extra || ""), {
     x: 0.4, y: 0.32, w: 11.3, h: 0.62, align: "left", margin: 0, valign: "middle",
     bold: true, color: NAVY, fontSize: JA ? 19 : 21, fontFace: SERIF, wrap: false, shrinkText: true,
   });
@@ -257,12 +379,16 @@ s.addShape(p.ShapeType.line, { x: 0.4, y: 1.92, w: W - 0.8, h: 0, line: { color:
     { x: 0.4, y: mapY + mapH + 0.04, w: 12.5, h: 0.22, align: "left", color: MUTED, fontSize: 7.5, italic: true, fontFace: FONT, margin: 0 });
 }
 {
-  const descY = 5.24, descH = 1.5;
+  const descY = 5.10, descH = 1.64, bw = 12.33, bh = descH - 0.18;
   s.addShape(p.ShapeType.rect, { x: 0, y: descY, w: W, h: descH, fill: { color: "262626" }, line: { width: 0 } });
+  // characters per line differ by script, so calibrate the fit per language
+  const sz = fitSize(L(d.event, "summary"), {
+    base: JA ? 9.5 : 9.8, min: 8, upl: Math.round(bw * (JA ? 21 : 14.5)), maxLines: Math.floor(bh / 0.165),
+  });
   s.addText([
     { text: T("Overview   ", "概要　　"), options: { bold: true, fontSize: 11.5, color: "FFC000" } },
-    { text: L(d.event, "summary"), options: { fontSize: JA ? 9.5 : 9.8, color: "FFFFFF" } },
-  ], { x: 0.5, y: descY + 0.09, w: 12.33, h: descH - 0.18, align: "left", valign: "top", fontFace: FONT, margin: 3 });
+    { text: L(d.event, "summary"), options: { fontSize: sz, color: "FFFFFF" } },
+  ], { x: 0.5, y: descY + 0.09, w: bw, h: bh, align: "left", valign: "top", fontFace: FONT, margin: 3 });
 }
 srcLine(s, [linkBy("USGS - M 7.4"), linkBy("Servicio Geológico"), linkBy("UNGRD")]);
 footer(s);
@@ -280,7 +406,7 @@ footer(s);
 s = newSlide();
 heading(s, "Overview of the Earthquake & Response Measures", "地震の概要と対応措置");
 s.addText([
-  { text: `${d.event.origin_time_local}  (${d.event.origin_time_utc} / ${d.event.origin_time_jst})    |    ${d.event.magnitude}    |    ${T("depth", "深さ")} ${d.event.depth_km} km    |    ${L(d.event, "max_intensity")}`, options: { fontSize: 11.5, bold: true, color: NAVY } },
+  { text: `${L(d.event, "origin_time_local")}  (${L(d.event, "origin_time_utc")} / ${L(d.event, "origin_time_jst")})    |    ${d.event.magnitude}    |    ${T("depth", "深さ")} ${d.event.depth_km} km    |    ${L(d.event, "max_intensity")}`, options: { fontSize: 11.5, bold: true, color: NAVY } },
 ], { x: 0.4, y: 1.06, w: 12.5, h: 0.36, align: "left", fontFace: FONT, margin: 2 });
 s.addText(L(d.meta, "as_of"), { x: 0.4, y: 1.4, w: 12.5, h: 0.3, fontSize: 9.5, color: MUTED, italic: true, fontFace: FONT, margin: 2 });
 bulletsTier(s, 0.4, 1.78, 12.5, 4.9, d.response_measures, { base: 13.5 });
@@ -294,14 +420,14 @@ footer(s);
   pages.forEach((rows, pi) => {
     s = newSlide();
     const suffix = pages.length > 1 ? T(` (${pi + 1}/${pages.length})`, `（${pi + 1}/${pages.length}）`) : "";
-    heading(s, "Chronology of the Response (10 August)" + suffix, "対応の時系列（8月10日）" + suffix);
+    heading(s, "Chronology of the Response (10 August)", "対応の時系列（8月10日）", suffix);
     subNote(s, "Times are Colombia time (COT, UTC-5). The earthquake occurred at 07:34 COT = 21:34 JST on 10 August.",
       "時刻はコロンビア時間（COT、UTC-5）。地震発生は8月10日07:34 COT＝同日21:34 JST。");
     const rowsT = [[th(T("Time", "時刻")), th(T("Action", "事項")), th(T("Source", "出典"))]];
     rows.forEach((r, i) => rowsT.push([
-      td(r.time, i, { fontSize: 10, bold: true, color: NAVY, align: "center" }),
+      td(C(r.time), i, { fontSize: 10, bold: true, color: NAVY, align: "center" }),
       td(LL(r), i, { fontSize: JA ? 9.5 : 10 }),
-      td(r.src, i, { fontSize: 8.5, bold: true, color: tierColor(r.tier), align: "center" }),
+      td(C(r.src), i, { fontSize: 8.5, bold: true, color: tierColor(r.tier), align: "center" }),
     ]));
     s.addTable(rowsT, { x: 0.4, y: 1.34, w: 12.5, colW: [1.3, 9.2, 2.0], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.68, valign: "middle" });
     srcLine(s, [linkBy("USGS - M 7.4"), linkBy("UNGRD"), linkBy("CNN"), linkBy("Colombia One - First")]);
@@ -326,7 +452,7 @@ noteBox(s, 0.4, 5.66, 5.5, 1.0,
     td(a.mmi, i, { fontSize: 9, align: "center", bold: true, color: RED }),
     td(L(a, "note"), i, { fontSize: 8.5 }),
   ]));
-  s.addTable(rows, { x: 6.1, y: 1.12, w: 6.8, colW: [1.25, 1.35, 0.72, 0.5, 2.98], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.68, valign: "middle" });
+  s.addTable(rows, { x: 6.1, y: 1.12, w: 6.8, colW: [1.42, 1.26, 0.68, 0.62, 2.82], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.68, valign: "middle" });
 }
 srcLine(s, [linkBy("UNGRD"), linkBy("Colombia One - First"), linkBy("CBS News")]);
 footer(s);
@@ -336,8 +462,8 @@ s = newSlide();
 heading(s, "Event Parameters & Observed Shaking", "地震の諸元と観測された揺れ");
 {
   const prm = [
-    [T("Origin time (local)", "発生時刻（現地）"), d.event.origin_time_local],
-    [T("Origin time (UTC / JST)", "発生時刻（UTC／JST）"), `${d.event.origin_time_utc}  /  ${d.event.origin_time_jst}`],
+    [T("Origin time (local)", "発生時刻（現地）"), L(d.event, "origin_time_local")],
+    [T("Origin time (UTC / JST)", "発生時刻（UTC／JST）"), `${L(d.event, "origin_time_utc")}  /  ${L(d.event, "origin_time_jst")}`],
     [T("Epicentre", "震央"), L(d.event, "epicentre")],
     [T("Coordinates", "緯度経度"), `${d.event.lat} N, ${Math.abs(d.event.lon)} W`],
     [T("Magnitude", "規模"), `${d.event.magnitude} — ${L(d.event, "magnitude_note")}`],
@@ -433,7 +559,7 @@ footer(s);
   pages.forEach((rows, pi) => {
     s = newSlide();
     const suffix = pages.length > 1 ? T(` (${pi + 1}/${pages.length})`, `（${pi + 1}/${pages.length}）`) : "";
-    heading(s, "Damage: Buildings, Services & Lifelines" + suffix, "被害状況：建物・公共サービス・ライフライン" + suffix);
+    heading(s, "Damage: Buildings, Services & Lifelines", "被害状況：建物・公共サービス・ライフライン", suffix);
     subNote(s, "All figures preliminary. Official (government) figures are primary; media-sourced items are labelled.",
       "すべて速報値。公式（政府）値を主とし、報道由来の項目は区分を明示している。");
     const rowsT = [[th(T("Item", "項目")), th(T("Reported", "報告値")), th(T("Source", "出典")), th(T("Tier", "区分"))]];
@@ -477,7 +603,7 @@ heading(s, "Satellite & Analytical Support", "衛星・解析による支援");
   d.satellite.forEach((r, i) => rows.push([
     td(r.org, i, { fontSize: 10, bold: true, color: NAVY }),
     td(LL(r), i, { fontSize: 9.5 }),
-    td(r.status, i, { fontSize: 9, align: "center" }),
+    td(C(r.status), i, { fontSize: 9, align: "center" }),
     td(tierLabel(r.tier), i, { fontSize: 8.5, bold: true, color: tierColor(r.tier), align: "center" }),
   ]));
   s.addTable(rows, { x: 0.4, y: 1.12, w: 12.5, colW: [2.2, 6.9, 2.3, 1.1], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.62, valign: "middle" });
@@ -531,7 +657,7 @@ heading(s, "Historical Earthquakes in Colombia", "コロンビアの主な地震
   s.addTable(rows, { x: 0.4, y: 1.12, w: 12.5, colW: [0.9, 3.4, 1.0, 7.2], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.56, valign: "middle" });
 }
 noteBox(s, 0.4, 5.72, 12.5, 0.96, T("Pattern", "傾向"),
-  T("Colombia's deadliest earthquakes have not been its largest. Popayan 1983 (M5.5), Paez 1994 (M6.8) and Armenia 1999 (M6.1-6.2) were all shallow and close to towns; the largest events, offshore in 1906 and 1979, killed fewer people. Depth and proximity, not magnitude alone, drive the toll.",
+  T("Colombia's deadliest earthquakes have not been its largest. Popayán 1983 (M5.5), Páez 1994 (M6.8) and Armenia 1999 (M6.1-6.2) were all shallow and close to towns; the largest events, offshore in 1906 and 1979, killed fewer people. Depth and proximity, not magnitude alone, drive the toll.",
     "コロンビアで最も多くの死者を出した地震は、最大規模の地震ではない。1983年ポパヤン（M5.5）、1994年パエス（M6.8）、1999年アルメニア（M6.1〜6.2）はいずれも浅く市街地に近かった。一方、規模の大きい1906年・1979年の海域地震の死者はより少ない。被害を決めるのは規模だけでなく、深さと震源の近さである。"));
 srcLine(s, [linkBy("USGS - M 7.4"), linkBy("Servicio Geológico"), linkBy("GEM")]);
 footer(s);
@@ -542,7 +668,7 @@ if ((d.photos || []).length) {
   chunk(d.photos, PER).forEach((rows, pi, pages) => {
     s = newSlide();
     const suffix = pages.length > 1 ? T(` (${pi + 1}/${pages.length})`, `（${pi + 1}/${pages.length}）`) : "";
-    heading(s, "Damage Photographs" + suffix, "被害状況写真" + suffix);
+    heading(s, "Damage Photographs", "被害状況写真", suffix);
     subNote(s, "Credit is shown with each photograph. Check reuse permission before public release.",
       "各写真にクレジットを表示。公開前に二次利用の可否を確認すること。");
     const xs = [0.4, 4.72, 9.04], ys = [1.34, 4.06], cw = 3.9, ch = 2.6;
@@ -569,7 +695,7 @@ footer(s);
   pages.forEach((rows, pi) => {
     s = newSlide();
     const suffix = pages.length > 1 ? T(` (${pi + 1}/${pages.length})`, `（${pi + 1}/${pages.length}）`) : "";
-    heading(s, "Useful Links & Sources" + suffix, "有用リンク・出典" + suffix);
+    heading(s, "Useful Links & Sources", "有用リンク・出典", suffix);
     if (pi === 0) {
       s.addText([
         { text: T("Source policy: ", "情報源方針："), options: { bold: true, fontSize: 9.5, color: NAVY } },

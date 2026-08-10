@@ -28,8 +28,10 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 IMG = os.path.join(HERE, "..", "images")
 os.makedirs(IMG, exist_ok=True)
 
-JA = os.environ.get("LANG_OUT", "en").lower().startswith("ja")
-SUFFIX = "_ja" if JA else ""
+LANG = next((l for l in ("en", "ja", "es")
+             if os.environ.get("LANG_OUT", "en").lower().startswith(l)), "en")
+JA = LANG == "ja"
+SUFFIX = "" if LANG == "en" else "_" + LANG
 if JA:
     matplotlib.rcParams["font.family"] = ["IPAGothic", "DejaVu Sans"]
 matplotlib.rcParams["axes.unicode_minus"] = False
@@ -46,8 +48,12 @@ EPI = (4.9031, -76.1885)      # USGS us6000tjl2
 DEPTH_KM = 107.0
 
 
-def t(en, ja):
-    return ja if JA else en
+def t(en, ja, es=None):
+    if JA:
+        return ja
+    if LANG == "es" and es is not None:
+        return es
+    return en
 
 
 # name(en), name(ja), lat, lon, max reported MMI (USGS ShakeMap class),
@@ -76,7 +82,7 @@ COUNTRIES = {"Colombia": "コロンビア", "Ecuador": "エクアドル", "Peru"
 
 
 def city_name(c):
-    return c[1] if JA else c[0]
+    return c[1] if JA else c[0]  # Spanish uses the same (Spanish) place names
 
 
 def city_off(c):
@@ -123,7 +129,7 @@ def fig_world():
     ax.set_yticks([])
     for sp in ax.spines.values():
         sp.set_edgecolor("#BFB8A8")
-    ax.set_title(t("(1) World / Colombia", "①　世界とコロンビア"), fontsize=8, color=NAVY, pad=4)
+    ax.set_title(t("(1) World / Colombia", "①　世界とコロンビア", "(1) Mundo / Colombia"), fontsize=8, color=NAVY, pad=4)
     save(fig, "locator_world")
 
 
@@ -141,11 +147,11 @@ def fig_region():
         g = w[w.name == nm]
         if len(g):
             c = g.geometry.iloc[0].representative_point()
-            ax.annotate(t(nm.upper(), ja), (c.x, c.y), fontsize=6.5, color="#7A7266",
+            ax.annotate(t(nm.upper(), ja, nm.upper()), (c.x, c.y), fontsize=6.5, color="#7A7266",
                         ha="center", va="center")
     ax.plot(EPI[1], EPI[0], marker="*", color=RED, markersize=15,
             markeredgecolor="white", markeredgewidth=0.6, zorder=6)
-    ax.annotate(t("Epicentre\nM7.4, 107 km", "震央\nM7.4・深さ107km"), (EPI[1], EPI[0]),
+    ax.annotate(t("Epicentre\nM7.4, 107 km", "震央\nM7.4・深さ107km", "Epicentro\nM7.4, 107 km"), (EPI[1], EPI[0]),
                 textcoords="offset points", xytext=(8, -18), fontsize=6.8, color=RED,
                 fontweight="bold")
     ax.add_patch(Rectangle((-78.2, 3.0), 4.6, 3.6, fill=False, edgecolor=RED, linewidth=1.4))
@@ -155,7 +161,7 @@ def fig_region():
     ax.set_yticks([])
     for sp in ax.spines.values():
         sp.set_edgecolor("#BFB8A8")
-    ax.set_title(t("(2) NW South America", "②　南米北西部"), fontsize=8, color=NAVY, pad=4)
+    ax.set_title(t("(2) NW South America", "②　南米北西部", "(2) Noroeste de Suramérica"), fontsize=8, color=NAVY, pad=4)
     save(fig, "locator_region")
 
 
@@ -193,7 +199,8 @@ def fig_epicentre():
     for sp in ax.spines.values():
         sp.set_edgecolor("#BFB8A8")
     ax.set_title(t("(3) Epicentre and main affected cities (epicentral distance)",
-                   "③　震央と主な被災都市（数値は震央距離）"), fontsize=7.2, color=NAVY, pad=4)
+                   "③　震央と主な被災都市（数値は震央距離）",
+                   "(3) Epicentro y principales ciudades afectadas (distancia epicentral)"), fontsize=7.2, color=NAVY, pad=4)
     save(fig, "locator_epicentre")
 
 
@@ -209,25 +216,26 @@ def fig_slab():
                          facecolor="#C8BFAA", edgecolor="#A79C84", linewidth=0.8))
     ax.add_patch(Polygon([(-100, -6), (-22, -6), (150, -190), (150, -215), (-22, -32), (-100, -32)],
                          closed=True, facecolor="#BBD3E8", edgecolor=NAVY2, linewidth=1.1))
-    ax.annotate(t("Nazca plate (subducting)", "ナスカプレート（沈み込み）"), (18, -78),
-                fontsize=8, color=NAVY2, rotation=-33)
-    ax.annotate(t("South America plate", "南米プレート"), (95, -18), fontsize=8, color="#7A7266")
-    ax.annotate(t("Pacific\nOcean", "太平洋"), (-78, -68), fontsize=7.5, color=NAVY2, ha="center")
-    ax.annotate(t("Andes (Western / Central Cordillera)", "アンデス山脈（西部・中央山脈）"),
-                (42, 36), fontsize=7.5, color="#7A6A4A", ha="center")
+    ax.annotate(t("Nazca plate (subducting)", "ナスカプレート（沈み込み）", "Placa de Nazca (en subducción)"),
+                (26, -92) if LANG == "es" else (18, -78), fontsize=8, color=NAVY2, rotation=-33)
+    ax.annotate(t("South America plate", "南米プレート", "Placa Suramericana"), (95, -18), fontsize=8, color="#7A7266")
+    ax.annotate(t("Pacific\nOcean", "太平洋", "Océano\nPacífico"), (-78, -68), fontsize=7.5, color=NAVY2, ha="center")
+    ax.annotate(t("Andes (Western / Central Cordillera)", "アンデス山脈（西部・中央山脈）", "Andes (cord. Occidental y Central)"),
+                (42, 38), fontsize=7.5, color="#7A6A4A", ha="center")
     ax.add_patch(FancyArrow(-92, 16, 34, 0, width=2.4, head_width=8, head_length=10,
                             color=NAVY2, length_includes_head=True))
-    ax.annotate(t("~50-60 mm/yr", "年約50〜60mm"), (-75, 22), fontsize=7, color=NAVY2, ha="center")
+    ax.annotate(t("~50-60 mm/yr", "年約50〜60mm", "~50-60 mm/año"), (-75, 22), fontsize=7, color=NAVY2, ha="center")
 
     ax.plot(96, -107, marker="*", color=RED, markersize=20, markeredgecolor="white",
             markeredgewidth=0.7, zorder=8)
     ax.annotate(t("Hypocentre  M7.4  depth 107 km\nintermediate-depth, intraslab\n(strike-slip within the slab)",
-                  "震源　M7.4　深さ107km\nやや深発・スラブ内地震\n（スラブ内部の横ずれ断層型）"),
+                  "震源　M7.4　深さ107km\nやや深発・スラブ内地震\n（スラブ内部の横ずれ断層型）",
+                  "Hipocentro  M7.4  prof. 107 km\nprofundidad intermedia, intraplaca\n(falla de rumbo dentro de la losa)"),
                 (96, -107), textcoords="offset points", xytext=(12, -6), fontsize=8,
                 color=RED, fontweight="bold", linespacing=1.35)
     ax.plot([96, 96], [-107, 0], color=RED, linewidth=0.8, linestyle=(0, (3, 3)))
     ax.plot(96, 0, marker="v", color=RED, markersize=6)
-    ax.annotate(t("Epicentre (Chocó)", "震央（チョコ県）"), (96, 2), fontsize=7.5, color=RED,
+    ax.annotate(t("Epicentre (Chocó)", "震央（チョコ県）", "Epicentro (Chocó)"), (96, 2), fontsize=7.5, color=RED,
                 ha="center", va="bottom")
 
     ax.set_xlim(-100, 160)
@@ -235,12 +243,13 @@ def fig_slab():
     ax.set_xticks([])
     ax.set_yticks([-50, -100, -150, -200, -250])
     ax.set_yticklabels(["50", "100", "150", "200", "250"], fontsize=7, color=MUTED)
-    ax.set_ylabel(t("Depth (km)", "深さ（km）"), fontsize=8, color=MUTED)
+    ax.set_ylabel(t("Depth (km)", "深さ（km）", "Profundidad (km)"), fontsize=8, color=MUTED)
     for side in ("top", "right", "bottom"):
         ax.spines[side].set_visible(False)
     ax.spines["left"].set_edgecolor("#CCCCCC")
     ax.set_title(t("Schematic cross-section (not to scale): why a 107 km-deep event shook a wide area",
-                   "模式断面図（縮尺は正確ではない）：深さ107kmの地震が広域を揺らした理由"),
+                   "模式断面図（縮尺は正確ではない）：深さ107kmの地震が広域を揺らした理由",
+                   "Corte esquemático (sin escala): por qué un sismo a 107 km de profundidad sacudió una zona amplia"),
                  fontsize=8.5, color=NAVY, pad=6)
     save(fig, "slab_section")
 
@@ -254,20 +263,22 @@ def fig_mmi():
     ax.barh(names, dist, color=NAVY2, height=0.62)
     for i, (nm, dd, hh, mmi) in enumerate(rows):
         ax.text(dd + 4, i, t(f"{dd:.0f} km  ·  hypo. {hh:.0f} km  ·  MMI {mmi}",
-                             f"{dd:.0f}km ・ 震源距離{hh:.0f}km ・ MMI {mmi}"),
+                             f"{dd:.0f}km ・ 震源距離{hh:.0f}km ・ MMI {mmi}",
+                             f"{dd:.0f} km  ·  hipo. {hh:.0f} km  ·  MMI {mmi}"),
                 va="center", fontsize=6.6, color="#333333")
     ax.set_xlim(0, max(dist) * 1.9)
     ax.invert_yaxis()
     ax.tick_params(axis="y", labelsize=7.0, colors="#333333", length=0)
     ax.tick_params(axis="x", labelsize=7, colors=MUTED)
-    ax.set_xlabel(t("Epicentral distance (km)", "震央距離（km）"), fontsize=7.5, color=MUTED)
+    ax.set_xlabel(t("Epicentral distance (km)", "震央距離（km）", "Distancia epicentral (km)"), fontsize=7.5, color=MUTED)
     for side in ("top", "right", "left"):
         ax.spines[side].set_visible(False)
     ax.spines["bottom"].set_edgecolor("#CCCCCC")
     ax.grid(axis="x", color="#EDEDED", linewidth=0.7)
     ax.set_axisbelow(True)
     ax.set_title(t("Distance to the epicentre and reported shaking (MMI)",
-                   "震央距離と報告された揺れ（MMI）"), fontsize=8.5, color=NAVY, pad=6)
+                   "震央距離と報告された揺れ（MMI）",
+                   "Distancia al epicentro y sacudimiento reportado (MMI)"), fontsize=8.5, color=NAVY, pad=6)
     save(fig, "mmi_distance")
 
 
@@ -277,7 +288,7 @@ if __name__ == "__main__":
     fig_epicentre()
     fig_slab()
     fig_mmi()
-    if not JA:
+    if LANG == "en":
         print("\ndistances from the epicentre (km, epicentral / hypocentral):")
         for c in CITIES:
             dd, hh = hypocentral(c[2], c[3])

@@ -7,7 +7,8 @@ Checks, for each language:
   - every linkBy() substring in the generator resolves to a link in the data
   - no placeholder text ("TBC" markers are allowed, "XXXX"/"TODO"/"Insert image" are not)
   - the PDF exists, its page count matches the PPTX, and no page is blank
-  - the JA deck contains Japanese text; the EN deck contains no Japanese text
+  - the JA deck contains Japanese text; the EN and ES decks contain none
+  - every UI string passed to T()/heading()/subNote() has a Spanish translation
 """
 import json
 import os
@@ -41,7 +42,28 @@ bad = [w for w in ("TODO", "FIXME", "Insert image", "lorem") if w in blob]
 check(not bad, f"no placeholder text left in the data ({bad})")
 check(blob.count("XXXXXX") <= 1, "the only XXXXXX left is the pending GLIDE number")
 
-for lang in ("EN", "JA"):
+no_es = []
+def walk(o, path=""):
+    if isinstance(o, dict):
+        for k, v in o.items():
+            if k.endswith("_en") and (k[:-3] + "_es") not in o:
+                no_es.append(f"{path}.{k}")
+            elif k == "en" and "es" not in o:
+                no_es.append(f"{path}.en")
+            elif isinstance(v, (dict, list)):
+                walk(v, f"{path}.{k}")
+    elif isinstance(o, list):
+        for i, v in enumerate(o):
+            walk(v, f"{path}[{i}]")
+walk(data)
+check(not no_es, f"every data field has a Spanish variant (missing: {no_es[:5]})")
+
+ui = set(re.findall(r'(?:T\(|heading\(s,\s*|subNote\(s,\s*)"((?:[^"\\]|\\.)*)"', gen))
+es_dict = set(re.findall(r'^  "((?:[^"\\]|\\.)*)":', gen, re.M))
+untranslated = sorted(k for k in ui if k not in es_dict)
+check(not untranslated, f"every UI string has a Spanish translation (missing: {untranslated[:5]})")
+
+for lang in ("EN", "JA", "ES"):
     pptx = os.path.join(ROOT, "output", f"{BASE}_{lang}.pptx")
     pdf = os.path.join(ROOT, "output", f"{BASE}_{lang}.pdf")
     check(os.path.exists(pptx), f"{lang}: PPTX exists")
@@ -63,7 +85,7 @@ for lang in ("EN", "JA"):
     if lang == "JA":
         check(ja_pages >= n_pages - 1, f"JA: Japanese text present on {ja_pages}/{n_pages} pages")
     else:
-        check(ja_pages == 0, f"EN: no Japanese text ({ja_pages} pages contain kana/kanji)")
+        check(ja_pages == 0, f"{lang}: no Japanese text ({ja_pages} pages contain kana/kanji)")
 
 for f in fails:
     print(f)
