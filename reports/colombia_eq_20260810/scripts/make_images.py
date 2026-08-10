@@ -44,7 +44,8 @@ LAND = "#E9E4DA"
 LAND2 = "#DCD5C7"
 SEA = "#EAF2F8"
 
-EPI = (4.9031, -76.1885)      # USGS us6000tjl2
+EPI = (4.9031, -76.1885)      # USGS us6000tjl2 (distances in this report are measured from here)
+EPI_SGC = (5.04, -76.34)      # SGC SGC2026pqqmro
 DEPTH_KM = 107.0
 
 
@@ -190,8 +191,13 @@ def fig_epicentre():
         ax.annotate(f"{city_name(c)}\n{dist:.0f} km", (lo + off[0], la + off[1]),
                     fontsize=5.6, color=NAVY, zorder=6, linespacing=1.15)
 
+    ax.plot(EPI_SGC[1], EPI_SGC[0], marker="*", color="white", markersize=15,
+            markeredgecolor=RED, markeredgewidth=1.1, zorder=6)
+    ax.annotate("SGC", (EPI_SGC[1], EPI_SGC[0] + 0.13), fontsize=5.4, color=RED,
+                ha="center", va="bottom", zorder=7)
     ax.plot(EPI[1], EPI[0], marker="*", color=RED, markersize=17,
             markeredgecolor="white", markeredgewidth=0.6, zorder=7)
+    ax.annotate("USGS", (EPI[1] + 0.08, EPI[0] - 0.20), fontsize=5.4, color=RED, zorder=7)
     ax.set_xlim(-79.2 if JA else -78.6, -73.0)
     ax.set_ylim(2.6, 7.0)
     ax.set_xticks([])
@@ -201,6 +207,10 @@ def fig_epicentre():
     ax.set_title(t("(3) Epicentre and main affected cities (epicentral distance)",
                    "③　震央と主な被災都市（数値は震央距離）",
                    "(3) Epicentro y principales ciudades afectadas (distancia epicentral)"), fontsize=7.2, color=NAVY, pad=4)
+    ax.annotate(t("★ USGS epicentre (distances measured from here)   ☆ SGC epicentre",
+                  "★ USGSの震央（距離の基準）　☆ SGCの震央",
+                  "★ Epicentro USGS (origen de las distancias)   ☆ Epicentro SGC"),
+                (0.015, 0.015), xycoords="axes fraction", fontsize=5.2, color="#555555")
     save(fig, "locator_epicentre")
 
 

@@ -52,6 +52,13 @@ function L(obj, key) {
 function LL(obj) { return obj ? (obj[LANG] || obj.en || "") : ""; }
 const UI_ES = {
   "Sources: ": "Fuentes: ",
+  "Macroseismic Intensity (SGC)": "Intensidad macrosísmica (SGC)",
+  "Official SGC intensity map": "Mapa de intensidades del SGC",
+  "Modified Mercalli scale (Worden et al., 2012), as printed on the SGC map": "Escala de Mercalli modificada (Worden et al., 2012), tal como aparece en el mapa del SGC",
+  "SGC event ID": "ID del evento SGC",
+  "stations": "estaciones",
+  "SGC event ID": "ID del evento SGC",
+  "stations": "estaciones",
   "Insert image before web release.": "Insertar la imagen antes de la publicación.",
   "Disaster Report": "Informe de desastre",
   "depth": "profundidad",
@@ -465,8 +472,8 @@ heading(s, "Event Parameters & Observed Shaking", "地震の諸元と観測さ�
     [T("Origin time (local)", "発生時刻（現地）"), L(d.event, "origin_time_local")],
     [T("Origin time (UTC / JST)", "発生時刻（UTC／JST）"), `${L(d.event, "origin_time_utc")}  /  ${L(d.event, "origin_time_jst")}`],
     [T("Epicentre", "震央"), L(d.event, "epicentre")],
-    [T("Coordinates", "緯度経度"), `${d.event.lat} N, ${Math.abs(d.event.lon)} W`],
-    [T("Magnitude", "規模"), `${d.event.magnitude} — ${L(d.event, "magnitude_note")}`],
+    [T("Coordinates", "緯度経度"), `USGS ${d.event.lat} N, ${Math.abs(d.event.lon)} W   ·   SGC ${d.event.sgc.lat} N, ${Math.abs(d.event.sgc.lon)} W`],
+    [T("Magnitude", "規模"), L(d.event, "magnitude_display")],
     [T("Depth", "深さ"), L(d.event, "depth_display")],
     [T("Mechanism", "発震機構"), L(d.event, "mechanism")],
     [T("Max. shaking", "最大の揺れ"), L(d.event, "max_intensity")],
@@ -477,7 +484,7 @@ heading(s, "Event Parameters & Observed Shaking", "地震の諸元と観測さ�
   ];
   s.addTable([[th(T("Item", "項目")), th(T("Value", "値"))]].concat(
     prm.map((r, i) => [td(r[0], i, { fontSize: 9.5, bold: true, color: NAVY }), td(r[1], i, { fontSize: 9.5 })])
-  ), { x: 0.4, y: 1.12, w: 7.3, colW: [2.0, 5.3], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.44, valign: "middle" });
+  ), { x: 0.4, y: 1.12, w: 7.3, colW: [2.0, 5.3], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.40, valign: "middle" });
 }
 imageSlot(s, 7.9, 1.12, 5.0, 2.9, "mmi_distance", T("Distance vs. reported MMI (ADRC)", "距離と報告されたMMI（ADRC作成）"), null);
 {
@@ -491,8 +498,38 @@ imageSlot(s, 7.9, 1.12, 5.0, 2.9, "mmi_distance", T("Distance vs. reported MMI (
   });
   s.addText(L(d, "exposure_note"), { x: 7.9, y: 6.24, w: 5.0, h: 0.56, fontSize: 7.5, color: MUTED, fontFace: FONT, valign: "top", margin: 0 });
 }
-srcLine(s, [linkBy("USGS - M 7.4"), linkBy("GDACS"), linkBy("Infobae")]);
+s.addText(L(d, "param_note"), { x: 0.4, y: 6.36, w: 7.3, h: 0.46, fontSize: 7, color: MUTED, italic: true, fontFace: FONT, valign: "top", margin: 0 });
+srcLine(s, [linkBy("USGS - M 7.4"), linkBy("event bulletin"), linkBy("GDACS")]);
 footer(s);
+
+/* ============ 6b. Macroseismic intensity (SGC ShakeMap) ============ */
+if (d.intensity_map) {
+  const im = d.intensity_map;
+  s = newSlide();
+  heading(s, "Macroseismic Intensity (SGC)", "体感震度分布（SGC）");
+  imageSlot(s, 0.4, 1.12, 5.7, 5.3, "sgc_shakemap",
+    T("Official SGC intensity map", "SGC 公式の震度分布図") + "  (\u00a9 SGC)", im.url);
+  s.addText(L(im, "stamp"), { x: 6.4, y: 1.12, w: 6.5, h: 0.62, fontSize: 8, color: MUTED, fontFace: FONT, valign: "top", margin: 0 });
+  s.addText(L(im, "text"), { x: 6.4, y: 1.80, w: 6.5, h: 1.68, fontSize: JA ? 9.5 : 10, color: INK, fontFace: FONT, valign: "top", margin: 0 });
+  {
+    const hd = JA ? im.scale_header_ja : (LANG === "es" ? im.scale_header_es : im.scale_header_en);
+    const rows = [hd.map(th)];
+    im.scale.forEach((r, i) => rows.push([
+      td(r.mmi, i, { fontSize: 9, bold: true, color: NAVY, align: "center" }),
+      td(L(r, "shake"), i, { fontSize: 8.5 }),
+      td(L(r, "dmg"), i, { fontSize: 8.5 }),
+      td(r.pga, i, { fontSize: 8.5, align: "center" }),
+      td(r.pgv, i, { fontSize: 8.5, align: "center" }),
+    ]));
+    s.addTable(rows, { x: 6.4, y: 3.56, w: 6.5, colW: [0.72, 1.72, 1.66, 1.2, 1.2],
+      border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.28, valign: "middle" });
+    s.addText(T("Modified Mercalli scale (Worden et al., 2012), as printed on the SGC map",
+      "改正メルカリ震度階（Worden et al., 2012）。SGCの図に掲載されているもの。"),
+      { x: 6.4, y: 6.42, w: 6.5, h: 0.22, fontSize: 7.5, color: MUTED, italic: true, fontFace: FONT, margin: 0 });
+  }
+  srcLine(s, [linkBy("macroseismic intensity map"), linkBy("event bulletin"), linkBy("USGS - M 7.4")]);
+  footer(s);
+}
 
 /* ============ 7. Seismicity / aftershocks ============ */
 s = newSlide();

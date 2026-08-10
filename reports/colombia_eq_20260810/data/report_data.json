@@ -13,7 +13,7 @@
     "as_of_ja": "数値は2026年8月10日17:00（コロンビア時間、日本時間8月11日07:00）現在、発災から約9時間半後。すべて速報値。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-08-11 08:16 JST",
+    "stamp": "2026-08-11 08:42 JST",
     "update_date": "11/08/2026",
     "title_es": "Terremoto del Chocó de 2026 (Colombia)",
     "subtitle_es": "M7.4, San José del Palmar, departamento del Chocó — 10 de agosto de 2026",
@@ -26,20 +26,20 @@
     "origin_time_local": "10 Aug 2026, 07:34 COT (UTC-5)",
     "origin_time_utc": "10 Aug 2026, 12:34 UTC",
     "origin_time_jst": "10 Aug 2026, 21:34 JST",
-    "epicentre_en": "5 km E of San José del Palmar, Chocó Department (approx. 280 km W of Bogotá)",
-    "epicentre_ja": "チョコ県サンホセ・デル・パルマルの東5km（ボゴタの西約280km）",
+    "epicentre_en": "USGS: 5 km E of San José del Palmar, Chocó Department (approx. 280 km W of Bogotá) — SGC: 20 km from San José del Palmar",
+    "epicentre_ja": "USGS：チョコ県サンホセ・デル・パルマルの東5km（ボゴタの西約280km）／SGC：同町から20km",
     "lat": 4.9031,
     "lon": -76.1885,
     "magnitude": "Mww 7.4",
-    "magnitude_note_en": "USGS Mww 7.4. The SGC initially announced M6.6 at 79 km depth, then revised to M7.4; SGC depth is given as roughly 96-103 km.",
-    "magnitude_note_ja": "USGSはMww7.4。コロンビア地質調査所（SGC）は当初M6.6・深さ79kmと発表し、その後M7.4に修正。SGCの深さは約96〜103kmとされる。",
+    "magnitude_note_en": "USGS Mww 7.4 and SGC 7.4 agree on size. The SGC's first bulletin gave M6.6 at 79 km depth and was revised to 7.4; the two agencies' locations differ by about 20 km and their depths by about 11 km, which is normal for an intermediate-depth event recorded by different networks.",
+    "magnitude_note_ja": "規模はUSGSのMww7.4、SGCの7.4で一致。SGCの第1報はM6.6・深さ79kmで、のち7.4に修正された。両機関の震源位置は約20km、深さは約11km異なるが、観測網の異なるやや深発地震では通常の範囲である。",
     "depth_km": 107,
-    "depth_display_en": "107 km (USGS); approx. 96-103 km (SGC)",
-    "depth_display_ja": "107km（USGS）、約96〜103km（SGC）",
+    "depth_display_en": "107 km (USGS) / 96 km (SGC)",
+    "depth_display_ja": "107km（USGS）／96km（SGC）",
     "mechanism_en": "Strike-slip faulting at intermediate depth, within the subducting Nazca slab (not on the shallow plate interface)",
     "mechanism_ja": "沈み込むナスカプレート内部（スラブ内）で発生した、やや深発の横ずれ断層型。プレート境界の浅い地震ではない。",
-    "max_intensity_en": "MMI VII (Very strong) - USGS ShakeMap",
-    "max_intensity_ja": "改正メルカリ震度 MMI VII（非常に強い）／USGS ShakeMap",
+    "max_intensity_en": "MMI VII (Very strong) — USGS ShakeMap; the SGC macroseismic intensity map agrees",
+    "max_intensity_ja": "改正メルカリ震度 MMI VII（非常に強い）／USGS ShakeMap。SGCの体感震度図も同等",
     "felt_en": "Felt across western and central Colombia including Bogotá, Cali and Medellín, and in Ecuador, Panama and Venezuela",
     "felt_ja": "ボゴタ・カリ・メデジンを含むコロンビア西部〜中部の広域、およびエクアドル・パナマ・ベネズエラで有感",
     "tsunami_en": "No tsunami. The event was inland and at intermediate depth; no tsunami warning was issued for the Pacific coast.",
@@ -48,11 +48,11 @@
     "alert_ja": "USGS PAGER：オレンジ（相当数の人的被害・経済被害の可能性）。GDACS：オレンジ。",
     "summary_en": "At 07:34 local time (12:34 UTC) on 10 August 2026, an Mww 7.4 earthquake struck western Colombia with its epicentre 5 km east of San José del Palmar in Chocó Department, at a depth of about 107 km (USGS). The event was an intermediate-depth, strike-slip rupture inside the subducting Nazca slab; because of its depth, strong shaking (MMI VI-VII) was spread over a wide area of the Andean Coffee Region rather than concentrated near the epicentre, and about 10.5 million people were exposed to it. The SGC describes it as the largest-magnitude earthquake recorded in Colombia in the past decade. As of 17:00 COT on 10 August the Government reported 111 deaths and 87 injured, more than 1,600 buildings damaged (1,575 homes damaged, 37 destroyed, 61 buildings collapsed), together with damage to 18 health facilities, 52 educational facilities, 18 major roads and six regional airports. The passenger terminal of Matecaña International Airport in Pereira partially collapsed, a tower of the neo-Gothic cathedral in Manizales fell onto the nave, and about 30% of the University Hospital in Cali collapsed. The President declared a national disaster, set up a Unified Command Post in Chocó and deployed four USAR teams and the armed forces. There was no tsunami. All figures are preliminary and are expected to change as assessment proceeds.",
     "summary_ja": "2026年8月10日07:34（現地時間、12:34 UTC）、コロンビア西部チョコ県サンホセ・デル・パルマルの東5kmを震源とするMww7.4の地震が発生した。深さは約107km（USGS）で、沈み込むナスカプレート内部のやや深発・横ずれ型。深いために強い揺れ（MMI VI〜VII）はコーヒー地帯を含む広範囲に及び、約1,050万人が強い揺れにさらされた。SGCは過去10年でコロンビア最大規模の地震としている。8月10日17:00（現地）時点で政府は死者111人・負傷者87人、建物被害1,600棟超（住宅損壊1,575、全壊37、建物倒壊61）、医療施設18・教育施設52・幹線道路18・地方空港6か所の被害を発表。ペレイラのマテカニャ国際空港旅客ターミナルが一部倒壊、マニサレスの大聖堂の塔が身廊に崩落、カリの大学病院は約30%が損壊した。大統領は国家災害を宣言し、チョコ県に統合指揮所を設置、USAR4隊と軍を投入した。津波はない。数値はすべて速報値であり、被害調査の進展により変動する。",
-    "epicentre_es": "5 km al E de San José del Palmar, departamento del Chocó (unos 280 km al O de Bogotá)",
-    "magnitude_note_es": "USGS Mww 7.4. El SGC anunció inicialmente M6.6 a 79 km de profundidad y luego la revisó a M7.4; la profundidad del SGC se sitúa entre unos 96 y 103 km.",
-    "depth_display_es": "107 km (USGS); aprox. 96-103 km (SGC)",
+    "epicentre_es": "USGS: 5 km al E de San José del Palmar, departamento del Chocó (unos 280 km al O de Bogotá) — SGC: a 20 km de San José del Palmar",
+    "magnitude_note_es": "El tamaño coincide: Mww 7.4 del USGS y 7.4 del SGC. El primer boletín del SGC dio M6.6 a 79 km de profundidad y fue revisado a 7.4; las localizaciones de las dos entidades difieren unos 20 km y sus profundidades unos 11 km, lo normal en un sismo de profundidad intermedia registrado por redes distintas.",
+    "depth_display_es": "107 km (USGS) / 96 km (SGC)",
     "mechanism_es": "Falla de rumbo a profundidad intermedia, dentro de la placa de Nazca en subducción (no en la interfaz somera entre placas)",
-    "max_intensity_es": "MMI VII (muy fuerte) — ShakeMap del USGS",
+    "max_intensity_es": "MMI VII (muy fuerte) — ShakeMap del USGS; el mapa de intensidades macrosísmicas del SGC coincide",
     "felt_es": "Sentido en el occidente y el centro de Colombia, incluidas Bogotá, Cali y Medellín, y también en Ecuador, Panamá y Venezuela",
     "tsunami_es": "Sin tsunami. El sismo fue continental y de profundidad intermedia; no se emitió alerta de tsunami para la costa del Pacífico.",
     "alert_es": "PAGER del USGS: naranja (probables víctimas y daños significativos). GDACS: naranja.",
@@ -68,7 +68,26 @@
     "origin_time_jst_es": "10 de agosto de 2026, 21:34 JST",
     "origin_time_short_en": "10 Aug 2026, 07:34 COT (12:34 UTC / 21:34 JST)",
     "origin_time_short_ja": "2026年8月10日 07:34 COT（12:34 UTC／21:34 JST）",
-    "origin_time_short_es": "10 ago. 2026, 07:34 COT (12:34 UTC / 21:34 JST)"
+    "origin_time_short_es": "10 ago. 2026, 07:34 COT (12:34 UTC / 21:34 JST)",
+    "sgc": {
+      "event_id": "SGC2026pqqmro",
+      "url": "https://www.sgc.gov.co/detallesismo/SGC2026pqqmro/",
+      "magnitude": "7.4 (ML)",
+      "origin_time": "07:34:29 COT",
+      "lat": 5.04,
+      "lon": -76.34,
+      "depth_km": 96,
+      "stations": 69,
+      "epicentre_en": "20 km from San José del Palmar, Chocó",
+      "epicentre_ja": "チョコ県サンホセ・デル・パルマルから20km",
+      "epicentre_es": "a 20 km de San José del Palmar, Chocó",
+      "note_en": "SGC bulletin of record (event SGC2026pqqmro, located with 69 stations). The SGC states that its seismic bulletins are subject to change as data review and processing continue.",
+      "note_ja": "SGCの公式速報（イベントSGC2026pqqmro、69観測点で決定）。SGCは、データの精査・処理の進展に伴い速報値が変更されうるとしている。",
+      "note_es": "Boletín oficial del SGC (evento SGC2026pqqmro, localizado con 69 estaciones). El SGC advierte que la información de sus boletines sísmicos está sujeta a cambios mientras avanzan la revisión y el procesamiento de los datos."
+    },
+    "magnitude_display_en": "Mww 7.4 (USGS)   ·   7.4 (SGC)",
+    "magnitude_display_ja": "Mww 7.4（USGS）　・　7.4（SGC）",
+    "magnitude_display_es": "Mww 7,4 (USGS)   ·   7,4 (SGC)"
   },
   "tectonics": {
     "text_en": "Colombia lies at the junction of the Nazca, Caribbean and South America plates. Off the Pacific coast the Nazca plate subducts eastward beneath South America at roughly 50-60 mm/yr, and the descending slab reaches intermediate depths (70-300 km) beneath the Western and Central Cordilleras. This event ruptured inside that slab at about 107 km depth, which is why the shaking was felt over hundreds of kilometres - as far as Bogotá, Quito and Panamá City - while surface faulting and tsunami generation were absent. Intermediate-depth events radiate high-frequency energy efficiently and attenuate slowly, so damage tends to be distributed across many cities rather than concentrated in a narrow epicentral zone.",
@@ -176,9 +195,9 @@
       "time": "07:40s",
       "tier": "official",
       "src": "SGC",
-      "en": "SGC issues a first bulletin (initially M6.6, depth 79 km), later revised to M7.4; damage-assessment protocols activated.",
-      "ja": "SGCが第1報を発表（当初M6.6・深さ79km、のちM7.4に修正）。被害評価のプロトコルを起動。",
-      "es": "El SGC emite un primer boletín (inicialmente M6.6, 79 km de profundidad), luego revisado a M7.4; se activan los protocolos de evaluación de daños."
+      "en": "The SGC issues a first bulletin (initially M6.6, 79 km depth), later revised to M7.4 at 96 km, located with 69 stations (event SGC2026pqqmro); damage-assessment protocols activated.",
+      "ja": "SGCが第1報を発表（当初M6.6・深さ79km）。のちM7.4・深さ96kmに修正し、69観測点で決定（イベントSGC2026pqqmro）。被害評価のプロトコルを起動。",
+      "es": "El SGC emite un primer boletín (inicialmente M6.6, 79 km de profundidad), luego revisado a M7.4 a 96 km y localizado con 69 estaciones (evento SGC2026pqqmro); se activan los protocolos de evaluación de daños."
     },
     {
       "time": "Morning",
@@ -634,35 +653,35 @@
   "exposure_note_en": "USGS PAGER exposure estimates. About 10.5 million people experienced Strong to Very Strong shaking (MMI VI-VII) and an estimated 34 million people across four countries felt the earthquake. These are model estimates.",
   "exposure_note_ja": "USGS PAGERによる曝露推計。約1,050万人がMMI VI〜VII（強い〜非常に強い）の揺れを経験し、4か国で推計3,400万人が有感とされる。いずれもモデル推計値。",
   "aftershocks": {
-    "note_en": "The SGC reported more than 20 aftershocks in the hours after the mainshock; the largest widely felt aftershock was M4.8, with an M2.8 also reported. Aftershock sequences of intermediate-depth intraslab events are typically less productive than those of shallow crustal earthquakes, but strong aftershocks remain possible and already-damaged buildings are vulnerable to them.",
-    "note_ja": "SGCは本震後の数時間で20回以上の余震を観測したと発表。最大の有感余震はM4.8で、M2.8も報告されている。やや深発のスラブ内地震の余震活動は浅い内陸地震に比べて一般に低調だが、強い余震の可能性は残り、既に損傷した建物は特に脆弱である。",
+    "note_en": "The SGC event bulletin (SGC2026pqqmro) listed two aftershocks, M2.8 and M4.8, the latter widely felt; media reported more than 20 during the day. Aftershock sequences of intermediate-depth intraslab events are typically less productive than those of shallow crustal earthquakes, but strong aftershocks remain possible and already-damaged buildings are vulnerable to them.",
+    "note_ja": "SGCの速報（SGC2026pqqmro）に掲載された余震はM2.8とM4.8の2回で、後者は広く有感。報道は日中に20回以上と伝えている。やや深発のスラブ内地震の余震活動は浅い内陸地震に比べて一般に低調だが、強い余震の可能性は残り、既に損傷した建物は特に脆弱である。",
     "rows": [
       {
         "when": "10 Aug, after 07:34",
         "mag": "M4.8",
-        "note_en": "Largest reported aftershock; widely felt",
-        "note_ja": "報告された最大余震。広く有感",
+        "note_en": "Largest aftershock on the SGC event bulletin; widely felt",
+        "note_ja": "SGCの速報に掲載された最大の余震。広く有感",
         "tier": "official",
-        "note_es": "Mayor réplica reportada; ampliamente sentida"
+        "note_es": "Mayor réplica en el boletín del SGC; ampliamente sentida"
       },
       {
         "when": "10 Aug, after 07:34",
         "mag": "M2.8",
-        "note_en": "Reported alongside the M4.8 in early bulletins",
-        "note_ja": "初期の発表でM4.8とともに報告",
+        "note_en": "The second aftershock listed on the SGC event bulletin",
+        "note_ja": "SGCの速報に掲載されたもう1つの余震",
         "tier": "official",
-        "note_es": "Reportada junto con la de M4.8 en los primeros boletines"
+        "note_es": "La segunda réplica listada en el boletín del SGC"
       },
       {
         "when": "10 Aug (to 17:00)",
-        "mag": "20+ events",
-        "note_en": "SGC total count of recorded aftershocks",
-        "note_ja": "SGCが記録した余震の累計",
-        "tier": "official",
-        "note_es": "Total de réplicas registradas por el SGC"
+        "mag": "20+ reported",
+        "note_en": "Media reported more than 20 aftershocks during the day; the SGC event bulletin listed two at the time of writing",
+        "note_ja": "報道は日中に20回以上の余震があったと伝えている。SGCの速報に掲載されていたのは執筆時点で2回",
+        "tier": "media",
+        "note_es": "La prensa reportó más de 20 réplicas durante el día; el boletín del SGC listaba dos al momento de redactar"
       }
     ],
-    "note_es": "El SGC reportó más de 20 réplicas en las horas siguientes al sismo principal; la mayor réplica ampliamente sentida fue de M4.8 y también se reportó una de M2.8. Las secuencias de réplicas de los sismos intraplaca de profundidad intermedia suelen ser menos productivas que las de los sismos corticales someros, pero siguen siendo posibles réplicas fuertes y las edificaciones ya averiadas son especialmente vulnerables a ellas."
+    "note_es": "El boletín del evento SGC2026pqqmro listó dos réplicas, de M2.8 y M4.8, esta última ampliamente sentida; la prensa reportó más de 20 durante el día. Las secuencias de réplicas de los sismos intraplaca de profundidad intermedia suelen ser menos productivas que las de los sismos corticales someros, pero siguen siendo posibles réplicas fuertes y las edificaciones ya averiadas son especialmente vulnerables a ellas."
   },
   "support_domestic": [
     {
@@ -1034,6 +1053,20 @@
       "label_es": "Servicio Geológico Colombiano (SGC)"
     },
     {
+      "label_en": "SGC — event bulletin SGC2026pqqmro (this earthquake)",
+      "label_ja": "SGC 地震速報 SGC2026pqqmro（本地震）",
+      "label_es": "SGC — boletín del evento SGC2026pqqmro (este sismo)",
+      "url": "https://www.sgc.gov.co/detallesismo/SGC2026pqqmro/",
+      "tier": "official"
+    },
+    {
+      "label_en": "SGC — macroseismic intensity map (ShakeMap) for this earthquake",
+      "label_ja": "SGC 体感震度図（ShakeMap・本地震）",
+      "label_es": "SGC — mapa de intensidades macrosísmicas (ShakeMap) de este sismo",
+      "url": "https://www.sgc.gov.co/detallesismo/SGC2026pqqmro/mmi",
+      "tier": "official"
+    },
+    {
       "label_en": "UNGRD - National Unit for Disaster Risk Management",
       "label_ja": "国家災害リスク管理ユニット（UNGRD）",
       "url": "https://portal.gestiondelriesgo.gov.co/",
@@ -1223,10 +1256,148 @@
     "locator_region": "images/locator_region.png",
     "locator_epicentre": "images/locator_epicentre.png",
     "slab_section": "images/slab_section.png",
-    "mmi_distance": "images/mmi_distance.png"
+    "mmi_distance": "images/mmi_distance.png",
+    "sgc_shakemap": "images/sgc_shakemap.png"
   },
   "photos": [],
   "deaths_by_area_note_es": "Las cifras departamentales provienen de autoridades locales y se reportan en momentos distintos; todavía no suman el total nacional de 111 y se conciliarán a medida que avance la verificación.",
   "exposure_note_es": "Estimaciones de exposición del PAGER (USGS). Unos 10,5 millones de personas experimentaron un sacudimiento fuerte o muy fuerte (MMI VI-VII) y se estima que 34 millones de personas en cuatro países sintieron el sismo. Son estimaciones de modelo.",
-  "source_policy_es": "Jerarquía de fuentes: oficial > prensa > por confirmar. Las cifras del Gobierno y de las entidades científicas se usan como fuente primaria; la información de prensa se emplea únicamente cuando aún no hay cifras oficiales y se identifica como tal. Los elementos en verificación se marcan como «por confirmar». Las cifras preliminares nunca se sustituyen por números mayores sin verificar."
+  "source_policy_es": "Jerarquía de fuentes: oficial > prensa > por confirmar. Las cifras del Gobierno y de las entidades científicas se usan como fuente primaria; la información de prensa se emplea únicamente cuando aún no hay cifras oficiales y se identifica como tal. Los elementos en verificación se marcan como «por confirmar». Las cifras preliminares nunca se sustituyen por números mayores sin verificar.",
+  "intensity_map": {
+    "title_en": "SGC macroseismic intensity map (ShakeMap)",
+    "title_ja": "SGC 体感震度図（ShakeMap）",
+    "title_es": "Mapa de intensidades macrosísmicas del SGC (ShakeMap)",
+    "url": "https://www.sgc.gov.co/detallesismo/SGC2026pqqmro/mmi",
+    "stamp_en": "ShakeMap: San José del Palmar - Chocó, Colombia · 10 Aug 2026 12:34:29 UTC · M7.4 · N5.04 W76.34 · depth 96.0 km · ID SGC2026pqqmro · Version 1, processed 2026-08-10T13:12:28Z · scale after Worden et al. (2012)",
+    "stamp_ja": "ShakeMap：チョコ県サンホセ・デル・パルマル／2026年8月10日 12:34:29 UTC／M7.4／北緯5.04・西経76.34／深さ96.0km／ID SGC2026pqqmro／バージョン1（2026-08-10T13:12:28Z処理）／震度階はWorden et al. (2012)",
+    "stamp_es": "ShakeMap: San José del Palmar - Chocó, Colombia · 10 ago. 2026 12:34:29 UTC · M7.4 · N5.04 W76.34 · profundidad 96,0 km · ID SGC2026pqqmro · Versión 1, procesado 2026-08-10T13:12:28Z · escala según Worden et al. (2012)",
+    "text_en": "The SGC map shows the strongest band (MMI VII, 'Muy Fuerte') over the epicentral area of Chocó and along the inter-Andean corridor through Risaralda, Caldas, Quindío and northern Valle del Cauca — the belt in which the collapses in Pereira, Manizales, Armenia and Cartago occurred. Intensity falls away eastward: Medellín and Cali sit in the moderate-to-strong bands and Bogotá, 235 km from the epicentre, in a low one. The elongated pattern along the valleys, rather than a compact circle around the epicentre, is the signature of a 96-107 km-deep source combined with soft valley sediments.",
+    "text_ja": "SGCの図では、最も強い帯（MMI VII「Muy Fuerte」）が震央のあるチョコ県から、リサラルダ・カルダス・キンディオ・バジェ北部を貫くアンデス間の回廊に沿って広がる。ペレイラ、マニサレス、アルメニア、カルタゴでの建物倒壊はこの帯の中で起きた。震度は東へ向かって低下し、メデジンとカリは中〜強の帯、震央から235kmのボゴタは弱い帯に位置する。震央を中心とする同心円ではなく谷筋に沿って伸びる分布は、深さ96〜107kmの震源と軟弱な盆地堆積層の組み合わせによる特徴である。",
+    "text_es": "El mapa del SGC muestra la banda más fuerte (MMI VII, «Muy Fuerte») sobre el área epicentral del Chocó y a lo largo del corredor interandino que atraviesa Risaralda, Caldas, Quindío y el norte del Valle del Cauca: la franja en la que ocurrieron los colapsos de Pereira, Manizales, Armenia y Cartago. La intensidad decae hacia el oriente: Medellín y Cali quedan en las bandas moderada y fuerte, y Bogotá, a 235 km del epicentro, en una baja. El patrón alargado a lo largo de los valles, en lugar de un círculo compacto alrededor del epicentro, es la firma de una fuente a 96-107 km de profundidad combinada con sedimentos blandos de valle.",
+    "scale_header_en": [
+      "MMI",
+      "Perceived shaking",
+      "Potential damage",
+      "PGA (%g)",
+      "PGV (cm/s)"
+    ],
+    "scale_header_ja": [
+      "震度",
+      "体感",
+      "被害の程度",
+      "PGA（%g）",
+      "PGV（cm/s）"
+    ],
+    "scale_header_es": [
+      "MMI",
+      "Movimiento",
+      "Daño",
+      "PGA (%g)",
+      "PGV (cm/s)"
+    ],
+    "scale": [
+      {
+        "mmi": "I",
+        "shake_en": "Not felt",
+        "shake_ja": "無感",
+        "shake_es": "No sentido",
+        "dmg_en": "None",
+        "dmg_ja": "なし",
+        "dmg_es": "Ninguno",
+        "pga": "<0.0464",
+        "pgv": "<0.0215"
+      },
+      {
+        "mmi": "II-III",
+        "shake_en": "Weak",
+        "shake_ja": "弱い",
+        "shake_es": "Débil",
+        "dmg_en": "None",
+        "dmg_ja": "なし",
+        "dmg_es": "Ninguno",
+        "pga": "0.297",
+        "pgv": "0.135"
+      },
+      {
+        "mmi": "IV",
+        "shake_en": "Light",
+        "shake_ja": "やや弱い",
+        "shake_es": "Ligero",
+        "dmg_en": "None",
+        "dmg_ja": "なし",
+        "dmg_es": "Ninguno",
+        "pga": "2.76",
+        "pgv": "1.41"
+      },
+      {
+        "mmi": "V",
+        "shake_en": "Moderate",
+        "shake_ja": "中程度",
+        "shake_es": "Moderado",
+        "dmg_en": "Very light",
+        "dmg_ja": "ごく軽微",
+        "dmg_es": "Muy poco",
+        "pga": "6.2",
+        "pgv": "4.65"
+      },
+      {
+        "mmi": "VI",
+        "shake_en": "Strong",
+        "shake_ja": "強い",
+        "shake_es": "Fuerte",
+        "dmg_en": "Light",
+        "dmg_ja": "軽微",
+        "dmg_es": "Poco",
+        "pga": "11.5",
+        "pgv": "9.64"
+      },
+      {
+        "mmi": "VII",
+        "shake_en": "Very strong",
+        "shake_ja": "非常に強い",
+        "shake_es": "Muy fuerte",
+        "dmg_en": "Moderate",
+        "dmg_ja": "中程度",
+        "dmg_es": "Moderado",
+        "pga": "21.5",
+        "pgv": "20"
+      },
+      {
+        "mmi": "VIII",
+        "shake_en": "Severe",
+        "shake_ja": "甚大",
+        "shake_es": "Severo",
+        "dmg_en": "Moderate/heavy",
+        "dmg_ja": "中〜大",
+        "dmg_es": "Moderado/mucho",
+        "pga": "40.1",
+        "pgv": "41.4"
+      },
+      {
+        "mmi": "IX",
+        "shake_en": "Violent",
+        "shake_ja": "激烈",
+        "shake_es": "Violento",
+        "dmg_en": "Heavy",
+        "dmg_ja": "大",
+        "dmg_es": "Mucho",
+        "pga": "74.7",
+        "pgv": "85.8"
+      },
+      {
+        "mmi": "X+",
+        "shake_en": "Extreme",
+        "shake_ja": "極めて激烈",
+        "shake_es": "Extremo",
+        "dmg_en": "Very heavy",
+        "dmg_ja": "甚大",
+        "dmg_es": "Cuantioso",
+        "pga": ">139",
+        "pgv": ">178"
+      }
+    ]
+  },
+  "param_note_en": "USGS and SGC agree on size; the SGC's first bulletin gave M6.6 at 79 km before revision. The two locations differ by about 20 km and their depths by about 11 km — normal for an intermediate-depth event recorded by different networks. Epicentral distances in this report are measured from the USGS location. SGC event SGC2026pqqmro was located with 69 stations; the SGC states its bulletins are subject to change as review continues.",
+  "param_note_ja": "規模はUSGSとSGCで一致。SGCの第1報はM6.6・深さ79kmで、のちに修正された。両機関の震源位置は約20km、深さは約11km異なるが、観測網の異なるやや深発地震では通常の範囲である。本報告の震央距離はUSGSの震源位置から計算している。SGCのイベントSGC2026pqqmroは69観測点で決定されており、SGCは精査の進展に伴い速報値が変更されうるとしている。",
+  "param_note_es": "El USGS y el SGC coinciden en el tamaño; el primer boletín del SGC dio M6.6 a 79 km antes de la revisión. Las dos localizaciones difieren unos 20 km y sus profundidades unos 11 km, lo normal en un sismo de profundidad intermedia registrado por redes distintas. Las distancias epicentrales de este informe se miden desde la localización del USGS. El evento SGC2026pqqmro fue localizado con 69 estaciones; el SGC advierte que sus boletines están sujetos a cambios mientras avanza la revisión."
 }
