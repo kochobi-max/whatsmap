@@ -13,7 +13,7 @@
     "as_of_ja": "数値は2026年8月10日17:00（コロンビア時間、日本時間8月11日07:00）現在、発災から約9時間半後。すべて速報値。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-08-11 09:03 JST",
+    "stamp": "2026-08-11 09:09 JST",
     "update_date": "11/08/2026",
     "title_es": "Terremoto del Chocó de 2026 (Colombia)",
     "subtitle_es": "M7.4, San José del Palmar, departamento del Chocó — 10 de agosto de 2026",
@@ -264,6 +264,14 @@
       "es": "El Presidente se desplaza a Pereira para dirigir la respuesta en terreno."
     },
     {
+      "time": "12:13",
+      "tier": "official",
+      "src": "Copernicus EMS",
+      "en": "Copernicus EMS Rapid Mapping activated as EMSR916 (17:13 UTC), requested by EC Services / DG ECHO, for earthquake damage assessment mapping.",
+      "ja": "コペルニクスEMSのラピッドマッピングが EMSR916 として発動（17:13 UTC）。要請は欧州委員会サービス／DG ECHO、地震被害評価のマッピングのため。",
+      "es": "Se activa la cartografía rápida del Copernicus EMS como EMSR916 (17:13 UTC), a solicitud de los Servicios de la CE / DG ECHO, para cartografía de evaluación de daños por el sismo."
+    },
+    {
       "time": "Afternoon",
       "tier": "official",
       "src": "Presidency / UNGRD",
@@ -278,14 +286,6 @@
       "en": "Ecuador mobilises a 47-person USAR team with canine units; Mexico and other governments offer assistance, to be channelled through the Foreign Ministry and UNGRD.",
       "ja": "エクアドルが救助犬を含む47人のUSARチームを動員。メキシコなど各国が支援を表明し、外務省とUNGRDを通じて受け入れる方針。",
       "es": "Ecuador moviliza un grupo USAR de 47 personas con unidades caninas; México y otros gobiernos ofrecen ayuda, que se canalizará a través de la Cancillería y la UNGRD."
-    },
-    {
-      "time": "Same day",
-      "tier": "tbc",
-      "src": "Charter / Copernicus",
-      "en": "Activation of the International Charter 'Space and Major Disasters' and mobilisation of the Copernicus Emergency Management Service are reported; details being confirmed.",
-      "ja": "国際災害チャーター（Space and Major Disasters）の発動およびコペルニクス緊急管理サービスの動員が報じられている。詳細は確認中。",
-      "es": "Se reporta la activación de la Carta Internacional «Espacio y Grandes Catástrofes» y la movilización del Servicio de Gestión de Emergencias Copernicus; los detalles están en verificación."
     }
   ],
   "areas": [
@@ -737,11 +737,18 @@
       "es": "La Presidenta de México ofreció «todo el apoyo que se requiera»; varios gobiernos latinoamericanos ofrecieron rescatistas, unidades caninas y ayuda humanitaria, que se canalizarán a través de la Cancillería de Colombia y la UNGRD."
     },
     {
-      "tier": "media",
-      "en": "The European Commission announced the activation of Copernicus for the earthquake (statement by President von der Leyen expressing EU support for Colombia). The International Charter 'Space and Major Disasters' is also reported to have been activated. Neither the Copernicus EMSR activation number nor the Charter activation number had been identified at the time of writing; note that EMSR915 belongs to a wildfire activation in Albania, not to this event.",
-      "ja": "欧州委員会は本地震に対するコペルニクスの発動を発表した（フォンデアライエン委員長がコロンビアへの支援を表明）。国際災害チャーターも発動されたと報じられている。本稿執筆時点でコペルニクスのEMSR発動番号もチャーターの発動番号も特定できていない。なお EMSR915 はアルバニアの森林火災の発動であり、本地震のものではない。",
-      "source": "European Commission (via media) / Disasters Charter",
-      "es": "La Comisión Europea anunció la activación de Copernicus por el terremoto (declaración de la presidenta von der Leyen expresando el apoyo de la UE a Colombia). También se reporta la activación de la Carta Internacional «Espacio y Grandes Catástrofes». Al momento de redactar no se ha identificado ni el número de activación EMSR de Copernicus ni el de la Carta; nótese que EMSR915 corresponde a una activación por incendio forestal en Albania, no a este evento."
+      "tier": "official",
+      "source": "Copernicus EMS Rapid Mapping",
+      "en": "Copernicus EMS Rapid Mapping activated as EMSR916 'Earthquake in Colombia' at 17:13 UTC on 10 August (12:13 COT), requested by EC Services / DG ECHO, to provide earthquake damage assessment emergency mapping. Status ongoing, with 3 areas of interest and 3 products at the time of writing. The activation reason names Quibdó, Pereira, Manizales and Cali as cities with significant damage and collapsed buildings.",
+      "ja": "コペルニクス緊急管理サービスのラピッドマッピングが、8月10日17:13 UTC（現地12:13）に EMSR916「Earthquake in Colombia」として発動。要請は欧州委員会サービス／DG ECHO、目的は地震被害評価の緊急マッピング。本稿執筆時点で対応中、関心領域3・成果物3。発動理由には、著しい被害と建物倒壊のあった都市としてキブド、ペレイラ、マニサレス、カリが挙げられている。",
+      "es": "La cartografía rápida del Copernicus EMS se activó como EMSR916 «Earthquake in Colombia» a las 17:13 UTC del 10 de agosto (12:13 COT), a solicitud de los Servicios de la CE / DG ECHO, para proporcionar cartografía de emergencia de evaluación de daños por el sismo. En curso al momento de redactar, con 3 áreas de interés y 3 productos. La razón de la activación menciona a Quibdó, Pereira, Manizales y Cali como ciudades con daños significativos y edificios colapsados."
+    },
+    {
+      "tier": "tbc",
+      "source": "International Disaster Charter",
+      "en": "The International Charter 'Space and Major Disasters' is also reported to have been activated for this earthquake; the activation number had not been confirmed at the time of writing.",
+      "ja": "国際災害チャーター（Space and Major Disasters）も本地震について発動されたと報じられている。発動番号は本稿執筆時点で確認できていない。",
+      "es": "También se reporta la activación de la Carta Internacional «Espacio y Grandes Catástrofes» para este sismo; el número de activación no estaba confirmado al momento de redactar."
     },
     {
       "tier": "media",
@@ -770,12 +777,12 @@
     },
     {
       "org": "Copernicus EMS",
-      "en": "Rapid Mapping activation announced by the European Commission; EMSR activation number not yet identified",
-      "ja": "欧州委員会がラピッドマッピングの発動を発表。EMSR発動番号は未特定",
-      "status": "Announced / number pending",
-      "url": "https://emergency.copernicus.eu/mapping/list-of-activations-rapid",
-      "tier": "media",
-      "es": "Activación de cartografía rápida anunciada por la Comisión Europea; número de activación EMSR aún no identificado"
+      "en": "EMSR916 'Earthquake in Colombia' — Rapid Mapping for damage assessment; requested by EC Services / DG ECHO; 3 AOIs, 3 products",
+      "ja": "EMSR916「Earthquake in Colombia」— 被害評価のためのラピッドマッピング。要請は欧州委員会サービス／DG ECHO。関心領域3・成果物3",
+      "status": "Ongoing (EMSR916)",
+      "url": "https://mapping.emergency.copernicus.eu/activations/EMSR916/",
+      "tier": "official",
+      "es": "EMSR916 «Earthquake in Colombia» — cartografía rápida para evaluación de daños; solicitada por los Servicios de la CE / DG ECHO; 3 AOI, 3 productos"
     },
     {
       "org": "USGS",
@@ -1088,11 +1095,11 @@
       "label_es": "Carta Internacional «Espacio y Grandes Catástrofes»: activaciones"
     },
     {
-      "label_en": "Copernicus EMS - Rapid Mapping activations",
-      "label_ja": "コペルニクスEMS ラピッドマッピング",
-      "url": "https://emergency.copernicus.eu/mapping/list-of-activations-rapid",
+      "label_en": "Copernicus EMS — EMSR916 'Earthquake in Colombia' (activation)",
+      "label_ja": "コペルニクスEMS EMSR916「Earthquake in Colombia」（発動）",
+      "url": "https://mapping.emergency.copernicus.eu/activations/EMSR916/",
       "tier": "official",
-      "label_es": "Copernicus EMS: activaciones de cartografía rápida"
+      "label_es": "Copernicus EMS — EMSR916 «Earthquake in Colombia» (activación)"
     },
     {
       "label_en": "ReliefWeb - Colombia",

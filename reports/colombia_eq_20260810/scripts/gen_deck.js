@@ -159,7 +159,7 @@ const CELL = {
   "International media": { ja: "国際報道", es: "Prensa internacional" },
   "Charter / Copernicus": { ja: "チャーター／コペルニクス", es: "Carta / Copernicus" },
   "Published": { ja: "公開済み", es: "Publicado" },
-  "Announced / number pending": { ja: "発表済み・番号未特定", es: "Anunciada / número pendiente" },
+  "Ongoing (EMSR916)": { ja: "対応中（EMSR916）", es: "En curso (EMSR916)" },
   "Reported / number pending": { ja: "報道あり・番号未特定", es: "Reportada / número pendiente" },
   "Reported / confirming": { ja: "報道あり・確認中", es: "Reportado / en verificación" },
   "n/a": { ja: "対象外", es: "no aplica" },
