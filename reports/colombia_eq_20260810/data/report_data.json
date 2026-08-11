@@ -9,17 +9,17 @@
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
     "glide": "EQ-2026-000146-COL",
-    "as_of_en": "Figures as of 10 Aug 2026, 17:00 COT (11 Aug 07:00 JST), approx. 9.5 hours after the earthquake. All figures are preliminary.",
-    "as_of_ja": "数値は2026年8月10日17:00（コロンビア時間、日本時間8月11日07:00）現在、発災から約9時間半後。すべて速報値。",
+    "as_of_en": "Figures as of 10 Aug 2026, 22:00 COT (11 Aug 12:00 JST), about 14 hours after the earthquake. The Government's consolidated balance (111 deaths, 87 injured) is its 13:00 COT figure; the later toll of 132 is from media reporting. All figures are preliminary.",
+    "as_of_ja": "数値は2026年8月10日22:00（コロンビア時間、日本時間8月11日12:00）現在、発災から約14時間後。政府の集計値（死者111人・負傷者87人）は13:00時点のもので、その後の132人は報道による。すべて速報値。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-08-11 10:32 JST",
+    "stamp": "2026-08-11 11:48 JST",
     "update_date": "11/08/2026",
     "title_es": "Terremoto del Chocó de 2026 (Colombia)",
     "subtitle_es": "M7.4, San José del Palmar, departamento del Chocó — 10 de agosto de 2026",
     "edition_es": "1.er informe",
     "prepared_by_es": "Centro Asiático para la Reducción de Desastres (ADRC)",
-    "as_of_es": "Cifras al 10 de agosto de 2026, 17:00 COT (11 de agosto, 07:00 JST), unas 9,5 horas después del sismo. Todas las cifras son preliminares.",
+    "as_of_es": "Cifras al 10 de agosto de 2026, 22:00 COT (11 de agosto, 12:00 JST), unas 14 horas después del sismo. El balance consolidado del Gobierno (111 muertos, 87 heridos) corresponde a su corte de las 13:00 COT; la cifra posterior de 132 proviene de la prensa. Todas las cifras son preliminares.",
     "disseminate_es": "Informe multilingüe (EN/JA/ES) para difusión nacional e internacional. Se da prioridad a las fuentes oficiales; los vacíos se completan con información de prensa debidamente identificada."
   },
   "event": {
@@ -46,8 +46,8 @@
     "tsunami_ja": "津波なし。震源は内陸かつやや深発で、太平洋岸に津波警報は発表されていない。",
     "alert_en": "USGS PAGER: Orange (version 5). Most likely fatality band 1,000-10,000 (35% probability); economic losses most likely USD 100-1,000 million (34%), less than 1% of Colombia's GDP. GDACS: Orange.",
     "alert_ja": "USGS PAGER：オレンジ（第5版）。死者数は1,000〜10,000人の階級が最も確からしい（確率35%）。経済損失は1〜10億米ドルが最も確からしく（34%）、コロンビアのGDPの1%未満。GDACS：オレンジ。",
-    "summary_en": "At 07:34 local time (12:34 UTC) on 10 August 2026, an Mww 7.4 earthquake struck western Colombia with its epicentre 5 km east of San José del Palmar in Chocó Department, at a depth of about 110 km (USGS). The event was an intermediate-depth, strike-slip rupture inside the subducting Nazca slab; because of its depth, strong shaking (MMI VI-VII) was spread over a wide area of the Andean Coffee Region rather than concentrated near the epicentre, and about 10.5 million people were exposed to it. The SGC describes it as the largest-magnitude earthquake recorded in Colombia in the past decade. As of 17:00 COT on 10 August the Government reported 111 deaths and 87 injured, more than 1,600 buildings damaged (1,575 homes damaged, 37 destroyed, 61 buildings collapsed), together with damage to 18 health facilities, 52 educational facilities, 18 major roads and six regional airports. The passenger terminal of Matecaña International Airport in Pereira partially collapsed, a tower of the neo-Gothic cathedral in Manizales fell onto the nave, and about 30% of the University Hospital in Cali collapsed. The President declared a national disaster, set up a Unified Command Post in Chocó and deployed four USAR teams and the armed forces. There was no tsunami. All figures are preliminary and are expected to change as assessment proceeds.",
-    "summary_ja": "2026年8月10日07:34（現地時間、12:34 UTC）、コロンビア西部チョコ県サンホセ・デル・パルマルの東5kmを震源とするMww7.4の地震が発生した。深さは約110km（USGS）で、沈み込むナスカプレート内部のやや深発・横ずれ型。深いために強い揺れ（MMI VI〜VII）はコーヒー地帯を含む広範囲に及び、約1,050万人が強い揺れにさらされた。SGCは過去10年でコロンビア最大規模の地震としている。8月10日17:00（現地）時点で政府は死者111人・負傷者87人、建物被害1,600棟超（住宅損壊1,575、全壊37、建物倒壊61）、医療施設18・教育施設52・幹線道路18・地方空港6か所の被害を発表。ペレイラのマテカニャ国際空港旅客ターミナルが一部倒壊、マニサレスの大聖堂の塔が身廊に崩落、カリの大学病院は約30%が損壊した。大統領は国家災害を宣言し、チョコ県に統合指揮所を設置、USAR4隊と軍を投入した。津波はない。数値はすべて速報値であり、被害調査の進展により変動する。",
+    "summary_en": "At 07:34 local time (12:34 UTC) on 10 August 2026, an Mww 7.4 earthquake struck western Colombia with its epicentre 5 km east of San José del Palmar in Chocó Department, at a depth of about 110 km (USGS). The event was an intermediate-depth, strike-slip rupture inside the subducting Nazca slab; because of its depth, strong shaking (MMI VI-VII) was spread over a wide area of the Andean Coffee Region rather than concentrated near the epicentre, and about 10.5 million people were exposed to it. The SGC describes it as the largest-magnitude earthquake recorded in Colombia in the past decade. In its 13:00 COT balance on 10 August the Government reported 111 deaths and 87 injured — a toll that media reporting had raised to 132 by the evening — more than 1,600 buildings damaged (1,575 homes damaged, 37 destroyed, 61 buildings collapsed), together with damage to 18 health facilities, 52 educational facilities, 18 major roads and six regional airports. The passenger terminal of Matecaña International Airport in Pereira partially collapsed, a tower of the neo-Gothic cathedral in Manizales fell onto the nave, and about 30% of the University Hospital in Cali collapsed. The President declared a national disaster, set up a Unified Command Post in Chocó and deployed four USAR teams and the armed forces. There was no tsunami. All figures are preliminary and are expected to change as assessment proceeds.",
+    "summary_ja": "2026年8月10日07:34（現地時間、12:34 UTC）、コロンビア西部チョコ県サンホセ・デル・パルマルの東5kmを震源とするMww7.4の地震が発生した。深さは約110km（USGS）で、沈み込むナスカプレート内部のやや深発・横ずれ型。深いために強い揺れ（MMI VI〜VII）はコーヒー地帯を含む広範囲に及び、約1,050万人が強い揺れにさらされた。SGCは過去10年でコロンビア最大規模の地震としている。8月10日13:00（現地）の政府集計は死者111人・負傷者87人で、夕方には報道で132人に増えた。あわせて建物被害1,600棟超（住宅損壊1,575、全壊37、建物倒壊61）、医療施設18・教育施設52・幹線道路18・地方空港6か所の被害を発表。ペレイラのマテカニャ国際空港旅客ターミナルが一部倒壊、マニサレスの大聖堂の塔が身廊に崩落、カリの大学病院は約30%が損壊した。大統領は国家災害を宣言し、チョコ県に統合指揮所を設置、USAR4隊と軍を投入した。津波はない。数値はすべて速報値であり、被害調査の進展により変動する。",
     "epicentre_es": "USGS: 5 km al S de San José del Palmar, departamento del Chocó (unos 280 km al O de Bogotá) — SGC: a 20 km de San José del Palmar",
     "magnitude_note_es": "El tamaño coincide: Mww 7.4 del USGS y 7.4 del SGC. El primer boletín del SGC dio M6.6 a 79 km de profundidad y fue revisado a 7.4; las localizaciones de las dos entidades difieren unos 20 km y sus profundidades unos 11 km, lo normal en un sismo de profundidad intermedia registrado por redes distintas.",
     "depth_display_es": "110,3 km (USGS, PAGER v5) / 96 km (SGC)",
@@ -56,7 +56,7 @@
     "felt_es": "Sentido en el occidente y el centro de Colombia, incluidas Bogotá, Cali y Medellín, y también en Ecuador, Panamá y Venezuela",
     "tsunami_es": "Sin tsunami. El sismo fue continental y de profundidad intermedia; no se emitió alerta de tsunami para la costa del Pacífico.",
     "alert_es": "PAGER del USGS: naranja (versión 5). La banda de mortalidad más probable es de 1.000 a 10.000 (35 % de probabilidad); las pérdidas económicas más probables son de 100 a 1.000 millones de dólares (34 %), menos del 1 % del PIB de Colombia. GDACS: naranja.",
-    "summary_es": "A las 07:34 hora local (12:34 UTC) del 10 de agosto de 2026, un sismo de Mww 7.4 sacudió el occidente de Colombia con epicentro 5 km al este de San José del Palmar (Chocó), a unos 110 km de profundidad (USGS). Fue una ruptura de rumbo a profundidad intermedia dentro de la placa de Nazca en subducción; por esa profundidad, el sacudimiento fuerte (MMI VI-VII) se repartió sobre una amplia zona del Eje Cafetero andino en lugar de concentrarse cerca del epicentro, y unos 10,5 millones de personas quedaron expuestas a él. El SGC lo describe como el sismo de mayor magnitud registrado en Colombia en la última década. Al corte de las 17:00 COT del 10 de agosto, el Gobierno reportó 111 muertos y 87 heridos, más de 1.600 edificaciones afectadas (1.575 viviendas averiadas, 37 destruidas y 61 edificios colapsados), y daños en 18 centros de salud, 52 establecimientos educativos, 18 vías principales y seis aeropuertos regionales. Colapsaron parcialmente la terminal de pasajeros del Aeropuerto Internacional Matecaña (Pereira), una torre de la catedral neogótica de Manizales sobre la nave y cerca del 30 % del Hospital Universitario del Valle, en Cali. El Presidente declaró el desastre nacional, instaló un Puesto de Mando Unificado en el Chocó y desplegó cuatro grupos USAR y las Fuerzas Militares. No hubo tsunami. Todas las cifras son preliminares y variarán conforme avance la evaluación.",
+    "summary_es": "A las 07:34 hora local (12:34 UTC) del 10 de agosto de 2026, un sismo de Mww 7.4 sacudió el occidente de Colombia con epicentro 5 km al este de San José del Palmar (Chocó), a unos 110 km de profundidad (USGS). Fue una ruptura de rumbo a profundidad intermedia dentro de la placa de Nazca en subducción; por esa profundidad, el sacudimiento fuerte (MMI VI-VII) se repartió sobre una amplia zona del Eje Cafetero andino en lugar de concentrarse cerca del epicentro, y unos 10,5 millones de personas quedaron expuestas a él. El SGC lo describe como el sismo de mayor magnitud registrado en Colombia en la última década. En su balance de las 13:00 COT del 10 de agosto el Gobierno reportó 111 muertos y 87 heridos —cifra que la prensa elevó a 132 al caer la tarde—, más de 1.600 edificaciones afectadas (1.575 viviendas averiadas, 37 destruidas y 61 edificios colapsados), y daños en 18 centros de salud, 52 establecimientos educativos, 18 vías principales y seis aeropuertos regionales. Colapsaron parcialmente la terminal de pasajeros del Aeropuerto Internacional Matecaña (Pereira), una torre de la catedral neogótica de Manizales sobre la nave y cerca del 30 % del Hospital Universitario del Valle, en Cali. El Presidente declaró el desastre nacional, instaló un Puesto de Mando Unificado en el Chocó y desplegó cuatro grupos USAR y las Fuerzas Militares. No hubo tsunami. Todas las cifras son preliminares y variarán conforme avance la evaluación.",
     "origin_time_local_en": "10 Aug 2026, 07:34:28 COT (UTC-5)",
     "origin_time_utc_en": "10 Aug 2026, 12:34:28 UTC",
     "origin_time_jst_en": "10 Aug 2026, 21:34 JST",
@@ -292,6 +292,14 @@
       "en": "Ecuador mobilises a 47-person USAR team with canine units; Mexico and other governments offer assistance, to be channelled through the Foreign Ministry and UNGRD.",
       "ja": "エクアドルが救助犬を含む47人のUSARチームを動員。メキシコなど各国が支援を表明し、外務省とUNGRDを通じて受け入れる方針。",
       "es": "Ecuador moviliza un grupo USAR de 47 personas con unidades caninas; México y otros gobiernos ofrecen ayuda, que se canalizará a través de la Cancillería y la UNGRD."
+    },
+    {
+      "time": "Evening",
+      "tier": "media",
+      "src": "International media",
+      "en": "The reported national death toll rises to 132. Four people have been rescued alive from the rubble; more than 20 municipalities are reported affected, and power and telecommunications faults continue in Chocó.",
+      "ja": "報道による全国の死者数が132人に増加。瓦礫から4人が救出。被災市町村は20を超えると報じられ、チョコ県では停電・通信障害が続く。",
+      "es": "El número de muertos reportado a nivel nacional sube a 132. Cuatro personas han sido rescatadas con vida de los escombros; se reportan más de 20 municipios afectados y continúan las fallas de energía y telecomunicaciones en el Chocó."
     }
   ],
   "areas": [
@@ -391,38 +399,50 @@
     {
       "item_en": "Deaths",
       "item_ja": "死者",
-      "value_en": "111",
-      "value_ja": "111人",
-      "source_en": "Presidency / UNGRD, 10 Aug afternoon",
-      "source_ja": "大統領府／UNGRD（8月10日午後）",
-      "tier": "official",
+      "value_en": "132 (media, evening of 10 Aug). The Government's 13:00 COT balance was 111.",
+      "value_ja": "132人（報道、8月10日夕方）。政府の13:00時点の集計は111人。",
+      "source_en": "Media (CNN live updates); Presidency / UNGRD for the 13:00 figure",
+      "source_ja": "報道（CNN速報）。13:00の値は大統領府／UNGRD",
+      "tier": "media",
       "item_es": "Muertos",
-      "value_es": "111",
-      "source_es": "Presidencia / UNGRD, tarde del 10 de agosto"
+      "value_es": "132 (prensa, tarde del 10 de agosto). El balance del Gobierno a las 13:00 COT era de 111.",
+      "source_es": "Prensa (CNN, en vivo); Presidencia / UNGRD para la cifra de las 13:00"
     },
     {
       "item_en": "Injured",
       "item_ja": "負傷者",
-      "value_en": "87",
-      "value_ja": "87人",
-      "source_en": "Presidency / UNGRD, 10 Aug afternoon",
-      "source_ja": "大統領府／UNGRD（8月10日午後）",
+      "value_en": "87 nationally (Government, 13:00 COT). In Chocó alone the President later reported 119 injured.",
+      "value_ja": "全国で87人（政府、13:00時点）。その後、大統領はチョコ県だけで119人の負傷者を報告。",
+      "source_en": "Presidency / UNGRD; Presidency (Chocó figure)",
+      "source_ja": "大統領府／UNGRD、チョコ県の値は大統領",
       "tier": "official",
       "item_es": "Heridos",
-      "value_es": "87",
-      "source_es": "Presidencia / UNGRD, tarde del 10 de agosto"
+      "value_es": "87 en el país (Gobierno, 13:00 COT). Solo en Chocó el Presidente reportó después 119 heridos.",
+      "source_es": "Presidencia / UNGRD; Presidencia (cifra del Chocó)"
     },
     {
       "item_en": "Missing / trapped",
       "item_ja": "行方不明・生き埋め",
-      "value_en": "Not yet quantified; people were reported trapped under rubble in Cali, Pereira and Manizales",
-      "value_ja": "未集計。カリ、ペレイラ、マニサレスで生き埋めの報告",
+      "value_en": "Not quantified. Four people had been rescued alive from the rubble by the evening of 10 August; searches continued in Cali, Pereira and Manizales.",
+      "value_ja": "未集計。8月10日夕方までに4人が瓦礫から救出された。カリ、ペレイラ、マニサレスで捜索継続。",
       "source_en": "Local authorities (media)",
       "source_ja": "地元当局（報道）",
       "tier": "media",
       "item_es": "Desaparecidos / atrapados",
-      "value_es": "Sin cuantificar; se reportaron personas atrapadas entre escombros en Cali, Pereira y Manizales",
+      "value_es": "Sin cuantificar. Cuatro personas habían sido rescatadas con vida de los escombros al caer la tarde del 10 de agosto; las búsquedas continuaban en Cali, Pereira y Manizales.",
       "source_es": "Autoridades locales (prensa)"
+    },
+    {
+      "item_en": "Municipalities affected",
+      "item_ja": "被災市町村",
+      "item_es": "Municipios afectados",
+      "value_en": "More than 20 across Chocó, Risaralda, Caldas, Valle del Cauca, Quindío and Antioquia",
+      "value_ja": "チョコ、リサラルダ、カルダス、バジェ・デル・カウカ、キンディオ、アンティオキアの各県で20市町村超",
+      "value_es": "Más de 20 en Chocó, Risaralda, Caldas, Valle del Cauca, Quindío y Antioquia",
+      "source_en": "Media, 10 Aug",
+      "source_ja": "報道（8月10日）",
+      "source_es": "Prensa, 10 de agosto",
+      "tier": "media"
     },
     {
       "item_en": "Buildings damaged (total)",
@@ -591,11 +611,11 @@
     {
       "area_en": "Chocó",
       "area_ja": "チョコ県",
-      "n": 9,
-      "note_en": "Epicentral department",
-      "note_ja": "震央のある県",
+      "n": 13,
+      "note_en": "President's figure; the department government had reported 12 dead and 84 injured",
+      "note_ja": "大統領の発表値。県政府は死者12人・負傷者84人と発表していた",
       "area_es": "Chocó",
-      "note_es": "Departamento epicentral"
+      "note_es": "Cifra del Presidente; la Gobernación había reportado 12 muertos y 84 heridos"
     },
     {
       "area_en": "Caldas (Manizales)",
@@ -616,8 +636,8 @@
       "note_es": "73 años"
     }
   ],
-  "deaths_by_area_note_en": "Departmental figures come from local authorities and are reported at different times; they do not yet add up to the national total of 111 and will be reconciled as verification proceeds.",
-  "deaths_by_area_note_ja": "県別の数値は地元当局が異なる時点で発表したもので、現時点では国全体の111人と一致しない。確認の進展に伴い整合される見込み。",
+  "deaths_by_area_note_en": "Departmental figures come from local authorities and the Presidency at different times and do not sum to the national total; the national toll itself moved from 111 at 13:00 COT to 132 by the evening of 10 August. They will be reconciled as verification proceeds.",
+  "deaths_by_area_note_ja": "県別の数値は地元当局と大統領府が異なる時点で発表したもので、全国値とは一致しない。全国の死者数自体も13:00時点の111人から8月10日夕方には132人に増えている。確認の進展に伴い整合される見込み。",
   "exposure": [
     {
       "mmi": "VIII+",
@@ -1066,9 +1086,9 @@
     },
     {
       "tier": "official",
-      "en": "Figures will rise and will not be internally consistent for some time. Departmental death tolls announced by governors and mayors do not yet sum to the national total, and building-damage counts reflect first-look reporting, not damage assessment. Rapid increases in the coming days should be read as assessment progressing, not necessarily as the situation worsening.",
-      "ja": "数値は今後増加し、当面は相互に整合しない。県知事・市長が発表する県別死者数は国全体の値と一致しておらず、建物被害数も被害認定調査ではなく第一報の積み上げである。今後数日の急増は、事態の悪化というより調査の進展として読むべきである。",
-      "es": "Las cifras aumentarán y no serán coherentes entre sí durante algún tiempo. Los muertos por departamento anunciados por gobernadores y alcaldes todavía no suman el total nacional, y los conteos de daños en edificaciones reflejan reportes de primera mirada, no evaluaciones de daños. Los aumentos rápidos de los próximos días deben leerse como avance de la evaluación y no necesariamente como agravamiento de la situación."
+      "en": "Figures are moving as expected. The national toll went from 111 in the Government's 13:00 COT balance to 132 by the evening, and the Chocó department figure from 12 to 13 deaths with injuries revised from 84 to 119 — while the building-damage counts stayed at their first-look values. Rapid increases over the coming days should be read as assessment progressing, not necessarily as the situation worsening.",
+      "ja": "数値は想定どおり動いている。全国の死者数は政府13:00時点の111人から夕方には132人に、チョコ県は12人から13人に増え、同県の負傷者は84人から119人へ修正された。一方で建物被害の数値は第一報のまま据え置かれている。今後数日の急増は、事態の悪化というより調査の進展として読むべきである。",
+      "es": "Las cifras se mueven como cabía esperar. El total nacional pasó de 111 en el balance del Gobierno de las 13:00 COT a 132 al caer la tarde, y el Chocó de 12 a 13 muertos, con los heridos revisados de 84 a 119, mientras los conteos de daños en edificaciones siguen en sus valores de primera mirada. Los aumentos rápidos de los próximos días deben leerse como avance de la evaluación y no necesariamente como agravamiento."
     },
     {
       "tier": "media",
@@ -1179,6 +1199,20 @@
       "url": "https://www.globalquakemodel.org/seismic-regulations/colombia",
       "tier": "official",
       "label_es": "GEM: normativa sismo resistente de Colombia (NSR-10)"
+    },
+    {
+      "label_en": "CNN — live updates: death toll rises to 132",
+      "label_ja": "CNN 速報：死者132人に増加",
+      "label_es": "CNN — en vivo: los muertos ascienden a 132",
+      "url": "https://www.cnn.com/2026/08/10/world/live-news/colombia-earthquake-san-jose-del-palmar",
+      "tier": "media"
+    },
+    {
+      "label_en": "El Colombiano — 84 injured and 12 dead in Chocó (department government)",
+      "label_ja": "El Colombiano チョコ県で負傷84人・死者12人（県政府）",
+      "label_es": "El Colombiano — 84 heridos y 12 muertos en Chocó (Gobernación)",
+      "url": "https://www.elcolombiano.com/colombia/terremoto-temblor-hoy-colombia-choco-heridos-FL39761141",
+      "tier": "media"
     },
     {
       "label_en": "UN-SPIDER - UNGRD of Colombia",
@@ -1379,7 +1413,7 @@
     "gem_treq_cali": "images/gem_treq_cali_manual.jpg"
   },
   "photos": [],
-  "deaths_by_area_note_es": "Las cifras departamentales provienen de autoridades locales y se reportan en momentos distintos; todavía no suman el total nacional de 111 y se conciliarán a medida que avance la verificación.",
+  "deaths_by_area_note_es": "Las cifras departamentales provienen de autoridades locales y de la Presidencia en momentos distintos y no suman el total nacional; el propio total pasó de 111 a las 13:00 COT a 132 al caer la tarde del 10 de agosto. Se conciliarán a medida que avance la verificación.",
   "exposure_note_es": "Estimaciones de exposición del PAGER (versión 5) del USGS. Unos 10,5 millones de personas quedaron expuestas a sacudimiento fuerte o muy fuerte (MMI VI-VII) y unos 34 millones a MMI IV o superior en cuatro países. Son estimaciones de modelo.",
   "source_policy_es": "Jerarquía de fuentes: oficial > prensa > por confirmar. Las cifras del Gobierno y de las entidades científicas se usan como fuente primaria; la información de prensa se emplea únicamente cuando aún no hay cifras oficiales y se identifica como tal. Los elementos en verificación se marcan como «por confirmar». Las cifras preliminares nunca se sustituyen por números mayores sin verificar.",
   "intensity_map": {

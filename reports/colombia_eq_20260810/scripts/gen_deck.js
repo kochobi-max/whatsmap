@@ -601,8 +601,8 @@ s = newSlide();
 heading(s, "Human Damage", "人的被害");
 {
   const big = [
-    [T("Deaths", "死者"), "111", RED],
-    [T("Injured", "負傷者"), "87", "9A3B12"],
+    [T("Deaths", "死者"), "132", RED],
+    [T("Injured", "負傷者"), "87+", "9A3B12"],
     [T("Buildings damaged", "建物被害"), T("1,600+", "1,600棟超"), NAVY],
   ];
   big.forEach((b, i) => {
