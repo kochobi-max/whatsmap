@@ -52,6 +52,8 @@ function L(obj, key) {
 function LL(obj) { return obj ? (obj[LANG] || obj.en || "") : ""; }
 const UI_ES = {
   "Sources: ": "Fuentes: ",
+  "Pre-event Risk Assessment: Santiago de Cali": "Evaluación del riesgo previa al evento: Santiago de Cali",
+  "Modelled scenario (GEM-TREQ, 2022)": "Escenario modelado (GEM-TREQ, 2022)",
   "Both agencies report a strike-slip mechanism.": "Ambas entidades reportan un mecanismo de falla de rumbo.",
   "Copernicus EMS Rapid Mapping: EMSR916": "Cartografía rápida del Copernicus EMS: EMSR916",
   "Activation page (© Copernicus EMS)": "Página de la activación (© Copernicus EMS)",
@@ -690,7 +692,7 @@ s = newSlide();
 heading(s, "Colombia's Disaster Risk Management System", "コロンビアの災害リスク管理体制");
 s.addText(L(d.drm_system, "intro"), { x: 0.4, y: 1.12, w: 12.5, h: 0.95, fontSize: JA ? 10.5 : 11.5, color: INK, fontFace: FONT, valign: "top", margin: 4 });
 plainBullets(s, 0.4, 2.14, 12.5, 4.5, d.drm_system.items.map(LL), { base: 11.5 });
-srcLine(s, [linkBy("UN-SPIDER"), linkBy("PreventionWeb"), linkBy("GEM"), linkBy("OECD")]);
+srcLine(s, [linkBy("UN-SPIDER"), linkBy("Plan Nacional de Gestión"), linkBy("Decreto 1478"), linkBy("SATIC")]);
 footer(s);
 
 /* ============ 14. Prior event: 1999 Armenia ============ */
@@ -713,6 +715,28 @@ s.addText([
 noteBox(s, 0.4, 5.86, 12.5, 0.82, T("Why this matters now", "現在の意味"), L(d.prior_event, "context"));
 srcLine(s, [linkBy("GEM"), linkBy("PreventionWeb")]);
 footer(s);
+
+/* ============ 14b. Pre-event risk assessment (Cali) ============ */
+if (d.pre_event) {
+  const pe2 = d.pre_event;
+  s = newSlide();
+  heading(s, "Pre-event Risk Assessment: Santiago de Cali", "事前のリスク評価：サンティアゴ・デ・カリ");
+  s.addText(L(pe2, "intro"), { x: 0.4, y: 1.08, w: 6.3, h: 1.15, fontSize: JA ? 9.5 : 10, color: INK, fontFace: FONT, valign: "top", margin: 0 });
+  {
+    const rows = [[th(T("Modelled scenario (GEM-TREQ, 2022)", "想定シナリオ（GEM-TREQ、2022年）")), th(T("Value", "値"))]];
+    pe2.rows.forEach((r, i) => rows.push([
+      td(JA ? r.k_ja : (LANG === "es" ? r.k_es : r.k_en), i, { fontSize: 9.5, bold: true, color: NAVY }),
+      td(L(r, "v"), i, { fontSize: 9.5 }),
+    ]));
+    s.addTable(rows, { x: 0.4, y: 2.34, w: 6.3, colW: [2.3, 4.0], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.33, valign: "middle" });
+  }
+  s.addText(L(pe2, "credit"), { x: 0.4, y: 5.32, w: 6.3, h: 0.38, fontSize: 6.8, color: MUTED, italic: true, fontFace: FONT, valign: "top", margin: 0 });
+  s.addText(L(pe2, "measures_title"), { x: 6.9, y: 1.08, w: 6.0, h: 0.28, bold: true, fontSize: 11.5, color: NAVY, fontFace: FONT, margin: 0 });
+  plainBullets(s, 6.9, 1.4, 6.0, 4.24, pe2.measures.map(LL), { base: 10.5 });
+  noteBox(s, 0.4, 5.74, 12.5, 0.94, L(pe2, "compare_title"), L(pe2, "compare"));
+  srcLine(s, [linkBy("TREQ project"), linkBy("technical report D2.6.2"), linkBy("Alcaldía de Santiago de Cali")]);
+  footer(s);
+}
 
 /* ============ 15. Historical earthquakes ============ */
 s = newSlide();

@@ -13,7 +13,7 @@
     "as_of_ja": "数値は2026年8月10日17:00（コロンビア時間、日本時間8月11日07:00）現在、発災から約9時間半後。すべて速報値。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-08-11 09:27 JST",
+    "stamp": "2026-08-11 09:43 JST",
     "update_date": "11/08/2026",
     "title_es": "Terremoto del Chocó de 2026 (Colombia)",
     "subtitle_es": "M7.4, San José del Palmar, departamento del Chocó — 10 de agosto de 2026",
@@ -841,9 +841,9 @@
         "es": "Los consejos departamentales y municipales de gestión del riesgo (CDGRD / CMGRD) asumen la primera respuesta; la UNGRD refuerza cuando se supera la capacidad local."
       },
       {
-        "en": "PNGRD 2015-2030 - the national disaster risk management plan, aligned with the Sendai Framework.",
-        "ja": "PNGRD 2015-2030 — 仙台防災枠組に整合した国家災害リスク管理計画。",
-        "es": "PNGRD 2015-2030: el plan nacional de gestión del riesgo de desastres, alineado con el Marco de Sendái."
+        "en": "PNGRD 2015-2030 — the national disaster risk management plan, adopted by Decree 308 of 2016 and updated by Decree 1478 of 3 August 2022; aligned with the Sendai Framework and monitored annually by UNGRD.",
+        "ja": "PNGRD 2015-2030 — 国家災害リスク管理計画。2016年大統領令第308号で採択され、2022年8月3日の第1478号で更新。仙台防災枠組に整合し、UNGRDが年次で進捗を監理する。",
+        "es": "PNGRD 2015-2030 — el plan nacional de gestión del riesgo de desastres, adoptado por el Decreto 308 de 2016 y actualizado por el Decreto 1478 del 3 de agosto de 2022; alineado con el Marco de Sendái y con seguimiento anual de la UNGRD."
       },
       {
         "en": "NSR-10 - the national seismic building code (in force since 2010, technical annexes updated since). Buildings predating modern code enforcement, and non-engineered masonry and earthen construction, remain the dominant source of risk.",
@@ -851,14 +851,19 @@
         "es": "NSR-10: el reglamento nacional de construcción sismo resistente (vigente desde 2010, con anexos técnicos actualizados posteriormente). Las edificaciones anteriores a la aplicación de la norma moderna y la construcción no ingenieril en mampostería y tierra siguen siendo la principal fuente de riesgo."
       },
       {
-        "en": "Seismic microzonation studies exist for major cities including Bogotá, Medellín, Cali, Pereira, Manizales and Armenia - a direct legacy of the 1999 earthquake.",
-        "ja": "ボゴタ、メデジン、カリ、ペレイラ、マニサレス、アルメニアなど主要都市で地震動微地形区分（マイクロゾーニング）が整備されている。1999年地震の直接の教訓による。",
-        "es": "Existen estudios de microzonificación sísmica para las principales ciudades, entre ellas Bogotá, Medellín, Cali, Pereira, Manizales y Armenia, herencia directa del terremoto de 1999."
+        "en": "Seismic microzonation studies exist for major cities including Bogotá, Medellín, Cali, Pereira, Manizales and Armenia — a direct legacy of the 1999 earthquake. In Cali the microzonation is binding on structural design through Decree 411.0.20.0158 of 2014.",
+        "ja": "ボゴタ、メデジン、カリ、ペレイラ、マニサレス、アルメニアなど主要都市で地震動微地形区分（マイクロゾーニング）が整備されている。1999年地震の直接の教訓である。カリでは2014年市令第411.0.20.0158号により構造設計に対して拘束力を持つ。",
+        "es": "Existen estudios de microzonificación sísmica para las principales ciudades, entre ellas Bogotá, Medellín, Cali, Pereira, Manizales y Armenia, herencia directa del terremoto de 1999. En Cali la microzonificación es vinculante para el diseño estructural mediante el Decreto 411.0.20.0158 de 2014."
       },
       {
         "en": "The SGC operates the National Seismological Network and the national accelerograph network, and issues public bulletins within minutes.",
         "ja": "SGCが国家地震観測網と強震観測網を運用し、数分以内に公表情報を発表している。",
         "es": "El SGC opera la Red Sismológica Nacional y la red nacional de acelerógrafos, y publica boletines en cuestión de minutos."
+      },
+      {
+        "en": "Cities run their own instruments alongside the national system: Cali's SATIC community-and-sensor early warning system (from 2018, formalised by Municipal Decree 0858 of 2022), Medellín's DAGRD and its municipal plan, and municipal risk-management funds created under Law 1523.",
+        "ja": "各都市は国の制度と並行して独自の仕組みを運用している。カリの住民参加型早期警戒システムSATIC（2018年〜、2022年市令第0858号で制度化）、メデジンのDAGRDと市防災計画、法律1523号に基づく市町村防災基金などである。",
+        "es": "Las ciudades operan sus propios instrumentos junto al sistema nacional: el sistema de alertas tempranas comunitario y con sensores SATIC de Cali (desde 2018, formalizado por el Decreto Municipal 0858 de 2022), el DAGRD de Medellín y su plan municipal, y los fondos municipales de gestión del riesgo creados al amparo de la Ley 1523."
       }
     ],
     "intro_es": "Colombia reconstruyó su marco de gestión del riesgo de desastres tras la tragedia volcánica de Armero en 1985 y de nuevo tras el terremoto de Armenia de 1999. La Ley 1523 de 2012 creó el Sistema Nacional de Gestión del Riesgo de Desastres (SNGRD), liderado por la Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD), adscrita a la Presidencia de la República."
@@ -946,6 +951,16 @@
       "note_es": "Uno de los mayores sismos jamás registrados; tsunami destructivo en la costa del Pacífico"
     },
     {
+      "year": "1925",
+      "mag": "M7.0",
+      "event_en": "Cali earthquake (Valle del Cauca)",
+      "event_ja": "カリ地震（バジェ・デル・カウカ県）",
+      "event_es": "Terremoto de Cali (Valle del Cauca)",
+      "note_en": "The reference historical event for Cali; the city was also shaken in 1995 and 2004, the latter damaging clinics and residential buildings",
+      "note_ja": "カリにとって基準となる歴史地震。同市は1995年・2004年にも被災し、2004年は診療所や住宅に被害が出た",
+      "note_es": "El evento histórico de referencia para Cali; la ciudad también fue sacudida en 1995 y 2004, este último con daños en clínicas y edificaciones residenciales"
+    },
+    {
       "year": "1979",
       "event_en": "Tumaco earthquake (Nariño)",
       "event_ja": "トゥマコ地震（ナリーニョ県）",
@@ -1030,6 +1045,12 @@
       "en": "The affected area is the Coffee Region rebuilt after 1999. Comparing how post-1999 construction performed against older stock, under a very different type of shaking, will be valuable for the region and for other countries with intermediate-depth seismic sources.",
       "ja": "被災地は1999年以後に再建されたコーヒー地帯である。1999年以降の建築物と旧来の建物が、性質の異なる揺れに対してどう応答したかの比較は、同地域にとっても、やや深発地震のリスクを抱える他国にとっても有益である。",
       "es": "La zona afectada es el Eje Cafetero reconstruido después de 1999. Comparar el comportamiento de las construcciones posteriores a 1999 con el del parque más antiguo, bajo un tipo de sacudimiento muy distinto, será valioso para la región y para otros países con fuentes sísmicas de profundidad intermedia."
+    },
+    {
+      "tier": "official",
+      "en": "The assessments existed before the event. Cali's GEM-TREQ risk model and its local plan had already named hospitals and other indispensable buildings as the priority to retrofit, and the 2026 earthquake — a far weaker test than the city's own modelled scenario — still took out roughly 30% of its main public hospital. The gap here is not knowledge but implementation and financing.",
+      "ja": "評価は発災前から存在していた。カリのGEM-TREQリスクモデルと地域防災計画は、病院をはじめとする重要建築物の耐震補強を最優先課題として既に特定していた。2026年の地震は同市の想定シナリオよりはるかに弱い試練であったにもかかわらず、主要公立病院の約3割を失わせた。ここでの不足は知見ではなく、実施と財源である。",
+      "es": "Las evaluaciones existían antes del evento. El modelo de riesgo GEM-TREQ de Cali y su plan local ya habían señalado los hospitales y otras edificaciones indispensables como la prioridad de reforzamiento, y el sismo de 2026 —una prueba mucho más débil que el propio escenario modelado de la ciudad— aun así se llevó cerca del 30 % de su principal hospital público. La brecha aquí no es de conocimiento, sino de implementación y financiación."
     },
     {
       "tier": "official",
@@ -1261,6 +1282,55 @@
       "label_es": "Comisión Europea — apoyo de la UE a Colombia, Copernicus activado",
       "url": "https://www.democrata.es/en/international/von-der-leyen-expresses-the-eu-s-support-for-colombia-and-activates-copernicus-after-the-earthquake/",
       "tier": "media"
+    },
+    {
+      "label_en": "GEM Foundation — TREQ project (urban earthquake risk, Quito / Cali / Santiago de los Caballeros)",
+      "label_ja": "GEM財団 TREQプロジェクト（都市地震リスク：キト／カリ／サンティアゴ）",
+      "label_es": "Fundación GEM — proyecto TREQ (riesgo sísmico urbano: Quito / Cali / Santiago de los Caballeros)",
+      "url": "https://www.globalquakemodel.org/proj/treq",
+      "tier": "official"
+    },
+    {
+      "label_en": "GEM-TREQ — Evaluación de riesgo sísmico para Santiago de Cali (technical report D2.6.2)",
+      "label_ja": "GEM-TREQ カリ市地震リスク評価（技術報告 D2.6.2）",
+      "label_es": "GEM-TREQ — Evaluación de riesgo sísmico para Santiago de Cali (informe técnico D2.6.2)",
+      "url": "https://cloud-storage.globalquakemodel.org/public/wix-new-website/pdf-collections-wix/publications/TREQ%20deliverables/reports/TREQ_D262_Riesgo_Sismico_Cali_v1.00.pdf",
+      "tier": "official"
+    },
+    {
+      "label_en": "Understanding seismic risk in Santiago de Cali for its application in risk management (peer-reviewed, 2025)",
+      "label_ja": "査読論文：カリ市の地震リスク理解とリスク管理への応用（2025）",
+      "label_es": "Understanding seismic risk in Santiago de Cali for its application in risk management (revisado por pares, 2025)",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S2212420925003097",
+      "tier": "official"
+    },
+    {
+      "label_en": "SATIC — Cali's intelligent and community early warning system",
+      "label_ja": "SATIC カリ市の住民参加型早期警戒システム",
+      "label_es": "SATIC — Sistema de Alertas Tempranas Inteligentes y Comunitarias de Cali",
+      "url": "https://satic.cali.gov.co/satic",
+      "tier": "official"
+    },
+    {
+      "label_en": "Alcaldía de Santiago de Cali — disaster risk management",
+      "label_ja": "サンティアゴ・デ・カリ市 災害リスク管理",
+      "label_es": "Alcaldía de Santiago de Cali — gestión del riesgo",
+      "url": "https://www.cali.gov.co/gestiondelriesgo/",
+      "tier": "official"
+    },
+    {
+      "label_en": "UNGRD — Plan Nacional de Gestión del Riesgo de Desastres (PNGRD)",
+      "label_ja": "UNGRD 国家災害リスク管理計画（PNGRD）",
+      "label_es": "UNGRD — Plan Nacional de Gestión del Riesgo de Desastres (PNGRD)",
+      "url": "https://portal.gestiondelriesgo.gov.co/Paginas/Plan-Nacional-de-Gestion-del-Riesgo.aspx",
+      "tier": "official"
+    },
+    {
+      "label_en": "Decreto 1478 de 2022 — update of the PNGRD",
+      "label_ja": "2022年大統領令第1478号（PNGRD更新）",
+      "label_es": "Decreto 1478 de 2022 — actualización del PNGRD",
+      "url": "https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=191411",
+      "tier": "official"
     }
   ],
   "source_policy_en": "Source hierarchy: official > media > TBC. Government and scientific-agency figures are used as primary; media reports are used only where official figures are not yet published and are labelled as such. Items still being verified are marked TBC. Preliminary figures are never replaced by larger unverified numbers.",
@@ -1482,5 +1552,117 @@
         "v": "ONGOING"
       }
     ]
+  },
+  "pre_event": {
+    "intro_en": "Cali did not lack a risk assessment. Between 2020 and 2022 the city built a full urban earthquake risk model with the GEM Foundation under the USAID-supported TREQ project, one of three pilot cities alongside Quito and Santiago de los Caballeros. The modelled scenario is a shallow local one — magnitude 6.5 at 10 km depth on the Dagua-Cali fault — and its estimates dwarf what the city actually experienced on 10 August 2026.",
+    "intro_ja": "カリにリスク評価がなかったわけではない。同市は2020〜2022年に、USAIDが支援するTREQプロジェクトの下でGEM財団とともに都市の地震リスクモデルを構築した。キト、サンティアゴ・デ・ロス・カバジェロスと並ぶ3つのパイロット都市の一つである。想定シナリオは浅い直下型（ダグア・カリ断層、M6.5、深さ10km）で、その推計値は2026年8月10日に実際に生じた被害をはるかに上回る。",
+    "intro_es": "A Cali no le faltaba una evaluación del riesgo. Entre 2020 y 2022 la ciudad construyó un modelo completo de riesgo sísmico urbano con la Fundación GEM en el marco del proyecto TREQ, apoyado por USAID, como una de las tres ciudades piloto junto con Quito y Santiago de los Caballeros. El escenario modelado es local y somero —magnitud 6.5 a 10 km de profundidad en la falla Dagua-Cali— y sus estimaciones superan con mucho lo que la ciudad vivió el 10 de agosto de 2026.",
+    "rows": [
+      {
+        "k_en": "Modelled scenario",
+        "k_ja": "想定シナリオ",
+        "k_es": "Escenario modelado",
+        "v_en": "M6.5, 10 km depth, Dagua-Cali fault, urban area",
+        "v_ja": "M6.5・深さ10km、ダグア・カリ断層、市街地",
+        "v_es": "M6.5, 10 km de profundidad, falla Dagua-Cali, área urbana"
+      },
+      {
+        "k_en": "Population exposed",
+        "k_ja": "曝露人口",
+        "k_es": "Población expuesta",
+        "v_en": "approx. 2,300,000",
+        "v_ja": "約230万人",
+        "v_es": "aprox. 2.300.000"
+      },
+      {
+        "k_en": "Estimated deaths",
+        "k_ja": "推定死者",
+        "k_es": "Muertos estimados",
+        "v_en": "approx. 1,200",
+        "v_ja": "約1,200人",
+        "v_es": "aprox. 1.200"
+      },
+      {
+        "k_en": "Seriously injured",
+        "k_ja": "重傷者",
+        "k_es": "Heridos graves",
+        "v_en": "approx. 36,300",
+        "v_ja": "約36,300人",
+        "v_es": "aprox. 36.300"
+      },
+      {
+        "k_en": "Displaced",
+        "k_ja": "住まいを失う人",
+        "k_es": "Desplazados",
+        "v_en": "approx. 181,000",
+        "v_ja": "約181,000人",
+        "v_es": "aprox. 181.000"
+      },
+      {
+        "k_en": "Buildings collapsed",
+        "k_ja": "倒壊建物",
+        "k_es": "Edificaciones colapsadas",
+        "v_en": "approx. 1,800 of 348,000 (0.5%)",
+        "v_ja": "348,000棟のうち約1,800棟（0.5%）",
+        "v_es": "aprox. 1.800 de 348.000 (0,5 %)"
+      },
+      {
+        "k_en": "Residual risk",
+        "k_ja": "残余リスク",
+        "k_es": "Riesgo residual",
+        "v_en": "assessed at about 40% after existing measures",
+        "v_ja": "既往対策を織り込んで約40%と評価",
+        "v_es": "evaluado en cerca del 40 % tras las medidas existentes"
+      }
+    ],
+    "measures_title_en": "What the city had already prioritised",
+    "measures_title_ja": "市が既に優先課題としていたこと",
+    "measures_title_es": "Lo que la ciudad ya había priorizado",
+    "measures": [
+      {
+        "en": "Seismic vulnerability studies of indispensable buildings — hospitals, schools, fire stations — to the NSR-10 code (budgeted at about USD 1.7 million, short term).",
+        "ja": "重要建築物（病院・学校・消防署）の耐震脆弱性調査を耐震基準NSR-10に沿って実施（約170万米ドル、短期）。",
+        "es": "Estudios de vulnerabilidad sísmica de edificaciones indispensables —hospitales, colegios, estaciones de bomberos— conforme a la NSR-10 (presupuestado en unos 1,7 millones de dólares, corto plazo)."
+      },
+      {
+        "en": "Structural retrofitting of indispensable buildings and of basic-service infrastructure, to keep essential services running after an earthquake.",
+        "ja": "地震後も基幹サービスを維持するため、重要建築物と基礎的サービス基盤の構造補強。",
+        "es": "Reforzamiento estructural de edificaciones indispensables y de la infraestructura de servicios básicos, para mantener los servicios esenciales tras un sismo."
+      },
+      {
+        "en": "Seismic vulnerability assessment of the EMCALI water, sewerage and power networks and of the city gas network.",
+        "ja": "EMCALIの上下水道・電力網および都市ガス網の耐震脆弱性評価。",
+        "es": "Evaluación de la vulnerabilidad sísmica de las redes de acueducto, alcantarillado y energía de EMCALI y de la red de gas de la ciudad."
+      },
+      {
+        "en": "Updating the local soil-response model and the seismic microzonation, in force since INGEOMINAS/DAGMA (2005) and adopted by Decree 411.0.20.0158 of 2014 for structural design.",
+        "ja": "地盤応答モデルと地震動微地形区分の更新。微地形区分はINGEOMINAS/DAGMA（2005年）以来運用され、2014年市令第411.0.20.0158号により構造設計に適用されている。",
+        "es": "Actualización del modelo de respuesta local del suelo y de la microzonificación sísmica, vigente desde INGEOMINAS/DAGMA (2005) y adoptada por el Decreto 411.0.20.0158 de 2014 para el diseño estructural."
+      },
+      {
+        "en": "Maintaining and extending the Cali accelerograph network (RAC) and its interoperability with the SGC national network.",
+        "ja": "カリ強震観測網（RAC）の維持・拡充と、SGCの国家観測網との相互運用性の確保。",
+        "es": "Mantenimiento y ampliación de la Red de Acelerógrafos de Cali (RAC) y de su interoperabilidad con la red nacional del SGC."
+      },
+      {
+        "en": "Insuring public infrastructure against seismic risk, and retrofitting low-income housing through subsidies and safe self-build programmes.",
+        "ja": "公共インフラの地震保険付保と、補助金・安全な自力建設プログラムによる低所得層住宅の補強。",
+        "es": "Aseguramiento de la infraestructura pública ante el riesgo sísmico y reforzamiento de viviendas de bajos ingresos mediante subsidios y programas de autoconstrucción segura."
+      },
+      {
+        "en": "Financing model for the priority measures: local government 30-50%, national disaster fund (FNGRD/UNGRD) 30-50%, international partners including JICA, the GEM Foundation and the IDB about 20%.",
+        "ja": "優先施策の資金構成：地方政府30〜50%、国家防災基金（FNGRD／UNGRD）30〜50%、JICA・GEM財団・米州開発銀行などの国際パートナー約20%。",
+        "es": "Modelo de financiación de las medidas priorizadas: gobierno local 30-50 %, fondo nacional (FNGRD/UNGRD) 30-50 %, socios internacionales —entre ellos JICA, la Fundación GEM y el BID— cerca del 20 %."
+      }
+    ],
+    "compare_title_en": "The 2026 earthquake was not this scenario",
+    "compare_title_ja": "2026年の地震はこのシナリオではない",
+    "compare_title_es": "El sismo de 2026 no fue este escenario",
+    "compare_en": "The 10 August event was larger in magnitude (M7.4) but 107 km deep and 166 km from Cali, giving the city MMI VI rather than the near-field shaking of the modelled M6.5. Cali recorded 27 deaths and 25-30 collapsed structures — two orders of magnitude below the scenario. What it did test is exactly the weakness the local plan had flagged: about 30% of the University Hospital collapsed and seven health institutions closed. The city's own worst case remains ahead of it, and the case for retrofitting indispensable buildings is now evidential rather than theoretical.",
+    "compare_ja": "8月10日の地震は規模こそ大きい（M7.4）が、深さ107km・カリから166kmであり、市内の揺れは想定M6.5の近距離の揺れではなくMMI VIにとどまった。カリの死者は27人、倒壊は25〜30棟で、シナリオより2桁小さい。一方でこの地震が実際に試したのは、地域計画が指摘していた弱点そのものであった。大学病院の約3割が崩落し、医療7施設が閉鎖された。市にとっての最悪シナリオは依然として将来にあり、重要建築物の耐震補強の必要性は、理論ではなく実証の段階に入った。",
+    "compare_es": "El evento del 10 de agosto fue de mayor magnitud (M7.4) pero ocurrió a 107 km de profundidad y a 166 km de Cali, de modo que la ciudad experimentó MMI VI y no el sacudimiento de campo cercano del escenario M6.5 modelado. Cali registró 27 muertos y entre 25 y 30 estructuras colapsadas: dos órdenes de magnitud por debajo del escenario. Lo que sí puso a prueba fue justamente la debilidad que el plan local había señalado: cerca del 30 % del Hospital Universitario del Valle colapsó y siete instituciones de salud cerraron. El peor caso propio de la ciudad sigue por delante, y el argumento para reforzar las edificaciones indispensables es ahora empírico y no teórico.",
+    "credit_en": "Figures from the GEM-TREQ urban risk assessment for Santiago de Cali and from the city's local disaster risk management plan, as compiled by the Municipality of Santiago de Cali (Secretaría de Gestión del Riesgo de Emergencias y Desastres) for a JICA training course.",
+    "credit_ja": "数値は、サンティアゴ・デ・カリを対象としたGEM-TREQ都市リスク評価および同市の地域防災計画による。カリ市（災害リスク管理局）がJICA研修のために整理した資料に基づく。",
+    "credit_es": "Cifras tomadas de la evaluación de riesgo urbano GEM-TREQ para Santiago de Cali y del plan local de gestión del riesgo de la ciudad, recopiladas por la Alcaldía de Santiago de Cali (Secretaría de Gestión del Riesgo de Emergencias y Desastres) para un curso de formación de JICA."
   }
 }
