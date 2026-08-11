@@ -13,7 +13,7 @@
     "as_of_ja": "数値は2026年8月10日17:00（コロンビア時間、日本時間8月11日07:00）現在、発災から約9時間半後。すべて速報値。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-08-11 09:43 JST",
+    "stamp": "2026-08-11 10:32 JST",
     "update_date": "11/08/2026",
     "title_es": "Terremoto del Chocó de 2026 (Colombia)",
     "subtitle_es": "M7.4, San José del Palmar, departamento del Chocó — 10 de agosto de 2026",
@@ -23,19 +23,19 @@
     "disseminate_es": "Informe multilingüe (EN/JA/ES) para difusión nacional e internacional. Se da prioridad a las fuentes oficiales; los vacíos se completan con información de prensa debidamente identificada."
   },
   "event": {
-    "origin_time_local": "10 Aug 2026, 07:34 COT (UTC-5)",
-    "origin_time_utc": "10 Aug 2026, 12:34 UTC",
+    "origin_time_local": "10 Aug 2026, 07:34:28 COT (UTC-5)",
+    "origin_time_utc": "10 Aug 2026, 12:34:28 UTC",
     "origin_time_jst": "10 Aug 2026, 21:34 JST",
-    "epicentre_en": "USGS: 5 km E of San José del Palmar, Chocó Department (approx. 280 km W of Bogotá) — SGC: 20 km from San José del Palmar",
-    "epicentre_ja": "USGS：チョコ県サンホセ・デル・パルマルの東5km（ボゴタの西約280km）／SGC：同町から20km",
-    "lat": 4.9031,
-    "lon": -76.1885,
+    "epicentre_en": "USGS: 5 km S of San José del Palmar, Chocó Department (approx. 280 km W of Bogotá) — SGC: 20 km from San José del Palmar",
+    "epicentre_ja": "USGS：チョコ県サンホセ・デル・パルマルの南5km（ボゴタの西約280km）／SGC：同町から20km",
+    "lat": 4.8436,
+    "lon": -76.2422,
     "magnitude": "Mww 7.4",
     "magnitude_note_en": "USGS Mww 7.4 and SGC 7.4 agree on size. The SGC's first bulletin gave M6.6 at 79 km depth and was revised to 7.4; the two agencies' locations differ by about 20 km and their depths by about 11 km, which is normal for an intermediate-depth event recorded by different networks.",
     "magnitude_note_ja": "規模はUSGSのMww7.4、SGCの7.4で一致。SGCの第1報はM6.6・深さ79kmで、のち7.4に修正された。両機関の震源位置は約20km、深さは約11km異なるが、観測網の異なるやや深発地震では通常の範囲である。",
-    "depth_km": 107,
-    "depth_display_en": "107 km (USGS) / 96 km (SGC)",
-    "depth_display_ja": "107km（USGS）／96km（SGC）",
+    "depth_km": 110,
+    "depth_display_en": "110.3 km (USGS, PAGER v5) / 96 km (SGC)",
+    "depth_display_ja": "110.3km（USGS、PAGER第5版）／96km（SGC）",
     "mechanism_en": "Strike-slip faulting at intermediate depth, within the subducting Nazca slab (not on the shallow plate interface)",
     "mechanism_ja": "沈み込むナスカプレート内部（スラブ内）で発生した、やや深発の横ずれ断層型。プレート境界の浅い地震ではない。",
     "max_intensity_en": "MMI VII (Very strong) — USGS ShakeMap; the SGC macroseismic intensity map agrees",
@@ -44,27 +44,27 @@
     "felt_ja": "ボゴタ・カリ・メデジンを含むコロンビア西部〜中部の広域、およびエクアドル・パナマ・ベネズエラで有感",
     "tsunami_en": "No tsunami. The event was inland and at intermediate depth; no tsunami warning was issued for the Pacific coast.",
     "tsunami_ja": "津波なし。震源は内陸かつやや深発で、太平洋岸に津波警報は発表されていない。",
-    "alert_en": "USGS PAGER: Orange (significant casualties and damage likely). GDACS: Orange.",
-    "alert_ja": "USGS PAGER：オレンジ（相当数の人的被害・経済被害の可能性）。GDACS：オレンジ。",
-    "summary_en": "At 07:34 local time (12:34 UTC) on 10 August 2026, an Mww 7.4 earthquake struck western Colombia with its epicentre 5 km east of San José del Palmar in Chocó Department, at a depth of about 107 km (USGS). The event was an intermediate-depth, strike-slip rupture inside the subducting Nazca slab; because of its depth, strong shaking (MMI VI-VII) was spread over a wide area of the Andean Coffee Region rather than concentrated near the epicentre, and about 10.5 million people were exposed to it. The SGC describes it as the largest-magnitude earthquake recorded in Colombia in the past decade. As of 17:00 COT on 10 August the Government reported 111 deaths and 87 injured, more than 1,600 buildings damaged (1,575 homes damaged, 37 destroyed, 61 buildings collapsed), together with damage to 18 health facilities, 52 educational facilities, 18 major roads and six regional airports. The passenger terminal of Matecaña International Airport in Pereira partially collapsed, a tower of the neo-Gothic cathedral in Manizales fell onto the nave, and about 30% of the University Hospital in Cali collapsed. The President declared a national disaster, set up a Unified Command Post in Chocó and deployed four USAR teams and the armed forces. There was no tsunami. All figures are preliminary and are expected to change as assessment proceeds.",
-    "summary_ja": "2026年8月10日07:34（現地時間、12:34 UTC）、コロンビア西部チョコ県サンホセ・デル・パルマルの東5kmを震源とするMww7.4の地震が発生した。深さは約107km（USGS）で、沈み込むナスカプレート内部のやや深発・横ずれ型。深いために強い揺れ（MMI VI〜VII）はコーヒー地帯を含む広範囲に及び、約1,050万人が強い揺れにさらされた。SGCは過去10年でコロンビア最大規模の地震としている。8月10日17:00（現地）時点で政府は死者111人・負傷者87人、建物被害1,600棟超（住宅損壊1,575、全壊37、建物倒壊61）、医療施設18・教育施設52・幹線道路18・地方空港6か所の被害を発表。ペレイラのマテカニャ国際空港旅客ターミナルが一部倒壊、マニサレスの大聖堂の塔が身廊に崩落、カリの大学病院は約30%が損壊した。大統領は国家災害を宣言し、チョコ県に統合指揮所を設置、USAR4隊と軍を投入した。津波はない。数値はすべて速報値であり、被害調査の進展により変動する。",
-    "epicentre_es": "USGS: 5 km al E de San José del Palmar, departamento del Chocó (unos 280 km al O de Bogotá) — SGC: a 20 km de San José del Palmar",
+    "alert_en": "USGS PAGER: Orange (version 5). Most likely fatality band 1,000-10,000 (35% probability); economic losses most likely USD 100-1,000 million (34%), less than 1% of Colombia's GDP. GDACS: Orange.",
+    "alert_ja": "USGS PAGER：オレンジ（第5版）。死者数は1,000〜10,000人の階級が最も確からしい（確率35%）。経済損失は1〜10億米ドルが最も確からしく（34%）、コロンビアのGDPの1%未満。GDACS：オレンジ。",
+    "summary_en": "At 07:34 local time (12:34 UTC) on 10 August 2026, an Mww 7.4 earthquake struck western Colombia with its epicentre 5 km east of San José del Palmar in Chocó Department, at a depth of about 110 km (USGS). The event was an intermediate-depth, strike-slip rupture inside the subducting Nazca slab; because of its depth, strong shaking (MMI VI-VII) was spread over a wide area of the Andean Coffee Region rather than concentrated near the epicentre, and about 10.5 million people were exposed to it. The SGC describes it as the largest-magnitude earthquake recorded in Colombia in the past decade. As of 17:00 COT on 10 August the Government reported 111 deaths and 87 injured, more than 1,600 buildings damaged (1,575 homes damaged, 37 destroyed, 61 buildings collapsed), together with damage to 18 health facilities, 52 educational facilities, 18 major roads and six regional airports. The passenger terminal of Matecaña International Airport in Pereira partially collapsed, a tower of the neo-Gothic cathedral in Manizales fell onto the nave, and about 30% of the University Hospital in Cali collapsed. The President declared a national disaster, set up a Unified Command Post in Chocó and deployed four USAR teams and the armed forces. There was no tsunami. All figures are preliminary and are expected to change as assessment proceeds.",
+    "summary_ja": "2026年8月10日07:34（現地時間、12:34 UTC）、コロンビア西部チョコ県サンホセ・デル・パルマルの東5kmを震源とするMww7.4の地震が発生した。深さは約110km（USGS）で、沈み込むナスカプレート内部のやや深発・横ずれ型。深いために強い揺れ（MMI VI〜VII）はコーヒー地帯を含む広範囲に及び、約1,050万人が強い揺れにさらされた。SGCは過去10年でコロンビア最大規模の地震としている。8月10日17:00（現地）時点で政府は死者111人・負傷者87人、建物被害1,600棟超（住宅損壊1,575、全壊37、建物倒壊61）、医療施設18・教育施設52・幹線道路18・地方空港6か所の被害を発表。ペレイラのマテカニャ国際空港旅客ターミナルが一部倒壊、マニサレスの大聖堂の塔が身廊に崩落、カリの大学病院は約30%が損壊した。大統領は国家災害を宣言し、チョコ県に統合指揮所を設置、USAR4隊と軍を投入した。津波はない。数値はすべて速報値であり、被害調査の進展により変動する。",
+    "epicentre_es": "USGS: 5 km al S de San José del Palmar, departamento del Chocó (unos 280 km al O de Bogotá) — SGC: a 20 km de San José del Palmar",
     "magnitude_note_es": "El tamaño coincide: Mww 7.4 del USGS y 7.4 del SGC. El primer boletín del SGC dio M6.6 a 79 km de profundidad y fue revisado a 7.4; las localizaciones de las dos entidades difieren unos 20 km y sus profundidades unos 11 km, lo normal en un sismo de profundidad intermedia registrado por redes distintas.",
-    "depth_display_es": "107 km (USGS) / 96 km (SGC)",
+    "depth_display_es": "110,3 km (USGS, PAGER v5) / 96 km (SGC)",
     "mechanism_es": "Falla de rumbo a profundidad intermedia, dentro de la placa de Nazca en subducción (no en la interfaz somera entre placas)",
     "max_intensity_es": "MMI VII (muy fuerte) — ShakeMap del USGS; el mapa de intensidades macrosísmicas del SGC coincide",
     "felt_es": "Sentido en el occidente y el centro de Colombia, incluidas Bogotá, Cali y Medellín, y también en Ecuador, Panamá y Venezuela",
     "tsunami_es": "Sin tsunami. El sismo fue continental y de profundidad intermedia; no se emitió alerta de tsunami para la costa del Pacífico.",
-    "alert_es": "PAGER del USGS: naranja (probables víctimas y daños significativos). GDACS: naranja.",
-    "summary_es": "A las 07:34 hora local (12:34 UTC) del 10 de agosto de 2026, un sismo de Mww 7.4 sacudió el occidente de Colombia con epicentro 5 km al este de San José del Palmar (Chocó), a unos 107 km de profundidad (USGS). Fue una ruptura de rumbo a profundidad intermedia dentro de la placa de Nazca en subducción; por esa profundidad, el sacudimiento fuerte (MMI VI-VII) se repartió sobre una amplia zona del Eje Cafetero andino en lugar de concentrarse cerca del epicentro, y unos 10,5 millones de personas quedaron expuestas a él. El SGC lo describe como el sismo de mayor magnitud registrado en Colombia en la última década. Al corte de las 17:00 COT del 10 de agosto, el Gobierno reportó 111 muertos y 87 heridos, más de 1.600 edificaciones afectadas (1.575 viviendas averiadas, 37 destruidas y 61 edificios colapsados), y daños en 18 centros de salud, 52 establecimientos educativos, 18 vías principales y seis aeropuertos regionales. Colapsaron parcialmente la terminal de pasajeros del Aeropuerto Internacional Matecaña (Pereira), una torre de la catedral neogótica de Manizales sobre la nave y cerca del 30 % del Hospital Universitario del Valle, en Cali. El Presidente declaró el desastre nacional, instaló un Puesto de Mando Unificado en el Chocó y desplegó cuatro grupos USAR y las Fuerzas Militares. No hubo tsunami. Todas las cifras son preliminares y variarán conforme avance la evaluación.",
-    "origin_time_local_en": "10 Aug 2026, 07:34 COT (UTC-5)",
-    "origin_time_utc_en": "10 Aug 2026, 12:34 UTC",
+    "alert_es": "PAGER del USGS: naranja (versión 5). La banda de mortalidad más probable es de 1.000 a 10.000 (35 % de probabilidad); las pérdidas económicas más probables son de 100 a 1.000 millones de dólares (34 %), menos del 1 % del PIB de Colombia. GDACS: naranja.",
+    "summary_es": "A las 07:34 hora local (12:34 UTC) del 10 de agosto de 2026, un sismo de Mww 7.4 sacudió el occidente de Colombia con epicentro 5 km al este de San José del Palmar (Chocó), a unos 110 km de profundidad (USGS). Fue una ruptura de rumbo a profundidad intermedia dentro de la placa de Nazca en subducción; por esa profundidad, el sacudimiento fuerte (MMI VI-VII) se repartió sobre una amplia zona del Eje Cafetero andino en lugar de concentrarse cerca del epicentro, y unos 10,5 millones de personas quedaron expuestas a él. El SGC lo describe como el sismo de mayor magnitud registrado en Colombia en la última década. Al corte de las 17:00 COT del 10 de agosto, el Gobierno reportó 111 muertos y 87 heridos, más de 1.600 edificaciones afectadas (1.575 viviendas averiadas, 37 destruidas y 61 edificios colapsados), y daños en 18 centros de salud, 52 establecimientos educativos, 18 vías principales y seis aeropuertos regionales. Colapsaron parcialmente la terminal de pasajeros del Aeropuerto Internacional Matecaña (Pereira), una torre de la catedral neogótica de Manizales sobre la nave y cerca del 30 % del Hospital Universitario del Valle, en Cali. El Presidente declaró el desastre nacional, instaló un Puesto de Mando Unificado en el Chocó y desplegó cuatro grupos USAR y las Fuerzas Militares. No hubo tsunami. Todas las cifras son preliminares y variarán conforme avance la evaluación.",
+    "origin_time_local_en": "10 Aug 2026, 07:34:28 COT (UTC-5)",
+    "origin_time_utc_en": "10 Aug 2026, 12:34:28 UTC",
     "origin_time_jst_en": "10 Aug 2026, 21:34 JST",
-    "origin_time_local_ja": "2026年8月10日 07:34（コロンビア時間、UTC-5）",
-    "origin_time_utc_ja": "2026年8月10日 12:34（UTC）",
+    "origin_time_local_ja": "2026年8月10日 07:34:28（コロンビア時間、UTC-5）",
+    "origin_time_utc_ja": "2026年8月10日 12:34:28（UTC）",
     "origin_time_jst_ja": "2026年8月10日 21:34（日本時間）",
-    "origin_time_local_es": "10 de agosto de 2026, 07:34 COT (UTC-5)",
-    "origin_time_utc_es": "10 de agosto de 2026, 12:34 UTC",
+    "origin_time_local_es": "10 de agosto de 2026, 07:34:28 COT (UTC-5)",
+    "origin_time_utc_es": "10 de agosto de 2026, 12:34:28 UTC",
     "origin_time_jst_es": "10 de agosto de 2026, 21:34 JST",
     "origin_time_short_en": "10 Aug 2026, 07:34 COT (12:34 UTC / 21:34 JST)",
     "origin_time_short_ja": "2026年8月10日 07:34 COT（12:34 UTC／21:34 JST）",
@@ -90,14 +90,14 @@
     "magnitude_display_es": "Mww 7,4 (USGS)   ·   7,4 (SGC)"
   },
   "tectonics": {
-    "text_en": "Colombia lies at the junction of the Nazca, Caribbean and South America plates. Off the Pacific coast the Nazca plate subducts eastward beneath South America at roughly 50-60 mm/yr, and the descending slab reaches intermediate depths (70-300 km) beneath the Western and Central Cordilleras. This event ruptured inside that slab at about 107 km depth, which is why the shaking was felt over hundreds of kilometres - as far as Bogotá, Quito and Panamá City - while surface faulting and tsunami generation were absent. Intermediate-depth events radiate high-frequency energy efficiently and attenuate slowly, so damage tends to be distributed across many cities rather than concentrated in a narrow epicentral zone.",
-    "text_ja": "コロンビアはナスカ・カリブ・南米の3プレートが会合する地域にある。太平洋岸沖でナスカプレートが年約50〜60mmで南米プレート下に沈み込み、そのスラブは西部・中央山脈の下で深さ70〜300kmに達する。今回はこのスラブ内部の深さ約107kmで破壊が起きた。そのため揺れはボゴタ、キト、パナマシティまで数百km届いた一方、地表地震断層や津波は生じていない。やや深発地震は高周波エネルギーを効率よく放射し減衰が緩やかなため、被害は震央近傍に集中せず多数の都市に分散する傾向がある。",
+    "text_en": "Colombia lies at the junction of the Nazca, Caribbean and South America plates. Off the Pacific coast the Nazca plate subducts eastward beneath South America at roughly 50-60 mm/yr, and the descending slab reaches intermediate depths (70-300 km) beneath the Western and Central Cordilleras. This event ruptured inside that slab at about 110 km depth, which is why the shaking was felt over hundreds of kilometres - as far as Bogotá, Quito and Panamá City - while surface faulting and tsunami generation were absent. Intermediate-depth events radiate high-frequency energy efficiently and attenuate slowly, so damage tends to be distributed across many cities rather than concentrated in a narrow epicentral zone.",
+    "text_ja": "コロンビアはナスカ・カリブ・南米の3プレートが会合する地域にある。太平洋岸沖でナスカプレートが年約50〜60mmで南米プレート下に沈み込み、そのスラブは西部・中央山脈の下で深さ70〜300kmに達する。今回はこのスラブ内部の深さ約110kmで破壊が起きた。そのため揺れはボゴタ、キト、パナマシティまで数百km届いた一方、地表地震断層や津波は生じていない。やや深発地震は高周波エネルギーを効率よく放射し減衰が緩やかなため、被害は震央近傍に集中せず多数の都市に分散する傾向がある。",
     "points": [
       {
         "tier": "official",
-        "en": "Depth about 107 km (USGS): an intraslab event, not a plate-interface megathrust.",
-        "ja": "深さ約107km（USGS）。プレート境界の巨大地震ではなくスラブ内地震。",
-        "es": "Profundidad de unos 107 km (USGS): es un sismo intraplaca dentro de la losa, no un megasismo de la interfaz entre placas."
+        "en": "Depth about 110 km (USGS, revised): an intraslab event, not a plate-interface megathrust.",
+        "ja": "深さ約110km（USGS・修正値）。プレート境界の巨大地震ではなくスラブ内地震。",
+        "es": "Profundidad de unos 110 km (USGS, revisado): es un sismo intraplaca dentro de la losa, no un megasismo de la interfaz entre placas."
       },
       {
         "tier": "official",
@@ -113,9 +113,9 @@
       },
       {
         "tier": "official",
-        "en": "USGS PAGER Orange alert: estimated fatalities of the order of 300 and estimated economic loss of the order of USD 880 million (model estimates, not observations).",
-        "ja": "USGS PAGERはオレンジ警報。推定死者は300人規模、推定経済損失は約8.8億米ドル（いずれもモデル推計であり実測値ではない）。",
-        "es": "Alerta naranja del PAGER (USGS): mortalidad estimada del orden de 300 personas y pérdidas económicas estimadas del orden de 880 millones de dólares (estimaciones de modelo, no observaciones)."
+        "en": "USGS PAGER (v5) Orange alert: the most likely fatality band is 1,000-10,000 and the most likely loss band USD 100-1,000 million — model estimates, not observations, and far above the figures reported so far.",
+        "ja": "USGS PAGER（第5版）はオレンジ警報。最も確からしい死者数階級は1,000〜10,000人、損失階級は1〜10億米ドル。いずれもモデル推計であり実測値ではなく、現時点の報告値を大きく上回る。",
+        "es": "Alerta naranja del PAGER (v5) del USGS: la banda de mortalidad más probable es 1.000-10.000 y la de pérdidas 100-1.000 millones de dólares — estimaciones de modelo, no observaciones, y muy por encima de las cifras reportadas hasta ahora."
       },
       {
         "tier": "official",
@@ -128,9 +128,15 @@
         "en": "Shaking was reported as unusually long in duration in cities far from the epicentre - a characteristic of deep events recorded on soft valley sediments.",
         "ja": "震央から遠い都市でも揺れが長く続いたと報じられている。軟弱な盆地堆積層で観測される深発地震の特徴。",
         "es": "Se reportó una duración del sacudimiento inusualmente larga en ciudades alejadas del epicentro, rasgo propio de los sismos profundos registrados sobre sedimentos blandos de valle."
+      },
+      {
+        "tier": "official",
+        "en": "The Coffee Region has a history of both deep and shallow damaging events: M7.0 at 150 km depth in 1938, M6.5 at 64 km in 1962 and M6.1 at 15 km in 1999 (SGC/GEM national hazard model).",
+        "ja": "コーヒー地帯には深い地震・浅い地震の双方の被害履歴がある。1938年M7.0（深さ150km）、1962年M6.5（同64km）、1999年M6.1（同15km）（SGC/GEM 国家ハザードモデル）。",
+        "es": "El Eje Cafetero tiene antecedentes de sismos dañinos tanto profundos como someros: M7.0 a 150 km en 1938, M6.5 a 64 km en 1962 y M6.1 a 15 km en 1999 (modelo nacional de amenaza SGC/GEM)."
       }
     ],
-    "text_es": "Colombia se encuentra en la confluencia de las placas de Nazca, del Caribe y Suramericana. Frente a la costa del Pacífico, la placa de Nazca subduce hacia el este bajo Suramérica a unos 50-60 mm/año, y la losa descendente alcanza profundidades intermedias (70-300 km) bajo las cordilleras Occidental y Central. Este sismo rompió dentro de esa losa a unos 107 km de profundidad, razón por la cual se sintió a cientos de kilómetros —hasta Bogotá, Quito y la ciudad de Panamá— sin producir ruptura superficial ni tsunami. Los sismos de profundidad intermedia irradian con eficiencia energía de alta frecuencia y se atenúan lentamente, de modo que los daños tienden a repartirse entre muchas ciudades en vez de concentrarse en una franja epicentral estrecha."
+    "text_es": "Colombia se encuentra en la confluencia de las placas de Nazca, del Caribe y Suramericana. Frente a la costa del Pacífico, la placa de Nazca subduce hacia el este bajo Suramérica a unos 50-60 mm/año, y la losa descendente alcanza profundidades intermedias (70-300 km) bajo las cordilleras Occidental y Central. Este sismo rompió dentro de esa losa a unos 110 km de profundidad, razón por la cual se sintió a cientos de kilómetros —hasta Bogotá, Quito y la ciudad de Panamá— sin producir ruptura superficial ni tsunami. Los sismos de profundidad intermedia irradian con eficiencia energía de alta frecuencia y se atenúan lentamente, de modo que los daños tienden a repartirse entre muchas ciudades en vez de concentrarse en una franja epicentral estrecha."
   },
   "response_measures": [
     {
@@ -187,9 +193,9 @@
       "time": "07:34",
       "tier": "official",
       "src": "USGS / SGC",
-      "en": "Mww 7.4 earthquake, epicentre 5 km E of San José del Palmar (Chocó), depth approx. 107 km. Felt in Bogotá, Cali, Medellín, and in Ecuador, Panama and Venezuela.",
-      "ja": "Mww7.4の地震発生。震央はチョコ県サンホセ・デル・パルマルの東5km、深さ約107km。ボゴタ、カリ、メデジンのほかエクアドル、パナマ、ベネズエラでも有感。",
-      "es": "Sismo de Mww 7.4; epicentro 5 km al E de San José del Palmar (Chocó), profundidad de unos 107 km. Sentido en Bogotá, Cali y Medellín, y también en Ecuador, Panamá y Venezuela."
+      "en": "Mww 7.4 earthquake, epicentre 5 km S of San José del Palmar (Chocó), depth approx. 110 km. Felt in Bogotá, Cali, Medellín, and in Ecuador, Panama and Venezuela.",
+      "ja": "Mww7.4の地震発生。震央はチョコ県サンホセ・デル・パルマルの南5km、深さ約110km。ボゴタ、カリ、メデジンのほかエクアドル、パナマ、ベネズエラでも有感。",
+      "es": "Sismo de Mww 7.4; epicentro 5 km al S de San José del Palmar (Chocó), profundidad de unos 110 km. Sentido en Bogotá, Cali y Medellín, y también en Ecuador, Panamá y Venezuela."
     },
     {
       "time": "07:40s",
@@ -294,7 +300,7 @@
       "dept_ja": "チョコ県",
       "city_en": "San José del Palmar / Quibdó",
       "city_ja": "サンホセ・デル・パルマル／キブド",
-      "dist": "4 / 102 km",
+      "dist": "6 / 105 km",
       "mmi": "VII / VI",
       "note_en": "Epicentral department; 9 municipalities with reported damage; access, power and communications constrained.",
       "note_ja": "震央のある県。9市町村で被害報告。アクセス・電力・通信に制約。",
@@ -307,7 +313,7 @@
       "dept_ja": "リサラルダ県",
       "city_en": "Pereira, Dosquebradas",
       "city_ja": "ペレイラ、ドスケブラダス",
-      "dist": "55 km",
+      "dist": "61 km",
       "mmi": "VII",
       "note_en": "Highest reported death toll (at least 40; the governor cites at least 42). Airport terminal partially collapsed.",
       "note_ja": "死者数が最も多い（40人以上、県知事は42人以上と発言）。空港ターミナルが一部倒壊。",
@@ -320,7 +326,7 @@
       "dept_ja": "バジェ・デル・カウカ県",
       "city_en": "Cali, Cartago, Buenaventura",
       "city_ja": "カリ、カルタゴ、ブエナベントゥーラ",
-      "dist": "166 / 35 / 147 km",
+      "dist": "158 / 38 / 138 km",
       "mmi": "VI-VII",
       "note_en": "27 deaths reported; 25-30 collapsed structures at 12 critical points in Cali; University Hospital heavily damaged.",
       "note_ja": "死者27人と報告。カリでは12か所の重要地点で25〜30棟が倒壊。大学病院が大きく損壊。",
@@ -333,7 +339,7 @@
       "dept_ja": "カルダス県",
       "city_en": "Manizales",
       "city_ja": "マニサレス",
-      "dist": "77 km",
+      "dist": "84 km",
       "mmi": "VI-VII",
       "note_en": "8 municipalities affected; 17 buildings collapsed and 19 partially collapsed in Manizales; cathedral tower fell onto the nave.",
       "note_ja": "8市町村で被害。マニサレスで17棟倒壊・19棟部分倒壊。大聖堂の塔が身廊に崩落。",
@@ -346,8 +352,8 @@
       "dept_ja": "キンディオ県",
       "city_en": "Armenia and other localities",
       "city_ja": "アルメニアほか",
-      "dist": "70 km",
-      "mmi": "VI-VII",
+      "dist": "71 km",
+      "mmi": "VII",
       "note_en": "Several localities reported affected; the same Coffee Region devastated by the 1999 Armenia earthquake.",
       "note_ja": "複数地区で被害報告。1999年アルメニア地震で壊滅的被害を受けたコーヒー地帯と同じ地域。",
       "dept_es": "Quindío",
@@ -359,7 +365,7 @@
       "dept_ja": "アンティオキア県",
       "city_en": "Medellín and surroundings",
       "city_ja": "メデジン周辺",
-      "dist": "164 km",
+      "dist": "172 km",
       "mmi": "V-VI",
       "note_en": "One death reported (a 73-year-old); structural damage under inspection.",
       "note_ja": "死者1人（73歳）と報告。建物被害を点検中。",
@@ -372,7 +378,7 @@
       "dept_ja": "クンディナマルカ県／ボゴタ",
       "city_en": "Bogotá, Nilo",
       "city_ja": "ボゴタ、ニロ",
-      "dist": "235 km",
+      "dist": "241 km",
       "mmi": "IV-V",
       "note_en": "Widely felt; buildings evacuated; structural damage to a school in Nilo reported.",
       "note_ja": "広く有感。建物から避難。ニロの学校で構造被害が報告されている。",
@@ -616,42 +622,56 @@
     {
       "mmi": "VIII+",
       "label_en": "Severe",
-      "n": 0,
-      "note_en": "None estimated",
-      "note_ja": "推計なし",
+      "label_ja": "甚大",
       "label_es": "Severo",
-      "note_es": "Sin estimación"
+      "n": 0,
+      "note_en": "No population estimated at MMI VIII or above",
+      "note_ja": "MMI VIII以上の曝露人口は推計なし",
+      "note_es": "Sin población estimada en MMI VIII o superior"
     },
     {
       "mmi": "VII",
       "label_en": "Very strong",
-      "n": 1300000,
-      "note_en": "Order-of-magnitude figure derived from USGS PAGER exposure classes",
-      "note_ja": "USGS PAGERの曝露区分から求めた概数",
+      "label_ja": "非常に強い",
       "label_es": "Muy fuerte",
-      "note_es": "Cifra de orden de magnitud derivada de las clases de exposición del PAGER (USGS)"
+      "n": 1564000,
+      "note_en": "Includes Pereira (591k), Armenia (301k) and Cartago (135k)",
+      "note_ja": "ペレイラ59.1万人、アルメニア30.1万人、カルタゴ13.5万人を含む",
+      "note_es": "Incluye Pereira (591 mil), Armenia (301 mil) y Cartago (135 mil)"
     },
     {
       "mmi": "VI",
       "label_en": "Strong",
-      "n": 9200000,
-      "note_en": "About 10.5 million exposed to MMI VI-VII in total",
-      "note_ja": "MMI VI〜VIIの合計は約1,050万人",
+      "label_ja": "強い",
       "label_es": "Fuerte",
-      "note_es": "En total, unos 10,5 millones de personas expuestas a MMI VI-VII"
+      "n": 8888000,
+      "note_en": "Includes Cali (2,471k), Buenaventura (424k) and Palmira (349k)",
+      "note_ja": "カリ247.1万人、ブエナベントゥーラ42.4万人、パルミラ34.9万人を含む",
+      "note_es": "Incluye Cali (2.471 mil), Buenaventura (424 mil) y Palmira (349 mil)"
     },
     {
       "mmi": "V",
       "label_en": "Moderate",
-      "n": 24000000,
-      "note_en": "Felt across four countries by an estimated 34 million people",
-      "note_ja": "4か国で推計3,400万人が揺れを感じた",
+      "label_ja": "中程度",
       "label_es": "Moderado",
-      "note_es": "Se estima que 34 millones de personas en cuatro países sintieron el sismo"
+      "n": 17076000,
+      "note_en": "The largest exposed group",
+      "note_ja": "最も曝露人口が多い階級",
+      "note_es": "El grupo expuesto más numeroso"
+    },
+    {
+      "mmi": "IV",
+      "label_en": "Light",
+      "label_ja": "やや弱い",
+      "label_es": "Ligero",
+      "n": 6465000,
+      "note_en": "Reaches Bogotá and Medellín",
+      "note_ja": "ボゴタ、メデジンに及ぶ",
+      "note_es": "Alcanza a Bogotá y Medellín"
     }
   ],
-  "exposure_note_en": "USGS PAGER exposure estimates. About 10.5 million people experienced Strong to Very Strong shaking (MMI VI-VII) and an estimated 34 million people across four countries felt the earthquake. These are model estimates.",
-  "exposure_note_ja": "USGS PAGERによる曝露推計。約1,050万人がMMI VI〜VII（強い〜非常に強い）の揺れを経験し、4か国で推計3,400万人が有感とされる。いずれもモデル推計値。",
+  "exposure_note_en": "USGS PAGER (version 5) exposure estimates. About 10.5 million people were exposed to Strong or Very Strong shaking (MMI VI-VII) and about 34 million to MMI IV or above across four countries. These are model estimates.",
+  "exposure_note_ja": "USGS PAGER（第5版）による曝露推計。約1,050万人がMMI VI〜VII（強い〜非常に強い）の揺れに、4か国で約3,400万人がMMI IV以上の揺れにさらされた。いずれもモデル推計値。",
   "aftershocks": {
     "note_en": "The SGC event bulletin (SGC2026pqqmro) listed two aftershocks, M2.8 and M4.8, the latter widely felt; media reported more than 20 during the day. Aftershock sequences of intermediate-depth intraslab events are typically less productive than those of shallow crustal earthquakes, but strong aftershocks remain possible and already-damaged buildings are vulnerable to them.",
     "note_ja": "SGCの速報（SGC2026pqqmro）に掲載された余震はM2.8とM4.8の2回で、後者は広く有感。報道は日中に20回以上と伝えている。やや深発のスラブ内地震の余震活動は浅い内陸地震に比べて一般に低調だが、強い余震の可能性は残り、既に損傷した建物は特に脆弱である。",
@@ -927,11 +947,11 @@
       "コーヒー経済の回復には約10年を要した。災害の経済的影響は応急期をはるかに超えて続いた。",
       "2026年の地震は同じ都市群を揺らしたが、浅い直下ではなく深く離れた震源によるものであり、同じ建物ストックに異なる形の荷重を与えた。"
     ],
-    "context_en": "The cities hit hardest in 2026 - Pereira, Manizales, Armenia - are the same cities that rebuilt after 1999. How that rebuilt stock performed under long-period, long-duration shaking from a 107 km-deep source is the key question for post-event assessment.",
-    "context_ja": "2026年に大きな被害を受けたペレイラ・マニサレス・アルメニアは、1999年後に再建された都市そのものである。深さ107kmの震源による長周期・長時間の揺れに対し、再建された建物ストックがどう応答したかが、事後評価の最大の論点となる。",
+    "context_en": "The cities hit hardest in 2026 - Pereira, Manizales, Armenia - are the same cities that rebuilt after 1999. How that rebuilt stock performed under long-period, long-duration shaking from a 110 km-deep source is the key question for post-event assessment.",
+    "context_ja": "2026年に大きな被害を受けたペレイラ・マニサレス・アルメニアは、1999年後に再建された都市そのものである。深さ110kmの震源による長周期・長時間の揺れに対し、再建された建物ストックがどう応答したかが、事後評価の最大の論点となる。",
     "title_es": "El terremoto de Armenia (Quindío) de 1999: el mismo Eje Cafetero",
     "overview_es": "El 25 de enero de 1999, un sismo de M6.1-6.2 a unos 30 km de profundidad golpeó la zona cafetera del Quindío. Dejó cerca de 1.185 muertos, más de 5.000 heridos y unas 50.000 edificaciones averiadas o destruidas; alrededor del 60 % de las construcciones de la ciudad de Armenia colapsaron o resultaron gravemente afectadas, y más de 200.000 personas quedaron sin vivienda. Aunque de magnitud mucho menor que el sismo de 2026, fue mucho más somero y mucho más cercano a las ciudades, y por eso su poder destructivo local fue muy superior.",
-    "context_es": "Las ciudades más golpeadas en 2026 —Pereira, Manizales y Armenia— son las mismas que se reconstruyeron después de 1999. Cómo se comportó ese parque construido frente a un sacudimiento de período y duración largos, procedente de una fuente a 107 km de profundidad, es la pregunta clave de la evaluación posterior al evento.",
+    "context_es": "Las ciudades más golpeadas en 2026 —Pereira, Manizales y Armenia— son las mismas que se reconstruyeron después de 1999. Cómo se comportó ese parque construido frente a un sacudimiento de período y duración largos, procedente de una fuente a 110 km de profundidad, es la pregunta clave de la evaluación posterior al evento.",
     "lessons_es": [
       "La reconstrucción fue conducida por un organismo temporal creado específicamente para el Eje Cafetero, uno de los primeros ejemplos en América Latina de una agencia de reconstrucción con propósito definido.",
       "El desastre impulsó la aplicación efectiva de la norma sismo resistente y los estudios de microzonificación sísmica que hoy cubren a Pereira, Manizales y Armenia.",
@@ -959,6 +979,16 @@
       "note_en": "The reference historical event for Cali; the city was also shaken in 1995 and 2004, the latter damaging clinics and residential buildings",
       "note_ja": "カリにとって基準となる歴史地震。同市は1995年・2004年にも被災し、2004年は診療所や住宅に被害が出た",
       "note_es": "El evento histórico de referencia para Cali; la ciudad también fue sacudida en 1995 y 2004, este último con daños en clínicas y edificaciones residenciales"
+    },
+    {
+      "year": "1938",
+      "mag": "M7.0",
+      "event_en": "Coffee Region earthquake (deep, 150 km)",
+      "event_ja": "コーヒー地帯の地震（深さ150km）",
+      "event_es": "Sismo del Eje Cafetero (profundo, 150 km)",
+      "note_en": "An intermediate-depth event beneath the same coffee-growing departments — the closest historical analogue to the 2026 earthquake",
+      "note_ja": "同じコーヒー生産県の下で発生したやや深発地震。2026年の地震に最も近い歴史的類例",
+      "note_es": "Un sismo de profundidad intermedia bajo los mismos departamentos cafeteros: el análogo histórico más cercano al sismo de 2026"
     },
     {
       "year": "1979",
@@ -1024,9 +1054,9 @@
   "observations": [
     {
       "tier": "official",
-      "en": "A deep source with shallow-disaster consequences. At 107 km depth the earthquake produced no surface rupture and no tsunami, yet it damaged buildings in at least six departments. Damage is dispersed rather than concentrated, which complicates needs assessment, logistics and the targeting of search and rescue.",
-      "ja": "深い震源でありながら被害は浅発地震型。深さ107kmで地表地震断層も津波も生じなかったが、少なくとも6県で建物被害が出た。被害が集中せず分散するため、ニーズ把握・ロジスティクス・捜索救助の重点配分が難しくなる。",
-      "es": "Una fuente profunda con consecuencias de sismo somero. A 107 km de profundidad el sismo no produjo ruptura superficial ni tsunami y, aun así, dañó edificaciones en al menos seis departamentos. Los daños están dispersos y no concentrados, lo que complica la evaluación de necesidades, la logística y la priorización de la búsqueda y el rescate."
+      "en": "A deep source with shallow-disaster consequences. At 110 km depth the earthquake produced no surface rupture and no tsunami, yet it damaged buildings in at least six departments. Damage is dispersed rather than concentrated, which complicates needs assessment, logistics and the targeting of search and rescue.",
+      "ja": "深い震源でありながら被害は浅発地震型。深さ110kmで地表地震断層も津波も生じなかったが、少なくとも6県で建物被害が出た。被害が集中せず分散するため、ニーズ把握・ロジスティクス・捜索救助の重点配分が難しくなる。",
+      "es": "Una fuente profunda con consecuencias de sismo somero. A 110 km de profundidad el sismo no produjo ruptura superficial ni tsunami y, aun así, dañó edificaciones en al menos seis departamentos. Los daños están dispersos y no concentrados, lo que complica la evaluación de necesidades, la logística y la priorización de la búsqueda y el rescate."
     },
     {
       "tier": "official",
@@ -1343,11 +1373,14 @@
     "mmi_distance": "images/mmi_distance.png",
     "sgc_shakemap": "images/sgc_shakemap.png",
     "beachball": "images/beachball_manual.png",
-    "emsr916": "images/emsr916_manual.jpg"
+    "emsr916": "images/emsr916_manual.jpg",
+    "usgs_pager": "images/usgs_pager_manual.jpg",
+    "sgc_hazard": "images/sgc_hazard_manual.jpg",
+    "gem_treq_cali": "images/gem_treq_cali_manual.jpg"
   },
   "photos": [],
   "deaths_by_area_note_es": "Las cifras departamentales provienen de autoridades locales y se reportan en momentos distintos; todavía no suman el total nacional de 111 y se conciliarán a medida que avance la verificación.",
-  "exposure_note_es": "Estimaciones de exposición del PAGER (USGS). Unos 10,5 millones de personas experimentaron un sacudimiento fuerte o muy fuerte (MMI VI-VII) y se estima que 34 millones de personas en cuatro países sintieron el sismo. Son estimaciones de modelo.",
+  "exposure_note_es": "Estimaciones de exposición del PAGER (versión 5) del USGS. Unos 10,5 millones de personas quedaron expuestas a sacudimiento fuerte o muy fuerte (MMI VI-VII) y unos 34 millones a MMI IV o superior en cuatro países. Son estimaciones de modelo.",
   "source_policy_es": "Jerarquía de fuentes: oficial > prensa > por confirmar. Las cifras del Gobierno y de las entidades científicas se usan como fuente primaria; la información de prensa se emplea únicamente cuando aún no hay cifras oficiales y se identifica como tal. Los elementos en verificación se marcan como «por confirmar». Las cifras preliminares nunca se sustituyen por números mayores sin verificar.",
   "intensity_map": {
     "title_en": "SGC macroseismic intensity map (ShakeMap)",
@@ -1357,9 +1390,9 @@
     "stamp_en": "ShakeMap: San José del Palmar - Chocó, Colombia · 10 Aug 2026 12:34:29 UTC · M7.4 · N5.04 W76.34 · depth 96.0 km · ID SGC2026pqqmro · Version 1, processed 2026-08-10T13:12:28Z · scale after Worden et al. (2012)",
     "stamp_ja": "ShakeMap：チョコ県サンホセ・デル・パルマル／2026年8月10日 12:34:29 UTC／M7.4／北緯5.04・西経76.34／深さ96.0km／ID SGC2026pqqmro／バージョン1（2026-08-10T13:12:28Z処理）／震度階はWorden et al. (2012)",
     "stamp_es": "ShakeMap: San José del Palmar - Chocó, Colombia · 10 ago. 2026 12:34:29 UTC · M7.4 · N5.04 W76.34 · profundidad 96,0 km · ID SGC2026pqqmro · Versión 1, procesado 2026-08-10T13:12:28Z · escala según Worden et al. (2012)",
-    "text_en": "The SGC map shows the strongest band (MMI VII, 'Muy Fuerte') over the epicentral area of Chocó and along the inter-Andean corridor through Risaralda, Caldas, Quindío and northern Valle del Cauca — the belt in which the collapses in Pereira, Manizales, Armenia and Cartago occurred. Intensity falls away eastward: Medellín and Cali sit in the moderate-to-strong bands and Bogotá, 235 km from the epicentre, in a low one. The elongated pattern along the valleys, rather than a compact circle around the epicentre, is the signature of a 96-107 km-deep source combined with soft valley sediments.",
-    "text_ja": "SGCの図では、最も強い帯（MMI VII「Muy Fuerte」）が震央のあるチョコ県から、リサラルダ・カルダス・キンディオ・バジェ北部を貫くアンデス間の回廊に沿って広がる。ペレイラ、マニサレス、アルメニア、カルタゴでの建物倒壊はこの帯の中で起きた。震度は東へ向かって低下し、メデジンとカリは中〜強の帯、震央から235kmのボゴタは弱い帯に位置する。震央を中心とする同心円ではなく谷筋に沿って伸びる分布は、深さ96〜107kmの震源と軟弱な盆地堆積層の組み合わせによる特徴である。",
-    "text_es": "El mapa del SGC muestra la banda más fuerte (MMI VII, «Muy Fuerte») sobre el área epicentral del Chocó y a lo largo del corredor interandino que atraviesa Risaralda, Caldas, Quindío y el norte del Valle del Cauca: la franja en la que ocurrieron los colapsos de Pereira, Manizales, Armenia y Cartago. La intensidad decae hacia el oriente: Medellín y Cali quedan en las bandas moderada y fuerte, y Bogotá, a 235 km del epicentro, en una baja. El patrón alargado a lo largo de los valles, en lugar de un círculo compacto alrededor del epicentro, es la firma de una fuente a 96-107 km de profundidad combinada con sedimentos blandos de valle.",
+    "text_en": "The SGC map shows the strongest band (MMI VII, 'Muy Fuerte') over the epicentral area of Chocó and along the inter-Andean corridor through Risaralda, Caldas, Quindío and northern Valle del Cauca — the belt in which the collapses in Pereira, Manizales, Armenia and Cartago occurred. Intensity falls away eastward: Medellín and Cali sit in the moderate-to-strong bands and Bogotá, 241 km from the epicentre, in a low one. The elongated pattern along the valleys, rather than a compact circle around the epicentre, is the signature of a 96-110 km-deep source combined with soft valley sediments.",
+    "text_ja": "SGCの図では、最も強い帯（MMI VII「Muy Fuerte」）が震央のあるチョコ県から、リサラルダ・カルダス・キンディオ・バジェ北部を貫くアンデス間の回廊に沿って広がる。ペレイラ、マニサレス、アルメニア、カルタゴでの建物倒壊はこの帯の中で起きた。震度は東へ向かって低下し、メデジンとカリは中〜強の帯、震央から241kmのボゴタは弱い帯に位置する。震央を中心とする同心円ではなく谷筋に沿って伸びる分布は、深さ96〜110kmの震源と軟弱な盆地堆積層の組み合わせによる特徴である。",
+    "text_es": "El mapa del SGC muestra la banda más fuerte (MMI VII, «Muy Fuerte») sobre el área epicentral del Chocó y a lo largo del corredor interandino que atraviesa Risaralda, Caldas, Quindío y el norte del Valle del Cauca: la franja en la que ocurrieron los colapsos de Pereira, Manizales, Armenia y Cartago. La intensidad decae hacia el oriente: Medellín y Cali quedan en las bandas moderada y fuerte, y Bogotá, a 241 km del epicentro, en una baja. El patrón alargado a lo largo de los valles, en lugar de un círculo compacto alrededor del epicentro, es la firma de una fuente a 96-110 km de profundidad combinada con sedimentos blandos de valle.",
     "scale_header_en": [
       "MMI",
       "Perceived shaking",
@@ -1554,17 +1587,17 @@
     ]
   },
   "pre_event": {
-    "intro_en": "Cali did not lack a risk assessment. Between 2020 and 2022 the city built a full urban earthquake risk model with the GEM Foundation under the USAID-supported TREQ project, one of three pilot cities alongside Quito and Santiago de los Caballeros. The modelled scenario is a shallow local one — magnitude 6.5 at 10 km depth on the Dagua-Cali fault — and its estimates dwarf what the city actually experienced on 10 August 2026.",
-    "intro_ja": "カリにリスク評価がなかったわけではない。同市は2020〜2022年に、USAIDが支援するTREQプロジェクトの下でGEM財団とともに都市の地震リスクモデルを構築した。キト、サンティアゴ・デ・ロス・カバジェロスと並ぶ3つのパイロット都市の一つである。想定シナリオは浅い直下型（ダグア・カリ断層、M6.5、深さ10km）で、その推計値は2026年8月10日に実際に生じた被害をはるかに上回る。",
-    "intro_es": "A Cali no le faltaba una evaluación del riesgo. Entre 2020 y 2022 la ciudad construyó un modelo completo de riesgo sísmico urbano con la Fundación GEM en el marco del proyecto TREQ, apoyado por USAID, como una de las tres ciudades piloto junto con Quito y Santiago de los Caballeros. El escenario modelado es local y somero —magnitud 6.5 a 10 km de profundidad en la falla Dagua-Cali— y sus estimaciones superan con mucho lo que la ciudad vivió el 10 de agosto de 2026.",
+    "intro_en": "Cali did not lack a risk assessment. Between 2020 and 2022 the city built a full urban earthquake risk model with the GEM Foundation under the USAID-supported TREQ project, one of three pilot cities alongside Quito and Santiago de los Caballeros. The modelled scenario is a shallow local one — magnitude 6.5 at 10 km depth on the Dagua-Calima fault — and its estimates dwarf what the city actually experienced on 10 August 2026.",
+    "intro_ja": "カリにリスク評価がなかったわけではない。同市は2020〜2022年に、USAIDが支援するTREQプロジェクトの下でGEM財団とともに都市の地震リスクモデルを構築した。キト、サンティアゴ・デ・ロス・カバジェロスと並ぶ3つのパイロット都市の一つである。想定シナリオは浅い直下型（ダグア・カリマ断層、M6.5、深さ10km）で、その推計値は2026年8月10日に実際に生じた被害をはるかに上回る。",
+    "intro_es": "A Cali no le faltaba una evaluación del riesgo. Entre 2020 y 2022 la ciudad construyó un modelo completo de riesgo sísmico urbano con la Fundación GEM en el marco del proyecto TREQ, apoyado por USAID, como una de las tres ciudades piloto junto con Quito y Santiago de los Caballeros. El escenario modelado es local y somero —magnitud 6.5 a 10 km de profundidad en la falla Dagua-Calima— y sus estimaciones superan con mucho lo que la ciudad vivió el 10 de agosto de 2026.",
     "rows": [
       {
         "k_en": "Modelled scenario",
         "k_ja": "想定シナリオ",
         "k_es": "Escenario modelado",
-        "v_en": "M6.5, 10 km depth, Dagua-Cali fault, urban area",
-        "v_ja": "M6.5・深さ10km、ダグア・カリ断層、市街地",
-        "v_es": "M6.5, 10 km de profundidad, falla Dagua-Cali, área urbana"
+        "v_en": "M6.5, 10 km depth, Dagua-Calima fault, urban area",
+        "v_ja": "M6.5・深さ10km、ダグア・カリマ断層、市街地",
+        "v_es": "M6.5, 10 km de profundidad, falla Dagua-Calima, área urbana"
       },
       {
         "k_en": "Population exposed",
@@ -1658,11 +1691,41 @@
     "compare_title_en": "The 2026 earthquake was not this scenario",
     "compare_title_ja": "2026年の地震はこのシナリオではない",
     "compare_title_es": "El sismo de 2026 no fue este escenario",
-    "compare_en": "The 10 August event was larger in magnitude (M7.4) but 107 km deep and 166 km from Cali, giving the city MMI VI rather than the near-field shaking of the modelled M6.5. Cali recorded 27 deaths and 25-30 collapsed structures — two orders of magnitude below the scenario. What it did test is exactly the weakness the local plan had flagged: about 30% of the University Hospital collapsed and seven health institutions closed. The city's own worst case remains ahead of it, and the case for retrofitting indispensable buildings is now evidential rather than theoretical.",
-    "compare_ja": "8月10日の地震は規模こそ大きい（M7.4）が、深さ107km・カリから166kmであり、市内の揺れは想定M6.5の近距離の揺れではなくMMI VIにとどまった。カリの死者は27人、倒壊は25〜30棟で、シナリオより2桁小さい。一方でこの地震が実際に試したのは、地域計画が指摘していた弱点そのものであった。大学病院の約3割が崩落し、医療7施設が閉鎖された。市にとっての最悪シナリオは依然として将来にあり、重要建築物の耐震補強の必要性は、理論ではなく実証の段階に入った。",
-    "compare_es": "El evento del 10 de agosto fue de mayor magnitud (M7.4) pero ocurrió a 107 km de profundidad y a 166 km de Cali, de modo que la ciudad experimentó MMI VI y no el sacudimiento de campo cercano del escenario M6.5 modelado. Cali registró 27 muertos y entre 25 y 30 estructuras colapsadas: dos órdenes de magnitud por debajo del escenario. Lo que sí puso a prueba fue justamente la debilidad que el plan local había señalado: cerca del 30 % del Hospital Universitario del Valle colapsó y siete instituciones de salud cerraron. El peor caso propio de la ciudad sigue por delante, y el argumento para reforzar las edificaciones indispensables es ahora empírico y no teórico.",
+    "compare_en": "The 10 August event was larger in magnitude (M7.4) but 110 km deep and 158 km from Cali, giving the city MMI VI rather than the near-field shaking of the modelled M6.5. Cali recorded 27 deaths and 25-30 collapsed structures — two orders of magnitude below the scenario. What it did test is exactly the weakness the local plan had flagged: about 30% of the University Hospital collapsed and seven health institutions closed. The city's own worst case remains ahead of it, and the case for retrofitting indispensable buildings is now evidential rather than theoretical.",
+    "compare_ja": "8月10日の地震は規模こそ大きい（M7.4）が、深さ110km・カリから158kmであり、市内の揺れは想定M6.5の近距離の揺れではなくMMI VIにとどまった。カリの死者は27人、倒壊は25〜30棟で、シナリオより2桁小さい。一方でこの地震が実際に試したのは、地域計画が指摘していた弱点そのものであった。大学病院の約3割が崩落し、医療7施設が閉鎖された。市にとっての最悪シナリオは依然として将来にあり、重要建築物の耐震補強の必要性は、理論ではなく実証の段階に入った。",
+    "compare_es": "El evento del 10 de agosto fue de mayor magnitud (M7.4) pero ocurrió a 110 km de profundidad y a 158 km de Cali, de modo que la ciudad experimentó MMI VI y no el sacudimiento de campo cercano del escenario M6.5 modelado. Cali registró 27 muertos y entre 25 y 30 estructuras colapsadas: dos órdenes de magnitud por debajo del escenario. Lo que sí puso a prueba fue justamente la debilidad que el plan local había señalado: cerca del 30 % del Hospital Universitario del Valle colapsó y siete instituciones de salud cerraron. El peor caso propio de la ciudad sigue por delante, y el argumento para reforzar las edificaciones indispensables es ahora empírico y no teórico.",
     "credit_en": "Figures from the GEM-TREQ urban risk assessment for Santiago de Cali and from the city's local disaster risk management plan, as compiled by the Municipality of Santiago de Cali (Secretaría de Gestión del Riesgo de Emergencias y Desastres) for a JICA training course.",
     "credit_ja": "数値は、サンティアゴ・デ・カリを対象としたGEM-TREQ都市リスク評価および同市の地域防災計画による。カリ市（災害リスク管理局）がJICA研修のために整理した資料に基づく。",
-    "credit_es": "Cifras tomadas de la evaluación de riesgo urbano GEM-TREQ para Santiago de Cali y del plan local de gestión del riesgo de la ciudad, recopiladas por la Alcaldía de Santiago de Cali (Secretaría de Gestión del Riesgo de Emergencias y Desastres) para un curso de formación de JICA."
+    "credit_es": "Cifras tomadas de la evaluación de riesgo urbano GEM-TREQ para Santiago de Cali y del plan local de gestión del riesgo de la ciudad, recopiladas por la Alcaldía de Santiago de Cali (Secretaría de Gestión del Riesgo de Emergencias y Desastres) para un curso de formación de JICA.",
+    "profile_caption_en": "GEM-TREQ city profile for Cali: the M6.5 / 10 km Dagua-Calima scenario. 2.3 million people and 312,000 residential, 22,000 commercial, 5,300 industrial and 8,000 institutional buildings are exposed, with COP 220 trillion of exposed capital. The bars give, per comuna, the collapse index, fatalities, serious injuries, displaced people and economic losses; the histograms give the city totals with their modelled ranges.",
+    "profile_caption_ja": "GEM-TREQによるカリ市プロファイル（M6.5・深さ10km、ダグア・カリマ断層のシナリオ）。曝露は人口230万人、住宅31.2万棟・商業2.2万棟・工業5,300棟・公共8,000棟、曝露資本220兆コロンビアペソ。棒グラフはコムーナ別の倒壊率・死者・重傷者・住まいを失う人・経済損失、ヒストグラムは市全体の推計値とその変動幅を示す。",
+    "profile_caption_es": "Perfil de ciudad GEM-TREQ para Cali: el escenario M6.5 / 10 km en la falla Dagua-Calima. Están expuestos 2,3 millones de personas y 312.000 edificios residenciales, 22.000 comerciales, 5.300 industriales y 8.000 institucionales, con 220 billones de pesos de capital expuesto. Las barras dan, por comuna, el índice de colapsos, los fallecidos, los heridos graves, los desplazados y las pérdidas económicas; los histogramas dan los totales de la ciudad con sus rangos modelados."
+  },
+  "response_photos": [
+    {
+      "file": "photo_ungrd.jpg",
+      "caption_en": "President Abelardo de la Espriella chairs the national response meeting",
+      "caption_ja": "国の対応会議を主宰するデラエスプリエジャ大統領",
+      "caption_es": "El presidente Abelardo de la Espriella preside la reunión de respuesta nacional",
+      "credit": "© UNGRD",
+      "url": "https://portal.gestiondelriesgo.gov.co/"
+    },
+    {
+      "file": "photo_bomberos_cali.jpg",
+      "caption_en": "Cali fire service at a collapsed building in the city",
+      "caption_ja": "市内の倒壊建物で活動するカリ消防",
+      "caption_es": "Bomberos de Cali en una edificación colapsada de la ciudad",
+      "credit": "© Alcaldía de Santiago de Cali",
+      "url": "https://www.cali.gov.co/gestiondelriesgo/"
+    }
+  ],
+  "pager": {
+    "title_en": "USGS PAGER assessment (version 5)",
+    "title_ja": "USGS PAGERによる影響評価（第5版）",
+    "title_es": "Evaluación PAGER del USGS (versión 5)",
+    "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjl2/pager",
+    "text_en": "PAGER is the USGS rapid impact estimate, issued within minutes and revised as the event is refined; version 5 was created 2 hours 8 minutes after the earthquake. It is a probability distribution, not a forecast of a single number: the orange alert means significant casualties and damage are likely and that past orange alerts have required a regional or national response. Its most likely fatality band, 1,000-10,000, sits far above the 111 deaths reported nine hours after the event — the gap is normal at this stage and narrows as ground truth replaces modelled losses.",
+    "text_ja": "PAGERはUSGSによる迅速影響推計で、発生から数分で発表され、震源要素の精査に伴い改訂される。第5版は発災の2時間8分後に作成された。これは単一の予測値ではなく確率分布であり、オレンジ警報は「相当の人的被害と損害が生じる可能性が高く、過去のオレンジ警報は地域的または国家的な対応を要した」ことを意味する。最も確からしい死者数階級1,000〜10,000人は、発災9時間後の報告値111人を大きく上回るが、この段階では通常のことであり、実測が推計に置き換わるにつれて差は縮まる。",
+    "text_es": "PAGER es la estimación rápida de impacto del USGS, emitida en minutos y revisada conforme se precisa el evento; la versión 5 se creó 2 horas y 8 minutos después del sismo. Es una distribución de probabilidad, no el pronóstico de una cifra única: la alerta naranja significa que son probables víctimas y daños significativos y que alertas naranjas previas han requerido una respuesta regional o nacional. Su banda de mortalidad más probable, 1.000-10.000, está muy por encima de los 111 muertos reportados nueve horas después del evento; la brecha es normal en esta etapa y se estrecha a medida que la observación reemplaza a las pérdidas modeladas."
   }
 }

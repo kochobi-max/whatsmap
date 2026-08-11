@@ -44,9 +44,9 @@ LAND = "#E9E4DA"
 LAND2 = "#DCD5C7"
 SEA = "#EAF2F8"
 
-EPI = (4.9031, -76.1885)      # USGS us6000tjl2 (distances in this report are measured from here)
+EPI = (4.8436, -76.2422)      # USGS us6000tjl2 (PAGER v5 location) (distances in this report are measured from here)
 EPI_SGC = (5.04, -76.34)      # SGC SGC2026pqqmro
-DEPTH_KM = 107.0
+DEPTH_KM = 110.3
 
 
 def t(en, ja, es=None):
@@ -152,7 +152,7 @@ def fig_region():
                         ha="center", va="center")
     ax.plot(EPI[1], EPI[0], marker="*", color=RED, markersize=15,
             markeredgecolor="white", markeredgewidth=0.6, zorder=6)
-    ax.annotate(t("Epicentre\nM7.4, 107 km", "震央\nM7.4・深さ107km", "Epicentro\nM7.4, 107 km"), (EPI[1], EPI[0]),
+    ax.annotate(t("Epicentre\nM7.4, 110 km", "震央\nM7.4・深さ110km", "Epicentro\nM7.4, 110 km"), (EPI[1], EPI[0]),
                 textcoords="offset points", xytext=(8, -18), fontsize=6.8, color=RED,
                 fontweight="bold")
     ax.add_patch(Rectangle((-78.2, 3.0), 4.6, 3.6, fill=False, edgecolor=RED, linewidth=1.4))
@@ -239,14 +239,14 @@ def fig_slab():
                             color=NAVY2, length_includes_head=True))
     ax.annotate(t("~50-60 mm/yr", "年約50〜60mm", "~50-60 mm/año"), (-75, 22), fontsize=7, color=NAVY2, ha="center")
 
-    ax.plot(96, -107, marker="*", color=RED, markersize=20, markeredgecolor="white",
+    ax.plot(96, -110, marker="*", color=RED, markersize=20, markeredgecolor="white",
             markeredgewidth=0.7, zorder=8)
-    ax.annotate(t("Hypocentre  M7.4  depth 107 km\nintermediate-depth, intraslab\n(strike-slip within the slab)",
-                  "震源　M7.4　深さ107km\nやや深発・スラブ内地震\n（スラブ内部の横ずれ断層型）",
-                  "Hipocentro  M7.4  prof. 107 km\nprofundidad intermedia, intraplaca\n(falla de rumbo dentro de la losa)"),
-                (96, -107), textcoords="offset points", xytext=(12, -6), fontsize=8,
+    ax.annotate(t("Hypocentre  M7.4  depth 110 km\nintermediate-depth, intraslab\n(strike-slip within the slab)",
+                  "震源　M7.4　深さ110km\nやや深発・スラブ内地震\n（スラブ内部の横ずれ断層型）",
+                  "Hipocentro  M7.4  prof. 110 km\nprofundidad intermedia, intraplaca\n(falla de rumbo dentro de la losa)"),
+                (96, -110), textcoords="offset points", xytext=(12, -6), fontsize=8,
                 color=RED, fontweight="bold", linespacing=1.35)
-    ax.plot([96, 96], [-107, 0], color=RED, linewidth=0.8, linestyle=(0, (3, 3)))
+    ax.plot([96, 96], [-110, 0], color=RED, linewidth=0.8, linestyle=(0, (3, 3)))
     ax.plot(96, 0, marker="v", color=RED, markersize=6)
     ax.annotate(t("Epicentre (Chocó)", "震央（チョコ県）", "Epicentro (Chocó)"), (96, 2), fontsize=7.5, color=RED,
                 ha="center", va="bottom")
@@ -260,9 +260,9 @@ def fig_slab():
     for side in ("top", "right", "bottom"):
         ax.spines[side].set_visible(False)
     ax.spines["left"].set_edgecolor("#CCCCCC")
-    ax.set_title(t("Schematic cross-section (not to scale): why a 107 km-deep event shook a wide area",
-                   "模式断面図（縮尺は正確ではない）：深さ107kmの地震が広域を揺らした理由",
-                   "Corte esquemático (sin escala): por qué un sismo a 107 km de profundidad sacudió una zona amplia"),
+    ax.set_title(t("Schematic cross-section (not to scale): why a 110 km-deep event shook a wide area",
+                   "模式断面図（縮尺は正確ではない）：深さ110kmの地震が広域を揺らした理由",
+                   "Corte esquemático (sin escala): por qué un sismo a 110 km de profundidad sacudió una zona amplia"),
                  fontsize=8.5, color=NAVY, pad=6)
     save(fig, "slab_section")
 

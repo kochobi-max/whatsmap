@@ -52,6 +52,15 @@ function L(obj, key) {
 function LL(obj) { return obj ? (obj[LANG] || obj.en || "") : ""; }
 const UI_ES = {
   "Sources: ": "Fuentes: ",
+  "USGS PAGER Assessment": "Evaluación PAGER del USGS",
+  "onePAGER, version 5 (public domain, USGS)": "onePAGER, versión 5 (dominio público, USGS)",
+  "Population exposed by shaking level": "Población expuesta por nivel de sacudimiento",
+  "Exposed": "Expuestos",
+  "Perceived shaking": "Movimiento percibido",
+  "GEM-TREQ City Profile: Cali": "Perfil de ciudad GEM-TREQ: Cali",
+  "National seismic hazard, 475-year return period": "Amenaza sísmica nacional, periodo de retorno de 475 años",
+  "PGA (g), SGC / GEM national seismic hazard model (2020)": "PGA (g), modelo nacional de amenaza sísmica SGC / GEM (2020)",
+  "Response photographs": "Fotografías de la respuesta",
   "Pre-event Risk Assessment: Santiago de Cali": "Evaluación del riesgo previa al evento: Santiago de Cali",
   "Modelled scenario (GEM-TREQ, 2022)": "Escenario modelado (GEM-TREQ, 2022)",
   "Both agencies report a strike-slip mechanism.": "Ambas entidades reportan un mecanismo de falla de rumbo.",
@@ -84,7 +93,7 @@ const UI_ES = {
   "Affected Departments & Cities": "Departamentos y ciudades afectados",
   "Epicentral distances (ADRC)": "Distancias epicentrales (ADRC)",
   "Why damage is dispersed": "Por qué los daños están dispersos",
-  "A 107 km-deep source puts every city in the region at a broadly similar hypocentral distance (108-200 km), so no single city sits in a narrow zone of extreme shaking.": "Una fuente a 107 km de profundidad deja a todas las ciudades de la región a una distancia hipocentral parecida (108-200 km), de modo que ninguna queda dentro de una franja estrecha de sacudimiento extremo.",
+  "A 110 km-deep source puts every city in the region at a broadly similar hypocentral distance (110-205 km), so no single city sits in a narrow zone of extreme shaking.": "Una fuente a 110 km de profundidad deja a todas las ciudades de la región a una distancia hipocentral parecida (110-205 km), de modo que ninguna queda dentro de una franja estrecha de sacudimiento extremo.",
   "Department": "Departamento",
   "Main cities": "Ciudades principales",
   "Dist.": "Dist.",
@@ -461,8 +470,8 @@ heading(s, "Affected Departments & Cities", "被災した県・都市");
 imageSlot(s, 0.4, 1.12, 5.5, 4.4, "distance_map", T("Epicentral distances (ADRC)", "震央距離（ADRC作成）"), null);
 noteBox(s, 0.4, 5.66, 5.5, 1.0,
   T("Why damage is dispersed", "被害が分散する理由"),
-  T("A 107 km-deep source puts every city in the region at a broadly similar hypocentral distance (108-200 km), so no single city sits in a narrow zone of extreme shaking.",
-    "震源が深さ107kmであるため、域内の都市はいずれも震源距離108〜200kmとほぼ同程度になり、極端に強い揺れが特定の都市に集中しない。"));
+  T("A 110 km-deep source puts every city in the region at a broadly similar hypocentral distance (110-205 km), so no single city sits in a narrow zone of extreme shaking.",
+    "震源が深さ110kmであるため、域内の都市はいずれも震源距離110〜205kmとほぼ同程度になり、極端に強い揺れが特定の都市に集中しない。"));
 {
   const rows = [[th(T("Department", "県")), th(T("Main cities", "主な都市")), th(T("Dist.", "距離")), th("MMI"), th(T("Situation", "状況"))]];
   d.areas.forEach((a, i) => rows.push([
@@ -541,6 +550,28 @@ if (d.intensity_map) {
       { x: 6.4, y: 6.42, w: 6.5, h: 0.22, fontSize: 7.5, color: MUTED, italic: true, fontFace: FONT, margin: 0 });
   }
   srcLine(s, [linkBy("macroseismic intensity map"), linkBy("event bulletin"), linkBy("USGS - M 7.4")]);
+  footer(s);
+}
+
+/* ============ 8b. USGS PAGER assessment ============ */
+if (d.pager) {
+  const pg = d.pager;
+  s = newSlide();
+  heading(s, "USGS PAGER Assessment", "USGS PAGERによる影響評価");
+  imageSlot(s, 0.4, 1.12, 5.5, 5.3, "usgs_pager",
+    T("onePAGER, version 5 (public domain, USGS)", "onePAGER 第5版（USGS、パブリックドメイン）"), pg.url);
+  s.addText(L(pg, "text"), { x: 6.2, y: 1.12, w: 6.7, h: 2.15, fontSize: JA ? 9.5 : 10, color: INK, fontFace: FONT, valign: "top", margin: 0 });
+  {
+    const rows = [[th("MMI"), th(T("Perceived shaking", "体感")), th(T("Exposed", "曝露人口"))]];
+    d.exposure.forEach((x, i) => rows.push([
+      td(x.mmi, i, { fontSize: 10, bold: true, color: NAVY, align: "center" }),
+      td(L(x, "label"), i, { fontSize: 9.5 }),
+      td(x.n ? (Math.round(x.n / 1000).toLocaleString("en-US") + "k") : "-", i, { fontSize: 9.5, align: "right" }),
+    ]));
+    s.addTable(rows, { x: 6.2, y: 3.42, w: 6.7, colW: [1.0, 3.3, 2.4], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.34, valign: "middle" });
+  }
+  s.addText(L(d, "exposure_note"), { x: 6.2, y: 5.56, w: 6.7, h: 0.6, fontSize: 7.5, color: MUTED, fontFace: FONT, valign: "top", margin: 0 });
+  srcLine(s, [linkBy("USGS - M 7.4"), linkBy("GDACS")]);
   footer(s);
 }
 
@@ -628,7 +659,12 @@ footer(s);
 /* ============ 10. National response ============ */
 s = newSlide();
 heading(s, "National Response", "国内の対応");
-bulletsTier(s, 0.4, 1.12, 12.5, 4.4, d.support_domestic, { base: 14 });
+bulletsTier(s, 0.4, 1.12, (d.response_photos || []).length ? 7.5 : 12.5, 4.4, d.support_domestic, { base: 13 });
+(d.response_photos || []).forEach((ph, i) => {
+  const y = 1.12 + i * 2.35;
+  imageSlot(s, 8.15, y, 4.75, 2.2, "photo:" + ph.file,
+    [L(ph, "caption"), ph.credit].filter(Boolean).join("   "), ph.url || null);
+});
 noteBox(s, 0.4, 5.7, 12.5, 1.0, T("Legal basis", "法的根拠"),
   T("The national disaster declaration activates the SNGRD established by Law 1523 of 2012, allowing UNGRD to direct resources and the national disaster fund (FNGRD) to be used without the ordinary procurement timelines.",
     "国家災害宣言により、2012年法律第1523号に基づくSNGRDが起動する。これによりUNGRDが資源配分を指揮でき、国家防災基金（FNGRD）を通常の調達手続によらず活用できる。"));
@@ -738,23 +774,38 @@ if (d.pre_event) {
   footer(s);
 }
 
+/* ============ 14c. GEM-TREQ city profile ============ */
+if (d.pre_event && resolveImg("gem_treq_cali")) {
+  s = newSlide();
+  heading(s, "GEM-TREQ City Profile: Cali", "GEM-TREQ カリ市プロファイル");
+  imageSlot(s, 1.15, 1.06, 11.0, 5.0, "gem_treq_cali", "© GEM Foundation / USAID / Alcaldía de Santiago de Cali / USGS", d.pre_event.url || "https://github.com/gem/treq-riesgo-urbano");
+  s.addText(L(d.pre_event, "profile_caption"), { x: 1.15, y: 6.12, w: 11.0, h: 0.6, fontSize: JA ? 8.5 : 9, color: INK, fontFace: FONT, valign: "top", align: "left", margin: 0 });
+  srcLine(s, [linkBy("technical report D2.6.2"), linkBy("TREQ project")]);
+  footer(s);
+}
+
 /* ============ 15. Historical earthquakes ============ */
 s = newSlide();
 heading(s, "Historical Earthquakes in Colombia", "コロンビアの主な地震（歴史）");
 {
   const rows = [[th(T("Year", "年")), th(T("Event", "地震")), th(T("Mag.", "規模")), th(T("Impact", "被害・特徴"))]];
   d.historical.forEach((r, i) => rows.push([
-    td(r.year, i, { fontSize: 11, bold: true, color: NAVY, align: "center" }),
-    td(L(r, "event"), i, { fontSize: 10.5 }),
-    td(r.mag, i, { fontSize: 10.5, bold: true, color: RED, align: "center" }),
-    td(L(r, "note"), i, { fontSize: 10 }),
+    td(r.year, i, { fontSize: 10, bold: true, color: NAVY, align: "center" }),
+    td(L(r, "event"), i, { fontSize: 9 }),
+    td(r.mag, i, { fontSize: 9.5, bold: true, color: RED, align: "center" }),
+    td(L(r, "note"), i, { fontSize: 8.5 }),
   ]));
-  s.addTable(rows, { x: 0.4, y: 1.12, w: 12.5, colW: [0.9, 3.4, 1.0, 7.2], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.56, valign: "middle" });
+  s.addTable(rows, { x: 0.4, y: 1.12, w: 8.6, colW: [0.8, 2.5, 0.8, 4.5], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.40, valign: "middle" });
 }
-noteBox(s, 0.4, 5.72, 12.5, 0.96, T("Pattern", "傾向"),
+imageSlot(s, 9.2, 1.12, 3.7, 3.9, "sgc_hazard",
+  T("PGA (g), SGC / GEM national seismic hazard model (2020)", "PGA（g）、SGC／GEM 国家地震ハザードモデル（2020年）"),
+  "https://amenazasismica.sgc.gov.co/");
+s.addText(T("National seismic hazard, 475-year return period", "全国地震ハザード（再現期間475年）"),
+  { x: 9.2, y: 5.08, w: 3.7, h: 0.5, fontSize: 8.5, bold: true, color: NAVY, fontFace: FONT, align: "center", valign: "top", margin: 0 });
+noteBox(s, 0.4, 5.72, 8.6, 0.96, T("Pattern", "傾向"),
   T("Colombia's deadliest earthquakes have not been its largest. Popayán 1983 (M5.5), Páez 1994 (M6.8) and Armenia 1999 (M6.1-6.2) were all shallow and close to towns; the largest events, offshore in 1906 and 1979, killed fewer people. Depth and proximity, not magnitude alone, drive the toll.",
     "コロンビアで最も多くの死者を出した地震は、最大規模の地震ではない。1983年ポパヤン（M5.5）、1994年パエス（M6.8）、1999年アルメニア（M6.1〜6.2）はいずれも浅く市街地に近かった。一方、規模の大きい1906年・1979年の海域地震の死者はより少ない。被害を決めるのは規模だけでなく、深さと震源の近さである。"));
-srcLine(s, [linkBy("USGS - M 7.4"), linkBy("Servicio Geológico"), linkBy("GEM")]);
+srcLine(s, [linkBy("USGS - M 7.4"), linkBy("Servicio Geológico"), linkBy("GEM Foundation")]);
 footer(s);
 
 /* ============ 15b. Photographs (only if data.photos has entries) ============ */
