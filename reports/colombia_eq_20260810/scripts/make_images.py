@@ -204,14 +204,17 @@ def fig_epicentre():
     ax.set_yticks([])
     for sp in ax.spines.values():
         sp.set_edgecolor("#BFB8A8")
-    ax.set_title(t("(3) Epicentre and main affected cities (epicentral distance)",
-                   "③　震央と主な被災都市（数値は震央距離）",
-                   "(3) Epicentro y principales ciudades afectadas (distancia epicentral)"), fontsize=7.2, color=NAVY, pad=4)
+    ax.set_title(t("Epicentre and main affected cities (epicentral distance)",
+                   "震央と主な被災都市（数値は震央距離）",
+                   "Epicentro y principales ciudades afectadas (distancia epicentral)"), fontsize=7.2, color=NAVY, pad=4)
     ax.annotate(t("★ USGS epicentre (distances measured from here)   ☆ SGC epicentre",
                   "★ USGSの震央（距離の基準）　☆ SGCの震央",
                   "★ Epicentro USGS (origen de las distancias)   ☆ Epicentro SGC"),
                 (0.015, 0.015), xycoords="axes fraction", fontsize=5.2, color="#555555")
+    # same figure under two keys: the locator slot may be replaced by a supplied
+    # map, but the distance figure must survive on the affected-departments page
     save(fig, "locator_epicentre")
+    save(fig, "distance_map")
 
 
 def fig_slab():

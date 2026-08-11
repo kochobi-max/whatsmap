@@ -69,7 +69,7 @@ const UI_ES = {
   "(1) World / Colombia": "(1) Mundo / Colombia",
   "(2) NW South America": "(2) Noroeste de Suramérica",
   "(3) Epicentre & affected cities": "(3) Epicentro y ciudades afectadas",
-  "Base map: Natural Earth (110 m). Distances computed from published coordinates; the figures are schematic and are not official hazard maps.": "Mapa base: Natural Earth (110 m). Distancias calculadas a partir de coordenadas publicadas; las figuras son esquemáticas y no son mapas oficiales de amenaza.",
+  "Locator maps © Google (Google Maps). Distances shown on later pages are computed from the published USGS coordinates.": "Mapas de localización © Google (Google Maps). Las distancias mostradas en páginas posteriores se calculan a partir de las coordenadas publicadas por el USGS.",
   "Overview   ": "Resumen   ",
   "Seismotectonic Setting: an intraslab earthquake": "Marco sismotectónico: un sismo intraplaca dentro de la losa",
   "Schematic cross-section (ADRC)": "Corte esquemático (ADRC)",
@@ -387,8 +387,8 @@ s.addShape(p.ShapeType.line, { x: 0.4, y: 1.92, w: W - 0.8, h: 0, line: { color:
     s.addShape(p.ShapeType.rect, { x: xs[i], y: mapY, w: mapW, h: mapH, fill: { color: "F7F7F7" }, line: { color: LINE, width: 0.75 } });
     imageSlot(s, xs[i] + 0.04, mapY + 0.04, mapW - 0.08, mapH - 0.08, m.key, null, null);
   });
-  s.addText(T("Base map: Natural Earth (110 m). Distances computed from published coordinates; the figures are schematic and are not official hazard maps.",
-    "ベースマップ：Natural Earth（110m）。距離は公表座標から計算。図は模式図であり公式のハザードマップではない。"),
+  s.addText(T("Locator maps © Google (Google Maps). Distances shown on later pages are computed from the published USGS coordinates.",
+    "位置図 © Google（Google マップ）。以降のページに示す距離は、USGS公表座標から計算したもの。"),
     { x: 0.4, y: mapY + mapH + 0.04, w: 12.5, h: 0.22, align: "left", color: MUTED, fontSize: 7.5, italic: true, fontFace: FONT, margin: 0 });
 }
 {
@@ -403,7 +403,7 @@ s.addShape(p.ShapeType.line, { x: 0.4, y: 1.92, w: W - 0.8, h: 0, line: { color:
     { text: L(d.event, "summary"), options: { fontSize: sz, color: "FFFFFF" } },
   ], { x: 0.5, y: descY + 0.09, w: bw, h: bh, align: "left", valign: "top", fontFace: FONT, margin: 3 });
 }
-srcLine(s, [linkBy("USGS - M 7.4"), linkBy("Servicio Geológico"), linkBy("UNGRD")]);
+srcLine(s, [linkBy("USGS - M 7.4"), linkBy("event bulletin"), linkBy("UNGRD"), { label_en: "Google Maps", label_ja: "Google マップ", label_es: "Google Maps", url: "https://www.google.com/maps/" }]);
 footer(s);
 
 /* ============ 2. Seismotectonic setting ============ */
@@ -456,7 +456,7 @@ footer(s);
 /* ============ 5. Affected departments ============ */
 s = newSlide();
 heading(s, "Affected Departments & Cities", "被災した県・都市");
-imageSlot(s, 0.4, 1.12, 5.5, 4.4, "locator_epicentre", T("Epicentral distances (ADRC)", "震央距離（ADRC作成）"), null);
+imageSlot(s, 0.4, 1.12, 5.5, 4.4, "distance_map", T("Epicentral distances (ADRC)", "震央距離（ADRC作成）"), null);
 noteBox(s, 0.4, 5.66, 5.5, 1.0,
   T("Why damage is dispersed", "被害が分散する理由"),
   T("A 107 km-deep source puts every city in the region at a broadly similar hypocentral distance (108-200 km), so no single city sits in a narrow zone of extreme shaking.",
