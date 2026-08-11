@@ -13,7 +13,7 @@
     "as_of_ja": "数値は2026年8月10日22:00（コロンビア時間、日本時間8月11日12:00）現在、発災から約14時間後。政府の集計値（死者111人・負傷者87人）は13:00時点のもので、その後の132人は報道による。すべて速報値。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-08-11 12:25 JST",
+    "stamp": "2026-08-11 12:38 JST",
     "update_date": "11/08/2026",
     "title_es": "Terremoto del Chocó de 2026 (Colombia)",
     "subtitle_es": "M7.4, San José del Palmar, departamento del Chocó — 10 de agosto de 2026",
@@ -693,8 +693,8 @@
   "exposure_note_en": "USGS PAGER (version 5) exposure estimates. About 10.5 million people were exposed to Strong or Very Strong shaking (MMI VI-VII) and about 34 million to MMI IV or above across four countries. These are model estimates.",
   "exposure_note_ja": "USGS PAGER（第5版）による曝露推計。約1,050万人がMMI VI〜VII（強い〜非常に強い）の揺れに、4か国で約3,400万人がMMI IV以上の揺れにさらされた。いずれもモデル推計値。",
   "aftershocks": {
-    "note_en": "A query of the USGS catalogue for the region at M2.5 and above returns just two events: the mainshock and a single mb 5.0 aftershock 44 minutes later, both reviewed. The SGC bulletin adds M4.8 and M2.8, and media reported more than 20 events during the day — those smaller shocks sit below the global catalogue's completeness here and are only in the national network's data. A sparse sequence of larger aftershocks is what an intermediate-depth intraslab rupture is expected to produce; but an M5 while search and rescue is under way is enough to bring down structures the mainshock already weakened.",
-    "note_ja": "USGSのカタログを当該地域・M2.5以上で照会すると、返るのは本震と、その44分後のmb5.0の余震の2件のみ（いずれも精査済み）である。SGCの速報はM4.8とM2.8を加え、報道は日中に20回以上と伝えているが、これら小規模の地震は世界カタログの検知下限を下回り、国内観測網のデータにのみ存在する。大きな余震が少ない経過は、やや深発のスラブ内地震として想定される挙動である。ただし捜索救助の最中のM5級は、本震で既に弱った構造物を倒壊させるには十分である。",
+    "note_en": "Three independent catalogues - the USGS FDSN service, the EMSC SeismicPortal and the SGC's public query tools - return the same two events for this region: the mainshock and a single mb 5.0 aftershock 44 minutes later. The SGC bulletin adds M4.8 and M2.8 and media reported more than 20 events during the day, but those smaller shocks are not publicly retrievable: they sit below the global catalogues' completeness here, and the SGC's reviewed catalogue ends on 28 February 2018. A sparse sequence of larger aftershocks is what an intermediate-depth intraslab rupture is expected to produce; but an M5 while search and rescue is under way is enough to bring down structures the mainshock already weakened.",
+    "note_ja": "USGSのFDSNサービス、EMSCのSeismicPortal、SGCの公開照会ツールという三つの独立したカタログのいずれも、当該地域について同じ2件——本震と、その44分後のmb5.0の余震——しか返さない。SGCの速報はM4.8とM2.8を加え、報道は日中に20回以上と伝えているが、これら小規模の地震は公開データからは取得できない。世界カタログの検知下限を下回るうえ、SGCの精査済みカタログは2018年2月28日で終わっているためである。大きな余震が少ない経過は、やや深発のスラブ内地震として想定される挙動である。ただし捜索救助の最中のM5級は、本震で既に弱った構造物を倒壊させるには十分である。",
     "rows": [
       {
         "when": "10 Aug 13:18:10 UTC (08:18 COT)",
@@ -729,16 +729,16 @@
         "note_es": "La prensa reportó más de 20 réplicas durante el día; no se había publicado un conteo oficial consolidado"
       }
     ],
-    "note_es": "Una consulta al catálogo del USGS para la región con umbral M2.5 devuelve solo dos eventos: el sismo principal y una única réplica de mb 5.0 44 minutos después, ambos revisados. El boletín del SGC añade M4.8 y M2.8, y la prensa reportó más de 20 eventos durante el día: esos sismos menores quedan por debajo de la completitud del catálogo global aquí y solo están en los datos de la red nacional. Una secuencia escasa de réplicas grandes es lo que cabe esperar de una ruptura intraplaca de profundidad intermedia; pero un M5 mientras la búsqueda y el rescate están en curso basta para derribar estructuras que el sismo principal ya debilitó.",
+    "note_es": "Tres catálogos independientes -el servicio FDSN del USGS, el SeismicPortal del EMSC y las consultas públicas del SGC- devuelven los mismos dos eventos para esta región: el sismo principal y una única réplica de mb 5.0 44 minutos después. El boletín del SGC añade M4.8 y M2.8 y la prensa reportó más de 20 eventos durante el día, pero esos sismos menores no se pueden recuperar públicamente: quedan por debajo de la completitud de los catálogos globales aquí, y el catálogo revisado del SGC termina el 28 de febrero de 2018. Una secuencia escasa de réplicas grandes es lo que cabe esperar de una ruptura intraplaca de profundidad intermedia; pero un M5 mientras la búsqueda y el rescate están en curso basta para derribar estructuras que el sismo principal ya debilitó.",
     "spread_title_en": "How much the agencies differ",
     "spread_title_ja": "機関による解のばらつき",
     "spread_title_es": "Cuánto difieren las entidades",
     "spread_en": "More than 30 agencies published a solution for the mainshock within minutes. Their magnitudes span Mw 7.0-7.7 and their depths 74-121 km; several automatic solutions defaulted to 10 km before revision. This report uses the USGS/NEIC solution (Mw 7.4, 110 km), which matches PAGER v5, and shows the SGC solution beside it. The spread is normal for a deep event recorded at teleseismic distances, and it is the reason early media figures for depth and magnitude disagreed.",
     "spread_ja": "本震については30を超える機関が数分以内に解を公表した。規模はMw7.0〜7.7、深さは74〜121kmに分布し、自動解のいくつかは修正前に既定値の10kmを示していた。本報告はPAGER第5版と一致するUSGS/NEIC解（Mw7.4、深さ110km）を用い、SGC解を併記している。遠地観測に基づく深い地震ではこの程度のばらつきは通常であり、初期の報道で深さや規模が食い違った理由でもある。",
     "spread_es": "Más de 30 entidades publicaron una solución para el sismo principal en cuestión de minutos. Sus magnitudes van de Mw 7.0 a 7.7 y sus profundidades de 74 a 121 km; varias soluciones automáticas usaron el valor por defecto de 10 km antes de ser revisadas. Este informe utiliza la solución del USGS/NEIC (Mw 7.4, 110 km), que coincide con el PAGER v5, y muestra al lado la del SGC. La dispersión es normal en un sismo profundo registrado a distancias telesísmicas, y explica por qué las primeras cifras de prensa sobre profundidad y magnitud no coincidían.",
-    "query_en": "Data: USGS FDSN event service, region 3-7 N / 78-74.5 W, M2.5+, from the origin time (query.csv in this repository). Reproducible at earthquake.usgs.gov/fdsnws/event/1/.",
-    "query_ja": "データ：USGS FDSNイベントサービス（範囲 北緯3〜7度・西経78〜74.5度、M2.5以上、発震時刻以降。本リポジトリのquery.csv）。earthquake.usgs.gov/fdsnws/event/1/ で再現可能。",
-    "query_es": "Datos: servicio de eventos FDSN del USGS, región 3-7 N / 78-74,5 O, M2.5+, desde la hora de origen (query.csv en este repositorio). Reproducible en earthquake.usgs.gov/fdsnws/event/1/."
+    "query_en": "Data availability, checked 11 Aug 2026: USGS FDSN event service (region 3-7 N / 78-74.5 W, from the origin time; query.csv in this repository) and EMSC SeismicPortal FDSN each return two events at M2.5+ and at M2+; the SGC's public catalogue viewer and expert query form serve only the reviewed historical catalogue (1 Jun 1993 - 28 Feb 2018) and return nothing for 2026. No time-series plot is drawn because no time series is publicly available - the sparseness is the finding.",
+    "query_ja": "データの入手状況（2026年8月11日確認）：USGSのFDSNイベントサービス（範囲 北緯3〜7度・西経78〜74.5度、発震時刻以降。本リポジトリのquery.csv）とEMSCのSeismicPortal FDSNは、M2.5以上でもM2以上でも同じ2件しか返さない。SGCのカタログ閲覧画面と専門家向け照会フォームは精査済みの歴史カタログ（1993年6月1日〜2018年2月28日）のみを提供しており、2026年については何も返さない。公開された時系列が存在しないため時系列図は作成していない。この「疎さ」自体が知見である。",
+    "query_es": "Disponibilidad de datos, verificada el 11 de agosto de 2026: el servicio de eventos FDSN del USGS (región 3-7 N / 78-74,5 O, desde la hora de origen; query.csv en este repositorio) y el FDSN del SeismicPortal del EMSC devuelven dos eventos tanto con umbral M2.5+ como M2+; el visor del catálogo del SGC y su formulario de consulta experta solo ofrecen el catálogo histórico revisado (1 jun 1993 - 28 feb 2018) y no devuelven nada para 2026. No se traza una serie temporal porque no existe públicamente: la escasez es, en sí misma, el hallazgo."
   },
   "support_domestic": [
     {
@@ -1414,10 +1414,17 @@
       "tier": "official"
     },
     {
-      "label_en": "EMSC-CSEM — seismic bulletin (multi-agency solutions)",
-      "label_ja": "EMSC-CSEM 地震速報（多機関の解）",
-      "label_es": "EMSC-CSEM — boletín sísmico (soluciones de varias entidades)",
+      "label_en": "EMSC-CSEM SeismicPortal — bulletin and FDSN event service",
+      "label_ja": "EMSC-CSEM SeismicPortal 地震速報・FDSNイベントサービス",
+      "label_es": "EMSC-CSEM SeismicPortal — boletín y servicio de eventos FDSN",
       "url": "https://www.emsc-csem.org/",
+      "tier": "official"
+    },
+    {
+      "label_en": "SGC — seismic catalogue viewer (reviewed catalogue ends Feb 2018)",
+      "label_ja": "SGC 地震カタログ閲覧（精査済みは2018年2月まで）",
+      "label_es": "SGC — visor del catálogo sísmico (el catálogo revisado termina en feb 2018)",
+      "url": "https://catalogosismico.sgc.gov.co/visor/index.html",
       "tier": "official"
     }
   ],
