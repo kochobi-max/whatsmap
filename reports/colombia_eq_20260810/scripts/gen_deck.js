@@ -62,7 +62,8 @@ const UI_ES = {
   "PGA (g), SGC / GEM national seismic hazard model (2020)": "PGA (g), modelo nacional de amenaza sísmica SGC / GEM (2020)",
   "Response photographs": "Fotografías de la respuesta",
   "Homes damaged": "Viviendas afectadas",
-  "~5,000": "~5.000",
+  "15,568": "15.568",
+  "2,542": "2.542",
   "Pre-event Risk Assessment: Santiago de Cali": "Evaluación del riesgo previa al evento: Santiago de Cali",
   "Modelled scenario (GEM-TREQ, 2022)": "Escenario modelado (GEM-TREQ, 2022)",
   "Both agencies report a strike-slip mechanism.": "Ambas entidades reportan un mecanismo de falla de rumbo.",
@@ -177,6 +178,7 @@ const CELL = {
   "Presidency / UNGRD": { ja: "大統領府／UNGRD", es: "Presidencia / UNGRD" },
   "Presidency / local authorities": { ja: "大統領府／地元当局", es: "Presidencia / autoridades locales" },
   "11 Aug": { ja: "8月11日", es: "11 ago." },
+  "11 Aug PM": { ja: "8月11日 午後", es: "11 ago. tarde" },
   "Evening": { ja: "夕方", es: "Noche" },
   "International media": { ja: "国際報道", es: "Prensa internacional" },
   "Charter / Copernicus": { ja: "チャーター／コペルニクス", es: "Carta / Copernicus" },
@@ -608,9 +610,9 @@ s = newSlide();
 heading(s, "Human Damage", "人的被害");
 {
   const big = [
-    [T("Deaths", "死者"), "132+", RED],
-    [T("Injured", "負傷者"), "700", "9A3B12"],
-    [T("Homes damaged", "住宅被害"), T("~5,000", "約5,000棟"), NAVY],
+    [T("Deaths", "死者"), "182", RED],
+    [T("Injured", "負傷者"), T("2,542", "2,542"), "9A3B12"],
+    [T("Homes damaged", "住宅被害"), T("15,568", "15,568棟"), NAVY],
   ];
   big.forEach((b, i) => {
     const x = 0.4 + i * 4.2;
@@ -638,7 +640,7 @@ s.addText(L(d, "toll_caption"), { x: 0.4, y: 2.36, w: 12.5, h: 0.2, fontSize: 7.
   s.addTable(rowsT, { x: 7.2, y: 2.6, w: 5.7, colW: [2.15, 1.05, 2.5], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.5, valign: "middle" });
 }
 noteBox(s, 0.4, 5.94, 12.5, 0.78, T("Reading the numbers", "数値の読み方"), L(d, "deaths_by_area_note"));
-srcLine(s, [linkBy("El Tiempo"), linkBy("Asocapitales"), linkBy("CNN"), linkBy("France 24")]);
+srcLine(s, [linkBy("UNGRD balance"), linkBy("RPP"), linkBy("El Tiempo"), linkBy("Asocapitales")]);
 footer(s);
 
 /* ============ 9. Damage to buildings, lifelines and services ============ */
@@ -844,8 +846,13 @@ footer(s);
 
 /* ============ 17. Links & sources ============ */
 {
-  const PER = 15;
-  const pages = chunk(d.links, PER);
+  // The first page carries the source-policy block, so it holds one row fewer.
+  const pages = [];
+  for (let i = 0; i < d.links.length; ) {
+    const n = pages.length === 0 ? 15 : 16;
+    pages.push(d.links.slice(i, i + n));
+    i += n;
+  }
   pages.forEach((rows, pi) => {
     s = newSlide();
     const suffix = pages.length > 1 ? T(` (${pi + 1}/${pages.length})`, `（${pi + 1}/${pages.length}）`) : "";
