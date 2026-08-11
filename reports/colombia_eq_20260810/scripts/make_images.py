@@ -296,83 +296,111 @@ def fig_mmi():
     save(fig, "mmi_distance")
 
 
-# SGC aftershock counts, published as running totals in its situation updates.
-# hours after the mainshock (10 Aug 07:34 COT) -> cumulative count
-AFTERSHOCK_COUNTS = [
-    (0.0, 0, t("10 Aug 07:34", "8月10日 07:34", "10 ago. 07:34")),
-    (10.9, 47, t("10 Aug 18:30", "8月10日 18:30", "10 ago. 18:30")),
-    (27.0, 96, t("11 Aug 10:30", "8月11日 10:30", "11 ago. 10:30")),
-    (28.0, 99, t("11 Aug 11:30", "8月11日 11:30", "11 ago. 11:30")),
-    (31.4, 103, t("11 Aug 15:00", "8月11日 15:00", "11 ago. 15:00")),
-]
-# magnitude distribution of the 103 aftershocks counted to 11 Aug 15:00 COT
-AFTERSHOCK_BANDS = [
-    (t("M \u2264 3.0", "M3.0以下", "M \u2264 3,0"), 97),
-    (t("M 3.0-4.0", "M3.0〜4.0", "M 3,0-4,0"), 5),
-    (t("M > 4.0", "M4.0超", "M > 4,0"), 1),
-]
+# The SGC catalogue extract for the region (images/sgc_aftershocks.csv): every
+# event the SGC located after the mainshock, not only those it attributes to the
+# aftershock sequence. SEQ_* selects the intermediate-depth events near the
+# epicentre, which is the part of the record that behaves as an aftershock
+# sequence; the SGC's own published running totals are plotted for comparison.
+CSV = os.path.join(IMG, "sgc_aftershocks.csv")
+SEQ_MIN_DEPTH_KM = 60.0
+SEQ_MAX_DIST_KM = 80.0
+SGC_PUBLISHED = [(10.9, 47), (27.0, 96), (28.0, 99), (31.4, 103)]
+
+
+def read_catalogue():
+    import csv as _csv
+    import datetime as _dt
+    with open(CSV, encoding="utf-8") as fh:
+        rows = list(_csv.DictReader(fh))
+    t0 = _dt.datetime.strptime(rows[0]["localTime"], "%Y-%m-%d %H:%M")
+    out = []
+    for r in rows[1:]:
+        t = _dt.datetime.strptime(r["localTime"], "%Y-%m-%d %H:%M")
+        out.append({
+            "h": (t - t0).total_seconds() / 3600.0,
+            "mag": float(r["mag"]),
+            "depth": float(r["depth_km"]),
+            "dist": float(r["dist_from_epicenter_km"]),
+        })
+    return out
+
+
+def in_sequence(e):
+    return e["depth"] >= SEQ_MIN_DEPTH_KM and e["dist"] <= SEQ_MAX_DIST_KM
 
 
 def fig_aftershocks():
-    """The SGC publishes running totals, not an event list; the points are those
-    published snapshots and the line only joins them."""
-    fig, (ax, ax2) = plt.subplots(1, 2, figsize=(7.4, 2.5),
-                                  gridspec_kw={"width_ratios": [1.75, 1]})
+    ev = read_catalogue()
+    seq = [e for e in ev if in_sequence(e)]
+    tmax = max(e["h"] for e in ev)
 
-    hrs = [c[0] for c in AFTERSHOCK_COUNTS]
-    cum = [c[1] for c in AFTERSHOCK_COUNTS]
-    ax.plot(hrs, cum, "-", color=NAVY, linewidth=1.3, alpha=0.55)
-    ax.plot(hrs, cum, "o", color=NAVY, markersize=4.2, markeredgecolor="white",
-            markeredgewidth=0.6, zorder=5)
-    for i, (h, c, lab) in enumerate(AFTERSHOCK_COUNTS):
-        if i == 0 or c == 99:          # 96 and 99 sit an hour apart; label one
-            continue
-        ax.annotate("%d\n%s" % (c, lab), (h, c), textcoords="offset points",
-                    xytext={47: (6, -16), 96: (-6, -20), 103: (-2, 10)}[c],
-                    ha="left" if c == 47 else "right",
-                    fontsize=6.3, color=NAVY, linespacing=1.3)
-    ax.plot([0.73], [1], marker="*", color=RED, markersize=10,
-            markeredgecolor="white", markeredgewidth=0.5, zorder=6)
-    ax.annotate(t("largest aftershock M4.8 (SGC) / mb 5.0 (USGS),\n0.7 h after the mainshock",
-                  "最大余震 M4.8（SGC）／mb5.0（USGS）\n本震の0.7時間後",
-                  "mayor réplica M4,8 (SGC) / mb 5,0 (USGS),\n0,7 h tras el sismo principal"),
-                (0.73, 1), xytext=(1.0, 88), fontsize=6.2, color=RED, linespacing=1.3,
-                arrowprops=dict(arrowstyle="->", color=RED, linewidth=0.8,
-                                connectionstyle="arc3,rad=0.18"))
-    ax.set_xlim(-1.5, 36)
-    ax.set_ylim(0, 132)
+    fig, (ax, ax2) = plt.subplots(1, 2, figsize=(7.6, 2.6))
+
+    # (a) magnitude against time
+    ax.plot([0], [7.4], marker="*", color=RED, markersize=13, markeredgecolor="white",
+            markeredgewidth=0.6, zorder=6, clip_on=False)
+    ax.annotate(t("mainshock M7.4", "本震 M7.4", "sismo principal M7,4"), (0, 7.4),
+                textcoords="offset points", xytext=(7, -3), fontsize=6.6, color=RED,
+                fontweight="bold", va="center")
+    other = [e for e in ev if not in_sequence(e)]
+    ax.plot([e["h"] for e in other], [e["mag"] for e in other], "o", markersize=2.6,
+            color="#B9BFC9", markeredgewidth=0, zorder=3)
+    ax.plot([e["h"] for e in seq], [e["mag"] for e in seq], "o", markersize=3.2,
+            color=NAVY2, markeredgewidth=0, alpha=0.85, zorder=4)
+    big = max(seq, key=lambda e: e["mag"])
+    ax.plot([big["h"]], [big["mag"]], "o", color=RED, markersize=5,
+            markeredgecolor="white", markeredgewidth=0.5, zorder=5)
+    ax.annotate("M4.8", (big["h"], big["mag"]), textcoords="offset points",
+                xytext=(6, 1), fontsize=6.6, color=RED, fontweight="bold")
+    ax.set_ylim(0, 8.1)
+    ax.set_xlim(-1.2, tmax + 1.5)
     ax.set_xlabel(t("Hours after the mainshock", "本震からの経過時間（時間）",
                     "Horas tras el sismo principal"), fontsize=7.5, color=MUTED)
-    ax.set_ylabel(t("Cumulative aftershocks", "余震の累積回数",
-                    "Réplicas acumuladas"), fontsize=7.5, color=MUTED)
-    ax.set_title(t("SGC running totals (COT)", "SGC公表の累積回数（コロンビア時間）",
-                   "Totales acumulados del SGC (COT)"),
+    ax.set_ylabel(t("Magnitude", "規模", "Magnitud"), fontsize=7.5, color=MUTED)
+    ax.set_title(t("Magnitude against time", "規模と時間", "Magnitud frente al tiempo"),
                  fontsize=8.5, color=NAVY, pad=6)
 
-    names = [b[0] for b in AFTERSHOCK_BANDS]
-    vals = [b[1] for b in AFTERSHOCK_BANDS]
-    bars = ax2.barh(range(len(vals))[::-1], vals, color=[NAVY2, "#B07B2A", RED], height=0.55)
-    for r, v in zip(bars, vals):
-        ax2.text(v + 3, r.get_y() + r.get_height() / 2, str(v),
-                 va="center", fontsize=7.5, color="#333333", fontweight="bold")
-    ax2.set_yticks(range(len(names))[::-1])
-    ax2.set_yticklabels(names, fontsize=7.2, color="#333333")
-    ax2.set_xlim(0, 122)
-    ax2.set_title(t("Of the 103, by magnitude", "103回の規模別内訳",
-                    "De las 103, por magnitud"), fontsize=8.5, color=NAVY, pad=6)
+    # (b) cumulative counts
+    def cumulative(sample):
+        hs = sorted(e["h"] for e in sample)
+        return hs, list(range(1, len(hs) + 1))
+
+    hs, cs = cumulative(ev)
+    ax2.step(hs, cs, where="post", color="#9AA3B0", linewidth=1.4,
+             label=t("all located events (%d)" % len(ev),
+                     "全ての決定解（%d件）" % len(ev),
+                     "todos los eventos localizados (%d)" % len(ev)))
+    hs2, cs2 = cumulative(seq)
+    ax2.step(hs2, cs2, where="post", color=NAVY, linewidth=1.6,
+             label=t("depth \u2265 60 km within 80 km (%d)" % len(seq),
+                     "深さ60km以上・80km以内（%d件）" % len(seq),
+                     "prof. \u2265 60 km y a menos de 80 km (%d)" % len(seq)))
+    ax2.plot([p[0] for p in SGC_PUBLISHED], [p[1] for p in SGC_PUBLISHED], "^",
+             color=RED, markersize=4.6, markeredgecolor="white", markeredgewidth=0.5,
+             zorder=6, label=t("SGC published totals", "SGC公表の累積回数",
+                               "totales publicados por el SGC"))
+    ax2.set_xlim(-1.2, tmax + 1.5)
+    ax2.set_ylim(0, max(cs) * 1.12)
+    ax2.set_xlabel(t("Hours after the mainshock", "本震からの経過時間（時間）",
+                     "Horas tras el sismo principal"), fontsize=7.5, color=MUTED)
+    ax2.set_ylabel(t("Cumulative events", "累積回数", "Eventos acumulados"),
+                   fontsize=7.5, color=MUTED)
+    ax2.set_title(t("Cumulative count", "累積回数", "Conteo acumulado"),
+                  fontsize=8.5, color=NAVY, pad=6)
+    leg = ax2.legend(loc="upper left", fontsize=5.9, frameon=False, handlelength=1.4,
+                     borderpad=0.1, labelspacing=0.25)
+    for txt in leg.get_texts():
+        txt.set_color("#444444")
 
     for a in (ax, ax2):
         for side in ("top", "right"):
             a.spines[side].set_visible(False)
         a.spines["bottom"].set_edgecolor("#CCCCCC")
         a.spines["left"].set_edgecolor("#CCCCCC")
-        a.grid(axis="x", color="#EDEDED", linewidth=0.7)
+        a.grid(color="#EDEDED", linewidth=0.7)
         a.set_axisbelow(True)
-    ax.grid(axis="y", color="#EDEDED", linewidth=0.7)
-    ax.tick_params(labelsize=7, colors=MUTED, length=0)
-    ax2.tick_params(axis="x", labelsize=7, colors=MUTED, length=0)
-    ax2.tick_params(axis="y", labelsize=7.2, colors="#333333", length=0)
-    fig.subplots_adjust(wspace=0.34)
+        a.tick_params(labelsize=7, colors=MUTED, length=0)
+    fig.subplots_adjust(wspace=0.30)
     save(fig, "aftershock_counts")
 
 
