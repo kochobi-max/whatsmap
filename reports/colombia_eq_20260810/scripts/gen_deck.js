@@ -594,7 +594,8 @@ noteBox(s, 0.4, 5.86, 12.5, 0.84,
   T("Operational implication", "運用上の含意"),
   T("Buildings that survived the mainshock in a damaged state have lost capacity. Even moderate aftershocks can bring them down, so rapid habitability assessment before re-occupancy - and keeping people out of visibly damaged structures - matters as much as the aftershock statistics themselves.",
     "本震で損傷したまま倒壊を免れた建物は耐力を失っている。中規模の余震でも倒壊しうるため、余震の統計そのものと同じくらい、再入居前の応急危険度判定と、損傷が明らかな建物への立入り制限が重要である。"));
-srcLine(s, [linkBy("Servicio Geológico"), linkBy("USGS - M 7.4")]);
+s.addText(L(d.aftershocks, "query"), { x: 0.4, y: 6.72, w: 12.5, h: 0.2, fontSize: 7, color: MUTED, italic: true, fontFace: FONT, valign: "top", margin: 0 });
+srcLine(s, [linkBy("Servicio Geológico"), linkBy("USGS - M 7.4"), linkBy("EMSC-CSEM")]);
 footer(s);
 
 /* ============ 8. Human damage ============ */

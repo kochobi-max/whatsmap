@@ -13,7 +13,7 @@
     "as_of_ja": "数値は2026年8月10日22:00（コロンビア時間、日本時間8月11日12:00）現在、発災から約14時間後。政府の集計値（死者111人・負傷者87人）は13:00時点のもので、その後の132人は報道による。すべて速報値。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-08-11 12:24 JST",
+    "stamp": "2026-08-11 12:25 JST",
     "update_date": "11/08/2026",
     "title_es": "Terremoto del Chocó de 2026 (Colombia)",
     "subtitle_es": "M7.4, San José del Palmar, departamento del Chocó — 10 de agosto de 2026",
@@ -693,24 +693,24 @@
   "exposure_note_en": "USGS PAGER (version 5) exposure estimates. About 10.5 million people were exposed to Strong or Very Strong shaking (MMI VI-VII) and about 34 million to MMI IV or above across four countries. These are model estimates.",
   "exposure_note_ja": "USGS PAGER（第5版）による曝露推計。約1,050万人がMMI VI〜VII（強い〜非常に強い）の揺れに、4か国で約3,400万人がMMI IV以上の揺れにさらされた。いずれもモデル推計値。",
   "aftershocks": {
-    "note_en": "Two aftershocks above M4.5 are documented in the international bulletins: M5.0 at 13:18 UTC, 44 minutes after the mainshock, and M4.7 at 15:01 UTC. Both sit at intermediate depth close to the mainshock, as expected for an intraslab sequence. The SGC event bulletin lists M4.8 and M2.8, and media reported more than 20 events during the day. Aftershock sequences of intermediate-depth intraslab events are typically less productive than those of shallow crustal earthquakes, but an M5 while search and rescue is under way is enough to bring down structures that the mainshock already weakened.",
-    "note_ja": "国際的な観測報には、M4.5を超える余震が2回記録されている。本震の44分後にあたる13:18 UTCのM5.0と、15:01 UTCのM4.7である。いずれも本震に近いやや深い震源で、スラブ内地震の余震活動として想定される範囲にある。SGCの速報にはM4.8とM2.8が掲載され、報道は日中に20回以上と伝えている。やや深発のスラブ内地震の余震活動は浅い内陸地震に比べて一般に低調だが、捜索救助の最中のM5級は、本震で既に弱った構造物を倒壊させるには十分である。",
+    "note_en": "A query of the USGS catalogue for the region at M2.5 and above returns just two events: the mainshock and a single mb 5.0 aftershock 44 minutes later, both reviewed. The SGC bulletin adds M4.8 and M2.8, and media reported more than 20 events during the day — those smaller shocks sit below the global catalogue's completeness here and are only in the national network's data. A sparse sequence of larger aftershocks is what an intermediate-depth intraslab rupture is expected to produce; but an M5 while search and rescue is under way is enough to bring down structures the mainshock already weakened.",
+    "note_ja": "USGSのカタログを当該地域・M2.5以上で照会すると、返るのは本震と、その44分後のmb5.0の余震の2件のみ（いずれも精査済み）である。SGCの速報はM4.8とM2.8を加え、報道は日中に20回以上と伝えているが、これら小規模の地震は世界カタログの検知下限を下回り、国内観測網のデータにのみ存在する。大きな余震が少ない経過は、やや深発のスラブ内地震として想定される挙動である。ただし捜索救助の最中のM5級は、本震で既に弱った構造物を倒壊させるには十分である。",
     "rows": [
       {
-        "when": "10 Aug 13:18 UTC (08:18 COT)",
-        "mag": "M5.0",
+        "when": "10 Aug 13:18:10 UTC (08:18 COT)",
+        "mag": "mb 5.0",
         "tier": "official",
-        "note_en": "44 minutes after the mainshock, at the same intermediate depth (~100 km) and essentially the same epicentre. USGS/NEIC mb 5.0; other agencies report 5.0-5.7 for the same event.",
-        "note_ja": "本震の44分後。深さ約100kmと震央はほぼ本震と同じ。USGS/NEICはmb 5.0、他機関は同一地震について5.0〜5.7を報告。",
-        "note_es": "44 minutos después del sismo principal, a la misma profundidad intermedia (~100 km) y prácticamente el mismo epicentro. USGS/NEIC mb 5.0; otras entidades reportan 5.0-5.7 para el mismo evento."
+        "note_en": "USGS us6000tjm4, reviewed: 16 km W of San José del Palmar, depth 98.5 km — 44 minutes after the mainshock and at the same intermediate depth. Other agencies report 5.0-5.7 for this event.",
+        "note_ja": "USGS us6000tjm4（精査済み）：サンホセ・デル・パルマルの西16km、深さ98.5km。本震の44分後で、深さも本震とほぼ同じ。他機関は同一地震について5.0〜5.7を報告。",
+        "note_es": "USGS us6000tjm4, revisado: 16 km al O de San José del Palmar, profundidad 98,5 km — 44 minutos después del sismo principal y a la misma profundidad intermedia. Otras entidades reportan 5.0-5.7 para este evento."
       },
       {
         "when": "10 Aug 15:01 UTC (10:01 COT)",
         "mag": "M4.7",
         "tier": "official",
-        "note_en": "2 hours 27 minutes after the mainshock, again at intermediate depth near the epicentre (IGC M4.7; INET M4.3)",
-        "note_ja": "本震の2時間27分後。震央付近のやや深い震源（IGC M4.7、INET M4.3）",
-        "note_es": "2 horas y 27 minutos después del sismo principal, de nuevo a profundidad intermedia cerca del epicentro (IGC M4.7; INET M4.3)"
+        "note_en": "Reported by the regional agencies IGC (M4.7) and INET (M4.3); it does not appear in the USGS catalogue at the M2.5 threshold",
+        "note_ja": "地域機関のIGC（M4.7）とINET（M4.3）が報告。USGSのM2.5以上のカタログには含まれていない",
+        "note_es": "Reportada por las entidades regionales IGC (M4.7) e INET (M4.3); no aparece en el catálogo del USGS con umbral M2.5"
       },
       {
         "when": "10 Aug (SGC bulletin)",
@@ -729,13 +729,16 @@
         "note_es": "La prensa reportó más de 20 réplicas durante el día; no se había publicado un conteo oficial consolidado"
       }
     ],
-    "note_es": "Los boletines internacionales documentan dos réplicas por encima de M4.5: M5.0 a las 13:18 UTC, 44 minutos después del sismo principal, y M4.7 a las 15:01 UTC. Ambas se ubican a profundidad intermedia cerca del sismo principal, como cabe esperar en una secuencia intraplaca. El boletín del SGC lista M4.8 y M2.8, y la prensa reportó más de 20 eventos durante el día. Las secuencias de réplicas de sismos intraplaca de profundidad intermedia suelen ser menos productivas que las de los sismos corticales someros, pero un M5 mientras la búsqueda y el rescate están en curso basta para derribar estructuras que el sismo principal ya debilitó.",
+    "note_es": "Una consulta al catálogo del USGS para la región con umbral M2.5 devuelve solo dos eventos: el sismo principal y una única réplica de mb 5.0 44 minutos después, ambos revisados. El boletín del SGC añade M4.8 y M2.8, y la prensa reportó más de 20 eventos durante el día: esos sismos menores quedan por debajo de la completitud del catálogo global aquí y solo están en los datos de la red nacional. Una secuencia escasa de réplicas grandes es lo que cabe esperar de una ruptura intraplaca de profundidad intermedia; pero un M5 mientras la búsqueda y el rescate están en curso basta para derribar estructuras que el sismo principal ya debilitó.",
     "spread_title_en": "How much the agencies differ",
     "spread_title_ja": "機関による解のばらつき",
     "spread_title_es": "Cuánto difieren las entidades",
     "spread_en": "More than 30 agencies published a solution for the mainshock within minutes. Their magnitudes span Mw 7.0-7.7 and their depths 74-121 km; several automatic solutions defaulted to 10 km before revision. This report uses the USGS/NEIC solution (Mw 7.4, 110 km), which matches PAGER v5, and shows the SGC solution beside it. The spread is normal for a deep event recorded at teleseismic distances, and it is the reason early media figures for depth and magnitude disagreed.",
     "spread_ja": "本震については30を超える機関が数分以内に解を公表した。規模はMw7.0〜7.7、深さは74〜121kmに分布し、自動解のいくつかは修正前に既定値の10kmを示していた。本報告はPAGER第5版と一致するUSGS/NEIC解（Mw7.4、深さ110km）を用い、SGC解を併記している。遠地観測に基づく深い地震ではこの程度のばらつきは通常であり、初期の報道で深さや規模が食い違った理由でもある。",
-    "spread_es": "Más de 30 entidades publicaron una solución para el sismo principal en cuestión de minutos. Sus magnitudes van de Mw 7.0 a 7.7 y sus profundidades de 74 a 121 km; varias soluciones automáticas usaron el valor por defecto de 10 km antes de ser revisadas. Este informe utiliza la solución del USGS/NEIC (Mw 7.4, 110 km), que coincide con el PAGER v5, y muestra al lado la del SGC. La dispersión es normal en un sismo profundo registrado a distancias telesísmicas, y explica por qué las primeras cifras de prensa sobre profundidad y magnitud no coincidían."
+    "spread_es": "Más de 30 entidades publicaron una solución para el sismo principal en cuestión de minutos. Sus magnitudes van de Mw 7.0 a 7.7 y sus profundidades de 74 a 121 km; varias soluciones automáticas usaron el valor por defecto de 10 km antes de ser revisadas. Este informe utiliza la solución del USGS/NEIC (Mw 7.4, 110 km), que coincide con el PAGER v5, y muestra al lado la del SGC. La dispersión es normal en un sismo profundo registrado a distancias telesísmicas, y explica por qué las primeras cifras de prensa sobre profundidad y magnitud no coincidían.",
+    "query_en": "Data: USGS FDSN event service, region 3-7 N / 78-74.5 W, M2.5+, from the origin time (query.csv in this repository). Reproducible at earthquake.usgs.gov/fdsnws/event/1/.",
+    "query_ja": "データ：USGS FDSNイベントサービス（範囲 北緯3〜7度・西経78〜74.5度、M2.5以上、発震時刻以降。本リポジトリのquery.csv）。earthquake.usgs.gov/fdsnws/event/1/ で再現可能。",
+    "query_es": "Datos: servicio de eventos FDSN del USGS, región 3-7 N / 78-74,5 O, M2.5+, desde la hora de origen (query.csv en este repositorio). Reproducible en earthquake.usgs.gov/fdsnws/event/1/."
   },
   "support_domestic": [
     {
