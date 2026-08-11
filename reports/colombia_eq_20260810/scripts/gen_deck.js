@@ -52,6 +52,12 @@ function L(obj, key) {
 function LL(obj) { return obj ? (obj[LANG] || obj.en || "") : ""; }
 const UI_ES = {
   "Sources: ": "Fuentes: ",
+  "Both agencies report a strike-slip mechanism.": "Ambas entidades reportan un mecanismo de falla de rumbo.",
+  "Copernicus EMS Rapid Mapping: EMSR916": "Cartografía rápida del Copernicus EMS: EMSR916",
+  "Activation page (© Copernicus EMS)": "Página de la activación (© Copernicus EMS)",
+  "Item": "Ítem",
+  "Activation reason (verbatim)": "Razón de la activación (textual)",
+  "What Rapid Mapping delivers": "Qué entrega la cartografía rápida",
   "Macroseismic Intensity (SGC)": "Intensidad macrosísmica (SGC)",
   "Official SGC intensity map": "Mapa de intensidades del SGC",
   "Modified Mercalli scale (Worden et al., 2012), as printed on the SGC map": "Escala de Mercalli modificada (Worden et al., 2012), tal como aparece en el mapa del SGC",
@@ -404,9 +410,14 @@ footer(s);
 s = newSlide();
 heading(s, "Seismotectonic Setting: an intraslab earthquake", "地震テクトニクス：スラブ内地震");
 imageSlot(s, 0.4, 1.12, 7.5, 3.5, "slab_section", T("Schematic cross-section (ADRC)", "模式断面図（ADRC作成）"), null);
-s.addText(L(d.tectonics, "text"), { x: 0.4, y: 4.72, w: 7.5, h: 2.0, align: "left", valign: "top", fontFace: FONT, fontSize: JA ? 10 : 10.5, color: INK, margin: 4 });
+s.addText(L(d.tectonics, "text"), { x: 0.4, y: 4.72, w: 6.2, h: 2.0, align: "left", valign: "top", fontFace: FONT, fontSize: JA ? 9.5 : 10, color: INK, margin: 4 });
+imageSlot(s, 6.75, 4.74, 1.15, 1.38, "beachball", null, null);
+s.addText([
+  { text: L(d.mechanism_fig, "caption") + "\n", options: { fontSize: 7.5, color: MUTED, bold: true } },
+  { text: T("Both agencies report a strike-slip mechanism.", "両機関とも横ずれ断層型としている。"), options: { fontSize: 7, color: MUTED } },
+], { x: 6.5, y: 6.14, w: 1.65, h: 0.5, align: "center", valign: "top", fontFace: FONT, margin: 0 });
 bulletsTier(s, 8.1, 1.12, 4.8, 5.6, d.tectonics.points, { base: 11.5 });
-srcLine(s, [linkBy("USGS - M 7.4"), linkBy("Servicio Geológico"), linkBy("GDACS")]);
+srcLine(s, [linkBy("USGS - M 7.4"), linkBy("event bulletin"), linkBy("GDACS")]);
 footer(s);
 
 /* ============ 3. Overview & response measures ============ */
@@ -508,7 +519,7 @@ if (d.intensity_map) {
   s = newSlide();
   heading(s, "Macroseismic Intensity (SGC)", "体感震度分布（SGC）");
   imageSlot(s, 0.4, 1.12, 5.7, 5.3, "sgc_shakemap",
-    T("Official SGC intensity map", "SGC 公式の震度分布図") + "  (\u00a9 SGC)", im.url);
+    T("Official SGC intensity map", "SGC 公式の震度分布図") + "  (© SGC)", im.url);
   s.addText(L(im, "stamp"), { x: 6.4, y: 1.12, w: 6.5, h: 0.62, fontSize: 8, color: MUTED, fontFace: FONT, valign: "top", margin: 0 });
   s.addText(L(im, "text"), { x: 6.4, y: 1.80, w: 6.5, h: 1.68, fontSize: JA ? 9.5 : 10, color: INK, fontFace: FONT, valign: "top", margin: 0 });
   {
@@ -650,6 +661,29 @@ noteBox(s, 0.4, 5.66, 12.5, 1.04, T("Note on Sentinel Asia", "センチネルア
     "ADRCが共同プロジェクトチームとして参画するセンチネルアジアはアジア太平洋地域を対象としている。コロンビアの災害では、これに相当する国際的枠組みは国際災害チャーター（Space and Major Disasters）とコペルニクス緊急管理サービスであり、中南米ではUNOSAT／UNITARのラピッドマッピングも広く用いられる。"));
 srcLine(s, [linkBy("International Charter"), linkBy("Copernicus"), linkBy("GDACS")]);
 footer(s);
+
+/* ============ 12b. Copernicus EMS EMSR916 ============ */
+if (d.emsr916) {
+  const em = d.emsr916;
+  s = newSlide();
+  heading(s, "Copernicus EMS Rapid Mapping: EMSR916", "コペルニクスEMS ラピッドマッピング：EMSR916");
+  imageSlot(s, 0.4, 1.12, 7.5, 5.3, "emsr916", T("Activation page (© Copernicus EMS)", "発動ページ（© Copernicus EMS）"), em.url);
+  {
+    const rows = [[th(T("Item", "項目")), th(T("Value", "値"))]];
+    em.rows.forEach((r, i) => rows.push([
+      td(JA ? r.k_ja : (LANG === "es" ? r.k_es : r.k_en), i, { fontSize: 9.5, bold: true, color: NAVY }),
+      td(r.v, i, { fontSize: 9.5 }),
+    ]));
+    s.addTable(rows, { x: 8.1, y: 1.12, w: 4.8, colW: [1.7, 3.1], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.36, valign: "middle" });
+  }
+  s.addText([
+    { text: T("Activation reason (verbatim)", "発動理由（原文）") + "\n", options: { bold: true, fontSize: 9.5, color: NAVY } },
+    { text: L(em, "reason"), options: { fontSize: JA ? 8.5 : 9, color: INK, italic: true } },
+  ], { x: 8.1, y: 4.42, w: 4.8, h: 1.6, align: "left", valign: "top", fontFace: FONT, margin: 0 });
+  noteBox(s, 8.1, 6.06, 4.8, 0.62, T("What Rapid Mapping delivers", "ラピッドマッピングの内容"), L(em, "note"));
+  srcLine(s, [linkBy("EMSR916"), linkBy("European Commission")]);
+  footer(s);
+}
 
 /* ============ 13. Colombia's DRM system ============ */
 s = newSlide();

@@ -13,7 +13,7 @@
     "as_of_ja": "数値は2026年8月10日17:00（コロンビア時間、日本時間8月11日07:00）現在、発災から約9時間半後。すべて速報値。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-08-11 09:09 JST",
+    "stamp": "2026-08-11 09:19 JST",
     "update_date": "11/08/2026",
     "title_es": "Terremoto del Chocó de 2026 (Colombia)",
     "subtitle_es": "M7.4, San José del Palmar, departamento del Chocó — 10 de agosto de 2026",
@@ -1271,7 +1271,9 @@
     "locator_epicentre": "images/locator_epicentre.png",
     "slab_section": "images/slab_section.png",
     "mmi_distance": "images/mmi_distance.png",
-    "sgc_shakemap": "images/sgc_shakemap.png"
+    "sgc_shakemap": "images/sgc_shakemap.png",
+    "beachball": "images/beachball_manual.png",
+    "emsr916": "images/emsr916_manual.jpg"
   },
   "photos": [],
   "deaths_by_area_note_es": "Las cifras departamentales provienen de autoridades locales y se reportan en momentos distintos; todavía no suman el total nacional de 111 y se conciliarán a medida que avance la verificación.",
@@ -1413,5 +1415,72 @@
   },
   "param_note_en": "USGS and SGC agree on size; the SGC's first bulletin gave M6.6 at 79 km before revision. The two locations differ by about 20 km and their depths by about 11 km — normal for an intermediate-depth event recorded by different networks. Epicentral distances in this report are measured from the USGS location. SGC event SGC2026pqqmro was located with 69 stations; the SGC states its bulletins are subject to change as review continues.",
   "param_note_ja": "規模はUSGSとSGCで一致。SGCの第1報はM6.6・深さ79kmで、のちに修正された。両機関の震源位置は約20km、深さは約11km異なるが、観測網の異なるやや深発地震では通常の範囲である。本報告の震央距離はUSGSの震源位置から計算している。SGCのイベントSGC2026pqqmroは69観測点で決定されており、SGCは精査の進展に伴い速報値が変更されうるとしている。",
-  "param_note_es": "El USGS y el SGC coinciden en el tamaño; el primer boletín del SGC dio M6.6 a 79 km antes de la revisión. Las dos localizaciones difieren unos 20 km y sus profundidades unos 11 km, lo normal en un sismo de profundidad intermedia registrado por redes distintas. Las distancias epicentrales de este informe se miden desde la localización del USGS. El evento SGC2026pqqmro fue localizado con 69 estaciones; el SGC advierte que sus boletines están sujetos a cambios mientras avanza la revisión."
+  "param_note_es": "El USGS y el SGC coinciden en el tamaño; el primer boletín del SGC dio M6.6 a 79 km antes de la revisión. Las dos localizaciones difieren unos 20 km y sus profundidades unos 11 km, lo normal en un sismo de profundidad intermedia registrado por redes distintas. Las distancias epicentrales de este informe se miden desde la localización del USGS. El evento SGC2026pqqmro fue localizado con 69 estaciones; el SGC advierte que sus boletines están sujetos a cambios mientras avanza la revisión.",
+  "mechanism_fig": {
+    "caption_en": "Focal mechanism (beachball)",
+    "caption_ja": "発震機構解（ビーチボール）",
+    "caption_es": "Mecanismo focal (beachball)"
+  },
+  "emsr916": {
+    "title_en": "Copernicus EMS Rapid Mapping — EMSR916",
+    "title_ja": "コペルニクスEMS ラピッドマッピング — EMSR916",
+    "title_es": "Cartografía rápida del Copernicus EMS — EMSR916",
+    "url": "https://mapping.emergency.copernicus.eu/activations/EMSR916/",
+    "reason_en": "“On the 10 August 2026 at 12:30 UTC, a major earthquake with a magnitude of 7.4 is reported to have affected western and central Colombia, with the epicentre near San José del Palmar. The event has caused significant damage in several cities, including Quibdó, Pereira, Manizales and Cali, with collapsed buildings reported. Copernicus EMS Rapid Mapping is requested to provide earthquake damage assessment emergency mapping.”",
+    "reason_ja": "「2026年8月10日12:30 UTC、マグニチュード7.4の大地震がコロンビア西部および中部に影響を与えたと報告されている。震央はサンホセ・デル・パルマル付近。キブド、ペレイラ、マニサレス、カリを含む複数の都市で著しい被害が生じ、建物の倒壊が報告されている。コペルニクスEMSのラピッドマッピングに対し、地震被害評価の緊急マッピングの提供が要請された。」",
+    "reason_es": "«El 10 de agosto de 2026 a las 12:30 UTC, se reporta un sismo mayor de magnitud 7.4 que afectó el occidente y el centro de Colombia, con epicentro cerca de San José del Palmar. El evento ha causado daños significativos en varias ciudades, entre ellas Quibdó, Pereira, Manizales y Cali, con reportes de edificios colapsados. Se solicita a la cartografía rápida del Copernicus EMS proporcionar cartografía de emergencia para la evaluación de daños por el sismo.»",
+    "note_en": "Rapid Mapping delivers reference and grading products over selected areas of interest, not nationwide coverage. Products are published on the activation page as they are produced and are free to use.",
+    "note_ja": "ラピッドマッピングは、全土ではなく選定された関心領域（AOI）について、参照図と被害グレーディング図を提供する。成果物は作成され次第、発動ページで公開され、自由に利用できる。",
+    "note_es": "La cartografía rápida entrega productos de referencia y de gradación sobre áreas de interés seleccionadas, no cobertura nacional. Los productos se publican en la página de la activación a medida que se producen y son de uso libre.",
+    "rows": [
+      {
+        "k_en": "Activation",
+        "k_ja": "発動番号",
+        "k_es": "Activación",
+        "v": "EMSR916 — Earthquake in Colombia"
+      },
+      {
+        "k_en": "Event time",
+        "k_ja": "事象発生",
+        "k_es": "Hora del evento",
+        "v": "10/08/2026 afternoon (UTC)"
+      },
+      {
+        "k_en": "Activation time",
+        "k_ja": "発動時刻",
+        "k_es": "Hora de activación",
+        "v": "10/08/2026, 17:13 (UTC) = 12:13 COT"
+      },
+      {
+        "k_en": "Event type",
+        "k_ja": "事象種別",
+        "k_es": "Tipo de evento",
+        "v": "Earthquake / Ground shaking"
+      },
+      {
+        "k_en": "Affected country",
+        "k_ja": "対象国",
+        "k_es": "País afectado",
+        "v": "Colombia"
+      },
+      {
+        "k_en": "Authorised user",
+        "k_ja": "要請者",
+        "k_es": "Usuario autorizado",
+        "v": "EC Services | DG ECHO"
+      },
+      {
+        "k_en": "Service output",
+        "k_ja": "成果物",
+        "k_es": "Producto del servicio",
+        "v": "3 AOIs · 3 products · 0 maps"
+      },
+      {
+        "k_en": "Status",
+        "k_ja": "状況",
+        "k_es": "Estado",
+        "v": "ONGOING"
+      }
+    ]
+  }
 }
