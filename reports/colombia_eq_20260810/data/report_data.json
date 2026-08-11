@@ -4,22 +4,22 @@
     "title_ja": "2026年 チョコ地震（コロンビア）",
     "subtitle_en": "M7.4, San José del Palmar, Chocó Department - 10 August 2026",
     "subtitle_ja": "M7.4、チョコ県サンホセ・デル・パルマル、2026年8月10日",
-    "edition_en": "1st report",
-    "edition_ja": "第1報",
+    "edition_en": "2nd report",
+    "edition_ja": "第2報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
     "glide": "EQ-2026-000146-COL",
-    "as_of_en": "Figures as of 10 Aug 2026, 22:00 COT (11 Aug 12:00 JST), about 14 hours after the earthquake. The Government's consolidated balance (111 deaths, 87 injured) is its 13:00 COT figure; the later toll of 132 is from media reporting. All figures are preliminary.",
-    "as_of_ja": "数値は2026年8月10日22:00（コロンビア時間、日本時間8月11日12:00）現在、発災から約14時間後。政府の集計値（死者111人・負傷者87人）は13:00時点のもので、その後の132人は報道による。すべて速報値。",
+    "as_of_en": "Figures as of 11 Aug 2026, 03:00 COT (17:00 JST), about 20 hours after the earthquake. The last consolidated national toll is 132 deaths (Asocapitales, evening of 10 Aug), but city-level reports on 11 August already exceed it - Cali alone reports 85 deaths and Pereira 66. All figures are preliminary and rising.",
+    "as_of_ja": "数値は2026年8月11日03:00（コロンビア時間、日本時間17:00）現在、発災から約20時間後。全国の集計値は死者132人（Asocapitales、8月10日夕方）が最新だが、8月11日の都市別報告はすでにこれを上回っており、カリだけで85人、ペレイラで66人となっている。すべて速報値であり、なお増加中である。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-08-11 12:38 JST",
+    "stamp": "2026-08-11 17:49 JST",
     "update_date": "11/08/2026",
     "title_es": "Terremoto del Chocó de 2026 (Colombia)",
     "subtitle_es": "M7.4, San José del Palmar, departamento del Chocó — 10 de agosto de 2026",
-    "edition_es": "1.er informe",
+    "edition_es": "2.º informe",
     "prepared_by_es": "Centro Asiático para la Reducción de Desastres (ADRC)",
-    "as_of_es": "Cifras al 10 de agosto de 2026, 22:00 COT (11 de agosto, 12:00 JST), unas 14 horas después del sismo. El balance consolidado del Gobierno (111 muertos, 87 heridos) corresponde a su corte de las 13:00 COT; la cifra posterior de 132 proviene de la prensa. Todas las cifras son preliminares.",
+    "as_of_es": "Cifras al 11 de agosto de 2026, 03:00 COT (17:00 JST), unas 20 horas después del sismo. El último balance nacional consolidado es de 132 muertos (Asocapitales, tarde del 10 de agosto), pero los reportes por ciudad del 11 de agosto ya lo superan: solo Cali reporta 85 muertos y Pereira 66. Todas las cifras son preliminares y van en aumento.",
     "disseminate_es": "Informe multilingüe (EN/JA/ES) para difusión nacional e internacional. Se da prioridad a las fuentes oficiales; los vacíos se completan con información de prensa debidamente identificada."
   },
   "event": {
@@ -46,8 +46,8 @@
     "tsunami_ja": "津波なし。震源は内陸かつやや深発で、太平洋岸に津波警報は発表されていない。",
     "alert_en": "USGS PAGER: Orange (version 5). Most likely fatality band 1,000-10,000 (35% probability); economic losses most likely USD 100-1,000 million (34%), less than 1% of Colombia's GDP. GDACS: Orange.",
     "alert_ja": "USGS PAGER：オレンジ（第5版）。死者数は1,000〜10,000人の階級が最も確からしい（確率35%）。経済損失は1〜10億米ドルが最も確からしく（34%）、コロンビアのGDPの1%未満。GDACS：オレンジ。",
-    "summary_en": "At 07:34 local time (12:34 UTC) on 10 August 2026, an Mww 7.4 earthquake struck western Colombia with its epicentre 5 km east of San José del Palmar in Chocó Department, at a depth of about 110 km (USGS). The event was an intermediate-depth, strike-slip rupture inside the subducting Nazca slab; because of its depth, strong shaking (MMI VI-VII) was spread over a wide area of the Andean Coffee Region rather than concentrated near the epicentre, and about 10.5 million people were exposed to it. The SGC describes it as the largest-magnitude earthquake recorded in Colombia in the past decade. In its 13:00 COT balance on 10 August the Government reported 111 deaths and 87 injured — a toll that media reporting had raised to 132 by the evening — more than 1,600 buildings damaged (1,575 homes damaged, 37 destroyed, 61 buildings collapsed), together with damage to 18 health facilities, 52 educational facilities, 18 major roads and six regional airports. The passenger terminal of Matecaña International Airport in Pereira partially collapsed, a tower of the neo-Gothic cathedral in Manizales fell onto the nave, and about 30% of the University Hospital in Cali collapsed. The President declared a national disaster, set up a Unified Command Post in Chocó and deployed four USAR teams and the armed forces. There was no tsunami. All figures are preliminary and are expected to change as assessment proceeds.",
-    "summary_ja": "2026年8月10日07:34（現地時間、12:34 UTC）、コロンビア西部チョコ県サンホセ・デル・パルマルの東5kmを震源とするMww7.4の地震が発生した。深さは約110km（USGS）で、沈み込むナスカプレート内部のやや深発・横ずれ型。深いために強い揺れ（MMI VI〜VII）はコーヒー地帯を含む広範囲に及び、約1,050万人が強い揺れにさらされた。SGCは過去10年でコロンビア最大規模の地震としている。8月10日13:00（現地）の政府集計は死者111人・負傷者87人で、夕方には報道で132人に増えた。あわせて建物被害1,600棟超（住宅損壊1,575、全壊37、建物倒壊61）、医療施設18・教育施設52・幹線道路18・地方空港6か所の被害を発表。ペレイラのマテカニャ国際空港旅客ターミナルが一部倒壊、マニサレスの大聖堂の塔が身廊に崩落、カリの大学病院は約30%が損壊した。大統領は国家災害を宣言し、チョコ県に統合指揮所を設置、USAR4隊と軍を投入した。津波はない。数値はすべて速報値であり、被害調査の進展により変動する。",
+    "summary_en": "At 07:34 local time (12:34 UTC) on 10 August 2026, an Mww 7.4 earthquake struck western Colombia with its epicentre 5 km east of San José del Palmar in Chocó Department, at a depth of about 110 km (USGS). The event was an intermediate-depth, strike-slip rupture inside the subducting Nazca slab; because of its depth, strong shaking (MMI VI-VII) was spread over a wide area of the Andean Coffee Region rather than concentrated near the epicentre, and about 10.5 million people were exposed to it. The SGC describes it as the largest-magnitude earthquake recorded in Colombia in the past decade. In its 13:00 COT balance on 10 August the Government reported 111 deaths and 87 injured; by the evening Asocapitales put the national toll at 132 with more than 570 injured, and on 11 August the President reported 700 injured while the mayor of Cali alone reported 85 deaths and 885 injured — more than 1,600 buildings damaged (1,575 homes damaged, 37 destroyed, 61 buildings collapsed), together with damage to 18 health facilities, 52 educational facilities, 18 major roads and six regional airports. The passenger terminal of Matecaña International Airport in Pereira partially collapsed, a tower of the neo-Gothic cathedral in Manizales fell onto the nave, and about 30% of the University Hospital in Cali collapsed. The President declared a national disaster, set up a Unified Command Post in Chocó and deployed four USAR teams and the armed forces. There was no tsunami. All figures are preliminary and are expected to change as assessment proceeds.",
+    "summary_ja": "2026年8月10日07:34（現地時間、12:34 UTC）、コロンビア西部チョコ県サンホセ・デル・パルマルの東5kmを震源とするMww7.4の地震が発生した。深さは約110km（USGS）で、沈み込むナスカプレート内部のやや深発・横ずれ型。深いために強い揺れ（MMI VI〜VII）はコーヒー地帯を含む広範囲に及び、約1,050万人が強い揺れにさらされた。SGCは過去10年でコロンビア最大規模の地震としている。8月10日13:00（現地）の政府集計は死者111人・負傷者87人。同日夕方にAsocapitalesが全国で死者132人・負傷者570人超と発表し、11日には大統領が負傷者700人、カリ市長は同市だけで死者85人・負傷者885人と報告した。あわせて建物被害1,600棟超（住宅損壊1,575、全壊37、建物倒壊61）、医療施設18・教育施設52・幹線道路18・地方空港6か所の被害を発表。ペレイラのマテカニャ国際空港旅客ターミナルが一部倒壊、マニサレスの大聖堂の塔が身廊に崩落、カリの大学病院は約30%が損壊した。大統領は国家災害を宣言し、チョコ県に統合指揮所を設置、USAR4隊と軍を投入した。津波はない。数値はすべて速報値であり、被害調査の進展により変動する。",
     "epicentre_es": "USGS: 5 km al S de San José del Palmar, departamento del Chocó (unos 280 km al O de Bogotá) — SGC: a 20 km de San José del Palmar",
     "magnitude_note_es": "El tamaño coincide: Mww 7.4 del USGS y 7.4 del SGC. El primer boletín del SGC dio M6.6 a 79 km de profundidad y fue revisado a 7.4; las localizaciones de las dos entidades difieren unos 20 km y sus profundidades unos 11 km, lo normal en un sismo de profundidad intermedia registrado por redes distintas.",
     "depth_display_es": "110,3 km (USGS, PAGER v5) / 96 km (SGC)",
@@ -56,7 +56,7 @@
     "felt_es": "Sentido en el occidente y el centro de Colombia, incluidas Bogotá, Cali y Medellín, y también en Ecuador, Panamá y Venezuela",
     "tsunami_es": "Sin tsunami. El sismo fue continental y de profundidad intermedia; no se emitió alerta de tsunami para la costa del Pacífico.",
     "alert_es": "PAGER del USGS: naranja (versión 5). La banda de mortalidad más probable es de 1.000 a 10.000 (35 % de probabilidad); las pérdidas económicas más probables son de 100 a 1.000 millones de dólares (34 %), menos del 1 % del PIB de Colombia. GDACS: naranja.",
-    "summary_es": "A las 07:34 hora local (12:34 UTC) del 10 de agosto de 2026, un sismo de Mww 7.4 sacudió el occidente de Colombia con epicentro 5 km al este de San José del Palmar (Chocó), a unos 110 km de profundidad (USGS). Fue una ruptura de rumbo a profundidad intermedia dentro de la placa de Nazca en subducción; por esa profundidad, el sacudimiento fuerte (MMI VI-VII) se repartió sobre una amplia zona del Eje Cafetero andino en lugar de concentrarse cerca del epicentro, y unos 10,5 millones de personas quedaron expuestas a él. El SGC lo describe como el sismo de mayor magnitud registrado en Colombia en la última década. En su balance de las 13:00 COT del 10 de agosto el Gobierno reportó 111 muertos y 87 heridos —cifra que la prensa elevó a 132 al caer la tarde—, más de 1.600 edificaciones afectadas (1.575 viviendas averiadas, 37 destruidas y 61 edificios colapsados), y daños en 18 centros de salud, 52 establecimientos educativos, 18 vías principales y seis aeropuertos regionales. Colapsaron parcialmente la terminal de pasajeros del Aeropuerto Internacional Matecaña (Pereira), una torre de la catedral neogótica de Manizales sobre la nave y cerca del 30 % del Hospital Universitario del Valle, en Cali. El Presidente declaró el desastre nacional, instaló un Puesto de Mando Unificado en el Chocó y desplegó cuatro grupos USAR y las Fuerzas Militares. No hubo tsunami. Todas las cifras son preliminares y variarán conforme avance la evaluación.",
+    "summary_es": "A las 07:34 hora local (12:34 UTC) del 10 de agosto de 2026, un sismo de Mww 7.4 sacudió el occidente de Colombia con epicentro 5 km al este de San José del Palmar (Chocó), a unos 110 km de profundidad (USGS). Fue una ruptura de rumbo a profundidad intermedia dentro de la placa de Nazca en subducción; por esa profundidad, el sacudimiento fuerte (MMI VI-VII) se repartió sobre una amplia zona del Eje Cafetero andino en lugar de concentrarse cerca del epicentro, y unos 10,5 millones de personas quedaron expuestas a él. El SGC lo describe como el sismo de mayor magnitud registrado en Colombia en la última década. En su balance de las 13:00 COT del 10 de agosto el Gobierno reportó 111 muertos y 87 heridos; al caer la tarde Asocapitales situó el total nacional en 132 muertos y más de 570 heridos, y el 11 de agosto el Presidente reportó 700 heridos mientras que solo el alcalde de Cali reportaba 85 muertos y 885 heridos — más de 1.600 edificaciones afectadas (1.575 viviendas averiadas, 37 destruidas y 61 edificios colapsados), y daños en 18 centros de salud, 52 establecimientos educativos, 18 vías principales y seis aeropuertos regionales. Colapsaron parcialmente la terminal de pasajeros del Aeropuerto Internacional Matecaña (Pereira), una torre de la catedral neogótica de Manizales sobre la nave y cerca del 30 % del Hospital Universitario del Valle, en Cali. El Presidente declaró el desastre nacional, instaló un Puesto de Mando Unificado en el Chocó y desplegó cuatro grupos USAR y las Fuerzas Militares. No hubo tsunami. Todas las cifras son preliminares y variarán conforme avance la evaluación.",
     "origin_time_local_en": "10 Aug 2026, 07:34:28 COT (UTC-5)",
     "origin_time_utc_en": "10 Aug 2026, 12:34:28 UTC",
     "origin_time_jst_en": "10 Aug 2026, 21:34 JST",
@@ -300,6 +300,14 @@
       "en": "The reported national death toll rises to 132. Four people have been rescued alive from the rubble; more than 20 municipalities are reported affected, and power and telecommunications faults continue in Chocó.",
       "ja": "報道による全国の死者数が132人に増加。瓦礫から4人が救出。被災市町村は20を超えると報じられ、チョコ県では停電・通信障害が続く。",
       "es": "El número de muertos reportado a nivel nacional sube a 132. Cuatro personas han sido rescatadas con vida de los escombros; se reportan más de 20 municipios afectados y continúan las fallas de energía y telecomunicaciones en el Chocó."
+    },
+    {
+      "time": "11 Aug",
+      "tier": "official",
+      "src": "Presidency / local authorities",
+      "en": "Search continues overnight. The President reports 700 injured nationally and about 5,000 homes damaged or destroyed, declares the missing the State's priority, and orders troops to Cali to maintain order. The mayor of Cali reports 85 deaths, 885 injured and 188 missing; Pereira's fire service reports 66 deaths; about 100 people are missing in Manizales. Five capital cities - Cali, Pereira, Quibdó, Manizales and Armenia - remain on red alert.",
+      "ja": "捜索は夜を徹して継続。大統領は全国の負傷者700人、住宅約5,000棟の損壊・全壊を報告し、行方不明者の捜索を国の最優先と表明、カリへ治安維持の部隊派遣を指示。カリ市長は死者85人・負傷885人・行方不明188人、ペレイラ消防は死者66人を報告。マニサレスでは約100人が行方不明。カリ、ペレイラ、キブド、マニサレス、アルメニアの5県都は赤色警報を継続。",
+      "es": "La búsqueda continúa durante la noche. El Presidente reporta 700 heridos en el país y cerca de 5.000 viviendas averiadas o destruidas, declara a los desaparecidos la prioridad del Estado y ordena el traslado de uniformados a Cali para resguardar el orden. El alcalde de Cali reporta 85 muertos, 885 heridos y 188 desaparecidos; los Bomberos de Pereira reportan 66 muertos; cerca de 100 personas están desaparecidas en Manizales. Cinco ciudades capitales -Cali, Pereira, Quibdó, Manizales y Armenia- siguen en alerta roja."
     }
   ],
   "areas": [
@@ -399,38 +407,38 @@
     {
       "item_en": "Deaths",
       "item_ja": "死者",
-      "value_en": "132 (media, evening of 10 Aug). The Government's 13:00 COT balance was 111.",
-      "value_ja": "132人（報道、8月10日夕方）。政府の13:00時点の集計は111人。",
-      "source_en": "Media (CNN live updates); Presidency / UNGRD for the 13:00 figure",
-      "source_ja": "報道（CNN速報）。13:00の値は大統領府／UNGRD",
+      "value_en": "132 nationally (Asocapitales, evening of 10 Aug; 87 of them in capital cities). City reports on 11 Aug already exceed that total: Cali 85, Pereira 66. The Government's 13:00 COT balance on 10 Aug was 111. No re-consolidated national figure had been published.",
+      "value_ja": "全国で132人（Asocapitales、8月10日夕方。うち87人は県都）。8月11日の都市別報告はすでにこの合計を超えており、カリ85人、ペレイラ66人。政府の8月10日13:00の集計は111人。全国値の再集計は未公表。",
+      "source_en": "Asocapitales; mayor of Cali; Pereira fire service; Presidency / UNGRD for the 13:00 figure",
+      "source_ja": "Asocapitales、カリ市長、ペレイラ消防、13:00の値は大統領府／UNGRD",
       "tier": "media",
       "item_es": "Muertos",
-      "value_es": "132 (prensa, tarde del 10 de agosto). El balance del Gobierno a las 13:00 COT era de 111.",
-      "source_es": "Prensa (CNN, en vivo); Presidencia / UNGRD para la cifra de las 13:00"
+      "value_es": "132 en el país (Asocapitales, tarde del 10 de agosto; 87 de ellos en ciudades capitales). Los reportes por ciudad del 11 de agosto ya superan ese total: Cali 85, Pereira 66. El balance del Gobierno del 10 de agosto a las 13:00 COT era de 111. No se había publicado una cifra nacional reconsolidada.",
+      "source_es": "Asocapitales; Alcaldía de Cali; Bomberos de Pereira; Presidencia / UNGRD para la cifra de las 13:00"
     },
     {
       "item_en": "Injured",
       "item_ja": "負傷者",
-      "value_en": "87 nationally (Government, 13:00 COT). In Chocó alone the President later reported 119 injured.",
-      "value_ja": "全国で87人（政府、13:00時点）。その後、大統領はチョコ県だけで119人の負傷者を報告。",
-      "source_en": "Presidency / UNGRD; Presidency (Chocó figure)",
-      "source_ja": "大統領府／UNGRD、チョコ県の値は大統領",
+      "value_en": "700 nationally (President, 11 Aug), up from more than 570 (Asocapitales, 10 Aug) and 87 in the Government's 13:00 COT balance. Cali alone reports 885 injured.",
+      "value_ja": "全国で700人（大統領、8月11日）。8月10日は570人超（Asocapitales）、政府13:00の集計では87人だった。カリだけで885人。",
+      "source_en": "Presidency; Asocapitales; mayor of Cali",
+      "source_ja": "大統領府、Asocapitales、カリ市長",
       "tier": "official",
       "item_es": "Heridos",
-      "value_es": "87 en el país (Gobierno, 13:00 COT). Solo en Chocó el Presidente reportó después 119 heridos.",
-      "source_es": "Presidencia / UNGRD; Presidencia (cifra del Chocó)"
+      "value_es": "700 en el país (Presidente, 11 de agosto), frente a más de 570 (Asocapitales, 10 de agosto) y 87 en el balance del Gobierno de las 13:00 COT. Solo Cali reporta 885 heridos.",
+      "source_es": "Presidencia; Asocapitales; Alcaldía de Cali"
     },
     {
       "item_en": "Missing / trapped",
       "item_ja": "行方不明・生き埋め",
-      "value_en": "Not quantified. Four people had been rescued alive from the rubble by the evening of 10 August; searches continued in Cali, Pereira and Manizales.",
-      "value_ja": "未集計。8月10日夕方までに4人が瓦礫から救出された。カリ、ペレイラ、マニサレスで捜索継続。",
-      "source_en": "Local authorities (media)",
-      "source_ja": "地元当局（報道）",
+      "value_en": "188 missing in Cali and about 100 in Manizales; four children missing under a collapsed school in Quibdó. The President said the State's priority is the missing. Search continued overnight; 228 rescuers and search dogs were working in Cali.",
+      "value_ja": "カリで188人、マニサレスで約100人が行方不明。キブドでは倒壊した学校の下に子ども4人。大統領は行方不明者の捜索を国の最優先と表明。捜索は夜通し継続し、カリでは228人の救助隊と救助犬が活動。",
+      "source_en": "Local authorities and the Presidency (media, 11 Aug)",
+      "source_ja": "地元当局・大統領府（報道、8月11日）",
       "tier": "media",
       "item_es": "Desaparecidos / atrapados",
-      "value_es": "Sin cuantificar. Cuatro personas habían sido rescatadas con vida de los escombros al caer la tarde del 10 de agosto; las búsquedas continuaban en Cali, Pereira y Manizales.",
-      "source_es": "Autoridades locales (prensa)"
+      "value_es": "188 desaparecidos en Cali y cerca de 100 en Manizales; cuatro menores desaparecidos bajo un colegio colapsado en Quibdó. El Presidente señaló que la prioridad del Estado son los desaparecidos. La búsqueda continuó durante la noche; en Cali trabajaban 228 rescatistas y perros de búsqueda.",
+      "source_es": "Autoridades locales y Presidencia (prensa, 11 de agosto)"
     },
     {
       "item_en": "Municipalities affected",
@@ -445,52 +453,52 @@
       "tier": "media"
     },
     {
-      "item_en": "Buildings damaged (total)",
-      "item_ja": "建物被害（合計）",
-      "value_en": "More than 1,600",
-      "value_ja": "1,600棟超",
-      "source_en": "Presidency, 10 Aug",
-      "source_ja": "大統領府（8月10日）",
+      "item_en": "Homes damaged or destroyed",
+      "item_ja": "住宅被害（合計）",
+      "value_en": "About 5,000 homes damaged or destroyed (President, 11 Aug), revised up from the 1,612 counted on 10 Aug",
+      "value_ja": "住宅約5,000棟が損壊または全壊（大統領、8月11日）。8月10日の1,612棟から上方修正",
+      "source_en": "Presidency, 11 Aug",
+      "source_ja": "大統領府（8月11日）",
       "tier": "official",
-      "item_es": "Edificaciones afectadas (total)",
-      "value_es": "Más de 1.600",
-      "source_es": "Presidencia, 10 de agosto"
+      "item_es": "Viviendas averiadas o destruidas",
+      "value_es": "Cerca de 5.000 viviendas averiadas o destruidas (Presidente, 11 de agosto), revisado al alza desde las 1.612 contabilizadas el 10 de agosto",
+      "source_es": "Presidencia, 11 de agosto"
     },
     {
-      "item_en": "Homes damaged",
-      "item_ja": "住宅（損壊）",
+      "item_en": "of which damaged (10 Aug count)",
+      "item_ja": "うち損壊（8月10日集計）",
       "value_en": "1,575",
       "value_ja": "1,575棟",
       "source_en": "UNGRD, 10 Aug",
       "source_ja": "UNGRD（8月10日）",
       "tier": "official",
-      "item_es": "Viviendas averiadas",
+      "item_es": "de las cuales averiadas (conteo del 10 ago.)",
       "value_es": "1.575",
       "source_es": "UNGRD, 10 de agosto"
     },
     {
-      "item_en": "Homes destroyed",
-      "item_ja": "住宅（全壊）",
+      "item_en": "of which destroyed (10 Aug count)",
+      "item_ja": "うち全壊（8月10日集計）",
       "value_en": "37",
       "value_ja": "37棟",
       "source_en": "UNGRD, 10 Aug",
       "source_ja": "UNGRD（8月10日）",
       "tier": "official",
-      "item_es": "Viviendas destruidas",
+      "item_es": "de las cuales destruidas (conteo del 10 ago.)",
       "value_es": "37",
       "source_es": "UNGRD, 10 de agosto"
     },
     {
       "item_en": "Buildings collapsed",
       "item_ja": "建物倒壊",
-      "value_en": "61 nationally; Cali 25-30 at 12 critical points, Manizales 17 collapsed + 19 partial",
-      "value_ja": "全国で61棟。カリは12か所の重要地点で25〜30棟、マニサレスは倒壊17棟・部分倒壊19棟",
-      "source_en": "UNGRD; mayors of Cali and Manizales",
-      "source_ja": "UNGRD、カリ市長・マニサレス市長",
+      "value_en": "More than 80 nationally (11 Aug), up from 61 on 10 Aug; Cali 25-30 at 12 critical points, Manizales 17 collapsed + 19 partial",
+      "value_ja": "全国で80棟超（8月11日）。8月10日の61棟から増加。カリは12か所の重要地点で25〜30棟、マニサレスは倒壊17棟・部分倒壊19棟",
+      "source_en": "Media, 11 Aug; UNGRD; mayors of Cali and Manizales",
+      "source_ja": "報道（8月11日）、UNGRD、カリ市長・マニサレス市長",
       "tier": "official",
       "item_es": "Edificios colapsados",
-      "value_es": "61 en el país; en Cali entre 25 y 30 en 12 puntos críticos; en Manizales 17 colapsados y 19 con colapso parcial",
-      "source_es": "UNGRD; alcaldías de Cali y Manizales"
+      "value_es": "Más de 80 en el país (11 de agosto), frente a 61 el 10 de agosto; en Cali entre 25 y 30 en 12 puntos críticos; en Manizales 17 colapsados y 19 con colapso parcial",
+      "source_es": "Prensa, 11 de agosto; UNGRD; alcaldías de Cali y Manizales"
     },
     {
       "item_en": "Health facilities",
@@ -543,13 +551,13 @@
     {
       "item_en": "Airports",
       "item_ja": "空港",
-      "value_en": "6 regional airports damaged; Matecaña International (Pereira) passenger terminal partially collapsed; flights suspended at Pereira, Manizales, Quibdó, Armenia, Cartago and Buenaventura",
-      "value_ja": "地方6空港が被害。ペレイラのマテカニャ国際空港旅客ターミナルが一部倒壊。ペレイラ、マニサレス、キブド、アルメニア、カルタゴ、ブエナベントゥーラで運航停止",
+      "value_en": "6 regional airports damaged and operations suspended at seven; Matecaña International (Pereira) passenger terminal partially collapsed; flights suspended at Pereira, Manizales, Quibdó, Armenia, Cartago and Buenaventura",
+      "value_ja": "地方6空港が被害、7空港で運航停止。ペレイラのマテカニャ国際空港旅客ターミナルが一部倒壊。ペレイラ、マニサレス、キブド、アルメニア、カルタゴ、ブエナベントゥーラで運航停止",
       "source_en": "UNGRD; civil aviation authority",
       "source_ja": "UNGRD、民間航空当局",
       "tier": "official",
       "item_es": "Aeropuertos",
-      "value_es": "6 aeropuertos regionales con daños; colapso parcial de la terminal de pasajeros del Aeropuerto Internacional Matecaña (Pereira); operaciones suspendidas en Pereira, Manizales, Quibdó, Armenia, Cartago y Buenaventura",
+      "value_es": "6 aeropuertos regionales con daños y operaciones suspendidas en siete; colapso parcial de la terminal de pasajeros del Aeropuerto Internacional Matecaña (Pereira); operaciones suspendidas en Pereira, Manizales, Quibdó, Armenia, Cartago y Buenaventura",
       "source_es": "UNGRD; autoridad de aviación civil"
     },
     {
@@ -591,53 +599,53 @@
   ],
   "deaths_by_area": [
     {
-      "area_en": "Risaralda (Pereira)",
-      "area_ja": "リサラルダ県（ペレイラ）",
-      "n": 40,
-      "note_en": "Governor cites at least 42",
-      "note_ja": "県知事は42人以上と発言",
-      "area_es": "Risaralda (Pereira)",
-      "note_es": "El gobernador cita al menos 42"
-    },
-    {
       "area_en": "Valle del Cauca (Cali)",
       "area_ja": "バジェ・デル・カウカ県（カリ）",
-      "n": 27,
-      "note_en": "",
-      "note_ja": "",
       "area_es": "Valle del Cauca (Cali)",
-      "note_es": ""
+      "n": 85,
+      "note_en": "Mayor of Cali, 11 Aug; 885 injured and 188 missing",
+      "note_ja": "カリ市長（8月11日）。負傷885人、行方不明188人",
+      "note_es": "Alcaldía de Cali, 11 de agosto; 885 heridos y 188 desaparecidos"
     },
     {
-      "area_en": "Chocó",
-      "area_ja": "チョコ県",
+      "area_en": "Risaralda (Pereira)",
+      "area_ja": "リサラルダ県（ペレイラ）",
+      "area_es": "Risaralda (Pereira)",
+      "n": 66,
+      "note_en": "Pereira fire service, 11 Aug; 60 on 10 Aug",
+      "note_ja": "ペレイラ消防（8月11日）。8月10日は60人",
+      "note_es": "Bomberos de Pereira, 11 de agosto; 60 el 10 de agosto"
+    },
+    {
+      "area_en": "Chocó (Quibdó)",
+      "area_ja": "チョコ県（キブド）",
+      "area_es": "Chocó (Quibdó)",
       "n": 13,
-      "note_en": "President's figure; the department government had reported 12 dead and 84 injured",
-      "note_ja": "大統領の発表値。県政府は死者12人・負傷者84人と発表していた",
-      "area_es": "Chocó",
-      "note_es": "Cifra del Presidente; la Gobernación había reportado 12 muertos y 84 heridos"
+      "note_en": "President's figure; 8 in Quibdó, where four children are missing under a school",
+      "note_ja": "大統領の発表値。うちキブド8人、同市では学校の下に子ども4人が不明",
+      "note_es": "Cifra del Presidente; 8 en Quibdó, donde cuatro menores están desaparecidos bajo un colegio"
     },
     {
       "area_en": "Caldas (Manizales)",
       "area_ja": "カルダス県（マニサレス）",
-      "n": 4,
-      "note_en": "Reported as 2, later 4",
-      "note_ja": "当初2人、のち4人と報告",
       "area_es": "Caldas (Manizales)",
-      "note_es": "Reportados 2 y luego 4"
+      "n": 4,
+      "note_en": "About 100 people reported missing",
+      "note_ja": "行方不明は約100人と報告",
+      "note_es": "Se reportan cerca de 100 desaparecidos"
     },
     {
       "area_en": "Antioquia",
       "area_ja": "アンティオキア県",
+      "area_es": "Antioquia",
       "n": 1,
       "note_en": "73-year-old",
       "note_ja": "73歳",
-      "area_es": "Antioquia",
       "note_es": "73 años"
     }
   ],
-  "deaths_by_area_note_en": "Departmental figures come from local authorities and the Presidency at different times and do not sum to the national total; the national toll itself moved from 111 at 13:00 COT to 132 by the evening of 10 August. They will be reconciled as verification proceeds.",
-  "deaths_by_area_note_ja": "県別の数値は地元当局と大統領府が異なる時点で発表したもので、全国値とは一致しない。全国の死者数自体も13:00時点の111人から8月10日夕方には132人に増えている。確認の進展に伴い整合される見込み。",
+  "deaths_by_area_note_en": "These are city and department figures released by local authorities and the Presidency at different times on 11 August. They sum to 169, above the last consolidated national toll of 132 (Asocapitales, evening of 10 Aug), because the national figure has not been re-issued since. Take the departmental rows as the more current number and the national total as the last audited one; the gap will close as verification proceeds.",
+  "deaths_by_area_note_ja": "これらは8月11日に地元当局と大統領府が異なる時点で公表した都市・県別の数値である。合計は169人となり、全国の最新集計値132人（Asocapitales、8月10日夕方）を上回る。全国値がその後更新されていないためである。県別の値をより新しい数値、全国値を最後に検証された数値として読むべきであり、確認の進展に伴い差は解消される見込み。",
   "exposure": [
     {
       "mmi": "VIII+",
@@ -1103,9 +1111,9 @@
     },
     {
       "tier": "official",
-      "en": "Figures are moving as expected. The national toll went from 111 in the Government's 13:00 COT balance to 132 by the evening, and the Chocó department figure from 12 to 13 deaths with injuries revised from 84 to 119 — while the building-damage counts stayed at their first-look values. Rapid increases over the coming days should be read as assessment progressing, not necessarily as the situation worsening.",
-      "ja": "数値は想定どおり動いている。全国の死者数は政府13:00時点の111人から夕方には132人に、チョコ県は12人から13人に増え、同県の負傷者は84人から119人へ修正された。一方で建物被害の数値は第一報のまま据え置かれている。今後数日の急増は、事態の悪化というより調査の進展として読むべきである。",
-      "es": "Las cifras se mueven como cabía esperar. El total nacional pasó de 111 en el balance del Gobierno de las 13:00 COT a 132 al caer la tarde, y el Chocó de 12 a 13 muertos, con los heridos revisados de 84 a 119, mientras los conteos de daños en edificaciones siguen en sus valores de primera mirada. Los aumentos rápidos de los próximos días deben leerse como avance de la evaluación y no necesariamente como agravamiento."
+      "en": "Figures are moving as expected, and the national total is now the slowest number in the report. Between the Government's 13:00 COT balance on 10 August and the morning of 11 August, deaths went from 111 to a consolidated 132 while city reports passed it (Cali 85, Pereira 66, a sum of 169); injured went from 87 to more than 570 and then to 700, with Cali alone reporting 885; damaged homes went from 1,612 to about 5,000. Read rapid increases over the coming days as the assessment reaching places it had not yet reached, not necessarily as the situation worsening - and expect the national consolidated figure to lag the city ones by roughly half a day.",
+      "ja": "数値は想定どおり動いており、いまや全国値が本報告で最も更新の遅い数字になっている。政府の8月10日13:00の集計から11日朝までに、死者は111人から集計値132人へ、一方で都市別報告はそれを追い越した（カリ85人、ペレイラ66人、合計169人）。負傷者は87人から570人超、さらに700人へ増え、カリだけで885人。住宅被害は1,612棟から約5,000棟になった。今後数日の急増は、事態の悪化というより調査が未到達地域に届いた結果として読むべきである。全国の集計値は都市別の値に半日程度遅れると見込まれる。",
+      "es": "Las cifras se mueven como cabía esperar y el total nacional es ahora el dato más lento del informe. Entre el balance del Gobierno de las 13:00 COT del 10 de agosto y la mañana del 11, los muertos pasaron de 111 a un consolidado de 132 mientras los reportes por ciudad lo superaban (Cali 85, Pereira 66, suma de 169); los heridos pasaron de 87 a más de 570 y luego a 700, con 885 solo en Cali; las viviendas averiadas pasaron de 1.612 a cerca de 5.000. Los aumentos rápidos de los próximos días deben leerse como la evaluación llegando a donde aún no había llegado, y no necesariamente como agravamiento; cabe esperar que la cifra nacional consolidada vaya medio día por detrás de las municipales."
     },
     {
       "tier": "media",
@@ -1426,6 +1434,20 @@
       "label_es": "SGC — visor del catálogo sísmico (el catálogo revisado termina en feb 2018)",
       "url": "https://catalogosismico.sgc.gov.co/visor/index.html",
       "tier": "official"
+    },
+    {
+      "label_en": "El Tiempo — live updates, 11 August (Cali toll rises to 85)",
+      "label_ja": "El Tiempo 速報（8月11日、カリの死者85人に）",
+      "label_es": "El Tiempo — en vivo, 11 de agosto (Cali sube a 85 muertos)",
+      "url": "https://www.eltiempo.com/colombia/otras-ciudades/terremoto-en-colombia-de-7-4-en-vivo-el-comandante-del-ejercito-nacional-se-encuentra-en-choco-coordinando-las-labores-de-atencion-de-la-emergencia-3577491",
+      "tier": "media"
+    },
+    {
+      "label_en": "Asocapitales balance — 132 deaths, 570+ injured, by city",
+      "label_ja": "Asocapitales 集計：死者132人・負傷570人超（都市別）",
+      "label_es": "Balance de Asocapitales — 132 muertos, más de 570 heridos, por ciudades",
+      "url": "https://www.elespectador.com/colombia/mas-regiones/temblor-en-colombia-hoy-10-de-agosto-en-vivo-epicentro-y-reporte-de-afectaciones/",
+      "tier": "media"
     }
   ],
   "source_policy_en": "Source hierarchy: official > media > TBC. Government and scientific-agency figures are used as primary; media reports are used only where official figures are not yet published and are labelled as such. Items still being verified are marked TBC. Preliminary figures are never replaced by larger unverified numbers.",
@@ -1444,7 +1466,7 @@
     "gem_treq_cali": "images/gem_treq_cali_manual.jpg"
   },
   "photos": [],
-  "deaths_by_area_note_es": "Las cifras departamentales provienen de autoridades locales y de la Presidencia en momentos distintos y no suman el total nacional; el propio total pasó de 111 a las 13:00 COT a 132 al caer la tarde del 10 de agosto. Se conciliarán a medida que avance la verificación.",
+  "deaths_by_area_note_es": "Son cifras por ciudad y departamento divulgadas por autoridades locales y la Presidencia en distintos momentos del 11 de agosto. Suman 169, por encima del último balance nacional consolidado de 132 (Asocapitales, tarde del 10 de agosto), porque esa cifra nacional no se ha vuelto a emitir. Conviene leer las filas departamentales como el dato más reciente y el total nacional como el último auditado; la brecha se cerrará a medida que avance la verificación.",
   "exposure_note_es": "Estimaciones de exposición del PAGER (versión 5) del USGS. Unos 10,5 millones de personas quedaron expuestas a sacudimiento fuerte o muy fuerte (MMI VI-VII) y unos 34 millones a MMI IV o superior en cuatro países. Son estimaciones de modelo.",
   "source_policy_es": "Jerarquía de fuentes: oficial > prensa > por confirmar. Las cifras del Gobierno y de las entidades científicas se usan como fuente primaria; la información de prensa se emplea únicamente cuando aún no hay cifras oficiales y se identifica como tal. Los elementos en verificación se marcan como «por confirmar». Las cifras preliminares nunca se sustituyen por números mayores sin verificar.",
   "intensity_map": {
@@ -1792,5 +1814,8 @@
     "text_en": "PAGER is the USGS rapid impact estimate, issued within minutes and revised as the event is refined; version 5 was created 2 hours 8 minutes after the earthquake. It is a probability distribution, not a forecast of a single number: the orange alert means significant casualties and damage are likely and that past orange alerts have required a regional or national response. Its most likely fatality band, 1,000-10,000, sits far above the 111 deaths reported nine hours after the event — the gap is normal at this stage and narrows as ground truth replaces modelled losses.",
     "text_ja": "PAGERはUSGSによる迅速影響推計で、発生から数分で発表され、震源要素の精査に伴い改訂される。第5版は発災の2時間8分後に作成された。これは単一の予測値ではなく確率分布であり、オレンジ警報は「相当の人的被害と損害が生じる可能性が高く、過去のオレンジ警報は地域的または国家的な対応を要した」ことを意味する。最も確からしい死者数階級1,000〜10,000人は、発災9時間後の報告値111人を大きく上回るが、この段階では通常のことであり、実測が推計に置き換わるにつれて差は縮まる。",
     "text_es": "PAGER es la estimación rápida de impacto del USGS, emitida en minutos y revisada conforme se precisa el evento; la versión 5 se creó 2 horas y 8 minutos después del sismo. Es una distribución de probabilidad, no el pronóstico de una cifra única: la alerta naranja significa que son probables víctimas y daños significativos y que alertas naranjas previas han requerido una respuesta regional o nacional. Su banda de mortalidad más probable, 1.000-10.000, está muy por encima de los 111 muertos reportados nueve horas después del evento; la brecha es normal en esta etapa y se estrecha a medida que la observación reemplaza a las pérdidas modeladas."
-  }
+  },
+  "toll_caption_en": "Deaths: last consolidated national figure (Asocapitales, evening of 10 Aug). Injured: President, 11 Aug. Homes: about 5,000 damaged or destroyed, President, 11 Aug. City reports on 11 August already put deaths above the national total.",
+  "toll_caption_ja": "死者は全国の最新集計値（Asocapitales、8月10日夕方）。負傷者は大統領（8月11日）。住宅は損壊・全壊 約5,000棟（大統領、8月11日）。8月11日の都市別報告では、死者はすでに全国値を上回っている。",
+  "toll_caption_es": "Muertos: último balance nacional consolidado (Asocapitales, tarde del 10 de agosto). Heridos: Presidente, 11 de agosto. Viviendas: cerca de 5.000 averiadas o destruidas, Presidente, 11 de agosto. Los reportes por ciudad del 11 de agosto ya sitúan los muertos por encima del total nacional."
 }

@@ -61,6 +61,8 @@ const UI_ES = {
   "National seismic hazard, 475-year return period": "Amenaza sísmica nacional, periodo de retorno de 475 años",
   "PGA (g), SGC / GEM national seismic hazard model (2020)": "PGA (g), modelo nacional de amenaza sísmica SGC / GEM (2020)",
   "Response photographs": "Fotografías de la respuesta",
+  "Homes damaged": "Viviendas afectadas",
+  "~5,000": "~5.000",
   "Pre-event Risk Assessment: Santiago de Cali": "Evaluación del riesgo previa al evento: Santiago de Cali",
   "Modelled scenario (GEM-TREQ, 2022)": "Escenario modelado (GEM-TREQ, 2022)",
   "Both agencies report a strike-slip mechanism.": "Ambas entidades reportan un mecanismo de falla de rumbo.",
@@ -85,7 +87,7 @@ const UI_ES = {
   "Seismotectonic Setting: an intraslab earthquake": "Marco sismotectónico: un sismo intraplaca dentro de la losa",
   "Schematic cross-section (ADRC)": "Corte esquemático (ADRC)",
   "Overview of the Earthquake & Response Measures": "Resumen del sismo y medidas de respuesta",
-  "Chronology of the Response (10 August)": "Cronología de la respuesta (10 de agosto)",
+  "Chronology of the Response (10-11 August)": "Cronología de la respuesta (10-11 de agosto)",
   "Times are Colombia time (COT, UTC-5). The earthquake occurred at 07:34 COT = 21:34 JST on 10 August.": "Las horas están en hora de Colombia (COT, UTC-5). El sismo ocurrió a las 07:34 COT = 21:34 JST del 10 de agosto.",
   "Time": "Hora",
   "Action": "Hecho",
@@ -173,6 +175,9 @@ const CELL = {
   "Government": { ja: "政府", es: "Gobierno" },
   "Presidency": { ja: "大統領府", es: "Presidencia" },
   "Presidency / UNGRD": { ja: "大統領府／UNGRD", es: "Presidencia / UNGRD" },
+  "Presidency / local authorities": { ja: "大統領府／地元当局", es: "Presidencia / autoridades locales" },
+  "11 Aug": { ja: "8月11日", es: "11 ago." },
+  "Evening": { ja: "夕方", es: "Noche" },
   "International media": { ja: "国際報道", es: "Prensa internacional" },
   "Charter / Copernicus": { ja: "チャーター／コペルニクス", es: "Carta / Copernicus" },
   "Published": { ja: "公開済み", es: "Publicado" },
@@ -444,12 +449,12 @@ footer(s);
 
 /* ============ 4. Chronology of response ============ */
 {
-  const PER = 7;
+  const PER = 8;
   const pages = chunk(d.timeline, PER);
   pages.forEach((rows, pi) => {
     s = newSlide();
     const suffix = pages.length > 1 ? T(` (${pi + 1}/${pages.length})`, `（${pi + 1}/${pages.length}）`) : "";
-    heading(s, "Chronology of the Response (10 August)", "対応の時系列（8月10日）", suffix);
+    heading(s, "Chronology of the Response (10-11 August)", "対応の時系列（8月10〜11日）", suffix);
     subNote(s, "Times are Colombia time (COT, UTC-5). The earthquake occurred at 07:34 COT = 21:34 JST on 10 August.",
       "時刻はコロンビア時間（COT、UTC-5）。地震発生は8月10日07:34 COT＝同日21:34 JST。");
     const rowsT = [[th(T("Time", "時刻")), th(T("Action", "事項")), th(T("Source", "出典"))]];
@@ -458,7 +463,7 @@ footer(s);
       td(LL(r), i, { fontSize: JA ? 9.5 : 10 }),
       td(C(r.src), i, { fontSize: 8.5, bold: true, color: tierColor(r.tier), align: "center" }),
     ]));
-    s.addTable(rowsT, { x: 0.4, y: 1.34, w: 12.5, colW: [1.3, 9.2, 2.0], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.68, valign: "middle" });
+    s.addTable(rowsT, { x: 0.4, y: 1.34, w: 12.5, colW: [1.3, 9.2, 2.0], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.58, valign: "middle" });
     srcLine(s, [linkBy("USGS - M 7.4"), linkBy("UNGRD"), linkBy("CNN"), linkBy("Colombia One - First")]);
     footer(s);
   });
@@ -603,9 +608,9 @@ s = newSlide();
 heading(s, "Human Damage", "人的被害");
 {
   const big = [
-    [T("Deaths", "死者"), "132", RED],
-    [T("Injured", "負傷者"), "87+", "9A3B12"],
-    [T("Buildings damaged", "建物被害"), T("1,600+", "1,600棟超"), NAVY],
+    [T("Deaths", "死者"), "132+", RED],
+    [T("Injured", "負傷者"), "700", "9A3B12"],
+    [T("Homes damaged", "住宅被害"), T("~5,000", "約5,000棟"), NAVY],
   ];
   big.forEach((b, i) => {
     const x = 0.4 + i * 4.2;
@@ -614,6 +619,7 @@ heading(s, "Human Damage", "人的被害");
     s.addText(b[1], { x: x + 0.15, y: 1.46, w: 3.65, h: 0.8, fontSize: 34, bold: true, color: b[2], fontFace: SERIF, margin: 0, valign: "middle" });
   });
 }
+s.addText(L(d, "toll_caption"), { x: 0.4, y: 2.36, w: 12.5, h: 0.2, fontSize: 7.5, color: MUTED, italic: true, fontFace: FONT, valign: "top", margin: 0 });
 {
   const rows = d.deaths_by_area;
   s.addChart(p.ChartType.bar, [{ name: T("Deaths", "死者"), labels: rows.map(r => L(r, "area")), values: rows.map(r => r.n) }], {
@@ -629,10 +635,10 @@ heading(s, "Human Damage", "人的被害");
     td(String(r.n), i, { fontSize: 11, bold: true, color: RED, align: "center" }),
     td(L(r, "note"), i, { fontSize: 9, color: MUTED }),
   ]));
-  s.addTable(rowsT, { x: 7.2, y: 2.6, w: 5.7, colW: [2.4, 0.8, 2.5], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.5, valign: "middle" });
+  s.addTable(rowsT, { x: 7.2, y: 2.6, w: 5.7, colW: [2.15, 1.05, 2.5], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.5, valign: "middle" });
 }
 noteBox(s, 0.4, 5.94, 12.5, 0.78, T("Reading the numbers", "数値の読み方"), L(d, "deaths_by_area_note"));
-srcLine(s, [linkBy("France 24"), linkBy("CNN"), linkBy("CBS News"), linkBy("NBC News")]);
+srcLine(s, [linkBy("El Tiempo"), linkBy("Asocapitales"), linkBy("CNN"), linkBy("France 24")]);
 footer(s);
 
 /* ============ 9. Damage to buildings, lifelines and services ============ */
@@ -652,7 +658,7 @@ footer(s);
       td(L(r, "source"), i, { fontSize: 8.5, color: MUTED }),
       td(tierLabel(r.tier), i, { fontSize: 8.5, bold: true, color: tierColor(r.tier), align: "center" }),
     ]));
-    s.addTable(rowsT, { x: 0.4, y: 1.34, w: 12.5, colW: [2.1, 6.6, 2.7, 1.1], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.59, valign: "middle" });
+    s.addTable(rowsT, { x: 0.4, y: 1.34, w: 12.5, colW: [2.1, 6.6, 2.7, 1.1], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.55, valign: "middle" });
     srcLine(s, [linkBy("UNGRD"), linkBy("Colombia One - First"), linkBy("CNN")]);
     footer(s);
   });
