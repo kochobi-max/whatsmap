@@ -588,8 +588,9 @@ heading(s, "Seismicity: Aftershocks", "地震活動：余震");
   ]));
   s.addTable(rows, { x: 0.4, y: 1.12, w: 12.5, colW: [2.6, 1.5, 7.2, 1.2], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.56, valign: "middle" });
 }
-s.addText(L(d.aftershocks, "note"), { x: 0.4, y: 3.3, w: 12.5, h: 1.5, fontSize: JA ? 10.5 : 11, color: INK, fontFace: FONT, valign: "top", margin: 4 });
-noteBox(s, 0.4, 5.0, 12.5, 1.6,
+s.addText(L(d.aftershocks, "note"), { x: 0.4, y: 3.98, w: 12.5, h: 0.62, fontSize: JA ? 9 : 9.5, color: INK, fontFace: FONT, valign: "top", margin: 4 });
+noteBox(s, 0.4, 4.66, 12.5, 1.1, L(d.aftershocks, "spread_title"), L(d.aftershocks, "spread"));
+noteBox(s, 0.4, 5.86, 12.5, 0.84,
   T("Operational implication", "運用上の含意"),
   T("Buildings that survived the mainshock in a damaged state have lost capacity. Even moderate aftershocks can bring them down, so rapid habitability assessment before re-occupancy - and keeping people out of visibly damaged structures - matters as much as the aftershock statistics themselves.",
     "本震で損傷したまま倒壊を免れた建物は耐力を失っている。中規模の余震でも倒壊しうるため、余震の統計そのものと同じくらい、再入居前の応急危険度判定と、損傷が明らかな建物への立入り制限が重要である。"));
