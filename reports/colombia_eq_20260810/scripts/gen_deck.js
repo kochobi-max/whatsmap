@@ -170,6 +170,7 @@ const CELL = {
   "USGS / SGC": { ja: "USGS／SGC", es: "USGS / SGC" },
   "SGC": { ja: "SGC", es: "SGC" },
   "UNGRD": { ja: "UNGRD", es: "UNGRD" },
+  "UNGRD / SGC": { ja: "UNGRD／SGC", es: "UNGRD / SGC" },
   "Mayor of Cali": { ja: "カリ市長", es: "Alcaldía de Cali" },
   "Mayor of Manizales": { ja: "マニサレス市長", es: "Alcaldía de Manizales" },
   "Aerocivil / media": { ja: "民間航空当局／報道", es: "Aerocivil / prensa" },
@@ -593,16 +594,13 @@ heading(s, "Seismicity: Aftershocks", "地震活動：余震");
     td(LL(r) || L(r, "note"), i, { fontSize: 10 }),
     td(tierLabel(r.tier), i, { fontSize: 9, bold: true, color: tierColor(r.tier), align: "center" }),
   ]));
-  s.addTable(rows, { x: 0.4, y: 1.12, w: 12.5, colW: [2.6, 1.5, 7.2, 1.2], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.50, valign: "middle" });
+  s.addTable(rows, { x: 0.4, y: 1.12, w: 12.5, colW: [2.6, 1.5, 7.2, 1.2], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.46, valign: "middle" });
 }
-s.addText(L(d.aftershocks, "note"), { x: 0.4, y: 3.64, w: 12.5, h: 0.9, fontSize: JA ? 9 : 9.5, color: INK, fontFace: FONT, valign: "top", margin: 4 });
-noteBox(s, 0.4, 4.56, 12.5, 1.06, L(d.aftershocks, "spread_title"), L(d.aftershocks, "spread"));
-noteBox(s, 0.4, 5.70, 12.5, 0.80,
-  T("Operational implication", "運用上の含意"),
-  T("Buildings that survived the mainshock in a damaged state have lost capacity. Even moderate aftershocks can bring them down, so rapid habitability assessment before re-occupancy - and keeping people out of visibly damaged structures - matters as much as the aftershock statistics themselves.",
-    "本震で損傷したまま倒壊を免れた建物は耐力を失っている。中規模の余震でも倒壊しうるため、余震の統計そのものと同じくらい、再入居前の応急危険度判定と、損傷が明らかな建物への立入り制限が重要である。"));
-s.addText(L(d.aftershocks, "query"), { x: 0.4, y: 6.54, w: 12.5, h: 0.28, fontSize: 7, color: MUTED, italic: true, fontFace: FONT, valign: "top", margin: 0 });
-srcLine(s, [linkBy("Servicio Geológico"), linkBy("USGS - M 7.4"), linkBy("EMSC-CSEM")]);
+s.addText(L(d.aftershocks, "note"), { x: 0.4, y: 3.62, w: 7.3, h: 1.78, fontSize: JA ? 9 : 9.5, color: INK, fontFace: FONT, valign: "top", margin: 0 });
+imageSlot(s, 7.62, 3.50, 5.3, 1.86, "aftershock_counts", L(d.aftershocks, "fig_caption"), null);
+noteBox(s, 0.4, 5.40, 12.5, 0.86, L(d.aftershocks, "spread_title"), L(d.aftershocks, "spread"));
+s.addText(L(d.aftershocks, "query"), { x: 0.4, y: 6.26, w: 12.5, h: 0.38, fontSize: 7, color: MUTED, italic: true, fontFace: FONT, valign: "top", margin: 0 });
+srcLine(s, [linkBy("Servicio Geológico"), linkBy("Semana"), linkBy("El Tiempo — 99"), linkBy("USGS - M 7.4")]);
 footer(s);
 
 /* ============ 8. Human damage ============ */
@@ -849,7 +847,7 @@ footer(s);
   // The first page carries the source-policy block, so it holds one row fewer.
   const pages = [];
   for (let i = 0; i < d.links.length; ) {
-    const n = pages.length === 0 ? 15 : 16;
+    const n = pages.length === 0 ? 15 : 17;
     pages.push(d.links.slice(i, i + n));
     i += n;
   }

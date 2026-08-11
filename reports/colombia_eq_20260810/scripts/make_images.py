@@ -13,7 +13,8 @@ picked up automatically by the Japanese deck.
   python3 make_images.py               # English labels  -> ../images/<key>.png
   LANG_OUT=ja python3 make_images.py   # Japanese labels -> ../images/<key>_ja.png
 
-Keys: locator_world, locator_region, locator_epicentre, slab_section, mmi_distance
+Keys: locator_world, locator_region, locator_epicentre, slab_section, mmi_distance,
+      aftershock_counts
 """
 import math
 import os
@@ -295,12 +296,93 @@ def fig_mmi():
     save(fig, "mmi_distance")
 
 
+# SGC aftershock counts, published as running totals in its situation updates.
+# hours after the mainshock (10 Aug 07:34 COT) -> cumulative count
+AFTERSHOCK_COUNTS = [
+    (0.0, 0, t("10 Aug 07:34", "8月10日 07:34", "10 ago. 07:34")),
+    (10.9, 47, t("10 Aug 18:30", "8月10日 18:30", "10 ago. 18:30")),
+    (27.0, 96, t("11 Aug 10:30", "8月11日 10:30", "11 ago. 10:30")),
+    (28.0, 99, t("11 Aug 11:30", "8月11日 11:30", "11 ago. 11:30")),
+    (31.4, 103, t("11 Aug 15:00", "8月11日 15:00", "11 ago. 15:00")),
+]
+# magnitude distribution of the 103 aftershocks counted to 11 Aug 15:00 COT
+AFTERSHOCK_BANDS = [
+    (t("M \u2264 3.0", "M3.0以下", "M \u2264 3,0"), 97),
+    (t("M 3.0-4.0", "M3.0〜4.0", "M 3,0-4,0"), 5),
+    (t("M > 4.0", "M4.0超", "M > 4,0"), 1),
+]
+
+
+def fig_aftershocks():
+    """The SGC publishes running totals, not an event list; the points are those
+    published snapshots and the line only joins them."""
+    fig, (ax, ax2) = plt.subplots(1, 2, figsize=(7.4, 2.5),
+                                  gridspec_kw={"width_ratios": [1.75, 1]})
+
+    hrs = [c[0] for c in AFTERSHOCK_COUNTS]
+    cum = [c[1] for c in AFTERSHOCK_COUNTS]
+    ax.plot(hrs, cum, "-", color=NAVY, linewidth=1.3, alpha=0.55)
+    ax.plot(hrs, cum, "o", color=NAVY, markersize=4.2, markeredgecolor="white",
+            markeredgewidth=0.6, zorder=5)
+    for i, (h, c, lab) in enumerate(AFTERSHOCK_COUNTS):
+        if i == 0 or c == 99:          # 96 and 99 sit an hour apart; label one
+            continue
+        ax.annotate("%d\n%s" % (c, lab), (h, c), textcoords="offset points",
+                    xytext={47: (6, -16), 96: (-6, -20), 103: (-2, 10)}[c],
+                    ha="left" if c == 47 else "right",
+                    fontsize=6.3, color=NAVY, linespacing=1.3)
+    ax.plot([0.73], [1], marker="*", color=RED, markersize=10,
+            markeredgecolor="white", markeredgewidth=0.5, zorder=6)
+    ax.annotate(t("largest aftershock M4.8 (SGC) / mb 5.0 (USGS),\n0.7 h after the mainshock",
+                  "最大余震 M4.8（SGC）／mb5.0（USGS）\n本震の0.7時間後",
+                  "mayor réplica M4,8 (SGC) / mb 5,0 (USGS),\n0,7 h tras el sismo principal"),
+                (0.73, 1), xytext=(1.0, 88), fontsize=6.2, color=RED, linespacing=1.3,
+                arrowprops=dict(arrowstyle="->", color=RED, linewidth=0.8,
+                                connectionstyle="arc3,rad=0.18"))
+    ax.set_xlim(-1.5, 36)
+    ax.set_ylim(0, 132)
+    ax.set_xlabel(t("Hours after the mainshock", "本震からの経過時間（時間）",
+                    "Horas tras el sismo principal"), fontsize=7.5, color=MUTED)
+    ax.set_ylabel(t("Cumulative aftershocks", "余震の累積回数",
+                    "Réplicas acumuladas"), fontsize=7.5, color=MUTED)
+    ax.set_title(t("SGC running totals (COT)", "SGC公表の累積回数（コロンビア時間）",
+                   "Totales acumulados del SGC (COT)"),
+                 fontsize=8.5, color=NAVY, pad=6)
+
+    names = [b[0] for b in AFTERSHOCK_BANDS]
+    vals = [b[1] for b in AFTERSHOCK_BANDS]
+    bars = ax2.barh(range(len(vals))[::-1], vals, color=[NAVY2, "#B07B2A", RED], height=0.55)
+    for r, v in zip(bars, vals):
+        ax2.text(v + 3, r.get_y() + r.get_height() / 2, str(v),
+                 va="center", fontsize=7.5, color="#333333", fontweight="bold")
+    ax2.set_yticks(range(len(names))[::-1])
+    ax2.set_yticklabels(names, fontsize=7.2, color="#333333")
+    ax2.set_xlim(0, 122)
+    ax2.set_title(t("Of the 103, by magnitude", "103回の規模別内訳",
+                    "De las 103, por magnitud"), fontsize=8.5, color=NAVY, pad=6)
+
+    for a in (ax, ax2):
+        for side in ("top", "right"):
+            a.spines[side].set_visible(False)
+        a.spines["bottom"].set_edgecolor("#CCCCCC")
+        a.spines["left"].set_edgecolor("#CCCCCC")
+        a.grid(axis="x", color="#EDEDED", linewidth=0.7)
+        a.set_axisbelow(True)
+    ax.grid(axis="y", color="#EDEDED", linewidth=0.7)
+    ax.tick_params(labelsize=7, colors=MUTED, length=0)
+    ax2.tick_params(axis="x", labelsize=7, colors=MUTED, length=0)
+    ax2.tick_params(axis="y", labelsize=7.2, colors="#333333", length=0)
+    fig.subplots_adjust(wspace=0.34)
+    save(fig, "aftershock_counts")
+
+
 if __name__ == "__main__":
     fig_world()
     fig_region()
     fig_epicentre()
     fig_slab()
     fig_mmi()
+    fig_aftershocks()
     if LANG == "en":
         print("\ndistances from the epicentre (km, epicentral / hypocentral):")
         for c in CITIES:

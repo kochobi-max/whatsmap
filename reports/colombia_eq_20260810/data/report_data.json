@@ -13,7 +13,7 @@
     "as_of_ja": "数値は2026年8月11日17:00（コロンビア時間、日本時間8月12日07:00）現在、発災から約33時間後。UNGRDの状況報告は死者182人・負傷2,542人・行方不明189人、大統領の集計は死者181人、県・市の発表を積み上げると240人となる。本報告は3つとも併記する。すべて速報値であり、なお増加中である。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-08-12 06:55 JST",
+    "stamp": "2026-08-12 08:19 JST",
     "update_date": "12/08/2026",
     "title_es": "Terremoto del Chocó de 2026 (Colombia)",
     "subtitle_es": "M7.4, San José del Palmar, departamento del Chocó — 10 de agosto de 2026",
@@ -312,10 +312,10 @@
     {
       "time": "11 Aug PM",
       "tier": "official",
-      "src": "UNGRD",
-      "en": "UNGRD's situation report gives 182 deaths, 2,542 injured and 189 missing, with 13,067 homes damaged and 2,501 destroyed, 93 health facilities, 884 educational institutions, 427 community facilities and 77 roads affected. The President puts the toll at 181, of which 97.6% in capital cities. Ecuador, El Salvador and Russia are thanked for assistance.",
-      "ja": "UNGRDの状況報告は死者182人・負傷2,542人・行方不明189人、住宅は損壊13,067棟・全壊2,501棟、医療93か所・教育884か所・コミュニティ施設427か所・道路77路線が被害と発表。大統領は死者181人、うち97.6%が県都とした。エクアドル、エルサルバドル、ロシアの支援に謝意。",
-      "es": "El reporte de situación de la UNGRD registra 182 muertos, 2.542 heridos y 189 desaparecidos, con 13.067 viviendas averiadas y 2.501 destruidas, 93 centros de salud, 884 instituciones educativas, 427 equipamientos comunitarios y 77 vías afectadas. El Presidente cifra el balance en 181 muertos, 97,6 % de ellos en ciudades capitales. Se agradece la ayuda de Ecuador, El Salvador y Rusia."
+      "src": "UNGRD / SGC",
+      "en": "UNGRD's situation report gives 182 deaths, 2,542 injured and 189 missing, with 13,067 homes damaged and 2,501 destroyed, 93 health facilities, 884 educational institutions, 427 community facilities and 77 roads affected. The President puts the toll at 181, of which 97.6% in capital cities. Ecuador, El Salvador and Russia are thanked for assistance. The SGC's running total reaches 103 aftershocks at 15:00 COT - 97 at M3.0 or below, 5 between M3.0 and M4.0, one above M4.0 - and a felt aftershock during the day prompts building evacuations in several affected cities.",
+      "ja": "UNGRDの状況報告は死者182人・負傷2,542人・行方不明189人、住宅は損壊13,067棟・全壊2,501棟、医療93か所・教育884か所・コミュニティ施設427か所・道路77路線が被害と発表。大統領は死者181人、うち97.6%が県都とした。エクアドル、エルサルバドル、ロシアの支援に謝意。　SGCの余震累積計数は15:00（現地）時点で103回に達する（M3.0以下97回、M3.0〜4.0が5回、M4.0超1回）。日中の有感余震により被災各都市で建物からの避難が行われた。",
+      "es": "El reporte de situación de la UNGRD registra 182 muertos, 2.542 heridos y 189 desaparecidos, con 13.067 viviendas averiadas y 2.501 destruidas, 93 centros de salud, 884 instituciones educativas, 427 equipamientos comunitarios y 77 vías afectadas. El Presidente cifra el balance en 181 muertos, 97,6 % de ellos en ciudades capitales. Se agradece la ayuda de Ecuador, El Salvador y Rusia. El total acumulado de réplicas del SGC llega a 103 a las 15:00 COT -97 de M3,0 o menos, 5 entre M3,0 y M4,0, una por encima de M4,0- y una réplica sentida durante el día obliga a evacuar edificios en varias ciudades afectadas."
     }
   ],
   "areas": [
@@ -709,52 +709,55 @@
   "exposure_note_en": "USGS PAGER (version 5) exposure estimates. About 10.5 million people were exposed to Strong or Very Strong shaking (MMI VI-VII) and about 34 million to MMI IV or above across four countries. These are model estimates.",
   "exposure_note_ja": "USGS PAGER（第5版）による曝露推計。約1,050万人がMMI VI〜VII（強い〜非常に強い）の揺れに、4か国で約3,400万人がMMI IV以上の揺れにさらされた。いずれもモデル推計値。",
   "aftershocks": {
-    "note_en": "Three independent catalogues - the USGS FDSN service, the EMSC SeismicPortal and the SGC's public query tools - return the same two events for this region: the mainshock and a single mb 5.0 aftershock 44 minutes later. The SGC bulletin adds M4.8 and M2.8 and media reported more than 20 events during the day, but those smaller shocks are not publicly retrievable: they sit below the global catalogues' completeness here, and the SGC's reviewed catalogue ends on 28 February 2018. A sparse sequence of larger aftershocks is what an intermediate-depth intraslab rupture is expected to produce; but an M5 while search and rescue is under way is enough to bring down structures the mainshock already weakened.",
-    "note_ja": "USGSのFDSNサービス、EMSCのSeismicPortal、SGCの公開照会ツールという三つの独立したカタログのいずれも、当該地域について同じ2件——本震と、その44分後のmb5.0の余震——しか返さない。SGCの速報はM4.8とM2.8を加え、報道は日中に20回以上と伝えているが、これら小規模の地震は公開データからは取得できない。世界カタログの検知下限を下回るうえ、SGCの精査済みカタログは2018年2月28日で終わっているためである。大きな余震が少ない経過は、やや深発のスラブ内地震として想定される挙動である。ただし捜索救助の最中のM5級は、本震で既に弱った構造物を倒壊させるには十分である。",
+    "note_en": "The SGC counted 103 aftershocks in the 31 hours after the mainshock, 94% of them at M3.0 or below and only one above M4.0 - the M4.8 that followed 44 minutes later. That is the modest, quickly-decaying sequence an intermediate-depth intraslab rupture is expected to produce, and it is why no aftershock has approached the mainshock in size. It is not a reason to relax: an M4.8 at 88 km depth was still felt widely enough to send people out of buildings on 11 August, and buildings the mainshock left standing but damaged have lost capacity.",
+    "note_ja": "SGCは本震後31時間で103回の余震を計数した。うち94%はM3.0以下で、M4.0を超えたのは44分後のM4.8の1回のみである。これは、やや深発のスラブ内地震に想定される、規模が小さく減衰の速い余震活動であり、本震に迫る余震が発生していない理由でもある。ただし油断の材料ではない。深さ88kmのM4.8でも8月11日には広く有感となり建物からの避難を招いており、本震で損傷したまま倒壊を免れた建物は耐力を失っている。",
     "rows": [
       {
-        "when": "10 Aug 13:18:10 UTC (08:18 COT)",
-        "mag": "mb 5.0",
+        "when": "10 Aug 08:18 COT (13:18 UTC)",
+        "mag": "M4.8 / mb 5.0",
         "tier": "official",
-        "note_en": "USGS us6000tjm4, reviewed: 16 km W of San José del Palmar, depth 98.5 km — 44 minutes after the mainshock and at the same intermediate depth. Other agencies report 5.0-5.7 for this event.",
-        "note_ja": "USGS us6000tjm4（精査済み）：サンホセ・デル・パルマルの西16km、深さ98.5km。本震の44分後で、深さも本震とほぼ同じ。他機関は同一地震について5.0〜5.7を報告。",
-        "note_es": "USGS us6000tjm4, revisado: 16 km al O de San José del Palmar, profundidad 98,5 km — 44 minutos después del sismo principal y a la misma profundidad intermedia. Otras entidades reportan 5.0-5.7 para este evento."
+        "note_en": "The largest aftershock, 44 minutes after the mainshock, at San José del Palmar. SGC: M4.8, depth 88 km. USGS us6000tjm4 (reviewed): mb 5.0, depth 98.5 km, 16 km W of the town. Widely felt.",
+        "note_ja": "最大余震。本震の44分後、サンホセ・デル・パルマル。SGCはM4.8・深さ88km、USGS us6000tjm4（精査済み）はmb5.0・深さ98.5km・同町の西16km。広く有感。",
+        "note_es": "La mayor réplica, 44 minutos después del sismo principal, en San José del Palmar. SGC: M4,8, profundidad 88 km. USGS us6000tjm4 (revisado): mb 5,0, profundidad 98,5 km, 16 km al O del casco urbano. Ampliamente sentida."
       },
       {
-        "when": "10 Aug 15:01 UTC (10:01 COT)",
-        "mag": "M4.7",
+        "when": "11 Aug 00:12 COT",
+        "mag": "M3.6",
         "tier": "official",
-        "note_en": "Reported by the regional agencies IGC (M4.7) and INET (M4.3); it does not appear in the USGS catalogue at the M2.5 threshold",
-        "note_ja": "地域機関のIGC（M4.7）とINET（M4.3）が報告。USGSのM2.5以上のカタログには含まれていない",
-        "note_es": "Reportada por las entidades regionales IGC (M4.7) e INET (M4.3); no aparece en el catálogo del USGS con umbral M2.5"
+        "note_en": "San José del Palmar, depth 84 km",
+        "note_ja": "サンホセ・デル・パルマル、深さ84km",
+        "note_es": "San José del Palmar, profundidad 84 km"
       },
       {
-        "when": "10 Aug (SGC bulletin)",
-        "mag": "M4.8 / M2.8",
+        "when": "11 Aug 10:43 COT",
+        "mag": "M3.8",
         "tier": "official",
-        "note_en": "The two aftershocks listed on the SGC event bulletin; the M4.8 was widely felt",
-        "note_ja": "SGCの速報に掲載された2回の余震。M4.8は広く有感",
-        "note_es": "Las dos réplicas listadas en el boletín del evento del SGC; la de M4.8 fue ampliamente sentida"
+        "note_en": "San José del Palmar, depth 99 km. A strong aftershock during 11 August prompted buildings to be evacuated in several of the affected cities.",
+        "note_ja": "サンホセ・デル・パルマル、深さ99km。8月11日には有感余震により被災各都市で建物からの避難が行われた。",
+        "note_es": "San José del Palmar, profundidad 99 km. Una réplica fuerte durante el 11 de agosto obligó a evacuar edificios en varias de las ciudades afectadas."
       },
       {
-        "when": "10 Aug (to 22:00 COT)",
-        "mag": "20+ reported",
-        "tier": "media",
-        "note_en": "Media reported more than 20 aftershocks during the day; no consolidated official count had been published",
-        "note_ja": "報道は日中に20回以上の余震があったと伝えている。公式の集計値は未公表",
-        "note_es": "La prensa reportó más de 20 réplicas durante el día; no se había publicado un conteo oficial consolidado"
+        "when": "to 11 Aug 15:00 COT",
+        "mag": "103 in total",
+        "tier": "official",
+        "note_en": "SGC running total 31.4 hours after the mainshock: 97 at M3.0 or below, 5 between M3.0 and M4.0, 1 above M4.0",
+        "note_ja": "SGCの累積値（本震の31.4時間後）。M3.0以下97回、M3.0〜4.0が5回、M4.0超が1回",
+        "note_es": "Total acumulado del SGC 31,4 horas después del sismo principal: 97 de M3,0 o menos, 5 entre M3,0 y M4,0, 1 por encima de M4,0"
       }
     ],
-    "note_es": "Tres catálogos independientes -el servicio FDSN del USGS, el SeismicPortal del EMSC y las consultas públicas del SGC- devuelven los mismos dos eventos para esta región: el sismo principal y una única réplica de mb 5.0 44 minutos después. El boletín del SGC añade M4.8 y M2.8 y la prensa reportó más de 20 eventos durante el día, pero esos sismos menores no se pueden recuperar públicamente: quedan por debajo de la completitud de los catálogos globales aquí, y el catálogo revisado del SGC termina el 28 de febrero de 2018. Una secuencia escasa de réplicas grandes es lo que cabe esperar de una ruptura intraplaca de profundidad intermedia; pero un M5 mientras la búsqueda y el rescate están en curso basta para derribar estructuras que el sismo principal ya debilitó.",
+    "note_es": "El SGC contabilizó 103 réplicas en las 31 horas posteriores al sismo principal, el 94 % de ellas de M3,0 o menos y solo una por encima de M4,0: la M4,8 que ocurrió 44 minutos después. Esa es la secuencia modesta y de decaimiento rápido que cabe esperar de una ruptura intraplaca de profundidad intermedia, y explica por qué ninguna réplica se ha acercado al tamaño del sismo principal. No es motivo para bajar la guardia: una M4,8 a 88 km de profundidad se sintió lo bastante como para sacar a la gente de los edificios el 11 de agosto, y las edificaciones que el sismo principal dejó en pie pero averiadas han perdido capacidad.",
     "spread_title_en": "How much the agencies differ",
     "spread_title_ja": "機関による解のばらつき",
     "spread_title_es": "Cuánto difieren las entidades",
     "spread_en": "More than 30 agencies published a solution for the mainshock within minutes. Their magnitudes span Mw 7.0-7.7 and their depths 74-121 km; several automatic solutions defaulted to 10 km before revision. This report uses the USGS/NEIC solution (Mw 7.4, 110 km), which matches PAGER v5, and shows the SGC solution beside it. The spread is normal for a deep event recorded at teleseismic distances, and it is the reason early media figures for depth and magnitude disagreed.",
     "spread_ja": "本震については30を超える機関が数分以内に解を公表した。規模はMw7.0〜7.7、深さは74〜121kmに分布し、自動解のいくつかは修正前に既定値の10kmを示していた。本報告はPAGER第5版と一致するUSGS/NEIC解（Mw7.4、深さ110km）を用い、SGC解を併記している。遠地観測に基づく深い地震ではこの程度のばらつきは通常であり、初期の報道で深さや規模が食い違った理由でもある。",
     "spread_es": "Más de 30 entidades publicaron una solución para el sismo principal en cuestión de minutos. Sus magnitudes van de Mw 7.0 a 7.7 y sus profundidades de 74 a 121 km; varias soluciones automáticas usaron el valor por defecto de 10 km antes de ser revisadas. Este informe utiliza la solución del USGS/NEIC (Mw 7.4, 110 km), que coincide con el PAGER v5, y muestra al lado la del SGC. La dispersión es normal en un sismo profundo registrado a distancias telesísmicas, y explica por qué las primeras cifras de prensa sobre profundidad y magnitud no coincidían.",
-    "query_en": "Data availability, checked 11 Aug 2026: USGS FDSN event service (region 3-7 N / 78-74.5 W, from the origin time; query.csv in this repository) and EMSC SeismicPortal FDSN each return two events at M2.5+ and at M2+; the SGC's public catalogue viewer and expert query form serve only the reviewed historical catalogue (1 Jun 1993 - 28 Feb 2018) and return nothing for 2026. No time-series plot is drawn because no time series is publicly available - the sparseness is the finding.",
-    "query_ja": "データの入手状況（2026年8月11日確認）：USGSのFDSNイベントサービス（範囲 北緯3〜7度・西経78〜74.5度、発震時刻以降。本リポジトリのquery.csv）とEMSCのSeismicPortal FDSNは、M2.5以上でもM2以上でも同じ2件しか返さない。SGCのカタログ閲覧画面と専門家向け照会フォームは精査済みの歴史カタログ（1993年6月1日〜2018年2月28日）のみを提供しており、2026年については何も返さない。公開された時系列が存在しないため時系列図は作成していない。この「疎さ」自体が知見である。",
-    "query_es": "Disponibilidad de datos, verificada el 11 de agosto de 2026: el servicio de eventos FDSN del USGS (región 3-7 N / 78-74,5 O, desde la hora de origen; query.csv en este repositorio) y el FDSN del SeismicPortal del EMSC devuelven dos eventos tanto con umbral M2.5+ como M2+; el visor del catálogo del SGC y su formulario de consulta experta solo ofrecen el catálogo histórico revisado (1 jun 1993 - 28 feb 2018) y no devuelven nada para 2026. No se traza una serie temporal porque no existe públicamente: la escasez es, en sí misma, el hallazgo."
+    "query_en": "Counts and magnitudes: SGC situation updates as relayed by Colombian media, checked 12 Aug 2026; origin times, depths and the mb 5.0 solution: USGS FDSN (images/query.csv). The SGC publishes running totals, not an event list, and its reviewed public catalogue ends on 28 Feb 2018, so the 103 events cannot be downloaded individually. An M4.7 at 15:01 UTC on 10 Aug, carried by two regional agencies, is in neither the USGS catalogue nor the SGC count and is treated here as an unconfirmed automatic solution.",
+    "query_ja": "回数・規模：SGCの状況更新（コロンビア報道経由、2026年8月12日確認）。発震時刻・深さおよびmb5.0の解：USGS FDSN（images/query.csv）。SGCは個別の地震リストではなく累積回数を公表しており、公開の精査済みカタログは2018年2月28日で終わるため、103回を個別に取得することはできない。多機関速報にある8月10日15:01 UTCのM4.7（地域2機関）は、USGSのカタログにもSGCの計数にも整合せず、未確認の自動解として扱う。",
+    "query_es": "Conteos y magnitudes: actualizaciones del SGC según la prensa colombiana, verificadas el 12 de agosto de 2026; horas de origen, profundidades y la solución mb 5,0: FDSN del USGS (images/query.csv). El SGC publica totales acumulados y no un listado de eventos, y su catálogo público revisado termina el 28 de febrero de 2018, por lo que las 103 réplicas no se pueden descargar una a una. Una M4,7 a las 15:01 UTC del 10 de agosto, difundida por dos entidades regionales, no está en el catálogo del USGS ni en el conteo del SGC y aquí se trata como una solución automática no confirmada.",
+    "fig_caption_en": "SGC aftershock counts and magnitude distribution (ADRC)",
+    "fig_caption_ja": "SGC公表の余震回数と規模別内訳（ADRC作成）",
+    "fig_caption_es": "Réplicas del SGC y distribución por magnitud (ADRC)"
   },
   "support_domestic": [
     {
@@ -1137,9 +1140,9 @@
     },
     {
       "tier": "official",
-      "en": "Aftershock risk to damaged buildings. The intraslab aftershock sequence is expected to be modest, but damaged structures have lost capacity; rapid structural inspection (habitability assessment) before re-occupancy is the immediate priority alongside search and rescue.",
-      "ja": "損傷建物に対する余震リスク。スラブ内地震の余震活動は限定的とみられるが、損傷した建物は耐力を失っている。捜索救助と並行し、再入居前の応急危険度判定が当面の優先課題である。",
-      "es": "Riesgo de réplicas para las edificaciones averiadas. Se espera que la secuencia de réplicas intraplaca sea moderada, pero las estructuras averiadas han perdido capacidad; la inspección estructural rápida (evaluación de habitabilidad) antes de volver a ocuparlas es la prioridad inmediata, junto con la búsqueda y el rescate."
+      "en": "Aftershock risk to damaged buildings. The sequence is as modest as an intraslab rupture predicts - 103 events in 31 hours, 94% at M3.0 or below, one above M4.0 - but the M4.8 that followed 44 minutes later was felt widely, and a felt aftershock on 11 August emptied buildings again in several cities. Buildings the mainshock left standing but damaged have lost capacity, so rapid habitability assessment before re-occupancy matters more than the aftershock statistics themselves.",
+      "ja": "損傷建物に対する余震リスク。余震活動はスラブ内地震として想定される範囲で低調である（31時間で103回、94%がM3.0以下、M4.0超は1回）。しかし44分後のM4.8は広く有感となり、8月11日の有感余震でも複数の都市で建物からの避難が生じた。本震で損傷したまま倒壊を免れた建物は耐力を失っているため、余震の統計そのものより、再入居前の応急危険度判定が重要である。",
+      "es": "Riesgo de las réplicas para las edificaciones averiadas. La secuencia es tan modesta como predice una ruptura intraplaca -103 eventos en 31 horas, 94 % de M3,0 o menos, uno por encima de M4,0-, pero la M4,8 ocurrida 44 minutos después se sintió ampliamente y una réplica sentida el 11 de agosto volvió a vaciar edificios en varias ciudades. Las edificaciones que el sismo principal dejó en pie pero averiadas han perdido capacidad, de modo que la evaluación rápida de habitabilidad antes de volver a ocuparlas importa más que las estadísticas de réplicas."
     },
     {
       "tier": "tbc",
@@ -1469,6 +1472,20 @@
       "label_ja": "RPP 大統領の181人は地方集計より59人少ない",
       "label_es": "RPP — los 181 del Presidente son 59 menos que los datos regionales",
       "url": "https://rpp.pe/mundo/colombia/abelardo-de-la-espriella-cifra-en-181-los-muertos-por-el-terremoto-59-menos-que-datos-regionales-noticia-1701022",
+      "tier": "media"
+    },
+    {
+      "label_en": "El Tiempo — 99 aftershocks and their magnitudes (SGC)",
+      "label_ja": "El Tiempo 余震99回とその規模（SGC）",
+      "label_es": "El Tiempo — 99 réplicas y sus magnitudes (SGC)",
+      "url": "https://www.eltiempo.com/colombia/otras-ciudades/cuantas-replicas-se-han-registrado-tras-el-terremoto-de-7-4-en-colombia-estas-son-todas-las-magnitudes-3577711",
+      "tier": "media"
+    },
+    {
+      "label_en": "Semana — SGC total: 103 aftershocks to 15:00 on 11 Aug",
+      "label_ja": "Semana SGC集計：8月11日15:00時点で余震103回",
+      "label_es": "Semana — total del SGC: 103 réplicas hasta las 15:00 del 11 de agosto",
+      "url": "https://www.semana.com/tecnologia/articulo/servicio-geologico-revela-el-numero-total-de-replicas-que-ha-habido-en-colombia-tras-fuerte-terremoto-que-estremecio-al-pais/202641/",
       "tier": "media"
     }
   ],
