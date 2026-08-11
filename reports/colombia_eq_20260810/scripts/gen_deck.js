@@ -62,6 +62,10 @@ const UI_ES = {
   "PGA (g), SGC / GEM national seismic hazard model (2020)": "PGA (g), modelo nacional de amenaza sísmica SGC / GEM (2020)",
   "Response photographs": "Fotografías de la respuesta",
   "Homes damaged": "Viviendas afectadas",
+  "Cali: municipal damage report": "Cali: reporte municipal de daños",
+  "Item": "Ítem",
+  "Reported": "Reportado",
+  "Officials of the Alcaldía de Santiago de Cali. City figures; they are not a subset of any national cut-off.": "Funcionarios de la Alcaldía de Santiago de Cali. Son cifras de la ciudad; no son el desglose de ningún corte nacional.",
   "15,568": "15.568",
   "2,542": "2.542",
   "Pre-event Risk Assessment: Santiago de Cali": "Evaluación del riesgo previa al evento: Santiago de Cali",
@@ -170,7 +174,7 @@ const CELL = {
   "USGS / SGC": { ja: "USGS／SGC", es: "USGS / SGC" },
   "SGC": { ja: "SGC", es: "SGC" },
   "UNGRD": { ja: "UNGRD", es: "UNGRD" },
-  "UNGRD / SGC": { ja: "UNGRD／SGC", es: "UNGRD / SGC" },
+  "UNGRD / Presidency": { ja: "UNGRD／大統領府", es: "UNGRD / Presidencia" },
   "Mayor of Cali": { ja: "カリ市長", es: "Alcaldía de Cali" },
   "Mayor of Manizales": { ja: "マニサレス市長", es: "Alcaldía de Manizales" },
   "Aerocivil / media": { ja: "民間航空当局／報道", es: "Aerocivil / prensa" },
@@ -180,6 +184,7 @@ const CELL = {
   "Presidency / local authorities": { ja: "大統領府／地元当局", es: "Presidencia / autoridades locales" },
   "11 Aug": { ja: "8月11日", es: "11 ago." },
   "11 Aug PM": { ja: "8月11日 午後", es: "11 ago. tarde" },
+  "11 Aug 14:20 UTC": { ja: "8月11日 14:20 UTC", es: "11 ago. 14:20 UTC" },
   "Evening": { ja: "夕方", es: "Noche" },
   "International media": { ja: "国際報道", es: "Prensa internacional" },
   "Charter / Copernicus": { ja: "チャーター／コペルニクス", es: "Carta / Copernicus" },
@@ -452,7 +457,7 @@ footer(s);
 
 /* ============ 4. Chronology of response ============ */
 {
-  const PER = 8;
+  const PER = 9;
   const pages = chunk(d.timeline, PER);
   pages.forEach((rows, pi) => {
     s = newSlide();
@@ -463,10 +468,10 @@ footer(s);
     const rowsT = [[th(T("Time", "時刻")), th(T("Action", "事項")), th(T("Source", "出典"))]];
     rows.forEach((r, i) => rowsT.push([
       td(C(r.time), i, { fontSize: 10, bold: true, color: NAVY, align: "center" }),
-      td(LL(r), i, { fontSize: JA ? 9.5 : 10 }),
+      td(LL(r), i, { fontSize: JA ? 9 : 9.5 }),
       td(C(r.src), i, { fontSize: 8.5, bold: true, color: tierColor(r.tier), align: "center" }),
     ]));
-    s.addTable(rowsT, { x: 0.4, y: 1.34, w: 12.5, colW: [1.3, 9.2, 2.0], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.58, valign: "middle" });
+    s.addTable(rowsT, { x: 0.4, y: 1.34, w: 12.5, colW: [1.4, 9.1, 2.0], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.50, valign: "middle" });
     srcLine(s, [linkBy("USGS - M 7.4"), linkBy("UNGRD"), linkBy("CNN"), linkBy("Colombia One - First")]);
     footer(s);
   });
@@ -514,7 +519,7 @@ heading(s, "Event Parameters & Observed Shaking", "地震の諸元と観測さ�
   ];
   s.addTable([[th(T("Item", "項目")), th(T("Value", "値"))]].concat(
     prm.map((r, i) => [td(r[0], i, { fontSize: 9.5, bold: true, color: NAVY }), td(r[1], i, { fontSize: 9.5 })])
-  ), { x: 0.4, y: 1.12, w: 7.3, colW: [2.0, 5.3], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.40, valign: "middle" });
+  ), { x: 0.4, y: 1.12, w: 7.3, colW: [2.0, 5.3], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.36, valign: "middle" });
 }
 imageSlot(s, 7.9, 1.12, 5.0, 2.9, "mmi_distance", T("Distance vs. reported MMI (ADRC)", "距離と報告されたMMI（ADRC作成）"), null);
 {
@@ -528,7 +533,7 @@ imageSlot(s, 7.9, 1.12, 5.0, 2.9, "mmi_distance", T("Distance vs. reported MMI (
   });
   s.addText(L(d, "exposure_note"), { x: 7.9, y: 6.24, w: 5.0, h: 0.56, fontSize: 7.5, color: MUTED, fontFace: FONT, valign: "top", margin: 0 });
 }
-s.addText(L(d, "param_note"), { x: 0.4, y: 6.36, w: 7.3, h: 0.46, fontSize: 7, color: MUTED, italic: true, fontFace: FONT, valign: "top", margin: 0 });
+s.addText(L(d, "param_note"), { x: 0.4, y: 6.50, w: 7.3, h: 0.34, fontSize: 6.8, color: MUTED, italic: true, fontFace: FONT, valign: "top", margin: 0 });
 srcLine(s, [linkBy("USGS - M 7.4"), linkBy("event bulletin"), linkBy("GDACS")]);
 footer(s);
 
@@ -623,7 +628,7 @@ s.addText(L(d, "toll_caption"), { x: 0.4, y: 2.36, w: 12.5, h: 0.2, fontSize: 7.
 {
   const rows = d.deaths_by_area;
   s.addChart(p.ChartType.bar, [{ name: T("Deaths", "死者"), labels: rows.map(r => L(r, "area")), values: rows.map(r => r.n) }], {
-    x: 0.4, y: 2.6, w: 6.6, h: 3.2, barDir: "bar", showTitle: true,
+    x: 0.4, y: 2.6, w: 6.6, h: 2.86, barDir: "bar", showTitle: true,
     title: T("Reported deaths by department (provisional)", "県別の死者数（暫定）"),
     titleFontSize: 10.5, titleColor: NAVY, chartColors: [RED], showLegend: false, showValue: true,
     dataLabelPosition: "outEnd", dataLabelFontSize: 9, catAxisLabelColor: INK, valAxisLabelColor: MUTED,
@@ -635,11 +640,40 @@ s.addText(L(d, "toll_caption"), { x: 0.4, y: 2.36, w: 12.5, h: 0.2, fontSize: 7.
     td(String(r.n), i, { fontSize: 11, bold: true, color: RED, align: "center" }),
     td(L(r, "note"), i, { fontSize: 9, color: MUTED }),
   ]));
-  s.addTable(rowsT, { x: 7.2, y: 2.6, w: 5.7, colW: [2.15, 1.05, 2.5], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.5, valign: "middle" });
+  s.addTable(rowsT, { x: 7.2, y: 2.6, w: 5.7, colW: [2.15, 1.05, 2.5], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.44, valign: "middle" });
 }
-noteBox(s, 0.4, 5.94, 12.5, 0.78, T("Reading the numbers", "数値の読み方"), L(d, "deaths_by_area_note"));
+noteBox(s, 0.4, 5.72, 12.5, 1.06, T("Reading the numbers", "数値の読み方"), L(d, "deaths_by_area_note"));
 srcLine(s, [linkBy("UNGRD balance"), linkBy("RPP"), linkBy("El Tiempo"), linkBy("Asocapitales")]);
 footer(s);
+
+/* ============ 8c. Cali municipal damage report ============ */
+if (d.cali) {
+  const c = d.cali;
+  s = newSlide();
+  heading(s, "Cali: municipal damage report", "カリ市：市当局の被害報告");
+  subNote(s, "Officials of the Alcaldía de Santiago de Cali. City figures; they are not a subset of any national cut-off.",
+    "サンティアゴ・デ・カリ市職員による。市単位の数値であり、全国集計のある時点の内訳ではない。");
+  const tone = { RED: RED, AMBER: "9A3B12", NAVY: NAVY };
+  c.tiles.forEach((tl, i) => {
+    const x = 0.4 + i * 3.16;
+    s.addShape(p.ShapeType.roundRect, { x, y: 1.34, w: 2.95, h: 1.16, fill: { color: LIGHT }, line: { color: LINE, width: 1 }, rectRadius: 0.06 });
+    s.addText(L(tl, "label"), { x: x + 0.14, y: 1.40, w: 2.67, h: 0.3, fontSize: 10.5, color: MUTED, fontFace: FONT, margin: 0 });
+    s.addText(tl.n, { x: x + 0.14, y: 1.66, w: 2.67, h: 0.76, fontSize: 30, bold: true, color: tone[tl.colour], fontFace: SERIF, margin: 0, valign: "middle" });
+  });
+  {
+    const rows = [[th(T("Item", "項目")), th(T("Reported", "報告値"))]];
+    c.rows.forEach((r, i) => rows.push([
+      td(L(r, "item"), i, { fontSize: 10.5, bold: true, color: NAVY }),
+      td(r.n, i, { fontSize: 12, bold: true, color: RED, align: "right" }),
+    ]));
+    s.addTable(rows, { x: 0.4, y: 2.68, w: 6.3, colW: [4.7, 1.6], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.46, valign: "middle" });
+  }
+  noteBox(s, 7.0, 2.68, 5.9, 2.16, L(c, "read_title"), L(c, "read"));
+  s.addText(L(c, "note"), { x: 7.0, y: 5.00, w: 5.9, h: 1.1, fontSize: JA ? 9.5 : 10, color: INK, fontFace: FONT, valign: "top", margin: 0 });
+  s.addText(L(c, "source"), { x: 0.4, y: 6.5, w: 12.5, h: 0.26, fontSize: 7.5, color: MUTED, italic: true, fontFace: FONT, valign: "top", margin: 0 });
+  srcLine(s, [linkBy("Alcaldía de Santiago de Cali"), linkBy("El Tiempo"), linkBy("UNGRD")]);
+  footer(s);
+}
 
 /* ============ 9. Damage to buildings, lifelines and services ============ */
 {

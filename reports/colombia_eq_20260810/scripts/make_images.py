@@ -46,7 +46,7 @@ LAND2 = "#DCD5C7"
 SEA = "#EAF2F8"
 
 EPI = (4.8436, -76.2422)      # USGS us6000tjl2 (PAGER v5 location) (distances in this report are measured from here)
-EPI_SGC = (5.04, -76.34)      # SGC SGC2026pqqmro
+EPI_SGC = (4.99, -76.29)      # SGC SGC2026pqqmro (solution revised 11 Aug 2026)
 DEPTH_KM = 110.3
 
 

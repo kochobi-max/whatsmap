@@ -13,7 +13,7 @@
     "as_of_ja": "数値は2026年8月11日17:00（コロンビア時間、日本時間8月12日07:00）現在、発災から約33時間後。UNGRDの状況報告は死者182人・負傷2,542人・行方不明189人、大統領の集計は死者181人、県・市の発表を積み上げると240人となる。本報告は3つとも併記する。すべて速報値であり、なお増加中である。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-08-12 08:40 JST",
+    "stamp": "2026-08-12 08:52 JST",
     "update_date": "12/08/2026",
     "title_es": "Terremoto del Chocó de 2026 (Colombia)",
     "subtitle_es": "M7.4, San José del Palmar, departamento del Chocó — 10 de agosto de 2026",
@@ -26,16 +26,16 @@
     "origin_time_local": "10 Aug 2026, 07:34:28 COT (UTC-5)",
     "origin_time_utc": "10 Aug 2026, 12:34:28 UTC",
     "origin_time_jst": "10 Aug 2026, 21:34 JST",
-    "epicentre_en": "USGS: 5 km S of San José del Palmar, Chocó Department (approx. 280 km W of Bogotá) — SGC: 20 km from San José del Palmar",
-    "epicentre_ja": "USGS：チョコ県サンホセ・デル・パルマルの南5km（ボゴタの西約280km）／SGC：同町から20km",
+    "epicentre_en": "USGS: 5 km S of San José del Palmar, Chocó Department (approx. 280 km W of Bogotá) — SGC: 12 km from San José del Palmar",
+    "epicentre_ja": "USGS：チョコ県サンホセ・デル・パルマルの南5km（ボゴタの西約280km）／SGC：同町から12km",
     "lat": 4.8436,
     "lon": -76.2422,
     "magnitude": "Mww 7.4",
     "magnitude_note_en": "USGS Mww 7.4 and SGC 7.4 agree on size. The SGC's first bulletin gave M6.6 at 79 km depth and was revised to 7.4; the two agencies' locations differ by about 20 km and their depths by about 11 km, which is normal for an intermediate-depth event recorded by different networks.",
     "magnitude_note_ja": "規模はUSGSのMww7.4、SGCの7.4で一致。SGCの第1報はM6.6・深さ79kmで、のち7.4に修正された。両機関の震源位置は約20km、深さは約11km異なるが、観測網の異なるやや深発地震では通常の範囲である。",
     "depth_km": 110,
-    "depth_display_en": "110.3 km (USGS, PAGER v5) / 96 km (SGC)",
-    "depth_display_ja": "110.3km（USGS、PAGER第5版）／96km（SGC）",
+    "depth_display_en": "110.3 km (USGS, PAGER v5) / 103 km (SGC, revised 11 Aug)",
+    "depth_display_ja": "110.3km（USGS、PAGER第5版）／103km（SGC、8月11日改訂）",
     "mechanism_en": "Strike-slip faulting at intermediate depth, within the subducting Nazca slab (not on the shallow plate interface)",
     "mechanism_ja": "沈み込むナスカプレート内部（スラブ内）で発生した、やや深発の横ずれ断層型。プレート境界の浅い地震ではない。",
     "max_intensity_en": "MMI VII (Very strong) — USGS ShakeMap; the SGC macroseismic intensity map agrees",
@@ -48,9 +48,9 @@
     "alert_ja": "USGS PAGER：オレンジ（第5版）。死者数は1,000〜10,000人の階級が最も確からしい（確率35%）。経済損失は1〜10億米ドルが最も確からしく（34%）、コロンビアのGDPの1%未満。GDACS：オレンジ。",
     "summary_en": "At 07:34 local time (12:34 UTC) on 10 August 2026, an Mww 7.4 earthquake struck western Colombia with its epicentre 5 km east of San José del Palmar in Chocó Department, at a depth of about 110 km (USGS). The event was an intermediate-depth, strike-slip rupture inside the subducting Nazca slab; because of its depth, strong shaking (MMI VI-VII) was spread over a wide area of the Andean Coffee Region rather than concentrated near the epicentre, and about 10.5 million people were exposed to it. The SGC describes it as the largest-magnitude earthquake recorded in Colombia in the past decade. The toll rose steeply through the first two days: 111 deaths in the Government's 13:00 COT balance on 10 August, 132 by that evening, and 182 deaths with 2,542 injured and 189 missing in UNGRD's situation report on 11 August, against 240 deaths when the departmental and city announcements are added up — more than 1,600 buildings damaged (1,575 homes damaged, 37 destroyed, 61 buildings collapsed), together with damage to 18 health facilities, 52 educational facilities, 18 major roads and six regional airports. The passenger terminal of Matecaña International Airport in Pereira partially collapsed, a tower of the neo-Gothic cathedral in Manizales fell onto the nave, and about 30% of the University Hospital in Cali collapsed. The President declared a national disaster, set up a Unified Command Post in Chocó and deployed four USAR teams and the armed forces. There was no tsunami. All figures are preliminary and are expected to change as assessment proceeds.",
     "summary_ja": "2026年8月10日07:34（現地時間、12:34 UTC）、コロンビア西部チョコ県サンホセ・デル・パルマルの東5kmを震源とするMww7.4の地震が発生した。深さは約110km（USGS）で、沈み込むナスカプレート内部のやや深発・横ずれ型。深いために強い揺れ（MMI VI〜VII）はコーヒー地帯を含む広範囲に及び、約1,050万人が強い揺れにさらされた。SGCは過去10年でコロンビア最大規模の地震としている。死者数は最初の2日間で急増した。8月10日13:00（現地）の政府集計で111人、同日夕方に132人、11日のUNGRD状況報告では死者182人・負傷2,542人・行方不明189人となり、県・市の発表を積み上げると240人に達する。あわせて建物被害1,600棟超（住宅損壊1,575、全壊37、建物倒壊61）、医療施設18・教育施設52・幹線道路18・地方空港6か所の被害を発表。ペレイラのマテカニャ国際空港旅客ターミナルが一部倒壊、マニサレスの大聖堂の塔が身廊に崩落、カリの大学病院は約30%が損壊した。大統領は国家災害を宣言し、チョコ県に統合指揮所を設置、USAR4隊と軍を投入した。津波はない。数値はすべて速報値であり、被害調査の進展により変動する。",
-    "epicentre_es": "USGS: 5 km al S de San José del Palmar, departamento del Chocó (unos 280 km al O de Bogotá) — SGC: a 20 km de San José del Palmar",
+    "epicentre_es": "USGS: 5 km al S de San José del Palmar, departamento del Chocó (unos 280 km al O de Bogotá) — SGC: a 12 km de San José del Palmar",
     "magnitude_note_es": "El tamaño coincide: Mww 7.4 del USGS y 7.4 del SGC. El primer boletín del SGC dio M6.6 a 79 km de profundidad y fue revisado a 7.4; las localizaciones de las dos entidades difieren unos 20 km y sus profundidades unos 11 km, lo normal en un sismo de profundidad intermedia registrado por redes distintas.",
-    "depth_display_es": "110,3 km (USGS, PAGER v5) / 96 km (SGC)",
+    "depth_display_es": "110,3 km (USGS, PAGER v5) / 103 km (SGC, revisado el 11 de agosto)",
     "mechanism_es": "Falla de rumbo a profundidad intermedia, dentro de la placa de Nazca en subducción (no en la interfaz somera entre placas)",
     "max_intensity_es": "MMI VII (muy fuerte) — ShakeMap del USGS; el mapa de intensidades macrosísmicas del SGC coincide",
     "felt_es": "Sentido en el occidente y el centro de Colombia, incluidas Bogotá, Cali y Medellín, y también en Ecuador, Panamá y Venezuela",
@@ -73,17 +73,17 @@
       "event_id": "SGC2026pqqmro",
       "url": "https://www.sgc.gov.co/detallesismo/SGC2026pqqmro/",
       "magnitude": "7.4 (ML)",
-      "origin_time": "07:34:29 COT",
-      "lat": 5.04,
-      "lon": -76.34,
-      "depth_km": 96,
-      "stations": 69,
-      "epicentre_en": "20 km from San José del Palmar, Chocó",
-      "epicentre_ja": "チョコ県サンホセ・デル・パルマルから20km",
-      "epicentre_es": "a 20 km de San José del Palmar, Chocó",
-      "note_en": "SGC bulletin of record (event SGC2026pqqmro, located with 69 stations). The SGC states that its seismic bulletins are subject to change as data review and processing continue.",
-      "note_ja": "SGCの公式速報（イベントSGC2026pqqmro、69観測点で決定）。SGCは、データの精査・処理の進展に伴い速報値が変更されうるとしている。",
-      "note_es": "Boletín oficial del SGC (evento SGC2026pqqmro, localizado con 69 estaciones). El SGC advierte que la información de sus boletines sísmicos está sujeta a cambios mientras avanzan la revisión y el procesamiento de los datos."
+      "origin_time": "07:34:27 COT",
+      "lat": 4.99,
+      "lon": -76.29,
+      "depth_km": 103,
+      "stations": 119,
+      "epicentre_en": "12 km from San José del Palmar, Chocó",
+      "epicentre_ja": "チョコ県サンホセ・デル・パルマルから12km",
+      "epicentre_es": "a 12 km de San José del Palmar, Chocó",
+      "note_en": "SGC bulletin of record (event SGC2026pqqmro), revised at 14:20 UTC on 11 August: located with 119 stations and 208 phases, azimuthal gap 54 degrees, location uncertainty 1.6/1.9 km and depth uncertainty 3.5 km. The first bulletin gave M6.6 at 79 km and the second 7.4 at 96 km with 69 stations. The SGC states that its bulletins remain subject to change.",
+      "note_ja": "SGCの公式速報（イベントSGC2026pqqmro）。8月11日14:20 UTCに改訂され、119観測点・208フェーズで決定、方位角ギャップ54度、位置の不確かさ1.6／1.9km、深さの不確かさ3.5km。第1報はM6.6・深さ79km、第2報は7.4・深さ96km（69観測点）であった。SGCは速報値が今後も変更されうるとしている。",
+      "note_es": "Boletín oficial del SGC (evento SGC2026pqqmro), revisado a las 14:20 UTC del 11 de agosto: localizado con 119 estaciones y 208 fases, brecha azimutal de 54 grados, incertidumbre de localización de 1,6/1,9 km y de profundidad de 3,5 km. El primer boletín dio M6.6 a 79 km y el segundo 7.4 a 96 km con 69 estaciones. El SGC advierte que sus boletines siguen sujetos a cambios."
     },
     "magnitude_display_en": "Mww 7.4 (USGS)   ·   7.4 (SGC)",
     "magnitude_display_ja": "Mww 7.4（USGS）　・　7.4（SGC）",
@@ -312,10 +312,34 @@
     {
       "time": "11 Aug PM",
       "tier": "official",
-      "src": "UNGRD / SGC",
-      "en": "UNGRD's situation report gives 182 deaths, 2,542 injured and 189 missing, with 13,067 homes damaged and 2,501 destroyed, 93 health facilities, 884 educational institutions, 427 community facilities and 77 roads affected. The President puts the toll at 181, of which 97.6% in capital cities. Ecuador, El Salvador and Russia are thanked for assistance. The SGC's running total reaches 103 aftershocks at 15:00 COT - 97 at M3.0 or below, 5 between M3.0 and M4.0, one above M4.0 - and a felt M3.9 during the day prompts building evacuations in several affected cities. The SGC catalogue for the same period holds 147 located events, the wider figure including background seismicity.",
-      "ja": "UNGRDの状況報告は死者182人・負傷2,542人・行方不明189人、住宅は損壊13,067棟・全壊2,501棟、医療93か所・教育884か所・コミュニティ施設427か所・道路77路線が被害と発表。大統領は死者181人、うち97.6%が県都とした。エクアドル、エルサルバドル、ロシアの支援に謝意。　SGCの余震累積計数は15:00（現地）時点で103回に達する（M3.0以下97回、M3.0〜4.0が5回、M4.0超1回）。日中のM3.9の有感余震により被災各都市で建物からの避難が行われた。同期間のSGCカタログには147回の決定解があり、こちらは背景地震活動を含む広い数値である。",
-      "es": "El reporte de situación de la UNGRD registra 182 muertos, 2.542 heridos y 189 desaparecidos, con 13.067 viviendas averiadas y 2.501 destruidas, 93 centros de salud, 884 instituciones educativas, 427 equipamientos comunitarios y 77 vías afectadas. El Presidente cifra el balance en 181 muertos, 97,6 % de ellos en ciudades capitales. Se agradece la ayuda de Ecuador, El Salvador y Rusia. El total acumulado de réplicas del SGC llega a 103 a las 15:00 COT -97 de M3,0 o menos, 5 entre M3,0 y M4,0, una por encima de M4,0- y una M3,9 sentida durante el día obliga a evacuar edificios en varias ciudades afectadas. El catálogo del SGC para el mismo periodo contiene 147 eventos localizados, cifra más amplia que incluye la sismicidad de fondo."
+      "src": "UNGRD / Presidency",
+      "en": "UNGRD's situation report gives 182 deaths, 2,542 injured and 189 missing, with 13,067 homes damaged and 2,501 destroyed, 93 health facilities, 884 educational institutions, 427 community facilities and 77 roads affected. The President puts the toll at 181, of which 97.6% in capital cities. Ecuador, El Salvador and Russia are thanked for assistance.",
+      "ja": "UNGRDの状況報告は死者182人・負傷2,542人・行方不明189人、住宅は損壊13,067棟・全壊2,501棟、医療93か所・教育884か所・コミュニティ施設427か所・道路77路線が被害と発表。大統領は死者181人、うち97.6%が県都とした。エクアドル、エルサルバドル、ロシアの支援に謝意。",
+      "es": "El reporte de situación de la UNGRD registra 182 muertos, 2.542 heridos y 189 desaparecidos, con 13.067 viviendas averiadas y 2.501 destruidas, 93 centros de salud, 884 instituciones educativas, 427 equipamientos comunitarios y 77 vías afectadas. El Presidente cifra el balance en 181 muertos, 97,6 % de ellos en ciudades capitales. Se agradece la ayuda de Ecuador, El Salvador y Rusia."
+    },
+    {
+      "time": "11 Aug PM",
+      "tier": "official",
+      "src": "SGC",
+      "en": "The SGC's published aftershock total reaches 103 at 15:00 COT - 97 at M3.0 or below, 5 between M3.0 and M4.0, one above M4.0 - and an M3.9 during the day prompts building evacuations in several affected cities. Its catalogue for the same period holds 147 located events, the wider figure including background seismicity.",
+      "ja": "SGCが公表する余震回数は15:00（現地）で103回に達する（M3.0以下97回、M3.0〜4.0が5回、M4.0超1回）。日中のM3.9により被災各都市で建物からの避難が行われた。同期間のSGCカタログには147回の決定解があり、こちらは背景地震活動を含む広い数値である。",
+      "es": "El total de réplicas publicado por el SGC llega a 103 a las 15:00 COT -97 de M3,0 o menos, 5 entre M3,0 y M4,0, una por encima de M4,0- y una M3,9 durante el día obliga a evacuar edificios en varias ciudades afectadas. Su catálogo para el mismo periodo contiene 147 eventos localizados, cifra más amplia que incluye la sismicidad de fondo."
+    },
+    {
+      "time": "11 Aug 14:20 UTC",
+      "tier": "official",
+      "src": "SGC",
+      "en": "The SGC revises its solution for the mainshock to M7.4 at 103 km depth, 4.99 N 76.29 W, located with 119 stations and 208 phases. Its first bulletin had given M6.6 at 79 km and its second 7.4 at 96 km with 69 stations.",
+      "ja": "SGCが本震の解をM7.4・深さ103km、北緯4.99度・西経76.29度に改訂。119観測点・208フェーズで決定。第1報はM6.6・深さ79km、第2報は7.4・深さ96km（69観測点）であった。",
+      "es": "El SGC revisa su solución del sismo principal a M7.4 a 103 km de profundidad, 4,99 N 76,29 O, localizada con 119 estaciones y 208 fases. Su primer boletín había dado M6.6 a 79 km y el segundo 7.4 a 96 km con 69 estaciones."
+    },
+    {
+      "time": "12 Aug",
+      "tier": "official",
+      "src": "Mayor of Cali",
+      "en": "Cali city officials report 107 buildings collapsed, 643 with structural damage and 18 under evacuation order; 230 people trapped, 88 rescued, 69 dead and 1,008 injured in the city.",
+      "ja": "カリ市当局が同市の被害を報告。建物倒壊107棟、構造的被害643棟、避難命令18棟、生き埋め230人、救出88人、死者69人、負傷1,008人。",
+      "es": "Funcionarios de la Alcaldía de Cali reportan 107 edificaciones colapsadas, 643 con daños estructurales y 18 con orden de evacuación; 230 personas atrapadas, 88 rescatadas, 69 fallecidos y 1.008 heridos en la ciudad."
     }
   ],
   "areas": [
@@ -439,14 +463,14 @@
     {
       "item_en": "Missing / trapped",
       "item_ja": "行方不明・生き埋め",
-      "value_en": "189 (UNGRD, 11 Aug). Search continues in Cali, Pereira, Manizales and Quibdó, where four children are missing under a collapsed school.",
-      "value_ja": "189人（UNGRD、8月11日）。カリ、ペレイラ、マニサレス、キブドで捜索継続。キブドでは倒壊した学校の下に子ども4人。",
-      "source_en": "UNGRD, 11 Aug",
-      "source_ja": "UNGRD（8月11日）",
+      "value_en": "189 nationally (UNGRD, 11 Aug). Cali city officials report 230 people trapped and 88 rescued in that city; four children are missing under a collapsed school in Quibdó.",
+      "value_ja": "全国で189人（UNGRD、8月11日）。カリ市当局は同市で生き埋め230人・救出88人と報告。キブドでは倒壊した学校の下に子ども4人。",
+      "source_en": "UNGRD; Alcaldía de Cali; local authorities",
+      "source_ja": "UNGRD、カリ市、地元当局",
       "tier": "official",
       "item_es": "Desaparecidos / atrapados",
-      "value_es": "189 (UNGRD, 11 de agosto). La búsqueda continúa en Cali, Pereira, Manizales y Quibdó, donde cuatro menores están desaparecidos bajo un colegio colapsado.",
-      "source_es": "UNGRD, 11 de agosto"
+      "value_es": "189 en el país (UNGRD, 11 de agosto). Funcionarios de la Alcaldía de Cali reportan 230 personas atrapadas y 88 rescatadas en esa ciudad; cuatro menores están desaparecidos bajo un colegio colapsado en Quibdó.",
+      "source_es": "UNGRD; Alcaldía de Cali; autoridades locales"
     },
     {
       "item_en": "Municipalities affected",
@@ -499,14 +523,14 @@
     {
       "item_en": "Buildings collapsed",
       "item_ja": "建物倒壊",
-      "value_en": "More than 80 nationally (11 Aug), up from 61 on 10 Aug; Cali 25-30 at 12 critical points, Manizales 17 collapsed + 19 partial",
-      "value_ja": "全国で80棟超（8月11日）。8月10日の61棟から増加。カリは12か所の重要地点で25〜30棟、マニサレスは倒壊17棟・部分倒壊19棟",
-      "source_en": "Media, 11 Aug; UNGRD; mayors of Cali and Manizales",
-      "source_ja": "報道（8月11日）、UNGRD、カリ市長・マニサレス市長",
+      "value_en": "More than 80 nationally (11 Aug), up from 61 on 10 Aug. Cali city officials report 107 collapsed in that city alone, with 643 more structurally damaged and 18 under evacuation order; Manizales 17 collapsed + 19 partial.",
+      "value_ja": "全国で80棟超（8月11日）。8月10日の61棟から増加。カリ市当局は同市だけで倒壊107棟、構造的被害643棟、避難命令18棟と報告。マニサレスは倒壊17棟・部分倒壊19棟。",
+      "source_en": "Media, 11 Aug; UNGRD; Alcaldía de Cali; Alcaldía de Manizales",
+      "source_ja": "報道（8月11日）、UNGRD、カリ市、マニサレス市",
       "tier": "official",
       "item_es": "Edificios colapsados",
-      "value_es": "Más de 80 en el país (11 de agosto), frente a 61 el 10 de agosto; en Cali entre 25 y 30 en 12 puntos críticos; en Manizales 17 colapsados y 19 con colapso parcial",
-      "source_es": "Prensa, 11 de agosto; UNGRD; alcaldías de Cali y Manizales"
+      "value_es": "Más de 80 en el país (11 de agosto), frente a 61 el 10 de agosto. Funcionarios de la Alcaldía de Cali reportan 107 colapsadas solo en esa ciudad, 643 más con daños estructurales y 18 con orden de evacuación; en Manizales 17 colapsados y 19 con colapso parcial.",
+      "source_es": "Prensa, 11 de agosto; UNGRD; Alcaldía de Cali; Alcaldía de Manizales"
     },
     {
       "item_en": "Health facilities",
@@ -652,8 +676,8 @@
       "note_es": "73 años"
     }
   ],
-  "deaths_by_area_note_en": "The chart shows the President's breakdown of 11 August, which totals 181 and puts 97.6% of the deaths in capital cities. UNGRD's own situation report of the same day gives 182. Adding up what the departments and cities announced separately gives 240 - 59 more than the President's figure - because those counts include municipalities outside the capitals and were issued at different hours. The report keeps all three rather than picking one: the official national figure is the one to cite, the departmental sum is the leading indicator of where it is heading.",
-  "deaths_by_area_note_ja": "グラフは大統領による8月11日の内訳（合計181人、うち97.6%が県都）である。同日のUNGRD状況報告は182人。県・市が個別に発表した数値を積み上げると240人となり、大統領の値より59人多い。県都以外の市町村を含み、発表時刻も異なるためである。本報告はいずれか一つを選ばず3つとも残している。引用すべきは公式の全国値、今後の推移を先取りするのが県別の積み上げ値である。",
+  "deaths_by_area_note_en": "The chart shows the President's breakdown of 11 August, which totals 181 and puts 97.6% of the deaths in capital cities. UNGRD's own situation report of the same day gives 182. Adding up what the departments and cities announced separately gives 240 - 59 more than the President's figure - because those counts include municipalities outside the capitals and were issued at different hours. The report keeps all three rather than picking one: the official national figure is the one to cite, the departmental sum is the leading indicator of where it is heading. Cali is now reported three ways as well: 97 in the President's breakdown, 85 by the mayor on 11 August and 69 in the city's own municipal report, which carries no cut-off time.",
+  "deaths_by_area_note_ja": "グラフは大統領による8月11日の内訳（合計181人、うち97.6%が県都）である。同日のUNGRD状況報告は182人。県・市が個別に発表した数値を積み上げると240人となり、大統領の値より59人多い。県都以外の市町村を含み、発表時刻も異なるためである。本報告はいずれか一つを選ばず3つとも残している。引用すべきは公式の全国値、今後の推移を先取りするのが県別の積み上げ値である。　カリについても3通りの数値がある。大統領の内訳では97人、8月11日の市長発表は85人、市当局の被害報告では69人であり、この報告には集計時点が付されていない。",
   "exposure": [
     {
       "mmi": "VIII+",
@@ -752,9 +776,9 @@
     "spread_en": "More than 30 agencies published a solution for the mainshock within minutes. Their magnitudes span Mw 7.0-7.7 and their depths 74-121 km; several automatic solutions defaulted to 10 km before revision. This report uses the USGS/NEIC solution (Mw 7.4, 110 km), which matches PAGER v5, and shows the SGC solution beside it. The spread is normal for a deep event recorded at teleseismic distances, and it is the reason early media figures for depth and magnitude disagreed.",
     "spread_ja": "本震については30を超える機関が数分以内に解を公表した。規模はMw7.0〜7.7、深さは74〜121kmに分布し、自動解のいくつかは修正前に既定値の10kmを示していた。本報告はPAGER第5版と一致するUSGS/NEIC解（Mw7.4、深さ110km）を用い、SGC解を併記している。遠地観測に基づく深い地震ではこの程度のばらつきは通常であり、初期の報道で深さや規模が食い違った理由でもある。",
     "spread_es": "Más de 30 entidades publicaron una solución para el sismo principal en cuestión de minutos. Sus magnitudes van de Mw 7.0 a 7.7 y sus profundidades de 74 a 121 km; varias soluciones automáticas usaron el valor por defecto de 10 km antes de ser revisadas. Este informe utiliza la solución del USGS/NEIC (Mw 7.4, 110 km), que coincide con el PAGER v5, y muestra al lado la del SGC. La dispersión es normal en un sismo profundo registrado a distancias telesísmicas, y explica por qué las primeras cifras de prensa sobre profundidad y magnitud no coincidían.",
-    "query_en": "Data: SGC catalogue extract for the region, 10 Aug 07:34 to 11 Aug 17:24 COT, 148 rows including the mainshock, each with an SGC event id and reviewed (“manual”) status; supplied by the author and held in this repository as images/sgc_aftershocks.csv. Both panels are generated from that file, so the figure can be reproduced and each event checked against sgc.gov.co by its id. One caveat: the extract gives the mainshock as depth 103 km at 4.991 N 76.292 W, which differs from the SGC event page used elsewhere in this report (96 km, 5.04 N 76.34 W); the event-page values are kept until the difference is confirmed.",
-    "query_ja": "データ：SGCの地域カタログ抽出（2026年8月10日07:34〜11日17:24、コロンビア時間）。本震を含む148行で、各行にSGCのイベントIDと精査済み（manual）の状態が付されている。本レポート作成者から提供され、本リポジトリに images/sgc_aftershocks.csv として保持している。両パネルはこのファイルから生成しており、図は再現可能で、各地震はIDによりsgc.gov.coで確認できる。留意点：この抽出では本震が深さ103km・北緯4.991度・西経76.292度となっており、本レポートの他の箇所で用いているSGCのイベントページ（96km、北緯5.04度、西経76.34度）と異なる。差異が確認されるまではイベントページの値を採用している。",
-    "query_es": "Datos: extracto del catálogo del SGC para la región, del 10 de agosto 07:34 al 11 de agosto 17:24 COT, 148 filas incluido el sismo principal, cada una con su identificador SGC y estado revisado (“manual”); aportado por el autor y conservado en este repositorio como images/sgc_aftershocks.csv. Ambos paneles se generan a partir de ese archivo, de modo que la figura es reproducible y cada evento puede verificarse en sgc.gov.co por su identificador. Una salvedad: el extracto sitúa el sismo principal a 103 km de profundidad en 4,991 N 76,292 O, distinto de la página del evento del SGC usada en el resto del informe (96 km, 5,04 N 76,34 O); se mantienen los valores de la página del evento hasta confirmar la diferencia.",
+    "query_en": "Data: SGC catalogue extract for the region, 10 Aug 07:34 to 11 Aug 17:24 COT, 148 rows including the mainshock, each with an SGC event id and reviewed (“manual”) status; supplied by the author and held in this repository as images/sgc_aftershocks.csv. Both panels are generated from that file, so the figure can be reproduced and each event checked against sgc.gov.co by its id. The extract's mainshock row (103 km at 4.99 N 76.29 W) matches the SGC event page as revised on 11 August, which is a check on the extract as a whole.",
+    "query_ja": "データ：SGCの地域カタログ抽出（2026年8月10日07:34〜11日17:24、コロンビア時間）。本震を含む148行で、各行にSGCのイベントIDと精査済み（manual）の状態が付されている。本レポート作成者から提供され、本リポジトリに images/sgc_aftershocks.csv として保持している。両パネルはこのファイルから生成しており、図は再現可能で、各地震はIDによりsgc.gov.coで確認できる。この抽出の本震の行（深さ103km、北緯4.99度・西経76.29度）は、8月11日に改訂されたSGCのイベントページと一致しており、抽出全体の妥当性の裏づけとなっている。",
+    "query_es": "Datos: extracto del catálogo del SGC para la región, del 10 de agosto 07:34 al 11 de agosto 17:24 COT, 148 filas incluido el sismo principal, cada una con su identificador SGC y estado revisado (“manual”); aportado por el autor y conservado en este repositorio como images/sgc_aftershocks.csv. Ambos paneles se generan a partir de ese archivo, de modo que la figura es reproducible y cada evento puede verificarse en sgc.gov.co por su identificador. La fila del sismo principal en el extracto (103 km en 4,99 N 76,29 O) coincide con la página del evento del SGC revisada el 11 de agosto, lo que sirve de verificación del extracto en su conjunto.",
     "fig_caption_en": "147 SGC-located events after the mainshock (ADRC, from the SGC catalogue)",
     "fig_caption_ja": "本震後にSGCが決定した147地震（ADRC作成、SGCカタログによる）",
     "fig_caption_es": "147 eventos localizados por el SGC tras el sismo principal (ADRC, del catálogo del SGC)"
@@ -1505,7 +1529,7 @@
     "gem_treq_cali": "images/gem_treq_cali_manual.jpg"
   },
   "photos": [],
-  "deaths_by_area_note_es": "El gráfico muestra el desglose del Presidente del 11 de agosto, que suma 181 y sitúa el 97,6 % de los muertos en ciudades capitales. El reporte de situación de la UNGRD del mismo día da 182. Sumar lo que departamentos y ciudades anunciaron por separado da 240 -59 más que la cifra del Presidente- porque esos conteos incluyen municipios fuera de las capitales y se emitieron a horas distintas. El informe conserva las tres en vez de elegir una: la cifra nacional oficial es la que debe citarse; la suma departamental anticipa hacia dónde va.",
+  "deaths_by_area_note_es": "El gráfico muestra el desglose del Presidente del 11 de agosto, que suma 181 y sitúa el 97,6 % de los muertos en ciudades capitales. El reporte de situación de la UNGRD del mismo día da 182. Sumar lo que departamentos y ciudades anunciaron por separado da 240 -59 más que la cifra del Presidente- porque esos conteos incluyen municipios fuera de las capitales y se emitieron a horas distintas. El informe conserva las tres en vez de elegir una: la cifra nacional oficial es la que debe citarse; la suma departamental anticipa hacia dónde va. Cali también se reporta de tres maneras: 97 en el desglose del Presidente, 85 por el alcalde el 11 de agosto y 69 en el propio reporte municipal, que no indica hora de corte.",
   "exposure_note_es": "Estimaciones de exposición del PAGER (versión 5) del USGS. Unos 10,5 millones de personas quedaron expuestas a sacudimiento fuerte o muy fuerte (MMI VI-VII) y unos 34 millones a MMI IV o superior en cuatro países. Son estimaciones de modelo.",
   "source_policy_es": "Jerarquía de fuentes: oficial > prensa > por confirmar. Las cifras del Gobierno y de las entidades científicas se usan como fuente primaria; la información de prensa se emplea únicamente cuando aún no hay cifras oficiales y se identifica como tal. Los elementos en verificación se marcan como «por confirmar». Las cifras preliminares nunca se sustituyen por números mayores sin verificar.",
   "intensity_map": {
@@ -1642,9 +1666,9 @@
       }
     ]
   },
-  "param_note_en": "USGS and SGC agree on size; the SGC's first bulletin gave M6.6 at 79 km before revision. The two locations differ by about 20 km and their depths by about 11 km — normal for an intermediate-depth event recorded by different networks. Epicentral distances in this report are measured from the USGS location. SGC event SGC2026pqqmro was located with 69 stations; the SGC states its bulletins are subject to change as review continues.",
-  "param_note_ja": "規模はUSGSとSGCで一致。SGCの第1報はM6.6・深さ79kmで、のちに修正された。両機関の震源位置は約20km、深さは約11km異なるが、観測網の異なるやや深発地震では通常の範囲である。本報告の震央距離はUSGSの震源位置から計算している。SGCのイベントSGC2026pqqmroは69観測点で決定されており、SGCは精査の進展に伴い速報値が変更されうるとしている。",
-  "param_note_es": "El USGS y el SGC coinciden en el tamaño; el primer boletín del SGC dio M6.6 a 79 km antes de la revisión. Las dos localizaciones difieren unos 20 km y sus profundidades unos 11 km, lo normal en un sismo de profundidad intermedia registrado por redes distintas. Las distancias epicentrales de este informe se miden desde la localización del USGS. El evento SGC2026pqqmro fue localizado con 69 estaciones; el SGC advierte que sus boletines están sujetos a cambios mientras avanza la revisión.",
+  "param_note_en": "USGS and SGC agree on size. The SGC revised its solution at 14:20 UTC on 11 August to 103 km with 119 stations and 208 phases; the revised location is 17 km from the USGS one and their depths differ by 7 km, so the two have converged as more stations were read. Epicentral distances in this report are measured from the USGS location. SGC bulletins remain subject to change.",
+  "param_note_ja": "規模はUSGSとSGCで一致。SGCは8月11日14:20 UTCに解を改訂し、深さ103km・119観測点・208フェーズとした。改訂後の位置はUSGSと17km、深さは7kmの差であり、観測点数の増加に伴い両解は近づいた。本報告の震央距離はUSGSの震源位置から計算している。SGCの速報値は今後も変更されうる。",
+  "param_note_es": "El USGS y el SGC coinciden en el tamaño. El SGC revisó su solución a las 14:20 UTC del 11 de agosto a 103 km con 119 estaciones y 208 fases; la localización revisada está a 17 km de la del USGS y sus profundidades difieren en 7 km, de modo que ambas han convergido al leerse más estaciones. Las distancias epicentrales de este informe se miden desde la localización del USGS. Los boletines del SGC siguen sujetos a cambios.",
   "mechanism_fig": {
     "caption_en": "Focal mechanism (beachball)",
     "caption_ja": "発震機構解（ビーチボール）",
@@ -1856,5 +1880,96 @@
   },
   "toll_caption_en": "UNGRD situation report, 11 August. The President's balance the same day gives 181 deaths; adding up the departmental and city announcements gives 240. Homes: 13,067 damaged and 2,501 destroyed.",
   "toll_caption_ja": "UNGRD状況報告（8月11日）。同日の大統領集計は死者181人、県・市の発表を積み上げると240人。住宅は損壊13,067棟・全壊2,501棟。",
-  "toll_caption_es": "Reporte de situación de la UNGRD, 11 de agosto. El balance del Presidente del mismo día da 181 muertos; la suma de los anuncios departamentales y municipales, 240. Viviendas: 13.067 averiadas y 2.501 destruidas."
+  "toll_caption_es": "Reporte de situación de la UNGRD, 11 de agosto. El balance del Presidente del mismo día da 181 muertos; la suma de los anuncios departamentales y municipales, 240. Viviendas: 13.067 averiadas y 2.501 destruidas.",
+  "cali": {
+    "title_en": "Cali: municipal damage report",
+    "title_ja": "カリ市：市当局の被害報告",
+    "title_es": "Cali: reporte municipal de daños",
+    "source_en": "Officials of the Alcaldía de Santiago de Cali, received 12 August 2026",
+    "source_ja": "サンティアゴ・デ・カリ市職員より受領（2026年8月12日）",
+    "source_es": "Funcionarios de la Alcaldía de Santiago de Cali, recibido el 12 de agosto de 2026",
+    "tiles": [
+      {
+        "n": "69",
+        "label_en": "Deaths",
+        "label_ja": "死者",
+        "label_es": "Fallecidos",
+        "colour": "RED"
+      },
+      {
+        "n": "1,008",
+        "label_en": "Injured",
+        "label_ja": "負傷者",
+        "label_es": "Heridos",
+        "colour": "AMBER"
+      },
+      {
+        "n": "230",
+        "label_en": "People trapped",
+        "label_ja": "生き埋め",
+        "label_es": "Personas atrapadas",
+        "colour": "AMBER"
+      },
+      {
+        "n": "88",
+        "label_en": "People rescued",
+        "label_ja": "救出者",
+        "label_es": "Personas rescatadas",
+        "colour": "NAVY"
+      }
+    ],
+    "rows": [
+      {
+        "item_en": "Buildings collapsed",
+        "item_ja": "建物倒壊",
+        "item_es": "Edificaciones colapsadas",
+        "n": "107"
+      },
+      {
+        "item_en": "Buildings with structural damage",
+        "item_ja": "構造的被害のある建物",
+        "item_es": "Edificaciones con daños estructurales",
+        "n": "643"
+      },
+      {
+        "item_en": "Buildings under evacuation order",
+        "item_ja": "避難命令の出た建物",
+        "item_es": "Edificios con orden de evacuación",
+        "n": "18"
+      },
+      {
+        "item_en": "People trapped",
+        "item_ja": "生き埋め",
+        "item_es": "Personas atrapadas",
+        "n": "230"
+      },
+      {
+        "item_en": "People rescued",
+        "item_ja": "救出された人",
+        "item_es": "Personas rescatadas",
+        "n": "88"
+      },
+      {
+        "item_en": "Deaths",
+        "item_ja": "死者",
+        "item_es": "Fallecidos",
+        "n": "69"
+      },
+      {
+        "item_en": "Injured",
+        "item_ja": "負傷者",
+        "item_es": "Heridos",
+        "n": "1,008"
+      }
+    ],
+    "read_title_en": "Reading these against the other Cali figures",
+    "read_title_ja": "カリの他の数値との関係",
+    "read_title_es": "Cómo leer estas cifras frente a las otras de Cali",
+    "read_en": "The city's own count of 69 deaths sits below the 85 the mayor gave on 11 August and the 97 in the President's breakdown the same day, and its 1,008 injured sits above the mayor's 885. The municipal report carries no cut-off time, so it cannot be placed in that sequence: it may be an earlier snapshot, or a narrower count of deaths confirmed by the city itself. Until the city states its cut-off, cite the national figures for the national picture and use these for what only the municipality reports - collapsed and structurally damaged buildings, evacuation orders, and the trapped-versus-rescued balance.",
+    "read_ja": "市の集計による死者69人は、8月11日にカリ市長が示した85人、および同日の大統領の内訳にある97人を下回る。一方で負傷者1,008人は市長の885人を上回る。この市当局報告には集計時点が付されていないため、上記の系列のどこに位置づくか判断できない。より早い時点の値である可能性も、市が自ら確認した死者に限った狭い集計である可能性もある。市が集計時点を示すまでは、全国の状況には全国値を用い、本表は市当局のみが報告している項目——建物の倒壊・構造的被害、避難命令、生き埋めと救出の対比——に用いるのが適切である。",
+    "read_es": "El conteo propio de la ciudad, 69 fallecidos, queda por debajo de los 85 que dio el alcalde el 11 de agosto y de los 97 del desglose presidencial de ese mismo día, mientras que sus 1.008 heridos superan los 885 del alcalde. El reporte municipal no indica hora de corte, de modo que no puede ubicarse en esa secuencia: puede ser una foto anterior o un conteo más estricto de fallecidos confirmados por la propia ciudad. Hasta que la ciudad indique su corte, conviene citar las cifras nacionales para el panorama nacional y usar estas para lo que solo reporta el municipio: edificaciones colapsadas y con daños estructurales, órdenes de evacuación y la relación entre atrapados y rescatados.",
+    "note_en": "230 people trapped against 88 rescued is the number that drives the next 48 hours in Cali: it is the search-and-rescue caseload, and it is larger than the city's death toll.",
+    "note_ja": "生き埋め230人に対して救出88人という比は、カリにおける今後48時間を左右する数値である。これは捜索救助の未処理件数であり、市の死者数を上回っている。",
+    "note_es": "230 personas atrapadas frente a 88 rescatadas es la cifra que marca las próximas 48 horas en Cali: es la carga de trabajo de búsqueda y rescate, y es mayor que el número de fallecidos de la ciudad."
+  }
 }
