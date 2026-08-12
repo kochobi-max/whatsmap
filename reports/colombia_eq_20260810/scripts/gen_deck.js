@@ -176,7 +176,11 @@ const CELL = {
   "UNGRD": { ja: "UNGRD", es: "UNGRD" },
   "UNGRD / Presidency": { ja: "UNGRD／大統領府", es: "UNGRD / Presidencia" },
   "Japan (MOFA)": { ja: "日本（外務省）", es: "Japón (MOFA)" },
-  "MOFA / Prime Minister of Japan": { ja: "外務省／内閣総理大臣", es: "MOFA / Primera Ministra del Japón" },
+  "MOFA (Foreign Minister Motegi) / Prime Minister of Japan": { ja: "外務省（茂木外務大臣）／内閣総理大臣", es: "MOFA (Ministro Motegi) / Primera Ministra del Japón" },
+  "UN / OCHA": { ja: "国連／OCHA", es: "ONU / OCHA" },
+  "US Government / USAID": { ja: "米国政府／USAID", es: "Gobierno de EE. UU. / USAID" },
+  "European Commission / DG ECHO": { ja: "欧州委員会／DG ECHO", es: "Comisión Europea / DG ECHO" },
+  "International media / Cancillería de Colombia": { ja: "国際報道／コロンビア外務省", es: "Prensa internacional / Cancillería de Colombia" },
   "Mayor of Cali": { ja: "カリ市長", es: "Alcaldía de Cali" },
   "Mayor of Manizales": { ja: "マニサレス市長", es: "Alcaldía de Manizales" },
   "Aerocivil / media": { ja: "民間航空当局／報道", es: "Aerocivil / prensa" },
@@ -187,6 +191,7 @@ const CELL = {
   "11 Aug": { ja: "8月11日", es: "11 ago." },
   "11 Aug PM": { ja: "8月11日 午後", es: "11 ago. tarde" },
   "11 Aug 14:20 UTC": { ja: "8月11日 14:20 UTC", es: "11 ago. 14:20 UTC" },
+  "11 Aug 07:31": { ja: "8月11日 07:31", es: "11 ago. 07:31" },
   "12 Aug": { ja: "8月12日", es: "12 ago." },
   "Evening": { ja: "夕方", es: "Noche" },
   "International media": { ja: "国際報道", es: "Prensa internacional" },
@@ -719,11 +724,9 @@ footer(s);
 /* ============ 11. International support ============ */
 s = newSlide();
 heading(s, "International Support", "国際的な支援");
-bulletsTier(s, 0.4, 1.12, 12.5, 5.0, d.support_international, { base: 13 });
-noteBox(s, 0.4, 6.2, 12.5, 0.52, T("Channelling", "受け入れ窓口"),
-  T("Offers of assistance are to be channelled through Colombia's Ministry of Foreign Affairs together with UNGRD.",
-    "支援の申し出は、コロンビア外務省とUNGRDを通じて受け入れることとされている。"));
-srcLine(s, [linkBy("International Charter"), linkBy("Copernicus"), linkBy("ReliefWeb")]);
+bulletsTier(s, 0.4, 1.12, 12.5, 4.4, d.support_international, { base: 11.5 });
+noteBox(s, 0.4, 5.42, 12.5, 1.38, L(d, "support_intl_note_title"), L(d, "support_intl_note"));
+srcLine(s, [linkBy("El Tiempo — list"), linkBy("UN in Colombia"), linkBy("Copernicus"), linkBy("ReliefWeb")]);
 footer(s);
 
 /* ============ 12. Satellite / EO support ============ */

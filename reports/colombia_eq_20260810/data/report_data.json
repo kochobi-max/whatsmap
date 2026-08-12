@@ -13,7 +13,7 @@
     "as_of_ja": "数値は2026年8月11日17:00（コロンビア時間、日本時間8月12日07:00）現在、発災から約33時間後。UNGRDの状況報告は死者182人・負傷2,542人・行方不明189人、大統領の集計は死者181人、県・市の発表を積み上げると240人となる。本報告は3つとも併記する。すべて速報値であり、なお増加中である。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-08-12 09:08 JST",
+    "stamp": "2026-08-12 09:19 JST",
     "update_date": "12/08/2026",
     "title_es": "Terremoto del Chocó de 2026 (Colombia)",
     "subtitle_es": "M7.4, San José del Palmar, departamento del Chocó — 10 de agosto de 2026",
@@ -334,12 +334,12 @@
       "es": "El SGC revisa su solución del sismo principal a M7.4 a 103 km de profundidad, 4,99 N 76,29 O, localizada con 119 estaciones y 208 fases. Su primer boletín había dado M6.6 a 79 km y el segundo 7.4 a 96 km con 69 estaciones."
     },
     {
-      "time": "11 Aug",
+      "time": "11 Aug 07:31",
       "tier": "official",
       "src": "Japan (MOFA)",
-      "en": "Japan's Prime Minister posts condolences and the Foreign Minister issues a message saying the Government of Japan is ready to provide the assistance required.",
-      "ja": "日本の内閣総理大臣が哀悼とお見舞いを投稿し、外務大臣メッセージが、必要とされる支援を提供する用意がある旨を表明。",
-      "es": "La Primera Ministra del Japón expresa sus condolencias y el Ministro de Asuntos Exteriores emite un mensaje señalando que el Gobierno del Japón está dispuesto a prestar la asistencia que se requiera."
+      "en": "Japan's Prime Minister posts condolences (21:31 JST) and Foreign Minister Motegi issues a message offering condolences and stating that the Government of Japan stands ready to provide the assistance required, expressing strong solidarity with the people of Colombia.",
+      "ja": "日本の高市内閣総理大臣が哀悼とお見舞いを投稿（日本時間21:31）。茂木外務大臣が、哀悼とお見舞いに加え、日本政府として必要とされる支援を提供する用意がある旨、およびコロンビアの人々との強い連帯を表明するメッセージを発出。",
+      "es": "La Primera Ministra del Japón expresa sus condolencias (21:31 JST) y el Ministro de Asuntos Exteriores, Motegi, emite un mensaje de condolencias en el que señala que el Gobierno del Japón está dispuesto a prestar la asistencia que se requiera y manifiesta su firme solidaridad con el pueblo colombiano."
     },
     {
       "time": "12 Aug",
@@ -348,6 +348,14 @@
       "en": "Cali city officials report 107 buildings collapsed, 643 with structural damage and 18 under evacuation order; 230 people trapped, 88 rescued, 69 dead and 1,008 injured in the city.",
       "ja": "カリ市当局が同市の被害を報告。建物倒壊107棟、構造的被害643棟、避難命令18棟、生き埋め230人、救出88人、死者69人、負傷1,008人。",
       "es": "Funcionarios de la Alcaldía de Cali reportan 107 edificaciones colapsadas, 643 con daños estructurales y 18 con orden de evacuación; 230 personas atrapadas, 88 rescatadas, 69 fallecidos y 1.008 heridos en la ciudad."
+    },
+    {
+      "time": "11 Aug",
+      "tier": "official",
+      "src": "UN / OCHA",
+      "en": "OCHA states the humanitarian system is ready to support Colombia and names drinking water, hygiene and household items, health, food and shelter as the priority needs; no formal request for assistance has been received from the Colombian authorities.",
+      "ja": "OCHAが、人道支援システムはコロンビアを支援する用意があるとし、飲料水、衛生・生活用品、保健、食料、避難所を優先ニーズに挙げる。コロンビア当局からの正式な支援要請は受けていない。",
+      "es": "La OCHA señala que el sistema humanitario está listo para apoyar a Colombia y menciona agua potable, kits de higiene y artículos del hogar, salud, alimentos y alojamiento como necesidades prioritarias; no se ha recibido una solicitud formal de asistencia de las autoridades colombianas."
     }
   ],
   "areas": [
@@ -832,6 +840,27 @@
   "support_international": [
     {
       "tier": "official",
+      "source": "US Government / USAID",
+      "en": "United States: USD 15.5 million in emergency assistance announced on 10 August, for emergency shelter, food, protection and damage assessment.",
+      "ja": "米国：8月10日に緊急支援1,550万米ドルを表明。緊急避難所、食料、保護、被害評価に充てる。",
+      "es": "Estados Unidos: 15,5 millones de dólares en asistencia de emergencia anunciados el 10 de agosto, para alojamiento de emergencia, alimentos, protección y evaluación de daños."
+    },
+    {
+      "tier": "official",
+      "source": "European Commission / DG ECHO",
+      "en": "European Union: the EU Civil Protection Mechanism was activated and an initial EUR 100,000 in humanitarian funding released, channelled through the German Red Cross, whose teams were already in the country. Copernicus was placed at the disposal of the Colombian authorities and the EU consular crisis mechanism was activated for EU citizens in the affected area. The Commission President and the High Representative stated the EU is ready to provide more if needed.",
+      "ja": "欧州連合：EU市民保護メカニズムを発動し、人道支援として初期額10万ユーロを拠出。すでに現地で活動していたドイツ赤十字を通じて実施される。コペルニクスをコロンビア当局の利用に供し、被災地のEU市民のための領事危機メカニズムも発動した。欧州委員会委員長と上級代表は、必要に応じて追加支援を行う用意があると表明している。",
+      "es": "Unión Europea: se activó el Mecanismo de Protección Civil de la UE y se liberaron 100.000 euros iniciales de financiación humanitaria, canalizados a través de la Cruz Roja Alemana, cuyos equipos ya estaban en el país. Copernicus se puso a disposición de las autoridades colombianas y se activó el mecanismo consular de crisis de la UE para ciudadanos europeos en la zona afectada. La Presidenta de la Comisión y la Alta Representante señalaron que la UE está lista para aportar más si es necesario."
+    },
+    {
+      "tier": "official",
+      "source": "MOFA (Foreign Minister Motegi) / Prime Minister of Japan",
+      "en": "Japan: on 11 August at 21:31 JST (07:31 COT) the Prime Minister, Takaichi Sanae, posted condolences - “Japan stands with Colombia in this difficult time”. Foreign Minister Motegi issued a message: “On the occasion of the earthquake that struck the Republic of Colombia on 10 August, I offer my sincere condolences to those who lost their lives and my heartfelt sympathy to all those affected. The Government of Japan stands ready to provide the assistance required. Japan expresses its strong solidarity with the people of Colombia.” No dispatch of the Japan Disaster Relief team and no emergency grant aid had been announced at the time of writing.",
+      "ja": "日本：8月11日21:31（日本時間、現地07:31）、高市早苗内閣総理大臣が「亡くなられた方々に哀悼の誠をささげる」「この困難な時に日本はコロンビアとともにある」と投稿。茂木外務大臣は次のメッセージを発出した。「8月10日にコロンビア共和国で発生した地震に際し、犠牲となられた方々に哀悼の誠を捧げ、被害に遭われた皆様に心からお見舞いを申し上げます。また、日本政府は必要とされる支援を提供する用意があります。日本は、コロンビアの人々との強い連帯を示します。」本稿執筆時点で、国際緊急援助隊の派遣や緊急無償資金協力の決定は公表されていない。",
+      "es": "Japón: el 11 de agosto a las 21:31 JST (07:31 COT) la Primera Ministra, Takaichi Sanae, expresó sus condolencias -«Japón está con Colombia en este momento difícil»-. El Ministro de Asuntos Exteriores, Motegi, emitió el siguiente mensaje: «Con ocasión del sismo ocurrido el 10 de agosto en la República de Colombia, expreso mis sinceras condolencias a las víctimas y mi más sentido pésame a todas las personas afectadas. Asimismo, el Gobierno del Japón está dispuesto a prestar la asistencia que se requiera. Japón manifiesta su firme solidaridad con el pueblo colombiano.» Al momento de redactar no se había anunciado el envío del Equipo Japonés de Socorro en Casos de Desastre ni una cooperación financiera no reembolsable de emergencia."
+    },
+    {
+      "tier": "official",
       "en": "Ecuador mobilised a specialised USAR team of 47 personnel with canine units and self-sufficient equipment.",
       "ja": "エクアドルが、救助犬と自活可能な資機材を備えた専門USARチーム47人を動員。",
       "source": "Government of Ecuador (via media)",
@@ -839,17 +868,10 @@
     },
     {
       "tier": "media",
-      "en": "Mexico's President pledged 'all the support required'; several Latin American governments offered rescuers, canine teams and humanitarian aid, to be channelled through Colombia's Foreign Ministry and UNGRD.",
-      "ja": "メキシコ大統領は「必要なすべての支援」を表明。中南米各国が救助隊・救助犬・人道支援を申し出ており、コロンビア外務省とUNGRDを通じて受け入れる。",
-      "source": "International media",
-      "es": "La Presidenta de México ofreció «todo el apoyo que se requiera»; varios gobiernos latinoamericanos ofrecieron rescatistas, unidades caninas y ayuda humanitaria, que se canalizarán a través de la Cancillería de Colombia y la UNGRD."
-    },
-    {
-      "tier": "official",
-      "source": "MOFA / Prime Minister of Japan",
-      "en": "Japan: on 11 August the Prime Minister, Takaichi Sanae, posted condolences - “Japan stands with Colombia in this difficult time” - and the Foreign Minister issued a message stating that the Government of Japan is ready to provide the assistance required. No dispatch of the Japan Disaster Relief team or emergency grant aid had been announced at the time of writing.",
-      "ja": "日本：8月11日、高市早苗内閣総理大臣が「亡くなられた方々に哀悼の誠をささげる」「この困難な時に日本はコロンビアとともにある」と投稿。外務大臣メッセージは、日本政府として必要とされる支援を提供する用意がある旨を表明した。本稿執筆時点で、国際緊急援助隊の派遣や緊急無償資金協力の決定は公表されていない。",
-      "es": "Japón: el 11 de agosto la Primera Ministra, Takaichi Sanae, expresó sus condolencias -«Japón está con Colombia en este momento difícil»- y el Ministro de Asuntos Exteriores emitió un mensaje señalando que el Gobierno del Japón está dispuesto a prestar la asistencia que se requiera. Al momento de redactar no se había anunciado el envío del Equipo Japonés de Socorro en Casos de Desastre ni una cooperación financiera no reembolsable de emergencia."
+      "source": "International media / Cancillería de Colombia",
+      "en": "Offers of assistance were also reported from Chile, Peru, Panama, Argentina, Brazil, Venezuela, Bolivia, Guatemala, Cuba, El Salvador, Spain, Italy, France, Germany, Switzerland, Israel and Ukraine - USAR teams, medical and paramedic personnel, relief items and satellite observation. The CAF development bank announced a USD 500,000 donation.",
+      "ja": "支援の申し出は、チリ、ペルー、パナマ、アルゼンチン、ブラジル、ベネズエラ、ボリビア、グアテマラ、キューバ、エルサルバドル、スペイン、イタリア、フランス、ドイツ、スイス、イスラエル、ウクライナからも報じられている。内容はUSARチーム、医師・救急救命士、救援物資、衛星観測など。ラテンアメリカ・カリブ開発銀行（CAF）は50万米ドルの拠出を発表した。",
+      "es": "También se reportaron ofrecimientos de Chile, Perú, Panamá, Argentina, Brasil, Venezuela, Bolivia, Guatemala, Cuba, El Salvador, España, Italia, Francia, Alemania, Suiza, Israel y Ucrania: equipos USAR, personal médico y paramédico, insumos y observación satelital. El banco de desarrollo CAF anunció una donación de 500.000 dólares."
     },
     {
       "tier": "official",
@@ -857,6 +879,13 @@
       "en": "Copernicus EMS Rapid Mapping activated as EMSR916 'Earthquake in Colombia' at 17:13 UTC on 10 August (12:13 COT), requested by EC Services / DG ECHO, to provide earthquake damage assessment emergency mapping. Status ongoing, with 3 areas of interest and 3 products at the time of writing. The activation reason names Quibdó, Pereira, Manizales and Cali as cities with significant damage and collapsed buildings.",
       "ja": "コペルニクス緊急管理サービスのラピッドマッピングが、8月10日17:13 UTC（現地12:13）に EMSR916「Earthquake in Colombia」として発動。要請は欧州委員会サービス／DG ECHO、目的は地震被害評価の緊急マッピング。本稿執筆時点で対応中、関心領域3・成果物3。発動理由には、著しい被害と建物倒壊のあった都市としてキブド、ペレイラ、マニサレス、カリが挙げられている。",
       "es": "La cartografía rápida del Copernicus EMS se activó como EMSR916 «Earthquake in Colombia» a las 17:13 UTC del 10 de agosto (12:13 COT), a solicitud de los Servicios de la CE / DG ECHO, para proporcionar cartografía de emergencia de evaluación de daños por el sismo. En curso al momento de redactar, con 3 áreas de interés y 3 productos. La razón de la activación menciona a Quibdó, Pereira, Manizales y Cali como ciudades con daños significativos y edificios colapsados."
+    },
+    {
+      "tier": "official",
+      "source": "UN / OCHA",
+      "en": "United Nations: OCHA stated the humanitarian system is ready to support Colombia, and its preliminary needs analysis names drinking water, hygiene kits and household items, health care, food assistance and shelter. As of 11 August the UN had received no formal request for assistance from the Colombian authorities.",
+      "ja": "国連：OCHAは、人道支援システムはコロンビアを支援する用意があると表明。初期のニーズ分析では、飲料水、衛生用品・生活用品、保健医療、食料支援、避難所が挙げられている。8月11日時点で、コロンビア当局からの正式な支援要請は国連に届いていない。",
+      "es": "Naciones Unidas: la OCHA señaló que el sistema humanitario está listo para apoyar a Colombia, y su análisis preliminar de necesidades menciona agua potable, kits de higiene y artículos del hogar, atención en salud, asistencia alimentaria y alojamiento. Al 11 de agosto la ONU no había recibido una solicitud formal de asistencia de las autoridades colombianas."
     },
     {
       "tier": "tbc",
@@ -1521,9 +1550,9 @@
       "tier": "media"
     },
     {
-      "label_en": "MOFA Japan — Foreign Minister's message on the earthquake in Colombia",
-      "label_ja": "外務省 コロンビア共和国における地震について（外務大臣メッセージ）",
-      "label_es": "MOFA Japón — mensaje del Ministro de Asuntos Exteriores sobre el sismo en Colombia",
+      "label_en": "MOFA Japan — Foreign Minister Motegi's message on the earthquake in Colombia",
+      "label_ja": "外務省 コロンビア共和国における地震について（茂木外務大臣メッセージ）",
+      "label_es": "MOFA Japón — mensaje del Ministro Motegi sobre el sismo en Colombia",
       "url": "https://www.mofa.go.jp/mofaj/la_c/sa/co/pageit_000001_00001.html",
       "tier": "official"
     },
@@ -1532,6 +1561,27 @@
       "label_ja": "外務省（X）8月11日の投稿",
       "label_es": "MOFA Japón en X — publicación del 11 de agosto",
       "url": "https://x.com/MofaJapan_jp/status/2087155064855261537",
+      "tier": "official"
+    },
+    {
+      "label_en": "El Tiempo — list of countries that have offered assistance",
+      "label_ja": "El Tiempo 支援を申し出た国の一覧",
+      "label_es": "El Tiempo — lista de países que han ofrecido apoyo",
+      "url": "https://www.eltiempo.com/mundo/mas-regiones/la-comunidad-internacional-se-vuelca-en-ayudas-para-colombia-lista-de-paises-que-han-ofrecido-apoyo-tras-el-terremoto-de-magnitud-7-3577512",
+      "tier": "media"
+    },
+    {
+      "label_en": "UN in Colombia — earthquake information and updates",
+      "label_ja": "国連コロンビア 地震に関する情報と更新",
+      "label_es": "Naciones Unidas en Colombia — información y actualizaciones",
+      "url": "https://colombia.un.org/es/320793-informaci%C3%B3n-y-actualizaciones-sobre-el-terremoto-en-colombia",
+      "tier": "official"
+    },
+    {
+      "label_en": "UN News — the UN offers support to Colombia",
+      "label_ja": "国連ニュース 国連がコロンビアに支援を表明",
+      "label_es": "Noticias ONU — la ONU ofrece apoyo a Colombia",
+      "url": "https://news.un.org/es/story/2026/08/1541792",
       "tier": "official"
     }
   ],
@@ -1993,5 +2043,11 @@
     "note_en": "230 people trapped against 88 rescued is the number that drives the next 48 hours in Cali: it is the search-and-rescue caseload, and it is larger than the city's death toll.",
     "note_ja": "生き埋め230人に対して救出88人という比は、カリにおける今後48時間を左右する数値である。これは捜索救助の未処理件数であり、市の死者数を上回っている。",
     "note_es": "230 personas atrapadas frente a 88 rescatadas es la cifra que marca las próximas 48 horas en Cali: es la carga de trabajo de búsqueda y rescate, y es mayor que el número de fallecidos de la ciudad."
-  }
+  },
+  "support_intl_note_title_en": "Assistance is offered; Colombia has not asked",
+  "support_intl_note_title_ja": "申し出はあるが、コロンビアは要請していない",
+  "support_intl_note_title_es": "Hay ofrecimientos; Colombia no ha solicitado",
+  "support_intl_note_en": "Two days in, the pattern is a large volume of offers and a government that has not converted them into requests: the UN had no formal request as of 11 August, and the bilateral help that has actually moved is money (USD 15.5 million from the United States, EUR 100,000 from the EU, USD 500,000 from CAF) plus Ecuador's USAR team and satellite mapping. Under Ley 1523 the response is Colombia's to direct, and offers are channelled through the Foreign Ministry with UNGRD; the question for the coming days is whether the search-and-rescue caseload - 230 trapped in Cali alone - outruns national capacity fast enough to change that.",
+  "support_intl_note_ja": "発災2日目の構図は、多数の申し出と、それを要請に転換していない政府である。8月11日時点で国連には正式な要請が届いておらず、実際に動いた二国間支援は資金（米国1,550万米ドル、EU10万ユーロ、CAF50万米ドル）と、エクアドルのUSARチーム、衛星マッピングである。法1523号の下で対応を指揮するのはコロンビア自身であり、申し出は外務省とUNGRDを通じて受け入れられる。今後の焦点は、捜索救助の作業量——カリだけで生き埋め230人——が国内の対応能力を上回り、この構図が変わるかどうかである。",
+  "support_intl_note_es": "A dos días del sismo, el patrón es un gran volumen de ofrecimientos y un gobierno que no los ha convertido en solicitudes: al 11 de agosto la ONU no tenía una solicitud formal, y la ayuda bilateral que efectivamente se ha movido es dinero (15,5 millones de dólares de Estados Unidos, 100.000 euros de la UE, 500.000 dólares de la CAF) más el grupo USAR del Ecuador y la cartografía satelital. Bajo la Ley 1523 la respuesta la dirige Colombia, y los ofrecimientos se canalizan por la Cancillería junto con la UNGRD; la pregunta para los próximos días es si la carga de búsqueda y rescate -230 atrapados solo en Cali- supera la capacidad nacional lo bastante rápido como para cambiar ese cuadro."
 }
