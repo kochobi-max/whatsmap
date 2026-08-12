@@ -67,7 +67,13 @@ const UI_ES = {
   "Reported": "Reportado",
   "Officials of the Alcaldía de Santiago de Cali. City figures; they are not a subset of any national cut-off.": "Funcionarios de la Alcaldía de Santiago de Cali. Son cifras de la ciudad; no son el desglose de ningún corte nacional.",
   "15,568": "15.568",
-  "2,542": "2.542",
+  "2,500+": "más de 2.500",
+  "Missing": "Desaparecidos",
+  "Missing Persons: two counts": "Personas desaparecidas: dos conteos",
+  "Reported to the authorities": "Reportados a las autoridades",
+  "Unresolved on the citizen platform": "Sin resolver en la plataforma ciudadana",
+  "Located through the platform": "Localizados a través de la plataforma",
+  "195": "195",
   "Pre-event Risk Assessment: Santiago de Cali": "Evaluación del riesgo previa al evento: Santiago de Cali",
   "Modelled scenario (GEM-TREQ, 2022)": "Escenario modelado (GEM-TREQ, 2022)",
   "Both agencies report a strike-slip mechanism.": "Ambas entidades reportan un mecanismo de falla de rumbo.",
@@ -465,8 +471,9 @@ footer(s);
 
 /* ============ 4. Chronology of response ============ */
 {
-  const PER = 11;
-  const pages = chunk(d.timeline, PER);
+  // Even split so the last page is never left with one or two rows.
+  const nPages = Math.max(1, Math.ceil(d.timeline.length / 11));
+  const pages = chunk(d.timeline, Math.ceil(d.timeline.length / nPages));
   pages.forEach((rows, pi) => {
     s = newSlide();
     const suffix = pages.length > 1 ? T(` (${pi + 1}/${pages.length})`, `（${pi + 1}/${pages.length}）`) : "";
@@ -621,9 +628,9 @@ s = newSlide();
 heading(s, "Human Damage", "人的被害");
 {
   const big = [
-    [T("Deaths", "死者"), "182", RED],
-    [T("Injured", "負傷者"), T("2,542", "2,542"), "9A3B12"],
-    [T("Homes damaged", "住宅被害"), T("15,568", "15,568棟"), NAVY],
+    [T("Deaths", "死者"), "224+", RED],
+    [T("Injured", "負傷者"), T("2,500+", "2,500人超"), "9A3B12"],
+    [T("Missing", "行方不明"), T("195", "195"), NAVY],
   ];
   big.forEach((b, i) => {
     const x = 0.4 + i * 4.2;
@@ -652,6 +659,27 @@ s.addText(L(d, "toll_caption"), { x: 0.4, y: 2.36, w: 12.5, h: 0.2, fontSize: 7.
 }
 noteBox(s, 0.4, 5.72, 12.5, 1.06, T("Reading the numbers", "数値の読み方"), L(d, "deaths_by_area_note"));
 srcLine(s, [linkBy("UNGRD balance"), linkBy("RPP"), linkBy("El Tiempo"), linkBy("Asocapitales")]);
+footer(s);
+
+/* ============ 8b2. Missing persons ============ */
+s = newSlide();
+heading(s, "Missing Persons: two counts", "行方不明者：2つの集計");
+{
+  const big = [
+    [T("Reported to the authorities", "当局への届出"), "195", RED],
+    [T("Unresolved on the citizen platform", "市民プラットフォームの未解決"), "3,653", "9A3B12"],
+    [T("Located through the platform", "同プラットフォームで確認済み"), "429", NAVY],
+  ];
+  big.forEach((b, i) => {
+    const x = 0.4 + i * 4.2;
+    s.addShape(p.ShapeType.roundRect, { x, y: 1.12, w: 3.95, h: 1.35, fill: { color: LIGHT }, line: { color: LINE, width: 1 }, rectRadius: 0.06 });
+    s.addText(b[0], { x: x + 0.15, y: 1.18, w: 3.65, h: 0.44, fontSize: 10.5, color: MUTED, fontFace: FONT, margin: 0, valign: "top" });
+    s.addText(b[1], { x: x + 0.15, y: 1.62, w: 3.65, h: 0.78, fontSize: 32, bold: true, color: b[2], fontFace: SERIF, margin: 0, valign: "middle" });
+  });
+}
+noteBox(s, 0.4, 2.66, 12.5, 1.62, L(d, "missing_note_title"), L(d, "missing_note"));
+s.addText(L(d, "missing_tail"), { x: 0.4, y: 4.5, w: 12.5, h: 0.8, fontSize: JA ? 10 : 10.5, color: INK, fontFace: FONT, valign: "top", margin: 0 });
+srcLine(s, [linkBy("Colombia te busca"), linkBy("Asocapitales — earthquake"), linkBy("El Tiempo")]);
 footer(s);
 
 /* ============ 8c. Cali municipal damage report ============ */
@@ -685,8 +713,8 @@ if (d.cali) {
 
 /* ============ 9. Damage to buildings, lifelines and services ============ */
 {
-  const PER = 8;
-  const pages = chunk(d.damage, PER);
+  const nPages = Math.max(1, Math.ceil(d.damage.length / 8));
+  const pages = chunk(d.damage, Math.ceil(d.damage.length / nPages));
   pages.forEach((rows, pi) => {
     s = newSlide();
     const suffix = pages.length > 1 ? T(` (${pi + 1}/${pages.length})`, `（${pi + 1}/${pages.length}）`) : "";
