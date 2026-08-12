@@ -13,7 +13,7 @@
     "as_of_ja": "数値は2026年8月11日17:00（コロンビア時間、日本時間8月12日07:00）現在、発災から約33時間後。UNGRDの状況報告は死者182人・負傷2,542人・行方不明189人、大統領の集計は死者181人、県・市の発表を積み上げると240人となる。本報告は3つとも併記する。すべて速報値であり、なお増加中である。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-08-12 09:19 JST",
+    "stamp": "2026-08-12 09:26 JST",
     "update_date": "12/08/2026",
     "title_es": "Terremoto del Chocó de 2026 (Colombia)",
     "subtitle_es": "M7.4, San José del Palmar, departamento del Chocó — 10 de agosto de 2026",
@@ -337,9 +337,9 @@
       "time": "11 Aug 07:31",
       "tier": "official",
       "src": "Japan (MOFA)",
-      "en": "Japan's Prime Minister posts condolences (21:31 JST) and Foreign Minister Motegi issues a message offering condolences and stating that the Government of Japan stands ready to provide the assistance required, expressing strong solidarity with the people of Colombia.",
+      "en": "Japan's Prime Minister posts condolences (21:31 JST) and Foreign Minister Motegi issues a message offering condolences and stating that the Government of Japan also stands ready to provide the necessary assistance and that Japan stands in strong solidarity with the people of Colombia.",
       "ja": "日本の高市内閣総理大臣が哀悼とお見舞いを投稿（日本時間21:31）。茂木外務大臣が、哀悼とお見舞いに加え、日本政府として必要とされる支援を提供する用意がある旨、およびコロンビアの人々との強い連帯を表明するメッセージを発出。",
-      "es": "La Primera Ministra del Japón expresa sus condolencias (21:31 JST) y el Ministro de Asuntos Exteriores, Motegi, emite un mensaje de condolencias en el que señala que el Gobierno del Japón está dispuesto a prestar la asistencia que se requiera y manifiesta su firme solidaridad con el pueblo colombiano."
+      "es": "La Primera Ministra del Japón expresa sus condolencias (21:31 JST) y el Ministro de Asuntos Exteriores, Motegi, emite un mensaje de condolencias en el que señala que el Gobierno del Japón está asimismo dispuesto a prestar la asistencia necesaria y que Japón se solidariza firmemente con el pueblo colombiano."
     },
     {
       "time": "12 Aug",
@@ -855,9 +855,9 @@
     {
       "tier": "official",
       "source": "MOFA (Foreign Minister Motegi) / Prime Minister of Japan",
-      "en": "Japan: on 11 August at 21:31 JST (07:31 COT) the Prime Minister, Takaichi Sanae, posted condolences - “Japan stands with Colombia in this difficult time”. Foreign Minister Motegi issued a message: “On the occasion of the earthquake that struck the Republic of Colombia on 10 August, I offer my sincere condolences to those who lost their lives and my heartfelt sympathy to all those affected. The Government of Japan stands ready to provide the assistance required. Japan expresses its strong solidarity with the people of Colombia.” No dispatch of the Japan Disaster Relief team and no emergency grant aid had been announced at the time of writing.",
+      "en": "Japan: on 11 August at 21:31 JST (07:31 COT) the Prime Minister, Takaichi Sanae, posted condolences - “Japan stands with Colombia in this difficult time”. Foreign Minister Motegi issued a message: “In the wake of the earthquake that struck the Republic of Colombia on August 10, I express my deepest condolences to those who lost their lives and extend my heartfelt sympathies to all those affected. The Government of Japan also stands ready to provide the necessary assistance. Japan stands in strong solidarity with the people of Colombia.” No dispatch of the Japan Disaster Relief team and no emergency grant aid had been announced at the time of writing.",
       "ja": "日本：8月11日21:31（日本時間、現地07:31）、高市早苗内閣総理大臣が「亡くなられた方々に哀悼の誠をささげる」「この困難な時に日本はコロンビアとともにある」と投稿。茂木外務大臣は次のメッセージを発出した。「8月10日にコロンビア共和国で発生した地震に際し、犠牲となられた方々に哀悼の誠を捧げ、被害に遭われた皆様に心からお見舞いを申し上げます。また、日本政府は必要とされる支援を提供する用意があります。日本は、コロンビアの人々との強い連帯を示します。」本稿執筆時点で、国際緊急援助隊の派遣や緊急無償資金協力の決定は公表されていない。",
-      "es": "Japón: el 11 de agosto a las 21:31 JST (07:31 COT) la Primera Ministra, Takaichi Sanae, expresó sus condolencias -«Japón está con Colombia en este momento difícil»-. El Ministro de Asuntos Exteriores, Motegi, emitió el siguiente mensaje: «Con ocasión del sismo ocurrido el 10 de agosto en la República de Colombia, expreso mis sinceras condolencias a las víctimas y mi más sentido pésame a todas las personas afectadas. Asimismo, el Gobierno del Japón está dispuesto a prestar la asistencia que se requiera. Japón manifiesta su firme solidaridad con el pueblo colombiano.» Al momento de redactar no se había anunciado el envío del Equipo Japonés de Socorro en Casos de Desastre ni una cooperación financiera no reembolsable de emergencia."
+      "es": "Japón: el 11 de agosto a las 21:31 JST (07:31 COT) la Primera Ministra, Takaichi Sanae, expresó sus condolencias -«Japón está con Colombia en este momento difícil»-. El Ministro de Asuntos Exteriores, Motegi, emitió el siguiente mensaje: «A raíz del sismo que golpeó a la República de Colombia el 10 de agosto, expreso mis más profundas condolencias a quienes perdieron la vida y hago llegar mi más sentido pésame a todas las personas afectadas. El Gobierno del Japón está asimismo dispuesto a prestar la asistencia necesaria. Japón se solidariza firmemente con el pueblo colombiano.» Al momento de redactar no se había anunciado el envío del Equipo Japonés de Socorro en Casos de Desastre ni una cooperación financiera no reembolsable de emergencia."
     },
     {
       "tier": "official",
