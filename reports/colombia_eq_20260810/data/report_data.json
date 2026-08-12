@@ -13,7 +13,7 @@
     "as_of_ja": "数値は2026年8月12日16:00（コロンビア時間、日本時間13日06:00）現在、発災から約56時間後。UNGRDの集計は14県・403市町村を対象とし、死者239人、負傷3,755人、行方不明287人、建物倒壊140棟、被災24,324世帯（49,214人）、住宅の損壊・全壊は約54,000棟。すべて速報値であり、地方自治体による被害・ニーズ評価（EDAN）は継続中である。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-08-13 05:38 JST",
+    "stamp": "2026-08-13 07:33 JST",
     "update_date": "13/08/2026",
     "title_es": "Terremoto del Chocó de 2026 (Colombia)",
     "subtitle_es": "M7.4, San José del Palmar, departamento del Chocó — 10 de agosto de 2026",
@@ -380,6 +380,14 @@
       "en": "UNGRD's consolidated report covers 14 departments and 403 municipalities: 239 deaths, 3,755 injured, 287 missing, 140 buildings collapsed, 24,324 families (49,214 people) affected, 9,215 homes destroyed and 45,457 seriously damaged. Colombia accepts INSARAG-classified USAR teams from Israel, Ecuador, El Salvador and the United States; El Salvador sends 100 tonnes of relief supplies. A woman is rescued in Pereira after 36 hours under the rubble.",
       "ja": "UNGRDの集計は14県・403市町村を対象に、死者239人、負傷3,755人、行方不明287人、建物倒壊140棟、被災24,324世帯（49,214人）、住宅全壊9,215棟・重大な損壊45,457棟。コロンビアはINSARAG分類のUSARチーム（イスラエル、エクアドル、エルサルバドル、米国）の受け入れを決定。エルサルバドルは救援物資100トンを送付。ペレイラでは瓦礫の下から36時間ぶりに女性が救出された。",
       "es": "El reporte consolidado de la UNGRD cubre 14 departamentos y 403 municipios: 239 muertos, 3.755 heridos, 287 desaparecidos, 140 edificios colapsados, 24.324 familias (49.214 personas) afectadas, 9.215 viviendas destruidas y 45.457 con daños graves. Colombia acepta equipos USAR con clasificación INSARAG de Israel, Ecuador, El Salvador y Estados Unidos; El Salvador envía 100 toneladas de ayuda. Una mujer es rescatada en Pereira tras 36 horas bajo los escombros."
+    },
+    {
+      "time": "12 Aug",
+      "tier": "media",
+      "src": "International media",
+      "en": "Adding up the departmental and city announcements gives 254 deaths - Pereira 101, Cali 95 - ahead of the national consolidation, which media attribute to the central government being slower to update.",
+      "ja": "県・市の発表を積み上げた死者数が254人（ペレイラ101人、カリ95人）となり、全国集計を上回る。報道は、中央政府の更新が遅いことが理由としている。",
+      "es": "La suma de los anuncios departamentales y municipales da 254 muertos -Pereira 101, Cali 95-, por delante de la consolidación nacional, lo que la prensa atribuye a que el gobierno central actualiza más lento."
     }
   ],
   "areas": [
@@ -479,14 +487,14 @@
     {
       "item_en": "Deaths",
       "item_ja": "死者",
-      "value_en": "239 (UNGRD consolidated report, 12 Aug). Medicina Legal had received 202 bodies at 07:00 COT that day, of which 121 identified including five children. Asocapitales counts 188 in the capital cities alone.",
-      "value_ja": "239人（UNGRD集計、8月12日）。同日07:00時点で法医学研究所（Medicina Legal）は202遺体を収容し、うち121人（子ども5人を含む）の身元が判明。Asocapitalesは県都のみで188人と集計。",
-      "source_en": "UNGRD, 12 Aug; INMLCF (Medicina Legal); Asocapitales",
-      "source_ja": "UNGRD（8月12日）、法医学研究所、Asocapitales",
+      "value_en": "239 (UNGRD, 12 Aug). Adding up what the departments and cities have announced gives 254 (Pereira 101, Cali 95); Asocapitales counts 234 in the capital cities; Medicina Legal had received 202 bodies at 07:00 that day, 121 identified. The central government's own balance has been quoted at 181.",
+      "value_ja": "239人（UNGRD、8月12日）。県・市の発表を積み上げると254人（ペレイラ101人、カリ95人）。Asocapitalesは県都で234人、法医学研究所は同日07:00時点で202遺体を収容し121人の身元が判明。中央政府自身の集計は181人とも伝えられている。",
+      "source_en": "UNGRD; departmental and municipal governments via media; Asocapitales; INMLCF",
+      "source_ja": "UNGRD、県・市政府（報道経由）、Asocapitales、法医学研究所",
       "tier": "official",
       "item_es": "Muertos",
-      "value_es": "239 (reporte consolidado de la UNGRD, 12 de agosto). Medicina Legal había recibido 202 cuerpos a las 07:00 COT de ese día, de los cuales 121 identificados, incluidos cinco menores. Asocapitales cuenta 188 solo en las ciudades capitales.",
-      "source_es": "UNGRD, 12 de agosto; Medicina Legal; Asocapitales"
+      "value_es": "239 (UNGRD, 12 de agosto). Sumar lo anunciado por departamentos y ciudades da 254 (Pereira 101, Cali 95); Asocapitales cuenta 234 en las ciudades capitales; Medicina Legal había recibido 202 cuerpos a las 07:00 de ese día, 121 identificados. El balance del gobierno central se ha citado en 181.",
+      "source_es": "UNGRD; gobernaciones y alcaldías vía prensa; Asocapitales; Medicina Legal"
     },
     {
       "item_en": "Injured",
@@ -752,8 +760,8 @@
       "note_es": "73 años"
     }
   ],
-  "deaths_by_area_note_en": "The chart is the President's breakdown of 11 August, which totals 181 and has not been reissued; UNGRD's consolidated figure reached 239 on 12 August across 14 departments and 403 municipalities, so read the chart as the shape of the distribution rather than a current tally. The deaths are concentrated in Risaralda (Pereira) and Valle del Cauca (Cali). Two narrower counts run alongside it: Medicina Legal had received 202 bodies at 07:00 on 12 August, 121 of them identified, and Asocapitales counts 188 in the capital cities alone.",
-  "deaths_by_area_note_ja": "グラフは大統領による8月11日の内訳（合計181人）で、その後更新されていない。UNGRDの集計は8月12日に14県・403市町村で239人に達しており、グラフは現在の集計ではなく分布の形として読むべきである。死者はリサラルダ県（ペレイラ）とバジェ・デル・カウカ県（カリ）に集中している。これと並行して範囲の狭い2つの集計がある。法医学研究所は8月12日07:00時点で202遺体を収容し、うち121人の身元が判明。Asocapitalesは県都のみで188人としている。",
+  "deaths_by_area_note_en": "Five counts of the same thing are in circulation on 12 August, differing by scope and by how fast each updates: 254 from adding up the departmental and city announcements (Pereira 101, Cali 95), 239 from UNGRD across 14 departments and 403 municipalities, 234 from Asocapitales for the capital cities, 202 bodies received by Medicina Legal with 121 identified, and 181 quoted as the central government's own balance. The local figures lead because departments and cities update faster than the national consolidation. Cite UNGRD's 239 as the official national figure; read 254 as where it is heading and 202 as the forensically confirmed floor. The chart is the President's 11 August breakdown (181) and shows the shape of the distribution, not a current tally.",
+  "deaths_by_area_note_ja": "8月12日時点で、同じ死者数について5つの集計が流通している。範囲と更新の速さが異なるためである。県・市の発表の積み上げ254人（ペレイラ101人、カリ95人）、UNGRDの14県・403市町村を対象とする239人、Asocapitalesの県都234人、法医学研究所が収容した202遺体（うち121人の身元判明）、そして中央政府自身の集計とされる181人。地方の数値が先行するのは、県・市の更新が全国集計より速いためである。公式の全国値として引用すべきはUNGRDの239人であり、254人は今後の到達点、202遺体は法医学的に確認された下限として読むのが適切である。グラフは大統領の8月11日の内訳（181人）で、現在の集計ではなく分布の形を示す。",
   "exposure": [
     {
       "mmi": "VIII+",
@@ -1704,6 +1712,13 @@
       "label_es": "Asocapitales — 188 fallecidos y 1.677 heridos en ciudades capitales",
       "url": "https://www.asocapitales.co/actualidad/noticias/ciudades-seguras/terremoto-deja-188-fallecidos-y-1677-heridos-en-ciudades",
       "tier": "official"
+    },
+    {
+      "label_en": "infolibre — at least 254 dead as the search continues",
+      "label_ja": "infolibre 捜索継続、死者少なくとも254人",
+      "label_es": "infolibre — al menos 254 muertos mientras continúa la búsqueda",
+      "url": "https://www.infolibre.es/internacional/terremoto-colombia-deja-254-muertos-continua-busqueda-escombros_1_2235003.html",
+      "tier": "media"
     }
   ],
   "source_policy_en": "Source hierarchy: official > media > TBC. Government and scientific-agency figures are used as primary; media reports are used only where official figures are not yet published and are labelled as such. Items still being verified are marked TBC. Preliminary figures are never replaced by larger unverified numbers.",
@@ -1722,7 +1737,7 @@
     "gem_treq_cali": "images/gem_treq_cali_manual.jpg"
   },
   "photos": [],
-  "deaths_by_area_note_es": "El gráfico es el desglose del Presidente del 11 de agosto, que suma 181 y no se ha vuelto a emitir; la cifra consolidada de la UNGRD llegó a 239 el 12 de agosto en 14 departamentos y 403 municipios, de modo que conviene leerlo como la forma de la distribución y no como un conteo actual. Los muertos se concentran en Risaralda (Pereira) y Valle del Cauca (Cali). Junto a él corren dos conteos más estrechos: Medicina Legal había recibido 202 cuerpos a las 07:00 del 12 de agosto, 121 identificados, y Asocapitales cuenta 188 solo en las ciudades capitales.",
+  "deaths_by_area_note_es": "El 12 de agosto circulan cinco conteos de lo mismo, que difieren por alcance y por la velocidad con que se actualizan: 254 al sumar los anuncios departamentales y municipales (Pereira 101, Cali 95), 239 de la UNGRD en 14 departamentos y 403 municipios, 234 de Asocapitales para las ciudades capitales, 202 cuerpos recibidos por Medicina Legal con 121 identificados, y 181 citado como el balance del gobierno central. Las cifras locales van por delante porque departamentos y ciudades actualizan más rápido que la consolidación nacional. Cítese los 239 de la UNGRD como cifra nacional oficial; léase 254 como hacia dónde va y 202 como el piso confirmado forensemente. El gráfico es el desglose presidencial del 11 de agosto (181) y muestra la forma de la distribución, no un conteo actual.",
   "exposure_note_es": "Estimaciones de exposición del PAGER (versión 5) del USGS. Unos 10,5 millones de personas quedaron expuestas a sacudimiento fuerte o muy fuerte (MMI VI-VII) y unos 34 millones a MMI IV o superior en cuatro países. Son estimaciones de modelo.",
   "source_policy_es": "Jerarquía de fuentes: oficial > prensa > por confirmar. Las cifras del Gobierno y de las entidades científicas se usan como fuente primaria; la información de prensa se emplea únicamente cuando aún no hay cifras oficiales y se identifica como tal. Los elementos en verificación se marcan como «por confirmar». Las cifras preliminares nunca se sustituyen por números mayores sin verificar.",
   "intensity_map": {
