@@ -67,13 +67,13 @@ const UI_ES = {
   "Reported": "Reportado",
   "Officials of the Alcaldía de Santiago de Cali. City figures; they are not a subset of any national cut-off.": "Funcionarios de la Alcaldía de Santiago de Cali. Son cifras de la ciudad; no son el desglose de ningún corte nacional.",
   "15,568": "15.568",
-  "2,500+": "más de 2.500",
+  "3,755": "3.755",
   "Missing": "Desaparecidos",
   "Missing Persons: two counts": "Personas desaparecidas: dos conteos",
   "Reported to the authorities": "Reportados a las autoridades",
   "Unresolved on the citizen platform": "Sin resolver en la plataforma ciudadana",
   "Located through the platform": "Localizados a través de la plataforma",
-  "195": "195",
+  "287": "287",
   "Pre-event Risk Assessment: Santiago de Cali": "Evaluación del riesgo previa al evento: Santiago de Cali",
   "Modelled scenario (GEM-TREQ, 2022)": "Escenario modelado (GEM-TREQ, 2022)",
   "Both agencies report a strike-slip mechanism.": "Ambas entidades reportan un mecanismo de falla de rumbo.",
@@ -181,6 +181,7 @@ const CELL = {
   "SGC": { ja: "SGC", es: "SGC" },
   "UNGRD": { ja: "UNGRD", es: "UNGRD" },
   "UNGRD / Presidency": { ja: "UNGRD／大統領府", es: "UNGRD / Presidencia" },
+  "UNGRD / Cancillería": { ja: "UNGRD／コロンビア外務省", es: "UNGRD / Cancillería" },
   "Japan (MOFA)": { ja: "日本（外務省）", es: "Japón (MOFA)" },
   "MOFA (Foreign Minister Motegi) / Prime Minister of Japan": { ja: "外務省（茂木外務大臣）／内閣総理大臣", es: "MOFA (Ministro Motegi) / Primera Ministra del Japón" },
   "UN / OCHA": { ja: "国連／OCHA", es: "ONU / OCHA" },
@@ -628,9 +629,9 @@ s = newSlide();
 heading(s, "Human Damage", "人的被害");
 {
   const big = [
-    [T("Deaths", "死者"), "224+", RED],
-    [T("Injured", "負傷者"), T("2,500+", "2,500人超"), "9A3B12"],
-    [T("Missing", "行方不明"), T("195", "195"), NAVY],
+    [T("Deaths", "死者"), "239", RED],
+    [T("Injured", "負傷者"), T("3,755", "3,755"), "9A3B12"],
+    [T("Missing", "行方不明"), T("287", "287"), NAVY],
   ];
   big.forEach((b, i) => {
     const x = 0.4 + i * 4.2;
@@ -666,7 +667,7 @@ s = newSlide();
 heading(s, "Missing Persons: two counts", "行方不明者：2つの集計");
 {
   const big = [
-    [T("Reported to the authorities", "当局への届出"), "195", RED],
+    [T("Reported to the authorities", "当局への届出"), "287", RED],
     [T("Unresolved on the citizen platform", "市民プラットフォームの未解決"), "3,653", "9A3B12"],
     [T("Located through the platform", "同プラットフォームで確認済み"), "429", NAVY],
   ];
@@ -754,7 +755,7 @@ s = newSlide();
 heading(s, "International Support", "国際的な支援");
 bulletsTier(s, 0.4, 1.12, 12.5, 4.4, d.support_international, { base: 11.5 });
 noteBox(s, 0.4, 5.42, 12.5, 1.38, L(d, "support_intl_note_title"), L(d, "support_intl_note"));
-srcLine(s, [linkBy("El Tiempo — list"), linkBy("UN in Colombia"), linkBy("Copernicus"), linkBy("ReliefWeb")]);
+srcLine(s, [linkBy("El Tiempo — SAR teams"), linkBy("El Tiempo — list"), linkBy("UN in Colombia"), linkBy("Copernicus")]);
 footer(s);
 
 /* ============ 12. Satellite / EO support ============ */
