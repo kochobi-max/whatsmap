@@ -13,7 +13,7 @@
     "as_of_ja": "数値は2026年8月11日17:00（コロンビア時間、日本時間8月12日07:00）現在、発災から約33時間後。UNGRDの状況報告は死者182人・負傷2,542人・行方不明189人、大統領の集計は死者181人、県・市の発表を積み上げると240人となる。本報告は3つとも併記する。すべて速報値であり、なお増加中である。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-08-12 08:52 JST",
+    "stamp": "2026-08-12 09:08 JST",
     "update_date": "12/08/2026",
     "title_es": "Terremoto del Chocó de 2026 (Colombia)",
     "subtitle_es": "M7.4, San José del Palmar, departamento del Chocó — 10 de agosto de 2026",
@@ -332,6 +332,14 @@
       "en": "The SGC revises its solution for the mainshock to M7.4 at 103 km depth, 4.99 N 76.29 W, located with 119 stations and 208 phases. Its first bulletin had given M6.6 at 79 km and its second 7.4 at 96 km with 69 stations.",
       "ja": "SGCが本震の解をM7.4・深さ103km、北緯4.99度・西経76.29度に改訂。119観測点・208フェーズで決定。第1報はM6.6・深さ79km、第2報は7.4・深さ96km（69観測点）であった。",
       "es": "El SGC revisa su solución del sismo principal a M7.4 a 103 km de profundidad, 4,99 N 76,29 O, localizada con 119 estaciones y 208 fases. Su primer boletín había dado M6.6 a 79 km y el segundo 7.4 a 96 km con 69 estaciones."
+    },
+    {
+      "time": "11 Aug",
+      "tier": "official",
+      "src": "Japan (MOFA)",
+      "en": "Japan's Prime Minister posts condolences and the Foreign Minister issues a message saying the Government of Japan is ready to provide the assistance required.",
+      "ja": "日本の内閣総理大臣が哀悼とお見舞いを投稿し、外務大臣メッセージが、必要とされる支援を提供する用意がある旨を表明。",
+      "es": "La Primera Ministra del Japón expresa sus condolencias y el Ministro de Asuntos Exteriores emite un mensaje señalando que el Gobierno del Japón está dispuesto a prestar la asistencia que se requiera."
     },
     {
       "time": "12 Aug",
@@ -838,6 +846,13 @@
     },
     {
       "tier": "official",
+      "source": "MOFA / Prime Minister of Japan",
+      "en": "Japan: on 11 August the Prime Minister, Takaichi Sanae, posted condolences - “Japan stands with Colombia in this difficult time” - and the Foreign Minister issued a message stating that the Government of Japan is ready to provide the assistance required. No dispatch of the Japan Disaster Relief team or emergency grant aid had been announced at the time of writing.",
+      "ja": "日本：8月11日、高市早苗内閣総理大臣が「亡くなられた方々に哀悼の誠をささげる」「この困難な時に日本はコロンビアとともにある」と投稿。外務大臣メッセージは、日本政府として必要とされる支援を提供する用意がある旨を表明した。本稿執筆時点で、国際緊急援助隊の派遣や緊急無償資金協力の決定は公表されていない。",
+      "es": "Japón: el 11 de agosto la Primera Ministra, Takaichi Sanae, expresó sus condolencias -«Japón está con Colombia en este momento difícil»- y el Ministro de Asuntos Exteriores emitió un mensaje señalando que el Gobierno del Japón está dispuesto a prestar la asistencia que se requiera. Al momento de redactar no se había anunciado el envío del Equipo Japonés de Socorro en Casos de Desastre ni una cooperación financiera no reembolsable de emergencia."
+    },
+    {
+      "tier": "official",
       "source": "Copernicus EMS Rapid Mapping",
       "en": "Copernicus EMS Rapid Mapping activated as EMSR916 'Earthquake in Colombia' at 17:13 UTC on 10 August (12:13 COT), requested by EC Services / DG ECHO, to provide earthquake damage assessment emergency mapping. Status ongoing, with 3 areas of interest and 3 products at the time of writing. The activation reason names Quibdó, Pereira, Manizales and Cali as cities with significant damage and collapsed buildings.",
       "ja": "コペルニクス緊急管理サービスのラピッドマッピングが、8月10日17:13 UTC（現地12:13）に EMSR916「Earthquake in Colombia」として発動。要請は欧州委員会サービス／DG ECHO、目的は地震被害評価の緊急マッピング。本稿執筆時点で対応中、関心領域3・成果物3。発動理由には、著しい被害と建物倒壊のあった都市としてキブド、ペレイラ、マニサレス、カリが挙げられている。",
@@ -856,13 +871,6 @@
       "ja": "国際NGOが対応を開始：ダイレクト・リリーフとアメリケアズ（医療物資）、セーブ・ザ・チルドレン（子どもの保護・教育）、国際救援委員会（チョコ県の震央付近で調査）、コンボイ・オブ・ホープ（救援物資）。",
       "source": "NGO announcements",
       "es": "ONG internacionales movilizadas: Direct Relief y Americares (insumos médicos), Save the Children (protección de la niñez y educación), International Rescue Committee (evaluación cerca del epicentro, en el Chocó) y Convoy of Hope (ayuda humanitaria)."
-    },
-    {
-      "tier": "tbc",
-      "en": "No announcement by the Government of Japan (message of condolence, emergency grant aid or JDR dispatch) had been identified at the time of writing.",
-      "ja": "本稿執筆時点で、日本政府による対応（お見舞い、緊急無償資金協力、国際緊急援助隊の派遣等）の発表は確認できていない。",
-      "source": "MOFA / JICA (not confirmed)",
-      "es": "Al momento de redactar este informe no se identificó ningún anuncio del Gobierno de Japón (mensaje de condolencias, cooperación financiera no reembolsable de emergencia o envío del Equipo Japonés de Socorro en Casos de Desastre)."
     }
   ],
   "satellite": [
@@ -1511,6 +1519,20 @@
       "label_es": "Semana — total del SGC: 103 réplicas hasta las 15:00 del 11 de agosto",
       "url": "https://www.semana.com/tecnologia/articulo/servicio-geologico-revela-el-numero-total-de-replicas-que-ha-habido-en-colombia-tras-fuerte-terremoto-que-estremecio-al-pais/202641/",
       "tier": "media"
+    },
+    {
+      "label_en": "MOFA Japan — Foreign Minister's message on the earthquake in Colombia",
+      "label_ja": "外務省 コロンビア共和国における地震について（外務大臣メッセージ）",
+      "label_es": "MOFA Japón — mensaje del Ministro de Asuntos Exteriores sobre el sismo en Colombia",
+      "url": "https://www.mofa.go.jp/mofaj/la_c/sa/co/pageit_000001_00001.html",
+      "tier": "official"
+    },
+    {
+      "label_en": "MOFA Japan on X — post of 11 August",
+      "label_ja": "外務省（X）8月11日の投稿",
+      "label_es": "MOFA Japón en X — publicación del 11 de agosto",
+      "url": "https://x.com/MofaJapan_jp/status/2087155064855261537",
+      "tier": "official"
     }
   ],
   "source_policy_en": "Source hierarchy: official > media > TBC. Government and scientific-agency figures are used as primary; media reports are used only where official figures are not yet published and are labelled as such. Items still being verified are marked TBC. Preliminary figures are never replaced by larger unverified numbers.",

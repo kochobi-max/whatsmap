@@ -92,7 +92,7 @@ const UI_ES = {
   "Seismotectonic Setting: an intraslab earthquake": "Marco sismotectónico: un sismo intraplaca dentro de la losa",
   "Schematic cross-section (ADRC)": "Corte esquemático (ADRC)",
   "Overview of the Earthquake & Response Measures": "Resumen del sismo y medidas de respuesta",
-  "Chronology of the Response (10-11 August)": "Cronología de la respuesta (10-11 de agosto)",
+  "Chronology of the Response (10-12 August)": "Cronología de la respuesta (10-12 de agosto)",
   "Times are Colombia time (COT, UTC-5). The earthquake occurred at 07:34 COT = 21:34 JST on 10 August.": "Las horas están en hora de Colombia (COT, UTC-5). El sismo ocurrió a las 07:34 COT = 21:34 JST del 10 de agosto.",
   "Time": "Hora",
   "Action": "Hecho",
@@ -175,6 +175,8 @@ const CELL = {
   "SGC": { ja: "SGC", es: "SGC" },
   "UNGRD": { ja: "UNGRD", es: "UNGRD" },
   "UNGRD / Presidency": { ja: "UNGRD／大統領府", es: "UNGRD / Presidencia" },
+  "Japan (MOFA)": { ja: "日本（外務省）", es: "Japón (MOFA)" },
+  "MOFA / Prime Minister of Japan": { ja: "外務省／内閣総理大臣", es: "MOFA / Primera Ministra del Japón" },
   "Mayor of Cali": { ja: "カリ市長", es: "Alcaldía de Cali" },
   "Mayor of Manizales": { ja: "マニサレス市長", es: "Alcaldía de Manizales" },
   "Aerocivil / media": { ja: "民間航空当局／報道", es: "Aerocivil / prensa" },
@@ -185,6 +187,7 @@ const CELL = {
   "11 Aug": { ja: "8月11日", es: "11 ago." },
   "11 Aug PM": { ja: "8月11日 午後", es: "11 ago. tarde" },
   "11 Aug 14:20 UTC": { ja: "8月11日 14:20 UTC", es: "11 ago. 14:20 UTC" },
+  "12 Aug": { ja: "8月12日", es: "12 ago." },
   "Evening": { ja: "夕方", es: "Noche" },
   "International media": { ja: "国際報道", es: "Prensa internacional" },
   "Charter / Copernicus": { ja: "チャーター／コペルニクス", es: "Carta / Copernicus" },
@@ -457,12 +460,12 @@ footer(s);
 
 /* ============ 4. Chronology of response ============ */
 {
-  const PER = 9;
+  const PER = 11;
   const pages = chunk(d.timeline, PER);
   pages.forEach((rows, pi) => {
     s = newSlide();
     const suffix = pages.length > 1 ? T(` (${pi + 1}/${pages.length})`, `（${pi + 1}/${pages.length}）`) : "";
-    heading(s, "Chronology of the Response (10-11 August)", "対応の時系列（8月10〜11日）", suffix);
+    heading(s, "Chronology of the Response (10-12 August)", "対応の時系列（8月10〜12日）", suffix);
     subNote(s, "Times are Colombia time (COT, UTC-5). The earthquake occurred at 07:34 COT = 21:34 JST on 10 August.",
       "時刻はコロンビア時間（COT、UTC-5）。地震発生は8月10日07:34 COT＝同日21:34 JST。");
     const rowsT = [[th(T("Time", "時刻")), th(T("Action", "事項")), th(T("Source", "出典"))]];
@@ -471,7 +474,7 @@ footer(s);
       td(LL(r), i, { fontSize: JA ? 9 : 9.5 }),
       td(C(r.src), i, { fontSize: 8.5, bold: true, color: tierColor(r.tier), align: "center" }),
     ]));
-    s.addTable(rowsT, { x: 0.4, y: 1.34, w: 12.5, colW: [1.4, 9.1, 2.0], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.50, valign: "middle" });
+    s.addTable(rowsT, { x: 0.4, y: 1.34, w: 12.5, colW: [1.4, 9.1, 2.0], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.45, valign: "middle" });
     srcLine(s, [linkBy("USGS - M 7.4"), linkBy("UNGRD"), linkBy("CNN"), linkBy("Colombia One - First")]);
     footer(s);
   });
@@ -878,13 +881,12 @@ footer(s);
 
 /* ============ 17. Links & sources ============ */
 {
-  // The first page carries the source-policy block, so it holds one row fewer.
+  // Split evenly so the last page is never left with a handful of rows; 14 is
+  // what fits below the source-policy block on the first page.
+  const nPages = Math.max(1, Math.ceil(d.links.length / 14));
+  const per = Math.ceil(d.links.length / nPages);
   const pages = [];
-  for (let i = 0; i < d.links.length; ) {
-    const n = pages.length === 0 ? 15 : 17;
-    pages.push(d.links.slice(i, i + n));
-    i += n;
-  }
+  for (let i = 0; i < d.links.length; i += per) pages.push(d.links.slice(i, i + per));
   pages.forEach((rows, pi) => {
     s = newSlide();
     const suffix = pages.length > 1 ? T(` (${pi + 1}/${pages.length})`, `（${pi + 1}/${pages.length}）`) : "";
@@ -901,7 +903,7 @@ footer(s);
       td(tierLabel(r.tier), i, { fontSize: 8.5, bold: true, color: tierColor(r.tier), align: "center" }),
       td(r.url, i, { fontSize: 8, color: "0563C1", hyperlink: { url: r.url } }),
     ]));
-    s.addTable(rowsT, { x: 0.4, y: pi === 0 ? 1.68 : 1.12, w: 12.5, colW: [4.6, 0.9, 7.0], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.32, valign: "middle" });
+    s.addTable(rowsT, { x: 0.4, y: pi === 0 ? 1.68 : 1.12, w: 12.5, colW: [4.6, 0.9, 7.0], border: { type: "solid", color: LINE, pt: 0.5 }, fontFace: FONT, rowH: 0.30, valign: "middle" });
     footer(s);
   });
 }
