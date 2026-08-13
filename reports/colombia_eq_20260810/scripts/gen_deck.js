@@ -67,13 +67,13 @@ const UI_ES = {
   "Reported": "Reportado",
   "Officials of the Alcaldía de Santiago de Cali. City figures; they are not a subset of any national cut-off.": "Funcionarios de la Alcaldía de Santiago de Cali. Son cifras de la ciudad; no son el desglose de ningún corte nacional.",
   "15,568": "15.568",
-  "3,755": "3.755",
+  "3,494": "3.494",
   "Missing": "Desaparecidos",
   "Missing Persons: two counts": "Personas desaparecidas: dos conteos",
   "Reported to the authorities": "Reportados a las autoridades",
   "Unresolved on the citizen platform": "Sin resolver en la plataforma ciudadana",
   "Located through the platform": "Localizados a través de la plataforma",
-  "287": "287",
+  "496": "496",
   "Pre-event Risk Assessment: Santiago de Cali": "Evaluación del riesgo previa al evento: Santiago de Cali",
   "Modelled scenario (GEM-TREQ, 2022)": "Escenario modelado (GEM-TREQ, 2022)",
   "Both agencies report a strike-slip mechanism.": "Ambas entidades reportan un mecanismo de falla de rumbo.",
@@ -200,6 +200,7 @@ const CELL = {
   "11 Aug 14:20 UTC": { ja: "8月11日 14:20 UTC", es: "11 ago. 14:20 UTC" },
   "11 Aug 07:31": { ja: "8月11日 07:31", es: "11 ago. 07:31" },
   "12 Aug": { ja: "8月12日", es: "12 ago." },
+  "12 Aug PM": { ja: "8月12日 午後", es: "12 ago. tarde" },
   "Evening": { ja: "夕方", es: "Noche" },
   "International media": { ja: "国際報道", es: "Prensa internacional" },
   "Charter / Copernicus": { ja: "チャーター／コペルニクス", es: "Carta / Copernicus" },
@@ -629,9 +630,9 @@ s = newSlide();
 heading(s, "Human Damage", "人的被害");
 {
   const big = [
-    [T("Deaths", "死者"), "239", RED],
-    [T("Injured", "負傷者"), T("3,755", "3,755"), "9A3B12"],
-    [T("Missing", "行方不明"), T("287", "287"), NAVY],
+    [T("Deaths", "死者"), "265", RED],
+    [T("Injured", "負傷者"), T("3,494", "3,494"), "9A3B12"],
+    [T("Missing", "行方不明"), T("496", "496"), NAVY],
   ];
   big.forEach((b, i) => {
     const x = 0.4 + i * 4.2;
@@ -667,7 +668,7 @@ s = newSlide();
 heading(s, "Missing Persons: two counts", "行方不明者：2つの集計");
 {
   const big = [
-    [T("Reported to the authorities", "当局への届出"), "287", RED],
+    [T("Reported to the authorities", "当局への届出"), "496", RED],
     [T("Unresolved on the citizen platform", "市民プラットフォームの未解決"), "3,653", "9A3B12"],
     [T("Located through the platform", "同プラットフォームで確認済み"), "429", NAVY],
   ];
