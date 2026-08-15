@@ -9,17 +9,17 @@
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
     "glide": "EQ-2026-000146-COL",
-    "as_of_en": "Figures as of UNGRD's running balance of 14-15 Aug 2026 COT, about five days after the earthquake: 288 deaths, 4,018 injured, 202 missing, 354 rescued alive, 45,523 families (102,263 people) affected in 15 departments and 426 municipalities, 12,828 homes destroyed and 73,455 damaged, 121 buildings collapsed. Several counts have been revised downwards as the damage and needs assessment consolidates duplicate records. All figures are preliminary.",
-    "as_of_ja": "数値は2026年8月14〜15日（コロンビア時間）のUNGRD集計現在、発災から約5日後。死者288人、負傷4,018人、行方不明202人、救出354人、被災45,523世帯（102,263人）、15県・426市町村。住宅全壊12,828棟・損壊73,455棟、建物倒壊121棟。被害評価調査で重複記録の整理が進み、いくつかの項目は下方修正されている。すべて速報値。",
+    "as_of_en": "Figures as of UNGRD's running balance of 14-15 Aug 2026 COT, about five days after the earthquake: 288 deaths, 4,018 injured, 202 missing, 354 rescued alive, 45,523 families (102,263 people) affected in 15 departments and 426 municipalities, 12,828 homes destroyed and 73,455 damaged, 121 buildings collapsed. Several counts have been revised downwards as the damage and needs assessment consolidates duplicate records. All figures are preliminary. The SGC had located 184 aftershocks by 07:00 on 14 August.",
+    "as_of_ja": "数値は2026年8月14〜15日（コロンビア時間）のUNGRD集計現在、発災から約5日後。死者288人、負傷4,018人、行方不明202人、救出354人、被災45,523世帯（102,263人）、15県・426市町村。住宅全壊12,828棟・損壊73,455棟、建物倒壊121棟。被害評価調査で重複記録の整理が進み、いくつかの項目は下方修正されている。すべて速報値。　SGCは8月14日07:00までに余震184回を決定している。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-08-15 09:34 JST",
+    "stamp": "2026-08-15 17:07 JST",
     "update_date": "15/08/2026",
     "title_es": "Terremoto del Chocó de 2026 (Colombia)",
     "subtitle_es": "M7.4, San José del Palmar, departamento del Chocó — 10 de agosto de 2026",
     "edition_es": "8.º informe",
     "prepared_by_es": "Centro Asiático para la Reducción de Desastres (ADRC)",
-    "as_of_es": "Cifras del balance de la UNGRD del 14-15 de agosto de 2026 (COT), unos cinco días después del sismo: 288 muertos, 4.018 heridos, 202 desaparecidos, 354 rescatados con vida, 45.523 familias (102.263 personas) afectadas en 15 departamentos y 426 municipios, 12.828 viviendas destruidas y 73.455 averiadas, 121 edificios colapsados. Varios conteos se han revisado a la baja a medida que la evaluación de daños depura registros duplicados. Todas las cifras son preliminares.",
+    "as_of_es": "Cifras del balance de la UNGRD del 14-15 de agosto de 2026 (COT), unos cinco días después del sismo: 288 muertos, 4.018 heridos, 202 desaparecidos, 354 rescatados con vida, 45.523 familias (102.263 personas) afectadas en 15 departamentos y 426 municipios, 12.828 viviendas destruidas y 73.455 averiadas, 121 edificios colapsados. Varios conteos se han revisado a la baja a medida que la evaluación de daños depura registros duplicados. Todas las cifras son preliminares. El SGC había localizado 184 réplicas hasta las 07:00 del 14 de agosto.",
     "disseminate_es": "Informe multilingüe (EN/JA/ES) para difusión nacional e internacional. Se da prioridad a las fuentes oficiales; los vacíos se completan con información de prensa debidamente identificada."
   },
   "event": {
@@ -436,6 +436,22 @@
       "en": "Running balance: 288 dead, 4,018 injured, 202 missing, 354 rescued alive; 45,523 families (102,263 people) affected in 15 departments and 426 municipalities; 12,828 homes destroyed and 73,455 damaged; 121 buildings collapsed; 240 health, 2,205 educational and 1,208 community facilities; 210 roads, 73 aqueducts, 44 road bridges, 13 footbridges and five airports. The falls against the 09:00 cut are duplicate assessment records being consolidated.",
       "ja": "更新集計。死者288人、負傷4,018人、行方不明202人、救出354人。被災45,523世帯・102,263人、15県・426市町村。住宅全壊12,828棟・損壊73,455棟、建物倒壊121棟。医療240か所、教育2,205か所、コミュニティ1,208か所。道路210路線、上水道73系統、道路橋44橋、歩道橋13橋、空港5か所。09:00時点からの減少は、被害評価の重複記録が整理された結果である。",
       "es": "Balance actualizado: 288 fallecidos, 4.018 heridos, 202 desaparecidos, 354 rescatados con vida; 45.523 familias (102.263 personas) afectadas en 15 departamentos y 426 municipios; 12.828 viviendas destruidas y 73.455 averiadas; 121 edificios colapsados; 240 sedes de salud, 2.205 educativas y 1.208 comunitarias; 210 vías, 73 acueductos, 44 puentes vehiculares, 13 peatonales y cinco aeropuertos. Las bajas frente al corte de las 09:00 corresponden a la consolidación de registros duplicados de la evaluación."
+    },
+    {
+      "time": "14 Aug 07:00",
+      "tier": "official",
+      "src": "SGC",
+      "en": "SGC reports 184 aftershocks located since the mainshock, 15 of them above M3.0 and 2 above M4.0.",
+      "ja": "SGCが、本震以降に決定した余震は184回、うちM3.0超が15回、M4.0超が2回と報告。",
+      "es": "El SGC reporta 184 réplicas localizadas desde el sismo principal, 15 de ellas por encima de M3,0 y 2 por encima de M4,0."
+    },
+    {
+      "time": "15 Aug",
+      "tier": "media",
+      "src": "International media",
+      "en": "Search continues for the missing while more than 100,000 people affected await assistance; in El Cairo (Valle del Cauca) 80% of the houses are reported damaged.",
+      "ja": "行方不明者の捜索が続く一方、10万人を超える被災者が支援を待つ。バジェ・デル・カウカ県エル・カイロでは住宅の80％が被害を受けたと報じられる。",
+      "es": "Continúa la búsqueda de los desaparecidos mientras más de 100.000 damnificados esperan asistencia; en El Cairo (Valle del Cauca) se reporta el 80 % de las casas afectadas."
     }
   ],
   "areas": [
@@ -619,13 +635,13 @@
     {
       "item_en": "Homes damaged or destroyed",
       "item_ja": "住宅被害（合計）",
-      "value_en": "86,283: 12,828 destroyed and 73,455 damaged (UNGRD, 14-15 Aug). The 09:00 cut on 14 Aug gave 13,077 destroyed and 79,108 damaged, and 13 Aug gave 87,457 in total.",
-      "value_ja": "86,283棟。全壊12,828棟、損壊73,455棟（UNGRD、8月14〜15日）。8月14日09:00時点では全壊13,077棟・損壊79,108棟、13日時点では合計87,457棟であった。",
+      "value_en": "86,283: 12,828 destroyed and 73,455 damaged (UNGRD, 14-15 Aug). The 09:00 cut on 14 Aug gave 13,077 destroyed and 79,108 damaged, and 13 Aug gave 87,457 in total. In El Cairo, a coffee town in the mountains of Valle del Cauca, 80% of the houses were damaged.",
+      "value_ja": "86,283棟。全壊12,828棟、損壊73,455棟（UNGRD、8月14〜15日）。8月14日09:00時点では全壊13,077棟・損壊79,108棟、13日時点では合計87,457棟であった。　バジェ・デル・カウカ県山間部のコーヒー産地エル・カイロでは、住宅の80％が被害を受けた。",
       "source_en": "UNGRD, 14-15 Aug",
       "source_ja": "UNGRD（8月14〜15日）",
       "tier": "official",
       "item_es": "Viviendas averiadas o destruidas",
-      "value_es": "86.283: 12.828 destruidas y 73.455 averiadas (UNGRD, 14-15 de agosto). El corte de las 09:00 del 14 de agosto daba 13.077 destruidas y 79.108 averiadas, y el 13 de agosto el total era 87.457.",
+      "value_es": "86.283: 12.828 destruidas y 73.455 averiadas (UNGRD, 14-15 de agosto). El corte de las 09:00 del 14 de agosto daba 13.077 destruidas y 79.108 averiadas, y el 13 de agosto el total era 87.457. En El Cairo, pueblo cafetero en las montañas del Valle del Cauca, el 80 % de las casas resultó afectado.",
       "source_es": "UNGRD, 14-15 de agosto"
     },
     {
@@ -865,8 +881,8 @@
   "exposure_note_en": "USGS PAGER (version 5) exposure estimates. About 10.5 million people were exposed to Strong or Very Strong shaking (MMI VI-VII) and about 34 million to MMI IV or above across four countries. These are model estimates.",
   "exposure_note_ja": "USGS PAGER（第5版）による曝露推計。約1,050万人がMMI VI〜VII（強い〜非常に強い）の揺れに、4か国で約3,400万人がMMI IV以上の揺れにさらされた。いずれもモデル推計値。",
   "aftershocks": {
-    "note_en": "The SGC located 147 events in the 34 hours after the mainshock. Within that window only one exceeded M4.0 - the M4.8 that followed 44 minutes later - and 92% were below M3.0; the M4.2 of 13 August is the second. No aftershock has come close to the mainshock in size. Ninety-six of the 147 lie at 60 km depth or more within 80 km of the epicentre: that subset is the intraslab sequence itself, and its cumulative curve tracks the SGC's published totals. The remainder is background seismicity the same catalogue records, which is why a raw count runs ahead of the official figure. A modest, quickly-decaying sequence is what an intermediate-depth rupture is expected to produce - but the 13 August event shows that shaking able to stop rescue work continues.",
-    "note_ja": "SGCは本震後34時間に147回の地震を決定した。この期間にM4.0を超えたのは本震44分後のM4.8のみで、92％はM3.0未満であった。8月13日のM4.2が2回目である。本震に匹敵する規模の余震は起きていない。147回のうち96回は深さ60km以上・震央から80km以内にあり、この部分がスラブ内の余震活動そのものである。その累積曲線はSGC公表の回数とよく一致する。残りは同じカタログに含まれる背景的な地震活動であり、生の件数が公式の余震回数を上回るのはこのためである。規模が小さく減衰の速い活動は、やや深発の地震で想定される経過である。ただし8月13日の地震は、捜索救助を止めるほどの揺れがなお続いていることを示す。",
+    "note_en": "The SGC located 147 events in the 34 hours after the mainshock. Within that window only one exceeded M4.0 - the M4.8 that followed 44 minutes later - and 92% were below M3.0; the M4.2 of 13 August is the second. No aftershock has come close to the mainshock in size. Ninety-six of the 147 lie at 60 km depth or more within 80 km of the epicentre: that subset is the intraslab sequence itself, and its cumulative curve tracks the SGC's published totals. The remainder is background seismicity the same catalogue records, which is why a raw count runs ahead of the official figure. A modest, quickly-decaying sequence is what an intermediate-depth rupture is expected to produce - but the 13 August event shows that shaking able to stop rescue work continues. By 07:00 on 14 August the SGC's published total had reached 184, of which 15 above M3.0 and 2 above M4.0 - a rate consistent with the catalogue extract and with normal decay.",
+    "note_ja": "SGCは本震後34時間に147回の地震を決定した。この期間にM4.0を超えたのは本震44分後のM4.8のみで、92％はM3.0未満であった。8月13日のM4.2が2回目である。本震に匹敵する規模の余震は起きていない。147回のうち96回は深さ60km以上・震央から80km以内にあり、この部分がスラブ内の余震活動そのものである。その累積曲線はSGC公表の回数とよく一致する。残りは同じカタログに含まれる背景的な地震活動であり、生の件数が公式の余震回数を上回るのはこのためである。規模が小さく減衰の速い活動は、やや深発の地震で想定される経過である。ただし8月13日の地震は、捜索救助を止めるほどの揺れがなお続いていることを示す。　8月14日07:00までにSGCの公表値は184回に達し、うちM3.0超が15回、M4.0超が2回である。この推移はカタログ抽出および通常の減衰と整合する。",
     "rows": [
       {
         "when": "10 Aug 08:18 COT (13:18 UTC)",
@@ -901,15 +917,15 @@
         "note_es": "San José del Palmar, profundidad 95 km, a unos 20 km del epicentro: el mismo volumen sismogénico del sismo principal. Se sintió hasta en Bogotá y detuvo temporalmente las labores de búsqueda y rescate."
       },
       {
-        "when": "to 11 Aug 17:24 COT",
-        "mag": "147 located",
+        "when": "to 14 Aug 07:00 COT",
+        "mag": "184 located",
         "tier": "official",
-        "note_en": "SGC catalogue, 34 hours after the mainshock: 60 below M2.0, 76 at M2.0-2.9, 10 at M3.0-3.9, one at M4.0-4.9",
-        "note_ja": "SGCカタログ、本震の34時間後まで。M2.0未満60回、M2.0〜2.9が76回、M3.0〜3.9が10回、M4.0〜4.9が1回",
-        "note_es": "Catálogo del SGC, 34 horas después del sismo principal: 60 por debajo de M2,0, 76 entre M2,0 y 2,9, 10 entre M3,0 y 3,9, uno entre M4,0 y 4,9"
+        "note_en": "SGC running total four days on: 184 aftershocks, 15 above M3.0 and 2 above M4.0. The published total was 103 at 15:00 on 11 August; the catalogue extract used for the figure holds 147 events to 17:24 on 11 August.",
+        "note_ja": "本震から4日後のSGC累計。余震184回、うちM3.0超15回、M4.0超2回。8月11日15:00時点の公表値は103回。図に用いたカタログ抽出は8月11日17:24までの147回である。",
+        "note_es": "Total acumulado del SGC a cuatro días: 184 réplicas, 15 por encima de M3,0 y 2 por encima de M4,0. El total publicado era 103 a las 15:00 del 11 de agosto; el extracto del catálogo usado en la figura contiene 147 eventos hasta las 17:24 del 11 de agosto."
       }
     ],
-    "note_es": "El SGC localizó 147 eventos en las 34 horas posteriores al sismo principal. En esa ventana solo uno superó M4,0 -el M4,8 de 44 minutos después- y el 92 % estuvo por debajo de M3,0; el M4,2 del 13 de agosto es el segundo. Ninguna réplica se ha acercado al tamaño del sismo principal. Noventa y seis de los 147 se ubican a 60 km de profundidad o más y a menos de 80 km del epicentro: ese subconjunto es la secuencia intraplaca, y su curva acumulada sigue los totales publicados por el SGC. El resto es sismicidad de fondo del mismo catálogo, y por eso un conteo bruto va por delante de la cifra oficial. Una secuencia moderada y de decaimiento rápido es lo esperable en una ruptura de profundidad intermedia, pero el evento del 13 de agosto muestra que sigue habiendo sacudidas capaces de detener el rescate.",
+    "note_es": "El SGC localizó 147 eventos en las 34 horas posteriores al sismo principal. En esa ventana solo uno superó M4,0 -el M4,8 de 44 minutos después- y el 92 % estuvo por debajo de M3,0; el M4,2 del 13 de agosto es el segundo. Ninguna réplica se ha acercado al tamaño del sismo principal. Noventa y seis de los 147 se ubican a 60 km de profundidad o más y a menos de 80 km del epicentro: ese subconjunto es la secuencia intraplaca, y su curva acumulada sigue los totales publicados por el SGC. El resto es sismicidad de fondo del mismo catálogo, y por eso un conteo bruto va por delante de la cifra oficial. Una secuencia moderada y de decaimiento rápido es lo esperable en una ruptura de profundidad intermedia, pero el evento del 13 de agosto muestra que sigue habiendo sacudidas capaces de detener el rescate. Hasta las 07:00 del 14 de agosto el total publicado por el SGC llegó a 184, de las cuales 15 por encima de M3,0 y 2 por encima de M4,0, un ritmo coherente con el extracto del catálogo y con un decaimiento normal.",
     "spread_title_en": "How much the agencies differ",
     "spread_title_ja": "機関による解のばらつき",
     "spread_title_es": "Cuánto difieren las entidades",
@@ -1872,6 +1888,20 @@
       "label_ja": "El Tiempo なぜ海外の救助隊を必要としなかったのか 国内23チーム",
       "label_es": "El Tiempo — por qué Colombia no necesitó rescatistas extranjeros: 23 equipos nacionales",
       "url": "https://www.eltiempo.com/vida/medio-ambiente/por-que-colombia-no-necesito-rescatistas-extranjeros-tras-el-terremoto-el-pais-cuenta-con-23-equipos-con-personal-que-hace-parte-de-la-elite-global-3577677",
+      "tier": "media"
+    },
+    {
+      "label_en": "El Tiempo — SGC: 184 aftershocks since 10 August (14 Aug)",
+      "label_ja": "El Tiempo SGC 8月10日以降の余震184回（8月14日）",
+      "label_es": "El Tiempo — SGC: 184 réplicas desde el 10 de agosto (14 de agosto)",
+      "url": "https://www.eltiempo.com/amp/vida/medio-ambiente/terremoto-en-colombia-desde-el-sismo-del-10-de-agosto-se-han-registrado-184-replicas-reporta-este-viernes-14-el-servicio-geologico-colombiano-3578360",
+      "tier": "media"
+    },
+    {
+      "label_en": "CNN en Español — live coverage of rescue and recovery",
+      "label_ja": "CNNスペイン語 救助・復旧のライブ報道",
+      "label_es": "CNN en Español — cobertura en vivo de rescates y recuperación",
+      "url": "https://cnnespanol.cnn.com/2026/08/12/colombia/live-news/terremoto-en-vivo-muertos-videos-rescates-orix",
       "tier": "media"
     }
   ],
