@@ -67,7 +67,7 @@ const UI_ES = {
   "Reported": "Reportado",
   "Officials of the Alcaldía de Santiago de Cali. City figures; they are not a subset of any national cut-off.": "Funcionarios de la Alcaldía de Santiago de Cali. Son cifras de la ciudad; no son el desglose de ningún corte nacional.",
   "15,568": "15.568",
-  "4,018": "4.018",
+  "3,935": "3.935",
   "3,653": "3.653",
   "Missing": "Desaparecidos",
   "Missing Persons: two counts": "Personas desaparecidas: dos conteos",
@@ -208,6 +208,8 @@ const CELL = {
   "14-15 Aug": { ja: "8月14〜15日", es: "14-15 ago." },
   "14 Aug 07:00": { ja: "8月14日 07:00", es: "14 ago. 07:00" },
   "15 Aug": { ja: "8月15日", es: "15 ago." },
+  "15 Aug 06:30": { ja: "8月15日 06:30", es: "15 ago. 06:30" },
+  "UNGRD, 15 Aug": { ja: "UNGRD（8月15日）", es: "UNGRD, 15 de agosto" },
   "Cancillería / donors": { ja: "コロンビア外務省／拠出国", es: "Cancillería / donantes" },
   "Cancillería de Colombia / donor governments, 14 Aug": { ja: "コロンビア外務省・拠出国政府（8月14日）", es: "Cancillería de Colombia / gobiernos donantes, 14 de agosto" },
   "Cancillería de Colombia (listing); Japanese Red Cross; Nippon Foundation": { ja: "コロンビア外務省（掲載）、日本赤十字社、日本財団", es: "Cancillería de Colombia (listado); Cruz Roja Japonesa; Nippon Foundation" },
@@ -642,9 +644,9 @@ s = newSlide();
 heading(s, "Human Damage", "人的被害");
 {
   const big = [
-    [T("Deaths", "死者"), "288", RED],
-    [T("Injured", "負傷者"), T("4,018", "4,018"), "9A3B12"],
-    [T("Missing", "行方不明"), "202", NAVY],
+    [T("Deaths", "死者"), "294", RED],
+    [T("Injured", "負傷者"), T("3,935", "3,935"), "9A3B12"],
+    [T("Missing", "行方不明"), "320", NAVY],
   ];
   big.forEach((b, i) => {
     const x = 0.4 + i * 4.2;
@@ -680,7 +682,7 @@ s = newSlide();
 heading(s, "Missing Persons: two counts", "行方不明者：2つの集計");
 {
   const big = [
-    [T("Reported to the authorities", "当局への届出"), "202", RED],
+    [T("Reported to the authorities", "当局への届出"), "320", RED],
     [T("Unresolved on the citizen platform", "市民プラットフォームの未解決"), T("3,653", "3,653"), "9A3B12"],
     [T("Located through the platform", "同プラットフォームで確認済み"), "429", NAVY],
   ];

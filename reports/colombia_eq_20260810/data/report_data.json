@@ -4,22 +4,22 @@
     "title_ja": "2026年 チョコ地震（コロンビア）",
     "subtitle_en": "M7.4, San José del Palmar, Chocó Department - 10 August 2026",
     "subtitle_ja": "M7.4、チョコ県サンホセ・デル・パルマル、2026年8月10日",
-    "edition_en": "8th report",
-    "edition_ja": "第8報",
+    "edition_en": "9th report",
+    "edition_ja": "第9報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
     "glide": "EQ-2026-000146-COL",
-    "as_of_en": "Figures as of UNGRD's running balance of 14-15 Aug 2026 COT, about five days after the earthquake: 288 deaths, 4,018 injured, 202 missing, 354 rescued alive, 45,523 families (102,263 people) affected in 15 departments and 426 municipalities, 12,828 homes destroyed and 73,455 damaged, 121 buildings collapsed. Several counts have been revised downwards as the damage and needs assessment consolidates duplicate records. All figures are preliminary. The SGC had located 184 aftershocks by 07:00 on 14 August.",
-    "as_of_ja": "数値は2026年8月14〜15日（コロンビア時間）のUNGRD集計現在、発災から約5日後。死者288人、負傷4,018人、行方不明202人、救出354人、被災45,523世帯（102,263人）、15県・426市町村。住宅全壊12,828棟・損壊73,455棟、建物倒壊121棟。被害評価調査で重複記録の整理が進み、いくつかの項目は下方修正されている。すべて速報値。　SGCは8月14日07:00までに余震184回を決定している。",
+    "as_of_en": "Figures as of the UNGRD balance with a 06:30 COT cut-off on 15 Aug 2026, about five days after the earthquake: 294 deaths, 3,935 injured, 320 missing, 353 rescued alive, 54,008 families (115,461 people) affected, 448 municipalities reporting damage, 14,493 homes destroyed and 81,506 damaged, 66 buildings collapsed. The SGC had located 184 aftershocks by 07:00 on 14 August. Individual counts move up and down between cut-offs as records are reconciled; always cite the cut-off. All figures are preliminary.",
+    "as_of_ja": "数値は2026年8月15日06:30（コロンビア時間）締めのUNGRD集計現在、発災から約5日後。死者294人、負傷3,935人、行方不明320人、救出353人、被災54,008世帯（115,461人）、被害報告のあった市町村448。住宅全壊14,493棟・損壊81,506棟、建物倒壊66棟。SGCは8月14日07:00までに余震184回を決定。各項目は記録の突合に伴い集計時点ごとに増減する。引用の際は必ず集計時点を併記されたい。すべて速報値。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-08-15 17:07 JST",
-    "update_date": "15/08/2026",
+    "stamp": "2026-08-16 08:07 JST",
+    "update_date": "16/08/2026",
     "title_es": "Terremoto del Chocó de 2026 (Colombia)",
     "subtitle_es": "M7.4, San José del Palmar, departamento del Chocó — 10 de agosto de 2026",
-    "edition_es": "8.º informe",
+    "edition_es": "9.º informe",
     "prepared_by_es": "Centro Asiático para la Reducción de Desastres (ADRC)",
-    "as_of_es": "Cifras del balance de la UNGRD del 14-15 de agosto de 2026 (COT), unos cinco días después del sismo: 288 muertos, 4.018 heridos, 202 desaparecidos, 354 rescatados con vida, 45.523 familias (102.263 personas) afectadas en 15 departamentos y 426 municipios, 12.828 viviendas destruidas y 73.455 averiadas, 121 edificios colapsados. Varios conteos se han revisado a la baja a medida que la evaluación de daños depura registros duplicados. Todas las cifras son preliminares. El SGC había localizado 184 réplicas hasta las 07:00 del 14 de agosto.",
+    "as_of_es": "Cifras del balance de la UNGRD con corte a las 06:30 COT del 15 de agosto de 2026, unos cinco días después del sismo: 294 muertos, 3.935 heridos, 320 desaparecidos, 353 rescatados con vida, 54.008 familias (115.461 personas) afectadas, 448 municipios con reporte de daños, 14.493 viviendas destruidas y 81.506 averiadas, 66 edificios colapsados. El SGC había localizado 184 réplicas hasta las 07:00 del 14 de agosto. Los conteos suben y bajan entre cortes a medida que se depuran los registros; cite siempre la hora de corte. Todas las cifras son preliminares.",
     "disseminate_es": "Informe multilingüe (EN/JA/ES) para difusión nacional e internacional. Se da prioridad a las fuentes oficiales; los vacíos se completan con información de prensa debidamente identificada."
   },
   "event": {
@@ -452,6 +452,14 @@
       "en": "Search continues for the missing while more than 100,000 people affected await assistance; in El Cairo (Valle del Cauca) 80% of the houses are reported damaged.",
       "ja": "行方不明者の捜索が続く一方、10万人を超える被災者が支援を待つ。バジェ・デル・カウカ県エル・カイロでは住宅の80％が被害を受けたと報じられる。",
       "es": "Continúa la búsqueda de los desaparecidos mientras más de 100.000 damnificados esperan asistencia; en El Cairo (Valle del Cauca) se reporta el 80 % de las casas afectadas."
+    },
+    {
+      "time": "15 Aug 06:30",
+      "tier": "official",
+      "src": "UNGRD",
+      "en": "UNGRD balance with a 06:30 cut-off: 294 dead, 3,935 injured, 320 missing, 353 people and 188 animals rescued alive; 54,008 families (115,461 people) affected; 448 municipalities reporting damage; 14,493 homes destroyed and 81,506 damaged; 66 buildings collapsed. Chocó, Risaralda and Valle del Cauca are the worst affected.",
+      "ja": "06:30締めのUNGRD集計。死者294人、負傷3,935人、行方不明320人、生存救出353人・動物188頭。被災54,008世帯・115,461人、被害報告のあった市町村448。住宅全壊14,493棟・損壊81,506棟、建物倒壊66棟。被害が最も大きいのはチョコ、リサラルダ、バジェ・デル・カウカ。",
+      "es": "Balance de la UNGRD con corte a las 06:30: 294 fallecidos, 3.935 heridos, 320 desaparecidos, 353 personas y 188 animales rescatados con vida; 54.008 familias (115.461 personas) afectadas; 448 municipios con reporte de daños; 14.493 viviendas destruidas y 81.506 averiadas; 66 edificios colapsados. Chocó, Risaralda y Valle del Cauca son los más afectados."
     }
   ],
   "areas": [
@@ -551,38 +559,38 @@
     {
       "item_en": "Deaths",
       "item_ja": "死者",
-      "value_en": "288 (UNGRD, 14-15 Aug), from 287 at the 09:00 cut on 14 Aug, 285 at 06:30 that morning, 281 late on 13 Aug and 273 that morning.",
-      "value_ja": "288人（UNGRD、8月14〜15日）。8月14日09:00時点の287人、同日06:30の285人、13日夜の281人、13日午前の273人から増加。",
-      "source_en": "UNGRD, 14-15 Aug",
-      "source_ja": "UNGRD（8月14〜15日）",
+      "value_en": "294 (UNGRD, 06:30 cut on 15 Aug), from 288 on 14-15 Aug, 287 at the 09:00 cut on 14 Aug and 273 on 13 Aug. Chocó, Risaralda and Valle del Cauca remain the worst affected.",
+      "value_ja": "294人（UNGRD、8月15日06:30締め）。8月14〜15日の288人、14日09:00の287人、13日の273人から増加。被害が最も大きいのはチョコ、リサラルダ、バジェ・デル・カウカの3県。",
+      "source_en": "UNGRD, 15 Aug",
+      "source_ja": "UNGRD（8月15日）",
       "tier": "official",
       "item_es": "Muertos",
-      "value_es": "288 (UNGRD, 14-15 de agosto), tras 287 en el corte de las 09:00 del 14 de agosto, 285 a las 06:30 de esa mañana, 281 al final del 13 y 273 esa mañana.",
-      "source_es": "UNGRD, 14-15 de agosto"
+      "value_es": "294 (UNGRD, corte de las 06:30 del 15 de agosto), tras 288 el 14-15, 287 en el corte de las 09:00 del 14 y 273 el 13 de agosto. Chocó, Risaralda y Valle del Cauca siguen siendo los más afectados.",
+      "source_es": "UNGRD, 15 de agosto"
     },
     {
       "item_en": "Injured",
       "item_ja": "負傷者",
-      "value_en": "4,018 (UNGRD, 14-15 Aug), from 3,975 at the 09:00 cut on 14 Aug and 3,824 on 13 Aug",
-      "value_ja": "4,018人（UNGRD、8月14〜15日）。8月14日09:00時点の3,975人、13日の3,824人から増加",
-      "source_en": "UNGRD, 14-15 Aug",
-      "source_ja": "UNGRD（8月14〜15日）",
+      "value_en": "3,935 (UNGRD, 06:30 cut on 15 Aug), against 4,018 the day before. This is the second downward revision of the injured count and, like the first, it is duplicate records being consolidated.",
+      "value_ja": "3,935人（UNGRD、8月15日06:30締め）。前日の4,018人から減少。負傷者数の下方修正は2度目で、1度目と同様に重複記録の整理によるものである。",
+      "source_en": "UNGRD, 15 Aug",
+      "source_ja": "UNGRD（8月15日）",
       "tier": "official",
       "item_es": "Heridos",
-      "value_es": "4.018 (UNGRD, 14-15 de agosto), tras 3.975 en el corte de las 09:00 del 14 de agosto y 3.824 el 13",
-      "source_es": "UNGRD, 14-15 de agosto"
+      "value_es": "3.935 (UNGRD, corte de las 06:30 del 15 de agosto), frente a 4.018 el día anterior. Es la segunda revisión a la baja de los heridos y, como la primera, corresponde a la depuración de registros duplicados.",
+      "source_es": "UNGRD, 15 de agosto"
     },
     {
       "item_en": "Missing (reported to the authorities)",
       "item_ja": "行方不明（当局への届出）",
-      "value_en": "202 (UNGRD, 14-15 Aug), down from 378 at the 09:00 cut on 14 Aug and 377 on 13 Aug. This is the second consecutive fall and, like the first, it is the Fiscalía's register being reconciled - reports resolved or found to be duplicates - not people being located in the rubble. 354 people have been rescued alive.",
-      "value_ja": "202人（UNGRD、8月14〜15日）。8月14日09:00時点の378人、13日の377人から減少。2度目の下方修正であり、1度目と同様、検察庁の登録簿の突合——解決済みや重複と判明した届出の整理——によるものであって、瓦礫の下から発見されたことによるものではない。救出された人は354人。",
-      "source_en": "UNGRD / Fiscalía General de la Nación, 14-15 Aug",
-      "source_ja": "UNGRD、検察庁（8月14〜15日）",
+      "value_en": "320 (UNGRD, 06:30 cut on 15 Aug), up from 202 the day before, which itself was down from 378. The count is the Fiscalía's register and it moves in both directions as reports are filed and reconciled; it is not a measure of how many people are still under rubble. 353 have been rescued alive.",
+      "value_ja": "320人（UNGRD、8月15日06:30締め）。前日の202人から増加したが、その202人も378人からの減少であった。この数値は検察庁の登録簿であり、届出と突合の進行に伴って両方向に動く。瓦礫の下に残る人数を示すものではない。生存救出は353人。",
+      "source_en": "UNGRD / Fiscalía General de la Nación, 15 Aug",
+      "source_ja": "UNGRD、検察庁（8月15日）",
       "tier": "official",
       "item_es": "Desaparecidos (reportados a las autoridades)",
-      "value_es": "202 (UNGRD, 14-15 de agosto), frente a 378 en el corte de las 09:00 del 14 de agosto y 377 el 13. Es la segunda baja consecutiva y, como la primera, corresponde a la depuración del registro de la Fiscalía -reportes resueltos o duplicados-, no a personas localizadas entre los escombros. 354 personas han sido rescatadas con vida.",
-      "source_es": "UNGRD / Fiscalía General de la Nación, 14-15 de agosto"
+      "value_es": "320 (UNGRD, corte de las 06:30 del 15 de agosto), frente a 202 el día anterior, que a su vez venía de 378. El conteo corresponde al registro de la Fiscalía y se mueve en ambos sentidos a medida que se presentan y depuran reportes; no mide cuántas personas siguen bajo los escombros. 353 han sido rescatadas con vida.",
+      "source_es": "UNGRD / Fiscalía General de la Nación, 15 de agosto"
     },
     {
       "item_en": "Unresolved reports on citizen platforms",
@@ -600,24 +608,24 @@
       "item_en": "Rescued alive",
       "item_ja": "生存救出",
       "item_es": "Rescatados con vida",
-      "value_en": "354 (UNGRD, 14 Aug), up from 243 on 11 Aug. They include a woman recovered in Cali almost 30 hours after the earthquake, a woman freed in Pereira after 36 hours and a baby pulled from an apartment block.",
-      "value_ja": "354人（UNGRD、8月14日）。8月11日の243人から増加。カリで発災から約30時間後に救出された女性、ペレイラで36時間ぶりに救出された女性、集合住宅から救出された乳児を含む。",
-      "value_es": "354 (UNGRD, 14 de agosto), frente a 243 el 11 de agosto. Incluyen a una mujer rescatada en Cali casi 30 horas después del sismo, a otra liberada en Pereira tras 36 horas y a un bebé sacado de un bloque de apartamentos.",
-      "source_en": "UNGRD, 14 Aug",
-      "source_ja": "UNGRD（8月14日）",
-      "source_es": "UNGRD, 14 de agosto",
+      "value_en": "353 (UNGRD, 15 Aug), against 354 the day before and 243 on 11 Aug. They include a woman recovered in Cali almost 30 hours after the earthquake, a woman freed in Pereira after 36 hours and a baby pulled from an apartment block. 188 animals have also been rescued.",
+      "value_ja": "353人（UNGRD、8月15日）。前日の354人、8月11日の243人と比較。カリで約30時間後に救出された女性、ペレイラで36時間ぶりに救出された女性、集合住宅から救出された乳児を含む。動物も188頭が救出されている。",
+      "value_es": "353 (UNGRD, 15 de agosto), frente a 354 el día anterior y 243 el 11 de agosto. Incluyen a una mujer rescatada en Cali casi 30 horas después del sismo, a otra liberada en Pereira tras 36 horas y a un bebé sacado de un bloque de apartamentos. También se han rescatado 188 animales.",
+      "source_en": "UNGRD, 15 Aug",
+      "source_ja": "UNGRD（8月15日）",
+      "source_es": "UNGRD, 15 de agosto",
       "tier": "official"
     },
     {
       "item_en": "Municipalities affected",
       "item_ja": "被災市町村",
       "item_es": "Municipios afectados",
-      "value_en": "426 municipalities across 15 departments (UNGRD, 14-15 Aug); the 09:00 cut on 14 Aug gave 437, and 403 across 14 departments was the figure on 12 Aug. Red alert continues in Cali, Pereira, Quibdó, Manizales and Armenia.",
-      "value_ja": "15県・426市町村（UNGRD、8月14〜15日）。8月14日09:00時点では437市町村、12日時点では14県・403市町村であった。カリ、ペレイラ、キブド、マニサレス、アルメニアでは赤色警報が継続。",
-      "value_es": "426 municipios en 15 departamentos (UNGRD, 14-15 de agosto); el corte de las 09:00 del 14 de agosto daba 437, y el 12 de agosto eran 403 en 14 departamentos. Continúa la alerta roja en Cali, Pereira, Quibdó, Manizales y Armenia.",
-      "source_en": "UNGRD, 14-15 Aug",
-      "source_ja": "UNGRD（8月14〜15日）",
-      "source_es": "UNGRD, 14-15 de agosto",
+      "value_en": "448 municipalities reporting damage (UNGRD, 15 Aug), against 426 the day before and 403 on 12 Aug. Red alert continues in Cali, Pereira, Quibdó, Manizales and Armenia.",
+      "value_ja": "被害報告のあった市町村は448（UNGRD、8月15日）。前日の426、8月12日の403から増加。カリ、ペレイラ、キブド、マニサレス、アルメニアでは赤色警報が継続。",
+      "value_es": "448 municipios con reporte de daños (UNGRD, 15 de agosto), frente a 426 el día anterior y 403 el 12 de agosto. Continúa la alerta roja en Cali, Pereira, Quibdó, Manizales y Armenia.",
+      "source_en": "UNGRD, 15 Aug",
+      "source_ja": "UNGRD（8月15日）",
+      "source_es": "UNGRD, 15 de agosto",
       "tier": "official"
     },
     {
@@ -625,60 +633,60 @@
       "item_ja": "被災者",
       "item_es": "Personas afectadas",
       "tier": "official",
-      "value_en": "45,523 families - 102,263 people - affected (UNGRD, 14-15 Aug). The 09:00 cut on 14 Aug gave 56,448 families and 135,179 people; the lower figure is the assessment consolidating records, not people ceasing to be affected.",
-      "value_ja": "45,523世帯・102,263人が被災（UNGRD、8月14〜15日）。8月14日09:00時点では56,448世帯・135,179人であった。減少は被害評価の記録整理によるものであり、被災状態を脱したことを意味しない。",
-      "value_es": "45.523 familias -102.263 personas- afectadas (UNGRD, 14-15 de agosto). El corte de las 09:00 del 14 de agosto daba 56.448 familias y 135.179 personas; la cifra menor refleja la depuración de registros, no que esas personas hayan dejado de estar afectadas.",
-      "source_en": "UNGRD, 14-15 Aug",
-      "source_ja": "UNGRD（8月14〜15日）",
-      "source_es": "UNGRD, 14-15 de agosto"
+      "value_en": "54,008 families - 115,461 people - affected (UNGRD, 06:30 cut on 15 Aug), against 45,523 families (102,263 people) the day before",
+      "value_ja": "54,008世帯・115,461人が被災（UNGRD、8月15日06:30締め）。前日の45,523世帯・102,263人から増加",
+      "value_es": "54.008 familias -115.461 personas- afectadas (UNGRD, corte de las 06:30 del 15 de agosto), frente a 45.523 familias (102.263 personas) el día anterior",
+      "source_en": "UNGRD, 15 Aug",
+      "source_ja": "UNGRD（8月15日）",
+      "source_es": "UNGRD, 15 de agosto"
     },
     {
       "item_en": "Homes damaged or destroyed",
       "item_ja": "住宅被害（合計）",
-      "value_en": "86,283: 12,828 destroyed and 73,455 damaged (UNGRD, 14-15 Aug). The 09:00 cut on 14 Aug gave 13,077 destroyed and 79,108 damaged, and 13 Aug gave 87,457 in total. In El Cairo, a coffee town in the mountains of Valle del Cauca, 80% of the houses were damaged.",
-      "value_ja": "86,283棟。全壊12,828棟、損壊73,455棟（UNGRD、8月14〜15日）。8月14日09:00時点では全壊13,077棟・損壊79,108棟、13日時点では合計87,457棟であった。　バジェ・デル・カウカ県山間部のコーヒー産地エル・カイロでは、住宅の80％が被害を受けた。",
-      "source_en": "UNGRD, 14-15 Aug",
-      "source_ja": "UNGRD（8月14〜15日）",
+      "value_en": "95,999: 14,493 destroyed and 81,506 damaged (UNGRD, 06:30 cut on 15 Aug), against 86,283 the day before. In El Cairo, a coffee town in the mountains of Valle del Cauca, 80% of the houses were damaged.",
+      "value_ja": "95,999棟。全壊14,493棟、損壊81,506棟（UNGRD、8月15日06:30締め）。前日の86,283棟から増加。バジェ・デル・カウカ県山間部のコーヒー産地エル・カイロでは、住宅の80％が被害を受けた。",
+      "source_en": "UNGRD, 15 Aug",
+      "source_ja": "UNGRD（8月15日）",
       "tier": "official",
       "item_es": "Viviendas averiadas o destruidas",
-      "value_es": "86.283: 12.828 destruidas y 73.455 averiadas (UNGRD, 14-15 de agosto). El corte de las 09:00 del 14 de agosto daba 13.077 destruidas y 79.108 averiadas, y el 13 de agosto el total era 87.457. En El Cairo, pueblo cafetero en las montañas del Valle del Cauca, el 80 % de las casas resultó afectado.",
-      "source_es": "UNGRD, 14-15 de agosto"
+      "value_es": "95.999: 14.493 destruidas y 81.506 averiadas (UNGRD, corte de las 06:30 del 15 de agosto), frente a 86.283 el día anterior. En El Cairo, pueblo cafetero en las montañas del Valle del Cauca, el 80 % de las casas resultó afectado.",
+      "source_es": "UNGRD, 15 de agosto"
     },
     {
       "item_en": "of which seriously damaged",
       "item_ja": "うち重大な損壊",
-      "value_en": "73,455",
-      "value_ja": "73,455",
-      "source_en": "UNGRD, 14-15 Aug",
-      "source_ja": "UNGRD（8月14〜15日）",
+      "value_en": "81,506",
+      "value_ja": "81,506",
+      "source_en": "UNGRD, 15 Aug",
+      "source_ja": "UNGRD（8月15日）",
       "tier": "official",
       "item_es": "de las cuales con daños graves",
-      "value_es": "73.455",
-      "source_es": "UNGRD, 14-15 de agosto"
+      "value_es": "81.506",
+      "source_es": "UNGRD, 15 de agosto"
     },
     {
       "item_en": "of which destroyed",
       "item_ja": "うち全壊",
-      "value_en": "12,828",
-      "value_ja": "12,828",
-      "source_en": "UNGRD, 14-15 Aug",
-      "source_ja": "UNGRD（8月14〜15日）",
+      "value_en": "14,493",
+      "value_ja": "14,493",
+      "source_en": "UNGRD, 15 Aug",
+      "source_ja": "UNGRD（8月15日）",
       "tier": "official",
       "item_es": "de las cuales destruidas",
-      "value_es": "12.828",
-      "source_es": "UNGRD, 14-15 de agosto"
+      "value_es": "14.493",
+      "source_es": "UNGRD, 15 de agosto"
     },
     {
       "item_en": "Buildings collapsed",
       "item_ja": "建物倒壊",
-      "value_en": "121 nationally (UNGRD, 14-15 Aug), revised down from 172 on 13 Aug. Asocapitales counts 243 collapsed structures in the capital cities; Cali city officials report 107 collapsed and 643 structurally damaged.",
-      "value_ja": "全国で121棟（UNGRD、8月14〜15日）。8月13日の172棟から下方修正された。Asocapitalesは県都で243棟の倒壊を数える。カリ市当局は倒壊107棟・構造的被害643棟と報告。",
-      "source_en": "UNGRD, 14-15 Aug; Asocapitales; Alcaldía de Cali",
-      "source_ja": "UNGRD（8月14〜15日）、Asocapitales、カリ市",
+      "value_en": "66 nationally (UNGRD, 06:30 cut on 15 Aug), revised down again from 121 on 14 Aug and 172 on 13 Aug, as structures first reported collapsed are reclassified on inspection. Asocapitales counts 243 collapsed structures in the capital cities; Cali city officials report 107 collapsed and 643 structurally damaged.",
+      "value_ja": "全国で66棟（UNGRD、8月15日06:30締め）。8月14日の121棟、13日の172棟から再び下方修正された。当初倒壊と報告された構造物が、点検により分類し直されているためである。Asocapitalesは県都で243棟の倒壊を数える。カリ市当局は倒壊107棟・構造的被害643棟と報告。",
+      "source_en": "UNGRD, 15 Aug; Asocapitales; Alcaldía de Cali",
+      "source_ja": "UNGRD（8月15日）、Asocapitales、カリ市",
       "tier": "official",
       "item_es": "Edificios colapsados",
-      "value_es": "121 en el país (UNGRD, 14-15 de agosto), revisado a la baja desde 172 el 13 de agosto. Asocapitales cuenta 243 estructuras colapsadas en las ciudades capitales; funcionarios de la Alcaldía de Cali reportan 107 colapsadas y 643 con daños estructurales.",
-      "source_es": "UNGRD, 14-15 de agosto; Asocapitales; Alcaldía de Cali"
+      "value_es": "66 en el país (UNGRD, corte de las 06:30 del 15 de agosto), revisado nuevamente a la baja desde 121 el 14 y 172 el 13 de agosto, al reclasificarse en inspección estructuras reportadas inicialmente como colapsadas. Asocapitales cuenta 243 estructuras colapsadas en las ciudades capitales; funcionarios de la Alcaldía de Cali reportan 107 colapsadas y 643 con daños estructurales.",
+      "source_es": "UNGRD, 15 de agosto; Asocapitales; Alcaldía de Cali"
     },
     {
       "item_en": "Health facilities",
@@ -824,8 +832,8 @@
       "note_es": "73 años"
     }
   ],
-  "deaths_by_area_note_en": "The national figure reached 288 on 14-15 August, from UNGRD's running balance; it passed through 287 at the 09:00 cut on 14 August, 285 at 06:30 that morning, 281 late on 13 August and 273 that morning. Medicina Legal had received 250 bodies with 227 recognised at the 13 August reading. Cite 288 as the official national figure. The chart is the President's 11 August breakdown (181) and shows the shape of the distribution - deaths concentrated in Risaralda (Pereira) and Valle del Cauca (Cali) - not a current tally. Cali is reported three ways as well: 97 in the President's breakdown, 85 by the mayor on 11 August and 69 in the city's own municipal report, which carries no cut-off time.",
-  "deaths_by_area_note_ja": "全国の死者数は8月14〜15日のUNGRD集計で288人となった。8月14日09:00時点の287人、同日06:30の285人、13日夜の281人、13日午前の273人を経ている。法医学研究所には8月13日時点で250遺体が搬入され、うち227体の身元が確認されていた。公式の全国値として引用すべきは288人である。図は8月11日時点の大統領による内訳（181人）であり、リサラルダ（ペレイラ）とバジェ・デル・カウカ（カリ）に死者が集中するという分布の形を示すものであって、現在の集計ではない。　カリについても3通りの数値がある。大統領の内訳では97人、8月11日の市長発表は85人、市当局の被害報告では69人であり、この報告には集計時点が付されていない。",
+  "deaths_by_area_note_en": "The national figure reached 294 at the 06:30 cut on 15 August; it passed through 288 on 14-15 August, 287 at the 09:00 cut on 14 August, 285 that morning, 281 late on 13 August and 273 that morning. Chocó, Risaralda and Valle del Cauca remain the worst affected. Medicina Legal had received 250 bodies with 227 recognised at the 13 August reading. Cite 294 as the official national figure. The chart is the President's 11 August breakdown (181) and shows the shape of the distribution - deaths concentrated in Risaralda (Pereira) and Valle del Cauca (Cali) - not a current tally. Cali is reported three ways as well: 97 in the President's breakdown, 85 by the mayor on 11 August and 69 in the city's own municipal report, which carries no cut-off time.",
+  "deaths_by_area_note_ja": "全国の死者数は8月15日06:30締めで294人となった。8月14〜15日の288人、14日09:00の287人、同日朝の285人、13日夜の281人、13日午前の273人を経ている。被害が最も大きいのはチョコ、リサラルダ、バジェ・デル・カウカの3県である。法医学研究所には8月13日時点で250遺体が搬入され、うち227体の身元が確認されていた。公式の全国値として引用すべきは294人である。図は8月11日時点の大統領による内訳（181人）であり、リサラルダ（ペレイラ）とバジェ・デル・カウカ（カリ）に死者が集中するという分布の形を示すものであって、現在の集計ではない。　カリについても3通りの数値がある。大統領の内訳では97人、8月11日の市長発表は85人、市当局の被害報告では69人であり、この報告には集計時点が付されていない。",
   "exposure": [
     {
       "mmi": "VIII+",
@@ -1903,6 +1911,20 @@
       "label_es": "CNN en Español — cobertura en vivo de rescates y recuperación",
       "url": "https://cnnespanol.cnn.com/2026/08/12/colombia/live-news/terremoto-en-vivo-muertos-videos-rescates-orix",
       "tier": "media"
+    },
+    {
+      "label_en": "El Tiempo — UNGRD balance of 15 August: 294 dead, 3,935 injured, 320 missing, 353 rescued",
+      "label_ja": "El Tiempo 8月15日のUNGRD集計 死者294人・負傷3,935人・行方不明320人・救出353人",
+      "label_es": "El Tiempo — balance de la UNGRD del 15 de agosto: 294 fallecidos, 3.935 heridos, 320 desaparecidos y 353 rescatados",
+      "url": "https://www.eltiempo.com/colombia/otras-ciudades/balance-oficial-de-la-ungrd-este-15-de-agosto-tras-terremoto-de-7-4-en-colombia-294-fallecidos-3-935-heridos-320-desaparecidos-y-353-rescatados-3578602",
+      "tier": "media"
+    },
+    {
+      "label_en": "Semana — 294 dead and 81,506 homes damaged, official figures",
+      "label_ja": "Semana 死者294人・住宅損壊81,506棟（公式数値）",
+      "label_es": "Semana — 294 fallecidos y 81.506 viviendas averiadas, cifras oficiales",
+      "url": "https://www.semana.com/nacion/articulo/ascienden-a-294-los-fallecidos-del-terremoto-del-10-de-agosto-y-van-81506-viviendas-averiadas-segun-cifras-oficiales/202627/",
+      "tier": "media"
     }
   ],
   "source_policy_en": "Source hierarchy: official > media > TBC. Government and scientific-agency figures are used as primary; media reports are used only where official figures are not yet published and are labelled as such. Items still being verified are marked TBC. Preliminary figures are never replaced by larger unverified numbers.",
@@ -1921,7 +1943,7 @@
     "gem_treq_cali": "images/gem_treq_cali_manual.jpg"
   },
   "photos": [],
-  "deaths_by_area_note_es": "La cifra nacional llegó a 288 el 14-15 de agosto, según el balance de la UNGRD; pasó por 287 en el corte de las 09:00 del 14 de agosto, 285 a las 06:30 de esa mañana, 281 al final del 13 y 273 esa mañana. Medicina Legal había recibido 250 cuerpos, con 227 reconocidos, en la lectura del 13 de agosto. Cite 288 como la cifra oficial nacional. El gráfico corresponde al desglose presidencial del 11 de agosto (181) y muestra la forma de la distribución -muertes concentradas en Risaralda (Pereira) y Valle del Cauca (Cali)-, no un conteo actual. Cali también se reporta de tres maneras: 97 en el desglose del Presidente, 85 por el alcalde el 11 de agosto y 69 en el propio reporte municipal, que no indica hora de corte.",
+  "deaths_by_area_note_es": "La cifra nacional llegó a 294 en el corte de las 06:30 del 15 de agosto; pasó por 288 el 14-15, 287 en el corte de las 09:00 del 14, 285 esa mañana, 281 al final del 13 y 273 esa mañana. Chocó, Risaralda y Valle del Cauca siguen siendo los más afectados. Medicina Legal había recibido 250 cuerpos, con 227 reconocidos, en la lectura del 13 de agosto. Cite 294 como la cifra oficial nacional. El gráfico corresponde al desglose presidencial del 11 de agosto (181) y muestra la forma de la distribución -muertes concentradas en Risaralda (Pereira) y Valle del Cauca (Cali)-, no un conteo actual. Cali también se reporta de tres maneras: 97 en el desglose del Presidente, 85 por el alcalde el 11 de agosto y 69 en el propio reporte municipal, que no indica hora de corte.",
   "exposure_note_es": "Estimaciones de exposición del PAGER (versión 5) del USGS. Unos 10,5 millones de personas quedaron expuestas a sacudimiento fuerte o muy fuerte (MMI VI-VII) y unos 34 millones a MMI IV o superior en cuatro países. Son estimaciones de modelo.",
   "source_policy_es": "Jerarquía de fuentes: oficial > prensa > por confirmar. Las cifras del Gobierno y de las entidades científicas se usan como fuente primaria; la información de prensa se emplea únicamente cuando aún no hay cifras oficiales y se identifica como tal. Los elementos en verificación se marcan como «por confirmar». Las cifras preliminares nunca se sustituyen por números mayores sin verificar.",
   "intensity_map": {
@@ -2270,9 +2292,9 @@
     "text_ja": "PAGERはUSGSによる迅速影響推計で、発生から数分で発表され、震源要素の精査に伴い改訂される。第5版は発災の2時間8分後に作成された。これは単一の予測値ではなく確率分布であり、オレンジ警報は「相当の人的被害と損害が生じる可能性が高く、過去のオレンジ警報は地域的または国家的な対応を要した」ことを意味する。最も確からしい死者数階級1,000〜10,000人は、発災9時間後の報告値111人を大きく上回っていたが、33時間後には報告値が182〜240人となり、PAGERが低いながらも相応の確率を与えていた100〜1,000人の階級に入った。この段階での乖離は通常のことであり、実測が推計に置き換わるにつれて差は縮まる。",
     "text_es": "PAGER es la estimación rápida de impacto del USGS, emitida en minutos y revisada conforme se precisa el evento; la versión 5 se creó 2 horas y 8 minutos después del sismo. Es una distribución de probabilidad, no el pronóstico de una cifra única: la alerta naranja significa que son probables víctimas y daños significativos y que alertas naranjas previas han requerido una respuesta regional o nacional. Su banda de mortalidad más probable, 1.000-10.000, estaba muy por encima de los 111 muertos reportados nueve horas después del evento; a las 33 horas el balance reportado había subido a 182-240, dentro de la banda de 100-1.000 del PAGER, a la que el modelo asignaba una probabilidad menor pero apreciable. La brecha es normal en esta etapa y se estrecha a medida que la observación reemplaza a las pérdidas modeladas."
   },
-  "toll_caption_en": "UNGRD's running balance of 14-15 August. 45,523 families (102,263 people) affected in 15 departments and 426 municipalities; 12,828 homes destroyed and 73,455 damaged; 354 people rescued alive. Missing fell from 378 to 202 in a second reconciliation of the Fiscalía's register; affected families, homes and collapsed buildings were also revised down as duplicate assessment records were consolidated.",
-  "toll_caption_ja": "8月14〜15日のUNGRD集計。被災45,523世帯・102,263人、15県・426市町村。住宅全壊12,828棟・損壊73,455棟、救出354人。行方不明は検察庁登録簿の2度目の突合により378人から202人に減少した。被災世帯数、住宅被害、建物倒壊も、被害評価の重複記録の整理に伴い下方修正されている。",
-  "toll_caption_es": "Balance de la UNGRD del 14-15 de agosto. 45.523 familias (102.263 personas) afectadas en 15 departamentos y 426 municipios; 12.828 viviendas destruidas y 73.455 averiadas; 354 personas rescatadas con vida. Los desaparecidos bajaron de 378 a 202 en una segunda depuración del registro de la Fiscalía; las familias afectadas, las viviendas y los edificios colapsados también se revisaron a la baja al consolidarse registros duplicados de la evaluación.",
+  "toll_caption_en": "UNGRD balance with a 06:30 COT cut-off on 15 August. 54,008 families (115,461 people) affected, 448 municipalities reporting damage; 14,493 homes destroyed and 81,506 damaged; 353 people and 188 animals rescued alive. Injured fell again (4,018 to 3,935) while missing rose (202 to 320): between cut-offs these counts move in both directions as reports are filed, resolved and de-duplicated, so quote the cut-off with the number.",
+  "toll_caption_ja": "8月15日06:30締めのUNGRD集計。被災54,008世帯・115,461人、被害報告のあった市町村448。住宅全壊14,493棟・損壊81,506棟、生存救出353人・動物188頭。負傷者は再び減少（4,018→3,935人）、行方不明は増加（202→320人）した。これらの数値は、届出・解決・重複整理の進行に伴い集計時点ごとに両方向へ動く。引用の際は数値とあわせて集計時点を示されたい。",
+  "toll_caption_es": "Balance de la UNGRD con corte a las 06:30 COT del 15 de agosto. 54.008 familias (115.461 personas) afectadas, 448 municipios con reporte de daños; 14.493 viviendas destruidas y 81.506 averiadas; 353 personas y 188 animales rescatados con vida. Los heridos volvieron a bajar (4.018 a 3.935) mientras los desaparecidos subieron (202 a 320): entre cortes estos conteos se mueven en ambos sentidos a medida que se reportan, resuelven y depuran casos, así que cite la hora de corte junto con la cifra.",
   "cali": {
     "title_en": "Cali: municipal damage report",
     "title_ja": "カリ市：市当局の被害報告",
@@ -2373,9 +2395,9 @@
   "missing_note_title_en": "Two different “missing” numbers",
   "missing_note_title_ja": "「行方不明」の2つの数字",
   "missing_note_title_es": "Dos cifras distintas de «desaparecidos»",
-  "missing_note_en": "202 and 3,653 are not the same measure and neither is wrong. 202 is the official register held by the Fiscalía General de la Nación as reported by UNGRD on 14-15 August; it has now fallen twice - 496 to 377 on 13 August, 378 to 202 on 14-15 August - and both falls are reports being reconciled against the register, not people being found. Search and rescue has recovered 354 people alive. 3,653 is the number of people on the citizen platform “Colombia te busca” whom families have registered and not yet found - a community initiative, not a state register, which does not replace a report to the police or the prosecutor's office and will contain duplicates and people simply out of contact where power and telephone service are down. Expect both figures to move in steps rather than smoothly. Cite 202 as the missing count; cite 3,653 as the volume of family enquiries, which is the better measure of how many households do not yet know.",
-  "missing_note_ja": "202人と3,653件は同じものを測った数値ではなく、どちらも誤りではない。202人は、8月14〜15日にUNGRDが示した、検察庁（Fiscalía General de la Nación）の公式登録簿による数値である。この数値はすでに2度減少しており（8月13日に496人から377人、8月14〜15日に378人から202人）、いずれも届出と登録簿の突合によるものであって、発見によるものではない。捜索救助によって生存救出されたのは354人である。3,653件は、市民運営のプラットフォーム「Colombia te busca」に家族が登録し、まだ所在が確認されていない人数である。これは地域社会の取り組みであって国家の登録簿ではなく、警察や検察への届出に代わるものでもない。重複や、停電・通信途絶で単に連絡が取れないだけの人も含まれる。いずれの数値も滑らかにではなく段階的に動くとみられる。行方不明者数として引用すべきは202人であり、3,653件は「まだ所在を把握できていない世帯がどれだけあるか」を示す照会件数として引用するのが適切である。",
-  "missing_note_es": "202 y 3.653 no miden lo mismo y ninguna de las dos cifras es errónea. 202 es el registro oficial que maneja la Fiscalía General de la Nación, según lo informado por la UNGRD el 14-15 de agosto; ya ha bajado dos veces -de 496 a 377 el 13 de agosto y de 378 a 202 el 14-15- y ambas bajas corresponden a la depuración de reportes frente al registro, no a personas encontradas. La búsqueda y rescate ha recuperado con vida a 354 personas. 3.653 es el número de personas inscritas por sus familias en la plataforma ciudadana “Colombia te busca” y aún no localizadas: una iniciativa comunitaria, no un registro estatal, que no reemplaza el reporte a la policía o a la Fiscalía y que contendrá duplicados y personas simplemente incomunicadas donde no hay energía ni servicio telefónico. Ambas cifras se moverán a saltos, no de forma continua. Cite 202 como el número de desaparecidos; cite 3.653 como el volumen de consultas familiares, que mide mejor cuántos hogares aún no saben.",
+  "missing_note_en": "320 and 3,653 are not the same measure and neither is wrong. 320 is the official register held by the Fiscalía General de la Nación as reported by UNGRD with a 06:30 cut-off on 15 August. It has now moved in both directions - 496, then 377, then 378, then 202, now 320 - because reports are being filed, resolved and de-duplicated at the same time. None of the falls were people found in the rubble; the rescued-alive figure, which is what that would look like, stands at 353. 3,653 is the number of people on the citizen platform “Colombia te busca” whom families have registered and not yet found - a community initiative, not a state register, which does not replace a report to the police or the prosecutor's office and will contain duplicates and people simply out of contact where power and telephone service are down. Cite 320 with its cut-off as the missing count; cite 3,653 as the volume of family enquiries, which is the better measure of how many households do not yet know.",
+  "missing_note_ja": "320人と3,653件は同じものを測った数値ではなく、どちらも誤りではない。320人は、8月15日06:30締めでUNGRDが示した、検察庁（Fiscalía General de la Nación）の公式登録簿による数値である。この数値は496人、377人、378人、202人、320人と両方向に動いてきた。届出の受理、解決、重複整理が同時に進んでいるためである。減少はいずれも瓦礫からの発見によるものではない。発見にあたる数値は生存救出であり、353人である。3,653件は、市民運営のプラットフォーム「Colombia te busca」に家族が登録し、まだ所在が確認されていない人数である。これは地域社会の取り組みであって国家の登録簿ではなく、警察や検察への届出に代わるものでもない。重複や、停電・通信途絶で単に連絡が取れないだけの人も含まれる。行方不明者数として引用すべきは320人であり、その際は集計時点を併記する。3,653件は「まだ所在を把握できていない世帯がどれだけあるか」を示す照会件数として引用するのが適切である。",
+  "missing_note_es": "320 y 3.653 no miden lo mismo y ninguna de las dos cifras es errónea. 320 es el registro oficial de la Fiscalía General de la Nación, según lo informado por la UNGRD con corte a las 06:30 del 15 de agosto. Ha variado en ambos sentidos -496, luego 377, 378, 202 y ahora 320- porque al mismo tiempo se presentan, resuelven y depuran reportes. Ninguna de las bajas correspondió a personas halladas entre los escombros; la cifra que reflejaría eso es la de rescatados con vida, 353. 3.653 es el número de personas inscritas por sus familias en la plataforma ciudadana “Colombia te busca” y aún no localizadas: una iniciativa comunitaria, no un registro estatal, que no reemplaza el reporte a la policía o a la Fiscalía y que contendrá duplicados y personas simplemente incomunicadas donde no hay energía ni servicio telefónico. Cite 320 con su hora de corte como el número de desaparecidos; cite 3.653 como el volumen de consultas familiares, que mide mejor cuántos hogares aún no saben.",
   "missing_tail_en": "The registrations cluster in Valle del Cauca, Risaralda, Caldas and Chocó - the same four departments that hold the deaths. Asocapitales, the association of capital cities, has launched a second platform, so the enquiry volume is now split across two registers and the totals should not be added together.",
   "missing_tail_ja": "登録はバジェ・デル・カウカ、リサラルダ、カルダス、チョコの4県に集中しており、死者の分布と同じである。県都市長会Asocapitalesも第2のプラットフォームを開設したため、照会は現在2つの登録簿に分かれている。両者の合計を足し合わせるべきではない。",
   "missing_tail_es": "Los registros se concentran en Valle del Cauca, Risaralda, Caldas y Chocó, los mismos cuatro departamentos donde están los fallecidos. Asocapitales, la asociación de ciudades capitales, ha lanzado una segunda plataforma, de modo que el volumen de consultas está ahora repartido entre dos registros y sus totales no deben sumarse."
