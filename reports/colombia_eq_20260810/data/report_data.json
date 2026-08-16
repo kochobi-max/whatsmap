@@ -13,7 +13,7 @@
     "as_of_ja": "数値は2026年8月15日06:30（コロンビア時間）締めのUNGRD集計現在、発災から約5日後。死者294人、負傷3,935人、行方不明320人、救出353人、被災54,008世帯（115,461人）、被害報告のあった市町村448。住宅全壊14,493棟・損壊81,506棟、建物倒壊66棟。SGCは8月14日07:00までに余震184回を決定。各項目は記録の突合に伴い集計時点ごとに増減する。引用の際は必ず集計時点を併記されたい。すべて速報値。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-08-16 08:07 JST",
+    "stamp": "2026-08-16 17:09 JST",
     "update_date": "16/08/2026",
     "title_es": "Terremoto del Chocó de 2026 (Colombia)",
     "subtitle_es": "M7.4, San José del Palmar, departamento del Chocó — 10 de agosto de 2026",
@@ -460,6 +460,14 @@
       "en": "UNGRD balance with a 06:30 cut-off: 294 dead, 3,935 injured, 320 missing, 353 people and 188 animals rescued alive; 54,008 families (115,461 people) affected; 448 municipalities reporting damage; 14,493 homes destroyed and 81,506 damaged; 66 buildings collapsed. Chocó, Risaralda and Valle del Cauca are the worst affected.",
       "ja": "06:30締めのUNGRD集計。死者294人、負傷3,935人、行方不明320人、生存救出353人・動物188頭。被災54,008世帯・115,461人、被害報告のあった市町村448。住宅全壊14,493棟・損壊81,506棟、建物倒壊66棟。被害が最も大きいのはチョコ、リサラルダ、バジェ・デル・カウカ。",
       "es": "Balance de la UNGRD con corte a las 06:30: 294 fallecidos, 3.935 heridos, 320 desaparecidos, 353 personas y 188 animales rescatados con vida; 54.008 familias (115.461 personas) afectadas; 448 municipios con reporte de daños; 14.493 viviendas destruidas y 81.506 averiadas; 66 edificios colapsados. Chocó, Risaralda y Valle del Cauca son los más afectados."
+    },
+    {
+      "time": "12 Aug",
+      "tier": "official",
+      "src": "Presidency / Gobernación del Chocó",
+      "en": "Decree 1172 declares three days of national mourning from 12 August, flags at half-mast at home and in Colombian missions abroad. The same night the governor of Chocó ends the department's search-and-rescue phase after the last family sought in Quibdó, four people, is found alive.",
+      "ja": "大統領令第1172号により、8月12日から3日間の国家服喪を宣言。国内および在外公館で半旗を掲げる。同じ夜、チョコ県知事が、キブドで最後まで捜索されていた家族4人の生存確認を受けて県の捜索救助段階の終了を表明。",
+      "es": "El Decreto 1172 declara tres días de duelo nacional desde el 12 de agosto, con banderas a media asta en el país y en las misiones colombianas en el exterior. Esa misma noche la gobernadora del Chocó da por finalizada la fase de búsqueda y rescate del departamento tras hallar con vida a la última familia buscada en Quibdó, cuatro personas."
     }
   ],
   "areas": [
@@ -809,9 +817,9 @@
       "area_ja": "チョコ県（キブド）",
       "area_es": "Chocó (Quibdó)",
       "n": 9,
-      "note_en": "Four children still missing under a collapsed school in Quibdó",
-      "note_ja": "キブドでは倒壊した学校の下に子ども4人が行方不明のまま",
-      "note_es": "Cuatro menores siguen desaparecidos bajo un colegio colapsado en Quibdó"
+      "note_en": "Chocó closed its search-and-rescue phase on the night of 12 Aug: the last family sought in Quibdó, four people, was found alive. The department reports 14 dead and 138 injured.",
+      "note_ja": "チョコ県は8月12日夜に捜索救助段階を終了。キブドで最後まで捜索されていた家族4人は生存が確認された。県の集計は死者14人、負傷138人。",
+      "note_es": "El Chocó cerró su fase de búsqueda y rescate la noche del 12 de agosto: la última familia buscada en Quibdó, cuatro personas, fue hallada con vida. El departamento reporta 14 fallecidos y 138 heridos."
     },
     {
       "area_en": "Caldas (Manizales)",
@@ -956,6 +964,13 @@
     },
     {
       "tier": "official",
+      "source": "Presidency of Colombia, Decree 1172 of 12 Aug",
+      "en": "Three days of national mourning declared by Decree 1172 from 12 August, with the flag at half-mast on all public buildings and at Colombian embassies and consulates abroad.",
+      "ja": "8月12日付大統領令第1172号により、3日間の国家服喪を宣言。すべての公共施設および在外のコロンビア大使館・領事館で半旗を掲げる。",
+      "es": "Tres días de duelo nacional decretados mediante el Decreto 1172 desde el 12 de agosto, con la bandera a media asta en todos los edificios públicos y en las embajadas y consulados de Colombia en el exterior."
+    },
+    {
+      "tier": "official",
       "en": "Unified Command Post (PMU) established in Chocó; UNGRD coordinating with departmental and municipal risk-management councils.",
       "ja": "チョコ県に統合指揮所（PMU）を設置。UNGRDが県・市町村のリスク管理協議会と連携して調整。",
       "es": "Puesto de Mando Unificado (PMU) instalado en el Chocó; la UNGRD coordina con los consejos departamentales y municipales de gestión del riesgo."
@@ -965,6 +980,13 @@
       "en": "Four USAR teams (Bogotá, Envigado, Yopal, Medellín) deployed for search and rescue in collapsed structures.",
       "ja": "USAR4隊（ボゴタ、エンビガド、ヨパル、メデジン）を倒壊建物の捜索救助に投入。",
       "es": "Cuatro grupos USAR (Bogotá, Envigado, Yopal y Medellín) desplegados para búsqueda y rescate en estructuras colapsadas."
+    },
+    {
+      "tier": "official",
+      "source": "Gobernación del Chocó, 12 Aug",
+      "en": "Chocó ended its search-and-rescue phase on the night of 12 August, the governor stating that nobody remained reported under the rubble after the last family sought in Quibdó was found alive; the department moved to care for the affected and recovery. It reports 14 dead, 138 injured and 2,791 damaged properties.",
+      "ja": "チョコ県は8月12日夜に捜索救助段階を終了。キブドで最後まで捜索されていた家族が生存で発見され、瓦礫の下に届出のある者はいなくなったと知事が表明した。県は被災者支援と復旧に移行。県の集計は死者14人、負傷138人、被害物件2,791件。",
+      "es": "El Chocó dio por finalizada su fase de búsqueda y rescate la noche del 12 de agosto; la gobernadora señaló que ya no quedaba nadie reportado bajo los escombros tras hallar con vida a la última familia buscada en Quibdó, y el departamento pasó a la atención de los afectados y la recuperación. Reporta 14 fallecidos, 138 heridos y 2.791 afectaciones materiales."
     },
     {
       "tier": "official",
@@ -1924,6 +1946,20 @@
       "label_ja": "Semana 死者294人・住宅損壊81,506棟（公式数値）",
       "label_es": "Semana — 294 fallecidos y 81.506 viviendas averiadas, cifras oficiales",
       "url": "https://www.semana.com/nacion/articulo/ascienden-a-294-los-fallecidos-del-terremoto-del-10-de-agosto-y-van-81506-viviendas-averiadas-segun-cifras-oficiales/202627/",
+      "tier": "media"
+    },
+    {
+      "label_en": "El Heraldo — Decree 1172: three days of national mourning",
+      "label_ja": "El Heraldo 大統領令1172号 3日間の国家服喪",
+      "label_es": "El Heraldo — Decreto 1172: tres días de duelo nacional",
+      "url": "https://www.elheraldo.co/colombia/2026/08/12/presidente-de-la-espriella-decreta-tres-dias-de-duelo-nacional-por-victimas-del-terremoto/",
+      "tier": "media"
+    },
+    {
+      "label_en": "El Tiempo — the governor of Chocó ends the department's search-and-rescue phase",
+      "label_ja": "El Tiempo チョコ県知事が県の捜索救助段階の終了を表明",
+      "label_es": "El Tiempo — la gobernadora del Chocó da por finalizada la fase de búsqueda y rescate",
+      "url": "https://www.eltiempo.com/colombia/otras-ciudades/gobernadora-del-choco-dio-por-finalizada-la-fase-de-busqueda-y-rescate-en-el-departamento-tras-terremoto-de-7-4-en-colombia-ya-no-buscamos-a-nadie-3578022",
       "tier": "media"
     }
   ],
