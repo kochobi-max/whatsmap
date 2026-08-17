@@ -1,20 +1,21 @@
 {
   "_comment": "2026年8月10日 コロンビア・チョコ県地震（M7.4）。骨格のみ。被害数値・時系列・出典は disaster-report SKILL.md §1 に従い、UNGRD / SGC を一次情報源として毎回の実行で埋める。ここに推定値を書き込まないこと。",
-
   "meta": {
-    "status": "active",
+    "status": "pending",
     "glide": "EQ-2026-000146-COL",
     "iso3": "COL",
     "filebase": "ADRC_EQ_COL_Choco_20260810",
     "sources_profile": "references/sources/COL.md",
     "primary_official_source": "UNGRD (Unidad Nacional para la Gestión del Riesgo de Desastres)",
     "mail": {
-      "to": ["kenkyubu@adrc.asia", "td-date@adrc.asia"],
+      "to": [
+        "kenkyubu@adrc.asia",
+        "td-date@adrc.asia"
+      ],
       "from": "ma-arakida@adrc.asia",
       "send_at": "07:00 JST のみ"
     },
     "onedrive_dir": "C:\\Users\\arakida\\OneDrive - adrc.asia\\LargeScaleDisasters",
-
     "title_en": "2026 Chocó Earthquake (Colombia)",
     "title_ja": "2026年 チョコ地震（コロンビア）",
     "jma_name_en": "",
@@ -26,46 +27,71 @@
     "timeline_range_ja": "",
     "disseminate_en": "",
     "disseminate_ja": "",
-
     "optional_slides": [],
     "_optional_slides_comment": "日本固有スライド（自衛隊・TEC-FORCE・法適用・ボランティア・Spectee・サグリ）は該当データを持たせないことで自動的に落ちる。個別事案スライドと過去災害スライドはゲートでオフ。",
-
     "headline": {
-      "_comment": "毎回の実行で UNGRD の最新報から埋める。埋めるまで resolve_event.js は INVALID を返す。",
-      "deaths": null,
-      "injured": null,
-      "missing": null,
+      "_comment": "reports/colombia_eq_20260810/ の第11報（UNGRD、2026-08-16 18:30 COT 時点）より転記。統一版へ移行する際の起点。",
+      "deaths": 287,
+      "injured": 4147,
+      "missing": 194,
       "houses_destroyed": null,
       "evacuees": null,
       "tier": "official",
-      "as_of": ""
-    }
+      "as_of": "UNGRD 2026-08-16 18:30 COT"
+    },
+    "pending_reason": "reports/colombia_eq_20260810/ の独自実装で運用中。統一版が描画できないキーが42個あり（deaths_by_area / exposure / drm_system / emsr916 / pager / cali / observations / tectonics / pre_event 等）、いま統一版へ移すと内容の大半を失う。generator/README.md の移行仕様に従って受け皿スライドを用意してから active にすること。",
+    "current_implementation": "reports/colombia_eq_20260810/"
   },
-
   "_prev": {
-    "deaths": null, "injured": null, "missing": null,
-    "houses_destroyed": null, "evacuees": null, "tier": null, "as_of": ""
+    "deaths": null,
+    "injured": null,
+    "missing": null,
+    "houses_destroyed": null,
+    "evacuees": null,
+    "tier": null,
+    "as_of": ""
   },
-
   "locator": {
     "_comment": "地図の枠取りのみ。震央そのものは event.lat / event.lon に SGC または USGS の値を入れる。city_map は画像 google_cities の中心・ズームと必ず一致させること。",
-    "city_map": { "cLat": 5.69, "cLon": -76.66, "zoom": 9 },
+    "city_map": {
+      "cLat": 5.69,
+      "cLon": -76.66,
+      "zoom": 9
+    },
     "steps": [
       {
         "key": "google_world",
         "label_en": "World → Colombia",
         "label_ja": "世界→コロンビア",
         "cap": "© Google",
-        "map": { "cLat": 4.0, "cLon": -74.0, "zoom": 4 },
-        "box": { "n": 13.5, "s": -4.2, "w": -79.0, "e": -66.8 }
+        "map": {
+          "cLat": 4.0,
+          "cLon": -74.0,
+          "zoom": 4
+        },
+        "box": {
+          "n": 13.5,
+          "s": -4.2,
+          "w": -79.0,
+          "e": -66.8
+        }
       },
       {
         "key": "google_japan",
         "label_en": "Colombia → Chocó",
         "label_ja": "コロンビア→チョコ県",
         "cap": "© Google",
-        "map": { "cLat": 5.7, "cLon": -76.6, "zoom": 7 },
-        "box": { "n": 8.7, "s": 3.9, "w": -77.9, "e": -76.0 }
+        "map": {
+          "cLat": 5.7,
+          "cLon": -76.6,
+          "zoom": 7
+        },
+        "box": {
+          "n": 8.7,
+          "s": 3.9,
+          "w": -77.9,
+          "e": -76.0
+        }
       },
       {
         "key": "intensity_map",
@@ -75,15 +101,27 @@
       }
     ]
   },
-
   "event": {
-    "origin_time": "", "epicentre_en": "Chocó Department, Colombia", "epicentre_ja": "コロンビア・チョコ県",
-    "lat": null, "lon": null, "magnitude": "M7.4", "mag_usgs": "", "usgs_name": "",
-    "depth_km": null, "depth_display": "",
-    "mechanism_en": "", "mechanism_ja": "", "felt_en": "", "felt_ja": "", "max_intensity": "",
-    "summary_en": "", "summary_ja": "", "tectonic_en": "", "tectonic_ja": ""
+    "origin_time": "",
+    "epicentre_en": "Chocó Department, Colombia",
+    "epicentre_ja": "コロンビア・チョコ県",
+    "lat": null,
+    "lon": null,
+    "magnitude": "M7.4",
+    "mag_usgs": "",
+    "usgs_name": "",
+    "depth_km": null,
+    "depth_display": "",
+    "mechanism_en": "",
+    "mechanism_ja": "",
+    "felt_en": "",
+    "felt_ja": "",
+    "max_intensity": "",
+    "summary_en": "",
+    "summary_ja": "",
+    "tectonic_en": "",
+    "tectonic_ja": ""
   },
-
   "damage": [],
   "damage_highlights": [],
   "timeline": [],

@@ -58,7 +58,8 @@ function parseArgs(argv) {
 
 function resolveEventPath(ref) {
   if (!ref) {
-    // 引数なし: active な全イベントを返す（定期タスク用）
+    // 引数なし: active な全イベントを返す（定期タスク用）。
+    // pending（データ未整備・別実装で運用中）と archived は対象外。
     if (!fs.existsSync(EVENTS_DIR)) return [];
     return fs.readdirSync(EVENTS_DIR)
       .filter(f => f.endsWith(".json") && !f.startsWith("_"))
@@ -119,7 +120,13 @@ function validate(d, file) {
   if (!Array.isArray(m.mail && m.mail.to) || !m.mail.to.length) errs.push("meta.mail.to が空");
 
   if (m.glide && !GLIDE_RE.test(m.glide)) errs.push(`meta.glide の書式が不正: ${m.glide}（XX-YYYY-NNNNNN-XXX）`);
-  if (m.status && !["active", "archived"].includes(m.status)) errs.push(`meta.status は active / archived のみ: ${m.status}`);
+  // status:
+  //   active   … 統一版ジェネレータで日次運用中。定期タスクの対象
+  //   pending  … まだ統一版に載せていない。データ未整備、または別実装で運用中。対象外
+  //   archived … 更新終了。対象外
+  if (m.status && !["active", "pending", "archived"].includes(m.status)) {
+    errs.push(`meta.status は active / pending / archived のみ: ${m.status}`);
+  }
 
   // イベントJSONのファイル名は GLIDE と一致していること
   const base = path.basename(file, ".json");
@@ -203,6 +210,15 @@ function main() {
     } catch (e) {
       return { file, verdict: "INVALID", errors: [`JSONとして読めません: ${e.message}`], warnings: [], gate: null };
     }
+    // pending は「まだ統一版に載せていない」状態。未記入を欠陥として報告しない。
+    if (d.meta && d.meta.status === "pending") {
+      return {
+        file, verdict: "PENDING", glide: d.meta.glide, iso3: d.meta.iso3,
+        errors: [], warnings: [], gate: null,
+        note: d.meta.pending_reason || "統一版への移行が未了。meta.status を active にすると対象になる",
+      };
+    }
+
     const { errs, warns } = validate(d, file);
     if (errs.length) return { file, verdict: "INVALID", errors: errs, warnings: warns, gate: null };
 
@@ -231,14 +247,17 @@ function main() {
       console.log(`\n── ${path.basename(r.file)}`);
       console.log(`   判定: ${r.verdict === "OK" ? "✓ OK（ビルド→送信可）"
         : r.verdict === "HOLD" ? "⏸ HOLD（ビルドは可・メールは送らない）"
-          : "✗ INVALID（ビルドしない）"}`);
+          : r.verdict === "PENDING" ? "— PENDING（統一版の対象外）"
+            : "✗ INVALID（ビルドしない）"}`);
+      if (r.note) console.log(`   ${r.note}`);
       if (r.errors.length) r.errors.forEach(e => console.log(`   ✗ ${e}`));
       if (r.warnings.length) r.warnings.forEach(w => console.log(`   ! ${w}`));
       if (r.gate && r.gate.reasons.length) {
         console.log(`   数値急変ゲート:`);
         r.gate.reasons.forEach(x => console.log(`     ⏸ ${x}`));
       }
-      if (r.verdict !== "INVALID") {
+      // 出力ファイル名は OK / HOLD のときだけ確定する（PENDING・INVALID では未算出）
+      if (r.outputs && r.outputs.length) {
         console.log(`   出力: ${r.outputs.join(", ")}`);
         console.log(`   保存先: ${r.onedrive_dir}`);
       }

@@ -235,3 +235,58 @@ Slide 1 の3面ロケータ（世界→国→震度分布）は、中心座標�
 ```
 
 いずれも冪等。すべて適用後に `.bak` / `.gates.bak` / `.locator.bak` が残る。
+
+---
+
+## コロンビアの統合について（2026-08-17 調査結果）
+
+PR #1 をマージし、`reports/colombia_eq_20260810/` が main に入った。
+しかし**リポジトリを統合してもコードは統合されていない**。実測した差分は次のとおり。
+
+| | コロンビア | 統一版（熊本） |
+|---|---|---|
+| トップレベルキー | **57** | 23 |
+| 言語 | EN / JA / **ES**（`_es` が330箇所） | JA / EN |
+| gen_deck.js | 984行 | 2,165行 |
+| ページ数 | 36 | 27 |
+
+### 共通しているのは15キーだけ
+
+`aftershocks` `damage` `event` `historical` `images` `links` `meta` `prior_event`
+`response_measures` `satellite` `source_policy_en/ja` `support_domestic` `support_international` `timeline`
+
+### 統一版に受け皿が無いキーが42個
+
+`areas` `cali` `deaths_by_area` `drm_system` `emsr916` `exposure` `intensity_map`
+`mechanism_fig` `observations` `pager` `photos` `pre_event` `response_photos` `tectonics`
+ほか、`*_note_en/ja/es` 系の注記群。
+
+**いま統一版へ移すと、レポートの内容の大半を失う。** したがって
+`events/EQ-2026-000146-COL.json` は `status: "pending"` とし、
+定期タスクの対象から外してある。運用は当面 `reports/colombia_eq_20260810/` 側で続ける。
+
+### status の三態
+
+| status | 意味 | 定期タスク |
+|--------|------|-----------|
+| `active` | 統一版で日次運用中 | 対象 |
+| `pending` | 未移行（データ未整備、または別実装で運用中） | **対象外** |
+| `archived` | 更新終了 | 対象外 |
+
+`pending` のイベントを明示指定すると、未記入を欠陥として報告せず
+`PENDING` と `pending_reason` を返す（終了コード0）。
+
+### 移行の順序（コロンビアを active にするまで）
+
+1. **スペイン語を落とす。** 日英2言語で足りることは確認済み
+   （2026-08-12、伊達氏との往復で「英語版と日本語版があればいい」と決定）。`_es` 330箇所が消える
+2. **42キーのうち汎用性のあるものを統一版の受け皿スライドにする。**
+   既存の `if (d.tecforce)` と同じデータ駆動パターンで足す。汎用性が高い順に:
+   `deaths_by_area`（市町村別死者）→ `exposure`（曝露人口）→ `pager`（USGS PAGER）
+   → `tectonics`（テクトニクス）→ `emsr916`（Copernicus EMS）→ `drm_system`（相手国の防災体制）
+3. **イベント固有のもの（`cali` `pre_event` `response_photos` `observations`）は
+   `optional_slides` のゲート対象**にする
+4. `migrate_event.js` でJSONを移し、`meta.headline` を記入
+5. 出力を旧実装と並べて目視比較し、落ちたページが無いことを確認してから `status: "active"`
+
+**2が本体の作業**で、ここを飛ばして移行してはならない。
