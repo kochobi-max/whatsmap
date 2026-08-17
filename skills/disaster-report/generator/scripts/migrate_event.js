@@ -31,6 +31,8 @@ const DEFAULT_MAIL = {
   send_at: "07:00 JST のみ",
 };
 const DEFAULT_ONEDRIVE = "C:\\Users\\arakida\\OneDrive - adrc.asia\\LargeScaleDisasters";
+// apply_slide_gates.js が用意するゲートキーの全集合
+const ALL_OPTIONAL_SLIDES = ["prior_event", "focus_incident", "civic_tech", "spectee"];
 
 function parseArgs(argv) {
   const a = { dryRun: false };
@@ -73,6 +75,9 @@ function main() {
     mail: d.meta.mail || DEFAULT_MAIL,
     onedrive_dir: d.meta.onedrive_dir || DEFAULT_ONEDRIVE,
     ...d.meta,
+    // 既存イベントは現在の出力を1ページも変えないよう、全キーを明示的に固定する。
+    // （フィールドが無くても全描画されるが、意図を残すため書き出す）
+    optional_slides: d.meta.optional_slides || ALL_OPTIONAL_SLIDES,
     headline: d.meta.headline || {
       deaths: null, injured: null, missing: null,
       houses_destroyed: null, evacuees: null,

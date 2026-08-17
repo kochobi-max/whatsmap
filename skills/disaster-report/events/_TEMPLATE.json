@@ -27,6 +27,9 @@
     "disseminate_en": "",
     "disseminate_ja": "",
 
+    "optional_slides": [],
+    "_optional_slides_comment": "空配列＝イベント固有スライドを全部オフ（新規災害の既定）。指定できるキー: prior_event / focus_incident / civic_tech / spectee。フィールド自体を消すと全スライドが描画される（後方互換）。",
+
     "headline": {
       "_comment": "数値急変ゲート用の代表値。damage[] を更新するたびにここも揃える。tier は official / media / tbc。as_of は主たる公式情報源の報の時点。",
       "deaths": null,

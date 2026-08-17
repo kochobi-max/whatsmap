@@ -102,35 +102,75 @@ node scripts/migrate_event.js \
 
 ---
 
-## 残る汎用化作業 — スライド本体のイベント依存
+## イベント固有スライドの出し分け
 
-EVENT対応でデータの入口は汎用化されたが、**スライド本体にはまだ熊本固有の記述が残っている**。
-他の災害でそのまま流すと、熊本の内容が混入する。
-
-同期コピー（古い版）で確認した箇所。OneDrive版では行番号が異なる可能性がある。
-
-| 箇所 | 内容 | 必要な対応 |
-|------|------|-----------|
-| 地理ロケータ | `CITY_MAP = { cLat: 32.655, cLon: 130.707, zoom: 10 }`、`② Japan → Kumamoto / 日本→熊本` | `d.locator = { center, zoom, labels[] }` へ外出し |
-| Slide 2 | 見出し `The 2016 Kumamoto Earthquake & Recovery` | 見出しを `d.prior_event.title_en/ja` から取る（本文は既にデータ駆動） |
-| Slide 6c | 震源断層の説明に「日奈久断層」「布田川区間」がコード内リテラル | `d.fault.notes[]` へ移す |
-| Slide 8 出典行 | `Figures from FDMA / NPA / Kumamoto Pref.` | `d.attribution_en/ja` へ外出し |
-| Slide 8b 画像 | `kumamoto_castle` を直接参照 | `d.images` のキー一覧から回す |
-| **Slide 8d** | イオンモール熊本 爆発情報 — **全体が熊本専用** | `meta.optional_slides` でオン／オフ |
-| Slide 9 出典行 | `linkBy("MLIT"/"FDMA"/"Cabinet Office"/"Kumamoto")` | `d.links` のラベルから引く |
-| **Slide 12b2** | サグリ熊本地震マップ — **全体が熊本専用** | `meta.optional_slides` でオン／オフ |
-| 死者数の注記 | 消防庁第15報/第18報の数値がコード内リテラル | `d.damage_notes[]` へ移す |
-
-### 提案する契約
-
-```json
-"meta": {
-  "optional_slides": ["prior_event", "focus_incident", "civic_tech", "bosaixview", "spectee"]
-}
+```bash
+node scripts/apply_slide_gates.js --file scripts/gen_deck.js --dry-run
+node scripts/apply_slide_gates.js --file scripts/gen_deck.js
 ```
 
-配列に含まれるスライドだけを描画する。未指定なら描画しない（新規災害では既定でオフ）。
-熊本のイベントJSONには全部入れて、現在の出力を1ページも変えないこと。
+`apply_event_patch.js` の後に当てる。スライド本体の行は1行も書き換えず、外側に条件を1つ足すだけ。
 
-> **この改修は OneDrive の権威あるファイルに対してのみ行う。**
-> 同期コピーに対して行うと、言語レイヤとレイアウト修正を失う。
+### ゲートが要るのは4種だけだった
+
+権威版を調べたところ、**大半のスライドはすでにデータの有無で自動的に消える**。
+それらにゲートを足すのは重複した機構になるので、触らない。
+
+| すでに自動で消えるスライド | 条件 |
+|--------------------------|------|
+| 震源断層 | `if (d.fault && (d.fault.rows \|\| []).length)` |
+| 庁舎の建替え | `if (d.cityhalls)` |
+| 災害関連死・車中泊 | `if (d.related_deaths)` |
+| 災害ボランティア | `if (d.volunteers)` |
+| 自衛隊災害派遣 | `if (d.jsdf)` |
+| TEC-FORCE | `if (d.tecforce)` |
+| 法適用 | `if (d.legal)` |
+| 情報プラットフォーム | `(d.platform_pages \|\| []).forEach(...)` |
+
+ゲートを足したのは「**データが無くても描画されてしまう**」次の5ブロック（キーは4種）。
+
+| キー | スライド | 形 | 理由 |
+|------|---------|----|------|
+| `prior_event` | Slide 2 過去災害と復興 | flat | 見出し `The 2016 Kumamoto Earthquake & Recovery` がハードコード |
+| `focus_incident` | Slide 8d / 8e 個別事案 | block | `d.aeon_focus` が無くても空スライドが2枚出る |
+| `civic_tech` | Slide 12b2 サグリ | block | 本文が全文ハードコード |
+| `spectee` | Slide 12c Spectee | flat | 本文と消防庁報番号が全文ハードコード |
+
+### 契約
+
+```json
+"meta": { "optional_slides": ["prior_event", "focus_incident", "civic_tech", "spectee"] }
+```
+
+- **未指定 → 全スライドを描画する（後方互換）。** 既存イベントの出力は変わらない
+- 配列あり → 含まれるキーのスライドだけ描画。新規災害は `[]` から始める
+
+### 検証済み（権威版 2,165行に対して実施）
+
+| 条件 | 結果 |
+|------|------|
+| パッチ2つを順に適用 → ビルド | ✓ 27ページ生成 |
+| `optional_slides` 全キー指定 | 27ページ |
+| `optional_slides` **未指定** | **27ページ（後方互換を確認）** |
+| `optional_slides: []` | **22ページ（5ブロックが落ちる）** |
+| `OUT` 省略 | `ADRC_EQ_JPN_Kumamoto_20260728_EN.pptx` を自動命名・`output/` を自動作成 |
+| 言語レイヤ | 英語版 かな/カナ **0字** ／ 日本語版 1,068字 |
+| フォント | `FONT = "Meiryo"` 保持 |
+| 二重適用 | 両パッチとも冪等 |
+
+---
+
+## まだ残っているイベント固有記述
+
+ゲートで落とせない、**スライドの中に埋まった熊本固有のリテラル**。
+他国の災害では手当てが要る。
+
+| 箇所 | 内容 | 対応案 |
+|------|------|-------|
+| 地理ロケータ | `CITY_MAP = { cLat: 32.655, cLon: 130.707, zoom: 10 }`、`② Japan → Kumamoto / 日本→熊本` | `d.locator = { center, zoom, labels[] }` へ外出し |
+| Slide 8 出典行 | `Figures from FDMA / NPA / Kumamoto Pref.` | `d.attribution_en/ja` へ外出し |
+| Slide 8b 画像 | `kumamoto_castle` を直接参照 | `d.images` のキー一覧から回す |
+| Slide 9 出典行 | `linkBy("MLIT"/"FDMA"/"Cabinet Office"/"Kumamoto")` | `d.links` のラベルから引く |
+
+日本国内の災害であれば出典行はそのまま使える（機関名は共通）ため、
+**優先度が高いのは地理ロケータのみ**。海外災害の1件目を作るときに着手すればよい。

@@ -26,19 +26,21 @@
 詳細は `disaster-report/generator/README.md`。
 
 - [x] `EVENT` 環境変数対応 — `apply_event_patch.js`（冪等・構文チェック付き・曖昧一致を拒否）
+- [x] イベント固有スライドの出し分け — `apply_slide_gates.js`（`meta.optional_slides`）
 - [x] ビルド前検証と数値急変ゲート — `resolve_event.js`（終了コード 0 / 2 / 3 / 4）
-- [x] 旧データの移行 — `migrate_event.js`（熊本の実データで検証済み）
-- [ ] **パッチを OneDrive の権威版へ適用**（下記の注意を参照）
-- [ ] 熊本の `report_data.json` → `events/EQ-2026-000135-JPN.json` への移行と `meta.headline` の記入
-- [ ] スライド本体に残る熊本固有記述の外出し（`meta.optional_slides` 契約）
+- [x] 旧データの移行 — `migrate_event.js`
+- [x] **権威版（2,165行）でビルドまで通して検証**（27ページ生成 / 後方互換 / 言語レイヤ無傷）
+- [ ] パッチを OneDrive の `_kumamoto_generator/gen_deck.js` へ適用し、書き戻す
+- [ ] 熊本の権威版 `report_data.json` を移行し、`meta.headline` を記入
+- [ ] 地理ロケータ（`CITY_MAP` の座標）の外出し ← 海外災害の1件目を作るときに必要
 - [ ] コロンビア・インドネシアのイベントJSON作成
 - [ ] `kumamoto-eq-report` スキルの廃止（`disaster-report` が熊本を扱えるようになってから）
 
 > ⚠️ **セッション内の同期コピー（`~/.claude/skills/synced/kumamoto-eq-report/generator/`）は古い。**
-> `FONT = "Calibri"`（規定は `Meiryo`）で、`LANG_OUT` / `SPLIT_OVERRIDE` が存在しない（0件）。
-> 権威版は OneDrive の `_kumamoto_generator/gen_deck.js`。**同期コピーを土台に書き直さないこと。**
-> このリポジトリの3スクリプトは、どちらのバージョンにも当てられるよう
-> gen_deck.js 本体に触れない設計にしてある。
+> 794行・`FONT = "Calibri"`（規定は `Meiryo`）で、`LANG_OUT` / `SPLIT_OVERRIDE` が存在しない（0件）。
+> 権威版は 2,165行。**同期コピーを土台に書き直さないこと。**
+> このリポジトリの4スクリプトは、どちらのバージョンにも当てられるよう
+> gen_deck.js 本体に触れない設計にしてある（スライド本体の行は1行も書き換えない）。
 
 ## 決定事項の記録
 

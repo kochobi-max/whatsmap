@@ -45,6 +45,8 @@ const d = JSON.parse(fs.readFileSync(DATA, "utf8"));
 const OUT = process.env.OUT || path.join(HERE, "..", "output",
   ((d.meta && d.meta.filebase) || "ADRC_Disaster_Report") + "_" +
   String(process.env.LANG_OUT || "bi").toUpperCase() + ".pptx");
+// 出力先ディレクトリが無いと書き込み時に ENOENT で落ちるので先に作る。
+try { fs.mkdirSync(path.dirname(OUT), { recursive: true }); } catch { /* ignore */ }
 /* --- end EVENT resolution --- */`;
 
 // 落とすべき3文。空白の揺れは許すが、構造は厳密に一致させる。
