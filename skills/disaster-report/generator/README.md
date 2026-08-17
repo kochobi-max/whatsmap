@@ -160,17 +160,78 @@ node scripts/apply_slide_gates.js --file scripts/gen_deck.js
 
 ---
 
+## 地理ロケータのデータ駆動化
+
+```bash
+node scripts/apply_locator_patch.js --file scripts/gen_deck.js --dry-run
+node scripts/apply_locator_patch.js --file scripts/gen_deck.js
+```
+
+Slide 1 の3面ロケータ（世界→国→震度分布）は、中心座標・ズーム・赤枠の緯度経度・ラベルが
+すべて熊本前提のリテラルだった。海外災害では**日本地図が出てしまう**ため、`d.locator` から読むようにする。
+
+置換するのは5箇所（`CITY_MAP` / `seq` / `WORLD_MAP`・`JAPAN_MAP` / `rw` / `rj`）。
+それぞれちょうど1回見つからなければ中断する。
+
+### データ形
+
+```json
+"locator": {
+  "city_map": { "cLat": 5.69, "cLon": -76.66, "zoom": 9 },
+  "steps": [
+    { "key": "google_world", "label_en": "World → Colombia", "label_ja": "世界→コロンビア",
+      "cap": "© Google", "map": { "cLat": 4.0, "cLon": -74.0, "zoom": 4 },
+      "box": { "n": 13.5, "s": -4.2, "w": -79.0, "e": -66.8 } },
+    { "key": "google_japan", "label_en": "Colombia → Chocó", "label_ja": "コロンビア→チョコ県",
+      "cap": "© Google", "map": { "cLat": 5.7, "cLon": -76.6, "zoom": 7 },
+      "box": { "n": 8.7, "s": 3.9, "w": -77.9, "e": -76.0 } },
+    { "key": "intensity_map", "label_en": "USGS ShakeMap", "label_ja": "USGS 震度分布", "cap": "© USGS" }
+  ]
+}
+```
+
+- 3段目に `box` は不要（それ以上ズームしない）
+- ラベルは従来と同じ `① World → Japan / 世界→日本` の書式で組まれる。
+  **単言語版の分離は既存の言語レイヤがこの書式を前提にしている**ので崩さないこと
+- `key` は画像スロット名。`google_japan` というキー名は海外災害でも据え置き
+  （画像ファイルを差し替えて使う。改名すると既存の画像解決が壊れる）
+- **`city_map` は画像 `google_cities` の中心・ズームと必ず一致させること。**
+  ずれると Slide 4 の市町村マーカーが実際の位置と合わなくなる
+
+### 検証済み
+
+| 条件 | 結果 |
+|------|------|
+| `d.locator` **なし** | スライド本文・図形座標とも**差分0**（熊本の出力は1ピクセルも変わらない） |
+| `d.locator` あり（コロンビア） | ラベルが `世界→日本` `→熊本` から `世界→コロンビア` `→チョコ県` に変化 |
+| 赤枠・リード線 | slide1 の図形座標 32点中 **6点が移動**（`geoRect` がデータを読んでいる） |
+
+---
+
 ## まだ残っているイベント固有記述
 
-ゲートで落とせない、**スライドの中に埋まった熊本固有のリテラル**。
-他国の災害では手当てが要る。
+ゲートでもロケータでも落とせない、スライド内に埋まったリテラル。
+**いずれも日本国内の災害であればそのまま使える**（機関名が共通）ため、優先度は低い。
 
 | 箇所 | 内容 | 対応案 |
 |------|------|-------|
-| 地理ロケータ | `CITY_MAP = { cLat: 32.655, cLon: 130.707, zoom: 10 }`、`② Japan → Kumamoto / 日本→熊本` | `d.locator = { center, zoom, labels[] }` へ外出し |
 | Slide 8 出典行 | `Figures from FDMA / NPA / Kumamoto Pref.` | `d.attribution_en/ja` へ外出し |
 | Slide 8b 画像 | `kumamoto_castle` を直接参照 | `d.images` のキー一覧から回す |
 | Slide 9 出典行 | `linkBy("MLIT"/"FDMA"/"Cabinet Office"/"Kumamoto")` | `d.links` のラベルから引く |
 
-日本国内の災害であれば出典行はそのまま使える（機関名は共通）ため、
-**優先度が高いのは地理ロケータのみ**。海外災害の1件目を作るときに着手すればよい。
+## 画像について
+
+`google_world` / `google_japan` / `google_cities` / `intensity_map` は**熊本の画像**。
+海外災害では差し替えが要る。`generator/images/<GLIDE>/` に置き、
+イベントJSONの `images` から参照する。`locator.steps[].map` の中心・ズームと
+実際に取得した地図画像の中心・ズームを**必ず一致させること**（ずれると赤枠が合わない）。
+
+## パッチの適用順
+
+```
+1. apply_event_patch.js    ← EVENT 解決・OUT 自動命名
+2. apply_slide_gates.js    ← イベント固有スライドの出し分け
+3. apply_locator_patch.js  ← 地理ロケータのデータ駆動化
+```
+
+いずれも冪等。すべて適用後に `.bak` / `.gates.bak` / `.locator.bak` が残る。

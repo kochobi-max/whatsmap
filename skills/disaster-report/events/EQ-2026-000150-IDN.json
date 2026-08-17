@@ -1,0 +1,102 @@
+{
+  "_comment": "2026年8月15日 インドネシア・東ヌサトゥンガラ州（フローレス島沖）地震（M7.7）。骨格のみ。被害数値・時系列・出典は disaster-report SKILL.md §1 に従い、BNPB / BMKG を一次情報源として毎回の実行で埋める。ここに推定値を書き込まないこと。ADRC加盟国であり、BRIN要請の Sentinel Asia EO（SA-00656）と国際災害チャーターが展開している。",
+
+  "meta": {
+    "status": "active",
+    "glide": "EQ-2026-000150-IDN",
+    "iso3": "IDN",
+    "filebase": "ADRC_EQ_IDN_NTT_20260815",
+    "sources_profile": "references/sources/IDN.md",
+    "primary_official_source": "BNPB (Badan Nasional Penanggulangan Bencana)",
+    "mail": {
+      "to": ["kenkyubu@adrc.asia", "td-date@adrc.asia"],
+      "from": "ma-arakida@adrc.asia",
+      "send_at": "07:00 JST のみ"
+    },
+    "onedrive_dir": "C:\\Users\\arakida\\OneDrive - adrc.asia\\LargeScaleDisasters",
+
+    "title_en": "2026 East Nusa Tenggara Earthquake (Indonesia)",
+    "title_ja": "2026年 東ヌサトゥンガラ地震（インドネシア）",
+    "jma_name_en": "",
+    "edition": "",
+    "prepared_by": "Asian Disaster Reduction Center (ADRC)",
+    "stamp": "",
+    "update_date": "",
+    "timeline_range_en": "",
+    "timeline_range_ja": "",
+    "disseminate_en": "",
+    "disseminate_ja": "",
+
+    "optional_slides": [],
+    "_optional_slides_comment": "日本固有スライドは該当データを持たせないことで自動的に落ちる。衛星観測（Sentinel Asia / 国際災害チャーター）のスライドは satellite[] にデータを入れれば描画される。",
+
+    "headline": {
+      "_comment": "毎回の実行で BNPB の最新報から埋める。rusak berat / sedang / ringan の3区分を日本式の全壊・半壊へ機械的に対応させないこと（references/sources/IDN.md 参照）。houses_destroyed には rusak berat を入れる。",
+      "deaths": null,
+      "injured": null,
+      "missing": null,
+      "houses_destroyed": null,
+      "evacuees": null,
+      "tier": "official",
+      "as_of": ""
+    }
+  },
+
+  "_prev": {
+    "deaths": null, "injured": null, "missing": null,
+    "houses_destroyed": null, "evacuees": null, "tier": null, "as_of": ""
+  },
+
+  "locator": {
+    "_comment": "地図の枠取りのみ。震央そのものは event.lat / event.lon に BMKG または USGS の値を入れる。city_map は画像 google_cities の中心・ズームと必ず一致させること。",
+    "city_map": { "cLat": -8.6, "cLon": 121.0, "zoom": 8 },
+    "steps": [
+      {
+        "key": "google_world",
+        "label_en": "World → Indonesia",
+        "label_ja": "世界→インドネシア",
+        "cap": "© Google",
+        "map": { "cLat": -2.0, "cLon": 118.0, "zoom": 4 },
+        "box": { "n": 6.0, "s": -11.0, "w": 95.0, "e": 141.0 }
+      },
+      {
+        "key": "google_japan",
+        "label_en": "Indonesia → East Nusa Tenggara",
+        "label_ja": "インドネシア→東ヌサトゥンガラ州",
+        "cap": "© Google",
+        "map": { "cLat": -8.6, "cLon": 121.5, "zoom": 7 },
+        "box": { "n": -8.0, "s": -11.0, "w": 118.9, "e": 125.2 }
+      },
+      {
+        "key": "intensity_map",
+        "label_en": "BMKG MMI intensity",
+        "label_ja": "BMKG 震度分布（MMI）",
+        "cap": "© BMKG"
+      }
+    ]
+  },
+
+  "event": {
+    "origin_time": "", "epicentre_en": "Flores Sea, East Nusa Tenggara, Indonesia", "epicentre_ja": "インドネシア・東ヌサトゥンガラ州 フローレス海",
+    "lat": null, "lon": null, "magnitude": "M7.7", "mag_usgs": "", "usgs_name": "",
+    "depth_km": null, "depth_display": "",
+    "mechanism_en": "", "mechanism_ja": "", "felt_en": "", "felt_ja": "", "max_intensity": "",
+    "summary_en": "", "summary_ja": "", "tectonic_en": "", "tectonic_ja": ""
+  },
+
+  "damage": [],
+  "damage_highlights": [],
+  "timeline": [],
+  "intensity": {},
+  "tsunami": {},
+  "cities": [],
+  "aftershocks": [],
+  "aftershock_stats": {},
+  "response_measures": [],
+  "support_domestic": [],
+  "support_international": [],
+  "satellite": [],
+  "historical": [],
+  "images": {},
+  "links": []
+}

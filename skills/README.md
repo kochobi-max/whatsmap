@@ -32,14 +32,15 @@
 - [x] **権威版（2,165行）でビルドまで通して検証**（27ページ生成 / 後方互換 / 言語レイヤ無傷）
 - [ ] パッチを OneDrive の `_kumamoto_generator/gen_deck.js` へ適用し、書き戻す
 - [ ] 熊本の権威版 `report_data.json` を移行し、`meta.headline` を記入
-- [ ] 地理ロケータ（`CITY_MAP` の座標）の外出し ← 海外災害の1件目を作るときに必要
-- [ ] コロンビア・インドネシアのイベントJSON作成
+- [x] 地理ロケータのデータ駆動化 — `apply_locator_patch.js`（`d.locator` なしで出力差分0を確認）
+- [x] コロンビア・インドネシアのイベントJSON作成（骨格・ロケータ設定済み。被害数値は初回実行で収集）
+- [ ] 海外2件の地図画像の差し替え（`generator/images/<GLIDE>/`）
 - [ ] `kumamoto-eq-report` スキルの廃止（`disaster-report` が熊本を扱えるようになってから）
 
 > ⚠️ **セッション内の同期コピー（`~/.claude/skills/synced/kumamoto-eq-report/generator/`）は古い。**
 > 794行・`FONT = "Calibri"`（規定は `Meiryo`）で、`LANG_OUT` / `SPLIT_OVERRIDE` が存在しない（0件）。
 > 権威版は 2,165行。**同期コピーを土台に書き直さないこと。**
-> このリポジトリの4スクリプトは、どちらのバージョンにも当てられるよう
+> このリポジトリの5スクリプトは、どちらのバージョンにも当てられるよう
 > gen_deck.js 本体に触れない設計にしてある（スライド本体の行は1行も書き換えない）。
 
 ## 決定事項の記録
