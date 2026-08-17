@@ -29,6 +29,12 @@ const EVENTS_DIR = path.join(ROOT, "events");
 const SOURCES_DIR = path.join(ROOT, "references", "sources");
 
 const GLIDE_RE = /^[A-Z]{2}-\d{4}-\d{6}-[A-Z]{3}$/;
+
+// apply_slide_gates.js が用意するゲートキーの全集合。
+// ここに新しいキーを足したら、既存イベントの meta.optional_slides も見直すこと。
+// optional_slides は「列挙したものだけ描画する」許可リストなので、
+// 新しいキーを足すと、それを列挙していない既存イベントからページが黙って落ちる。
+const KNOWN_GATES = ["prior_event", "focus_incident", "civic_tech", "spectee", "satellite_jp"];
 const PLACEHOLDERS = ["DRAFT", "TBD", "PLACEHOLDER", "TODO", "XXXX", "＿＿"];
 
 // 数値急変ゲートのしきい値（SKILL.md §2 と一致させること）
@@ -148,6 +154,18 @@ function validate(d, file) {
   scanPlaceholders(d, "", errs);
 
   if (!m.headline) warns.push("meta.headline が無いため数値急変ゲートを判定できない");
+
+  // 許可リストに載っていないゲートキーがあれば知らせる。
+  // 新しいゲートが増えたときに、既存イベントからページが黙って落ちるのを防ぐ。
+  if (Array.isArray(m.optional_slides)) {
+    const missing = KNOWN_GATES.filter(k => !m.optional_slides.includes(k));
+    if (missing.length) {
+      warns.push(`optional_slides に未記載のゲートキー: ${missing.join(", ")}`
+        + `（該当スライドは描画されない。意図的な除外ならこの警告は無視してよい）`);
+    }
+    const unknown = m.optional_slides.filter(k => !KNOWN_GATES.includes(k));
+    if (unknown.length) warns.push(`optional_slides に未知のキー: ${unknown.join(", ")}`);
+  }
   return { errs, warns };
 }
 

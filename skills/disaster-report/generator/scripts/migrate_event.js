@@ -32,7 +32,7 @@ const DEFAULT_MAIL = {
 };
 const DEFAULT_ONEDRIVE = "C:\\Users\\arakida\\OneDrive - adrc.asia\\LargeScaleDisasters";
 // apply_slide_gates.js が用意するゲートキーの全集合
-const ALL_OPTIONAL_SLIDES = ["prior_event", "focus_incident", "civic_tech", "spectee"];
+const ALL_OPTIONAL_SLIDES = ["prior_event", "focus_incident", "civic_tech", "spectee", "satellite_jp"];
 
 function parseArgs(argv) {
   const a = { dryRun: false, stripLang: [] };

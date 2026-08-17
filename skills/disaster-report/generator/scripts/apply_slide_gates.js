@@ -45,6 +45,11 @@ const GATES = [
   { key: "focus_incident", probe: /Slide 8e:\s*Focus - AEON Mall/,        note: "焦点：個別事案 2/2（同上）" },
   { key: "civic_tech",     probe: /Slide 12b2:\s*Civic-Tech Platform/,    note: "民間プラットフォーム（サグリ・全文ハードコード）" },
   { key: "spectee",        probe: /Slide 12c:\s*Complementary Assessment/, note: "Spectee（日本固有ベンダ・全文ハードコード）" },
+  // 衛星の1/3・2/3ページは国土地理院のALOS-2 InSAR、千葉大CEReS、QPS-SAR の
+  // 解析結果を本文ごとハードコードしている。他国では中身が丸ごと誤りになる。
+  // 参加機関の一覧（3/3）は d.satellite 駆動なので対象外。
+  { key: "satellite_jp",   probe: /Slide 11:\s*Emergency Observation by Satellites/, note: "衛星による緊急観測 1/3（国土地理院 InSAR・全文ハードコード）" },
+  { key: "satellite_jp",   probe: /Slide 12:\s*Emergency Observation by Satellites/, note: "衛星による緊急観測 2/3（千葉大CEReS・QPS-SAR・全文ハードコード）" },
 ];
 
 const SECTION_RE = /^\/\* =+ Slide /;

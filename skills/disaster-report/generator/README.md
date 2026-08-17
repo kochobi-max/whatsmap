@@ -368,3 +368,68 @@ node scripts/apply_data_guards.js --file scripts/gen_deck.js
 ```
 
 権威版 2,165行に5本すべてを順に適用し、熊本27ページ・コロンビア30ページの生成を確認済み。
+
+---
+
+## ステップ2.5: 日本固有リテラルの外出し（2026-08-17）
+
+```bash
+node scripts/apply_attribution_patch.js --file scripts/gen_deck.js
+```
+
+**既定値は現在の熊本の記述のまま。** データがあるときだけ差し替わるので、
+熊本の出力は**27ページ・本文差分ゼロ**（機械比較で確認）。
+
+### 外出しした7箇所
+
+| 箇所 | データキー |
+|------|-----------|
+| 表紙の最大震度 | `d.event.max_intensity` が無ければ**区切りごと省く**（従来は `undefined` と表示） |
+| 表紙の震度発表機関 | `d.event.intensity_agency_en/ja`（既定: 気象庁） |
+| Slide 4 人口の出典 | `d.links` の "Population" を含むラベル |
+| Slide 5 震度分布図のキャプション | `d.image_captions.intensity_map` |
+| Slide 5 基本情報の出典 | `d.event.source_en/ja` |
+| Slide 6 震央分布図のキャプション | `d.image_captions.epicentre_distribution` |
+| Slide 6 震央分布の出典行 | `d.links` の "Hypocentre" / "Aftershock counts" |
+| Slide 6b 発震機構の箇条書き | `d.mechanism_points`（諸元・発震機構・震源断層） |
+| Slide 8 被害状況の出典注記 | `d.attribution_en/ja` |
+
+あわせて、`apply_slide_gates.js` に **`satellite_jp`** を追加した。衛星の 1/3・2/3 は
+国土地理院 InSAR・千葉大CEReS・QPS-SAR の解析結果を本文ごとハードコードしており、
+他国では中身が丸ごと誤りになるため。参加機関の一覧（3/3）は `d.satellite` 駆動なので対象外。
+
+### 混入は 9 → 3ページに減った
+
+| 残り | 原因 | 対処 |
+|------|------|------|
+| Slide 4「総務省統計局」 | `d.links` に "Population" ラベルが無く既定値が出た | **データ側**。イベントJSONに人口出典を追加すれば消える |
+| Slide 6「気象庁」 | 同上（"Hypocentre" ラベルが無い） | **データ側** |
+| **Slide 6b の観測機関一覧** | 防災科研 K-NET/KiK-net・F-net・Hi-net・気象庁CMT が本文にハードコード | **コード側。未対応** |
+
+最後の1件だけが残っている。`d.mechanism_sources` を新設して同じ流儀で外出しするか、
+`optional_slides` のゲート対象にするか、どちらでも良い。
+
+### 落とし穴: ゲートキーを増やすと既存イベントからページが落ちる
+
+`optional_slides` は**許可リスト**なので、`satellite_jp` を追加した時点で、
+それを列挙していない既存イベント（熊本のテスト用JSON）から**2ページが黙って落ちた**。
+27 → 25ページになって初めて気づいた。
+
+対策として `resolve_event.js` に `KNOWN_GATES` を持たせ、
+**`optional_slides` に未記載のゲートキーがあれば WARN を出す**ようにした。
+新しいゲートを足すときは `KNOWN_GATES` と `migrate_event.js` の
+`ALL_OPTIONAL_SLIDES` の両方を更新すること。
+
+### パッチの適用順（6本）
+
+```
+1. apply_event_patch.js       EVENT 解決・OUT 自動命名
+2. apply_slide_gates.js       イベント固有スライドの出し分け
+3. apply_locator_patch.js     地理ロケータのデータ駆動化
+4. apply_receiver_slides.js   汎用キー6種の受け皿
+5. apply_data_guards.js       欠損データでの停止を防ぐ
+6. apply_attribution_patch.js 出典・キャプション・発震機構の外出し
+```
+
+素の権威版（2,165行）に6本すべてを順に適用して検証済み。
+熊本27ページ（本文差分ゼロ）／コロンビア28ページ。
