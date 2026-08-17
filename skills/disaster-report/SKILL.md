@@ -102,7 +102,21 @@ skills/disaster-report/
 
 言語レイヤ・フォント・レイアウトの仕様は**全イベント共通**。イベント固有の分岐を入れない。
 
+### 3-0. ビルド前の検証（省略不可）
+
 ```bash
+node generator/scripts/resolve_event.js --event <GLIDE>
+```
+
+| 終了コード | 次の動作 |
+|-----------|---------|
+| `0` OK | ビルド → OneDrive保存 → **メール送信** |
+| `2` HOLD | ビルド・保存はする。**メールを送らず**、§2 の確認メールに切り替える |
+| `3` INVALID | **ビルドしない。** 表示された違反箇所をイベントJSONで直してから再実行 |
+
+`--event` を省略すると `meta.status: "active"` の全イベントを対象にする（定期タスク用）。
+
+
 for L in ja en; do
   U=$(echo $L | tr a-z A-Z)
   LANG_OUT=$L UPDATE_DATE="$(TZ=Asia/Tokyo date '+%d/%m/%Y')" \

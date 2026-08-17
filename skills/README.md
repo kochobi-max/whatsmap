@@ -21,12 +21,24 @@
    （`_kumamoto_generator/` に置かれたパッチ済み `gen_deck.js` が最新。`EVENT` 環境変数で
    イベントJSONを受け取れるよう改修が必要）
 
-## 未了の作業
+## 生成器の改修状況
 
-- [ ] `gen_deck.js` の `EVENT` 環境変数対応（現在は `generator/data/report_data.json` 固定）
-- [ ] 熊本の `report_data.json` → `events/EQ-2026-000135-JPN.json` への移行（`meta` フィールドの追加）
+詳細は `disaster-report/generator/README.md`。
+
+- [x] `EVENT` 環境変数対応 — `apply_event_patch.js`（冪等・構文チェック付き・曖昧一致を拒否）
+- [x] ビルド前検証と数値急変ゲート — `resolve_event.js`（終了コード 0 / 2 / 3 / 4）
+- [x] 旧データの移行 — `migrate_event.js`（熊本の実データで検証済み）
+- [ ] **パッチを OneDrive の権威版へ適用**（下記の注意を参照）
+- [ ] 熊本の `report_data.json` → `events/EQ-2026-000135-JPN.json` への移行と `meta.headline` の記入
+- [ ] スライド本体に残る熊本固有記述の外出し（`meta.optional_slides` 契約）
 - [ ] コロンビア・インドネシアのイベントJSON作成
 - [ ] `kumamoto-eq-report` スキルの廃止（`disaster-report` が熊本を扱えるようになってから）
+
+> ⚠️ **セッション内の同期コピー（`~/.claude/skills/synced/kumamoto-eq-report/generator/`）は古い。**
+> `FONT = "Calibri"`（規定は `Meiryo`）で、`LANG_OUT` / `SPLIT_OVERRIDE` が存在しない（0件）。
+> 権威版は OneDrive の `_kumamoto_generator/gen_deck.js`。**同期コピーを土台に書き直さないこと。**
+> このリポジトリの3スクリプトは、どちらのバージョンにも当てられるよう
+> gen_deck.js 本体に触れない設計にしてある。
 
 ## 決定事項の記録
 

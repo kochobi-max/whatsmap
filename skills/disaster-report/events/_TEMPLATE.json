@@ -25,15 +25,28 @@
     "timeline_range_en": "",
     "timeline_range_ja": "",
     "disseminate_en": "",
-    "disseminate_ja": ""
+    "disseminate_ja": "",
+
+    "headline": {
+      "_comment": "数値急変ゲート用の代表値。damage[] を更新するたびにここも揃える。tier は official / media / tbc。as_of は主たる公式情報源の報の時点。",
+      "deaths": null,
+      "injured": null,
+      "missing": null,
+      "houses_destroyed": null,
+      "evacuees": null,
+      "tier": "official",
+      "as_of": ""
+    }
   },
 
   "_prev": {
-    "_comment": "数値急変ゲート（SKILL.md §2）用。前報の値をここに退避してから damage を更新する。",
+    "_comment": "前報の meta.headline のコピー。damage を更新する前に、直前の meta.headline をここへ丸ごと退避する。resolve_event.js がこれと meta.headline を比較して数値急変ゲートを判定する。",
     "deaths": null,
     "injured": null,
+    "missing": null,
     "houses_destroyed": null,
     "evacuees": null,
+    "tier": null,
     "as_of": ""
   },
 
