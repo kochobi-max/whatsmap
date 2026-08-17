@@ -11,6 +11,8 @@
 |------|------|------|
 | `ldi-cms-report/SKILL.md` | **変更** | 既存スキルに Step 5.5（昇格判定）・Step 8（QAゲート）・Step 9（メール組み立て）・Step 10（送信）を追加 |
 | `disaster-report/` | **新規** | `kumamoto-eq-report` を統一フォームとして汎用化。イベントは `events/<GLIDE>.json` で管理 |
+| `glide-analysis/` | **新規** | GLIDE × EM-DAT の突合・C1〜C7 分類・対応分析。突合スクリプトは標準ライブラリのみで動作（自己テスト付き） |
+| `trip-dossier/` | **新規** | Plaud・Calendar・領収書OCR から出張書類の中身を収集。`trip-report-creator` の前段 |
 
 ## 反映手順
 
@@ -50,3 +52,5 @@
 | 2026-08-17 | LDIレポートのメール自動送信を可とする（QA PASS時のみ・0件でも送る） | `ldi-cms-report` Step 8–10 |
 | 2026-08-17 | 大規模災害レポートは統一フォームとし、OneDrive書き込みとメール送信までを自動化する | `disaster-report` §3, §5 |
 | 2026-08-17 | 送信元 `ma-arakida@adrc.asia` はエイリアス設定済みで技術的課題なし（送信済みメールで確認） | 両スキル |
+| 2026-08-17 | 出張ドシエの確信度「低」の欄は値を入れず空欄で出す | `trip-dossier` |
+| 2026-08-17 | GLIDE の C6（閾値差）は正常な差として不整合の分母から外す | `glide-analysis` |
