@@ -1,0 +1,2491 @@
+{
+  "meta": {
+    "title_en": "2026 Chocó Earthquake (Colombia)",
+    "title_ja": "2026年 チョコ地震（コロンビア）",
+    "subtitle_en": "M7.4, San José del Palmar, Chocó Department - 10 August 2026",
+    "subtitle_ja": "M7.4、チョコ県サンホセ・デル・パルマル、2026年8月10日",
+    "edition_en": "11th report",
+    "edition_ja": "第11報",
+    "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
+    "prepared_by_ja": "アジア防災センター（ADRC）",
+    "glide": "EQ-2026-000146-COL",
+    "as_of_en": "Figures as of the UNGRD balance with an 18:30 COT cut-off on 16 Aug 2026: 287 deaths, 4,147 injured, 194 missing, 355 people and 496 animals rescued alive, 472 municipalities in 15 departments, 120,671 families (185,996 people) affected, 26,392 homes destroyed and 127,608 damaged, 197 buildings collapsed. UNGRD attributes the movement in these counts to verification and consolidation of figures reported from the territories, some of which arrived unverified. All figures are preliminary; quote the cut-off with the number.",
+    "as_of_ja": "数値は2026年8月16日18:30（コロンビア時間）締めのUNGRD集計現在。死者287人、負傷4,147人、行方不明194人、生存救出355人・動物496頭、15県・472市町村。被災120,671世帯・185,996人、住宅全壊26,392棟・損壊127,608棟、建物倒壊197棟。UNGRDは、これらの数値の変動について、地方から報告された数値の検証と統合によるものであり、一部は未検証のまま送られていたと説明している。すべて速報値。引用の際は集計時点を併記されたい。",
+    "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
+    "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
+    "stamp": "2026-08-17 17:09 JST",
+    "update_date": "17/08/2026",
+    "title_es": "Terremoto del Chocó de 2026 (Colombia)",
+    "subtitle_es": "M7.4, San José del Palmar, departamento del Chocó — 10 de agosto de 2026",
+    "edition_es": "11.º informe",
+    "prepared_by_es": "Centro Asiático para la Reducción de Desastres (ADRC)",
+    "as_of_es": "Cifras del balance de la UNGRD con corte a las 18:30 COT del 16 de agosto de 2026: 287 muertos, 4.147 heridos, 194 desaparecidos, 355 personas y 496 animales rescatados con vida, 472 municipios en 15 departamentos, 120.671 familias (185.996 personas) afectadas, 26.392 viviendas destruidas y 127.608 averiadas, 197 edificios colapsados. La UNGRD atribuye el movimiento de estos conteos al proceso de verificación y consolidación de la información reportada desde los territorios, parte de ella enviada sin verificar. Todas las cifras son preliminares; cite la hora de corte junto con el número.",
+    "disseminate_es": "Informe multilingüe (EN/JA/ES) para difusión nacional e internacional. Se da prioridad a las fuentes oficiales; los vacíos se completan con información de prensa debidamente identificada."
+  },
+  "event": {
+    "origin_time_local": "10 Aug 2026, 07:34:28 COT (UTC-5)",
+    "origin_time_utc": "10 Aug 2026, 12:34:28 UTC",
+    "origin_time_jst": "10 Aug 2026, 21:34 JST",
+    "epicentre_en": "USGS: 5 km S of San José del Palmar, Chocó Department (approx. 280 km W of Bogotá) — SGC: 12 km from San José del Palmar",
+    "epicentre_ja": "USGS：チョコ県サンホセ・デル・パルマルの南5km（ボゴタの西約280km）／SGC：同町から12km",
+    "lat": 4.8436,
+    "lon": -76.2422,
+    "magnitude": "Mww 7.4",
+    "magnitude_note_en": "USGS Mww 7.4 and SGC 7.4 agree on size. The SGC's first bulletin gave M6.6 at 79 km depth and was revised to 7.4; the two agencies' locations differ by about 20 km and their depths by about 11 km, which is normal for an intermediate-depth event recorded by different networks.",
+    "magnitude_note_ja": "規模はUSGSのMww7.4、SGCの7.4で一致。SGCの第1報はM6.6・深さ79kmで、のち7.4に修正された。両機関の震源位置は約20km、深さは約11km異なるが、観測網の異なるやや深発地震では通常の範囲である。",
+    "depth_km": 110,
+    "depth_display_en": "110.3 km (USGS, PAGER v5) / 103 km (SGC, revised 11 Aug)",
+    "depth_display_ja": "110.3km（USGS、PAGER第5版）／103km（SGC、8月11日改訂）",
+    "mechanism_en": "Strike-slip faulting at intermediate depth, within the subducting Nazca slab (not on the shallow plate interface)",
+    "mechanism_ja": "沈み込むナスカプレート内部（スラブ内）で発生した、やや深発の横ずれ断層型。プレート境界の浅い地震ではない。",
+    "max_intensity_en": "MMI VII (Very strong) — USGS ShakeMap; the SGC macroseismic intensity map agrees",
+    "max_intensity_ja": "改正メルカリ震度 MMI VII（非常に強い）／USGS ShakeMap。SGCの体感震度図も同等",
+    "felt_en": "Felt across western and central Colombia including Bogotá, Cali and Medellín, and in Ecuador, Panama and Venezuela",
+    "felt_ja": "ボゴタ・カリ・メデジンを含むコロンビア西部〜中部の広域、およびエクアドル・パナマ・ベネズエラで有感",
+    "tsunami_en": "No tsunami. The event was inland and at intermediate depth; no tsunami warning was issued for the Pacific coast.",
+    "tsunami_ja": "津波なし。震源は内陸かつやや深発で、太平洋岸に津波警報は発表されていない。",
+    "alert_en": "USGS PAGER: Orange (version 5). Most likely fatality band 1,000-10,000 (35% probability); economic losses most likely USD 100-1,000 million (34%), less than 1% of Colombia's GDP. GDACS: Orange.",
+    "alert_ja": "USGS PAGER：オレンジ（第5版）。死者数は1,000〜10,000人の階級が最も確からしい（確率35%）。経済損失は1〜10億米ドルが最も確からしく（34%）、コロンビアのGDPの1%未満。GDACS：オレンジ。",
+    "summary_en": "At 07:34 local time (12:34 UTC) on 10 August 2026, an Mww 7.4 earthquake struck western Colombia with its epicentre 5 km east of San José del Palmar in Chocó Department, at a depth of about 110 km (USGS). The event was an intermediate-depth, strike-slip rupture inside the subducting Nazca slab; because of its depth, strong shaking (MMI VI-VII) was spread over a wide area of the Andean Coffee Region rather than concentrated near the epicentre, and about 10.5 million people were exposed to it. The SGC describes it as the largest-magnitude earthquake recorded in Colombia in the past decade. The toll rose steeply through the first two days: 111 deaths in the Government's 13:00 COT balance on 10 August, 132 by that evening, and 182 deaths with 2,542 injured and 189 missing in UNGRD's situation report on 11 August, against 240 deaths when the departmental and city announcements are added up — more than 1,600 buildings damaged (1,575 homes damaged, 37 destroyed, 61 buildings collapsed), together with damage to 18 health facilities, 52 educational facilities, 18 major roads and six regional airports. The passenger terminal of Matecaña International Airport in Pereira partially collapsed, a tower of the neo-Gothic cathedral in Manizales fell onto the nave, and about 30% of the University Hospital in Cali collapsed. The President declared a national disaster, set up a Unified Command Post in Chocó and deployed four USAR teams and the armed forces. There was no tsunami. All figures are preliminary and are expected to change as assessment proceeds.",
+    "summary_ja": "2026年8月10日07:34（現地時間、12:34 UTC）、コロンビア西部チョコ県サンホセ・デル・パルマルの東5kmを震源とするMww7.4の地震が発生した。深さは約110km（USGS）で、沈み込むナスカプレート内部のやや深発・横ずれ型。深いために強い揺れ（MMI VI〜VII）はコーヒー地帯を含む広範囲に及び、約1,050万人が強い揺れにさらされた。SGCは過去10年でコロンビア最大規模の地震としている。死者数は最初の2日間で急増した。8月10日13:00（現地）の政府集計で111人、同日夕方に132人、11日のUNGRD状況報告では死者182人・負傷2,542人・行方不明189人となり、県・市の発表を積み上げると240人に達する。あわせて建物被害1,600棟超（住宅損壊1,575、全壊37、建物倒壊61）、医療施設18・教育施設52・幹線道路18・地方空港6か所の被害を発表。ペレイラのマテカニャ国際空港旅客ターミナルが一部倒壊、マニサレスの大聖堂の塔が身廊に崩落、カリの大学病院は約30%が損壊した。大統領は国家災害を宣言し、チョコ県に統合指揮所を設置、USAR4隊と軍を投入した。津波はない。数値はすべて速報値であり、被害調査の進展により変動する。",
+    "epicentre_es": "USGS: 5 km al S de San José del Palmar, departamento del Chocó (unos 280 km al O de Bogotá) — SGC: a 12 km de San José del Palmar",
+    "magnitude_note_es": "El tamaño coincide: Mww 7.4 del USGS y 7.4 del SGC. El primer boletín del SGC dio M6.6 a 79 km de profundidad y fue revisado a 7.4; las localizaciones de las dos entidades difieren unos 20 km y sus profundidades unos 11 km, lo normal en un sismo de profundidad intermedia registrado por redes distintas.",
+    "depth_display_es": "110,3 km (USGS, PAGER v5) / 103 km (SGC, revisado el 11 de agosto)",
+    "mechanism_es": "Falla de rumbo a profundidad intermedia, dentro de la placa de Nazca en subducción (no en la interfaz somera entre placas)",
+    "max_intensity_es": "MMI VII (muy fuerte) — ShakeMap del USGS; el mapa de intensidades macrosísmicas del SGC coincide",
+    "felt_es": "Sentido en el occidente y el centro de Colombia, incluidas Bogotá, Cali y Medellín, y también en Ecuador, Panamá y Venezuela",
+    "tsunami_es": "Sin tsunami. El sismo fue continental y de profundidad intermedia; no se emitió alerta de tsunami para la costa del Pacífico.",
+    "alert_es": "PAGER del USGS: naranja (versión 5). La banda de mortalidad más probable es de 1.000 a 10.000 (35 % de probabilidad); las pérdidas económicas más probables son de 100 a 1.000 millones de dólares (34 %), menos del 1 % del PIB de Colombia. GDACS: naranja.",
+    "summary_es": "A las 07:34 hora local (12:34 UTC) del 10 de agosto de 2026, un sismo de Mww 7.4 sacudió el occidente de Colombia con epicentro 5 km al este de San José del Palmar (Chocó), a unos 110 km de profundidad (USGS). Fue una ruptura de rumbo a profundidad intermedia dentro de la placa de Nazca en subducción; por esa profundidad, el sacudimiento fuerte (MMI VI-VII) se repartió sobre una amplia zona del Eje Cafetero andino en lugar de concentrarse cerca del epicentro, y unos 10,5 millones de personas quedaron expuestas a él. El SGC lo describe como el sismo de mayor magnitud registrado en Colombia en la última década. El balance creció con fuerza en los dos primeros días: 111 muertos en el corte de las 13:00 COT del 10 de agosto, 132 esa misma tarde, y 182 muertos con 2.542 heridos y 189 desaparecidos en el reporte de situación de la UNGRD del 11 de agosto, frente a 240 muertos al sumar lo anunciado por departamentos y ciudades — más de 1.600 edificaciones afectadas (1.575 viviendas averiadas, 37 destruidas y 61 edificios colapsados), y daños en 18 centros de salud, 52 establecimientos educativos, 18 vías principales y seis aeropuertos regionales. Colapsaron parcialmente la terminal de pasajeros del Aeropuerto Internacional Matecaña (Pereira), una torre de la catedral neogótica de Manizales sobre la nave y cerca del 30 % del Hospital Universitario del Valle, en Cali. El Presidente declaró el desastre nacional, instaló un Puesto de Mando Unificado en el Chocó y desplegó cuatro grupos USAR y las Fuerzas Militares. No hubo tsunami. Todas las cifras son preliminares y variarán conforme avance la evaluación.",
+    "origin_time_local_en": "10 Aug 2026, 07:34:28 COT (UTC-5)",
+    "origin_time_utc_en": "10 Aug 2026, 12:34:28 UTC",
+    "origin_time_jst_en": "10 Aug 2026, 21:34 JST",
+    "origin_time_local_ja": "2026年8月10日 07:34:28（コロンビア時間、UTC-5）",
+    "origin_time_utc_ja": "2026年8月10日 12:34:28（UTC）",
+    "origin_time_jst_ja": "2026年8月10日 21:34（日本時間）",
+    "origin_time_local_es": "10 de agosto de 2026, 07:34:28 COT (UTC-5)",
+    "origin_time_utc_es": "10 de agosto de 2026, 12:34:28 UTC",
+    "origin_time_jst_es": "10 de agosto de 2026, 21:34 JST",
+    "origin_time_short_en": "10 Aug 2026, 07:34 COT (12:34 UTC / 21:34 JST)",
+    "origin_time_short_ja": "2026年8月10日 07:34 COT（12:34 UTC／21:34 JST）",
+    "origin_time_short_es": "10 ago. 2026, 07:34 COT (12:34 UTC / 21:34 JST)",
+    "sgc": {
+      "event_id": "SGC2026pqqmro",
+      "url": "https://www.sgc.gov.co/detallesismo/SGC2026pqqmro/",
+      "magnitude": "7.4 (ML)",
+      "origin_time": "07:34:27 COT",
+      "lat": 4.99,
+      "lon": -76.29,
+      "depth_km": 103,
+      "stations": 119,
+      "epicentre_en": "12 km from San José del Palmar, Chocó",
+      "epicentre_ja": "チョコ県サンホセ・デル・パルマルから12km",
+      "epicentre_es": "a 12 km de San José del Palmar, Chocó",
+      "note_en": "SGC bulletin of record (event SGC2026pqqmro), revised at 14:20 UTC on 11 August: located with 119 stations and 208 phases, azimuthal gap 54 degrees, location uncertainty 1.6/1.9 km and depth uncertainty 3.5 km. The first bulletin gave M6.6 at 79 km and the second 7.4 at 96 km with 69 stations. The SGC states that its bulletins remain subject to change.",
+      "note_ja": "SGCの公式速報（イベントSGC2026pqqmro）。8月11日14:20 UTCに改訂され、119観測点・208フェーズで決定、方位角ギャップ54度、位置の不確かさ1.6／1.9km、深さの不確かさ3.5km。第1報はM6.6・深さ79km、第2報は7.4・深さ96km（69観測点）であった。SGCは速報値が今後も変更されうるとしている。",
+      "note_es": "Boletín oficial del SGC (evento SGC2026pqqmro), revisado a las 14:20 UTC del 11 de agosto: localizado con 119 estaciones y 208 fases, brecha azimutal de 54 grados, incertidumbre de localización de 1,6/1,9 km y de profundidad de 3,5 km. El primer boletín dio M6.6 a 79 km y el segundo 7.4 a 96 km con 69 estaciones. El SGC advierte que sus boletines siguen sujetos a cambios."
+    },
+    "magnitude_display_en": "Mww 7.4 (USGS)   ·   7.4 (SGC)",
+    "magnitude_display_ja": "Mww 7.4（USGS）　・　7.4（SGC）",
+    "magnitude_display_es": "Mww 7,4 (USGS)   ·   7,4 (SGC)"
+  },
+  "tectonics": {
+    "text_en": "Colombia lies at the junction of the Nazca, Caribbean and South America plates. Off the Pacific coast the Nazca plate subducts eastward beneath South America at roughly 50-60 mm/yr, and the descending slab reaches intermediate depths (70-300 km) beneath the Western and Central Cordilleras. This event ruptured inside that slab at about 110 km depth, which is why the shaking was felt over hundreds of kilometres - as far as Bogotá, Quito and Panamá City - while surface faulting and tsunami generation were absent. Intermediate-depth events radiate high-frequency energy efficiently and attenuate slowly, so damage tends to be distributed across many cities rather than concentrated in a narrow epicentral zone.",
+    "text_ja": "コロンビアはナスカ・カリブ・南米の3プレートが会合する地域にある。太平洋岸沖でナスカプレートが年約50〜60mmで南米プレート下に沈み込み、そのスラブは西部・中央山脈の下で深さ70〜300kmに達する。今回はこのスラブ内部の深さ約110kmで破壊が起きた。そのため揺れはボゴタ、キト、パナマシティまで数百km届いた一方、地表地震断層や津波は生じていない。やや深発地震は高周波エネルギーを効率よく放射し減衰が緩やかなため、被害は震央近傍に集中せず多数の都市に分散する傾向がある。",
+    "points": [
+      {
+        "tier": "official",
+        "en": "Depth about 110 km (USGS, revised): an intraslab event, not a plate-interface megathrust.",
+        "ja": "深さ約110km（USGS・修正値）。プレート境界の巨大地震ではなくスラブ内地震。",
+        "es": "Profundidad de unos 110 km (USGS, revisado): es un sismo intraplaca dentro de la losa, no un megasismo de la interfaz entre placas."
+      },
+      {
+        "tier": "official",
+        "en": "Strike-slip mechanism within the descending Nazca slab (USGS tectonic summary).",
+        "ja": "発震機構は沈み込むナスカスラブ内の横ずれ型（USGSの地震テクトニクス解説）。",
+        "es": "Mecanismo de falla de rumbo dentro de la losa de Nazca en subducción (resumen tectónico del USGS)."
+      },
+      {
+        "tier": "official",
+        "en": "Maximum shaking MMI VII (Very strong); about 10.5 million people exposed to MMI VI-VII.",
+        "ja": "最大震度はMMI VII（非常に強い）。MMI VI〜VIIの揺れに約1,050万人がさらされた。",
+        "es": "Sacudimiento máximo MMI VII (muy fuerte); unos 10,5 millones de personas expuestas a MMI VI-VII."
+      },
+      {
+        "tier": "official",
+        "en": "USGS PAGER (v5) Orange alert: the most likely fatality band is 1,000-10,000 and the most likely loss band USD 100-1,000 million — model estimates, not observations, and far above the figures reported so far.",
+        "ja": "USGS PAGER（第5版）はオレンジ警報。最も確からしい死者数階級は1,000〜10,000人、損失階級は1〜10億米ドル。いずれもモデル推計であり実測値ではなく、現時点の報告値を大きく上回る。",
+        "es": "Alerta naranja del PAGER (v5) del USGS: la banda de mortalidad más probable es 1.000-10.000 y la de pérdidas 100-1.000 millones de dólares — estimaciones de modelo, no observaciones, y muy por encima de las cifras reportadas hasta ahora."
+      },
+      {
+        "tier": "official",
+        "en": "The SGC assesses this as the largest-magnitude earthquake recorded in Colombia in the past decade.",
+        "ja": "SGCは過去10年でコロンビア最大規模の地震と評価している。",
+        "es": "El SGC lo evalúa como el sismo de mayor magnitud registrado en Colombia en la última década."
+      },
+      {
+        "tier": "media",
+        "en": "Shaking was reported as unusually long in duration in cities far from the epicentre - a characteristic of deep events recorded on soft valley sediments.",
+        "ja": "震央から遠い都市でも揺れが長く続いたと報じられている。軟弱な盆地堆積層で観測される深発地震の特徴。",
+        "es": "Se reportó una duración del sacudimiento inusualmente larga en ciudades alejadas del epicentro, rasgo propio de los sismos profundos registrados sobre sedimentos blandos de valle."
+      },
+      {
+        "tier": "official",
+        "en": "The Coffee Region has a history of both deep and shallow damaging events: M7.0 at 150 km depth in 1938, M6.5 at 64 km in 1962 and M6.1 at 15 km in 1999 (SGC/GEM national hazard model).",
+        "ja": "コーヒー地帯には深い地震・浅い地震の双方の被害履歴がある。1938年M7.0（深さ150km）、1962年M6.5（同64km）、1999年M6.1（同15km）（SGC/GEM 国家ハザードモデル）。",
+        "es": "El Eje Cafetero tiene antecedentes de sismos dañinos tanto profundos como someros: M7.0 a 150 km en 1938, M6.5 a 64 km en 1962 y M6.1 a 15 km en 1999 (modelo nacional de amenaza SGC/GEM)."
+      }
+    ],
+    "text_es": "Colombia se encuentra en la confluencia de las placas de Nazca, del Caribe y Suramericana. Frente a la costa del Pacífico, la placa de Nazca subduce hacia el este bajo Suramérica a unos 50-60 mm/año, y la losa descendente alcanza profundidades intermedias (70-300 km) bajo las cordilleras Occidental y Central. Este sismo rompió dentro de esa losa a unos 110 km de profundidad, razón por la cual se sintió a cientos de kilómetros —hasta Bogotá, Quito y la ciudad de Panamá— sin producir ruptura superficial ni tsunami. Los sismos de profundidad intermedia irradian con eficiencia energía de alta frecuencia y se atenúan lentamente, de modo que los daños tienden a repartirse entre muchas ciudades en vez de concentrarse en una franja epicentral estrecha."
+  },
+  "response_measures": [
+    {
+      "tier": "official",
+      "en": "The Government declared a national disaster (desastre nacional), enabling extraordinary mobilisation and coordination of the response.",
+      "ja": "政府は国家災害（desastre nacional）を宣言し、緊急対応のための特例的な動員と調整を可能にした。",
+      "es": "El Gobierno declaró el desastre nacional, lo que permite una movilización y una coordinación extraordinarias de la respuesta."
+    },
+    {
+      "tier": "official",
+      "en": "President Abelardo de la Espriella - in office for three days - ordered a Unified Command Post (PMU) in Chocó to coordinate the emergency, and travelled to Pereira, one of the worst-hit cities.",
+      "ja": "就任3日目のアベラルド・デラエスプリエジャ大統領は、チョコ県に統合指揮所（PMU）を設置して対応を調整するよう指示し、被害の大きいペレイラを訪れた。",
+      "es": "El presidente Abelardo de la Espriella —con tres días en el cargo— ordenó instalar un Puesto de Mando Unificado (PMU) en el Chocó para coordinar la emergencia y se desplazó a Pereira, una de las ciudades más afectadas."
+    },
+    {
+      "tier": "official",
+      "en": "The National Unit for Disaster Risk Management (UNGRD) activated the national system, verified damage with departmental and municipal authorities, and channelled offers of assistance together with the Ministry of Foreign Affairs.",
+      "ja": "国家災害リスク管理ユニット（UNGRD）が国家システムを起動し、県・市町村当局と被害を確認、外務省とともに支援の申し出を一元的に受け付けている。",
+      "es": "La Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD) activó el sistema nacional, verificó los daños con las autoridades departamentales y municipales y canalizó los ofrecimientos de ayuda junto con la Cancillería."
+    },
+    {
+      "tier": "official",
+      "en": "Four USAR (urban search and rescue) groups were deployed from Bogotá, Envigado, Yopal and Medellín to reinforce search and rescue.",
+      "ja": "USAR（都市型捜索救助）4隊をボゴタ、エンビガド、ヨパル、メデジンから派遣し、捜索救助を増強した。",
+      "es": "Se desplegaron cuatro grupos USAR (búsqueda y rescate urbano) desde Bogotá, Envigado, Yopal y Medellín para reforzar las labores de búsqueda y rescate."
+    },
+    {
+      "tier": "official",
+      "en": "Soldiers were deployed to the affected departments for search, rescue and route clearance.",
+      "ja": "被災各県に軍を投入し、捜索・救助・道路啓開にあたっている。",
+      "es": "Se desplegaron efectivos militares en los departamentos afectados para búsqueda, rescate y remoción de escombros en las vías."
+    },
+    {
+      "tier": "official",
+      "en": "Civil aviation suspended flights at Pereira, Manizales, Quibdó, Armenia, Cartago and Buenaventura while runways and terminals were inspected.",
+      "ja": "民間航空当局は、滑走路・ターミナルの点検のためペレイラ、マニサレス、キブド、アルメニア、カルタゴ、ブエナベントゥーラの各空港で運航を停止した。",
+      "es": "La autoridad de aviación civil suspendió las operaciones en Pereira, Manizales, Quibdó, Armenia, Cartago y Buenaventura mientras se inspeccionaban pistas y terminales."
+    },
+    {
+      "tier": "media",
+      "en": "Damaged buildings, power outages and communications disruption are slowing assessment in parts of Chocó closest to the epicentre.",
+      "ja": "震央に近いチョコ県の一部では、建物被害・停電・通信途絶により被害把握が遅れている。",
+      "es": "Las edificaciones averiadas, los cortes de energía y la interrupción de las comunicaciones retrasan la evaluación en las zonas del Chocó más cercanas al epicentro."
+    },
+    {
+      "tier": "official",
+      "en": "GLIDE number assigned for this event: EQ-2026-000146-COL.",
+      "ja": "本災害のGLIDE番号が付番された：EQ-2026-000146-COL。",
+      "es": "Número GLIDE asignado a este evento: EQ-2026-000146-COL."
+    }
+  ],
+  "timeline": [
+    {
+      "time": "07:34",
+      "tier": "official",
+      "src": "USGS / SGC",
+      "en": "Mww 7.4 earthquake, epicentre 5 km S of San José del Palmar (Chocó), depth approx. 110 km. Felt in Bogotá, Cali, Medellín, and in Ecuador, Panama and Venezuela.",
+      "ja": "Mww7.4の地震発生。震央はチョコ県サンホセ・デル・パルマルの南5km、深さ約110km。ボゴタ、カリ、メデジンのほかエクアドル、パナマ、ベネズエラでも有感。",
+      "es": "Sismo de Mww 7.4; epicentro 5 km al S de San José del Palmar (Chocó), profundidad de unos 110 km. Sentido en Bogotá, Cali y Medellín, y también en Ecuador, Panamá y Venezuela."
+    },
+    {
+      "time": "07:40s",
+      "tier": "official",
+      "src": "SGC",
+      "en": "The SGC issues a first bulletin (initially M6.6, 79 km depth), later revised to M7.4 at 96 km, located with 69 stations (event SGC2026pqqmro); damage-assessment protocols activated.",
+      "ja": "SGCが第1報を発表（当初M6.6・深さ79km）。のちM7.4・深さ96kmに修正し、69観測点で決定（イベントSGC2026pqqmro）。被害評価のプロトコルを起動。",
+      "es": "El SGC emite un primer boletín (inicialmente M6.6, 79 km de profundidad), luego revisado a M7.4 a 96 km y localizado con 69 estaciones (evento SGC2026pqqmro); se activan los protocolos de evaluación de daños."
+    },
+    {
+      "time": "Morning",
+      "tier": "official",
+      "src": "UNGRD",
+      "en": "UNGRD reports first damage indications in 9 municipalities of Chocó, 8 of Caldas, 2 of Valle del Cauca and 2 of Risaralda, plus localities in Quindío.",
+      "ja": "UNGRDが、チョコ県9市町村、カルダス県8、バジェ・デル・カウカ県2、リサラルダ県2、およびキンディオ県の複数地区で被害の可能性を報告。",
+      "es": "La UNGRD reporta las primeras afectaciones en 9 municipios del Chocó, 8 de Caldas, 2 del Valle del Cauca y 2 de Risaralda, además de varias localidades del Quindío."
+    },
+    {
+      "time": "Morning",
+      "tier": "media",
+      "src": "Mayor of Cali",
+      "en": "Cali reports collapsed structures at 12 critical points with people trapped; part of the University Hospital collapses.",
+      "ja": "カリ市長が、12か所の重要地点で建物倒壊と生き埋めの発生を報告。大学病院の一部が崩落。",
+      "es": "Cali reporta estructuras colapsadas en 12 puntos críticos con personas atrapadas; colapsa parte del Hospital Universitario."
+    },
+    {
+      "time": "Morning",
+      "tier": "media",
+      "src": "Mayor of Manizales",
+      "en": "Manizales reports 17 buildings collapsed and 19 partially collapsed; a tower of the neo-Gothic cathedral falls onto the nave. Residents asked to stay outdoors because of aftershocks.",
+      "ja": "マニサレス市長が、建物17棟の倒壊・19棟の部分倒壊を報告。ネオゴシック様式の大聖堂の塔が身廊に崩落。余震に備え屋外にとどまるよう呼びかけ。",
+      "es": "Manizales reporta 17 edificios colapsados y 19 con colapso parcial; una torre de la catedral neogótica cae sobre la nave. Se pide a la población permanecer fuera de las edificaciones por las réplicas."
+    },
+    {
+      "time": "Morning",
+      "tier": "media",
+      "src": "Aerocivil / media",
+      "en": "Passenger terminal of Matecaña International Airport (Pereira) partially collapses; flights suspended at six regional airports.",
+      "ja": "ペレイラのマテカニャ国際空港旅客ターミナルが一部倒壊。地方6空港で運航停止。",
+      "es": "Colapsa parcialmente la terminal de pasajeros del Aeropuerto Internacional Matecaña (Pereira); se suspenden las operaciones en seis aeropuertos regionales."
+    },
+    {
+      "time": "Daytime",
+      "tier": "official",
+      "src": "Government",
+      "en": "National disaster declared; Unified Command Post established in Chocó; armed forces deployed.",
+      "ja": "国家災害を宣言。チョコ県に統合指揮所を設置し、軍を投入。",
+      "es": "Se declara el desastre nacional; se instala el Puesto de Mando Unificado en el Chocó; se despliegan las Fuerzas Militares."
+    },
+    {
+      "time": "Daytime",
+      "tier": "official",
+      "src": "UNGRD",
+      "en": "Four USAR teams deployed from Bogotá, Envigado, Yopal and Medellín.",
+      "ja": "USAR4隊をボゴタ、エンビガド、ヨパル、メデジンから派遣。",
+      "es": "Se despliegan cuatro grupos USAR desde Bogotá, Envigado, Yopal y Medellín."
+    },
+    {
+      "time": "Daytime",
+      "tier": "official",
+      "src": "SGC",
+      "en": "More than 20 aftershocks recorded; the largest widely felt aftershock is M4.8.",
+      "ja": "余震20回以上を観測。最大の余震はM4.8で広く有感。",
+      "es": "Se registran más de 20 réplicas; la mayor réplica ampliamente sentida es de M4.8."
+    },
+    {
+      "time": "Daytime",
+      "tier": "official",
+      "src": "Presidency",
+      "en": "President travels to Pereira to lead the response on the ground.",
+      "ja": "大統領が現地対応の指揮のためペレイラに移動。",
+      "es": "El Presidente se desplaza a Pereira para dirigir la respuesta en terreno."
+    },
+    {
+      "time": "12:13",
+      "tier": "official",
+      "src": "Copernicus EMS",
+      "en": "Copernicus EMS Rapid Mapping activated as EMSR916 (17:13 UTC), requested by EC Services / DG ECHO, for earthquake damage assessment mapping.",
+      "ja": "コペルニクスEMSのラピッドマッピングが EMSR916 として発動（17:13 UTC）。要請は欧州委員会サービス／DG ECHO、地震被害評価のマッピングのため。",
+      "es": "Se activa la cartografía rápida del Copernicus EMS como EMSR916 (17:13 UTC), a solicitud de los Servicios de la CE / DG ECHO, para cartografía de evaluación de daños por el sismo."
+    },
+    {
+      "time": "Afternoon",
+      "tier": "official",
+      "src": "Presidency / UNGRD",
+      "en": "First national damage report: 111 deaths, 87 injured; 1,575 homes damaged, 37 destroyed, 61 buildings collapsed; 18 health facilities, 52 educational facilities, 17 community facilities, 18 major roads and 6 regional airports damaged.",
+      "ja": "政府の第1次被害報告：死者111人、負傷者87人。住宅損壊1,575棟、全壊37棟、建物倒壊61棟。医療施設18、教育施設52、コミュニティ施設17、幹線道路18、地方空港6か所に被害。",
+      "es": "Primer reporte nacional de daños: 111 muertos y 87 heridos; 1.575 viviendas averiadas, 37 destruidas y 61 edificios colapsados; 18 centros de salud, 52 establecimientos educativos, 17 equipamientos comunitarios, 18 vías principales y 6 aeropuertos regionales con daños."
+    },
+    {
+      "time": "Afternoon",
+      "tier": "media",
+      "src": "International media",
+      "en": "Ecuador mobilises a 47-person USAR team with canine units; Mexico and other governments offer assistance, to be channelled through the Foreign Ministry and UNGRD.",
+      "ja": "エクアドルが救助犬を含む47人のUSARチームを動員。メキシコなど各国が支援を表明し、外務省とUNGRDを通じて受け入れる方針。",
+      "es": "Ecuador moviliza un grupo USAR de 47 personas con unidades caninas; México y otros gobiernos ofrecen ayuda, que se canalizará a través de la Cancillería y la UNGRD."
+    },
+    {
+      "time": "Evening",
+      "tier": "media",
+      "src": "International media",
+      "en": "The reported national death toll rises to 132. Four people have been rescued alive from the rubble; more than 20 municipalities are reported affected, and power and telecommunications faults continue in Chocó.",
+      "ja": "報道による全国の死者数が132人に増加。瓦礫から4人が救出。被災市町村は20を超えると報じられ、チョコ県では停電・通信障害が続く。",
+      "es": "El número de muertos reportado a nivel nacional sube a 132. Cuatro personas han sido rescatadas con vida de los escombros; se reportan más de 20 municipios afectados y continúan las fallas de energía y telecomunicaciones en el Chocó."
+    },
+    {
+      "time": "11 Aug",
+      "tier": "official",
+      "src": "Presidency / local authorities",
+      "en": "Search continues overnight. The President reports 700 injured nationally and about 5,000 homes damaged or destroyed, declares the missing the State's priority, and orders troops to Cali to maintain order. The mayor of Cali reports 85 deaths, 885 injured and 188 missing; Pereira's fire service reports 66 deaths; about 100 people are missing in Manizales. Five capital cities - Cali, Pereira, Quibdó, Manizales and Armenia - remain on red alert.",
+      "ja": "捜索は夜を徹して継続。大統領は全国の負傷者700人、住宅約5,000棟の損壊・全壊を報告し、行方不明者の捜索を国の最優先と表明、カリへ治安維持の部隊派遣を指示。カリ市長は死者85人・負傷885人・行方不明188人、ペレイラ消防は死者66人を報告。マニサレスでは約100人が行方不明。カリ、ペレイラ、キブド、マニサレス、アルメニアの5県都は赤色警報を継続。",
+      "es": "La búsqueda continúa durante la noche. El Presidente reporta 700 heridos en el país y cerca de 5.000 viviendas averiadas o destruidas, declara a los desaparecidos la prioridad del Estado y ordena el traslado de uniformados a Cali para resguardar el orden. El alcalde de Cali reporta 85 muertos, 885 heridos y 188 desaparecidos; los Bomberos de Pereira reportan 66 muertos; cerca de 100 personas están desaparecidas en Manizales. Cinco ciudades capitales -Cali, Pereira, Quibdó, Manizales y Armenia- siguen en alerta roja."
+    },
+    {
+      "time": "11 Aug PM",
+      "tier": "official",
+      "src": "UNGRD / Presidency",
+      "en": "UNGRD's situation report gives 182 deaths, 2,542 injured and 189 missing, with 13,067 homes damaged and 2,501 destroyed, 93 health facilities, 884 educational institutions, 427 community facilities and 77 roads affected. The President puts the toll at 181, of which 97.6% in capital cities. Ecuador, El Salvador and Russia are thanked for assistance.",
+      "ja": "UNGRDの状況報告は死者182人・負傷2,542人・行方不明189人、住宅は損壊13,067棟・全壊2,501棟、医療93か所・教育884か所・コミュニティ施設427か所・道路77路線が被害と発表。大統領は死者181人、うち97.6%が県都とした。エクアドル、エルサルバドル、ロシアの支援に謝意。",
+      "es": "El reporte de situación de la UNGRD registra 182 muertos, 2.542 heridos y 189 desaparecidos, con 13.067 viviendas averiadas y 2.501 destruidas, 93 centros de salud, 884 instituciones educativas, 427 equipamientos comunitarios y 77 vías afectadas. El Presidente cifra el balance en 181 muertos, 97,6 % de ellos en ciudades capitales. Se agradece la ayuda de Ecuador, El Salvador y Rusia."
+    },
+    {
+      "time": "11 Aug PM",
+      "tier": "official",
+      "src": "SGC",
+      "en": "The SGC's published aftershock total reaches 103 at 15:00 COT - 97 at M3.0 or below, 5 between M3.0 and M4.0, one above M4.0 - and an M3.9 during the day prompts building evacuations in several affected cities. Its catalogue for the same period holds 147 located events, the wider figure including background seismicity.",
+      "ja": "SGCが公表する余震回数は15:00（現地）で103回に達する（M3.0以下97回、M3.0〜4.0が5回、M4.0超1回）。日中のM3.9により被災各都市で建物からの避難が行われた。同期間のSGCカタログには147回の決定解があり、こちらは背景地震活動を含む広い数値である。",
+      "es": "El total de réplicas publicado por el SGC llega a 103 a las 15:00 COT -97 de M3,0 o menos, 5 entre M3,0 y M4,0, una por encima de M4,0- y una M3,9 durante el día obliga a evacuar edificios en varias ciudades afectadas. Su catálogo para el mismo periodo contiene 147 eventos localizados, cifra más amplia que incluye la sismicidad de fondo."
+    },
+    {
+      "time": "11 Aug 14:20 UTC",
+      "tier": "official",
+      "src": "SGC",
+      "en": "The SGC revises its solution for the mainshock to M7.4 at 103 km depth, 4.99 N 76.29 W, located with 119 stations and 208 phases. Its first bulletin had given M6.6 at 79 km and its second 7.4 at 96 km with 69 stations.",
+      "ja": "SGCが本震の解をM7.4・深さ103km、北緯4.99度・西経76.29度に改訂。119観測点・208フェーズで決定。第1報はM6.6・深さ79km、第2報は7.4・深さ96km（69観測点）であった。",
+      "es": "El SGC revisa su solución del sismo principal a M7.4 a 103 km de profundidad, 4,99 N 76,29 O, localizada con 119 estaciones y 208 fases. Su primer boletín había dado M6.6 a 79 km y el segundo 7.4 a 96 km con 69 estaciones."
+    },
+    {
+      "time": "11 Aug 07:31",
+      "tier": "official",
+      "src": "Japan (MOFA)",
+      "en": "Japan's Prime Minister posts condolences (21:31 JST) and Foreign Minister Motegi issues a message offering condolences and stating that the Government of Japan also stands ready to provide the necessary assistance and that Japan stands in strong solidarity with the people of Colombia.",
+      "ja": "日本の高市内閣総理大臣が哀悼とお見舞いを投稿（日本時間21:31）。茂木外務大臣が、哀悼とお見舞いに加え、日本政府として必要とされる支援を提供する用意がある旨、およびコロンビアの人々との強い連帯を表明するメッセージを発出。",
+      "es": "La Primera Ministra del Japón expresa sus condolencias (21:31 JST) y el Ministro de Asuntos Exteriores, Motegi, emite un mensaje de condolencias en el que señala que el Gobierno del Japón está asimismo dispuesto a prestar la asistencia necesaria y que Japón se solidariza firmemente con el pueblo colombiano."
+    },
+    {
+      "time": "12 Aug",
+      "tier": "official",
+      "src": "Mayor of Cali",
+      "en": "Cali city officials report 107 buildings collapsed, 643 with structural damage and 18 under evacuation order; 230 people trapped, 88 rescued, 69 dead and 1,008 injured in the city.",
+      "ja": "カリ市当局が同市の被害を報告。建物倒壊107棟、構造的被害643棟、避難命令18棟、生き埋め230人、救出88人、死者69人、負傷1,008人。",
+      "es": "Funcionarios de la Alcaldía de Cali reportan 107 edificaciones colapsadas, 643 con daños estructurales y 18 con orden de evacuación; 230 personas atrapadas, 88 rescatadas, 69 fallecidos y 1.008 heridos en la ciudad."
+    },
+    {
+      "time": "11 Aug",
+      "tier": "official",
+      "src": "UN / OCHA",
+      "en": "OCHA states the humanitarian system is ready to support Colombia and names drinking water, hygiene and household items, health, food and shelter as the priority needs; no formal request for assistance has been received from the Colombian authorities.",
+      "ja": "OCHAが、人道支援システムはコロンビアを支援する用意があるとし、飲料水、衛生・生活用品、保健、食料、避難所を優先ニーズに挙げる。コロンビア当局からの正式な支援要請は受けていない。",
+      "es": "La OCHA señala que el sistema humanitario está listo para apoyar a Colombia y menciona agua potable, kits de higiene y artículos del hogar, salud, alimentos y alojamiento como necesidades prioritarias; no se ha recibido una solicitud formal de asistencia de las autoridades colombianas."
+    },
+    {
+      "time": "12 Aug",
+      "tier": "official",
+      "src": "Government",
+      "en": "The provisional national balance passes 224 deaths and more than 2,500 injured, with 279 taken to hospital and 243 people rescued alive; 195 are reported missing to the authorities. The citizen platform “Colombia te busca” holds 4,084 registrations, 3,653 of them still unresolved. Search continues in Pereira with about 300 rescuers, and much of Chocó remains reachable only by boat or aircraft.",
+      "ja": "暫定の全国集計は死者224人超、負傷2,500人超となり、279人が病院に搬送、243人が生存救出された。当局への行方不明届は195人。市民プラットフォーム「Colombia te busca」の登録は4,084件で、うち3,653件が未解決。ペレイラでは約300人の救助隊が捜索を継続。チョコ県の多くの地域は依然として船か航空機でしか到達できない。",
+      "es": "El balance nacional provisional supera los 224 muertos y más de 2.500 heridos, con 279 trasladados a hospitales y 243 personas rescatadas con vida; hay 195 desaparecidos reportados a las autoridades. La plataforma ciudadana «Colombia te busca» acumula 4.084 registros, 3.653 de ellos sin resolver. La búsqueda continúa en Pereira con unos 300 rescatistas, y buena parte del Chocó sigue siendo accesible solo por vía fluvial o aérea."
+    },
+    {
+      "time": "12 Aug",
+      "tier": "official",
+      "src": "Presidency",
+      "en": "The President tours Pereira, Dosquebradas, Manizales and Armenia after Quibdó and Cali, announcing three months of relief on utility bills for affected households, rent subsidies for those who lost their homes and a shock plan for education and housing; an economic emergency decree is being prepared.",
+      "ja": "大統領がキブド、カリに続きペレイラ、ドスケブラダス、マニサレス、アルメニアを巡回。被災世帯への公共料金3か月減免、住宅喪失者への家賃補助、教育・住宅の緊急対策を発表。経済緊急事態の政令を準備中。",
+      "es": "El Presidente recorre Pereira, Dosquebradas, Manizales y Armenia tras Quibdó y Cali, y anuncia tres meses de alivio en servicios públicos para los hogares afectados, subsidios de arriendo para quienes perdieron su vivienda y un plan de choque para educación y vivienda; se prepara un decreto de emergencia económica."
+    },
+    {
+      "time": "12 Aug",
+      "tier": "official",
+      "src": "UNGRD",
+      "en": "UNGRD's consolidated report covers 14 departments and 403 municipalities: 239 deaths, 3,755 injured, 287 missing, 140 buildings collapsed, 24,324 families (49,214 people) affected, 9,215 homes destroyed and 45,457 seriously damaged. Colombia accepts INSARAG-classified USAR teams from Israel, Ecuador, El Salvador and the United States; El Salvador sends 100 tonnes of relief supplies. A woman is rescued in Pereira after 36 hours under the rubble.",
+      "ja": "UNGRDの集計は14県・403市町村を対象に、死者239人、負傷3,755人、行方不明287人、建物倒壊140棟、被災24,324世帯（49,214人）、住宅全壊9,215棟・重大な損壊45,457棟。コロンビアはINSARAG分類のUSARチーム（イスラエル、エクアドル、エルサルバドル、米国）の受け入れを決定。エルサルバドルは救援物資100トンを送付。ペレイラでは瓦礫の下から36時間ぶりに女性が救出された。",
+      "es": "El reporte consolidado de la UNGRD cubre 14 departamentos y 403 municipios: 239 muertos, 3.755 heridos, 287 desaparecidos, 140 edificios colapsados, 24.324 familias (49.214 personas) afectadas, 9.215 viviendas destruidas y 45.457 con daños graves. Colombia acepta equipos USAR con clasificación INSARAG de Israel, Ecuador, El Salvador y Estados Unidos; El Salvador envía 100 toneladas de ayuda. Una mujer es rescatada en Pereira tras 36 horas bajo los escombros."
+    },
+    {
+      "time": "12 Aug",
+      "tier": "media",
+      "src": "International media",
+      "en": "Adding up the departmental and city announcements gives 254 deaths - Pereira 101, Cali 95 - ahead of the national consolidation, which media attribute to the central government being slower to update.",
+      "ja": "県・市の発表を積み上げた死者数が254人（ペレイラ101人、カリ95人）となり、全国集計を上回る。報道は、中央政府の更新が遅いことが理由としている。",
+      "es": "La suma de los anuncios departamentales y municipales da 254 muertos -Pereira 101, Cali 95-, por delante de la consolidación nacional, lo que la prensa atribuye a que el gobierno central actualiza más lento."
+    },
+    {
+      "time": "12 Aug PM",
+      "tier": "official",
+      "src": "Presidency",
+      "en": "From the Palacio de San Carlos the President announces UNGRD's updated balance: 265 deaths, 3,494 injured, 496 missing, 25,872 families (53,816 people) affected, 11,347 homes destroyed and 53,526 damaged, 1,819 educational centres and 631 community facilities affected. He also announces the declaration of an economic emergency.",
+      "ja": "大統領がサンカルロス宮殿でUNGRDの更新集計を発表。死者265人、負傷3,494人、行方不明496人、被災25,872世帯（53,816人）、住宅全壊11,347棟・損壊53,526棟、教育施設1,819か所・コミュニティ施設631か所が被害。あわせて経済緊急事態の宣言を発表した。",
+      "es": "Desde el Palacio de San Carlos el Presidente anuncia el balance actualizado de la UNGRD: 265 muertos, 3.494 heridos, 496 desaparecidos, 25.872 familias (53.816 personas) afectadas, 11.347 viviendas destruidas y 53.526 averiadas, 1.819 centros educativos y 631 equipamientos comunitarios afectados. También anuncia la declaratoria de emergencia económica."
+    },
+    {
+      "time": "13 Aug 09:42",
+      "tier": "official",
+      "src": "SGC",
+      "en": "An M4.2 aftershock strikes San José del Palmar at 95 km depth, about 20 km from the mainshock epicentre. Felt in Pereira, Manizales, Medellín and Bogotá; search-and-rescue work is halted temporarily. It is the second aftershock above M4.0.",
+      "ja": "M4.2の余震がサンホセ・デル・パルマルで発生（深さ95km、本震の震央から約20km）。ペレイラ、マニサレス、メデジン、ボゴタで有感となり、捜索救助活動が一時中断。M4.0を超える余震としては2回目。",
+      "es": "Una réplica de M4,2 sacude San José del Palmar a 95 km de profundidad, a unos 20 km del epicentro del sismo principal. Se siente en Pereira, Manizales, Medellín y Bogotá; las labores de búsqueda y rescate se detienen temporalmente. Es la segunda réplica por encima de M4,0."
+    },
+    {
+      "time": "13 Aug AM",
+      "tier": "official",
+      "src": "UNGRD",
+      "en": "UNGRD's director gives a new balance: 273 dead, 3,824 injured, 377 missing, 40,753 families (97,515 people) affected, 12,584 homes destroyed and 74,873 damaged, 172 buildings collapsed, 2,198 educational and 825 community facilities, 216 health facilities, 71 aqueducts, 29 banking offices and five airports. Medicina Legal has received 250 bodies, 227 recognised. Red alert continues in Cali, Pereira, Quibdó, Manizales and Armenia.",
+      "ja": "UNGRD長官が新たな集計を発表。死者273人、負傷3,824人、行方不明377人、被災40,753世帯・97,515人、住宅全壊12,584棟・損壊74,873棟、建物倒壊172棟、教育施設2,198か所、コミュニティ施設825か所、医療施設216か所、上水道71系統、金融機関29拠点、空港5か所。法医学研究所には250遺体が搬入され、227体の身元が確認。カリ、ペレイラ、キブド、マニサレス、アルメニアで赤色警報が継続。",
+      "es": "El director de la UNGRD entrega un nuevo balance: 273 muertos, 3.824 heridos, 377 desaparecidos, 40.753 familias (97.515 personas) afectadas, 12.584 viviendas destruidas y 74.873 averiadas, 172 edificios colapsados, 2.198 sedes educativas y 825 comunitarias, 216 sedes de salud, 71 acueductos, 29 entidades bancarias y cinco aeropuertos. Medicina Legal ha recibido 250 cuerpos, 227 reconocidos. Continúa la alerta roja en Cali, Pereira, Quibdó, Manizales y Armenia."
+    },
+    {
+      "time": "14 Aug 09:00",
+      "tier": "official",
+      "src": "UNGRD",
+      "en": "UNGRD's 09:00 cut: 287 dead, 3,975 injured, 378 missing, 354 rescued alive; 56,448 families (135,179 people) affected in 15 departments and 437 municipalities; 13,077 homes destroyed and 79,108 damaged; 121 buildings collapsed. Confined-space search continues with the certified international teams.",
+      "ja": "UNGRDの09:00時点集計。死者287人、負傷3,975人、行方不明378人、救出354人。被災56,448世帯・135,179人、15県・437市町村。住宅全壊13,077棟・損壊79,108棟、建物倒壊121棟。認証を受けた国際チームとともに狭隘空間での捜索が続く。",
+      "es": "Corte de las 09:00 de la UNGRD: 287 fallecidos, 3.975 heridos, 378 desaparecidos, 354 rescatados con vida; 56.448 familias (135.179 personas) afectadas en 15 departamentos y 437 municipios; 13.077 viviendas destruidas y 79.108 averiadas; 121 edificios colapsados. Continúa la búsqueda en espacios confinados con los equipos internacionales certificados."
+    },
+    {
+      "time": "14 Aug",
+      "tier": "official",
+      "src": "Cancillería / donors",
+      "en": "India sends 20 tonnes of humanitarian supplies; Norway allocates NOK 10 million and Sweden SEK 5 million through UNHCR; Spain, Italy, Chile, Mexico, Turkey, Brazil and the World Bank also send or announce support. The Interior Minister says the hospital network in Buenaventura is overwhelmed.",
+      "ja": "インドが人道支援物資20トンを送付。ノルウェーが1,000万クローネ、スウェーデンが500万クローナをUNHCR経由で拠出。スペイン、イタリア、チリ、メキシコ、トルコ、ブラジル、世界銀行も支援を送付または表明。内務大臣は、ブエナベントゥーラの病院網が対応能力を超えていると述べる。",
+      "es": "India envía 20 toneladas de insumos humanitarios; Noruega destina 10 millones de coronas y Suecia 5 millones de coronas suecas a través del ACNUR; España, Italia, Chile, México, Turquía, Brasil y el Banco Mundial también envían o anuncian apoyo. El ministro del Interior señala que la red hospitalaria de Buenaventura está desbordada."
+    },
+    {
+      "time": "14-15 Aug",
+      "tier": "official",
+      "src": "UNGRD",
+      "en": "Running balance: 288 dead, 4,018 injured, 202 missing, 354 rescued alive; 45,523 families (102,263 people) affected in 15 departments and 426 municipalities; 12,828 homes destroyed and 73,455 damaged; 121 buildings collapsed; 240 health, 2,205 educational and 1,208 community facilities; 210 roads, 73 aqueducts, 44 road bridges, 13 footbridges and five airports. The falls against the 09:00 cut are duplicate assessment records being consolidated.",
+      "ja": "更新集計。死者288人、負傷4,018人、行方不明202人、救出354人。被災45,523世帯・102,263人、15県・426市町村。住宅全壊12,828棟・損壊73,455棟、建物倒壊121棟。医療240か所、教育2,205か所、コミュニティ1,208か所。道路210路線、上水道73系統、道路橋44橋、歩道橋13橋、空港5か所。09:00時点からの減少は、被害評価の重複記録が整理された結果である。",
+      "es": "Balance actualizado: 288 fallecidos, 4.018 heridos, 202 desaparecidos, 354 rescatados con vida; 45.523 familias (102.263 personas) afectadas en 15 departamentos y 426 municipios; 12.828 viviendas destruidas y 73.455 averiadas; 121 edificios colapsados; 240 sedes de salud, 2.205 educativas y 1.208 comunitarias; 210 vías, 73 acueductos, 44 puentes vehiculares, 13 peatonales y cinco aeropuertos. Las bajas frente al corte de las 09:00 corresponden a la consolidación de registros duplicados de la evaluación."
+    },
+    {
+      "time": "14 Aug 07:00",
+      "tier": "official",
+      "src": "SGC",
+      "en": "SGC reports 184 aftershocks located since the mainshock, 15 of them above M3.0 and 2 above M4.0.",
+      "ja": "SGCが、本震以降に決定した余震は184回、うちM3.0超が15回、M4.0超が2回と報告。",
+      "es": "El SGC reporta 184 réplicas localizadas desde el sismo principal, 15 de ellas por encima de M3,0 y 2 por encima de M4,0."
+    },
+    {
+      "time": "15 Aug",
+      "tier": "media",
+      "src": "International media",
+      "en": "Search continues for the missing while more than 100,000 people affected await assistance; in El Cairo (Valle del Cauca) 80% of the houses are reported damaged.",
+      "ja": "行方不明者の捜索が続く一方、10万人を超える被災者が支援を待つ。バジェ・デル・カウカ県エル・カイロでは住宅の80％が被害を受けたと報じられる。",
+      "es": "Continúa la búsqueda de los desaparecidos mientras más de 100.000 damnificados esperan asistencia; en El Cairo (Valle del Cauca) se reporta el 80 % de las casas afectadas."
+    },
+    {
+      "time": "15 Aug 06:30",
+      "tier": "official",
+      "src": "UNGRD",
+      "en": "UNGRD balance with a 06:30 cut-off: 294 dead, 3,935 injured, 320 missing, 353 people and 188 animals rescued alive; 54,008 families (115,461 people) affected; 448 municipalities reporting damage; 14,493 homes destroyed and 81,506 damaged; 66 buildings collapsed. Chocó, Risaralda and Valle del Cauca are the worst affected.",
+      "ja": "06:30締めのUNGRD集計。死者294人、負傷3,935人、行方不明320人、生存救出353人・動物188頭。被災54,008世帯・115,461人、被害報告のあった市町村448。住宅全壊14,493棟・損壊81,506棟、建物倒壊66棟。被害が最も大きいのはチョコ、リサラルダ、バジェ・デル・カウカ。",
+      "es": "Balance de la UNGRD con corte a las 06:30: 294 fallecidos, 3.935 heridos, 320 desaparecidos, 353 personas y 188 animales rescatados con vida; 54.008 familias (115.461 personas) afectadas; 448 municipios con reporte de daños; 14.493 viviendas destruidas y 81.506 averiadas; 66 edificios colapsados. Chocó, Risaralda y Valle del Cauca son los más afectados."
+    },
+    {
+      "time": "12 Aug",
+      "tier": "official",
+      "src": "Presidency / Gobernación del Chocó",
+      "en": "Decree 1172 declares three days of national mourning from 12 August, flags at half-mast at home and in Colombian missions abroad. The same night the governor of Chocó ends the department's search-and-rescue phase after the last family sought in Quibdó, four people, is found alive.",
+      "ja": "大統領令第1172号により、8月12日から3日間の国家服喪を宣言。国内および在外公館で半旗を掲げる。同じ夜、チョコ県知事が、キブドで最後まで捜索されていた家族4人の生存確認を受けて県の捜索救助段階の終了を表明。",
+      "es": "El Decreto 1172 declara tres días de duelo nacional desde el 12 de agosto, con banderas a media asta en el país y en las misiones colombianas en el exterior. Esa misma noche la gobernadora del Chocó da por finalizada la fase de búsqueda y rescate del departamento tras hallar con vida a la última familia buscada en Quibdó, cuatro personas."
+    },
+    {
+      "time": "16 Aug 07:30",
+      "tier": "official",
+      "src": "UNGRD",
+      "en": "UNGRD balance with a 07:30 cut-off: 289 dead, 4,187 injured, 143 missing, 354 people and 510 animals rescued alive; 120,238 families (185,016 people) affected across 450 municipalities in 15 departments; 26,945 homes destroyed and 127,557 damaged; 66 buildings collapsed. UNGRD states that the variations come from verifying and consolidating figures reported by the territories, some of which had been sent unverified.",
+      "ja": "07:30締めのUNGRD集計。死者289人、負傷4,187人、行方不明143人、生存救出354人・動物510頭。15県・450市町村で被災120,238世帯・185,016人。住宅全壊26,945棟・損壊127,557棟、建物倒壊66棟。UNGRDは、数値の変動は地方から報告された数値の検証・統合によるものであり、一部は未検証のまま送られていたと表明。",
+      "es": "Balance de la UNGRD con corte a las 07:30: 289 fallecidos, 4.187 heridos, 143 desaparecidos, 354 personas y 510 animales rescatados con vida; 120.238 familias (185.016 personas) afectadas en 450 municipios de 15 departamentos; 26.945 viviendas destruidas y 127.557 averiadas; 66 edificios colapsados. La UNGRD señala que las variaciones provienen de verificar y consolidar las cifras reportadas por los territorios, algunas enviadas sin verificar."
+    },
+    {
+      "time": "16 Aug 18:30",
+      "tier": "official",
+      "src": "UNGRD",
+      "en": "UNGRD balance with an 18:30 cut-off: 287 dead, 4,147 injured, 194 missing, 355 people and 496 animals rescued alive; 120,671 families (185,996 people) affected across 472 municipalities in 15 departments; 26,392 homes destroyed and 127,608 damaged; 197 buildings collapsed; 304 health, 3,207 educational and 4,059 community facilities; 410 roads, 95 aqueducts, 48 road bridges, 13 footbridges and five airports.",
+      "ja": "18:30締めのUNGRD集計。死者287人、負傷4,147人、行方不明194人、生存救出355人・動物496頭。15県・472市町村で被災120,671世帯・185,996人。住宅全壊26,392棟・損壊127,608棟、建物倒壊197棟。医療304、教育3,207、コミュニティ4,059か所。道路410路線、上水道95系統、道路橋48橋、歩道橋13橋、空港5か所。",
+      "es": "Balance de la UNGRD con corte a las 18:30: 287 fallecidos, 4.147 heridos, 194 desaparecidos, 355 personas y 496 animales rescatados con vida; 120.671 familias (185.996 personas) afectadas en 472 municipios de 15 departamentos; 26.392 viviendas destruidas y 127.608 averiadas; 197 edificios colapsados; 304 sedes de salud, 3.207 educativas y 4.059 comunitarias; 410 vías, 95 acueductos, 48 puentes vehiculares, 13 peatonales y cinco aeropuertos."
+    }
+  ],
+  "areas": [
+    {
+      "dept_en": "Chocó",
+      "dept_ja": "チョコ県",
+      "city_en": "San José del Palmar / Quibdó",
+      "city_ja": "サンホセ・デル・パルマル／キブド",
+      "dist": "6 / 105 km",
+      "mmi": "VII / VI",
+      "note_en": "Epicentral department; 9 municipalities with reported damage; access, power and communications constrained.",
+      "note_ja": "震央のある県。9市町村で被害報告。アクセス・電力・通信に制約。",
+      "dept_es": "Chocó",
+      "city_es": "San José del Palmar / Quibdó",
+      "note_es": "Departamento epicentral; 9 municipios con daños reportados; acceso, energía y comunicaciones limitados."
+    },
+    {
+      "dept_en": "Risaralda",
+      "dept_ja": "リサラルダ県",
+      "city_en": "Pereira, Dosquebradas",
+      "city_ja": "ペレイラ、ドスケブラダス",
+      "dist": "61 km",
+      "mmi": "VII",
+      "note_en": "Highest reported death toll (at least 40; the governor cites at least 42). Airport terminal partially collapsed.",
+      "note_ja": "死者数が最も多い（40人以上、県知事は42人以上と発言）。空港ターミナルが一部倒壊。",
+      "dept_es": "Risaralda",
+      "city_es": "Pereira, Dosquebradas",
+      "note_es": "Mayor número de muertos reportado (al menos 40; el gobernador cita al menos 42). Terminal aérea con colapso parcial."
+    },
+    {
+      "dept_en": "Valle del Cauca",
+      "dept_ja": "バジェ・デル・カウカ県",
+      "city_en": "Cali, Cartago, Buenaventura",
+      "city_ja": "カリ、カルタゴ、ブエナベントゥーラ",
+      "dist": "158 / 38 / 138 km",
+      "mmi": "VI-VII",
+      "note_en": "27 deaths reported; 25-30 collapsed structures at 12 critical points in Cali; University Hospital heavily damaged.",
+      "note_ja": "死者27人と報告。カリでは12か所の重要地点で25〜30棟が倒壊。大学病院が大きく損壊。",
+      "dept_es": "Valle del Cauca",
+      "city_es": "Cali, Cartago, Buenaventura",
+      "note_es": "27 muertos reportados; entre 25 y 30 estructuras colapsadas en 12 puntos críticos de Cali; Hospital Universitario gravemente afectado."
+    },
+    {
+      "dept_en": "Caldas",
+      "dept_ja": "カルダス県",
+      "city_en": "Manizales",
+      "city_ja": "マニサレス",
+      "dist": "84 km",
+      "mmi": "VI-VII",
+      "note_en": "8 municipalities affected; 17 buildings collapsed and 19 partially collapsed in Manizales; cathedral tower fell onto the nave.",
+      "note_ja": "8市町村で被害。マニサレスで17棟倒壊・19棟部分倒壊。大聖堂の塔が身廊に崩落。",
+      "dept_es": "Caldas",
+      "city_es": "Manizales",
+      "note_es": "8 municipios afectados; 17 edificios colapsados y 19 con colapso parcial en Manizales; una torre de la catedral cayó sobre la nave."
+    },
+    {
+      "dept_en": "Quindío",
+      "dept_ja": "キンディオ県",
+      "city_en": "Armenia and other localities",
+      "city_ja": "アルメニアほか",
+      "dist": "71 km",
+      "mmi": "VII",
+      "note_en": "Several localities reported affected; the same Coffee Region devastated by the 1999 Armenia earthquake.",
+      "note_ja": "複数地区で被害報告。1999年アルメニア地震で壊滅的被害を受けたコーヒー地帯と同じ地域。",
+      "dept_es": "Quindío",
+      "city_es": "Armenia y otras localidades",
+      "note_es": "Varias localidades reportadas como afectadas; es el mismo Eje Cafetero devastado por el terremoto de Armenia de 1999."
+    },
+    {
+      "dept_en": "Antioquia",
+      "dept_ja": "アンティオキア県",
+      "city_en": "Medellín and surroundings",
+      "city_ja": "メデジン周辺",
+      "dist": "172 km",
+      "mmi": "V-VI",
+      "note_en": "One death reported (a 73-year-old); structural damage under inspection.",
+      "note_ja": "死者1人（73歳）と報告。建物被害を点検中。",
+      "dept_es": "Antioquia",
+      "city_es": "Medellín y alrededores",
+      "note_es": "Un fallecido reportado (73 años); daños estructurales en inspección."
+    },
+    {
+      "dept_en": "Cundinamarca / Bogotá",
+      "dept_ja": "クンディナマルカ県／ボゴタ",
+      "city_en": "Bogotá, Nilo",
+      "city_ja": "ボゴタ、ニロ",
+      "dist": "241 km",
+      "mmi": "IV-V",
+      "note_en": "Widely felt; buildings evacuated; structural damage to a school in Nilo reported.",
+      "note_ja": "広く有感。建物から避難。ニロの学校で構造被害が報告されている。",
+      "dept_es": "Cundinamarca / Bogotá",
+      "city_es": "Bogotá, Nilo",
+      "note_es": "Ampliamente sentido; edificaciones evacuadas; se reportan daños estructurales en un colegio de Nilo."
+    }
+  ],
+  "damage": [
+    {
+      "item_en": "Deaths",
+      "item_ja": "死者",
+      "value_en": "287 (UNGRD, 18:30 cut on 16 Aug), down from 289 at the 07:30 cut that morning and 294 on 15 Aug. The series ran 273, 281, 285, 287, 288, 294, 289 and now 287; UNGRD attributes the movement to verification of figures sent from the territories. Chocó, Risaralda and Valle del Cauca remain the worst affected.",
+      "value_ja": "287人（UNGRD、8月16日18:30締め）。同日07:30締めの289人、15日の294人から減少。推移は273→281→285→287→288→294→289→287人であり、UNGRDはこの変動を地方から送られた数値の検証によるものと説明している。被害が最も大きいのはチョコ、リサラルダ、バジェ・デル・カウカの3県。",
+      "source_en": "UNGRD, 16 Aug 18:30",
+      "source_ja": "UNGRD（8月16日18:30）",
+      "tier": "official",
+      "item_es": "Muertos",
+      "value_es": "287 (UNGRD, corte de las 18:30 del 16 de agosto), frente a 289 en el corte de las 07:30 de esa mañana y 294 el 15. La serie fue 273, 281, 285, 287, 288, 294, 289 y ahora 287; la UNGRD atribuye el movimiento a la verificación de las cifras enviadas desde los territorios. Chocó, Risaralda y Valle del Cauca siguen siendo los más afectados.",
+      "source_es": "UNGRD, 16 de agosto 18:30"
+    },
+    {
+      "item_en": "Injured",
+      "item_ja": "負傷者",
+      "value_en": "4,147 (UNGRD, 18:30 cut on 16 Aug), against 4,187 that morning and 3,935 on 15 Aug",
+      "value_ja": "4,147人（UNGRD、8月16日18:30締め）。同日朝の4,187人、15日の3,935人と比較",
+      "source_en": "UNGRD, 16 Aug 18:30",
+      "source_ja": "UNGRD（8月16日18:30）",
+      "tier": "official",
+      "item_es": "Heridos",
+      "value_es": "4.147 (UNGRD, corte de las 18:30 del 16 de agosto), frente a 4.187 esa mañana y 3.935 el 15",
+      "source_es": "UNGRD, 16 de agosto 18:30"
+    },
+    {
+      "item_en": "Missing (reported to the authorities)",
+      "item_ja": "行方不明（当局への届出）",
+      "value_en": "194 (UNGRD, 18:30 cut on 16 Aug), up from 143 that morning. The series has run 496, 377, 378, 202, 320, 143 and now 194: reports are filed, resolved and de-duplicated at the same time, and UNGRD attributes the movement to verification of territorial reports. It is not a measure of how many people are still under rubble; 355 have been rescued alive.",
+      "value_ja": "194人（UNGRD、8月16日18:30締め）。同日朝の143人から増加。推移は496→377→378→202→320→143→194人である。届出の受理、解決、重複整理が同時に進んでおり、UNGRDはこの変動を地方報告の検証によるものと説明している。瓦礫の下に残る人数を示す数値ではない。生存救出は355人。",
+      "source_en": "UNGRD / Fiscalía General de la Nación, 16 Aug 18:30",
+      "source_ja": "UNGRD、検察庁（8月16日18:30）",
+      "tier": "official",
+      "item_es": "Desaparecidos (reportados a las autoridades)",
+      "value_es": "194 (UNGRD, corte de las 18:30 del 16 de agosto), frente a 143 esa mañana. La serie ha sido 496, 377, 378, 202, 320, 143 y ahora 194: al mismo tiempo se presentan, resuelven y depuran reportes, y la UNGRD atribuye el movimiento a la verificación de los reportes territoriales. No mide cuántas personas siguen bajo los escombros; 355 han sido rescatadas con vida.",
+      "source_es": "UNGRD / Fiscalía General de la Nación, 16 de agosto 18:30"
+    },
+    {
+      "item_en": "Unresolved reports on citizen platforms",
+      "item_ja": "市民プラットフォーム上の未解決報告",
+      "item_es": "Reportes sin resolver en plataformas ciudadanas",
+      "value_en": "4,084 people registered on “Colombia te busca”, of whom 3,653 are still to be located and 429 have been found - concentrated in Valle del Cauca, Risaralda, Caldas and Chocó. Asocapitales has launched a second platform.",
+      "value_ja": "「Colombia te busca」に4,084人が登録され、うち3,653人が未確認、429人が確認済み。バジェ・デル・カウカ、リサラルダ、カルダス、チョコに集中。Asocapitalesも別のプラットフォームを開設。",
+      "value_es": "4.084 personas registradas en «Colombia te busca», de las cuales 3.653 están por localizar y 429 han sido encontradas, concentradas en Valle del Cauca, Risaralda, Caldas y Chocó. Asocapitales ha lanzado una segunda plataforma.",
+      "source_en": "“Colombia te busca” (citizen initiative); Asocapitales",
+      "source_ja": "「Colombia te busca」（市民の取り組み）、Asocapitales",
+      "source_es": "«Colombia te busca» (iniciativa ciudadana); Asocapitales",
+      "tier": "media"
+    },
+    {
+      "item_en": "Rescued alive",
+      "item_ja": "生存救出",
+      "item_es": "Rescatados con vida",
+      "value_en": "355 (UNGRD, 18:30 cut on 16 Aug), plus 496 animals rescued and 768 affected. They include a woman recovered in Cali almost 30 hours after the earthquake, a woman freed in Pereira after 36 hours, a baby pulled from an apartment block and the family of four found alive in Quibdó.",
+      "value_ja": "355人（UNGRD、8月16日18:30締め）。ほかに動物496頭を救出、768頭が被災。カリで約30時間後に救出された女性、ペレイラで36時間ぶりに救出された女性、集合住宅から救出された乳児、キブドで生存確認された家族4人を含む。",
+      "value_es": "355 (UNGRD, corte de las 18:30 del 16 de agosto), además de 496 animales rescatados y 768 afectados. Incluyen a una mujer rescatada en Cali casi 30 horas después del sismo, a otra liberada en Pereira tras 36 horas, a un bebé sacado de un bloque de apartamentos y a la familia de cuatro hallada con vida en Quibdó.",
+      "source_en": "UNGRD, 16 Aug 18:30",
+      "source_ja": "UNGRD（8月16日18:30）",
+      "source_es": "UNGRD, 16 de agosto 18:30",
+      "tier": "official"
+    },
+    {
+      "item_en": "Municipalities affected",
+      "item_ja": "被災市町村",
+      "item_es": "Municipios afectados",
+      "value_en": "472 municipalities in 15 departments (UNGRD, 18:30 cut on 16 Aug), against 450 that morning and 403 on 12 Aug. Red alert continues in Cali, Pereira, Quibdó, Manizales and Armenia.",
+      "value_ja": "15県・472市町村（UNGRD、8月16日18:30締め）。同日朝の450、8月12日の403から増加。カリ、ペレイラ、キブド、マニサレス、アルメニアでは赤色警報が継続。",
+      "value_es": "472 municipios en 15 departamentos (UNGRD, corte de las 18:30 del 16 de agosto), frente a 450 esa mañana y 403 el 12 de agosto. Continúa la alerta roja en Cali, Pereira, Quibdó, Manizales y Armenia.",
+      "source_en": "UNGRD, 16 Aug 18:30",
+      "source_ja": "UNGRD（8月16日18:30）",
+      "source_es": "UNGRD, 16 de agosto 18:30",
+      "tier": "official"
+    },
+    {
+      "item_en": "People affected",
+      "item_ja": "被災者",
+      "item_es": "Personas afectadas",
+      "tier": "official",
+      "value_en": "120,671 families - 185,996 people - affected (UNGRD, 18:30 cut on 16 Aug), against 120,238 families (185,016 people) that morning",
+      "value_ja": "120,671世帯・185,996人が被災（UNGRD、8月16日18:30締め）。同日朝の120,238世帯・185,016人から増加",
+      "value_es": "120.671 familias -185.996 personas- afectadas (UNGRD, corte de las 18:30 del 16 de agosto), frente a 120.238 familias (185.016 personas) esa mañana",
+      "source_en": "UNGRD, 16 Aug 18:30",
+      "source_ja": "UNGRD（8月16日18:30）",
+      "source_es": "UNGRD, 16 de agosto 18:30"
+    },
+    {
+      "item_en": "Homes damaged or destroyed",
+      "item_ja": "住宅被害（合計）",
+      "value_en": "154,000: 26,392 destroyed and 127,608 damaged (UNGRD, 18:30 cut on 16 Aug), essentially unchanged from that morning. The rise from 96,000 on 15 Aug was the assessment reaching further, not new damage. In El Cairo, a coffee town in the mountains of Valle del Cauca, 80% of the houses were damaged.",
+      "value_ja": "154,000棟。全壊26,392棟、損壊127,608棟（UNGRD、8月16日18:30締め）。同日朝からほぼ変化なし。8月15日の96,000棟からの増加は、新たな被害の発生ではなく被害評価の進展による。バジェ・デル・カウカ県山間部のコーヒー産地エル・カイロでは、住宅の80％が被害を受けた。",
+      "source_en": "UNGRD, 16 Aug 18:30",
+      "source_ja": "UNGRD（8月16日18:30）",
+      "tier": "official",
+      "item_es": "Viviendas averiadas o destruidas",
+      "value_es": "154.000: 26.392 destruidas y 127.608 averiadas (UNGRD, corte de las 18:30 del 16 de agosto), prácticamente sin cambio desde esa mañana. El aumento desde 96.000 el 15 de agosto correspondió al avance de la evaluación, no a daño nuevo. En El Cairo, pueblo cafetero en las montañas del Valle del Cauca, el 80 % de las casas resultó afectado.",
+      "source_es": "UNGRD, 16 de agosto 18:30"
+    },
+    {
+      "item_en": "of which seriously damaged",
+      "item_ja": "うち重大な損壊",
+      "value_en": "127,608",
+      "value_ja": "127,608",
+      "source_en": "UNGRD, 16 Aug 18:30",
+      "source_ja": "UNGRD（8月16日18:30）",
+      "tier": "official",
+      "item_es": "de las cuales con daños graves",
+      "value_es": "127.608",
+      "source_es": "UNGRD, 16 de agosto 18:30"
+    },
+    {
+      "item_en": "of which destroyed",
+      "item_ja": "うち全壊",
+      "value_en": "26,392",
+      "value_ja": "26,392",
+      "source_en": "UNGRD, 16 Aug 18:30",
+      "source_ja": "UNGRD（8月16日18:30）",
+      "tier": "official",
+      "item_es": "de las cuales destruidas",
+      "value_es": "26.392",
+      "source_es": "UNGRD, 16 de agosto 18:30"
+    },
+    {
+      "item_en": "Buildings collapsed",
+      "item_ja": "建物倒壊",
+      "value_en": "197 nationally (UNGRD, 18:30 cut on 16 Aug), against 66 that morning and 121 on 14 Aug - the count has now moved down twice and up once as structures are inspected and reclassified. Asocapitales counts 243 collapsed structures in the capital cities; Cali city officials report 107 collapsed and 643 structurally damaged.",
+      "value_ja": "全国で197棟（UNGRD、8月16日18:30締め）。同日朝の66棟、8月14日の121棟と比較。この数値は構造物の点検と分類の見直しに伴い、2度下がり1度上がっている。Asocapitalesは県都で243棟の倒壊を数える。カリ市当局は倒壊107棟・構造的被害643棟と報告。",
+      "source_en": "UNGRD, 16 Aug 18:30; Asocapitales; Alcaldía de Cali",
+      "source_ja": "UNGRD（8月16日18:30）、Asocapitales、カリ市",
+      "tier": "official",
+      "item_es": "Edificios colapsados",
+      "value_es": "197 en el país (UNGRD, corte de las 18:30 del 16 de agosto), frente a 66 esa mañana y 121 el 14 de agosto: el conteo ha bajado dos veces y subido una a medida que se inspeccionan y reclasifican las estructuras. Asocapitales cuenta 243 estructuras colapsadas en las ciudades capitales; funcionarios de la Alcaldía de Cali reportan 107 colapsadas y 643 con daños estructurales.",
+      "source_es": "UNGRD, 16 de agosto 18:30; Asocapitales; Alcaldía de Cali"
+    },
+    {
+      "item_en": "Health facilities",
+      "item_ja": "医療施設",
+      "value_en": "304 damaged (UNGRD, 18:30 cut on 16 Aug), up from 240 that morning and 18 on 10 Aug; 7 health institutions closed; about 30% of the University Hospital in Cali collapsed, including three floors (paediatrics, internal medicine, part of the neonatal unit). The Interior Minister said on 14 Aug that the hospital network in Buenaventura is overwhelmed.",
+      "value_ja": "304か所が被害（UNGRD、8月16日18:30締め）。同日朝の240か所、8月10日の18か所から増加。医療機関7か所が閉鎖。カリの大学病院は約30％が崩壊し、小児科・内科・新生児科の一部を含む3フロアが失われた。内務大臣は8月14日、ブエナベントゥーラの病院網が対応能力を超えていると述べた。",
+      "source_en": "UNGRD, 16 Aug 18:30; Ministry of the Interior; Valle del Cauca government",
+      "source_ja": "UNGRD（8月16日18:30）、内務省、バジェ・デル・カウカ県",
+      "tier": "official",
+      "item_es": "Centros de salud",
+      "value_es": "304 con daños (UNGRD, corte de las 18:30 del 16 de agosto), frente a 240 esa mañana y 18 el 10 de agosto; 7 instituciones de salud cerradas; cerca del 30 % del Hospital Universitario del Valle en Cali colapsó, incluidos tres pisos (pediatría, medicina interna y parte de la unidad neonatal). El ministro del Interior señaló el 14 de agosto que la red hospitalaria de Buenaventura está desbordada.",
+      "source_es": "UNGRD, 16 de agosto 18:30; Ministerio del Interior; Gobernación del Valle del Cauca"
+    },
+    {
+      "item_en": "Educational facilities",
+      "item_ja": "教育施設",
+      "value_en": "3,207 affected (UNGRD, 18:30 cut on 16 Aug), against 2,205 that morning and 52 on 10 Aug",
+      "value_ja": "3,207か所が被害（UNGRD、8月16日18:30締め）。同日朝の2,205か所、8月10日の52か所から増加",
+      "source_en": "UNGRD, 16 Aug 18:30",
+      "source_ja": "UNGRD（8月16日18:30）",
+      "tier": "official",
+      "item_es": "Establecimientos educativos",
+      "value_es": "3.207 afectados (UNGRD, corte de las 18:30 del 16 de agosto), frente a 2.205 esa mañana y 52 el 10 de agosto",
+      "source_es": "UNGRD, 16 de agosto 18:30"
+    },
+    {
+      "item_en": "Community facilities",
+      "item_ja": "コミュニティ施設",
+      "value_en": "4,059 damaged (UNGRD, 18:30 cut on 16 Aug), against 1,208 that morning",
+      "value_ja": "4,059か所が被害（UNGRD、8月16日18:30締め）。同日朝の1,208か所から増加",
+      "source_en": "UNGRD, 16 Aug 18:30",
+      "source_ja": "UNGRD（8月16日18:30）",
+      "tier": "official",
+      "item_es": "Equipamientos comunitarios",
+      "value_es": "4.059 con daños (UNGRD, corte de las 18:30 del 16 de agosto), frente a 1.208 esa mañana",
+      "source_es": "UNGRD, 16 de agosto 18:30"
+    },
+    {
+      "item_en": "Roads",
+      "item_ja": "道路",
+      "value_en": "410 roads damaged (UNGRD, 18:30 cut on 16 Aug), up from 210 that morning and 18 on 10 Aug; 48 road bridges and 13 footbridges also damaged",
+      "value_ja": "道路410路線が被害（UNGRD、8月16日18:30締め）。同日朝の210路線、8月10日の18路線から増加。道路橋48橋、歩道橋13橋も被害",
+      "source_en": "UNGRD, 16 Aug 18:30",
+      "source_ja": "UNGRD（8月16日18:30）",
+      "tier": "official",
+      "item_es": "Vías",
+      "value_es": "410 vías afectadas (UNGRD, corte de las 18:30 del 16 de agosto), frente a 210 esa mañana y 18 el 10 de agosto; también 48 puentes vehiculares y 13 peatonales con daños",
+      "source_es": "UNGRD, 16 de agosto 18:30"
+    },
+    {
+      "item_en": "Airports",
+      "item_ja": "空港",
+      "value_en": "5 airports with damage in the UNGRD balance of 13 Aug; operations had been suspended at seven. Matecaña International (Pereira) passenger terminal partially collapsed; flights suspended at Pereira, Manizales, Quibdó, Armenia, Cartago and Buenaventura",
+      "value_ja": "UNGRDの8月13日集計では空港5か所が被害。運航停止は7空港に及んでいた。マテカーニャ国際空港（ペレイラ）は旅客ターミナルが部分崩壊。ペレイラ、マニサレス、キブド、アルメニア、カルタゴ、ブエナベントゥーラで運航停止",
+      "source_en": "UNGRD, 13 Aug; civil aviation authority",
+      "source_ja": "UNGRD（8月13日）、民間航空当局",
+      "tier": "official",
+      "item_es": "Aeropuertos",
+      "value_es": "5 aeropuertos con daños en el balance de la UNGRD del 13 de agosto; las operaciones se habían suspendido en siete. La terminal de pasajeros del aeropuerto internacional Matecaña (Pereira) colapsó parcialmente; vuelos suspendidos en Pereira, Manizales, Quibdó, Armenia, Cartago y Buenaventura",
+      "source_es": "UNGRD, 13 de agosto; autoridad de aviación civil"
+    },
+    {
+      "item_en": "Cultural heritage",
+      "item_ja": "文化財",
+      "value_en": "A tower of the neo-Gothic Cathedral of Manizales collapsed onto the nave",
+      "value_ja": "マニサレス大聖堂（ネオゴシック様式）の塔が身廊に崩落",
+      "source_en": "Mayor of Manizales",
+      "source_ja": "マニサレス市長",
+      "tier": "media",
+      "item_es": "Patrimonio cultural",
+      "value_es": "Una torre de la catedral neogótica de Manizales colapsó sobre la nave",
+      "source_es": "Alcaldía de Manizales"
+    },
+    {
+      "item_en": "Lifelines",
+      "item_ja": "ライフライン",
+      "value_en": "95 aqueducts damaged (UNGRD, 18:30 cut on 16 Aug), up from 73 that morning, and 29 banking offices out of service; power outages and communications disruption reported in areas near the epicentre",
+      "value_ja": "上水道95系統が被害（UNGRD、8月16日18:30締め）。同日朝の73系統から増加。金融機関29拠点が業務停止。震央付近では停電と通信途絶が報告されている",
+      "source_en": "UNGRD, 16 Aug 18:30",
+      "source_ja": "UNGRD（8月16日18:30）",
+      "tier": "media",
+      "item_es": "Servicios públicos",
+      "value_es": "95 acueductos afectados (UNGRD, corte de las 18:30 del 16 de agosto), frente a 73 esa mañana, y 29 entidades bancarias fuera de servicio; se reportan cortes de energía e interrupción de las comunicaciones en zonas cercanas al epicentro",
+      "source_es": "UNGRD, 16 de agosto 18:30"
+    },
+    {
+      "item_en": "Displacement",
+      "item_ja": "避難",
+      "value_en": "Thousands reported to have left their homes; shelter figures not yet published",
+      "value_ja": "数千人が自宅を離れたと報じられている。避難所の数値は未公表",
+      "source_en": "Media / humanitarian agencies",
+      "source_ja": "報道・人道機関",
+      "tier": "media",
+      "item_es": "Personas desalojadas",
+      "value_es": "Se reporta que miles de personas salieron de sus viviendas; aún no se publican cifras de alojamientos temporales",
+      "source_es": "Prensa / agencias humanitarias"
+    }
+  ],
+  "deaths_by_area": [
+    {
+      "area_en": "Valle del Cauca (Cali)",
+      "area_ja": "バジェ・デル・カウカ県（カリ）",
+      "area_es": "Valle del Cauca (Cali)",
+      "n": 97,
+      "note_en": "President, 11 Aug. The department government's count is higher: 95 in Cali plus 35 in other municipalities",
+      "note_ja": "大統領（8月11日）。県政府の集計はより多く、カリ95人＋他市町村35人",
+      "note_es": "Presidente, 11 de agosto. La Gobernación cuenta más: 95 en Cali más 35 en otros municipios"
+    },
+    {
+      "area_en": "Risaralda (Pereira)",
+      "area_ja": "リサラルダ県（ペレイラ）",
+      "area_es": "Risaralda (Pereira)",
+      "n": 66,
+      "note_en": "President, 11 Aug. The department reports around 90",
+      "note_ja": "大統領（8月11日）。県は約90人と報告",
+      "note_es": "Presidente, 11 de agosto. El departamento reporta alrededor de 90"
+    },
+    {
+      "area_en": "Chocó (Quibdó)",
+      "area_ja": "チョコ県（キブド）",
+      "area_es": "Chocó (Quibdó)",
+      "n": 9,
+      "note_en": "Chocó closed its search phase on 12 Aug; the department reports 14 dead and 138 injured.",
+      "note_ja": "チョコ県は8月12日に捜索段階を終了。県の集計は死者14人・負傷138人。",
+      "note_es": "El Chocó cerró su fase de búsqueda el 12 de agosto; reporta 14 fallecidos y 138 heridos."
+    },
+    {
+      "area_en": "Caldas (Manizales)",
+      "area_ja": "カルダス県（マニサレス）",
+      "area_es": "Caldas (Manizales)",
+      "n": 5,
+      "note_en": "Reported as 2, then 4, then 5",
+      "note_ja": "2人、4人、5人と推移",
+      "note_es": "Reportados 2, luego 4 y luego 5"
+    },
+    {
+      "area_en": "Antioquia",
+      "area_ja": "アンティオキア県",
+      "area_es": "Antioquia",
+      "n": 1,
+      "note_en": "73-year-old",
+      "note_ja": "73歳",
+      "note_es": "73 años"
+    }
+  ],
+  "deaths_by_area_note_en": "The national figure is 287 at the 18:30 cut on 16 August, after 289 at the 07:30 cut the same morning and 294 on 15 August. The series ran 273 (13 Aug), 281, 285, 287, 288, 294, 289 and now 287. UNGRD attributes the movement to verification and consolidation of figures reported from the territories, some sent before being checked. Medicina Legal had received 250 bodies with 227 recognised at the 13 August reading. Cite 287 with its cut-off as the official national figure. The chart is the President's 11 August breakdown (181) and shows the shape of the distribution - deaths concentrated in Risaralda (Pereira) and Valle del Cauca (Cali) - not a current tally. Cali is reported three ways as well: 97 in the President's breakdown, 85 by the mayor on 11 August and 69 in the city's own municipal report, which carries no cut-off time.",
+  "deaths_by_area_note_ja": "全国の死者数は8月16日18:30締めで287人である。同日07:30締めの289人、15日の294人を経ている。推移は273人（8月13日）→281→285→287→288→294→289→287人。UNGRDはこの変動を、地方から報告された数値の検証・統合によるもので、一部は検証前に送られていたと説明している。法医学研究所には8月13日時点で250遺体が搬入され、うち227体の身元が確認されていた。公式の全国値として引用すべきは287人であり、集計時点を併記する。図は8月11日時点の大統領による内訳（181人）であり、リサラルダ（ペレイラ）とバジェ・デル・カウカ（カリ）に死者が集中するという分布の形を示すものであって、現在の集計ではない。　カリについても3通りの数値がある。大統領の内訳では97人、8月11日の市長発表は85人、市当局の被害報告では69人であり、この報告には集計時点が付されていない。",
+  "exposure": [
+    {
+      "mmi": "VIII+",
+      "label_en": "Severe",
+      "label_ja": "甚大",
+      "label_es": "Severo",
+      "n": 0,
+      "note_en": "No population estimated at MMI VIII or above",
+      "note_ja": "MMI VIII以上の曝露人口は推計なし",
+      "note_es": "Sin población estimada en MMI VIII o superior"
+    },
+    {
+      "mmi": "VII",
+      "label_en": "Very strong",
+      "label_ja": "非常に強い",
+      "label_es": "Muy fuerte",
+      "n": 1564000,
+      "note_en": "Includes Pereira (591k), Armenia (301k) and Cartago (135k)",
+      "note_ja": "ペレイラ59.1万人、アルメニア30.1万人、カルタゴ13.5万人を含む",
+      "note_es": "Incluye Pereira (591 mil), Armenia (301 mil) y Cartago (135 mil)"
+    },
+    {
+      "mmi": "VI",
+      "label_en": "Strong",
+      "label_ja": "強い",
+      "label_es": "Fuerte",
+      "n": 8888000,
+      "note_en": "Includes Cali (2,471k), Buenaventura (424k) and Palmira (349k)",
+      "note_ja": "カリ247.1万人、ブエナベントゥーラ42.4万人、パルミラ34.9万人を含む",
+      "note_es": "Incluye Cali (2.471 mil), Buenaventura (424 mil) y Palmira (349 mil)"
+    },
+    {
+      "mmi": "V",
+      "label_en": "Moderate",
+      "label_ja": "中程度",
+      "label_es": "Moderado",
+      "n": 17076000,
+      "note_en": "The largest exposed group",
+      "note_ja": "最も曝露人口が多い階級",
+      "note_es": "El grupo expuesto más numeroso"
+    },
+    {
+      "mmi": "IV",
+      "label_en": "Light",
+      "label_ja": "やや弱い",
+      "label_es": "Ligero",
+      "n": 6465000,
+      "note_en": "Reaches Bogotá and Medellín",
+      "note_ja": "ボゴタ、メデジンに及ぶ",
+      "note_es": "Alcanza a Bogotá y Medellín"
+    }
+  ],
+  "exposure_note_en": "USGS PAGER (version 5) exposure estimates. About 10.5 million people were exposed to Strong or Very Strong shaking (MMI VI-VII) and about 34 million to MMI IV or above across four countries. These are model estimates.",
+  "exposure_note_ja": "USGS PAGER（第5版）による曝露推計。約1,050万人がMMI VI〜VII（強い〜非常に強い）の揺れに、4か国で約3,400万人がMMI IV以上の揺れにさらされた。いずれもモデル推計値。",
+  "aftershocks": {
+    "note_en": "The SGC located 147 events in the 34 hours after the mainshock. Within that window only one exceeded M4.0 - the M4.8 that followed 44 minutes later - and 92% were below M3.0; the M4.2 of 13 August is the second. No aftershock has come close to the mainshock in size. Ninety-six of the 147 lie at 60 km depth or more within 80 km of the epicentre: that subset is the intraslab sequence itself, and its cumulative curve tracks the SGC's published totals. The remainder is background seismicity the same catalogue records, which is why a raw count runs ahead of the official figure. A modest, quickly-decaying sequence is what an intermediate-depth rupture is expected to produce - but the 13 August event shows that shaking able to stop rescue work continues. By 07:00 on 14 August the SGC's published total had reached 184, of which 15 above M3.0 and 2 above M4.0 - a rate consistent with the catalogue extract and with normal decay.",
+    "note_ja": "SGCは本震後34時間に147回の地震を決定した。この期間にM4.0を超えたのは本震44分後のM4.8のみで、92％はM3.0未満であった。8月13日のM4.2が2回目である。本震に匹敵する規模の余震は起きていない。147回のうち96回は深さ60km以上・震央から80km以内にあり、この部分がスラブ内の余震活動そのものである。その累積曲線はSGC公表の回数とよく一致する。残りは同じカタログに含まれる背景的な地震活動であり、生の件数が公式の余震回数を上回るのはこのためである。規模が小さく減衰の速い活動は、やや深発の地震で想定される経過である。ただし8月13日の地震は、捜索救助を止めるほどの揺れがなお続いていることを示す。　8月14日07:00までにSGCの公表値は184回に達し、うちM3.0超が15回、M4.0超が2回である。この推移はカタログ抽出および通常の減衰と整合する。",
+    "rows": [
+      {
+        "when": "10 Aug 08:18 COT (13:18 UTC)",
+        "mag": "M4.8",
+        "tier": "official",
+        "note_en": "The largest aftershock, 44 minutes after the mainshock: San José del Palmar, depth 94 km, 19 km from the epicentre (SGC2026pqryij). USGS catalogues the same event as mb 5.0 at 98.5 km. Widely felt.",
+        "note_ja": "最大余震。本震の44分後、サンホセ・デル・パルマル、深さ94km、震央から19km（SGC2026pqryij）。USGSは同一地震をmb5.0・深さ98.5kmとしている。広く有感。",
+        "note_es": "La mayor réplica, 44 minutos después del sismo principal: San José del Palmar, profundidad 94 km, a 19 km del epicentro (SGC2026pqryij). El USGS cataloga el mismo evento como mb 5,0 a 98,5 km. Ampliamente sentida."
+      },
+      {
+        "when": "10 Aug 10:01 COT (15:01 UTC)",
+        "mag": "M3.8",
+        "tier": "official",
+        "note_en": "San José del Palmar, depth 88 km. This is the event two regional agencies published as M4.7 in the multi-agency bulletin; the SGC solution is 0.9 units smaller.",
+        "note_ja": "サンホセ・デル・パルマル、深さ88km。多機関速報で地域2機関がM4.7としていた地震にあたり、SGC解はそれより0.9小さい。",
+        "note_es": "San José del Palmar, profundidad 88 km. Es el evento que dos entidades regionales publicaron como M4,7 en el boletín multiagencia; la solución del SGC es 0,9 unidades menor."
+      },
+      {
+        "when": "11 Aug 00:12 / 10:43 COT",
+        "mag": "M3.6 / M3.9",
+        "tier": "official",
+        "note_en": "San José del Palmar, depths 96 km and 92 km. The 10:43 event was felt strongly enough for buildings to be evacuated in several of the affected cities.",
+        "note_ja": "サンホセ・デル・パルマル、深さ96kmと92km。10:43の地震は被災各都市で建物からの避難を招くほど強く有感となった。",
+        "note_es": "San José del Palmar, profundidades de 96 km y 92 km. El evento de las 10:43 se sintió con fuerza suficiente para evacuar edificios en varias de las ciudades afectadas."
+      },
+      {
+        "when": "13 Aug 09:42 COT (14:42 UTC)",
+        "mag": "M4.2",
+        "tier": "official",
+        "note_en": "San José del Palmar, depth 95 km, about 20 km from the epicentre - the same source volume as the mainshock. Felt as far as Bogotá and strong enough to halt search-and-rescue work temporarily.",
+        "note_ja": "サンホセ・デル・パルマル、深さ95km、震央から約20km。本震と同じ震源域。ボゴタでも有感となり、捜索救助活動が一時中断するほど強く揺れた。",
+        "note_es": "San José del Palmar, profundidad 95 km, a unos 20 km del epicentro: el mismo volumen sismogénico del sismo principal. Se sintió hasta en Bogotá y detuvo temporalmente las labores de búsqueda y rescate."
+      },
+      {
+        "when": "to 14 Aug 07:00 COT",
+        "mag": "184 located",
+        "tier": "official",
+        "note_en": "SGC running total four days on: 184 aftershocks, 15 above M3.0 and 2 above M4.0. The published total was 103 at 15:00 on 11 August; the catalogue extract used for the figure holds 147 events to 17:24 on 11 August.",
+        "note_ja": "本震から4日後のSGC累計。余震184回、うちM3.0超15回、M4.0超2回。8月11日15:00時点の公表値は103回。図に用いたカタログ抽出は8月11日17:24までの147回である。",
+        "note_es": "Total acumulado del SGC a cuatro días: 184 réplicas, 15 por encima de M3,0 y 2 por encima de M4,0. El total publicado era 103 a las 15:00 del 11 de agosto; el extracto del catálogo usado en la figura contiene 147 eventos hasta las 17:24 del 11 de agosto."
+      }
+    ],
+    "note_es": "El SGC localizó 147 eventos en las 34 horas posteriores al sismo principal. En esa ventana solo uno superó M4,0 -el M4,8 de 44 minutos después- y el 92 % estuvo por debajo de M3,0; el M4,2 del 13 de agosto es el segundo. Ninguna réplica se ha acercado al tamaño del sismo principal. Noventa y seis de los 147 se ubican a 60 km de profundidad o más y a menos de 80 km del epicentro: ese subconjunto es la secuencia intraplaca, y su curva acumulada sigue los totales publicados por el SGC. El resto es sismicidad de fondo del mismo catálogo, y por eso un conteo bruto va por delante de la cifra oficial. Una secuencia moderada y de decaimiento rápido es lo esperable en una ruptura de profundidad intermedia, pero el evento del 13 de agosto muestra que sigue habiendo sacudidas capaces de detener el rescate. Hasta las 07:00 del 14 de agosto el total publicado por el SGC llegó a 184, de las cuales 15 por encima de M3,0 y 2 por encima de M4,0, un ritmo coherente con el extracto del catálogo y con un decaimiento normal.",
+    "spread_title_en": "How much the agencies differ",
+    "spread_title_ja": "機関による解のばらつき",
+    "spread_title_es": "Cuánto difieren las entidades",
+    "spread_en": "More than 30 agencies published a solution for the mainshock within minutes. Their magnitudes span Mw 7.0-7.7 and their depths 74-121 km; several automatic solutions defaulted to 10 km before revision. This report uses the USGS/NEIC solution (Mw 7.4, 110 km), which matches PAGER v5, and shows the SGC solution beside it. The spread is normal for a deep event recorded at teleseismic distances, and it is the reason early media figures for depth and magnitude disagreed.",
+    "spread_ja": "本震については30を超える機関が数分以内に解を公表した。規模はMw7.0〜7.7、深さは74〜121kmに分布し、自動解のいくつかは修正前に既定値の10kmを示していた。本報告はPAGER第5版と一致するUSGS/NEIC解（Mw7.4、深さ110km）を用い、SGC解を併記している。遠地観測に基づく深い地震ではこの程度のばらつきは通常であり、初期の報道で深さや規模が食い違った理由でもある。",
+    "spread_es": "Más de 30 entidades publicaron una solución para el sismo principal en cuestión de minutos. Sus magnitudes van de Mw 7.0 a 7.7 y sus profundidades de 74 a 121 km; varias soluciones automáticas usaron el valor por defecto de 10 km antes de ser revisadas. Este informe utiliza la solución del USGS/NEIC (Mw 7.4, 110 km), que coincide con el PAGER v5, y muestra al lado la del SGC. La dispersión es normal en un sismo profundo registrado a distancias telesísmicas, y explica por qué las primeras cifras de prensa sobre profundidad y magnitud no coincidían.",
+    "query_en": "Data: SGC catalogue extract for the region, 10 Aug 07:34 to 11 Aug 17:24 COT, 148 rows including the mainshock, each with an SGC event id and reviewed (“manual”) status; supplied by the author and held in this repository as images/sgc_aftershocks.csv. Both panels are generated from that file, so the figure can be reproduced and each event checked against sgc.gov.co by its id. The extract's mainshock row (103 km at 4.99 N 76.29 W) matches the SGC event page as revised on 11 August, which is a check on the extract as a whole.",
+    "query_ja": "データ：SGCの地域カタログ抽出（2026年8月10日07:34〜11日17:24、コロンビア時間）。本震を含む148行で、各行にSGCのイベントIDと精査済み（manual）の状態が付されている。本レポート作成者から提供され、本リポジトリに images/sgc_aftershocks.csv として保持している。両パネルはこのファイルから生成しており、図は再現可能で、各地震はIDによりsgc.gov.coで確認できる。この抽出の本震の行（深さ103km、北緯4.99度・西経76.29度）は、8月11日に改訂されたSGCのイベントページと一致しており、抽出全体の妥当性の裏づけとなっている。",
+    "query_es": "Datos: extracto del catálogo del SGC para la región, del 10 de agosto 07:34 al 11 de agosto 17:24 COT, 148 filas incluido el sismo principal, cada una con su identificador SGC y estado revisado (“manual”); aportado por el autor y conservado en este repositorio como images/sgc_aftershocks.csv. Ambos paneles se generan a partir de ese archivo, de modo que la figura es reproducible y cada evento puede verificarse en sgc.gov.co por su identificador. La fila del sismo principal en el extracto (103 km en 4,99 N 76,29 O) coincide con la página del evento del SGC revisada el 11 de agosto, lo que sirve de verificación del extracto en su conjunto.",
+    "fig_caption_en": "147 SGC-located events after the mainshock (ADRC, from the SGC catalogue)",
+    "fig_caption_ja": "本震後にSGCが決定した147地震（ADRC作成、SGCカタログによる）",
+    "fig_caption_es": "147 eventos localizados por el SGC tras el sismo principal (ADRC, del catálogo del SGC)"
+  },
+  "support_domestic": [
+    {
+      "tier": "official",
+      "en": "National disaster declaration activating the National Disaster Risk Management System (SNGRD) under Law 1523 of 2012.",
+      "ja": "国家災害宣言により、2012年法律第1523号に基づく国家災害リスク管理システム（SNGRD）を起動。",
+      "es": "Declaratoria de desastre nacional, que activa el Sistema Nacional de Gestión del Riesgo de Desastres (SNGRD) creado por la Ley 1523 de 2012."
+    },
+    {
+      "tier": "official",
+      "source": "Presidency of Colombia, Decree 1172 of 12 Aug",
+      "en": "Three days of national mourning declared by Decree 1172 from 12 August, with the flag at half-mast on all public buildings and at Colombian embassies and consulates abroad.",
+      "ja": "8月12日付大統領令第1172号により、3日間の国家服喪を宣言。すべての公共施設および在外のコロンビア大使館・領事館で半旗を掲げる。",
+      "es": "Tres días de duelo nacional decretados mediante el Decreto 1172 desde el 12 de agosto, con la bandera a media asta en todos los edificios públicos y en las embajadas y consulados de Colombia en el exterior."
+    },
+    {
+      "tier": "official",
+      "en": "Unified Command Post (PMU) established in Chocó; UNGRD coordinating with departmental and municipal risk-management councils.",
+      "ja": "チョコ県に統合指揮所（PMU）を設置。UNGRDが県・市町村のリスク管理協議会と連携して調整。",
+      "es": "Puesto de Mando Unificado (PMU) instalado en el Chocó; la UNGRD coordina con los consejos departamentales y municipales de gestión del riesgo."
+    },
+    {
+      "tier": "official",
+      "en": "Four USAR teams (Bogotá, Envigado, Yopal, Medellín) deployed for search and rescue in collapsed structures.",
+      "ja": "USAR4隊（ボゴタ、エンビガド、ヨパル、メデジン）を倒壊建物の捜索救助に投入。",
+      "es": "Cuatro grupos USAR (Bogotá, Envigado, Yopal y Medellín) desplegados para búsqueda y rescate en estructuras colapsadas."
+    },
+    {
+      "tier": "official",
+      "source": "Gobernación del Chocó, 12 Aug",
+      "en": "Chocó ended its search-and-rescue phase on the night of 12 August, the governor stating that nobody remained reported under the rubble after the last family sought in Quibdó was found alive; the department moved to care for the affected and recovery. It reports 14 dead, 138 injured and 2,791 damaged properties.",
+      "ja": "チョコ県は8月12日夜に捜索救助段階を終了。キブドで最後まで捜索されていた家族が生存で発見され、瓦礫の下に届出のある者はいなくなったと知事が表明した。県は被災者支援と復旧に移行。県の集計は死者14人、負傷138人、被害物件2,791件。",
+      "es": "El Chocó dio por finalizada su fase de búsqueda y rescate la noche del 12 de agosto; la gobernadora señaló que ya no quedaba nadie reportado bajo los escombros tras hallar con vida a la última familia buscada en Quibdó, y el departamento pasó a la atención de los afectados y la recuperación. Reporta 14 fallecidos, 138 heridos y 2.791 afectaciones materiales."
+    },
+    {
+      "tier": "official",
+      "en": "Armed forces deployed for search, rescue, route clearance and security in the affected departments.",
+      "ja": "被災各県に軍を投入し、捜索・救助・道路啓開・治安維持にあたる。",
+      "es": "Fuerzas Militares desplegadas en los departamentos afectados para búsqueda, rescate, remoción de escombros en vías y seguridad."
+    },
+    {
+      "tier": "official",
+      "en": "Rapid structural inspection of hospitals, schools and airports; seven health institutions closed and six airports suspended pending assessment.",
+      "ja": "病院・学校・空港の応急危険度判定を実施。医療7施設を閉鎖、空港6か所を点検のため閉鎖。",
+      "es": "Inspección estructural rápida de hospitales, colegios y aeropuertos; siete instituciones de salud cerradas y seis aeropuertos suspendidos a la espera de la evaluación."
+    },
+    {
+      "tier": "media",
+      "en": "Patients transferred from the damaged University Hospital in Cali to other facilities; the city reported casualties concentrated at 12 critical collapse sites.",
+      "ja": "カリの損壊した大学病院から他施設へ患者を搬送。市内では12か所の倒壊現場に人的被害が集中していると報告。",
+      "es": "Traslado de pacientes desde el Hospital Universitario del Valle, en Cali, hacia otras instituciones; la ciudad reportó que las víctimas se concentran en 12 puntos críticos de colapso."
+    },
+    {
+      "tier": "official",
+      "en": "The President toured the affected regions on 11-12 August - Quibdó, then Cali, then Pereira, Dosquebradas, Manizales and Armenia - and said he would direct the response from the field rather than Bogotá.",
+      "ja": "大統領は8月11〜12日に被災地を巡回した。キブド、カリ、続いてペレイラ、ドスケブラダス、マニサレス、アルメニア。ボゴタではなく現地から対応を指揮するとしている。",
+      "es": "El Presidente recorrió las regiones afectadas los días 11 y 12 de agosto -Quibdó, luego Cali, después Pereira, Dosquebradas, Manizales y Armenia- y señaló que dirigiría la respuesta desde el terreno y no desde Bogotá."
+    },
+    {
+      "tier": "official",
+      "en": "Relief measures announced during the tour: three months of relief on public-utility bills for households registered as affected, a rent subsidy for those who lost their homes, a census and characterisation of damaged housing ahead of repairs, and a shock plan for education and housing. On the evening of 12 August the President announced the declaration of an economic emergency, a constitutional mechanism intended to speed up the response.",
+      "ja": "巡回中に発表された救済措置：被災世帯として登録された者に対する公共料金の3か月間の減免、住宅を失った者への家賃補助、修復に先立つ住宅被害の悉皆調査と類型化、教育・住宅の緊急対策。8月12日夕方、大統領は経済緊急事態の宣言を発表した。対応を迅速化するための憲法上の仕組みである。",
+      "es": "Medidas anunciadas durante el recorrido: tres meses de alivio en el pago de servicios públicos para los hogares censados como afectados, un subsidio de arriendo para quienes perdieron su vivienda, un censo y caracterización de las viviendas averiadas antes de repararlas, y un plan de choque para educación y vivienda. La tarde del 12 de agosto el Presidente anunció la declaratoria de emergencia económica, mecanismo constitucional destinado a acelerar la respuesta."
+    }
+  ],
+  "support_international": [
+    {
+      "tier": "official",
+      "source": "UNGRD / Cancillería de Colombia, 12-13 Aug",
+      "en": "Colombia is taking INSARAG-classified USAR teams from four countries only - the United States, Israel, Ecuador and El Salvador - on the stated grounds that they are internationally certified, work to INSARAG standards under UN coordination, and are fully self-sufficient, so they place no additional burden on municipal administrations. Their role is to support the Colombian USAR teams already deployed. The Government denied reports that other offers were declined for ideological reasons; the selection has nonetheless been questioned in the Colombian press.",
+      "ja": "コロンビアが受け入れているのは、米国、イスラエル、エクアドル、エルサルバドルの4か国のINSARAG分類USARチームのみである。政府は、これらが国際的に認証され、国連の調整の下でINSARAGの基準に沿って活動し、完全に自己完結型であるため市町村に追加の負担を生じさせないことを理由として挙げている。役割は、すでに展開しているコロンビアのUSARチームの支援である。政府は、他国の申し出をイデオロギー的な理由で断ったとの報道を否定したが、この選定はコロンビア国内の報道で疑問視されている。",
+      "es": "Colombia recibe equipos USAR clasificados por INSARAG de solo cuatro países -Estados Unidos, Israel, Ecuador y El Salvador-, con el argumento de que están certificados internacionalmente, actúan con los estándares de INSARAG bajo coordinación de la ONU y son totalmente autónomos, por lo que no demandan recursos adicionales a las administraciones municipales. Su función es apoyar a los equipos USAR colombianos ya desplegados. El Gobierno negó que otros ofrecimientos se hayan rechazado por consideraciones ideológicas; aun así, la selección ha sido cuestionada en la prensa colombiana."
+    },
+    {
+      "tier": "official",
+      "source": "Cancillería de Colombia / donor governments, 14 Aug",
+      "en": "Assistance broadened on 14 August beyond the four countries sending rescuers. India dispatched 20 tonnes of humanitarian supplies (medicines and medical equipment, temporary shelter and hygiene items). Norway allocated NOK 10 million (about USD 1 million) for emergency health care, water supply, disease prevention and temporary housing, and Sweden SEK 5 million (about USD 522,000) channelled through UNHCR. Spain, Italy, Chile, Mexico, Turkey, Brazil and the World Bank have also sent or announced support; the Colombian government says it has received offers worth about USD 1.3 billion in total, and lists Japan among the countries that have announced assistance.",
+      "ja": "8月14日、支援は救助チームを送る4か国の枠を超えて広がった。インドは人道支援物資20トン（医薬品・医療機器、仮設シェルター、衛生用品）を送った。ノルウェーは1,000万ノルウェークローネ（約100万米ドル）を緊急医療、給水、疾病予防、仮設住宅に充て、スウェーデンは500万スウェーデンクローナ（約52万2,000米ドル）をUNHCR経由で拠出する。スペイン、イタリア、チリ、メキシコ、トルコ、ブラジル、世界銀行も支援を送付または表明している。コロンビア政府は、申し出の総額は約13億米ドルに達するとし、支援を表明した国として日本も挙げている。",
+      "es": "El 14 de agosto la ayuda se amplió más allá de los cuatro países que envían rescatistas. India despachó 20 toneladas de insumos humanitarios (medicamentos y equipos médicos, alojamiento temporal y artículos de higiene). Noruega destinó 10 millones de coronas (cerca de 1 millón de dólares) para atención de salud de emergencia, suministro de agua, prevención de enfermedades y vivienda temporal, y Suecia 5 millones de coronas suecas (unos 522.000 dólares) canalizados a través del ACNUR. España, Italia, Chile, México, Turquía, Brasil y el Banco Mundial también han enviado o anunciado apoyo; el Gobierno colombiano señala que ha recibido ofrecimientos por cerca de 1.300 millones de dólares en total, y menciona al Japón entre los países que han anunciado asistencia."
+    },
+    {
+      "tier": "official",
+      "source": "UNGRD / Cancillería",
+      "en": "On 12 August Colombia accepted international search-and-rescue assistance, from countries whose teams meet the INSARAG classification: Israel, Ecuador, El Salvador and the United States. At Colombia's request the US State Department mobilised the Fairfax County (Virginia) and Los Angeles County (California) USAR task forces. El Salvador sent 100 tonnes of relief supplies and a Mexican aid flight has arrived.",
+      "ja": "8月12日、コロンビアは国際的な捜索救助支援の受け入れを決定。対象はINSARAG分類の基準を満たすチームを持つ国で、イスラエル、エクアドル、エルサルバドル、米国。コロンビアの要請を受け、米国務省はフェアファクス郡（バージニア州）とロサンゼルス郡（カリフォルニア州）のUSARタスクフォースを派遣した。エルサルバドルは救援物資100トンを送り、メキシコからの支援便も到着している。",
+      "es": "El 12 de agosto Colombia aceptó asistencia internacional de búsqueda y rescate, de países cuyos equipos cumplen la clasificación INSARAG: Israel, Ecuador, El Salvador y Estados Unidos. A solicitud de Colombia, el Departamento de Estado de EE. UU. movilizó los grupos USAR del condado de Fairfax (Virginia) y del condado de Los Ángeles (California). El Salvador envió 100 toneladas de ayuda y ha llegado un vuelo humanitario de México."
+    },
+    {
+      "tier": "official",
+      "source": "US Government / USAID",
+      "en": "United States: USD 15.5 million in emergency assistance announced on 10 August, for emergency shelter, food, protection and damage assessment.",
+      "ja": "米国：8月10日に緊急支援1,550万米ドルを表明。緊急避難所、食料、保護、被害評価に充てる。",
+      "es": "Estados Unidos: 15,5 millones de dólares en asistencia de emergencia anunciados el 10 de agosto, para alojamiento de emergencia, alimentos, protección y evaluación de daños."
+    },
+    {
+      "tier": "official",
+      "source": "European Commission / DG ECHO",
+      "en": "European Union: the EU Civil Protection Mechanism was activated and an initial EUR 100,000 in humanitarian funding released, channelled through the German Red Cross, whose teams were already in the country. Copernicus was placed at the disposal of the Colombian authorities and the EU consular crisis mechanism was activated for EU citizens in the affected area. The Commission President and the High Representative stated the EU is ready to provide more if needed.",
+      "ja": "欧州連合：EU市民保護メカニズムを発動し、人道支援として初期額10万ユーロを拠出。すでに現地で活動していたドイツ赤十字を通じて実施される。コペルニクスをコロンビア当局の利用に供し、被災地のEU市民のための領事危機メカニズムも発動した。欧州委員会委員長と上級代表は、必要に応じて追加支援を行う用意があると表明している。",
+      "es": "Unión Europea: se activó el Mecanismo de Protección Civil de la UE y se liberaron 100.000 euros iniciales de financiación humanitaria, canalizados a través de la Cruz Roja Alemana, cuyos equipos ya estaban en el país. Copernicus se puso a disposición de las autoridades colombianas y se activó el mecanismo consular de crisis de la UE para ciudadanos europeos en la zona afectada. La Presidenta de la Comisión y la Alta Representante señalaron que la UE está lista para aportar más si es necesario."
+    },
+    {
+      "tier": "official",
+      "source": "MOFA (Foreign Minister Motegi) / Prime Minister of Japan",
+      "en": "Japan: on 11 August at 21:31 JST (07:31 COT) the Prime Minister, Takaichi Sanae, posted condolences - “Japan stands with Colombia in this difficult time”. Foreign Minister Motegi issued a message: “In the wake of the earthquake that struck the Republic of Colombia on August 10, I express my deepest condolences to those who lost their lives and extend my heartfelt sympathies to all those affected. The Government of Japan also stands ready to provide the necessary assistance. Japan stands in strong solidarity with the people of Colombia.” No dispatch of the Japan Disaster Relief team and no emergency grant aid had been announced at the time of writing.",
+      "ja": "日本：8月11日21:31（日本時間、現地07:31）、高市早苗内閣総理大臣が「亡くなられた方々に哀悼の誠をささげる」「この困難な時に日本はコロンビアとともにある」と投稿。茂木外務大臣は次のメッセージを発出した。「8月10日にコロンビア共和国で発生した地震に際し、犠牲となられた方々に哀悼の誠を捧げ、被害に遭われた皆様に心からお見舞いを申し上げます。また、日本政府は必要とされる支援を提供する用意があります。日本は、コロンビアの人々との強い連帯を示します。」本稿執筆時点で、国際緊急援助隊の派遣や緊急無償資金協力の決定は公表されていない。",
+      "es": "Japón: el 11 de agosto a las 21:31 JST (07:31 COT) la Primera Ministra, Takaichi Sanae, expresó sus condolencias -«Japón está con Colombia en este momento difícil»-. El Ministro de Asuntos Exteriores, Motegi, emitió el siguiente mensaje: «A raíz del sismo que golpeó a la República de Colombia el 10 de agosto, expreso mis más profundas condolencias a quienes perdieron la vida y hago llegar mi más sentido pésame a todas las personas afectadas. El Gobierno del Japón está asimismo dispuesto a prestar la asistencia necesaria. Japón se solidariza firmemente con el pueblo colombiano.» Al momento de redactar no se había anunciado el envío del Equipo Japonés de Socorro en Casos de Desastre ni una cooperación financiera no reembolsable de emergencia."
+    },
+    {
+      "tier": "media",
+      "source": "Cancillería de Colombia (listing); Japanese Red Cross; Nippon Foundation",
+      "en": "Japan: the Colombian government lists Japan among the countries that have announced assistance, but as of this cut-off neither MOFA nor JICA has published a Japan Disaster Relief dispatch, an emergency relief goods provision or emergency grant aid. On the Japanese side what is confirmed is non-governmental: the Japanese Red Cross Society is supporting the Colombian Red Cross response, and the Nippon Foundation opened a Colombia earthquake appeal running from 12 August to 30 September.",
+      "ja": "日本：コロンビア政府は支援を表明した国として日本を挙げているが、本レポートの集計時点で、外務省・JICAのいずれからも国際緊急援助隊の派遣、緊急援助物資の供与、緊急無償資金協力は公表されていない。日本側で確認できるのは政府以外の動きであり、日本赤十字社がコロンビア赤十字社の活動を支援しているほか、日本財団が8月12日から9月30日までのコロンビア地震緊急支援募金を開設している。",
+      "es": "Japón: el Gobierno colombiano menciona al Japón entre los países que han anunciado asistencia, pero al corte de este informe ni el Ministerio de Asuntos Exteriores ni la JICA han publicado el envío de un equipo de socorro (JDR), la entrega de insumos de emergencia ni una donación de emergencia. Del lado japonés lo confirmado es no gubernamental: la Cruz Roja Japonesa apoya la respuesta de la Cruz Roja Colombiana y la Nippon Foundation abrió una colecta para el terremoto de Colombia del 12 de agosto al 30 de septiembre."
+    },
+    {
+      "tier": "official",
+      "en": "Ecuador mobilised a specialised USAR team of 47 personnel with canine units and self-sufficient equipment.",
+      "ja": "エクアドルが、救助犬と自活可能な資機材を備えた専門USARチーム47人を動員。",
+      "source": "Government of Ecuador (via media)",
+      "es": "Ecuador movilizó un grupo USAR especializado de 47 personas con unidades caninas y equipamiento autosuficiente."
+    },
+    {
+      "tier": "media",
+      "source": "International media / Cancillería de Colombia",
+      "en": "Offers of assistance were also reported from Chile, Peru, Panama, Argentina, Brazil, Venezuela, Bolivia, Guatemala, Cuba, El Salvador, Spain, Italy, France, Germany, Switzerland, Israel and Ukraine - USAR teams, medical and paramedic personnel, relief items and satellite observation. The CAF development bank announced a USD 500,000 donation.",
+      "ja": "支援の申し出は、チリ、ペルー、パナマ、アルゼンチン、ブラジル、ベネズエラ、ボリビア、グアテマラ、キューバ、エルサルバドル、スペイン、イタリア、フランス、ドイツ、スイス、イスラエル、ウクライナからも報じられている。内容はUSARチーム、医師・救急救命士、救援物資、衛星観測など。ラテンアメリカ・カリブ開発銀行（CAF）は50万米ドルの拠出を発表した。",
+      "es": "También se reportaron ofrecimientos de Chile, Perú, Panamá, Argentina, Brasil, Venezuela, Bolivia, Guatemala, Cuba, El Salvador, España, Italia, Francia, Alemania, Suiza, Israel y Ucrania: equipos USAR, personal médico y paramédico, insumos y observación satelital. El banco de desarrollo CAF anunció una donación de 500.000 dólares."
+    },
+    {
+      "tier": "official",
+      "source": "Copernicus EMS Rapid Mapping",
+      "en": "Copernicus EMS Rapid Mapping activated as EMSR916 'Earthquake in Colombia' at 17:13 UTC on 10 August (12:13 COT), requested by EC Services / DG ECHO, to provide earthquake damage assessment emergency mapping. Status ongoing, with 3 areas of interest and 3 products at the time of writing. The activation reason names Quibdó, Pereira, Manizales and Cali as cities with significant damage and collapsed buildings.",
+      "ja": "コペルニクス緊急管理サービスのラピッドマッピングが、8月10日17:13 UTC（現地12:13）に EMSR916「Earthquake in Colombia」として発動。要請は欧州委員会サービス／DG ECHO、目的は地震被害評価の緊急マッピング。本稿執筆時点で対応中、関心領域3・成果物3。発動理由には、著しい被害と建物倒壊のあった都市としてキブド、ペレイラ、マニサレス、カリが挙げられている。",
+      "es": "La cartografía rápida del Copernicus EMS se activó como EMSR916 «Earthquake in Colombia» a las 17:13 UTC del 10 de agosto (12:13 COT), a solicitud de los Servicios de la CE / DG ECHO, para proporcionar cartografía de emergencia de evaluación de daños por el sismo. En curso al momento de redactar, con 3 áreas de interés y 3 productos. La razón de la activación menciona a Quibdó, Pereira, Manizales y Cali como ciudades con daños significativos y edificios colapsados."
+    },
+    {
+      "tier": "official",
+      "source": "UN / OCHA",
+      "en": "United Nations: OCHA stated the humanitarian system is ready to support Colombia, and its preliminary needs analysis names drinking water, hygiene kits and household items, health care, food assistance and shelter. As of 11 August no formal request had been made; on 12 August the Government accepted international search-and-rescue assistance.",
+      "ja": "国連：OCHAは、人道支援システムはコロンビアを支援する用意があると表明。初期のニーズ分析では、飲料水、衛生用品・生活用品、保健医療、食料支援、避難所が挙げられている。8月11日時点で正式な要請はなかったが、12日に政府が国際的な捜索救助支援の受け入れを決めた。",
+      "es": "Naciones Unidas: la OCHA señaló que el sistema humanitario está listo para apoyar a Colombia, y su análisis preliminar de necesidades menciona agua potable, kits de higiene y artículos del hogar, atención en salud, asistencia alimentaria y alojamiento. Al 11 de agosto no se había hecho una solicitud formal; el 12 de agosto el Gobierno aceptó asistencia internacional de búsqueda y rescate."
+    },
+    {
+      "tier": "tbc",
+      "source": "International Disaster Charter",
+      "en": "The International Charter 'Space and Major Disasters' is also reported to have been activated for this earthquake; the activation number had not been confirmed at the time of writing.",
+      "ja": "国際災害チャーター（Space and Major Disasters）も本地震について発動されたと報じられている。発動番号は本稿執筆時点で確認できていない。",
+      "es": "También se reporta la activación de la Carta Internacional «Espacio y Grandes Catástrofes» para este sismo; el número de activación no estaba confirmado al momento de redactar."
+    },
+    {
+      "tier": "media",
+      "en": "International NGOs mobilising: Direct Relief and Americares (medical supplies), Save the Children (child protection and education), International Rescue Committee (assessment near the epicentre in Chocó), Convoy of Hope (relief goods).",
+      "ja": "国際NGOが対応を開始：ダイレクト・リリーフとアメリケアズ（医療物資）、セーブ・ザ・チルドレン（子どもの保護・教育）、国際救援委員会（チョコ県の震央付近で調査）、コンボイ・オブ・ホープ（救援物資）。",
+      "source": "NGO announcements",
+      "es": "ONG internacionales movilizadas: Direct Relief y Americares (insumos médicos), Save the Children (protección de la niñez y educación), International Rescue Committee (evaluación cerca del epicentro, en el Chocó) y Convoy of Hope (ayuda humanitaria)."
+    }
+  ],
+  "satellite": [
+    {
+      "org": "International Charter",
+      "en": "Activation for the Colombia earthquake reported; wide-area optical/SAR imagery for damage assessment",
+      "ja": "本地震に対する発動が報じられている。被害把握のための広域の光学・SAR画像",
+      "status": "Reported / number pending",
+      "url": "https://disasterscharter.org/activations",
+      "tier": "tbc",
+      "es": "Se reporta activación por el sismo de Colombia; imágenes ópticas y de radar de amplia cobertura para evaluación de daños"
+    },
+    {
+      "org": "Copernicus EMS",
+      "en": "EMSR916 'Earthquake in Colombia' — Rapid Mapping for damage assessment; requested by EC Services / DG ECHO; 3 AOIs, 3 products",
+      "ja": "EMSR916「Earthquake in Colombia」— 被害評価のためのラピッドマッピング。要請は欧州委員会サービス／DG ECHO。関心領域3・成果物3",
+      "status": "Ongoing (EMSR916)",
+      "url": "https://mapping.emergency.copernicus.eu/activations/EMSR916/",
+      "tier": "official",
+      "es": "EMSR916 «Earthquake in Colombia» — cartografía rápida para evaluación de daños; solicitada por los Servicios de la CE / DG ECHO; 3 AOI, 3 productos"
+    },
+    {
+      "org": "USGS",
+      "en": "ShakeMap, PAGER (Orange), finite-fault and aftershock catalogue",
+      "ja": "ShakeMap、PAGER（オレンジ）、震源過程、余震カタログ",
+      "status": "Published",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjl2/executive",
+      "tier": "official",
+      "es": "ShakeMap, PAGER (naranja), modelo de fuente finita y catálogo de réplicas"
+    },
+    {
+      "org": "GDACS",
+      "en": "Overall Orange alert; population exposure and impact estimates",
+      "ja": "総合オレンジ警報。人口曝露と影響推計",
+      "status": "Published",
+      "url": "https://gdacs.org/report.aspx?eventid=1557236&eventtype=EQ",
+      "tier": "official",
+      "es": "Alerta general naranja; exposición de población y estimaciones de impacto"
+    },
+    {
+      "org": "SGC",
+      "en": "National seismic network: hypocentre, magnitude revision, aftershock bulletins, accelerographic records",
+      "ja": "国内地震観測網：震源、規模の修正、余震情報、強震記録",
+      "status": "Published",
+      "url": "https://www.sgc.gov.co/",
+      "tier": "official",
+      "es": "Red sismológica nacional: hipocentro, revisión de magnitud, boletines de réplicas y registros acelerográficos"
+    },
+    {
+      "org": "Sentinel Asia",
+      "en": "Not applicable - the mechanism covers the Asia-Pacific region; Colombia is served by the International Charter and Copernicus EMS",
+      "ja": "対象外。同メカニズムはアジア太平洋地域が対象であり、コロンビアは国際災害チャーターとコペルニクスEMSが対応",
+      "status": "n/a",
+      "url": "https://sentinel-asia.org/",
+      "tier": "official",
+      "es": "No aplica: el mecanismo cubre la región de Asia y el Pacífico; a Colombia la atienden la Carta Internacional y Copernicus EMS"
+    }
+  ],
+  "drm_system": {
+    "intro_en": "Colombia rebuilt its disaster risk management framework after the 1985 Armero volcanic disaster and again after the 1999 Armenia earthquake. Law 1523 of 2012 created the National Disaster Risk Management System (SNGRD), led by the National Unit for Disaster Risk Management (UNGRD), which reports to the Presidency.",
+    "intro_ja": "コロンビアは1985年のアルメロ火山災害後、さらに1999年アルメニア地震を経て防災体制を再構築してきた。2012年法律第1523号により国家災害リスク管理システム（SNGRD）が創設され、大統領府直属の国家災害リスク管理ユニット（UNGRD）が統括している。",
+    "items": [
+      {
+        "en": "Law 1523 of 2012 - national policy on disaster risk management; defines the SNGRD and makes risk management a mandatory duty of every public authority and, in part, of private actors.",
+        "ja": "2012年法律第1523号 — 災害リスク管理の国家政策。SNGRDを規定し、リスク管理をすべての公的機関（および一部の民間主体）の責務とした。",
+        "es": "Ley 1523 de 2012: política nacional de gestión del riesgo de desastres; define el SNGRD y convierte la gestión del riesgo en un deber obligatorio de toda autoridad pública y, en parte, de los actores privados."
+      },
+      {
+        "en": "UNGRD - national coordinating agency under the Presidency; runs the national response, the disaster fund (FNGRD) and the national information system.",
+        "ja": "UNGRD — 大統領府直属の調整機関。全国的な応急対応、国家防災基金（FNGRD）、国家情報システムを運用する。",
+        "es": "UNGRD: entidad coordinadora nacional adscrita a la Presidencia; dirige la respuesta nacional, el fondo de gestión del riesgo (FNGRD) y el sistema nacional de información."
+      },
+      {
+        "en": "Departmental and municipal risk management councils (CDGRD / CMGRD) carry out first response; UNGRD reinforces when local capacity is exceeded.",
+        "ja": "県・市町村のリスク管理協議会（CDGRD／CMGRD）が初動を担い、地方の能力を超える場合にUNGRDが増強する。",
+        "es": "Los consejos departamentales y municipales de gestión del riesgo (CDGRD / CMGRD) asumen la primera respuesta; la UNGRD refuerza cuando se supera la capacidad local."
+      },
+      {
+        "en": "PNGRD 2015-2030 — the national disaster risk management plan, adopted by Decree 308 of 2016 and updated by Decree 1478 of 3 August 2022; aligned with the Sendai Framework and monitored annually by UNGRD.",
+        "ja": "PNGRD 2015-2030 — 国家災害リスク管理計画。2016年大統領令第308号で採択され、2022年8月3日の第1478号で更新。仙台防災枠組に整合し、UNGRDが年次で進捗を監理する。",
+        "es": "PNGRD 2015-2030 — el plan nacional de gestión del riesgo de desastres, adoptado por el Decreto 308 de 2016 y actualizado por el Decreto 1478 del 3 de agosto de 2022; alineado con el Marco de Sendái y con seguimiento anual de la UNGRD."
+      },
+      {
+        "en": "NSR-10 - the national seismic building code (in force since 2010, technical annexes updated since). Buildings predating modern code enforcement, and non-engineered masonry and earthen construction, remain the dominant source of risk.",
+        "ja": "NSR-10 — 国の耐震設計基準（2010年施行、その後も技術付属書を更新）。現行基準以前の建物や、非エンジニアリングの組積造・土造建築が依然としてリスクの主要因である。",
+        "es": "NSR-10: el reglamento nacional de construcción sismo resistente (vigente desde 2010, con anexos técnicos actualizados posteriormente). Las edificaciones anteriores a la aplicación de la norma moderna y la construcción no ingenieril en mampostería y tierra siguen siendo la principal fuente de riesgo."
+      },
+      {
+        "en": "Seismic microzonation studies exist for major cities including Bogotá, Medellín, Cali, Pereira, Manizales and Armenia — a direct legacy of the 1999 earthquake. In Cali the microzonation is binding on structural design through Decree 411.0.20.0158 of 2014.",
+        "ja": "ボゴタ、メデジン、カリ、ペレイラ、マニサレス、アルメニアなど主要都市で地震動微地形区分（マイクロゾーニング）が整備されている。1999年地震の直接の教訓である。カリでは2014年市令第411.0.20.0158号により構造設計に対して拘束力を持つ。",
+        "es": "Existen estudios de microzonificación sísmica para las principales ciudades, entre ellas Bogotá, Medellín, Cali, Pereira, Manizales y Armenia, herencia directa del terremoto de 1999. En Cali la microzonificación es vinculante para el diseño estructural mediante el Decreto 411.0.20.0158 de 2014."
+      },
+      {
+        "en": "The SGC operates the National Seismological Network and the national accelerograph network, and issues public bulletins within minutes.",
+        "ja": "SGCが国家地震観測網と強震観測網を運用し、数分以内に公表情報を発表している。",
+        "es": "El SGC opera la Red Sismológica Nacional y la red nacional de acelerógrafos, y publica boletines en cuestión de minutos."
+      },
+      {
+        "en": "Cities run their own instruments alongside the national system: Cali's SATIC community-and-sensor early warning system (from 2018, formalised by Municipal Decree 0858 of 2022), Medellín's DAGRD and its municipal plan, and municipal risk-management funds created under Law 1523.",
+        "ja": "各都市は国の制度と並行して独自の仕組みを運用している。カリの住民参加型早期警戒システムSATIC（2018年〜、2022年市令第0858号で制度化）、メデジンのDAGRDと市防災計画、法律1523号に基づく市町村防災基金などである。",
+        "es": "Las ciudades operan sus propios instrumentos junto al sistema nacional: el sistema de alertas tempranas comunitario y con sensores SATIC de Cali (desde 2018, formalizado por el Decreto Municipal 0858 de 2022), el DAGRD de Medellín y su plan municipal, y los fondos municipales de gestión del riesgo creados al amparo de la Ley 1523."
+      }
+    ],
+    "intro_es": "Colombia reconstruyó su marco de gestión del riesgo de desastres tras la tragedia volcánica de Armero en 1985 y de nuevo tras el terremoto de Armenia de 1999. La Ley 1523 de 2012 creó el Sistema Nacional de Gestión del Riesgo de Desastres (SNGRD), liderado por la Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD), adscrita a la Presidencia de la República."
+  },
+  "prior_event": {
+    "title_en": "The 1999 Armenia (Quindío) Earthquake - the same Coffee Region",
+    "title_ja": "1999年アルメニア（キンディオ）地震 — 同じコーヒー地帯",
+    "overview_en": "On 25 January 1999 an M6.1-6.2 earthquake at about 30 km depth struck the Quindío coffee-growing region. It killed about 1,185 people, injured over 5,000 and damaged or destroyed some 50,000 structures; roughly 60% of the buildings in the city of Armenia collapsed or were severely damaged, and more than 200,000 people were displaced. Although far smaller in magnitude than the 2026 event, it was much shallower and much closer to the cities, which is why its local destructiveness was far greater.",
+    "overview_ja": "1999年1月25日、深さ約30kmでM6.1〜6.2の地震がキンディオのコーヒー生産地帯を襲った。死者約1,185人、負傷者5,000人超、約5万棟が損壊・全壊し、アルメニア市では建物の約6割が倒壊または大破、20万人以上が住まいを失った。2026年の地震より規模ははるかに小さいが、浅く、都市に近かったため局所的な破壊力は格段に大きかった。",
+    "stats": [
+      {
+        "item_en": "Deaths",
+        "item_ja": "死者",
+        "value_en": "approx. 1,185",
+        "value_ja": "約1,185人",
+        "item_es": "Muertos",
+        "value_es": "aprox. 1.185"
+      },
+      {
+        "item_en": "Injured",
+        "item_ja": "負傷者",
+        "value_en": "over 5,000",
+        "value_ja": "5,000人超",
+        "item_es": "Heridos",
+        "value_es": "más de 5.000"
+      },
+      {
+        "item_en": "Structures damaged or destroyed",
+        "item_ja": "損壊・全壊建物",
+        "value_en": "approx. 50,000",
+        "value_ja": "約5万棟",
+        "item_es": "Edificaciones averiadas o destruidas",
+        "value_es": "aprox. 50.000"
+      },
+      {
+        "item_en": "Displaced",
+        "item_ja": "住まいを失った人",
+        "value_en": "over 200,000",
+        "value_ja": "20万人超",
+        "item_es": "Personas sin vivienda",
+        "value_es": "más de 200.000"
+      },
+      {
+        "item_en": "Coffee sector",
+        "item_ja": "コーヒー産業",
+        "value_en": "approx. 8,000 farms and 1,200 processing facilities damaged",
+        "value_ja": "農園約8,000、加工施設約1,200が被害",
+        "item_es": "Sector cafetero",
+        "value_es": "unas 8.000 fincas y 1.200 instalaciones de beneficio afectadas"
+      }
+    ],
+    "lessons_en": [
+      "Reconstruction was managed through a dedicated temporary body for the Coffee Region, an early example in Latin America of a purpose-built reconstruction agency.",
+      "The disaster drove enforcement of the national seismic code and the seismic microzonation studies that now cover Pereira, Manizales and Armenia.",
+      "Recovery of the coffee economy took roughly a decade - the economic tail of the disaster far outlasted the emergency phase.",
+      "The 2026 earthquake shook the same cities, but as a deep, distant source rather than a shallow local one: a different loading of the same building stock."
+    ],
+    "lessons_ja": [
+      "復興はコーヒー地帯専門の暫定機関が統括した。中南米における復興専従機関の先駆例である。",
+      "この災害を機に耐震基準の運用が強化され、現在ペレイラ・マニサレス・アルメニアを覆うマイクロゾーニング調査が進んだ。",
+      "コーヒー経済の回復には約10年を要した。災害の経済的影響は応急期をはるかに超えて続いた。",
+      "2026年の地震は同じ都市群を揺らしたが、浅い直下ではなく深く離れた震源によるものであり、同じ建物ストックに異なる形の荷重を与えた。"
+    ],
+    "context_en": "The cities hit hardest in 2026 - Pereira, Manizales, Armenia - are the same cities that rebuilt after 1999. How that rebuilt stock performed under long-period, long-duration shaking from a 110 km-deep source is the key question for post-event assessment.",
+    "context_ja": "2026年に大きな被害を受けたペレイラ・マニサレス・アルメニアは、1999年後に再建された都市そのものである。深さ110kmの震源による長周期・長時間の揺れに対し、再建された建物ストックがどう応答したかが、事後評価の最大の論点となる。",
+    "title_es": "El terremoto de Armenia (Quindío) de 1999: el mismo Eje Cafetero",
+    "overview_es": "El 25 de enero de 1999, un sismo de M6.1-6.2 a unos 30 km de profundidad golpeó la zona cafetera del Quindío. Dejó cerca de 1.185 muertos, más de 5.000 heridos y unas 50.000 edificaciones averiadas o destruidas; alrededor del 60 % de las construcciones de la ciudad de Armenia colapsaron o resultaron gravemente afectadas, y más de 200.000 personas quedaron sin vivienda. Aunque de magnitud mucho menor que el sismo de 2026, fue mucho más somero y mucho más cercano a las ciudades, y por eso su poder destructivo local fue muy superior.",
+    "context_es": "Las ciudades más golpeadas en 2026 —Pereira, Manizales y Armenia— son las mismas que se reconstruyeron después de 1999. Cómo se comportó ese parque construido frente a un sacudimiento de período y duración largos, procedente de una fuente a 110 km de profundidad, es la pregunta clave de la evaluación posterior al evento.",
+    "lessons_es": [
+      "La reconstrucción fue conducida por un organismo temporal creado específicamente para el Eje Cafetero, uno de los primeros ejemplos en América Latina de una agencia de reconstrucción con propósito definido.",
+      "El desastre impulsó la aplicación efectiva de la norma sismo resistente y los estudios de microzonificación sísmica que hoy cubren a Pereira, Manizales y Armenia.",
+      "La recuperación de la economía cafetera tomó cerca de una década: la estela económica del desastre duró mucho más que la fase de emergencia.",
+      "El sismo de 2026 sacudió las mismas ciudades, pero desde una fuente profunda y lejana en lugar de una somera y local: una solicitación distinta sobre el mismo parque construido."
+    ]
+  },
+  "historical": [
+    {
+      "year": "1906",
+      "event_en": "Ecuador-Colombia earthquake (Pacific coast)",
+      "event_ja": "エクアドル・コロンビア地震（太平洋岸）",
+      "mag": "M8.8",
+      "note_en": "One of the largest earthquakes ever recorded; destructive tsunami on the Pacific coast",
+      "note_ja": "観測史上最大級。太平洋岸に破壊的な津波",
+      "event_es": "Terremoto de Ecuador-Colombia (costa del Pacífico)",
+      "note_es": "Uno de los mayores sismos jamás registrados; tsunami destructivo en la costa del Pacífico"
+    },
+    {
+      "year": "1925",
+      "mag": "M7.0",
+      "event_en": "Cali earthquake (Valle del Cauca)",
+      "event_ja": "カリ地震（バジェ・デル・カウカ県）",
+      "event_es": "Terremoto de Cali (Valle del Cauca)",
+      "note_en": "The reference historical event for Cali; the city was also shaken in 1995 and 2004, the latter damaging clinics and residential buildings",
+      "note_ja": "カリにとって基準となる歴史地震。同市は1995年・2004年にも被災し、2004年は診療所や住宅に被害が出た",
+      "note_es": "El evento histórico de referencia para Cali; la ciudad también fue sacudida en 1995 y 2004, este último con daños en clínicas y edificaciones residenciales"
+    },
+    {
+      "year": "1938",
+      "mag": "M7.0",
+      "event_en": "Coffee Region earthquake (deep, 150 km)",
+      "event_ja": "コーヒー地帯の地震（深さ150km）",
+      "event_es": "Sismo del Eje Cafetero (profundo, 150 km)",
+      "note_en": "An intermediate-depth event beneath the same coffee-growing departments — the closest historical analogue to the 2026 earthquake",
+      "note_ja": "同じコーヒー生産県の下で発生したやや深発地震。2026年の地震に最も近い歴史的類例",
+      "note_es": "Un sismo de profundidad intermedia bajo los mismos departamentos cafeteros: el análogo histórico más cercano al sismo de 2026"
+    },
+    {
+      "year": "1979",
+      "event_en": "Tumaco earthquake (Nariño)",
+      "event_ja": "トゥマコ地震（ナリーニョ県）",
+      "mag": "M8.1",
+      "note_en": "Subduction-interface event with tsunami; several hundred deaths",
+      "note_ja": "プレート境界型で津波を伴う。数百人が死亡",
+      "event_es": "Terremoto de Tumaco (Nariño)",
+      "note_es": "Sismo de interfaz de subducción con tsunami; varios cientos de muertos"
+    },
+    {
+      "year": "1983",
+      "event_en": "Popayán earthquake (Cauca)",
+      "event_ja": "ポパヤン地震（カウカ県）",
+      "mag": "M5.5",
+      "note_en": "About 250-300 deaths; historic city centre heavily damaged - a small but shallow, urban event",
+      "note_ja": "死者約250〜300人。歴史的市街地が大きく損壊。小規模だが浅く都市直下",
+      "event_es": "Terremoto de Popayán (Cauca)",
+      "note_es": "Cerca de 250-300 muertos; centro histórico gravemente afectado: un sismo pequeño, pero somero y urbano"
+    },
+    {
+      "year": "1994",
+      "event_en": "Páez (Cauca) earthquake",
+      "event_ja": "パエス地震（カウカ県）",
+      "mag": "M6.8",
+      "note_en": "About 1,100 deaths, most caused by earthquake-triggered landslides and debris flows",
+      "note_ja": "死者約1,100人。大半は地震による地すべり・土石流",
+      "event_es": "Terremoto de Páez (Cauca)",
+      "note_es": "Cerca de 1.100 muertos, en su mayoría por deslizamientos y flujos de escombros desencadenados por el sismo"
+    },
+    {
+      "year": "1995",
+      "event_en": "Chocó earthquake",
+      "event_ja": "チョコ地震",
+      "mag": "M6.6",
+      "note_en": "Intermediate-depth event in the same department as the 2026 earthquake",
+      "note_ja": "2026年と同じ県で発生したやや深発地震",
+      "event_es": "Terremoto del Chocó",
+      "note_es": "Sismo de profundidad intermedia en el mismo departamento que el de 2026"
+    },
+    {
+      "year": "1999",
+      "event_en": "Armenia (Quindío) earthquake",
+      "event_ja": "アルメニア（キンディオ）地震",
+      "mag": "M6.1-6.2",
+      "note_en": "About 1,185 deaths; Colombia's costliest earthquake disaster; drove the modern DRM reforms",
+      "note_ja": "死者約1,185人。コロンビア史上最も経済損失の大きい地震災害。現在の防災改革の契機",
+      "event_es": "Terremoto de Armenia (Quindío)",
+      "note_es": "Cerca de 1.185 muertos; el desastre sísmico más costoso de Colombia; impulsó las reformas actuales de gestión del riesgo"
+    },
+    {
+      "year": "2026",
+      "event_en": "Chocó earthquake (this event)",
+      "event_ja": "チョコ地震（本地震）",
+      "mag": "M7.4",
+      "note_en": "Largest magnitude recorded in Colombia in the past decade (SGC); intermediate depth, wide-area damage",
+      "note_ja": "過去10年でコロンビア最大規模（SGC）。やや深発で被害が広域に分散",
+      "event_es": "Terremoto del Chocó (este evento)",
+      "note_es": "Mayor magnitud registrada en Colombia en la última década (SGC); profundidad intermedia y daños de amplia distribución"
+    }
+  ],
+  "observations": [
+    {
+      "tier": "official",
+      "en": "A deep source with shallow-disaster consequences. At 110 km depth the earthquake produced no surface rupture and no tsunami, yet it damaged buildings in at least six departments. Damage is dispersed rather than concentrated, which complicates needs assessment, logistics and the targeting of search and rescue.",
+      "ja": "深い震源でありながら被害は浅発地震型。深さ110kmで地表地震断層も津波も生じなかったが、少なくとも6県で建物被害が出た。被害が集中せず分散するため、ニーズ把握・ロジスティクス・捜索救助の重点配分が難しくなる。",
+      "es": "Una fuente profunda con consecuencias de sismo somero. A 110 km de profundidad el sismo no produjo ruptura superficial ni tsunami y, aun así, dañó edificaciones en al menos seis departamentos. Los daños están dispersos y no concentrados, lo que complica la evaluación de necesidades, la logística y la priorización de la búsqueda y el rescate."
+    },
+    {
+      "tier": "official",
+      "en": "Critical facilities failed. The collapse of about 30% of Cali's University Hospital, the closure of seven health institutions, damage to 52 schools and the partial collapse of an international airport terminal all reduce response capacity exactly where it is needed. Seismic performance of hospitals, schools and transport terminals is the clearest lesson emerging so far.",
+      "ja": "重要施設が被災した。カリの大学病院が約3割崩落、医療7施設が閉鎖、学校52か所が被害、国際空港ターミナルが一部倒壊しており、必要な場所で対応能力そのものが低下している。病院・学校・交通ターミナルの耐震性能が現時点で最も明確な教訓である。",
+      "es": "Fallaron instalaciones críticas. El colapso de cerca del 30 % del Hospital Universitario del Valle, en Cali, el cierre de siete instituciones de salud, los daños en 52 colegios y el colapso parcial de una terminal aérea internacional reducen la capacidad de respuesta justo donde se necesita. El desempeño sísmico de hospitales, colegios y terminales de transporte es la lección más clara hasta ahora."
+    },
+    {
+      "tier": "official",
+      "en": "The toll multiplied as the assessment reached the damage. In 56 hours deaths went from 111 to 239, injured from 87 to 3,755, missing from none counted to 287, damaged homes from 1,612 to about 54,000, and the affected area from “more than 20 municipalities” to 403 across 14 departments. Nothing new happened to cause those jumps; the assessment reached places it had not reached, and much of Chocó is still accessible only by boat or aircraft. Two lessons for reading early figures: the first-day numbers describe the reach of the assessment, not the size of the disaster; and where two counts of the same thing exist, check what each is counting before comparing them.",
+      "ja": "調査が被害に追いついた分だけ数値は膨れ上がった。56時間で死者は111人から239人、負傷者は87人から3,755人、行方不明は未集計から287人、住宅被害は1,612棟から約54,000棟、被災範囲は「20市町村超」から14県・403市町村になった。この急増を引き起こす新たな出来事があったわけではなく、調査が未到達地域に届いただけである。チョコ県の多くはなお船か航空機でしか到達できない。初期値の読み方として二つ。初日の数値は災害の規模ではなく調査の到達範囲を表すこと。そして同じ事象に二つの集計がある場合は、比較の前にそれぞれが何を数えているかを確認すべきことである。",
+      "es": "El balance se multiplicó a medida que la evaluación alcanzó los daños. En 56 horas los muertos pasaron de 111 a 239, los heridos de 87 a 3.755, los desaparecidos de ninguno contabilizado a 287, las viviendas afectadas de 1.612 a cerca de 54.000 y el área afectada de «más de 20 municipios» a 403 en 14 departamentos. No ocurrió nada nuevo que provocara esos saltos; la evaluación llegó a donde no había llegado, y buena parte del Chocó sigue siendo accesible solo por vía fluvial o aérea. Dos lecciones para leer las cifras tempranas: los números del primer día describen el alcance de la evaluación y no el tamaño del desastre; y cuando existen dos conteos de lo mismo, conviene revisar qué mide cada uno antes de compararlos."
+    },
+    {
+      "tier": "media",
+      "en": "The affected area is the Coffee Region rebuilt after 1999. Comparing how post-1999 construction performed against older stock, under a very different type of shaking, will be valuable for the region and for other countries with intermediate-depth seismic sources.",
+      "ja": "被災地は1999年以後に再建されたコーヒー地帯である。1999年以降の建築物と旧来の建物が、性質の異なる揺れに対してどう応答したかの比較は、同地域にとっても、やや深発地震のリスクを抱える他国にとっても有益である。",
+      "es": "La zona afectada es el Eje Cafetero reconstruido después de 1999. Comparar el comportamiento de las construcciones posteriores a 1999 con el del parque más antiguo, bajo un tipo de sacudimiento muy distinto, será valioso para la región y para otros países con fuentes sísmicas de profundidad intermedia."
+    },
+    {
+      "tier": "official",
+      "en": "The assessments existed before the event. Cali's GEM-TREQ risk model and its local plan had already named hospitals and other indispensable buildings as the priority to retrofit, and the 2026 earthquake — a far weaker test than the city's own modelled scenario — still took out roughly 30% of its main public hospital. The gap here is not knowledge but implementation and financing.",
+      "ja": "評価は発災前から存在していた。カリのGEM-TREQリスクモデルと地域防災計画は、病院をはじめとする重要建築物の耐震補強を最優先課題として既に特定していた。2026年の地震は同市の想定シナリオよりはるかに弱い試練であったにもかかわらず、主要公立病院の約3割を失わせた。ここでの不足は知見ではなく、実施と財源である。",
+      "es": "Las evaluaciones existían antes del evento. El modelo de riesgo GEM-TREQ de Cali y su plan local ya habían señalado los hospitales y otras edificaciones indispensables como la prioridad de reforzamiento, y el sismo de 2026 —una prueba mucho más débil que el propio escenario modelado de la ciudad— aun así se llevó cerca del 30 % de su principal hospital público. La brecha aquí no es de conocimiento, sino de implementación y financiación."
+    },
+    {
+      "tier": "official",
+      "en": "Aftershock risk to damaged buildings. The SGC located 147 events in 34 hours, 92% of them below M3.0 and only one above M4.0 - as modest as an intermediate-depth intraslab rupture predicts. That statistic is not the operational point: the M4.8 of 10 August was felt widely, and the M3.9 of 11 August emptied buildings again in several cities. Structures the mainshock left standing but damaged have lost capacity, so rapid habitability assessment before re-occupancy matters more than the aftershock numbers.",
+      "ja": "損傷建物に対する余震リスク。SGCは34時間で147回の地震を決定した。うち92%はM3.0未満、M4.0超は1回のみで、やや深発のスラブ内地震として想定される低調な推移である。ただし運用上の要点はこの統計ではない。8月10日のM4.8は広く有感となり、11日のM3.9でも複数の都市で建物からの避難が生じた。本震で損傷したまま倒壊を免れた建物は耐力を失っているため、余震の回数より、再入居前の応急危険度判定が重要である。",
+      "es": "Riesgo de las réplicas para las edificaciones averiadas. El SGC localizó 147 eventos en 34 horas, el 92 % por debajo de M3,0 y solo uno por encima de M4,0: tan modesto como predice una ruptura intraplaca de profundidad intermedia. El punto operativo no es esa estadística: la M4,8 del 10 de agosto se sintió ampliamente y la M3,9 del 11 volvió a vaciar edificios en varias ciudades. Las estructuras que el sismo principal dejó en pie pero averiadas han perdido capacidad, de modo que la evaluación rápida de habitabilidad antes de volver a ocuparlas importa más que el número de réplicas."
+    },
+    {
+      "tier": "tbc",
+      "en": "Points to watch: the reconciled national casualty figures; shelter and displacement numbers, which have not yet been published; water and power restoration in Chocó; the results of satellite-based damage mapping; and whether the Government requests international assistance beyond the offers already made.",
+      "ja": "今後の注目点：整合の取れた全国の人的被害数、未公表の避難者数、チョコ県の水・電力の復旧、衛星による被害マッピングの結果、そして政府が既存の申し出を超えて国際支援を要請するかどうか。",
+      "es": "Puntos por seguir: la conciliación de las cifras nacionales de víctimas; las cifras de alojamiento y de personas desalojadas, que aún no se publican; el restablecimiento del agua y la energía en el Chocó; los resultados de la cartografía de daños con satélite; y si el Gobierno solicita asistencia internacional más allá de los ofrecimientos ya recibidos."
+    }
+  ],
+  "links": [
+    {
+      "label_en": "USGS - M 7.4 San José del Palmar, Colombia (event page)",
+      "label_ja": "USGS 地震イベントページ",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjl2/executive",
+      "tier": "official",
+      "label_es": "USGS: M 7.4 San José del Palmar, Colombia (página del evento)"
+    },
+    {
+      "label_en": "Servicio Geológico Colombiano (SGC)",
+      "label_ja": "コロンビア地質調査所（SGC）",
+      "url": "https://www.sgc.gov.co/",
+      "tier": "official",
+      "label_es": "Servicio Geológico Colombiano (SGC)"
+    },
+    {
+      "label_en": "SGC — event bulletin SGC2026pqqmro (this earthquake)",
+      "label_ja": "SGC 地震速報 SGC2026pqqmro（本地震）",
+      "label_es": "SGC — boletín del evento SGC2026pqqmro (este sismo)",
+      "url": "https://www.sgc.gov.co/detallesismo/SGC2026pqqmro/",
+      "tier": "official"
+    },
+    {
+      "label_en": "SGC — macroseismic intensity map (ShakeMap) for this earthquake",
+      "label_ja": "SGC 体感震度図（ShakeMap・本地震）",
+      "label_es": "SGC — mapa de intensidades macrosísmicas (ShakeMap) de este sismo",
+      "url": "https://www.sgc.gov.co/detallesismo/SGC2026pqqmro/mmi",
+      "tier": "official"
+    },
+    {
+      "label_en": "UNGRD - National Unit for Disaster Risk Management",
+      "label_ja": "国家災害リスク管理ユニット（UNGRD）",
+      "url": "https://portal.gestiondelriesgo.gov.co/",
+      "tier": "official",
+      "label_es": "UNGRD: Unidad Nacional para la Gestión del Riesgo de Desastres"
+    },
+    {
+      "label_en": "GDACS - Orange earthquake alert, Colombia, 10 Aug 2026",
+      "label_ja": "GDACS オレンジ警報",
+      "url": "https://gdacs.org/report.aspx?eventid=1557236&eventtype=EQ",
+      "tier": "official",
+      "label_es": "GDACS: alerta sísmica naranja, Colombia, 10 ago. 2026"
+    },
+    {
+      "label_en": "International Charter 'Space and Major Disasters' - activations",
+      "label_ja": "国際災害チャーター 発動一覧",
+      "url": "https://disasterscharter.org/activations",
+      "tier": "official",
+      "label_es": "Carta Internacional «Espacio y Grandes Catástrofes»: activaciones"
+    },
+    {
+      "label_en": "Copernicus EMS — EMSR916 'Earthquake in Colombia' (activation)",
+      "label_ja": "コペルニクスEMS EMSR916「Earthquake in Colombia」（発動）",
+      "url": "https://mapping.emergency.copernicus.eu/activations/EMSR916/",
+      "tier": "official",
+      "label_es": "Copernicus EMS — EMSR916 «Earthquake in Colombia» (activación)"
+    },
+    {
+      "label_en": "ReliefWeb - Colombia",
+      "label_ja": "ReliefWeb コロンビア",
+      "url": "https://reliefweb.int/country/col",
+      "tier": "official",
+      "label_es": "ReliefWeb: Colombia"
+    },
+    {
+      "label_en": "PAHO/WHO - Colombia",
+      "label_ja": "PAHO/WHO コロンビア",
+      "url": "https://www.paho.org/en/colombia",
+      "tier": "official",
+      "label_es": "OPS/OMS: Colombia"
+    },
+    {
+      "label_en": "PreventionWeb - Colombia PNGRD 2015-2030",
+      "label_ja": "PreventionWeb コロンビア国家防災計画",
+      "url": "https://www.preventionweb.net/publication/colombia-plan-nacional-de-gestion-del-riesgo-de-desastres-pngrd-2015-2030",
+      "tier": "official",
+      "label_es": "PreventionWeb: PNGRD 2015-2030 de Colombia"
+    },
+    {
+      "label_en": "GEM - Seismic regulations for Colombia (NSR-10)",
+      "label_ja": "GEM コロンビアの耐震規定（NSR-10）",
+      "url": "https://www.globalquakemodel.org/seismic-regulations/colombia",
+      "tier": "official",
+      "label_es": "GEM: normativa sismo resistente de Colombia (NSR-10)"
+    },
+    {
+      "label_en": "CNN — live updates: death toll rises to 132",
+      "label_ja": "CNN 速報：死者132人に増加",
+      "label_es": "CNN — en vivo: los muertos ascienden a 132",
+      "url": "https://www.cnn.com/2026/08/10/world/live-news/colombia-earthquake-san-jose-del-palmar",
+      "tier": "media"
+    },
+    {
+      "label_en": "El Colombiano — 84 injured and 12 dead in Chocó (department government)",
+      "label_ja": "El Colombiano チョコ県で負傷84人・死者12人（県政府）",
+      "label_es": "El Colombiano — 84 heridos y 12 muertos en Chocó (Gobernación)",
+      "url": "https://www.elcolombiano.com/colombia/terremoto-temblor-hoy-colombia-choco-heridos-FL39761141",
+      "tier": "media"
+    },
+    {
+      "label_en": "UN-SPIDER - UNGRD of Colombia",
+      "label_ja": "UN-SPIDER UNGRD紹介",
+      "url": "https://un-spider.org/national-unit-disaster-risk-management-ungrd-colombia",
+      "tier": "official",
+      "label_es": "UN-SPIDER: la UNGRD de Colombia"
+    },
+    {
+      "label_en": "OECD - Risk governance scan of Colombia",
+      "label_ja": "OECD コロンビアのリスクガバナンス評価",
+      "url": "https://www.oecd.org/en/publications/risk-governance-scan-of-colombia_eeb81954-en.html",
+      "tier": "official",
+      "label_es": "OCDE: análisis de gobernanza del riesgo de Colombia"
+    },
+    {
+      "label_en": "CNN - Live updates: at least 111 dead",
+      "label_ja": "CNN 速報（死者111人）",
+      "url": "https://www.cnn.com/2026/08/10/world/live-news/colombia-earthquake-san-jose-del-palmar",
+      "tier": "media",
+      "label_es": "CNN: en vivo, al menos 111 muertos"
+    },
+    {
+      "label_en": "France 24 - Colombia declares national emergency as quake toll hits 111",
+      "label_ja": "France 24 国家非常事態宣言",
+      "url": "https://www.france24.com/en/americas/20260810-powerful-quake-rocks-colombia-causing-major-damage",
+      "tier": "media",
+      "label_es": "France 24: Colombia declara la emergencia nacional; 111 muertos"
+    },
+    {
+      "label_en": "Al Jazeera - M7.4 earthquake hits Colombia",
+      "label_ja": "アルジャジーラ 報道",
+      "url": "https://www.aljazeera.com/news/2026/8/10/7-4-magnitude-earthquake-hits-colombia-killing-at-least-20",
+      "tier": "media",
+      "label_es": "Al Jazeera: sismo de M7.4 en Colombia"
+    },
+    {
+      "label_en": "CBS News - Strong earthquake strikes western Colombia",
+      "label_ja": "CBS ニュース",
+      "url": "https://www.cbsnews.com/news/colombia-earthquake-western-region-evacuations/",
+      "tier": "media",
+      "label_es": "CBS News: fuerte sismo en el occidente de Colombia"
+    },
+    {
+      "label_en": "NBC News - Deaths, injuries and collapsed buildings",
+      "label_ja": "NBC ニュース",
+      "url": "https://www.nbcnews.com/world/latin-america/strong-earthquake-colombia-ecuador-people-evacuating-homes-buildings-rcna591709",
+      "tier": "media",
+      "label_es": "NBC News: muertos, heridos y edificios colapsados"
+    },
+    {
+      "label_en": "Colombia One - First official assessment: widespread structural damage",
+      "label_ja": "Colombia One 政府第1次被害評価",
+      "url": "https://colombiaone.com/2026/08/10/earthquake-colombia-official-details/",
+      "tier": "media",
+      "label_es": "Colombia One: primer balance oficial de daños"
+    },
+    {
+      "label_en": "Colombia One - Government declares national disaster",
+      "label_ja": "Colombia One 国家災害宣言",
+      "url": "https://colombiaone.com/2026/08/10/colombia-national-disaster/",
+      "tier": "media",
+      "label_es": "Colombia One: el Gobierno declara el desastre nacional"
+    },
+    {
+      "label_en": "Infobae - SGC explains why the shaking lasted so long",
+      "label_ja": "Infobae SGCによる長い揺れの解説",
+      "url": "https://www.infobae.com/colombia/2026/08/10/por-que-el-temblor-en-colombia-de-este-lunes-10-de-agosto-duro-una-eternidad-el-servicio-geologico-explico-que-paso/",
+      "tier": "media",
+      "label_es": "Infobae: el SGC explica por qué el temblor duró tanto"
+    },
+    {
+      "label_en": "NHK - President reports 111 dead, 87 injured (Japanese)",
+      "label_ja": "NHK 大統領「111人死亡・87人けが」",
+      "url": "https://www3.nhk.or.jp/news/",
+      "tier": "media",
+      "label_es": "NHK: el Presidente reporta 111 muertos y 87 heridos (en japonés)"
+    },
+    {
+      "label_en": "Nikkei - M7.4 earthquake in western Colombia (Japanese)",
+      "label_ja": "日本経済新聞 コロンビア西部でM7.4",
+      "url": "https://www.nikkei.com/article/DGXZQOGN108V30Q6A810C2000000/",
+      "tier": "media",
+      "label_es": "Nikkei: sismo de M7.4 en el occidente de Colombia (en japonés)"
+    },
+    {
+      "label_en": "Jiji Press - M7.4 earthquake in Colombia (Japanese)",
+      "label_ja": "時事通信 コロンビアでM7.4",
+      "url": "https://www.jiji.com/jc/article?k=2026081000878&g=int",
+      "tier": "media",
+      "label_es": "Jiji Press: sismo de M7.4 en Colombia (en japonés)"
+    },
+    {
+      "label_en": "Save the Children - Children at risk after the earthquake",
+      "label_ja": "セーブ・ザ・チルドレン 声明",
+      "url": "https://www.savethechildren.org/us/about-us/media-and-news/2026-press-releases/children-at-risk-after-earthquake-strikes-colombia",
+      "tier": "media",
+      "label_es": "Save the Children: niñez en riesgo tras el terremoto"
+    },
+    {
+      "label_en": "Direct Relief - Mobilising medical aid",
+      "label_ja": "ダイレクト・リリーフ 医療支援",
+      "url": "https://www.directrelief.org/2026/08/colombia-earthquake-7-4-magnitude-direct-relief-response/",
+      "tier": "media",
+      "label_es": "Direct Relief: movilización de ayuda médica"
+    },
+    {
+      "label_en": "Americares - Colombia earthquake, August 2026",
+      "label_ja": "アメリケアズ 対応",
+      "url": "https://www.americares.org/crisis-alerts/colombia-earthquake-august-2026/",
+      "tier": "media",
+      "label_es": "Americares: terremoto de Colombia, agosto de 2026"
+    },
+    {
+      "label_en": "GLIDEnumber — EQ-2026-000146-COL (event identifier)",
+      "label_ja": "GLIDE番号 — EQ-2026-000146-COL（災害識別番号）",
+      "url": "https://glidenumber.net/",
+      "tier": "official",
+      "label_es": "GLIDEnumber — EQ-2026-000146-COL (identificador del evento)"
+    },
+    {
+      "label_en": "ADRC - Asian Disaster Reduction Center",
+      "label_ja": "アジア防災センター（ADRC）",
+      "url": "https://www.adrc.asia/",
+      "tier": "official",
+      "label_es": "ADRC: Centro Asiático para la Reducción de Desastres"
+    },
+    {
+      "label_en": "European Commission — EU support for Colombia, Copernicus activated",
+      "label_ja": "欧州委員会 コロンビア支援・コペルニクス発動",
+      "label_es": "Comisión Europea — apoyo de la UE a Colombia, Copernicus activado",
+      "url": "https://www.democrata.es/en/international/von-der-leyen-expresses-the-eu-s-support-for-colombia-and-activates-copernicus-after-the-earthquake/",
+      "tier": "media"
+    },
+    {
+      "label_en": "GEM Foundation — TREQ project (urban earthquake risk, Quito / Cali / Santiago de los Caballeros)",
+      "label_ja": "GEM財団 TREQプロジェクト（都市地震リスク：キト／カリ／サンティアゴ）",
+      "label_es": "Fundación GEM — proyecto TREQ (riesgo sísmico urbano: Quito / Cali / Santiago de los Caballeros)",
+      "url": "https://www.globalquakemodel.org/proj/treq",
+      "tier": "official"
+    },
+    {
+      "label_en": "GEM-TREQ — Evaluación de riesgo sísmico para Santiago de Cali (technical report D2.6.2)",
+      "label_ja": "GEM-TREQ カリ市地震リスク評価（技術報告 D2.6.2）",
+      "label_es": "GEM-TREQ — Evaluación de riesgo sísmico para Santiago de Cali (informe técnico D2.6.2)",
+      "url": "https://cloud-storage.globalquakemodel.org/public/wix-new-website/pdf-collections-wix/publications/TREQ%20deliverables/reports/TREQ_D262_Riesgo_Sismico_Cali_v1.00.pdf",
+      "tier": "official"
+    },
+    {
+      "label_en": "Understanding seismic risk in Santiago de Cali for its application in risk management (peer-reviewed, 2025)",
+      "label_ja": "査読論文：カリ市の地震リスク理解とリスク管理への応用（2025）",
+      "label_es": "Understanding seismic risk in Santiago de Cali for its application in risk management (revisado por pares, 2025)",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S2212420925003097",
+      "tier": "official"
+    },
+    {
+      "label_en": "SATIC — Cali's intelligent and community early warning system",
+      "label_ja": "SATIC カリ市の住民参加型早期警戒システム",
+      "label_es": "SATIC — Sistema de Alertas Tempranas Inteligentes y Comunitarias de Cali",
+      "url": "https://satic.cali.gov.co/satic",
+      "tier": "official"
+    },
+    {
+      "label_en": "Alcaldía de Santiago de Cali — disaster risk management",
+      "label_ja": "サンティアゴ・デ・カリ市 災害リスク管理",
+      "label_es": "Alcaldía de Santiago de Cali — gestión del riesgo",
+      "url": "https://www.cali.gov.co/gestiondelriesgo/",
+      "tier": "official"
+    },
+    {
+      "label_en": "UNGRD — Plan Nacional de Gestión del Riesgo de Desastres (PNGRD)",
+      "label_ja": "UNGRD 国家災害リスク管理計画（PNGRD）",
+      "label_es": "UNGRD — Plan Nacional de Gestión del Riesgo de Desastres (PNGRD)",
+      "url": "https://portal.gestiondelriesgo.gov.co/Paginas/Plan-Nacional-de-Gestion-del-Riesgo.aspx",
+      "tier": "official"
+    },
+    {
+      "label_en": "Decreto 1478 de 2022 — update of the PNGRD",
+      "label_ja": "2022年大統領令第1478号（PNGRD更新）",
+      "label_es": "Decreto 1478 de 2022 — actualización del PNGRD",
+      "url": "https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=191411",
+      "tier": "official"
+    },
+    {
+      "label_en": "EMSC-CSEM SeismicPortal — bulletin and FDSN event service",
+      "label_ja": "EMSC-CSEM SeismicPortal 地震速報・FDSNイベントサービス",
+      "label_es": "EMSC-CSEM SeismicPortal — boletín y servicio de eventos FDSN",
+      "url": "https://www.emsc-csem.org/",
+      "tier": "official"
+    },
+    {
+      "label_en": "SGC — seismic catalogue viewer (reviewed catalogue ends Feb 2018)",
+      "label_ja": "SGC 地震カタログ閲覧（精査済みは2018年2月まで）",
+      "label_es": "SGC — visor del catálogo sísmico (el catálogo revisado termina en feb 2018)",
+      "url": "https://catalogosismico.sgc.gov.co/visor/index.html",
+      "tier": "official"
+    },
+    {
+      "label_en": "El Tiempo — live updates, 11 August (Cali toll rises to 85)",
+      "label_ja": "El Tiempo 速報（8月11日、カリの死者85人に）",
+      "label_es": "El Tiempo — en vivo, 11 de agosto (Cali sube a 85 muertos)",
+      "url": "https://www.eltiempo.com/colombia/otras-ciudades/terremoto-en-colombia-de-7-4-en-vivo-el-comandante-del-ejercito-nacional-se-encuentra-en-choco-coordinando-las-labores-de-atencion-de-la-emergencia-3577491",
+      "tier": "media"
+    },
+    {
+      "label_en": "Asocapitales balance — 132 deaths, 570+ injured, by city",
+      "label_ja": "Asocapitales 集計：死者132人・負傷570人超（都市別）",
+      "label_es": "Balance de Asocapitales — 132 muertos, más de 570 heridos, por ciudades",
+      "url": "https://www.elespectador.com/colombia/mas-regiones/temblor-en-colombia-hoy-10-de-agosto-en-vivo-epicentro-y-reporte-de-afectaciones/",
+      "tier": "media"
+    },
+    {
+      "label_en": "Noticias Caracol — UNGRD balance: 182 deaths, 2,542 injured, 189 missing",
+      "label_ja": "Noticias Caracol UNGRD集計：死者182人・負傷2,542人・行方不明189人",
+      "label_es": "Noticias Caracol — balance de la UNGRD: 182 muertos, 2.542 heridos, 189 desaparecidos",
+      "url": "https://www.noticiascaracol.com/colombia/en-vivo-colombia-hoy-tras-terremoto-de-magnitud-7-4-continuan-las-labores-de-rescate-so35",
+      "tier": "media"
+    },
+    {
+      "label_en": "RPP — the President's 181 is 59 fewer than the regional data",
+      "label_ja": "RPP 大統領の181人は地方集計より59人少ない",
+      "label_es": "RPP — los 181 del Presidente son 59 menos que los datos regionales",
+      "url": "https://rpp.pe/mundo/colombia/abelardo-de-la-espriella-cifra-en-181-los-muertos-por-el-terremoto-59-menos-que-datos-regionales-noticia-1701022",
+      "tier": "media"
+    },
+    {
+      "label_en": "El Tiempo — 99 aftershocks and their magnitudes (SGC)",
+      "label_ja": "El Tiempo 余震99回とその規模（SGC）",
+      "label_es": "El Tiempo — 99 réplicas y sus magnitudes (SGC)",
+      "url": "https://www.eltiempo.com/colombia/otras-ciudades/cuantas-replicas-se-han-registrado-tras-el-terremoto-de-7-4-en-colombia-estas-son-todas-las-magnitudes-3577711",
+      "tier": "media"
+    },
+    {
+      "label_en": "Semana — SGC total: 103 aftershocks to 15:00 on 11 Aug",
+      "label_ja": "Semana SGC集計：8月11日15:00時点で余震103回",
+      "label_es": "Semana — total del SGC: 103 réplicas hasta las 15:00 del 11 de agosto",
+      "url": "https://www.semana.com/tecnologia/articulo/servicio-geologico-revela-el-numero-total-de-replicas-que-ha-habido-en-colombia-tras-fuerte-terremoto-que-estremecio-al-pais/202641/",
+      "tier": "media"
+    },
+    {
+      "label_en": "MOFA Japan — Foreign Minister Motegi's message on the earthquake in Colombia",
+      "label_ja": "外務省 コロンビア共和国における地震について（茂木外務大臣メッセージ）",
+      "label_es": "MOFA Japón — mensaje del Ministro Motegi sobre el sismo en Colombia",
+      "url": "https://www.mofa.go.jp/mofaj/la_c/sa/co/pageit_000001_00001.html",
+      "tier": "official"
+    },
+    {
+      "label_en": "MOFA Japan on X — post of 11 August",
+      "label_ja": "外務省（X）8月11日の投稿",
+      "label_es": "MOFA Japón en X — publicación del 11 de agosto",
+      "url": "https://x.com/MofaJapan_jp/status/2087155064855261537",
+      "tier": "official"
+    },
+    {
+      "label_en": "El Tiempo — list of countries that have offered assistance",
+      "label_ja": "El Tiempo 支援を申し出た国の一覧",
+      "label_es": "El Tiempo — lista de países que han ofrecido apoyo",
+      "url": "https://www.eltiempo.com/mundo/mas-regiones/la-comunidad-internacional-se-vuelca-en-ayudas-para-colombia-lista-de-paises-que-han-ofrecido-apoyo-tras-el-terremoto-de-magnitud-7-3577512",
+      "tier": "media"
+    },
+    {
+      "label_en": "UN in Colombia — earthquake information and updates",
+      "label_ja": "国連コロンビア 地震に関する情報と更新",
+      "label_es": "Naciones Unidas en Colombia — información y actualizaciones",
+      "url": "https://colombia.un.org/es/320793-informaci%C3%B3n-y-actualizaciones-sobre-el-terremoto-en-colombia",
+      "tier": "official"
+    },
+    {
+      "label_en": "UN News — the UN offers support to Colombia",
+      "label_ja": "国連ニュース 国連がコロンビアに支援を表明",
+      "label_es": "Noticias ONU — la ONU ofrece apoyo a Colombia",
+      "url": "https://news.un.org/es/story/2026/08/1541792",
+      "tier": "official"
+    },
+    {
+      "label_en": "“Colombia te busca” — citizen missing-persons platform",
+      "label_ja": "「Colombia te busca」市民による行方不明者プラットフォーム",
+      "label_es": "«Colombia te busca» — plataforma ciudadana de personas desaparecidas",
+      "url": "https://www.colombiatebusca.com/",
+      "tier": "media"
+    },
+    {
+      "label_en": "Asocapitales — earthquake missing-persons tool",
+      "label_ja": "Asocapitales 地震の行方不明者検索ツール",
+      "label_es": "Asocapitales — herramienta de personas desaparecidas",
+      "url": "https://www.asocapitales.co/terremoto-colombia.html",
+      "tier": "official"
+    },
+    {
+      "label_en": "Infobae — relief and subsidies announced on the Coffee Region tour",
+      "label_ja": "Infobae コーヒー地帯巡回で発表された救済措置と補助",
+      "label_es": "Infobae — alivios y subsidios anunciados en el recorrido por el Eje Cafetero",
+      "url": "https://www.infobae.com/colombia/2026/08/12/de-la-espriella-anuncio-alivios-y-subsidios-tras-emergencia-en-el-eje-cafetero-por-el-terremoto-detallo-plan-de-choque-para-educacion-y-vivienda/",
+      "tier": "media"
+    },
+    {
+      "label_en": "Pulzo — UNGRD damage and casualty report across 14 departments",
+      "label_ja": "Pulzo UNGRD による14県の被害・人的被害報告",
+      "label_es": "Pulzo — reporte de daños y víctimas de la UNGRD en 14 departamentos",
+      "url": "https://www.pulzo.com/nacion/terremoto-en-colombia-ungrd-reporta-danos-y-victimas-en-valle-del-cauca-y-risaralda-PP5272829A",
+      "tier": "media"
+    },
+    {
+      "label_en": "El Tiempo — SAR teams arriving from Israel, Ecuador, El Salvador and the US",
+      "label_ja": "El Tiempo イスラエル・エクアドル・エルサルバドル・米国から救助チーム到着",
+      "label_es": "El Tiempo — equipos de búsqueda y rescate de Israel, Ecuador, El Salvador y EE. UU.",
+      "url": "https://www.eltiempo.com/colombia/otras-ciudades/terremoto-en-colombia-hoy-12-de-agosto-ultimas-noticias-presidente-de-la-espriella-celebro-rescate-de-daniela-largo-tras-36-horas-bajo-los-escombros-3577781",
+      "tier": "media"
+    },
+    {
+      "label_en": "Asocapitales — 188 deaths and 1,677 injured in capital cities",
+      "label_ja": "Asocapitales 県都で死者188人・負傷1,677人",
+      "label_es": "Asocapitales — 188 fallecidos y 1.677 heridos en ciudades capitales",
+      "url": "https://www.asocapitales.co/actualidad/noticias/ciudades-seguras/terremoto-deja-188-fallecidos-y-1677-heridos-en-ciudades",
+      "tier": "official"
+    },
+    {
+      "label_en": "infolibre — at least 254 dead as the search continues",
+      "label_ja": "infolibre 捜索継続、死者少なくとも254人",
+      "label_es": "infolibre — al menos 254 muertos mientras continúa la búsqueda",
+      "url": "https://www.infolibre.es/internacional/terremoto-colombia-deja-254-muertos-continua-busqueda-escombros_1_2235003.html",
+      "tier": "media"
+    },
+    {
+      "label_en": "El Colombiano — 265 dead, 3,494 injured, 496 missing",
+      "label_ja": "El Colombiano 死者265人・負傷3,494人・行方不明496人",
+      "label_es": "El Colombiano — 265 muertos, 3.494 heridos, 496 desaparecidos",
+      "url": "https://www.elcolombiano.com/colombia/cifra-muertos-heridos-desaparecidos-por-terremoto-colombia-MK39884181",
+      "tier": "media"
+    },
+    {
+      "label_en": "El Tiempo — UNGRD balance of 13 August: 273 dead, 3,824 injured, 377 missing",
+      "label_ja": "El Tiempo 8月13日のUNGRD集計 死者273人・負傷3,824人・行方不明377人",
+      "label_es": "El Tiempo — balance de la UNGRD del 13 de agosto: 273 fallecidos, 3.824 heridos, 377 desaparecidos",
+      "url": "https://www.eltiempo.com/colombia/otras-ciudades/balance-oficial-de-la-ungrd-tras-terremoto-de-magnitud-7-4-en-colombia-273-fallecidos-3-824-heridos-y-377-desaparecidos-3578196",
+      "tier": "media"
+    },
+    {
+      "label_en": "El Tiempo — 40,753 families affected: UNGRD's new balance",
+      "label_ja": "El Tiempo 被災40,753世帯 UNGRDの新集計",
+      "label_es": "El Tiempo — 40.753 familias afectadas: nuevo balance de la UNGRD",
+      "url": "https://www.eltiempo.com/vida/40-753-familias-afectadas-y-273-muertos-ungrd-entrega-nuevo-balance-del-terremoto-en-colombia-3578185",
+      "tier": "media"
+    },
+    {
+      "label_en": "El Tiempo — M4.2 aftershock at San José del Palmar, 13 August",
+      "label_ja": "El Tiempo 8月13日 サンホセ・デル・パルマルでM4.2の余震",
+      "label_es": "El Tiempo — réplica de M4,2 en San José del Palmar, 13 de agosto",
+      "url": "https://www.eltiempo.com/colombia/otras-ciudades/nuevo-temblor-de-magnitud-4-2-se-registro-en-san-jose-del-palmar-choco-en-la-manana-de-este-jueves-13-de-agosto-3578131",
+      "tier": "media"
+    },
+    {
+      "label_en": "Infobae — Colombia to receive rescue teams from the US, Israel, Ecuador and El Salvador",
+      "label_ja": "Infobae 米国・イスラエル・エクアドル・エルサルバドルの救助チームを受け入れ",
+      "label_es": "Infobae — Colombia recibirá equipos de rescate de EE. UU., Israel, Ecuador y El Salvador",
+      "url": "https://www.infobae.com/colombia/2026/08/13/colombia-recibira-equipos-de-rescate-de-ee-uu-israel-ecuador-y-el-salvador-por-terremoto/",
+      "tier": "media"
+    },
+    {
+      "label_en": "El Tiempo — UNGRD balance of 14 August: 287 dead, 3,975 injured, 378 missing",
+      "label_ja": "El Tiempo 8月14日のUNGRD集計 死者287人・負傷3,975人・行方不明378人",
+      "label_es": "El Tiempo — balance de la UNGRD del 14 de agosto: 287 fallecidos, 3.975 heridos, 378 desaparecidos",
+      "url": "https://www.eltiempo.com/colombia/otras-ciudades/balance-oficial-de-la-ungrd-tras-terremoto-de-magnitud-7-4-en-colombia-287-fallecidos-3-975-heridos-y-378-desaparecidos-3578445",
+      "tier": "media"
+    },
+    {
+      "label_en": "Infobae — live: the toll rises to 288, more than 4,000 injured and 202 missing",
+      "label_ja": "Infobae ライブ 死者288人・負傷4,000人超・行方不明202人",
+      "label_es": "Infobae — en vivo: los muertos aumentan a 288, más de 4.000 heridos y 202 desaparecidos",
+      "url": "https://www.infobae.com/colombia/2026/08/14/temblor-de-74-en-colombia-el-10-de-agosto-se-actualizo-el-numero-de-fallecidos-en-todo-el-pais/",
+      "tier": "media"
+    },
+    {
+      "label_en": "Infobae — international assistance grows: India, Norway, Sweden and Spain",
+      "label_ja": "Infobae 国際支援の拡大 インド・ノルウェー・スウェーデン・スペイン",
+      "label_es": "Infobae — aumenta la ayuda internacional: India, Noruega, Suecia y España",
+      "url": "https://www.infobae.com/colombia/2026/08/14/aumenta-la-ayuda-internacional-a-colombia-tras-el-terremoto-de-74-india-envia-20-toneladas-y-noruega-suecia-y-espana-anuncian-nuevos-recursos/",
+      "tier": "media"
+    },
+    {
+      "label_en": "El Heraldo — Italy, India, Spain, Chile and the World Bank among those sending aid",
+      "label_ja": "El Heraldo 支援を送った国・機関（イタリア、インド、スペイン、チリ、世界銀行ほか）",
+      "label_es": "El Heraldo — Italia, India, España, Chile y el Banco Mundial, entre quienes han enviado ayudas",
+      "url": "https://www.elheraldo.co/colombia/2026/08/14/italia-india-espana-chile-y-banco-mundial-entre-los-paises-y-organismos-que-han-enviado-ayudas-a-colombia-por-el-terremoto/",
+      "tier": "media"
+    },
+    {
+      "label_en": "Japanese Red Cross Society — Colombian Red Cross response to the M7.4 earthquake",
+      "label_ja": "日本赤十字社 コロンビア赤十字社の救援活動（M7.4地震）",
+      "label_es": "Cruz Roja Japonesa — respuesta de la Cruz Roja Colombiana al sismo M7,4",
+      "url": "https://www.jrc.or.jp/international/news/2026/0812_054987.html",
+      "tier": "official"
+    },
+    {
+      "label_en": "El Tiempo — why Colombia did not need foreign rescuers: 23 national USAR teams",
+      "label_ja": "El Tiempo なぜ海外の救助隊を必要としなかったのか 国内23チーム",
+      "label_es": "El Tiempo — por qué Colombia no necesitó rescatistas extranjeros: 23 equipos nacionales",
+      "url": "https://www.eltiempo.com/vida/medio-ambiente/por-que-colombia-no-necesito-rescatistas-extranjeros-tras-el-terremoto-el-pais-cuenta-con-23-equipos-con-personal-que-hace-parte-de-la-elite-global-3577677",
+      "tier": "media"
+    },
+    {
+      "label_en": "El Tiempo — SGC: 184 aftershocks since 10 August (14 Aug)",
+      "label_ja": "El Tiempo SGC 8月10日以降の余震184回（8月14日）",
+      "label_es": "El Tiempo — SGC: 184 réplicas desde el 10 de agosto (14 de agosto)",
+      "url": "https://www.eltiempo.com/amp/vida/medio-ambiente/terremoto-en-colombia-desde-el-sismo-del-10-de-agosto-se-han-registrado-184-replicas-reporta-este-viernes-14-el-servicio-geologico-colombiano-3578360",
+      "tier": "media"
+    },
+    {
+      "label_en": "CNN en Español — live coverage of rescue and recovery",
+      "label_ja": "CNNスペイン語 救助・復旧のライブ報道",
+      "label_es": "CNN en Español — cobertura en vivo de rescates y recuperación",
+      "url": "https://cnnespanol.cnn.com/2026/08/12/colombia/live-news/terremoto-en-vivo-muertos-videos-rescates-orix",
+      "tier": "media"
+    },
+    {
+      "label_en": "El Tiempo — UNGRD balance of 15 August: 294 dead, 3,935 injured, 320 missing, 353 rescued",
+      "label_ja": "El Tiempo 8月15日のUNGRD集計 死者294人・負傷3,935人・行方不明320人・救出353人",
+      "label_es": "El Tiempo — balance de la UNGRD del 15 de agosto: 294 fallecidos, 3.935 heridos, 320 desaparecidos y 353 rescatados",
+      "url": "https://www.eltiempo.com/colombia/otras-ciudades/balance-oficial-de-la-ungrd-este-15-de-agosto-tras-terremoto-de-7-4-en-colombia-294-fallecidos-3-935-heridos-320-desaparecidos-y-353-rescatados-3578602",
+      "tier": "media"
+    },
+    {
+      "label_en": "Semana — 294 dead and 81,506 homes damaged, official figures",
+      "label_ja": "Semana 死者294人・住宅損壊81,506棟（公式数値）",
+      "label_es": "Semana — 294 fallecidos y 81.506 viviendas averiadas, cifras oficiales",
+      "url": "https://www.semana.com/nacion/articulo/ascienden-a-294-los-fallecidos-del-terremoto-del-10-de-agosto-y-van-81506-viviendas-averiadas-segun-cifras-oficiales/202627/",
+      "tier": "media"
+    },
+    {
+      "label_en": "El Heraldo — Decree 1172: three days of national mourning",
+      "label_ja": "El Heraldo 大統領令1172号 3日間の国家服喪",
+      "label_es": "El Heraldo — Decreto 1172: tres días de duelo nacional",
+      "url": "https://www.elheraldo.co/colombia/2026/08/12/presidente-de-la-espriella-decreta-tres-dias-de-duelo-nacional-por-victimas-del-terremoto/",
+      "tier": "media"
+    },
+    {
+      "label_en": "El Tiempo — the governor of Chocó ends the department's search-and-rescue phase",
+      "label_ja": "El Tiempo チョコ県知事が県の捜索救助段階の終了を表明",
+      "label_es": "El Tiempo — la gobernadora del Chocó da por finalizada la fase de búsqueda y rescate",
+      "url": "https://www.eltiempo.com/colombia/otras-ciudades/gobernadora-del-choco-dio-por-finalizada-la-fase-de-busqueda-y-rescate-en-el-departamento-tras-terremoto-de-7-4-en-colombia-ya-no-buscamos-a-nadie-3578022",
+      "tier": "media"
+    },
+    {
+      "label_en": "El Tiempo — UNGRD balance of 16 August: 289 dead, 4,187 injured, 143 missing",
+      "label_ja": "El Tiempo 8月16日のUNGRD集計 死者289人・負傷4,187人・行方不明143人",
+      "label_es": "El Tiempo — balance de la UNGRD del 16 de agosto: 289 fallecidos, 4.187 heridos y 143 desaparecidos",
+      "url": "https://www.eltiempo.com/colombia/otras-ciudades/balance-oficial-de-la-ungrd-este-16-de-agosto-tras-terremoto-de-7-4-en-colombia-289-fallecidos-4-187-heridos-y-143-desaparecidos-3578742",
+      "tier": "media"
+    },
+    {
+      "label_en": "RTVC Noticias — 289 dead, 143 missing and more than 185,000 affected",
+      "label_ja": "RTVC 死者289人・行方不明143人・被災18万5千人超",
+      "label_es": "RTVC Noticias — 289 fallecidos, 143 desaparecidos y más de 185.000 afectados",
+      "url": "https://www.rtvcnoticias.com/actualidad/terremoto-deja-289-fallecidos-143-desaparecidos-y-mas-de-185000-afectados-en-colombia",
+      "tier": "media"
+    },
+    {
+      "label_en": "Radio Santa Fe — UNGRD reduces the death and missing figures",
+      "label_ja": "Radio Santa Fe UNGRDが死者・行方不明の数値を下方修正",
+      "label_es": "Radio Santa Fe — la UNGRD reduce las cifras de fallecidos y desaparecidos",
+      "url": "https://www.radiosantafe.com/2026/08/16/ungrd-reduce-a-289-cifra-de-fallecidos-y-a-143-la-de-personas-desaparecidas-por-el-terremoto/",
+      "tier": "media"
+    },
+    {
+      "label_en": "Semana — UNGRD balance of 16 August evening: 287 dead, 4,147 injured",
+      "label_ja": "Semana 8月16日夕方のUNGRD集計 死者287人・負傷4,147人",
+      "label_es": "Semana — balance de la UNGRD del 16 de agosto por la tarde: 287 muertos, 4.147 heridos",
+      "url": "https://www.semana.com/nacion/articulo/terremoto-en-colombia-reportan-287-muertos-y-4147-heridos-en-nuevo-balance-de-la-ungrd/202615/",
+      "tier": "media"
+    },
+    {
+      "label_en": "La Tercera — Colombia lowers the death toll and raises the injured count",
+      "label_ja": "La Tercera 死者を下方修正し負傷者を上方修正",
+      "label_es": "La Tercera — Colombia rebaja los muertos y eleva los heridos",
+      "url": "https://www.latercera.com/mundo/noticia/colombia-rebaja-a-casi-287-los-muertos-y-eleva-a-cerca-de-4150-los-heridos-por-el-terremoto/",
+      "tier": "media"
+    }
+  ],
+  "source_policy_en": "Source hierarchy: official > media > TBC. Government and scientific-agency figures are used as primary; media reports are used only where official figures are not yet published and are labelled as such. Items still being verified are marked TBC. Preliminary figures are never replaced by larger unverified numbers.",
+  "source_policy_ja": "情報源の階層は「公式 > 報道 > 確認中」。政府・科学機関の数値を主とし、公式値が未公表の項目に限り報道を出典明示のうえ用いる。確認中の項目はTBCと表示する。速報値を、未確認のより大きな数値で安易に置き換えることはしない。",
+  "images": {
+    "locator_world": "images/locator_world.png",
+    "locator_region": "images/locator_region.png",
+    "locator_epicentre": "images/locator_epicentre.png",
+    "slab_section": "images/slab_section.png",
+    "mmi_distance": "images/mmi_distance.png",
+    "sgc_shakemap": "images/sgc_shakemap.png",
+    "beachball": "images/beachball_manual.png",
+    "emsr916": "images/emsr916_manual.jpg",
+    "usgs_pager": "images/usgs_pager_manual.jpg",
+    "sgc_hazard": "images/sgc_hazard_manual.jpg",
+    "gem_treq_cali": "images/gem_treq_cali_manual.jpg"
+  },
+  "photos": [],
+  "deaths_by_area_note_es": "La cifra nacional es 287 en el corte de las 18:30 del 16 de agosto, tras 289 en el corte de las 07:30 de esa mañana y 294 el 15. La serie fue 273 (13 de agosto), 281, 285, 287, 288, 294, 289 y ahora 287. La UNGRD atribuye el movimiento a la verificación y consolidación de las cifras reportadas desde los territorios, algunas enviadas antes de ser comprobadas. Medicina Legal había recibido 250 cuerpos, con 227 reconocidos, en la lectura del 13 de agosto. Cite 287 con su hora de corte como la cifra oficial nacional. El gráfico corresponde al desglose presidencial del 11 de agosto (181) y muestra la forma de la distribución -muertes concentradas en Risaralda (Pereira) y Valle del Cauca (Cali)-, no un conteo actual. Cali también se reporta de tres maneras: 97 en el desglose del Presidente, 85 por el alcalde el 11 de agosto y 69 en el propio reporte municipal, que no indica hora de corte.",
+  "exposure_note_es": "Estimaciones de exposición del PAGER (versión 5) del USGS. Unos 10,5 millones de personas quedaron expuestas a sacudimiento fuerte o muy fuerte (MMI VI-VII) y unos 34 millones a MMI IV o superior en cuatro países. Son estimaciones de modelo.",
+  "source_policy_es": "Jerarquía de fuentes: oficial > prensa > por confirmar. Las cifras del Gobierno y de las entidades científicas se usan como fuente primaria; la información de prensa se emplea únicamente cuando aún no hay cifras oficiales y se identifica como tal. Los elementos en verificación se marcan como «por confirmar». Las cifras preliminares nunca se sustituyen por números mayores sin verificar.",
+  "intensity_map": {
+    "title_en": "SGC macroseismic intensity map (ShakeMap)",
+    "title_ja": "SGC 体感震度図（ShakeMap）",
+    "title_es": "Mapa de intensidades macrosísmicas del SGC (ShakeMap)",
+    "url": "https://www.sgc.gov.co/detallesismo/SGC2026pqqmro/mmi",
+    "stamp_en": "ShakeMap: San José del Palmar - Chocó, Colombia · 10 Aug 2026 12:34:29 UTC · M7.4 · N5.04 W76.34 · depth 96.0 km · ID SGC2026pqqmro · Version 1, processed 2026-08-10T13:12:28Z · scale after Worden et al. (2012)",
+    "stamp_ja": "ShakeMap：チョコ県サンホセ・デル・パルマル／2026年8月10日 12:34:29 UTC／M7.4／北緯5.04・西経76.34／深さ96.0km／ID SGC2026pqqmro／バージョン1（2026-08-10T13:12:28Z処理）／震度階はWorden et al. (2012)",
+    "stamp_es": "ShakeMap: San José del Palmar - Chocó, Colombia · 10 ago. 2026 12:34:29 UTC · M7.4 · N5.04 W76.34 · profundidad 96,0 km · ID SGC2026pqqmro · Versión 1, procesado 2026-08-10T13:12:28Z · escala según Worden et al. (2012)",
+    "text_en": "The SGC map shows the strongest band (MMI VII, 'Muy Fuerte') over the epicentral area of Chocó and along the inter-Andean corridor through Risaralda, Caldas, Quindío and northern Valle del Cauca — the belt in which the collapses in Pereira, Manizales, Armenia and Cartago occurred. Intensity falls away eastward: Medellín and Cali sit in the moderate-to-strong bands and Bogotá, 241 km from the epicentre, in a low one. The elongated pattern along the valleys, rather than a compact circle around the epicentre, is the signature of a 96-110 km-deep source combined with soft valley sediments.",
+    "text_ja": "SGCの図では、最も強い帯（MMI VII「Muy Fuerte」）が震央のあるチョコ県から、リサラルダ・カルダス・キンディオ・バジェ北部を貫くアンデス間の回廊に沿って広がる。ペレイラ、マニサレス、アルメニア、カルタゴでの建物倒壊はこの帯の中で起きた。震度は東へ向かって低下し、メデジンとカリは中〜強の帯、震央から241kmのボゴタは弱い帯に位置する。震央を中心とする同心円ではなく谷筋に沿って伸びる分布は、深さ96〜110kmの震源と軟弱な盆地堆積層の組み合わせによる特徴である。",
+    "text_es": "El mapa del SGC muestra la banda más fuerte (MMI VII, «Muy Fuerte») sobre el área epicentral del Chocó y a lo largo del corredor interandino que atraviesa Risaralda, Caldas, Quindío y el norte del Valle del Cauca: la franja en la que ocurrieron los colapsos de Pereira, Manizales, Armenia y Cartago. La intensidad decae hacia el oriente: Medellín y Cali quedan en las bandas moderada y fuerte, y Bogotá, a 241 km del epicentro, en una baja. El patrón alargado a lo largo de los valles, en lugar de un círculo compacto alrededor del epicentro, es la firma de una fuente a 96-110 km de profundidad combinada con sedimentos blandos de valle.",
+    "scale_header_en": [
+      "MMI",
+      "Perceived shaking",
+      "Potential damage",
+      "PGA (%g)",
+      "PGV (cm/s)"
+    ],
+    "scale_header_ja": [
+      "震度",
+      "体感",
+      "被害の程度",
+      "PGA（%g）",
+      "PGV（cm/s）"
+    ],
+    "scale_header_es": [
+      "MMI",
+      "Movimiento",
+      "Daño",
+      "PGA (%g)",
+      "PGV (cm/s)"
+    ],
+    "scale": [
+      {
+        "mmi": "I",
+        "shake_en": "Not felt",
+        "shake_ja": "無感",
+        "shake_es": "No sentido",
+        "dmg_en": "None",
+        "dmg_ja": "なし",
+        "dmg_es": "Ninguno",
+        "pga": "<0.0464",
+        "pgv": "<0.0215"
+      },
+      {
+        "mmi": "II-III",
+        "shake_en": "Weak",
+        "shake_ja": "弱い",
+        "shake_es": "Débil",
+        "dmg_en": "None",
+        "dmg_ja": "なし",
+        "dmg_es": "Ninguno",
+        "pga": "0.297",
+        "pgv": "0.135"
+      },
+      {
+        "mmi": "IV",
+        "shake_en": "Light",
+        "shake_ja": "やや弱い",
+        "shake_es": "Ligero",
+        "dmg_en": "None",
+        "dmg_ja": "なし",
+        "dmg_es": "Ninguno",
+        "pga": "2.76",
+        "pgv": "1.41"
+      },
+      {
+        "mmi": "V",
+        "shake_en": "Moderate",
+        "shake_ja": "中程度",
+        "shake_es": "Moderado",
+        "dmg_en": "Very light",
+        "dmg_ja": "ごく軽微",
+        "dmg_es": "Muy poco",
+        "pga": "6.2",
+        "pgv": "4.65"
+      },
+      {
+        "mmi": "VI",
+        "shake_en": "Strong",
+        "shake_ja": "強い",
+        "shake_es": "Fuerte",
+        "dmg_en": "Light",
+        "dmg_ja": "軽微",
+        "dmg_es": "Poco",
+        "pga": "11.5",
+        "pgv": "9.64"
+      },
+      {
+        "mmi": "VII",
+        "shake_en": "Very strong",
+        "shake_ja": "非常に強い",
+        "shake_es": "Muy fuerte",
+        "dmg_en": "Moderate",
+        "dmg_ja": "中程度",
+        "dmg_es": "Moderado",
+        "pga": "21.5",
+        "pgv": "20"
+      },
+      {
+        "mmi": "VIII",
+        "shake_en": "Severe",
+        "shake_ja": "甚大",
+        "shake_es": "Severo",
+        "dmg_en": "Moderate/heavy",
+        "dmg_ja": "中〜大",
+        "dmg_es": "Moderado/mucho",
+        "pga": "40.1",
+        "pgv": "41.4"
+      },
+      {
+        "mmi": "IX",
+        "shake_en": "Violent",
+        "shake_ja": "激烈",
+        "shake_es": "Violento",
+        "dmg_en": "Heavy",
+        "dmg_ja": "大",
+        "dmg_es": "Mucho",
+        "pga": "74.7",
+        "pgv": "85.8"
+      },
+      {
+        "mmi": "X+",
+        "shake_en": "Extreme",
+        "shake_ja": "極めて激烈",
+        "shake_es": "Extremo",
+        "dmg_en": "Very heavy",
+        "dmg_ja": "甚大",
+        "dmg_es": "Cuantioso",
+        "pga": ">139",
+        "pgv": ">178"
+      }
+    ]
+  },
+  "param_note_en": "USGS and SGC agree on size. The SGC revised its solution at 14:20 UTC on 11 August to 103 km with 119 stations and 208 phases; the revised location is 17 km from the USGS one and their depths differ by 7 km, so the two have converged as more stations were read. Epicentral distances in this report are measured from the USGS location. SGC bulletins remain subject to change.",
+  "param_note_ja": "規模はUSGSとSGCで一致。SGCは8月11日14:20 UTCに解を改訂し、深さ103km・119観測点・208フェーズとした。改訂後の位置はUSGSと17km、深さは7kmの差であり、観測点数の増加に伴い両解は近づいた。本報告の震央距離はUSGSの震源位置から計算している。SGCの速報値は今後も変更されうる。",
+  "param_note_es": "El USGS y el SGC coinciden en el tamaño. El SGC revisó su solución a las 14:20 UTC del 11 de agosto a 103 km con 119 estaciones y 208 fases; la localización revisada está a 17 km de la del USGS y sus profundidades difieren en 7 km, de modo que ambas han convergido al leerse más estaciones. Las distancias epicentrales de este informe se miden desde la localización del USGS. Los boletines del SGC siguen sujetos a cambios.",
+  "mechanism_fig": {
+    "caption_en": "Focal mechanism (beachball)",
+    "caption_ja": "発震機構解（ビーチボール）",
+    "caption_es": "Mecanismo focal (beachball)"
+  },
+  "emsr916": {
+    "title_en": "Copernicus EMS Rapid Mapping — EMSR916",
+    "title_ja": "コペルニクスEMS ラピッドマッピング — EMSR916",
+    "title_es": "Cartografía rápida del Copernicus EMS — EMSR916",
+    "url": "https://mapping.emergency.copernicus.eu/activations/EMSR916/",
+    "reason_en": "“On the 10 August 2026 at 12:30 UTC, a major earthquake with a magnitude of 7.4 is reported to have affected western and central Colombia, with the epicentre near San José del Palmar. The event has caused significant damage in several cities, including Quibdó, Pereira, Manizales and Cali, with collapsed buildings reported. Copernicus EMS Rapid Mapping is requested to provide earthquake damage assessment emergency mapping.”",
+    "reason_ja": "「2026年8月10日12:30 UTC、マグニチュード7.4の大地震がコロンビア西部および中部に影響を与えたと報告されている。震央はサンホセ・デル・パルマル付近。キブド、ペレイラ、マニサレス、カリを含む複数の都市で著しい被害が生じ、建物の倒壊が報告されている。コペルニクスEMSのラピッドマッピングに対し、地震被害評価の緊急マッピングの提供が要請された。」",
+    "reason_es": "«El 10 de agosto de 2026 a las 12:30 UTC, se reporta un sismo mayor de magnitud 7.4 que afectó el occidente y el centro de Colombia, con epicentro cerca de San José del Palmar. El evento ha causado daños significativos en varias ciudades, entre ellas Quibdó, Pereira, Manizales y Cali, con reportes de edificios colapsados. Se solicita a la cartografía rápida del Copernicus EMS proporcionar cartografía de emergencia para la evaluación de daños por el sismo.»",
+    "note_en": "Rapid Mapping delivers reference and grading products over selected areas of interest, not nationwide coverage. Products are published on the activation page as they are produced and are free to use.",
+    "note_ja": "ラピッドマッピングは、全土ではなく選定された関心領域（AOI）について、参照図と被害グレーディング図を提供する。成果物は作成され次第、発動ページで公開され、自由に利用できる。",
+    "note_es": "La cartografía rápida entrega productos de referencia y de gradación sobre áreas de interés seleccionadas, no cobertura nacional. Los productos se publican en la página de la activación a medida que se producen y son de uso libre.",
+    "rows": [
+      {
+        "k_en": "Activation",
+        "k_ja": "発動番号",
+        "k_es": "Activación",
+        "v": "EMSR916 — Earthquake in Colombia"
+      },
+      {
+        "k_en": "Event time",
+        "k_ja": "事象発生",
+        "k_es": "Hora del evento",
+        "v": "10/08/2026 afternoon (UTC)"
+      },
+      {
+        "k_en": "Activation time",
+        "k_ja": "発動時刻",
+        "k_es": "Hora de activación",
+        "v": "10/08/2026, 17:13 (UTC) = 12:13 COT"
+      },
+      {
+        "k_en": "Event type",
+        "k_ja": "事象種別",
+        "k_es": "Tipo de evento",
+        "v": "Earthquake / Ground shaking"
+      },
+      {
+        "k_en": "Affected country",
+        "k_ja": "対象国",
+        "k_es": "País afectado",
+        "v": "Colombia"
+      },
+      {
+        "k_en": "Authorised user",
+        "k_ja": "要請者",
+        "k_es": "Usuario autorizado",
+        "v": "EC Services | DG ECHO"
+      },
+      {
+        "k_en": "Service output",
+        "k_ja": "成果物",
+        "k_es": "Producto del servicio",
+        "v": "3 AOIs · 3 products · 0 maps"
+      },
+      {
+        "k_en": "Status",
+        "k_ja": "状況",
+        "k_es": "Estado",
+        "v": "ONGOING"
+      }
+    ]
+  },
+  "pre_event": {
+    "intro_en": "Cali did not lack a risk assessment. Between 2020 and 2022 the city built a full urban earthquake risk model with the GEM Foundation under the USAID-supported TREQ project, one of three pilot cities alongside Quito and Santiago de los Caballeros. The modelled scenario is a shallow local one — magnitude 6.5 at 10 km depth on the Dagua-Calima fault — and its estimates dwarf what the city actually experienced on 10 August 2026.",
+    "intro_ja": "カリにリスク評価がなかったわけではない。同市は2020〜2022年に、USAIDが支援するTREQプロジェクトの下でGEM財団とともに都市の地震リスクモデルを構築した。キト、サンティアゴ・デ・ロス・カバジェロスと並ぶ3つのパイロット都市の一つである。想定シナリオは浅い直下型（ダグア・カリマ断層、M6.5、深さ10km）で、その推計値は2026年8月10日に実際に生じた被害をはるかに上回る。",
+    "intro_es": "A Cali no le faltaba una evaluación del riesgo. Entre 2020 y 2022 la ciudad construyó un modelo completo de riesgo sísmico urbano con la Fundación GEM en el marco del proyecto TREQ, apoyado por USAID, como una de las tres ciudades piloto junto con Quito y Santiago de los Caballeros. El escenario modelado es local y somero —magnitud 6.5 a 10 km de profundidad en la falla Dagua-Calima— y sus estimaciones superan con mucho lo que la ciudad vivió el 10 de agosto de 2026.",
+    "rows": [
+      {
+        "k_en": "Modelled scenario",
+        "k_ja": "想定シナリオ",
+        "k_es": "Escenario modelado",
+        "v_en": "M6.5, 10 km depth, Dagua-Calima fault, urban area",
+        "v_ja": "M6.5・深さ10km、ダグア・カリマ断層、市街地",
+        "v_es": "M6.5, 10 km de profundidad, falla Dagua-Calima, área urbana"
+      },
+      {
+        "k_en": "Population exposed",
+        "k_ja": "曝露人口",
+        "k_es": "Población expuesta",
+        "v_en": "approx. 2,300,000",
+        "v_ja": "約230万人",
+        "v_es": "aprox. 2.300.000"
+      },
+      {
+        "k_en": "Estimated deaths",
+        "k_ja": "推定死者",
+        "k_es": "Muertos estimados",
+        "v_en": "approx. 1,200",
+        "v_ja": "約1,200人",
+        "v_es": "aprox. 1.200"
+      },
+      {
+        "k_en": "Seriously injured",
+        "k_ja": "重傷者",
+        "k_es": "Heridos graves",
+        "v_en": "approx. 36,300",
+        "v_ja": "約36,300人",
+        "v_es": "aprox. 36.300"
+      },
+      {
+        "k_en": "Displaced",
+        "k_ja": "住まいを失う人",
+        "k_es": "Desplazados",
+        "v_en": "approx. 181,000",
+        "v_ja": "約181,000人",
+        "v_es": "aprox. 181.000"
+      },
+      {
+        "k_en": "Buildings collapsed",
+        "k_ja": "倒壊建物",
+        "k_es": "Edificaciones colapsadas",
+        "v_en": "approx. 1,800 of 348,000 (0.5%)",
+        "v_ja": "348,000棟のうち約1,800棟（0.5%）",
+        "v_es": "aprox. 1.800 de 348.000 (0,5 %)"
+      },
+      {
+        "k_en": "Residual risk",
+        "k_ja": "残余リスク",
+        "k_es": "Riesgo residual",
+        "v_en": "assessed at about 40% after existing measures",
+        "v_ja": "既往対策を織り込んで約40%と評価",
+        "v_es": "evaluado en cerca del 40 % tras las medidas existentes"
+      }
+    ],
+    "measures_title_en": "What the city had already prioritised",
+    "measures_title_ja": "市が既に優先課題としていたこと",
+    "measures_title_es": "Lo que la ciudad ya había priorizado",
+    "measures": [
+      {
+        "en": "Seismic vulnerability studies of indispensable buildings — hospitals, schools, fire stations — to the NSR-10 code (budgeted at about USD 1.7 million, short term).",
+        "ja": "重要建築物（病院・学校・消防署）の耐震脆弱性調査を耐震基準NSR-10に沿って実施（約170万米ドル、短期）。",
+        "es": "Estudios de vulnerabilidad sísmica de edificaciones indispensables —hospitales, colegios, estaciones de bomberos— conforme a la NSR-10 (presupuestado en unos 1,7 millones de dólares, corto plazo)."
+      },
+      {
+        "en": "Structural retrofitting of indispensable buildings and of basic-service infrastructure, to keep essential services running after an earthquake.",
+        "ja": "地震後も基幹サービスを維持するため、重要建築物と基礎的サービス基盤の構造補強。",
+        "es": "Reforzamiento estructural de edificaciones indispensables y de la infraestructura de servicios básicos, para mantener los servicios esenciales tras un sismo."
+      },
+      {
+        "en": "Seismic vulnerability assessment of the EMCALI water, sewerage and power networks and of the city gas network.",
+        "ja": "EMCALIの上下水道・電力網および都市ガス網の耐震脆弱性評価。",
+        "es": "Evaluación de la vulnerabilidad sísmica de las redes de acueducto, alcantarillado y energía de EMCALI y de la red de gas de la ciudad."
+      },
+      {
+        "en": "Updating the local soil-response model and the seismic microzonation, in force since INGEOMINAS/DAGMA (2005) and adopted by Decree 411.0.20.0158 of 2014 for structural design.",
+        "ja": "地盤応答モデルと地震動微地形区分の更新。微地形区分はINGEOMINAS/DAGMA（2005年）以来運用され、2014年市令第411.0.20.0158号により構造設計に適用されている。",
+        "es": "Actualización del modelo de respuesta local del suelo y de la microzonificación sísmica, vigente desde INGEOMINAS/DAGMA (2005) y adoptada por el Decreto 411.0.20.0158 de 2014 para el diseño estructural."
+      },
+      {
+        "en": "Maintaining and extending the Cali accelerograph network (RAC) and its interoperability with the SGC national network.",
+        "ja": "カリ強震観測網（RAC）の維持・拡充と、SGCの国家観測網との相互運用性の確保。",
+        "es": "Mantenimiento y ampliación de la Red de Acelerógrafos de Cali (RAC) y de su interoperabilidad con la red nacional del SGC."
+      },
+      {
+        "en": "Insuring public infrastructure against seismic risk, and retrofitting low-income housing through subsidies and safe self-build programmes.",
+        "ja": "公共インフラの地震保険付保と、補助金・安全な自力建設プログラムによる低所得層住宅の補強。",
+        "es": "Aseguramiento de la infraestructura pública ante el riesgo sísmico y reforzamiento de viviendas de bajos ingresos mediante subsidios y programas de autoconstrucción segura."
+      },
+      {
+        "en": "Financing model for the priority measures: local government 30-50%, national disaster fund (FNGRD/UNGRD) 30-50%, international partners including JICA, the GEM Foundation and the IDB about 20%.",
+        "ja": "優先施策の資金構成：地方政府30〜50%、国家防災基金（FNGRD／UNGRD）30〜50%、JICA・GEM財団・米州開発銀行などの国際パートナー約20%。",
+        "es": "Modelo de financiación de las medidas priorizadas: gobierno local 30-50 %, fondo nacional (FNGRD/UNGRD) 30-50 %, socios internacionales —entre ellos JICA, la Fundación GEM y el BID— cerca del 20 %."
+      }
+    ],
+    "compare_title_en": "The 2026 earthquake was not this scenario",
+    "compare_title_ja": "2026年の地震はこのシナリオではない",
+    "compare_title_es": "El sismo de 2026 no fue este escenario",
+    "compare_en": "The 10 August event was larger in magnitude (M7.4) but 110 km deep and 158 km from Cali, giving the city MMI VI rather than the near-field shaking of the modelled M6.5. Cali recorded 27 deaths and 25-30 collapsed structures — two orders of magnitude below the scenario. What it did test is exactly the weakness the local plan had flagged: about 30% of the University Hospital collapsed and seven health institutions closed. The city's own worst case remains ahead of it, and the case for retrofitting indispensable buildings is now evidential rather than theoretical.",
+    "compare_ja": "8月10日の地震は規模こそ大きい（M7.4）が、深さ110km・カリから158kmであり、市内の揺れは想定M6.5の近距離の揺れではなくMMI VIにとどまった。カリの死者は27人、倒壊は25〜30棟で、シナリオより2桁小さい。一方でこの地震が実際に試したのは、地域計画が指摘していた弱点そのものであった。大学病院の約3割が崩落し、医療7施設が閉鎖された。市にとっての最悪シナリオは依然として将来にあり、重要建築物の耐震補強の必要性は、理論ではなく実証の段階に入った。",
+    "compare_es": "El evento del 10 de agosto fue de mayor magnitud (M7.4) pero ocurrió a 110 km de profundidad y a 158 km de Cali, de modo que la ciudad experimentó MMI VI y no el sacudimiento de campo cercano del escenario M6.5 modelado. Cali registró 27 muertos y entre 25 y 30 estructuras colapsadas: dos órdenes de magnitud por debajo del escenario. Lo que sí puso a prueba fue justamente la debilidad que el plan local había señalado: cerca del 30 % del Hospital Universitario del Valle colapsó y siete instituciones de salud cerraron. El peor caso propio de la ciudad sigue por delante, y el argumento para reforzar las edificaciones indispensables es ahora empírico y no teórico.",
+    "credit_en": "Figures from the GEM-TREQ urban risk assessment for Santiago de Cali and from the city's local disaster risk management plan, as compiled by the Municipality of Santiago de Cali (Secretaría de Gestión del Riesgo de Emergencias y Desastres) for a JICA training course.",
+    "credit_ja": "数値は、サンティアゴ・デ・カリを対象としたGEM-TREQ都市リスク評価および同市の地域防災計画による。カリ市（災害リスク管理局）がJICA研修のために整理した資料に基づく。",
+    "credit_es": "Cifras tomadas de la evaluación de riesgo urbano GEM-TREQ para Santiago de Cali y del plan local de gestión del riesgo de la ciudad, recopiladas por la Alcaldía de Santiago de Cali (Secretaría de Gestión del Riesgo de Emergencias y Desastres) para un curso de formación de JICA.",
+    "profile_caption_en": "GEM-TREQ city profile for Cali: the M6.5 / 10 km Dagua-Calima scenario. 2.3 million people and 312,000 residential, 22,000 commercial, 5,300 industrial and 8,000 institutional buildings are exposed, with COP 220 trillion of exposed capital. The bars give, per comuna, the collapse index, fatalities, serious injuries, displaced people and economic losses; the histograms give the city totals with their modelled ranges.",
+    "profile_caption_ja": "GEM-TREQによるカリ市プロファイル（M6.5・深さ10km、ダグア・カリマ断層のシナリオ）。曝露は人口230万人、住宅31.2万棟・商業2.2万棟・工業5,300棟・公共8,000棟、曝露資本220兆コロンビアペソ。棒グラフはコムーナ別の倒壊率・死者・重傷者・住まいを失う人・経済損失、ヒストグラムは市全体の推計値とその変動幅を示す。",
+    "profile_caption_es": "Perfil de ciudad GEM-TREQ para Cali: el escenario M6.5 / 10 km en la falla Dagua-Calima. Están expuestos 2,3 millones de personas y 312.000 edificios residenciales, 22.000 comerciales, 5.300 industriales y 8.000 institucionales, con 220 billones de pesos de capital expuesto. Las barras dan, por comuna, el índice de colapsos, los fallecidos, los heridos graves, los desplazados y las pérdidas económicas; los histogramas dan los totales de la ciudad con sus rangos modelados."
+  },
+  "response_photos": [
+    {
+      "file": "photo_ungrd.jpg",
+      "caption_en": "President Abelardo de la Espriella chairs the national response meeting",
+      "caption_ja": "国の対応会議を主宰するデラエスプリエジャ大統領",
+      "caption_es": "El presidente Abelardo de la Espriella preside la reunión de respuesta nacional",
+      "credit": "© UNGRD",
+      "url": "https://portal.gestiondelriesgo.gov.co/"
+    },
+    {
+      "file": "photo_bomberos_cali.jpg",
+      "caption_en": "Cali fire service at a collapsed building in the city",
+      "caption_ja": "市内の倒壊建物で活動するカリ消防",
+      "caption_es": "Bomberos de Cali en una edificación colapsada de la ciudad",
+      "credit": "© Alcaldía de Santiago de Cali",
+      "url": "https://www.cali.gov.co/gestiondelriesgo/"
+    }
+  ],
+  "pager": {
+    "title_en": "USGS PAGER assessment (version 5)",
+    "title_ja": "USGS PAGERによる影響評価（第5版）",
+    "title_es": "Evaluación PAGER del USGS (versión 5)",
+    "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjl2/pager",
+    "text_en": "PAGER is the USGS rapid impact estimate, issued within minutes and revised as the event is refined; version 5 was created 2 hours 8 minutes after the earthquake. It is a probability distribution, not a forecast of a single number: the orange alert means significant casualties and damage are likely and that past orange alerts have required a regional or national response. Its most likely fatality band, 1,000-10,000, sat far above the 111 deaths reported nine hours after the event; 33 hours in the reported toll had risen to 182-240, into PAGER's 100-1,000 band, which the model gave a lower but substantial probability. The gap is normal at this stage and narrows as ground truth replaces modelled losses.",
+    "text_ja": "PAGERはUSGSによる迅速影響推計で、発生から数分で発表され、震源要素の精査に伴い改訂される。第5版は発災の2時間8分後に作成された。これは単一の予測値ではなく確率分布であり、オレンジ警報は「相当の人的被害と損害が生じる可能性が高く、過去のオレンジ警報は地域的または国家的な対応を要した」ことを意味する。最も確からしい死者数階級1,000〜10,000人は、発災9時間後の報告値111人を大きく上回っていたが、33時間後には報告値が182〜240人となり、PAGERが低いながらも相応の確率を与えていた100〜1,000人の階級に入った。この段階での乖離は通常のことであり、実測が推計に置き換わるにつれて差は縮まる。",
+    "text_es": "PAGER es la estimación rápida de impacto del USGS, emitida en minutos y revisada conforme se precisa el evento; la versión 5 se creó 2 horas y 8 minutos después del sismo. Es una distribución de probabilidad, no el pronóstico de una cifra única: la alerta naranja significa que son probables víctimas y daños significativos y que alertas naranjas previas han requerido una respuesta regional o nacional. Su banda de mortalidad más probable, 1.000-10.000, estaba muy por encima de los 111 muertos reportados nueve horas después del evento; a las 33 horas el balance reportado había subido a 182-240, dentro de la banda de 100-1.000 del PAGER, a la que el modelo asignaba una probabilidad menor pero apreciable. La brecha es normal en esta etapa y se estrecha a medida que la observación reemplaza a las pérdidas modeladas."
+  },
+  "toll_caption_en": "UNGRD balance with an 18:30 COT cut-off on 16 August. 120,671 families (185,996 people) affected across 472 municipalities in 15 departments; 26,392 homes destroyed and 127,608 damaged; 355 people and 496 animals rescued alive. Two cut-offs the same day: deaths 289 then 287, injured 4,187 then 4,147, missing 143 then 194. UNGRD states the reason - figures reported from the territories are being verified and consolidated, some sent before being checked - so quote the cut-off with the number.",
+  "toll_caption_ja": "8月16日18:30締めのUNGRD集計。15県・472市町村で被災120,671世帯・185,996人。住宅全壊26,392棟・損壊127,608棟、生存救出355人・動物496頭。同じ日に2回の締めがあり、死者289人→287人、負傷4,187人→4,147人、行方不明143人→194人と動いた。UNGRDはその理由として、地方から報告された数値の検証・統合を進めており、一部は検証前に送られていたことを挙げている。引用の際は数値とあわせて集計時点を示されたい。",
+  "toll_caption_es": "Balance de la UNGRD con corte a las 18:30 COT del 16 de agosto. 120.671 familias (185.996 personas) afectadas en 472 municipios de 15 departamentos; 26.392 viviendas destruidas y 127.608 averiadas; 355 personas y 496 animales rescatados con vida. Dos cortes el mismo día: fallecidos 289 y luego 287, heridos 4.187 y luego 4.147, desaparecidos 143 y luego 194. La UNGRD explica el motivo -se verifican y consolidan las cifras reportadas desde los territorios, algunas enviadas antes de ser comprobadas-, así que cite la hora de corte junto con el número.",
+  "cali": {
+    "title_en": "Cali: municipal damage report",
+    "title_ja": "カリ市：市当局の被害報告",
+    "title_es": "Cali: reporte municipal de daños",
+    "source_en": "Officials of the Alcaldía de Santiago de Cali, received 12 August 2026",
+    "source_ja": "サンティアゴ・デ・カリ市職員より受領（2026年8月12日）",
+    "source_es": "Funcionarios de la Alcaldía de Santiago de Cali, recibido el 12 de agosto de 2026",
+    "tiles": [
+      {
+        "n": "69",
+        "label_en": "Deaths",
+        "label_ja": "死者",
+        "label_es": "Fallecidos",
+        "colour": "RED"
+      },
+      {
+        "n": "1,008",
+        "label_en": "Injured",
+        "label_ja": "負傷者",
+        "label_es": "Heridos",
+        "colour": "AMBER"
+      },
+      {
+        "n": "230",
+        "label_en": "People trapped",
+        "label_ja": "生き埋め",
+        "label_es": "Personas atrapadas",
+        "colour": "AMBER"
+      },
+      {
+        "n": "88",
+        "label_en": "People rescued",
+        "label_ja": "救出者",
+        "label_es": "Personas rescatadas",
+        "colour": "NAVY"
+      }
+    ],
+    "rows": [
+      {
+        "item_en": "Buildings collapsed",
+        "item_ja": "建物倒壊",
+        "item_es": "Edificaciones colapsadas",
+        "n": "107"
+      },
+      {
+        "item_en": "Buildings with structural damage",
+        "item_ja": "構造的被害のある建物",
+        "item_es": "Edificaciones con daños estructurales",
+        "n": "643"
+      },
+      {
+        "item_en": "Buildings under evacuation order",
+        "item_ja": "避難命令の出た建物",
+        "item_es": "Edificios con orden de evacuación",
+        "n": "18"
+      },
+      {
+        "item_en": "People trapped",
+        "item_ja": "生き埋め",
+        "item_es": "Personas atrapadas",
+        "n": "230"
+      },
+      {
+        "item_en": "People rescued",
+        "item_ja": "救出された人",
+        "item_es": "Personas rescatadas",
+        "n": "88"
+      },
+      {
+        "item_en": "Deaths",
+        "item_ja": "死者",
+        "item_es": "Fallecidos",
+        "n": "69"
+      },
+      {
+        "item_en": "Injured",
+        "item_ja": "負傷者",
+        "item_es": "Heridos",
+        "n": "1,008"
+      }
+    ],
+    "read_title_en": "Reading these against the other Cali figures",
+    "read_title_ja": "カリの他の数値との関係",
+    "read_title_es": "Cómo leer estas cifras frente a las otras de Cali",
+    "read_en": "The city's own count of 69 deaths sits below the 85 the mayor gave on 11 August and the 97 in the President's breakdown the same day, and its 1,008 injured sits above the mayor's 885. The municipal report carries no cut-off time, so it cannot be placed in that sequence: it may be an earlier snapshot, or a narrower count of deaths confirmed by the city itself. Until the city states its cut-off, cite the national figures for the national picture and use these for what only the municipality reports - collapsed and structurally damaged buildings, evacuation orders, and the trapped-versus-rescued balance.",
+    "read_ja": "市の集計による死者69人は、8月11日にカリ市長が示した85人、および同日の大統領の内訳にある97人を下回る。一方で負傷者1,008人は市長の885人を上回る。この市当局報告には集計時点が付されていないため、上記の系列のどこに位置づくか判断できない。より早い時点の値である可能性も、市が自ら確認した死者に限った狭い集計である可能性もある。市が集計時点を示すまでは、全国の状況には全国値を用い、本表は市当局のみが報告している項目——建物の倒壊・構造的被害、避難命令、生き埋めと救出の対比——に用いるのが適切である。",
+    "read_es": "El conteo propio de la ciudad, 69 fallecidos, queda por debajo de los 85 que dio el alcalde el 11 de agosto y de los 97 del desglose presidencial de ese mismo día, mientras que sus 1.008 heridos superan los 885 del alcalde. El reporte municipal no indica hora de corte, de modo que no puede ubicarse en esa secuencia: puede ser una foto anterior o un conteo más estricto de fallecidos confirmados por la propia ciudad. Hasta que la ciudad indique su corte, conviene citar las cifras nacionales para el panorama nacional y usar estas para lo que solo reporta el municipio: edificaciones colapsadas y con daños estructurales, órdenes de evacuación y la relación entre atrapados y rescatados.",
+    "note_en": "230 people trapped against 88 rescued is the number that drives the next 48 hours in Cali: it is the search-and-rescue caseload, and it is larger than the city's death toll.",
+    "note_ja": "生き埋め230人に対して救出88人という比は、カリにおける今後48時間を左右する数値である。これは捜索救助の未処理件数であり、市の死者数を上回っている。",
+    "note_es": "230 personas atrapadas frente a 88 rescatadas es la cifra que marca las próximas 48 horas en Cali: es la carga de trabajo de búsqueda y rescate, y es mayor que el número de fallecidos de la ciudad."
+  },
+  "support_intl_note_title_en": "A filtered acceptance, then a broader flow",
+  "support_intl_note_title_ja": "絞り込んだ受け入れ、その後の広がり",
+  "support_intl_note_title_es": "Una aceptación filtrada y luego un flujo más amplio",
+  "support_intl_note_en": "Two patterns sit side by side. Search and rescue was opened to four countries only - the United States, Israel, Ecuador and El Salvador - on stated criteria of INSARAG classification, self-sufficiency and speed, although offers came from at least seventeen and several of the others hold the same classification; the Government has denied that ideology played a part and the argument is running in the Colombian press. Relief goods and money, by contrast, are being taken broadly: India, Norway, Sweden, Spain, Italy, Chile, Mexico, Turkey, Brazil, the World Bank and the earlier US, EU and CAF contributions, against a stated total of about USD 1.3 billion in offers. The distinction is defensible - rescue teams work inside a national command structure and relief goods do not - and it is the one an ADRC reader should take away: under Ley 1523 the response is Colombia's to direct, and a country that narrows the operational field this far should expect to explain the basis in writing.",
+  "support_intl_note_ja": "2つの構図が並んでいる。捜索救助は4か国——米国、イスラエル、エクアドル、エルサルバドル——にのみ開かれた。政府が挙げる基準はINSARAG分類、自己完結性、展開の速さであるが、申し出は少なくとも17か国からあり、他の何か国かも同じ分類を保持している。政府はイデオロギーの関与を否定しており、この点はコロンビア国内で議論になっている。一方、物資と資金は幅広く受け入れられている。インド、ノルウェー、スウェーデン、スペイン、イタリア、チリ、メキシコ、トルコ、ブラジル、世界銀行、および先行する米国・EU・CAFの拠出であり、申し出の総額は約13億米ドルとされる。この区別には理由がある。救助チームは受入国の指揮系統の内側で活動するが、物資はそうではない。ADRCの読者が持ち帰るべき点もここにある。法1523号の下で対応を指揮するのはコロンビア自身であり、活動する側の受け入れをここまで絞る場合、その根拠を文書で説明できるようにしておくことが求められる。",
+  "support_intl_note_es": "Conviven dos patrones. La búsqueda y rescate se abrió solo a cuatro países -Estados Unidos, Israel, Ecuador y El Salvador- con criterios declarados de clasificación INSARAG, autosuficiencia y rapidez, aunque los ofrecimientos llegaron de al menos diecisiete y varios de los demás tienen la misma clasificación; el Gobierno ha negado que la ideología haya influido y el debate sigue en la prensa colombiana. Los insumos y el dinero, en cambio, se reciben ampliamente: India, Noruega, Suecia, España, Italia, Chile, México, Turquía, Brasil, el Banco Mundial y los aportes previos de Estados Unidos, la UE y la CAF, frente a un total declarado de unos 1.300 millones de dólares en ofrecimientos. La distinción es defendible -los equipos de rescate operan dentro de una estructura de mando nacional y los insumos no- y es la lección que conviene retener: bajo la Ley 1523 la respuesta la dirige Colombia, y un país que restringe tanto el campo operativo debe estar en condiciones de explicar por escrito el criterio aplicado.",
+  "missing_note_title_en": "Two different “missing” numbers",
+  "missing_note_title_ja": "「行方不明」の2つの数字",
+  "missing_note_title_es": "Dos cifras distintas de «desaparecidos»",
+  "missing_note_en": "194 and 3,653 are not the same measure and neither is wrong. 194 is the official count reported by UNGRD with an 18:30 cut-off on 16 August, drawn from the Fiscalía's register. It has moved in both directions - 496, 377, 378, 202, 320, 143, now 194 - because reports are filed, resolved and de-duplicated at the same time; UNGRD attributes the movement to verification and consolidation of figures sent from the territories, some of which had not been checked. The two readings on 16 August alone, 143 in the morning and 194 in the evening, show how little a single reading means without its cut-off. None of the falls are people found in the rubble; the count that measures that is rescued alive, 355. 3,653 is the number of people on the citizen platform “Colombia te busca” whom families have registered and not yet found - a community initiative, not a state register, which does not replace a report to the police or the prosecutor's office and will contain duplicates and people simply out of contact where power and telephone service are down. Cite 194 with its cut-off as the missing count; cite 3,653 as the volume of family enquiries, which is the better measure of how many households do not yet know.",
+  "missing_note_ja": "194人と3,653件は同じものを測った数値ではなく、どちらも誤りではない。194人は、8月16日18:30締めでUNGRDが示した公式の数値であり、検察庁の登録簿に基づく。この数値は496→377→378→202→320→143→194人と両方向に動いてきた。届出の受理、解決、重複整理が同時に進んでいるためであり、UNGRDは、地方から送られた数値の検証・統合によるもので、一部は未検証のまま報告されていたと説明している。8月16日だけでも朝の143人と夕方の194人という2つの値があり、集計時点を欠いた単独の数値がいかに意味を持たないかを示している。減少はいずれも瓦礫からの発見によるものではない。発見を測る数値は生存救出であり、355人である。3,653件は、市民運営のプラットフォーム「Colombia te busca」に家族が登録し、まだ所在が確認されていない人数である。これは地域社会の取り組みであって国家の登録簿ではなく、警察や検察への届出に代わるものでもない。重複や、停電・通信途絶で単に連絡が取れないだけの人も含まれる。行方不明者数として引用すべきは194人であり、その際は集計時点を併記する。3,653件は「まだ所在を把握できていない世帯がどれだけあるか」を示す照会件数として引用するのが適切である。",
+  "missing_note_es": "194 y 3.653 no miden lo mismo y ninguna de las dos cifras es errónea. 194 es el conteo oficial informado por la UNGRD con corte a las 18:30 del 16 de agosto, tomado del registro de la Fiscalía. Ha variado en ambos sentidos -496, 377, 378, 202, 320, 143 y ahora 194- porque al mismo tiempo se presentan, resuelven y depuran reportes; la UNGRD atribuye el movimiento a la verificación y consolidación de las cifras enviadas desde los territorios, algunas sin comprobar. Las dos lecturas del 16 de agosto, 143 en la mañana y 194 en la tarde, muestran lo poco que significa una cifra sin su hora de corte. Ninguna de las bajas corresponde a personas halladas entre los escombros; la cifra que mide eso es la de rescatados con vida, 355. 3.653 es el número de personas inscritas por sus familias en la plataforma ciudadana “Colombia te busca” y aún no localizadas: una iniciativa comunitaria, no un registro estatal, que no reemplaza el reporte a la policía o a la Fiscalía y que contendrá duplicados y personas simplemente incomunicadas donde no hay energía ni servicio telefónico. Cite 194 con su hora de corte como el número de desaparecidos; cite 3.653 como el volumen de consultas familiares, que mide mejor cuántos hogares aún no saben.",
+  "missing_tail_en": "The registrations cluster in Valle del Cauca, Risaralda, Caldas and Chocó - the same four departments that hold the deaths. Asocapitales, the association of capital cities, has launched a second platform, so the enquiry volume is now split across two registers and the totals should not be added together.",
+  "missing_tail_ja": "登録はバジェ・デル・カウカ、リサラルダ、カルダス、チョコの4県に集中しており、死者の分布と同じである。県都市長会Asocapitalesも第2のプラットフォームを開設したため、照会は現在2つの登録簿に分かれている。両者の合計を足し合わせるべきではない。",
+  "missing_tail_es": "Los registros se concentran en Valle del Cauca, Risaralda, Caldas y Chocó, los mismos cuatro departamentos donde están los fallecidos. Asocapitales, la asociación de ciudades capitales, ha lanzado una segunda plataforma, de modo que el volumen de consultas está ahora repartido entre dos registros y sus totales no deben sumarse."
+}

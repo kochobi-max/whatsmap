@@ -1,0 +1,9 @@
+{
+  "name": "adrc-colombia-eq-report",
+  "version": "1.0.0",
+  "description": "ADRC bilingual (EN/JA) disaster report generator for the 2026 Choco (Colombia) earthquake.",
+  "private": true,
+  "type": "commonjs",
+  "scripts": { "build": "bash scripts/build.sh" },
+  "dependencies": { "pptxgenjs": "^3.12.0" }
+}
