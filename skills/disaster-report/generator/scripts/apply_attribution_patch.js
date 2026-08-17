@@ -53,6 +53,23 @@ function intensitySeg() {
     ? "   ·   Max. seismic intensity " + v + " (" + (d.event.intensity_agency_en || "JMA") + ")"
     : "   ·   最大震度" + v + "（" + (d.event.intensity_agency_ja || "気象庁") + "）";
 }
+// 波形解析の情報源パネル。d.mechanism_sources があればそれを、無ければ既定（日本の機関）を使う。
+// 形: [{ en: "NIED F-net — broadband moment tensor", ja: "防災科研 F-net — 広帯域モーメントテンソル解" }, ...]
+function mechSourceRuns(defRuns) {
+  const list = d.mechanism_sources;
+  if (!Array.isArray(list) || !list.length) return defRuns;
+  const out = [{ text: "Waveform-based analysis resources / 波形解析の情報源\\n\\n", options: { bold: true, fontSize: 13, color: NAVY } }];
+  list.forEach((it, i) => {
+    const last = i === list.length - 1;
+    out.push({ text: "• " + (it.en || "") + "\\n  " + (it.ja || "") + (last ? "" : "\\n\\n"), options: { fontSize: 12, color: INK } });
+  });
+  return out;
+}
+// 波形解析の出典行。d.mechanism_source_links があればそれを使う。
+function mechSourceLinks(defLinks) {
+  const list = d.mechanism_source_links;
+  return (Array.isArray(list) && list.length) ? list : defLinks;
+}
 /* --- end attribution from data --- */`;
 
 const EDITS = [
@@ -95,6 +112,35 @@ const EDITS = [
     name: "Slide 5 基本情報の出典（気象庁 第3報）",
     find: `    ["Source / 出典", LX("JMA (3rd report)", "JMA (3rd report)", "気象庁（第3報）")],`,
     to: `    ["Source / 出典", LX((d.event.source_en || "JMA (3rd report)") + " / " + (d.event.source_ja || "気象庁（第3報）"), d.event.source_en || "JMA (3rd report)", d.event.source_ja || "気象庁（第3報）")],`,
+  },
+  {
+    name: "Slide 6b 波形解析の情報源パネル（防災科研・気象庁）",
+    re: /s\.addText\(\[\n(?<body>  \{ text: "Waveform-based analysis resources[\s\S]*?)\], \{ x: 7\.3, y: 1\.45/,
+    build: m => `s.addText(mechSourceRuns([\n${m.groups.body}]), { x: 7.3, y: 1.45`,
+  },
+  {
+    name: "Slide 6b 波形解析の出典行",
+    find: `srcLine(s, [
+  { label: "NIED K-NET/KiK-net (strong motion)", url: "https://www.kyoshin.bosai.go.jp/" },
+  { label: "NIED F-net (moment tensor)", url: "https://www.fnet.bosai.go.jp/" },
+  { label: "JMA mechanism / CMT", url: "https://www.data.jma.go.jp/eqev/data/mech/" },
+]);`,
+    to: `srcLine(s, mechSourceLinks([
+  { label: "NIED K-NET/KiK-net (strong motion)", url: "https://www.kyoshin.bosai.go.jp/" },
+  { label: "NIED F-net (moment tensor)", url: "https://www.fnet.bosai.go.jp/" },
+  { label: "JMA mechanism / CMT", url: "https://www.data.jma.go.jp/eqev/data/mech/" },
+]));`,
+  },
+  {
+    name: "Slide 6 余震データ欠損時の案内文（気象庁）",
+    find: [
+      '      { text: "Aftershock counts populate once JMA data accumulates.\\n", options: { bold: true, fontSize: 13, color: NAVY } },',
+      '      { text: "気象庁の余震回数データが蓄積次第、掲載します。", options: { fontSize: 12.5, color: NAVY2 } },',
+    ].join("\n"),
+    to: [
+      '      { text: (d.aftershock_pending_en || ("Aftershock counts populate once " + ((d.event && d.event.seismic_agency_en) || "JMA") + " data accumulates.")) + "\\n", options: { bold: true, fontSize: 13, color: NAVY } },',
+      '      { text: d.aftershock_pending_ja || (((d.event && d.event.seismic_agency_ja) || "気象庁") + "の余震回数データが蓄積次第、掲載します。"), options: { fontSize: 12.5, color: NAVY2 } },',
+    ].join("\n"),
   },
   {
     name: "Slide 8 被害状況の出典注記",
