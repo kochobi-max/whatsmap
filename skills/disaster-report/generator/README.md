@@ -290,3 +290,81 @@ PR #1 をマージし、`reports/colombia_eq_20260810/` が main に入った。
 5. 出力を旧実装と並べて目視比較し、落ちたページが無いことを確認してから `status: "active"`
 
 **2が本体の作業**で、ここを飛ばして移行してはならない。
+
+---
+
+## 移行ステップ1・2の実施結果（2026-08-17）
+
+### ステップ1: スペイン語の削除 — 完了
+
+```bash
+node scripts/migrate_event.js --in <colombia>/report_data.json \
+  --iso3 COL --filebase ADRC_EQ_COL_Choco_20260810 \
+  --primary-source UNGRD --strip-lang es --out events/EQ-2026-000146-COL.json
+```
+
+`--strip-lang` は `*_es` キーと、en/ja と並ぶ `es` キーを再帰的に落とす。
+**en/ja の対が無い箇所は残す**（唯一の本文を消さないため）。残した場合は警告に出す。
+
+コロンビアの実績: **433箇所**を削除、181,618字 → 113,859字（**37.3%減**）、残存 `_es` は0。
+
+### ステップ2: 受け皿スライド6種 — 完了
+
+```bash
+node scripts/apply_receiver_slides.js --file scripts/gen_deck.js
+```
+
+| キー | 内容 | 挿入位置 |
+|------|------|---------|
+| `tectonics` | テクトニクス（本文＋ティア付き箇条書き） | Slide 6b の前 |
+| `pager` | USGS PAGER 影響評価 | Slide 8b の前 |
+| `deaths_by_area` | 地域別の死者数（表＋注記） | 同上 |
+| `exposure` | 揺れの階級別 曝露人口（表＋注記） | 同上 |
+| `emsr916` | Copernicus EMS（諸元表＋発動理由＋注記） | Slide 13 の前 |
+| `drm_system` | 相手国の防災体制（導入文＋箇条書き） | 同上 |
+
+すべてデータ駆動。**熊本は27ページのまま変化なし**。コロンビアでは6種すべて描画を確認
+（tectonics=9, pager=13, deaths_by_area=14, exposure=15, emsr916=23, drm_system=24 ページ目）。
+
+### 途中で見つけた欠陥2件 — 修正済み
+
+```bash
+node scripts/apply_data_guards.js --file scripts/gen_deck.js
+```
+
+1. **他国のデータでビルドが落ちる。** `d.cities` `d.timeline` `d.damage` `d.satellite` `d.links`
+   を「必ずある」前提で直接参照していた。コロンビア（`cities` を持たず `areas` を持つ）で
+   `TypeError: Cannot read properties of undefined` により停止。9箇所を `(d.x || [])` でガード
+2. **津波スライドも同様。** `d.tsunami` を24箇所で直接参照。震度も日本の 7 / 6強 / 6弱 前提
+   なので、セクションごと `if (d.tsunami || d.intensity...)` で条件化
+
+### ⚠️ ステップ3の前にやること — 日本固有リテラルの外出し
+
+コロンビアをビルドすると**9/30ページに熊本の記述が混入する**。ビルドは通るので
+機械検査では捕まらない。**この状態で公表してはならない。**
+
+| ページ | 混入内容 | 対応 |
+|--------|---------|------|
+| 6 | 出典「総務省統計局」 | `d.links` から引く |
+| 7・8 | 「気象庁 震度分布図」「震央分布図」＋ `jma.go.jp` | `d.links` から引く |
+| **10** | **「M7.1（気象庁）／M6.8（USGS）、深さ約16km」「布田川」「日奈久」** | `d.event.magnitude` / `mag_usgs` / `depth_display` から組む。断層名は `d.fault` へ |
+| 11・12 | 「消防庁・警察庁・熊本県等の集計に基づき」 | `d.attribution_en/ja` へ外出し |
+| 20・21 | 「国土地理院 だいち2号」「日奈久」「八代」 | `d.satellite` の行から組む |
+
+**10ページ目が最も危険**（M7.4・深さ110kmのコロンビアに熊本の諸元が出る）。
+
+> 2026-08-17 の初回調査で「残るリテラルは3箇所・日本国内なら影響なし」と記録したが、
+> **これは過小だった**。実際に他国データでビルドして初めて9ページ分が判明した。
+> 移行の検証は「ビルドが通ること」ではなく「他国データで中身が正しいこと」で行う。
+
+### パッチの適用順（5本）
+
+```
+1. apply_event_patch.js     EVENT 解決・OUT 自動命名
+2. apply_slide_gates.js     イベント固有スライドの出し分け
+3. apply_locator_patch.js   地理ロケータのデータ駆動化
+4. apply_receiver_slides.js 汎用キー6種の受け皿
+5. apply_data_guards.js     欠損データでの停止を防ぐ
+```
+
+権威版 2,165行に5本すべてを順に適用し、熊本27ページ・コロンビア30ページの生成を確認済み。
