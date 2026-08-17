@@ -444,3 +444,27 @@ gsi.go.jp／布田川／日奈久／八代／嘉島／千葉大／QPS／防災�
 
 素の権威版（2,165行）に6本すべてを順に適用して検証済み。
 熊本27ページ（本文差分ゼロ）／コロンビア28ページ。
+
+---
+
+## パッチをまとめて当てる
+
+6本を1つずつ叩く必要はない。
+
+```bash
+# 1) まず確認（何も書き込まない）
+node scripts/apply_all.js --dry-run \
+  --file "C:\Users\arakida\OneDrive - adrc.asia\LargeScaleDisasters\_kumamoto_generator\gen_deck.js"
+
+# 2) 本適用
+node scripts/apply_all.js \
+  --file "C:\Users\arakida\OneDrive - adrc.asia\LargeScaleDisasters\_kumamoto_generator\gen_deck.js"
+```
+
+- 正しい順序で6本を当てる。**途中で1本でも失敗したらそこで止まる**
+- 各パッチは適用前に置換対象を数え、適用後に構文チェックし、`.bak` を残す
+- 二重に実行しても「すでに適用済み」で飛ばす（冪等）
+- 権威版2,165行に対して検証済み: **2,166 → 2,387行**
+
+適用後は必ず熊本でビルドし、**27ページで内容が従来どおり**であることを確認してから
+`_kumamoto_generator/` へ書き戻すこと。

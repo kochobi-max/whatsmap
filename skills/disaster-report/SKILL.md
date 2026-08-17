@@ -5,7 +5,7 @@ description: >
   最新の公式・報道情報に更新して再生成し、OneDriveへ保存して研究部へ更新メールを送るスキル。
   「熊本地震レポートを更新して」「コロンビア地震レポートを作り直して」「NTT地震のレポートを更新」
   など特定災害のレポート更新依頼、または1日2回（07:00 / 17:00 JST）の定期タスクから使う。
-  対象災害は events/<GLIDE>.json で管理し、災害が増えてもJSONを1本追加するだけで済む。
+  対象災害は events フォルダの GLIDE番号JSONで管理し、災害が増えてもJSONを1本追加するだけで済む。
   ldi-cms-report の Step 5.5（昇格判定）から承認を経て新規イベントが登録される。
 ---
 
@@ -116,7 +116,9 @@ node generator/scripts/resolve_event.js --event <GLIDE>
 
 `--event` を省略すると `meta.status: "active"` の全イベントを対象にする（定期タスク用）。
 
+### 3-1. ビルド
 
+```bash
 for L in ja en; do
   U=$(echo $L | tr a-z A-Z)
   LANG_OUT=$L UPDATE_DATE="$(TZ=Asia/Tokyo date '+%d/%m/%Y')" \
