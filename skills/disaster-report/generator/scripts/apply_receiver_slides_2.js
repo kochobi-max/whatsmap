@@ -90,6 +90,28 @@ const NOTE_TO = [
   '    "● numbers keyed to the table on the right   ★ epicentre", "● 番号は右の表に対応   ★ 震源"))',
 ].join("\n");
 
+
+// 過去の災害スライドに残っていた熊本固有の見出し2つ。
+// prior_event ゲートを他国のイベントで開けると「2016 damage」「復興の途上（約10年）」が出る。
+// 既定は従来の文字列のままなので、熊本の出力は変わらない。
+const PE_REPS = [
+  [
+    "過去の災害スライドの見出し",
+    'heading(s, "The 2016 Kumamoto Earthquake & Recovery", "2016年熊本地震と復興の途上");',
+    'heading(s, (d.prior_event && d.prior_event.heading_en) || "The 2016 Kumamoto Earthquake & Recovery",\n        (d.prior_event && d.prior_event.heading_ja) || "2016年熊本地震と復興の途上");',
+  ],
+  [
+    "過去の災害スライドの被害表の見出し",
+    'const stRows = [[tableHeaderCell("2016 damage / 被害"), tableHeaderCell("Figure / 数値")]];',
+    'const stRows = [[tableHeaderCell((pe.stats_header_en || "2016 damage") + " / " + (pe.stats_header_ja || "被害")), tableHeaderCell("Figure / 数値")]];',
+  ],
+  [
+    "過去の災害スライドの復興欄の見出し",
+    'const runs = [{ text: "Recovery — still under way (10 years on) / 復興の途上（約10年）\\n", options: { bold: true, fontSize: 13, color: NAVY } }];',
+    'const runs = [{ text: (pe.recovery_title_en || "Recovery — still under way (10 years on)") + " / " + (pe.recovery_title_ja || "復興の途上（約10年）") + "\\n", options: { bold: true, fontSize: 13, color: NAVY } }];',
+  ],
+];
+
 // ---------------------------------------------------------------- 主な余震
 
 const AFTERSHOCK_ROWS = `
@@ -265,6 +287,10 @@ function main() {
     const n = src.split(from).length - 1;
     if (n !== 1) problems.push(`被災地域: ${what}が ${n} 件（1件であるべき）`);
   }
+  for (const [what, from] of PE_REPS) {
+    const n = src.split(from).length - 1;
+    if (n !== 1) problems.push(`${what}が ${n} 件（1件であるべき）`);
+  }
   if (!/^\}\s*$/m.test(src)) problems.push("想定外: 閉じ括弧が1つも無い");
   if (problems.length) {
     console.error("✗ 挿入位置を特定できないため中断しました。");
@@ -279,6 +305,7 @@ function main() {
     process.exit(2);
   }
 
+  for (const [, from, to] of PE_REPS) src = src.split(from).join(to);
   src = src.split(HEAD_FROM).join(HEAD_TO);
   src = src.split(NOTE_FROM).join(NOTE_TO);
   src = src.split(AREAS_FROM).join(AREAS_TO);
@@ -298,6 +325,7 @@ function main() {
   console.log(`    ✓ 被災地域（cities が無く areas があるときだけ表を差し替え）`);
   INSERTS.forEach(i => console.log(`    ✓ ${i.name}`));
   console.log(`    ✓ 巻末ページ（optional_slides の "closing"）`);
+  PE_REPS.forEach(([w]) => console.log(`    ✓ ${w}`));
   console.log("");
   console.log("  熊本への影響: なし。historical と closing は optional_slides ゲート、");
   console.log("  他はデータが無ければ描画しないので、27ページのまま変わらない。");

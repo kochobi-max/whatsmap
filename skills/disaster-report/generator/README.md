@@ -449,7 +449,7 @@ gsi.go.jp／布田川／日奈久／八代／嘉島／千葉大／QPS／防災�
 
 ## パッチをまとめて当てる
 
-8本を1つずつ叩く必要はない。
+9本を1つずつ叩く必要はない。
 
 ```bash
 # 1) まず確認（何も書き込まない）
@@ -461,10 +461,10 @@ node scripts/apply_all.js \
   --file "C:\Users\arakida\OneDrive - adrc.asia\LargeScaleDisasters\_kumamoto_generator\gen_deck.js"
 ```
 
-- 正しい順序で8本を当てる。**途中で1本でも失敗したらそこで止まる**
+- 正しい順序で9本を当てる。**途中で1本でも失敗したらそこで止まる**
 - 各パッチは適用前に置換対象を数え、適用後に構文チェックし、`.bak` を残す
 - 二重に実行しても「すでに適用済み」で飛ばす（冪等）
-- 権威版2,165行に対して検証済み: **2,166 → 2,584行**
+- 権威版2,165行に対して検証済み: **2,166 → 2,610行**
 - `--dry-run` は一時コピーに7本を実際に当てきってから捨てる。
   各パッチに `--dry-run` を渡す方式だと、後段のパッチ（例: `apply_bilingual_fields.js` は
   `apply_attribution_patch.js` が作る `intensitySeg()` を探す）が必ず空振りするため。
@@ -663,3 +663,101 @@ node scripts/apply_all.js \
 
 素の権威版2,165行に `apply_all.js` で8本通し、個別適用の結果と**完全一致**を確認済み。
 2,166 → 2,584行。
+
+---
+
+## apply_event_images.js（9本目）— 画像がイベントを跨いでぶつかる
+
+統一版は画像を `generator/images/` の1階層から名前だけで引いていた。
+イベントを跨ぐと**キー名が同じ画像がぶつかる**。
+
+```
+熊本      locator.steps[].key = google_world / google_japan / intensity_map
+コロンビア                      google_world / google_japan / intensity_map   ← 同じ
+```
+
+しかも `<key>_manual.<ext>` は最優先で拾われる。
+熊本の `images/intensity_map_manual.png` が置いてある状態でコロンビアをビルドすると、
+**表紙と震源・震度ページに熊本の震度分布図が出る**。例外は出ないので気づけない。
+
+探索順を変えた。**イベント専用フォルダを3通りとも見てから**共通フォルダに落ちる。
+
+```
+1. images/<GLIDE>/<key>_manual.{png,jpg,jpeg}
+2. images/<GLIDE>/ + d.images[key]          （値の先頭の images/ は外して当てる）
+3. images/<GLIDE>/<key>.png
+4. images/<key>_manual.{png,jpg,jpeg}
+5. images/ + d.images[key]
+6. images/<key>.png
+```
+
+ディレクトリ単位で先に探しきるのが要点。`_manual` を全ディレクトリ横断で先に見ると、
+熊本の `intensity_map_manual.png` がコロンビアの `d.images["intensity_map"]` に勝ってしまう。
+
+`images/<GLIDE>/` が無いイベント（熊本）は 4〜6 だけになる。これは従来の順序そのもので、
+出力は1バイトも変わらない（JA/EN とも27ページ・本文差分ゼロを確認）。
+
+### イベントの画像を置く
+
+```bash
+mkdir -p images/EQ-2026-000146-COL
+cp reports/colombia_eq_20260810/images/*.png reports/colombia_eq_20260810/images/*.jpg \
+   images/EQ-2026-000146-COL/
+rm -f images/EQ-2026-000146-COL/*_es.png images/EQ-2026-000146-COL/*_ja.png \
+      images/EQ-2026-000146-COL/adrc_logo.png
+```
+
+- `_es` / `_ja` の言語別画像は統一版では使わない（図中の文字を差し替えた版）
+- `adrc_logo.png` は全イベント共通なので `images/` に置いたままにする
+- ファイル名を変える必要は無い。`d.images` の値がそのまま効く
+  （例: `"intensity_map": "images/sgc_shakemap_manual.jpg"`）
+
+---
+
+## コロンビアを active にした（2026-08-18）
+
+`events/EQ-2026-000146-COL.json` を `status: "active"` にし、統一版でビルドできる状態にした。
+
+### 何をしたか
+
+1. `migrate_event.js --strip-lang es` で `reports/colombia_eq_20260810/data/report_data.json`
+   から生成（スペイン語 433箇所を削除、46キーを引き継ぎ）
+2. `locator` / `image_captions` / `mechanism_*` / `attribution_*` を引き継ぎ
+3. `locator.steps[].key` を `google_world` / `google_japan` → `locator_world` / `locator_region`
+   に変更（実ファイル名に合わせる。`intensity_map` は SGC の ShakeMap を指す）
+4. `prior_event` のキー名を統一版に合わせる（`lessons_*` → `recovery_*`）。
+   内容は変えていない
+5. `cali` と `pre_event` を `extra_slides` 4枚に組み替え
+6. `event.source_*` / `event.seismic_agency_*` / `event.max_intensity_short_*` /
+   `event.intensity_agency_*` を追加（無いと熊本の既定値が出る）
+7. `meta.optional_slides` = `["prior_event", "historical", "closing"]`
+8. `meta.headline` を UNGRD 8/16 18:30 締めの値で記入
+9. `event.summary_en` を1,562→1,446字に詰めた（表紙の概要欄の上限1,450）。
+   落としたのは「All figures are preliminary…」の一文で、同じ趣旨が `meta.as_of` にある
+
+### 結果
+
+| | ページ | 元の専用版 |
+|---|---|---|
+| コロンビア JA | 38 | 36（スペイン語版含め3言語） |
+| コロンビア EN | 40 | 36 |
+
+日本固有語の混入 **0**（JA 20語・EN 9語で検査）、EN側の日本語混入 **0**。
+熊本は JA/EN とも27ページ・**本文差分ゼロ**。
+
+`resolve_event.js` の判定は **HOLD**（初版・前報なし）。仕様どおり、
+全ページを目視してから `_prev` を入れる。ビルドはできるがメールは送らない。
+
+### 途中で見つけた日本固有記述4件 — すべて修正済み
+
+前回「混入0ページ」と報告したのは、そのとき**描画されていたページ**についての話だった。
+ゲートを開けてページが増えたら、新しい混入が出た。
+
+| 出た場所 | 何が出たか | 直し方 |
+|---|---|---|
+| 表紙 | 最大震度の後ろに `（気象庁）` | 機関名の既定は `iso3 === "JPN"` のときだけ |
+| 過去の災害ページ | 見出し `2016年熊本地震と復興の途上`、表の見出し `2016 damage`、`復興の途上（約10年）` | `prior_event.heading_* / stats_header_* / recovery_title_*` で差し替え |
+| 出典行 | `気象庁 震央分布図` `総務省統計局` | `srcOr()` の既定リンクは日本のイベントに限り、他国では出典を1つ減らす |
+| 震源・震度／地震活動 | `出典 気象庁（第3報）`、`気象庁の余震回数データが…` | `event.source_*` / `event.seismic_agency_*` をデータに入れる |
+
+**ページを増やしたら混入検査をやり直す。** 検査は「そのビルドに出ているページ」しか見ていない。

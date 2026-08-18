@@ -114,6 +114,18 @@ const REPS = [
     INTENSITY_TO,
   ],
   [
+    "出典行の既定リンク（気象庁・総務省統計局）を日本のイベントに限る",
+    'function srcOr(sub, label, url) { return linkBy(sub) || { label, url }; }',
+    'function srcOr(sub, label, url) {\n'
+    + '  // 既定は「JMA hypocentre map / 気象庁 震央分布図」のような日本固有のリンク。\n'
+    + '  // d.links に該当が無い他国のイベントでは、気象庁を出すより出典を1つ減らす方が正しい。\n'
+    + '  const hit = linkBy(sub);\n'
+    + '  if (hit) return hit;\n'
+    + '  const jp = !(d.meta && d.meta.iso3) || d.meta.iso3 === "JPN";\n'
+    + '  return jp ? { label, url } : null;   // srcLine() は falsy を捨てる\n'
+    + '}',
+  ],
+  [
     "linkBy() の照合を label_en にも通す",
     'function linkBy(sub) { return (d.links || []).find(l => l.label && l.label.includes(sub)); }',
     'function linkBy(sub) { return (d.links || []).find(l => (l.label_en || l.label) && String(l.label_en || l.label).includes(sub)); }',
