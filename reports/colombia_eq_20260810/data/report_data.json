@@ -4,22 +4,22 @@
     "title_ja": "2026年 チョコ地震（コロンビア）",
     "subtitle_en": "M7.4, San José del Palmar, Chocó Department - 10 August 2026",
     "subtitle_ja": "M7.4、チョコ県サンホセ・デル・パルマル、2026年8月10日",
-    "edition_en": "12th report",
-    "edition_ja": "第12報",
+    "edition_en": "13th report",
+    "edition_ja": "第13報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
     "glide": "EQ-2026-000146-COL",
-    "as_of_en": "Figures as of the UNGRD balance with an 18:30 COT cut-off on 16 Aug 2026: 287 deaths, 4,147 injured, 194 missing, 355 people and 496 animals rescued alive, 472 municipalities in 15 departments, 120,671 families (185,996 people) affected, 26,392 homes destroyed and 127,608 damaged, 197 buildings collapsed. UNGRD attributes the movement in these counts to verification and consolidation of figures reported from the territories, some of which arrived unverified. All figures are preliminary; quote the cut-off with the number. As of 17 August the Foreign Ministry reports 222.5 tonnes of humanitarian aid and 144 members of international teams received.",
-    "as_of_ja": "数値は2026年8月16日18:30（コロンビア時間）締めのUNGRD集計現在。死者287人、負傷4,147人、行方不明194人、生存救出355人・動物496頭、15県・472市町村。被災120,671世帯・185,996人、住宅全壊26,392棟・損壊127,608棟、建物倒壊197棟。UNGRDは、これらの数値の変動について、地方から報告された数値の検証と統合によるものであり、一部は未検証のまま送られていたと説明している。すべて速報値。引用の際は集計時点を併記されたい。　8月17日時点で、外務省は人道支援物資222.5トンと国際チーム144人の受け入れを報告している。",
+    "as_of_en": "Figures as of the UNGRD balance with an 18:30 COT cut-off on 16 Aug 2026: 287 deaths, 4,147 injured, 194 missing, 355 people and 496 animals rescued alive, 472 municipalities in 15 departments, 120,671 families (185,996 people) affected, 26,392 homes destroyed and 127,608 damaged, 197 buildings collapsed. UNGRD attributes the movement in these counts to verification and consolidation of figures reported from the territories, some of which arrived unverified. All figures are preliminary; quote the cut-off with the number. As of 17 August the SGC had located 325 aftershocks and the Foreign Ministry reported 222.5 tonnes of humanitarian aid and 144 members of international teams received.",
+    "as_of_ja": "数値は2026年8月16日18:30（コロンビア時間）締めのUNGRD集計現在。死者287人、負傷4,147人、行方不明194人、生存救出355人・動物496頭、15県・472市町村。被災120,671世帯・185,996人、住宅全壊26,392棟・損壊127,608棟、建物倒壊197棟。UNGRDは、これらの数値の変動について、地方から報告された数値の検証と統合によるものであり、一部は未検証のまま送られていたと説明している。すべて速報値。引用の際は集計時点を併記されたい。　8月17日時点で、SGCは余震325回を決定し、外務省は人道支援物資222.5トンと国際チーム144人の受け入れを報告している。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-08-18 09:45 JST",
+    "stamp": "2026-08-18 17:10 JST",
     "update_date": "18/08/2026",
     "title_es": "Terremoto del Chocó de 2026 (Colombia)",
     "subtitle_es": "M7.4, San José del Palmar, departamento del Chocó — 10 de agosto de 2026",
-    "edition_es": "12.º informe",
+    "edition_es": "13.º informe",
     "prepared_by_es": "Centro Asiático para la Reducción de Desastres (ADRC)",
-    "as_of_es": "Cifras del balance de la UNGRD con corte a las 18:30 COT del 16 de agosto de 2026: 287 muertos, 4.147 heridos, 194 desaparecidos, 355 personas y 496 animales rescatados con vida, 472 municipios en 15 departamentos, 120.671 familias (185.996 personas) afectadas, 26.392 viviendas destruidas y 127.608 averiadas, 197 edificios colapsados. La UNGRD atribuye el movimiento de estos conteos al proceso de verificación y consolidación de la información reportada desde los territorios, parte de ella enviada sin verificar. Todas las cifras son preliminares; cite la hora de corte junto con el número. Al 17 de agosto la Cancillería reporta 222,5 toneladas de ayuda humanitaria y 144 integrantes de equipos internacionales recibidos.",
+    "as_of_es": "Cifras del balance de la UNGRD con corte a las 18:30 COT del 16 de agosto de 2026: 287 muertos, 4.147 heridos, 194 desaparecidos, 355 personas y 496 animales rescatados con vida, 472 municipios en 15 departamentos, 120.671 familias (185.996 personas) afectadas, 26.392 viviendas destruidas y 127.608 averiadas, 197 edificios colapsados. La UNGRD atribuye el movimiento de estos conteos al proceso de verificación y consolidación de la información reportada desde los territorios, parte de ella enviada sin verificar. Todas las cifras son preliminares; cite la hora de corte junto con el número. Al 17 de agosto el SGC había localizado 325 réplicas y la Cancillería reportaba 222,5 toneladas de ayuda humanitaria y 144 integrantes de equipos internacionales recibidos.",
     "disseminate_es": "Informe multilingüe (EN/JA/ES) para difusión nacional e internacional. Se da prioridad a las fuentes oficiales; los vacíos se completan con información de prensa debidamente identificada."
   },
   "event": {
@@ -492,6 +492,14 @@
       "en": "UNGRD explains the reductions in its registers: five names left the list of the dead and 177 the consolidated missing list because the same person could appear in several territorial reports and be counted more than once during verification; the change does not necessarily correspond to new findings. The Foreign Ministry reports 222.5 tonnes of humanitarian aid and 144 members of international teams received, and says no country has been excluded; China announces 80 tonnes.",
       "ja": "UNGRDが登録簿の減少を説明。死者名簿から5人、行方不明の統合名簿から177人が外れたのは、検証の過程で同一人物が複数の地方報告に現れ二重計上され得たためであり、必ずしも新たな発見に対応するものではないとする。外務省は人道支援物資222.5トンと国際チーム144人の受け入れを報告し、いかなる国も排除していないと表明。中国は80トンを発表。",
       "es": "La UNGRD explica las reducciones en sus registros: cinco nombres salieron del listado de fallecidos y 177 del consolidado de desaparecidos porque una misma persona podía aparecer en varios reportes territoriales y contarse más de una vez durante la verificación; el cambio no corresponde necesariamente a nuevos hallazgos. La Cancillería reporta 222,5 toneladas de ayuda humanitaria y 144 integrantes de equipos internacionales recibidos, y afirma que no se ha excluido a ningún país; China anuncia 80 toneladas."
+    },
+    {
+      "time": "17 Aug",
+      "tier": "official",
+      "src": "SGC",
+      "en": "One week on, the SGC reports 325 aftershocks located: San José del Palmar 111, El Litoral del San Juan 67, Sipí 61, at an average depth of about 100 km. The largest remains the M4.8 of 10 August.",
+      "ja": "発災1週間、SGCが余震325回を決定と報告。サンホセ・デル・パルマル111回、エル・リトラル・デル・サンフアン67回、シピ61回。平均の深さは約100km。最大は8月10日のM4.8のまま。",
+      "es": "A una semana, el SGC reporta 325 réplicas localizadas: San José del Palmar 111, El Litoral del San Juan 67, Sipí 61, a una profundidad media cercana a 100 km. La mayor sigue siendo el M4,8 del 10 de agosto."
     }
   ],
   "areas": [
@@ -921,8 +929,8 @@
   "exposure_note_en": "USGS PAGER (version 5) exposure estimates. About 10.5 million people were exposed to Strong or Very Strong shaking (MMI VI-VII) and about 34 million to MMI IV or above across four countries. These are model estimates.",
   "exposure_note_ja": "USGS PAGER（第5版）による曝露推計。約1,050万人がMMI VI〜VII（強い〜非常に強い）の揺れに、4か国で約3,400万人がMMI IV以上の揺れにさらされた。いずれもモデル推計値。",
   "aftershocks": {
-    "note_en": "The SGC located 147 events in the 34 hours after the mainshock. Within that window only one exceeded M4.0 - the M4.8 that followed 44 minutes later - and 92% were below M3.0; the M4.2 of 13 August is the second. No aftershock has come close to the mainshock in size. Ninety-six of the 147 lie at 60 km depth or more within 80 km of the epicentre: that subset is the intraslab sequence itself, and its cumulative curve tracks the SGC's published totals. The remainder is background seismicity the same catalogue records, which is why a raw count runs ahead of the official figure. A modest, quickly-decaying sequence is what an intermediate-depth rupture is expected to produce - but the 13 August event shows that shaking able to stop rescue work continues. By 07:00 on 14 August the SGC's published total had reached 184, of which 15 above M3.0 and 2 above M4.0 - a rate consistent with the catalogue extract and with normal decay.",
-    "note_ja": "SGCは本震後34時間に147回の地震を決定した。この期間にM4.0を超えたのは本震44分後のM4.8のみで、92％はM3.0未満であった。8月13日のM4.2が2回目である。本震に匹敵する規模の余震は起きていない。147回のうち96回は深さ60km以上・震央から80km以内にあり、この部分がスラブ内の余震活動そのものである。その累積曲線はSGC公表の回数とよく一致する。残りは同じカタログに含まれる背景的な地震活動であり、生の件数が公式の余震回数を上回るのはこのためである。規模が小さく減衰の速い活動は、やや深発の地震で想定される経過である。ただし8月13日の地震は、捜索救助を止めるほどの揺れがなお続いていることを示す。　8月14日07:00までにSGCの公表値は184回に達し、うちM3.0超が15回、M4.0超が2回である。この推移はカタログ抽出および通常の減衰と整合する。",
+    "note_en": "The SGC located 147 events in the 34 hours after the mainshock. Within that window only one exceeded M4.0 - the M4.8 that followed 44 minutes later - and 92% were below M3.0; the M4.2 of 13 August is the second. No aftershock has come close to the mainshock in size. Ninety-six of the 147 lie at 60 km depth or more within 80 km of the epicentre: that subset is the intraslab sequence itself, and its cumulative curve tracks the SGC's published totals. A modest, quickly-decaying sequence is what an intermediate-depth rupture is expected to produce - but the 13 August event shows that shaking able to stop rescue work continues. The SGC's published total reached 184 by 07:00 on 14 August, of which 15 above M3.0 and 2 above M4.0, and 325 by the 17 August cut-off - a rate consistent with the catalogue extract and with normal decay. They cluster around the epicentre at an average depth of about 100 km - the slab, not the crust.",
+    "note_ja": "SGCは本震後34時間に147回の地震を決定した。この期間にM4.0を超えたのは本震44分後のM4.8のみで、92％はM3.0未満であった。8月13日のM4.2が2回目である。本震に匹敵する規模の余震は起きていない。147回のうち96回は深さ60km以上・震央から80km以内にあり、この部分がスラブ内の余震活動そのものである。その累積曲線はSGC公表の回数とよく一致する。規模が小さく減衰の速い活動は、やや深発の地震で想定される経過である。ただし8月13日の地震は、捜索救助を止めるほどの揺れがなお続いていることを示す。　SGCの公表値は8月14日07:00までに184回（うちM3.0超15回、M4.0超2回）、8月17日締めで325回に達した。この推移はカタログ抽出および通常の減衰と整合する。震源は震央周辺に集中し、平均の深さは約100kmで、地殻ではなくスラブ内である。",
     "rows": [
       {
         "when": "10 Aug 08:18 COT (13:18 UTC)",
@@ -957,15 +965,15 @@
         "note_es": "San José del Palmar, profundidad 95 km, a unos 20 km del epicentro: el mismo volumen sismogénico del sismo principal. Se sintió hasta en Bogotá y detuvo temporalmente las labores de búsqueda y rescate."
       },
       {
-        "when": "to 14 Aug 07:00 COT",
-        "mag": "184 located",
+        "when": "to 17 Aug COT",
+        "mag": "325 located",
         "tier": "official",
-        "note_en": "SGC running total four days on: 184 aftershocks, 15 above M3.0 and 2 above M4.0. The published total was 103 at 15:00 on 11 August; the catalogue extract used for the figure holds 147 events to 17:24 on 11 August.",
-        "note_ja": "本震から4日後のSGC累計。余震184回、うちM3.0超15回、M4.0超2回。8月11日15:00時点の公表値は103回。図に用いたカタログ抽出は8月11日17:24までの147回である。",
-        "note_es": "Total acumulado del SGC a cuatro días: 184 réplicas, 15 por encima de M3,0 y 2 por encima de M4,0. El total publicado era 103 a las 15:00 del 11 de agosto; el extracto del catálogo usado en la figura contiene 147 eventos hasta las 17:24 del 11 de agosto."
+        "note_en": "SGC running total one week on: 325 aftershocks, against 184 by 07:00 on 14 August and 103 at 15:00 on 11 August. By municipality: San José del Palmar 111, El Litoral del San Juan (Docordó) 67, Sipí 61. Average depth about 100 km, and the largest remains the M4.8 of 10 August.",
+        "note_ja": "発災1週間時点のSGC累計。余震325回。8月14日07:00時点で184回、11日15:00時点で103回であった。市町村別ではサンホセ・デル・パルマル111回、エル・リトラル・デル・サンフアン（ドコルド）67回、シピ61回。平均の深さは約100kmで、最大は8月10日のM4.8のまま。",
+        "note_es": "Total acumulado del SGC a una semana: 325 réplicas, frente a 184 hasta las 07:00 del 14 de agosto y 103 a las 15:00 del 11. Por municipio: San José del Palmar 111, El Litoral del San Juan (Docordó) 67, Sipí 61. Profundidad media cercana a 100 km, y la mayor sigue siendo el M4,8 del 10 de agosto."
       }
     ],
-    "note_es": "El SGC localizó 147 eventos en las 34 horas posteriores al sismo principal. En esa ventana solo uno superó M4,0 -el M4,8 de 44 minutos después- y el 92 % estuvo por debajo de M3,0; el M4,2 del 13 de agosto es el segundo. Ninguna réplica se ha acercado al tamaño del sismo principal. Noventa y seis de los 147 se ubican a 60 km de profundidad o más y a menos de 80 km del epicentro: ese subconjunto es la secuencia intraplaca, y su curva acumulada sigue los totales publicados por el SGC. El resto es sismicidad de fondo del mismo catálogo, y por eso un conteo bruto va por delante de la cifra oficial. Una secuencia moderada y de decaimiento rápido es lo esperable en una ruptura de profundidad intermedia, pero el evento del 13 de agosto muestra que sigue habiendo sacudidas capaces de detener el rescate. Hasta las 07:00 del 14 de agosto el total publicado por el SGC llegó a 184, de las cuales 15 por encima de M3,0 y 2 por encima de M4,0, un ritmo coherente con el extracto del catálogo y con un decaimiento normal.",
+    "note_es": "El SGC localizó 147 eventos en las 34 horas posteriores al sismo principal. En esa ventana solo uno superó M4,0 -el M4,8 de 44 minutos después- y el 92 % estuvo por debajo de M3,0; el M4,2 del 13 de agosto es el segundo. Ninguna réplica se ha acercado al tamaño del sismo principal. Noventa y seis de los 147 se ubican a 60 km de profundidad o más y a menos de 80 km del epicentro: ese subconjunto es la secuencia intraplaca, y su curva acumulada sigue los totales publicados por el SGC. Una secuencia moderada y de decaimiento rápido es lo esperable en una ruptura de profundidad intermedia, pero el evento del 13 de agosto muestra que sigue habiendo sacudidas capaces de detener el rescate. El total publicado por el SGC llegó a 184 hasta las 07:00 del 14 de agosto -15 por encima de M3,0 y 2 por encima de M4,0- y a 325 en el corte del 17 de agosto, un ritmo coherente con el extracto del catálogo y con un decaimiento normal. Se concentran alrededor del epicentro a una profundidad media cercana a 100 km: la losa, no la corteza.",
     "spread_title_en": "How much the agencies differ",
     "spread_title_ja": "機関による解のばらつき",
     "spread_title_es": "Cuánto difieren las entidades",
@@ -1041,6 +1049,13 @@
       "en": "Relief measures announced during the tour: three months of relief on public-utility bills for households registered as affected, a rent subsidy for those who lost their homes, a census and characterisation of damaged housing ahead of repairs, and a shock plan for education and housing. On the evening of 12 August the President announced the declaration of an economic emergency, a constitutional mechanism intended to speed up the response.",
       "ja": "巡回中に発表された救済措置：被災世帯として登録された者に対する公共料金の3か月間の減免、住宅を失った者への家賃補助、修復に先立つ住宅被害の悉皆調査と類型化、教育・住宅の緊急対策。8月12日夕方、大統領は経済緊急事態の宣言を発表した。対応を迅速化するための憲法上の仕組みである。",
       "es": "Medidas anunciadas durante el recorrido: tres meses de alivio en el pago de servicios públicos para los hogares censados como afectados, un subsidio de arriendo para quienes perdieron su vivienda, un censo y caracterización de las viviendas averiadas antes de repararlas, y un plan de choque para educación y vivienda. La tarde del 12 de agosto el Presidente anunció la declaratoria de emergencia económica, mecanismo constitucional destinado a acelerar la respuesta."
+    },
+    {
+      "tier": "official",
+      "source": "Alcaldía Mayor de Bogotá, 16 Aug",
+      "en": "Bogotá's collection drive had moved 1,174 tonnes of food, hygiene items and habitat kits to five departments by 16 August, with 900 units of blood, 45 engineers, 18 water-utility staff and 10 debris vehicles. Domestic solidarity, counted separately from international aid.",
+      "ja": "ボゴタ市の募集活動により、8月16日までに食料・衛生用品・生活キット1,174トンが5県へ搬送された。血液900単位、技術者45人、水道公社職員18人、瓦礫撤去車両10台を含む。国内の支援であり、国際支援とは別に数える。",
+      "es": "La recolección de Bogotá había trasladado 1.174 toneladas de alimentos, aseo y kits de hábitat a cinco departamentos al 16 de agosto, con 900 unidades de sangre, 45 ingenieros, 18 funcionarios del acueducto y 10 vehículos para escombros. Solidaridad nacional, contada aparte de la ayuda internacional."
     }
   ],
   "support_international": [
@@ -2048,6 +2063,20 @@
       "label_es": "Infobae — China envía 80 toneladas de ayuda a Colombia",
       "url": "https://www.infobae.com/colombia/2026/08/17/china-envia-80-toneladas-de-ayuda-a-colombia-tras-el-terremoto-asi-es-el-cargamento-que-llegara-a-bogota/",
       "tier": "media"
+    },
+    {
+      "label_en": "Semana — SGC one week on: everything about the aftershocks",
+      "label_ja": "Semana 発災1週間 SGCが余震について説明",
+      "label_es": "Semana — a una semana, el SGC aclara todo sobre las réplicas",
+      "url": "https://www.semana.com/nacion/articulo/se-cumple-una-semana-del-fuerte-terremoto-que-estremecio-a-colombia-sgc-aclaro-todo-sobre-las-replicas/202600/",
+      "tier": "media"
+    },
+    {
+      "label_en": "Alcaldía de Bogotá — 1,174 tonnes of aid collected for the affected municipalities",
+      "label_ja": "ボゴタ市 被災市町村向けに1,174トンを集約",
+      "label_es": "Alcaldía de Bogotá — 1.174 toneladas de ayudas recaudadas para los municipios afectados",
+      "url": "https://bogota.gov.co/mi-ciudad/gobierno/ya-van-1174-toneladas-de-ayudas-y-donaciones-de-bogota-por-terremoto",
+      "tier": "official"
     }
   ],
   "source_policy_en": "Source hierarchy: official > media > TBC. Government and scientific-agency figures are used as primary; media reports are used only where official figures are not yet published and are labelled as such. Items still being verified are marked TBC. Preliminary figures are never replaced by larger unverified numbers.",

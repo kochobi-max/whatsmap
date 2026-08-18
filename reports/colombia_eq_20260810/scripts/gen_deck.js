@@ -221,6 +221,7 @@ const CELL = {
   "Cancillería de Colombia, 17 Aug": { ja: "コロンビア外務省（8月17日）", es: "Cancillería de Colombia, 17 de agosto" },
   "UNGRD / Cancillería": { ja: "UNGRD／コロンビア外務省", es: "UNGRD / Cancillería" },
   "17 Aug": { ja: "8月17日", es: "17 ago." },
+  "Alcaldía Mayor de Bogotá, 16 Aug": { ja: "ボゴタ特別市（8月16日）", es: "Alcaldía Mayor de Bogotá, 16 de agosto" },
   "Cancillería de Colombia / donor governments, 14 Aug": { ja: "コロンビア外務省・拠出国政府（8月14日）", es: "Cancillería de Colombia / gobiernos donantes, 14 de agosto" },
   "Cancillería de Colombia (listing); Japanese Red Cross; Nippon Foundation": { ja: "コロンビア外務省（掲載）、日本赤十字社、日本財団", es: "Cancillería de Colombia (listado); Cruz Roja Japonesa; Nippon Foundation" },
   "UNGRD, 14-15 Aug": { ja: "UNGRD（8月14〜15日）", es: "UNGRD, 14-15 de agosto" },
