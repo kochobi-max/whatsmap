@@ -67,7 +67,7 @@ const UI_ES = {
   "Reported": "Reportado",
   "Officials of the Alcaldía de Santiago de Cali. City figures; they are not a subset of any national cut-off.": "Funcionarios de la Alcaldía de Santiago de Cali. Son cifras de la ciudad; no son el desglose de ningún corte nacional.",
   "15,568": "15.568",
-  "4,147": "4.147",
+  "4,548": "4.548",
   "3,653": "3.653",
   "Missing": "Desaparecidos",
   "Missing Persons: two counts": "Personas desaparecidas: dos conteos",
@@ -98,7 +98,7 @@ const UI_ES = {
   "Seismotectonic Setting: an intraslab earthquake": "Marco sismotectónico: un sismo intraplaca dentro de la losa",
   "Schematic cross-section (ADRC)": "Corte esquemático (ADRC)",
   "Overview of the Earthquake & Response Measures": "Resumen del sismo y medidas de respuesta",
-  "Chronology of the Response (10-17 August)": "Cronología de la respuesta (10-17 de agosto)",
+  "Chronology of the Response (10-18 August)": "Cronología de la respuesta (10-18 de agosto)",
   "Times are Colombia time (COT, UTC-5). The earthquake occurred at 07:34 COT = 21:34 JST on 10 August.": "Las horas están en hora de Colombia (COT, UTC-5). El sismo ocurrió a las 07:34 COT = 21:34 JST del 10 de agosto.",
   "Time": "Hora",
   "Action": "Hecho",
@@ -214,6 +214,8 @@ const CELL = {
   "15 Aug 06:30": { ja: "8月15日 06:30", es: "15 ago. 06:30" },
   "16 Aug 07:30": { ja: "8月16日 07:30", es: "16 ago. 07:30" },
   "16 Aug 18:30": { ja: "8月16日 18:30", es: "16 ago. 18:30" },
+  "18 Aug 06:30": { ja: "8月18日 06:30", es: "18 ago. 06:30" },
+  "UNGRD, 18 Aug": { ja: "UNGRD（8月18日）", es: "UNGRD, 18 de agosto" },
   "UNGRD, 16 Aug 18:30": { ja: "UNGRD（8月16日18:30）", es: "UNGRD, 16 de agosto 18:30" },
   "UNGRD, 16 Aug": { ja: "UNGRD（8月16日）", es: "UNGRD, 16 de agosto" },
   "UNGRD, 15 Aug": { ja: "UNGRD（8月15日）", es: "UNGRD, 15 de agosto" },
@@ -504,7 +506,7 @@ footer(s);
   pages.forEach((rows, pi) => {
     s = newSlide();
     const suffix = pages.length > 1 ? T(` (${pi + 1}/${pages.length})`, `（${pi + 1}/${pages.length}）`) : "";
-    heading(s, "Chronology of the Response (10-17 August)", "対応の時系列（8月10〜17日）", suffix);
+    heading(s, "Chronology of the Response (10-18 August)", "対応の時系列（8月10〜18日）", suffix);
     subNote(s, "Times are Colombia time (COT, UTC-5). The earthquake occurred at 07:34 COT = 21:34 JST on 10 August.",
       "時刻はコロンビア時間（COT、UTC-5）。地震発生は8月10日07:34 COT＝同日21:34 JST。");
     const rowsT = [[th(T("Time", "時刻")), th(T("Action", "事項")), th(T("Source", "出典"))]];
@@ -655,9 +657,9 @@ s = newSlide();
 heading(s, "Human Damage", "人的被害");
 {
   const big = [
-    [T("Deaths", "死者"), "287", RED],
-    [T("Injured", "負傷者"), T("4,147", "4,147"), "9A3B12"],
-    [T("Missing", "行方不明"), "194", NAVY],
+    [T("Deaths", "死者"), "304", RED],
+    [T("Injured", "負傷者"), T("4,548", "4,548"), "9A3B12"],
+    [T("Missing", "行方不明"), "426", NAVY],
   ];
   big.forEach((b, i) => {
     const x = 0.4 + i * 4.2;
@@ -693,7 +695,7 @@ s = newSlide();
 heading(s, "Missing Persons: two counts", "行方不明者：2つの集計");
 {
   const big = [
-    [T("Reported to the authorities", "当局への届出"), "194", RED],
+    [T("Reported to the authorities", "当局への届出"), "426", RED],
     [T("Unresolved on the citizen platform", "市民プラットフォームの未解決"), T("3,653", "3,653"), "9A3B12"],
     [T("Located through the platform", "同プラットフォームで確認済み"), "429", NAVY],
   ];
