@@ -98,7 +98,7 @@ const UI_ES = {
   "Seismotectonic Setting: an intraslab earthquake": "Marco sismotectónico: un sismo intraplaca dentro de la losa",
   "Schematic cross-section (ADRC)": "Corte esquemático (ADRC)",
   "Overview of the Earthquake & Response Measures": "Resumen del sismo y medidas de respuesta",
-  "Chronology of the Response (10-15 August)": "Cronología de la respuesta (10-15 de agosto)",
+  "Chronology of the Response (10-17 August)": "Cronología de la respuesta (10-17 de agosto)",
   "Times are Colombia time (COT, UTC-5). The earthquake occurred at 07:34 COT = 21:34 JST on 10 August.": "Las horas están en hora de Colombia (COT, UTC-5). El sismo ocurrió a las 07:34 COT = 21:34 JST del 10 de agosto.",
   "Time": "Hora",
   "Action": "Hecho",
@@ -218,6 +218,9 @@ const CELL = {
   "UNGRD, 16 Aug": { ja: "UNGRD（8月16日）", es: "UNGRD, 16 de agosto" },
   "UNGRD, 15 Aug": { ja: "UNGRD（8月15日）", es: "UNGRD, 15 de agosto" },
   "Cancillería / donors": { ja: "コロンビア外務省／拠出国", es: "Cancillería / donantes" },
+  "Cancillería de Colombia, 17 Aug": { ja: "コロンビア外務省（8月17日）", es: "Cancillería de Colombia, 17 de agosto" },
+  "UNGRD / Cancillería": { ja: "UNGRD／コロンビア外務省", es: "UNGRD / Cancillería" },
+  "17 Aug": { ja: "8月17日", es: "17 ago." },
   "Cancillería de Colombia / donor governments, 14 Aug": { ja: "コロンビア外務省・拠出国政府（8月14日）", es: "Cancillería de Colombia / gobiernos donantes, 14 de agosto" },
   "Cancillería de Colombia (listing); Japanese Red Cross; Nippon Foundation": { ja: "コロンビア外務省（掲載）、日本赤十字社、日本財団", es: "Cancillería de Colombia (listado); Cruz Roja Japonesa; Nippon Foundation" },
   "UNGRD, 14-15 Aug": { ja: "UNGRD（8月14〜15日）", es: "UNGRD, 14-15 de agosto" },
@@ -500,7 +503,7 @@ footer(s);
   pages.forEach((rows, pi) => {
     s = newSlide();
     const suffix = pages.length > 1 ? T(` (${pi + 1}/${pages.length})`, `（${pi + 1}/${pages.length}）`) : "";
-    heading(s, "Chronology of the Response (10-15 August)", "対応の時系列（8月10〜15日）", suffix);
+    heading(s, "Chronology of the Response (10-17 August)", "対応の時系列（8月10〜17日）", suffix);
     subNote(s, "Times are Colombia time (COT, UTC-5). The earthquake occurred at 07:34 COT = 21:34 JST on 10 August.",
       "時刻はコロンビア時間（COT、UTC-5）。地震発生は8月10日07:34 COT＝同日21:34 JST。");
     const rowsT = [[th(T("Time", "時刻")), th(T("Action", "事項")), th(T("Source", "出典"))]];

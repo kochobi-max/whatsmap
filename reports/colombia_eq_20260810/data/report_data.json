@@ -4,22 +4,22 @@
     "title_ja": "2026年 チョコ地震（コロンビア）",
     "subtitle_en": "M7.4, San José del Palmar, Chocó Department - 10 August 2026",
     "subtitle_ja": "M7.4、チョコ県サンホセ・デル・パルマル、2026年8月10日",
-    "edition_en": "11th report",
-    "edition_ja": "第11報",
+    "edition_en": "12th report",
+    "edition_ja": "第12報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
     "glide": "EQ-2026-000146-COL",
-    "as_of_en": "Figures as of the UNGRD balance with an 18:30 COT cut-off on 16 Aug 2026: 287 deaths, 4,147 injured, 194 missing, 355 people and 496 animals rescued alive, 472 municipalities in 15 departments, 120,671 families (185,996 people) affected, 26,392 homes destroyed and 127,608 damaged, 197 buildings collapsed. UNGRD attributes the movement in these counts to verification and consolidation of figures reported from the territories, some of which arrived unverified. All figures are preliminary; quote the cut-off with the number.",
-    "as_of_ja": "数値は2026年8月16日18:30（コロンビア時間）締めのUNGRD集計現在。死者287人、負傷4,147人、行方不明194人、生存救出355人・動物496頭、15県・472市町村。被災120,671世帯・185,996人、住宅全壊26,392棟・損壊127,608棟、建物倒壊197棟。UNGRDは、これらの数値の変動について、地方から報告された数値の検証と統合によるものであり、一部は未検証のまま送られていたと説明している。すべて速報値。引用の際は集計時点を併記されたい。",
+    "as_of_en": "Figures as of the UNGRD balance with an 18:30 COT cut-off on 16 Aug 2026: 287 deaths, 4,147 injured, 194 missing, 355 people and 496 animals rescued alive, 472 municipalities in 15 departments, 120,671 families (185,996 people) affected, 26,392 homes destroyed and 127,608 damaged, 197 buildings collapsed. UNGRD attributes the movement in these counts to verification and consolidation of figures reported from the territories, some of which arrived unverified. All figures are preliminary; quote the cut-off with the number. As of 17 August the Foreign Ministry reports 222.5 tonnes of humanitarian aid and 144 members of international teams received.",
+    "as_of_ja": "数値は2026年8月16日18:30（コロンビア時間）締めのUNGRD集計現在。死者287人、負傷4,147人、行方不明194人、生存救出355人・動物496頭、15県・472市町村。被災120,671世帯・185,996人、住宅全壊26,392棟・損壊127,608棟、建物倒壊197棟。UNGRDは、これらの数値の変動について、地方から報告された数値の検証と統合によるものであり、一部は未検証のまま送られていたと説明している。すべて速報値。引用の際は集計時点を併記されたい。　8月17日時点で、外務省は人道支援物資222.5トンと国際チーム144人の受け入れを報告している。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-08-17 17:09 JST",
-    "update_date": "17/08/2026",
+    "stamp": "2026-08-18 09:45 JST",
+    "update_date": "18/08/2026",
     "title_es": "Terremoto del Chocó de 2026 (Colombia)",
     "subtitle_es": "M7.4, San José del Palmar, departamento del Chocó — 10 de agosto de 2026",
-    "edition_es": "11.º informe",
+    "edition_es": "12.º informe",
     "prepared_by_es": "Centro Asiático para la Reducción de Desastres (ADRC)",
-    "as_of_es": "Cifras del balance de la UNGRD con corte a las 18:30 COT del 16 de agosto de 2026: 287 muertos, 4.147 heridos, 194 desaparecidos, 355 personas y 496 animales rescatados con vida, 472 municipios en 15 departamentos, 120.671 familias (185.996 personas) afectadas, 26.392 viviendas destruidas y 127.608 averiadas, 197 edificios colapsados. La UNGRD atribuye el movimiento de estos conteos al proceso de verificación y consolidación de la información reportada desde los territorios, parte de ella enviada sin verificar. Todas las cifras son preliminares; cite la hora de corte junto con el número.",
+    "as_of_es": "Cifras del balance de la UNGRD con corte a las 18:30 COT del 16 de agosto de 2026: 287 muertos, 4.147 heridos, 194 desaparecidos, 355 personas y 496 animales rescatados con vida, 472 municipios en 15 departamentos, 120.671 familias (185.996 personas) afectadas, 26.392 viviendas destruidas y 127.608 averiadas, 197 edificios colapsados. La UNGRD atribuye el movimiento de estos conteos al proceso de verificación y consolidación de la información reportada desde los territorios, parte de ella enviada sin verificar. Todas las cifras son preliminares; cite la hora de corte junto con el número. Al 17 de agosto la Cancillería reporta 222,5 toneladas de ayuda humanitaria y 144 integrantes de equipos internacionales recibidos.",
     "disseminate_es": "Informe multilingüe (EN/JA/ES) para difusión nacional e internacional. Se da prioridad a las fuentes oficiales; los vacíos se completan con información de prensa debidamente identificada."
   },
   "event": {
@@ -484,6 +484,14 @@
       "en": "UNGRD balance with an 18:30 cut-off: 287 dead, 4,147 injured, 194 missing, 355 people and 496 animals rescued alive; 120,671 families (185,996 people) affected across 472 municipalities in 15 departments; 26,392 homes destroyed and 127,608 damaged; 197 buildings collapsed; 304 health, 3,207 educational and 4,059 community facilities; 410 roads, 95 aqueducts, 48 road bridges, 13 footbridges and five airports.",
       "ja": "18:30締めのUNGRD集計。死者287人、負傷4,147人、行方不明194人、生存救出355人・動物496頭。15県・472市町村で被災120,671世帯・185,996人。住宅全壊26,392棟・損壊127,608棟、建物倒壊197棟。医療304、教育3,207、コミュニティ4,059か所。道路410路線、上水道95系統、道路橋48橋、歩道橋13橋、空港5か所。",
       "es": "Balance de la UNGRD con corte a las 18:30: 287 fallecidos, 4.147 heridos, 194 desaparecidos, 355 personas y 496 animales rescatados con vida; 120.671 familias (185.996 personas) afectadas en 472 municipios de 15 departamentos; 26.392 viviendas destruidas y 127.608 averiadas; 197 edificios colapsados; 304 sedes de salud, 3.207 educativas y 4.059 comunitarias; 410 vías, 95 acueductos, 48 puentes vehiculares, 13 peatonales y cinco aeropuertos."
+    },
+    {
+      "time": "17 Aug",
+      "tier": "official",
+      "src": "UNGRD / Cancillería",
+      "en": "UNGRD explains the reductions in its registers: five names left the list of the dead and 177 the consolidated missing list because the same person could appear in several territorial reports and be counted more than once during verification; the change does not necessarily correspond to new findings. The Foreign Ministry reports 222.5 tonnes of humanitarian aid and 144 members of international teams received, and says no country has been excluded; China announces 80 tonnes.",
+      "ja": "UNGRDが登録簿の減少を説明。死者名簿から5人、行方不明の統合名簿から177人が外れたのは、検証の過程で同一人物が複数の地方報告に現れ二重計上され得たためであり、必ずしも新たな発見に対応するものではないとする。外務省は人道支援物資222.5トンと国際チーム144人の受け入れを報告し、いかなる国も排除していないと表明。中国は80トンを発表。",
+      "es": "La UNGRD explica las reducciones en sus registros: cinco nombres salieron del listado de fallecidos y 177 del consolidado de desaparecidos porque una misma persona podía aparecer en varios reportes territoriales y contarse más de una vez durante la verificación; el cambio no corresponde necesariamente a nuevos hallazgos. La Cancillería reporta 222,5 toneladas de ayuda humanitaria y 144 integrantes de equipos internacionales recibidos, y afirma que no se ha excluido a ningún país; China anuncia 80 toneladas."
     }
   ],
   "areas": [
@@ -583,13 +591,13 @@
     {
       "item_en": "Deaths",
       "item_ja": "死者",
-      "value_en": "287 (UNGRD, 18:30 cut on 16 Aug), down from 289 at the 07:30 cut that morning and 294 on 15 Aug. The series ran 273, 281, 285, 287, 288, 294, 289 and now 287; UNGRD attributes the movement to verification of figures sent from the territories. Chocó, Risaralda and Valle del Cauca remain the worst affected.",
-      "value_ja": "287人（UNGRD、8月16日18:30締め）。同日07:30締めの289人、15日の294人から減少。推移は273→281→285→287→288→294→289→287人であり、UNGRDはこの変動を地方から送られた数値の検証によるものと説明している。被害が最も大きいのはチョコ、リサラルダ、バジェ・デル・カウカの3県。",
+      "value_en": "287 (UNGRD, 18:30 cut on 16 Aug), down from 289 at the 07:30 cut that morning and 294 on 15 Aug. The series ran 273, 281, 285, 287, 288, 294, 289 and now 287; UNGRD attributes the movement to verification of figures sent from the territories. Chocó, Risaralda and Valle del Cauca remain the worst affected. On 17 August UNGRD explained the reductions: five names left the register of the dead and 177 left the consolidated missing list, because the same person could appear in several territorial reports and be counted more than once while the information was being verified. It stated the change does not necessarily correspond to new findings.",
+      "value_ja": "287人（UNGRD、8月16日18:30締め）。同日07:30締めの289人、15日の294人から減少。推移は273→281→285→287→288→294→289→287人であり、UNGRDはこの変動を地方から送られた数値の検証によるものと説明している。被害が最も大きいのはチョコ、リサラルダ、バジェ・デル・カウカの3県。　8月17日、UNGRDは減少の理由を説明した。死者の登録簿から5人、行方不明の統合名簿から177人が外れたのは、情報の検証中に同一人物が複数の地方報告に現れ、二重に計上され得たためである。UNGRDは、この変更が必ずしも新たな発見に対応するものではないと述べている。",
       "source_en": "UNGRD, 16 Aug 18:30",
       "source_ja": "UNGRD（8月16日18:30）",
       "tier": "official",
       "item_es": "Muertos",
-      "value_es": "287 (UNGRD, corte de las 18:30 del 16 de agosto), frente a 289 en el corte de las 07:30 de esa mañana y 294 el 15. La serie fue 273, 281, 285, 287, 288, 294, 289 y ahora 287; la UNGRD atribuye el movimiento a la verificación de las cifras enviadas desde los territorios. Chocó, Risaralda y Valle del Cauca siguen siendo los más afectados.",
+      "value_es": "287 (UNGRD, corte de las 18:30 del 16 de agosto), frente a 289 en el corte de las 07:30 de esa mañana y 294 el 15. La serie fue 273, 281, 285, 287, 288, 294, 289 y ahora 287; la UNGRD atribuye el movimiento a la verificación de las cifras enviadas desde los territorios. Chocó, Risaralda y Valle del Cauca siguen siendo los más afectados. El 17 de agosto la UNGRD explicó las reducciones: cinco nombres salieron del registro de fallecidos y 177 del listado consolidado de desaparecidos, porque una misma persona podía aparecer en varios reportes territoriales y ser contada más de una vez mientras se verificaba la información. Señaló que el cambio no corresponde necesariamente a nuevos hallazgos.",
       "source_es": "UNGRD, 16 de agosto 18:30"
     },
     {
@@ -1042,6 +1050,13 @@
       "en": "Colombia is taking INSARAG-classified USAR teams from four countries only - the United States, Israel, Ecuador and El Salvador - on the stated grounds that they are internationally certified, work to INSARAG standards under UN coordination, and are fully self-sufficient, so they place no additional burden on municipal administrations. Their role is to support the Colombian USAR teams already deployed. The Government denied reports that other offers were declined for ideological reasons; the selection has nonetheless been questioned in the Colombian press.",
       "ja": "コロンビアが受け入れているのは、米国、イスラエル、エクアドル、エルサルバドルの4か国のINSARAG分類USARチームのみである。政府は、これらが国際的に認証され、国連の調整の下でINSARAGの基準に沿って活動し、完全に自己完結型であるため市町村に追加の負担を生じさせないことを理由として挙げている。役割は、すでに展開しているコロンビアのUSARチームの支援である。政府は、他国の申し出をイデオロギー的な理由で断ったとの報道を否定したが、この選定はコロンビア国内の報道で疑問視されている。",
       "es": "Colombia recibe equipos USAR clasificados por INSARAG de solo cuatro países -Estados Unidos, Israel, Ecuador y El Salvador-, con el argumento de que están certificados internacionalmente, actúan con los estándares de INSARAG bajo coordinación de la ONU y son totalmente autónomos, por lo que no demandan recursos adicionales a las administraciones municipales. Su función es apoyar a los equipos USAR colombianos ya desplegados. El Gobierno negó que otros ofrecimientos se hayan rechazado por consideraciones ideológicas; aun así, la selección ha sido cuestionada en la prensa colombiana."
+    },
+    {
+      "tier": "official",
+      "source": "Cancillería de Colombia, 17 Aug",
+      "en": "By 17 August the Foreign Ministry reported 222.5 tonnes of humanitarian aid and 144 members of international teams received, stating that assistance arrived promptly and without restrictions in Chocó, Valle del Cauca and the Coffee Triangle. Delivered so far: El Salvador 100 t, Mexico 58.5 t, Chile 50 t, Peru 14 t. In preparation: Paraguay about 52 t, India 20 t, Guatemala 1,600 food kits and 3,000 hygiene kits (about 30 t), Luxembourg 75 family tents and four multipurpose tents, Germany 2,500 water filters and 3,000 kitchen kits, Sweden 150 family tents and 360 blankets. China announced 80 tonnes on 17 August. The Foreign Minister said no country had been excluded.",
+      "ja": "8月17日までに外務省は、人道支援物資222.5トンと国際チーム144人を受け入れたと報告し、支援はチョコ、バジェ・デル・カウカ、コーヒー三角地帯に速やかかつ制限なく届いたと述べた。到着済みの内訳は、エルサルバドル100トン、メキシコ58.5トン、チリ50トン、ペルー14トン。準備中はパラグアイ約52トン、インド20トン、グアテマラ（食料キット1,600・衛生キット3,000、約30トン）、ルクセンブルク（家族用テント75張・多目的テント4張）、ドイツ（浄水フィルター2,500・調理キット3,000）、スウェーデン（家族用テント150張・毛布360枚）。中国は8月17日に80トンを表明した。外相は、いかなる国も排除していないと述べている。",
+      "es": "Al 17 de agosto la Cancillería reportó 222,5 toneladas de ayuda humanitaria y 144 integrantes de equipos internacionales recibidos, y señaló que la asistencia llegó de manera ágil y sin restricciones al Chocó, el Valle del Cauca y el Eje Cafetero. Entregado hasta ahora: El Salvador 100 t, México 58,5 t, Chile 50 t, Perú 14 t. En preparación: Paraguay unas 52 t, India 20 t, Guatemala 1.600 kits de alimentos y 3.000 de aseo (unas 30 t), Luxemburgo 75 carpas familiares y cuatro multipropósito, Alemania 2.500 filtros de agua y 3.000 kits de cocina, Suecia 150 carpas familiares y 360 cobijas. China anunció 80 toneladas el 17 de agosto. El canciller afirmó que no se ha excluido a ningún país."
     },
     {
       "tier": "official",
@@ -2012,6 +2027,27 @@
       "label_es": "La Tercera — Colombia rebaja los muertos y eleva los heridos",
       "url": "https://www.latercera.com/mundo/noticia/colombia-rebaja-a-casi-287-los-muertos-y-eleva-a-cerca-de-4150-los-heridos-por-el-terremoto/",
       "tier": "media"
+    },
+    {
+      "label_en": "Infobae — UNGRD explains the reduction in the registers of dead and missing",
+      "label_ja": "Infobae UNGRDが死者・行方不明の登録簿の減少を説明",
+      "label_es": "Infobae — la UNGRD explica la reducción en el registro de fallecidos y desaparecidos",
+      "url": "https://www.infobae.com/colombia/2026/08/17/terremoto-en-colombia-ungrd-explica-la-reduccion-en-el-registro-de-fallecidos-y-desaparecidos/",
+      "tier": "media"
+    },
+    {
+      "label_en": "El Tiempo — Foreign Ministry: 220+ tonnes of aid and 144 international team members",
+      "label_ja": "El Tiempo 外務省 支援物資220トン超・国際チーム144人",
+      "label_es": "El Tiempo — Cancillería: más de 220 toneladas de ayuda y 144 integrantes de equipos internacionales",
+      "url": "https://www.eltiempo.com/politica/gobierno/colombia-ha-recibido-mas-de-220-toneladas-de-ayuda-humanitaria-y-144-integrantes-de-equipos-internacionales-tras-el-terremoto-informo-la-cancilleria-3578924",
+      "tier": "media"
+    },
+    {
+      "label_en": "Infobae — China sends 80 tonnes of aid to Colombia",
+      "label_ja": "Infobae 中国が80トンの支援物資を送付",
+      "label_es": "Infobae — China envía 80 toneladas de ayuda a Colombia",
+      "url": "https://www.infobae.com/colombia/2026/08/17/china-envia-80-toneladas-de-ayuda-a-colombia-tras-el-terremoto-asi-es-el-cargamento-que-llegara-a-bogota/",
+      "tier": "media"
     }
   ],
   "source_policy_en": "Source hierarchy: official > media > TBC. Government and scientific-agency figures are used as primary; media reports are used only where official figures are not yet published and are labelled as such. Items still being verified are marked TBC. Preliminary figures are never replaced by larger unverified numbers.",
@@ -2473,12 +2509,12 @@
     "note_ja": "生き埋め230人に対して救出88人という比は、カリにおける今後48時間を左右する数値である。これは捜索救助の未処理件数であり、市の死者数を上回っている。",
     "note_es": "230 personas atrapadas frente a 88 rescatadas es la cifra que marca las próximas 48 horas en Cali: es la carga de trabajo de búsqueda y rescate, y es mayor que el número de fallecidos de la ciudad."
   },
-  "support_intl_note_title_en": "A filtered acceptance, then a broader flow",
-  "support_intl_note_title_ja": "絞り込んだ受け入れ、その後の広がり",
-  "support_intl_note_title_es": "Una aceptación filtrada y luego un flujo más amplio",
-  "support_intl_note_en": "Two patterns sit side by side. Search and rescue was opened to four countries only - the United States, Israel, Ecuador and El Salvador - on stated criteria of INSARAG classification, self-sufficiency and speed, although offers came from at least seventeen and several of the others hold the same classification; the Government has denied that ideology played a part and the argument is running in the Colombian press. Relief goods and money, by contrast, are being taken broadly: India, Norway, Sweden, Spain, Italy, Chile, Mexico, Turkey, Brazil, the World Bank and the earlier US, EU and CAF contributions, against a stated total of about USD 1.3 billion in offers. The distinction is defensible - rescue teams work inside a national command structure and relief goods do not - and it is the one an ADRC reader should take away: under Ley 1523 the response is Colombia's to direct, and a country that narrows the operational field this far should expect to explain the basis in writing.",
-  "support_intl_note_ja": "2つの構図が並んでいる。捜索救助は4か国——米国、イスラエル、エクアドル、エルサルバドル——にのみ開かれた。政府が挙げる基準はINSARAG分類、自己完結性、展開の速さであるが、申し出は少なくとも17か国からあり、他の何か国かも同じ分類を保持している。政府はイデオロギーの関与を否定しており、この点はコロンビア国内で議論になっている。一方、物資と資金は幅広く受け入れられている。インド、ノルウェー、スウェーデン、スペイン、イタリア、チリ、メキシコ、トルコ、ブラジル、世界銀行、および先行する米国・EU・CAFの拠出であり、申し出の総額は約13億米ドルとされる。この区別には理由がある。救助チームは受入国の指揮系統の内側で活動するが、物資はそうではない。ADRCの読者が持ち帰るべき点もここにある。法1523号の下で対応を指揮するのはコロンビア自身であり、活動する側の受け入れをここまで絞る場合、その根拠を文書で説明できるようにしておくことが求められる。",
-  "support_intl_note_es": "Conviven dos patrones. La búsqueda y rescate se abrió solo a cuatro países -Estados Unidos, Israel, Ecuador y El Salvador- con criterios declarados de clasificación INSARAG, autosuficiencia y rapidez, aunque los ofrecimientos llegaron de al menos diecisiete y varios de los demás tienen la misma clasificación; el Gobierno ha negado que la ideología haya influido y el debate sigue en la prensa colombiana. Los insumos y el dinero, en cambio, se reciben ampliamente: India, Noruega, Suecia, España, Italia, Chile, México, Turquía, Brasil, el Banco Mundial y los aportes previos de Estados Unidos, la UE y la CAF, frente a un total declarado de unos 1.300 millones de dólares en ofrecimientos. La distinción es defendible -los equipos de rescate operan dentro de una estructura de mando nacional y los insumos no- y es la lección que conviene retener: bajo la Ley 1523 la respuesta la dirige Colombia, y un país que restringe tanto el campo operativo debe estar en condiciones de explicar por escrito el criterio aplicado.",
+  "support_intl_note_title_en": "Rescue was filtered; relief was not",
+  "support_intl_note_title_ja": "絞られたのは救助であって、物資ではない",
+  "support_intl_note_title_es": "Se filtró el rescate, no la ayuda",
+  "support_intl_note_en": "The two channels can now be quantified separately, and that is the finding. Search and rescue was opened to four countries only - the United States, Israel, Ecuador and El Salvador - on stated criteria of INSARAG classification, self-sufficiency and speed, even though offers came from at least seventeen and several of the others hold the same classification. Relief was not filtered: by 17 August the Foreign Ministry counted 222.5 tonnes delivered and 144 international team members received, from El Salvador, Mexico, Chile and Peru, with Paraguay, India, Guatemala, Luxembourg, Germany, Sweden and China in the pipeline and about USD 1.3 billion in offers on the table. The Foreign Minister says no country has been excluded. Both statements hold at once because they describe different things, and the distinction is what to carry away: rescue teams work inside a national command structure and must be certified and self-sufficient to be useful, while relief goods do not. Under Ley 1523 the response is Colombia's to direct - and a country that narrows the operational field this far should still expect to explain the basis in writing.",
+  "support_intl_note_ja": "2つの経路をそれぞれ数値で示せるようになった。ここが要点である。捜索救助は4か国——米国、イスラエル、エクアドル、エルサルバドル——にのみ開かれた。政府の基準はINSARAG分類、自己完結性、展開の速さであり、申し出は少なくとも17か国、うち何か国かは同じ分類を保持していた。一方、物資は絞られていない。8月17日までに外務省は、エルサルバドル、メキシコ、チリ、ペルーからの222.5トンの到着と国際チーム144人の受け入れを数えており、パラグアイ、インド、グアテマラ、ルクセンブルク、ドイツ、スウェーデン、中国が続く。申し出の総額は約13億米ドルとされる。外相は、いかなる国も排除していないと述べている。この2つの説明は同時に成り立つ。異なる対象について述べているからである。持ち帰るべき区別もここにある。救助チームは受入国の指揮系統の内側で活動するため、認証と自己完結性がなければ役に立たないが、物資はそうではない。法1523号の下で対応を指揮するのはコロンビア自身であり、それでもなお、活動する側の受け入れをここまで絞る場合には、その根拠を文書で説明できるようにしておくことが求められる。",
+  "support_intl_note_es": "Los dos canales ya pueden cuantificarse por separado, y ese es el hallazgo. La búsqueda y rescate se abrió solo a cuatro países -Estados Unidos, Israel, Ecuador y El Salvador- con criterios declarados de clasificación INSARAG, autosuficiencia y rapidez, aunque los ofrecimientos llegaron de al menos diecisiete y varios de los demás tienen la misma clasificación. La ayuda no se filtró: al 17 de agosto la Cancillería contaba 222,5 toneladas entregadas y 144 integrantes de equipos internacionales recibidos, de El Salvador, México, Chile y Perú, con Paraguay, India, Guatemala, Luxemburgo, Alemania, Suecia y China en camino y unos 1.300 millones de dólares en ofrecimientos sobre la mesa. El canciller afirma que no se ha excluido a ningún país. Ambas afirmaciones se sostienen a la vez porque describen cosas distintas, y esa es la distinción que conviene retener: los equipos de rescate operan dentro de una estructura de mando nacional y deben estar certificados y ser autosuficientes para servir; los insumos no. Bajo la Ley 1523 la respuesta la dirige Colombia y, aun así, un país que restringe tanto el campo operativo debe estar en condiciones de explicar por escrito el criterio aplicado.",
   "missing_note_title_en": "Two different “missing” numbers",
   "missing_note_title_ja": "「行方不明」の2つの数字",
   "missing_note_title_es": "Dos cifras distintas de «desaparecidos»",
