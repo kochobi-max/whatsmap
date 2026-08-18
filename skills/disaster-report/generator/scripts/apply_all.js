@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /*
- * apply_all.js — 6本のパッチを正しい順序でまとめて当てる
+ * apply_all.js — 7本のパッチを正しい順序でまとめて当てる
  *
  * 使い方:
  *   node scripts/apply_all.js --file "<gen_deck.js のパス>" --dry-run   ← まずこれ
@@ -18,6 +18,7 @@
 
 const { execFileSync } = require("child_process");
 const fs = require("fs");
+const os = require("os");
 const path = require("path");
 
 const ORDER = [
@@ -27,6 +28,7 @@ const ORDER = [
   ["apply_receiver_slides.js", "汎用キー6種の受け皿スライドを足す"],
   ["apply_data_guards.js", "データが欠けてもビルドが落ちないようにする"],
   ["apply_attribution_patch.js", "出典・キャプション・発震機構の日本固有記述を外出しする"],
+  ["apply_bilingual_fields.js", "value_en / value_ja のような言語別キーを読めるようにする"],
 ];
 
 function main() {
@@ -46,7 +48,20 @@ function main() {
   const before = fs.readFileSync(file, "utf8");
   console.log(`対象: ${file}`);
   console.log(`行数: ${before.split("\n").length}`);
-  console.log(dryRun ? "モード: --dry-run（書き込みません）\n" : "モード: 本適用\n");
+  console.log(dryRun ? "モード: --dry-run（元ファイルは書き換えません）\n" : "モード: 本適用\n");
+
+  // --dry-run は各パッチに --dry-run を渡すのでは意味がない。
+  // 後段のパッチは前段のパッチが書き換えた行を探すので、素の gen_deck.js に対しては
+  // 必ず「対象0件」で落ちる。実際 apply_bilingual_fields.js は
+  // apply_attribution_patch.js が作る intensitySeg() を探すため、これで空振りした。
+  // そこで一時ファイルへ実際に7本当てきり、成否だけを報告して元ファイルは触らない。
+  let target = file;
+  let tmpDir = null;
+  if (dryRun) {
+    tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), "apply_all-"));
+    target = path.join(tmpDir, "gen_deck.js");
+    fs.copyFileSync(file, target);
+  }
 
   const HERE = __dirname;
   const done = [];
@@ -55,14 +70,15 @@ function main() {
     if (!fs.existsSync(p)) { console.error(`✗ スクリプトが見つかりません: ${p}`); process.exit(1); }
     process.stdout.write(`── ${script}\n   ${what}\n`);
     try {
-      const args = [p, "--file", file];
-      if (dryRun) args.push("--dry-run");
-      const out = execFileSync(process.execPath, args, { encoding: "utf8" });
+      const out = execFileSync(process.execPath, [p, "--file", target], { encoding: "utf8" });
       const line = out.split("\n").find(l => l.includes("✓") || l.includes("すでに")) || "";
       console.log(`   ${line.trim() || "完了"}\n`);
       done.push(script);
     } catch (e) {
-      console.error(`\n✗ ${script} で中断しました。ここまでの ${done.length} 本は適用済みです。\n`);
+      if (tmpDir) fs.rmSync(tmpDir, { recursive: true, force: true });
+      console.error(dryRun
+        ? `\n✗ ${script} が当たりません（一時コピーでの試行なので、元ファイルは無傷です）。\n`
+        : `\n✗ ${script} で中断しました。ここまでの ${done.length} 本は適用済みです。\n`);
       console.error((e.stdout || "") + (e.stderr || ""));
       console.error("gen_deck.js の該当箇所が変わっている可能性があります。");
       console.error("generator/README.md の該当節を見て、手で当ててください。");
@@ -71,14 +87,18 @@ function main() {
   }
 
   if (dryRun) {
-    console.log("── すべて適用可能です。--dry-run を外して実行してください。");
+    const rehearsed = fs.readFileSync(target, "utf8");
+    fs.rmSync(tmpDir, { recursive: true, force: true });
+    console.log("── すべて適用できました（一時コピーに対して7本とも通り、構文チェックも通過）。");
+    console.log(`   行数: ${before.split("\n").length} → ${rehearsed.split("\n").length}`);
+    console.log("   元ファイルは書き換えていません。--dry-run を外して実行してください。");
     return;
   }
 
   const after = fs.readFileSync(file, "utf8");
   console.log("── 完了");
   console.log(`   行数: ${before.split("\n").length} → ${after.split("\n").length}`);
-  console.log(`   バックアップ: ${file}.bak / .gates.bak / .locator.bak / .receivers.bak / .guards.bak / .attrib.bak`);
+  console.log(`   バックアップ: ${file}.bak / .gates.bak / .locator.bak / .receivers.bak / .guards.bak / .attrib.bak / .bilingual.bak`);
   console.log("\n次にやること:");
   console.log("  1. 熊本でビルドし、27ページ・内容が従来どおりであることを確認する");
   console.log("     LANG_OUT=ja EVENT=EQ-2026-000135-JPN node scripts/gen_deck.js");
