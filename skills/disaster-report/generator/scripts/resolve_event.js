@@ -34,7 +34,8 @@ const GLIDE_RE = /^[A-Z]{2}-\d{4}-\d{6}-[A-Z]{3}$/;
 // ここに新しいキーを足したら、既存イベントの meta.optional_slides も見直すこと。
 // optional_slides は「列挙したものだけ描画する」許可リストなので、
 // 新しいキーを足すと、それを列挙していない既存イベントからページが黙って落ちる。
-const KNOWN_GATES = ["prior_event", "focus_incident", "civic_tech", "spectee", "satellite_jp"];
+const KNOWN_GATES = ["prior_event", "focus_incident", "civic_tech", "spectee", "satellite_jp",
+                     "historical", "closing"];
 const PLACEHOLDERS = ["DRAFT", "TBD", "PLACEHOLDER", "TODO", "XXXX", "＿＿"];
 
 // 数値急変ゲートのしきい値（SKILL.md §2 と一致させること）

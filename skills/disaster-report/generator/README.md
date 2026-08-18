@@ -449,7 +449,7 @@ gsi.go.jp／布田川／日奈久／八代／嘉島／千葉大／QPS／防災�
 
 ## パッチをまとめて当てる
 
-7本を1つずつ叩く必要はない。
+8本を1つずつ叩く必要はない。
 
 ```bash
 # 1) まず確認（何も書き込まない）
@@ -461,10 +461,10 @@ node scripts/apply_all.js \
   --file "C:\Users\arakida\OneDrive - adrc.asia\LargeScaleDisasters\_kumamoto_generator\gen_deck.js"
 ```
 
-- 正しい順序で7本を当てる。**途中で1本でも失敗したらそこで止まる**
+- 正しい順序で8本を当てる。**途中で1本でも失敗したらそこで止まる**
 - 各パッチは適用前に置換対象を数え、適用後に構文チェックし、`.bak` を残す
 - 二重に実行しても「すでに適用済み」で飛ばす（冪等）
-- 権威版2,165行に対して検証済み: **2,166 → 2,428行**
+- 権威版2,165行に対して検証済み: **2,166 → 2,584行**
 - `--dry-run` は一時コピーに7本を実際に当てきってから捨てる。
   各パッチに `--dry-run` を渡す方式だと、後段のパッチ（例: `apply_bilingual_fields.js` は
   `apply_attribution_patch.js` が作る `intensitySeg()` を探す）が必ず空振りするため。
@@ -572,3 +572,94 @@ node scripts/apply_all.js \
 6. apply_attribution_patch.js  出典・キャプション・発震機構の外出し
 7. apply_bilingual_fields.js   言語別キー（value_en/value_ja）を読む  ← 6の intensitySeg() に依存
 ```
+
+---
+
+## apply_receiver_slides_2.js（8本目）— 元の36ページとの差を埋める
+
+`apply_bilingual_fields.js` で「空になる列」は直った。残っていたのは
+**元の専用ジェネレータにあって統一版に受け皿が無いページ**。
+そのうち、どの国の災害でも使える形のものを足した。
+
+| キー | ページ | ゲート |
+|---|---|---|
+| `areas` | 被災地域（県・市町村・震央距離・震度） | `cities` が空でこれがあるときだけ、被災市町村ページの**表を差し替える** |
+| `aftershocks.rows` | 主な余震 | `aftershocks` が配列ではなくオブジェクトのときだけ |
+| `historical` | 過去の主な被害地震 | `optional_slides` に `"historical"` |
+| `observations` | 所見・注視点 | データがあれば |
+| `extra_slides` | 自由記述スライド（複数可） | データがあれば |
+| `meta.disseminate_*` | 巻末ページ | `optional_slides` に `"closing"` |
+
+### 被災地域は「新しいページ」ではなく「表の差し替え」
+
+国によって地理の単位が違う。日本は市町村＋人口、コロンビアは県＋市＋震央距離＋震度。
+別ページにすると、市町村ページが見出しだけの空表として残ってしまう。
+そこで**同じスライドの表だけ**差し替え、見出しと凡例も切り替える。
+
+- `cities` があるイベント: 従来どおり「被災市町村と人口」＋番号付き地図
+- `cities` が無く `areas` があるイベント: 「被災地域」＋★震源のみの凡例
+
+### extra_slides — 一品物のページをジェネレータを触らずに足す
+
+コロンビアの `cali`（カリ市の被害報告）、`pre_event`（事前リスク評価・GEM-TREQ都市プロファイル）は、
+災害ごとに形の違う一品物だった。国ごとに受け皿を書き足すときりが無い。
+「見出し＋導入文＋表＋画像＋注記＋出典」という1つの形に寄せ、**イベントJSON側で組む**。
+
+```json
+"extra_slides": [{
+  "title_en": "Cali: municipal damage report",
+  "title_ja": "カリ市の被害報告",
+  "intro_en": "...", "intro_ja": "...",
+  "columns": [
+    { "key": "item",  "label_en": "Item",  "label_ja": "項目", "w": 3.0 },
+    { "key": "value", "label_en": "Value", "label_ja": "数値", "w": 2.0, "align": "right" },
+    { "key": "note",  "label_en": "Note",  "label_ja": "備考", "w": 7.5 }
+  ],
+  "rows": [{ "item_ja": "倒壊建物", "item_en": "Collapsed buildings", "value": "25-30", "note_ja": "…", "note_en": "…" }],
+  "image": "gem_treq_cali",
+  "caption_en": "...", "caption_ja": "...",
+  "source": { "label": "Alcaldía de Santiago de Cali", "url": "https://..." }
+}]
+```
+
+- 値は `key` そのまま、または `key_en` / `key_ja` の言語ペア
+- `columns` と `rows` が無ければ `note_en/ja` を本文として1枚に流す
+- `image` は `images` のキー。あれば右半分に置き、表は左半分に寄る
+
+### 検証結果
+
+| | ページ | 熊本との比較 |
+|---|---|---|
+| 熊本 JA | 27 | 8本目適用前と**差分ゼロ** |
+| 熊本 EN | 27 | 同上 |
+| コロンビア JA | 34 | 日本固有語の混入 **0**（10語で検査） |
+| コロンビア EN | 36 | 日本語の混入 **0**（元の専用版と同じ36ページ） |
+
+熊本が変わらないのは、`historical` と `closing` が `optional_slides` ゲートで、
+熊本の許可リスト（`prior_event` / `focus_incident` / `civic_tech` / `spectee` / `satellite_jp`）に
+入っていないため。他はデータ駆動で、熊本にキーが無い。
+
+`KNOWN_GATES`（resolve_event.js）に `historical` / `closing` を追加した。
+`ALL_OPTIONAL_SLIDES`（migrate_event.js）には**入れていない** —
+移行時の既定でページが勝手に増えるのを避けるため。
+
+### コロンビアで統一版に出ないもの（残り）
+
+`cali` と `pre_event` は `extra_slides` に組み替えれば出る。**データ側の作業**で、
+ジェネレータの改修は要らない。`missing_note`（行方不明者の2系統）は被害状況の行に畳んである。
+
+### パッチの適用順（8本）
+
+```
+1. apply_event_patch.js        EVENT でイベント切り替え
+2. apply_slide_gates.js        optional_slides で出し分け
+3. apply_locator_patch.js      表紙3面ロケータのデータ駆動化
+4. apply_receiver_slides.js    汎用キー6種の受け皿
+5. apply_data_guards.js        欠損データでの停止を防ぐ
+6. apply_attribution_patch.js  出典・キャプション・発震機構の外出し
+7. apply_bilingual_fields.js   言語別キーを読む            ← 6 の intensitySeg() に依存
+8. apply_receiver_slides_2.js  被災地域・余震・過去地震・所見・自由記述・巻末
+```
+
+素の権威版2,165行に `apply_all.js` で8本通し、個別適用の結果と**完全一致**を確認済み。
+2,166 → 2,584行。
