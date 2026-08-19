@@ -132,6 +132,15 @@ def check(path, margin_in, min_size, footer_in=FOOTER_IN):
 
 
 def main():
+    # Windows の cmd はファイルへリダイレクトすると cp932 で書こうとして
+    # 「⚠」のような文字で UnicodeEncodeError を出す。UTF-8 に固定し、
+    # それでも書けない文字は置き換えて、検査結果そのものを失わないようにする。
+    for stream in (sys.stdout, sys.stderr):
+        try:
+            stream.reconfigure(encoding="utf-8", errors="replace")
+        except Exception:
+            pass
+
     args = sys.argv[1:]
     margin_in, min_size, footer_in = MARGIN_IN, MIN_SIZE, FOOTER_IN
     paths = []
