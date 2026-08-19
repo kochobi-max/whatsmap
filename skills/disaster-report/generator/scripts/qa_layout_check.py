@@ -164,6 +164,7 @@ def main():
         return 2
 
     total = 0
+    pages = 0
     for path in paths:
         if not os.path.exists(path):
             print(f"✗ 見つかりません: {path}")
@@ -192,11 +193,15 @@ def main():
             if len(rows) > 6:
                 print(f"      … 他 {len(rows) - 6}件")
         total += len(findings)
+        pages += len(by_page)
         print(f"   合計 {len(findings)}件 / {len(by_page)}ページ")
 
     print(f"\n{'✓ 指摘なし' if total == 0 else f'⚠ 合計 {total}件'}"
           f"   （余白 {margin_in}インチ / フッター帯 {footer_in}インチ / "
           f"画像との重なりは {min_size}pt 以上かつ{MIN_CHARS}文字以上）")
+    # Windows の findstr は cp932 で探すので、UTF-8 の日本語には一致しない。
+    # バッチから拾えるよう、ASCII だけの行を最後に足す。
+    print(f"SUMMARY: {total} findings / {pages} pages")
     return 1 if total else 0
 
 
