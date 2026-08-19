@@ -26,6 +26,9 @@
 - **Python が UTF-8 で書いたファイルを `findstr` で探さない。** `findstr` は cp932 で
   照合するので日本語に一致しない。バッチから拾う行は ASCII で出す
   （`qa_layout_check.py` の `SUMMARY: N findings / M pages`）
+- **`%USERPROFILE%\Desktop` に成果物を書かない。** Desktop が OneDrive に
+  リダイレクトされていて、画面に見えているデスクトップと別物になっている。
+  書けてはいるが本人からは見えない。出力はPDFと同じ場所（`LargeScaleDisasters\`）に置く
 - 相対パスの指示を出さない。`gen_deck.js` は自分の位置から `..\data` `..\images` を見るので、
   置き場所が1階層違うだけで全部外れる
 
