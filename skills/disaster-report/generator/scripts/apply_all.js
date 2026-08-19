@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /*
- * apply_all.js — 9本のパッチを正しい順序でまとめて当てる
+ * apply_all.js — 10本のパッチを正しい順序でまとめて当てる
  *
  * 使い方:
  *   node scripts/apply_all.js --file "<gen_deck.js のパス>" --dry-run   ← まずこれ
@@ -31,6 +31,7 @@ const ORDER = [
   ["apply_bilingual_fields.js", "value_en / value_ja のような言語別キーを読めるようにする"],
   ["apply_receiver_slides_2.js", "被災地域・主な余震・過去の地震・所見・自由記述・巻末を足す"],
   ["apply_event_images.js", "画像を images/<GLIDE>/ でイベントごとに分ける"],
+  ["apply_image_report.js", "画像がどのファイルに解決したかをビルド時に一覧表示する"],
 ];
 
 function main() {
@@ -100,7 +101,7 @@ function main() {
   const after = fs.readFileSync(file, "utf8");
   console.log("── 完了");
   console.log(`   行数: ${before.split("\n").length} → ${after.split("\n").length}`);
-  console.log(`   バックアップ: ${file}.bak / .gates.bak / .locator.bak / .receivers.bak / .guards.bak / .attrib.bak / .bilingual.bak / .receivers2.bak / .images.bak`);
+  console.log(`   バックアップ: ${file}.bak / .gates.bak / .locator.bak / .receivers.bak / .guards.bak / .attrib.bak / .bilingual.bak / .receivers2.bak / .images.bak / .imgreport.bak`);
   console.log("\n次にやること:");
   console.log("  1. 熊本でビルドし、27ページ・内容が従来どおりであることを確認する");
   console.log("     LANG_OUT=ja EVENT=EQ-2026-000135-JPN node scripts/gen_deck.js");

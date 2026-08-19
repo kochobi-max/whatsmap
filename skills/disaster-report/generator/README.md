@@ -449,7 +449,7 @@ gsi.go.jp／布田川／日奈久／八代／嘉島／千葉大／QPS／防災�
 
 ## パッチをまとめて当てる
 
-9本を1つずつ叩く必要はない。
+10本を1つずつ叩く必要はない。
 
 ```bash
 # 1) まず確認（何も書き込まない）
@@ -461,10 +461,10 @@ node scripts/apply_all.js \
   --file "C:\Users\arakida\OneDrive - adrc.asia\LargeScaleDisasters\_kumamoto_generator\gen_deck.js"
 ```
 
-- 正しい順序で9本を当てる。**途中で1本でも失敗したらそこで止まる**
+- 正しい順序で10本を当てる。**途中で1本でも失敗したらそこで止まる**
 - 各パッチは適用前に置換対象を数え、適用後に構文チェックし、`.bak` を残す
 - 二重に実行しても「すでに適用済み」で飛ばす（冪等）
-- 権威版2,165行に対して検証済み: **2,166 → 2,610行**
+- 権威版2,165行に対して検証済み: **2,166 → 2,649行**
 - `--dry-run` は一時コピーに7本を実際に当てきってから捨てる。
   各パッチに `--dry-run` を渡す方式だと、後段のパッチ（例: `apply_bilingual_fields.js` は
   `apply_attribution_patch.js` が作る `intensitySeg()` を探す）が必ず空振りするため。
@@ -761,3 +761,79 @@ rm -f images/EQ-2026-000146-COL/*_es.png images/EQ-2026-000146-COL/*_ja.png \
 | 震源・震度／地震活動 | `出典 気象庁（第3報）`、`気象庁の余震回数データが…` | `event.source_*` / `event.seismic_agency_*` をデータに入れる |
 
 **ページを増やしたら混入検査をやり直す。** 検査は「そのビルドに出ているページ」しか見ていない。
+
+---
+
+## apply_image_report.js（10本目）— 画像が引けなかったことに気づけない
+
+`imageSlot()` は画像が無いとき、点線の枠とプレースホルダ文言を描いて静かに次へ進む。
+例外は出ないし、ページ数も変わらない。
+
+本番環境でこれが表面化した。`images/` に27枚が無い状態のまま149ページがビルドされ、
+**ADRCロゴが全ページから消えていた**ことに、ファイルを開くまで誰も気づけなかった。
+原因はパッチではなく、画像ファイルが最初からその環境に無かったこと。
+それでもビルドは「成功」と表示される。
+
+書き出しの直前に、キーごとの解決結果を一覧で出す。
+
+```
+── 画像  解決 19 / 未解決 4
+   ✓ adrc_logo               images/adrc_logo.png
+   ✓ intensity_map           images/intensity_map_manual.png
+   ✗ building_damage         （枠のみ）
+   ✗ title_bg                （枠のみ）
+   ...
+   ⚠ 4件が枠のみです。images/ を確認してください。
+     探した場所: images/EQ-2026-000135-JPN  →  images
+```
+
+`resolveImg()` を包んで記録するだけなので、**出力される pptx は1バイトも変わらない**
+（熊本 JA 27ページで本文差分ゼロを確認）。
+
+### ロゴだけ別経路だった
+
+`logoPath()` は `resolveImg()` を通らず `HERE/../images/adrc_logo.<ext>` を直接見ていた。
+そのため **(1)** イベント別フォルダが効かず、**(2)** 一覧にも出ない。
+今回まさに全ページから消えたのがこのロゴなので、同じ探索経路に寄せた。
+拡張子は png / jpg / jpeg / gif を見るので、`resolveImg()` より広いままにしてある。
+
+### 画像の復旧について（2026-08-19）
+
+熊本の `images/` から27枚が失われていたが、**過去に配布した pptx に全部埋め込まれていた**。
+pptx は zip なので `ppt/media/` から取り出せる。キー名は、スライド番号 → 画像 の対応を
+rels から取り、ジェネレータのセクション順と突き合わせて復元した。
+
+取り出すときの注意。
+
+- **ロゴは埋め込み版を使わない。** 表示サイズに縮小されたもの（92px）が入っているだけで、
+  PDFにすると粗い。別の場所にある原寸を使う
+- `sizing: { type: "cover" }` で描かれた画像は**切り抜き後の別ファイル**として埋まっている。
+  表紙の3枚目は震源・震度ページと同じキーだが、切り抜き版なので原本ではない
+- JPEGで取り出したものは `<key>_manual.jpg` にする。`d.images` が `null` のキーは
+  `<key>.png` しか見ないため、`.jpg` はこの名前でないと拾われない
+
+### パッチの適用順（10本）
+
+```
+1. apply_event_patch.js        EVENT でイベント切り替え
+2. apply_slide_gates.js        optional_slides で出し分け
+3. apply_locator_patch.js      表紙3面ロケータのデータ駆動化
+4. apply_receiver_slides.js    汎用キー6種の受け皿
+5. apply_data_guards.js        欠損データでの停止を防ぐ
+6. apply_attribution_patch.js  出典・キャプション・発震機構の外出し
+7. apply_bilingual_fields.js   言語別キーを読む              ← 6 の intensitySeg() に依存
+8. apply_receiver_slides_2.js  被災地域・余震・過去地震・所見・自由記述・巻末
+9. apply_event_images.js       画像を images/<GLIDE>/ で分ける
+10. apply_image_report.js      画像の解決結果を一覧表示      ← 9 の imgDirs() に依存
+```
+
+素の権威版2,165行に `apply_all.js` で10本通し、個別に当てた結果と**完全一致**（2,166 → 2,649行）。
+
+### 現場で分かったこと — レイアウトの前提
+
+`gen_deck.js` は `scripts/` の下に置かれ、`data/` `images/` `output/` がその1つ上にある
+前提で書かれている。本番フォルダではこれが平置きになっていて、`build.sh` も動かなかった。
+置き換えの際は**必ず `scripts/` の中に入れる**こと。
+
+また `npm install` は OneDrive の中でやらない。`node_modules` が数千ファイル同期される。
+ホーム直下（`C:\Users\<user>`）に入れれば、Node が親を辿って見つける。
