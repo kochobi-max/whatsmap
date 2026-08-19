@@ -18,6 +18,10 @@ import sys
 import os
 
 MARGIN_IN = 0.12      # ページ端からこの内側に文字が収まっていること（インチ）
+FOOTER_IN = 0.50      # 下端のこの範囲は「フッター帯」。定型の飾りが入る前提で扱う
+FURNITURE = 0.50      # フッター帯で、全ページのこの割合以上に出てくる文字列は飾りとみなす
+MIN_CHARS = 3         # 画像との重なり判定の対象にする最小文字数
+                      # 地図上の番号マーカーや★は意図的に画像へ載せているため
 OVERLAP_R = 0.35      # 文字の面積のうちこの割合以上が画像と重なったら指摘
 MIN_SIZE   = 9.5      # 画像との重なり判定の対象にする最小フォントサイズ(pt)
                       # 画像の隅に載せる「© Google」等のクレジットは意図的なので除く
@@ -34,10 +38,36 @@ def rects_overlap_area(a, b):
     return (x1 - x0) * (y1 - y0)
 
 
-def check(path, margin_in, min_size):
+def furniture_texts(pdf, footer_in):
+    """フッター帯に繰り返し現れる文字列を集める。
+
+    ADRC・日付・「N / 149」のような定型の飾りを、溢れと取り違えないため。
+    文字列を決め打ちせず、出現頻度で判定する。ページ番号だけは毎ページ違うので
+    数字と区切り記号を別途落とす。
+    """
+    from collections import Counter
+    n = len(pdf.pages)
+    c = Counter()
+    for page in pdf.pages:
+        H = page.height
+        band = H - footer_in * PT
+        seen = set()
+        try:
+            words = page.extract_words() or []
+        except Exception:
+            words = []
+        for w in words:
+            if w["bottom"] > band:
+                seen.add((w.get("text") or "").strip())
+        c.update(seen)
+    return {t for t, k in c.items() if t and k >= FURNITURE * n}
+
+
+def check(path, margin_in, min_size, footer_in=FOOTER_IN):
     import pdfplumber
     findings = []
     with pdfplumber.open(path) as pdf:
+        furn = furniture_texts(pdf, footer_in)
         for pno, page in enumerate(pdf.pages, 1):
             W, H = page.width, page.height
             m = margin_in * PT
@@ -54,16 +84,21 @@ def check(path, margin_in, min_size):
                 if not text:
                     continue
 
+                in_footer = box[3] > H - footer_in * PT
+                is_furn = in_footer and (text in furn or text.isdigit()
+                                         or text in ("/", "・", "|"))
                 sides = []
                 if box[0] < m:      sides.append("左")
                 if box[2] > W - m:  sides.append("右")
                 if box[1] < m:      sides.append("上")
-                if box[3] > H - m:  sides.append("下")
+                if box[3] > H - m and not is_furn: sides.append("下")
+                if is_furn:
+                    continue        # フッターの飾り。溢れでも重なりでもない
                 if sides:
                     findings.append((pno, "はみ出し", "／".join(sides), text, round(size, 1)))
                     continue   # はみ出していれば重なりは重複して報告しない
 
-                if size and size < min_size:
+                if (size and size < min_size) or len(text) < MIN_CHARS:
                     continue
                 area = max(1e-6, (box[2] - box[0]) * (box[3] - box[1]))
                 hit = False
@@ -98,13 +133,14 @@ def check(path, margin_in, min_size):
 
 def main():
     args = sys.argv[1:]
-    margin_in, min_size = MARGIN_IN, MIN_SIZE
+    margin_in, min_size, footer_in = MARGIN_IN, MIN_SIZE, FOOTER_IN
     paths = []
     i = 0
     while i < len(args):
         a = args[i]
         if a == "--margin":   margin_in = float(args[i + 1]); i += 2
         elif a == "--min-size": min_size = float(args[i + 1]); i += 2
+        elif a == "--footer": footer_in = float(args[i + 1]); i += 2
         elif a in ("-h", "--help"):
             print(__doc__); return 0
         else:
@@ -128,7 +164,7 @@ def main():
             return 2
         print(f"\n── {os.path.basename(path)}")
         try:
-            findings = check(path, margin_in, min_size)
+            findings = check(path, margin_in, min_size, footer_in)
         except Exception as e:
             print(f"   ✗ 読めませんでした: {e}")
             return 2
@@ -150,7 +186,8 @@ def main():
         print(f"   合計 {len(findings)}件 / {len(by_page)}ページ")
 
     print(f"\n{'✓ 指摘なし' if total == 0 else f'⚠ 合計 {total}件'}"
-          f"   （余白 {margin_in}インチ、画像との重なり判定は {min_size}pt 以上）")
+          f"   （余白 {margin_in}インチ / フッター帯 {footer_in}インチ / "
+          f"画像との重なりは {min_size}pt 以上かつ{MIN_CHARS}文字以上）")
     return 1 if total else 0
 
 
