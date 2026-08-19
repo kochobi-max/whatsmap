@@ -2242,5 +2242,7 @@
   }
  ],
  "aftershock_pending_en": "The SGC publishes aftershocks as an event list rather than a running tally by intensity. Notable aftershocks are on the next page.",
- "aftershock_pending_ja": "SGCは余震を震度階級別の回数ではなく地震リストとして公表している。主な余震は次ページに掲載。"
+ "aftershock_pending_ja": "SGCは余震を震度階級別の回数ではなく地震リストとして公表している。主な余震は次ページに掲載。",
+ "activation_pages": [],
+ "_comment_activation": "Sentinel Asia はアジア太平洋地域が対象でコロンビアは対象外。ADRCによる発動要請も無いため、発動ページは出さない。チャーターとコペルニクスEMSの対応は satellite の表と EMSR916 のページで扱う。"
 }
