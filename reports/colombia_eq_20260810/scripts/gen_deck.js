@@ -98,7 +98,7 @@ const UI_ES = {
   "Seismotectonic Setting: an intraslab earthquake": "Marco sismotectónico: un sismo intraplaca dentro de la losa",
   "Schematic cross-section (ADRC)": "Corte esquemático (ADRC)",
   "Overview of the Earthquake & Response Measures": "Resumen del sismo y medidas de respuesta",
-  "Chronology of the Response (10-18 August)": "Cronología de la respuesta (10-18 de agosto)",
+  "Chronology of the Response (10-19 August)": "Cronología de la respuesta (10-19 de agosto)",
   "Times are Colombia time (COT, UTC-5). The earthquake occurred at 07:34 COT = 21:34 JST on 10 August.": "Las horas están en hora de Colombia (COT, UTC-5). El sismo ocurrió a las 07:34 COT = 21:34 JST del 10 de agosto.",
   "Time": "Hora",
   "Action": "Hecho",
@@ -216,6 +216,8 @@ const CELL = {
   "16 Aug 18:30": { ja: "8月16日 18:30", es: "16 ago. 18:30" },
   "18 Aug 06:30": { ja: "8月18日 06:30", es: "18 ago. 06:30" },
   "18 Aug 19:00": { ja: "8月18日 19:00", es: "18 ago. 19:00" },
+  "19 Aug 06:30": { ja: "8月19日 06:30", es: "19 ago. 06:30" },
+  "UNGRD, 19 Aug": { ja: "UNGRD（8月19日）", es: "UNGRD, 19 de agosto" },
   "UNGRD, 18 Aug 19:00": { ja: "UNGRD（8月18日19:00）", es: "UNGRD, 18 de agosto 19:00" },
   "UNGRD / Presidency": { ja: "UNGRD／大統領府", es: "UNGRD / Presidencia" },
   "Presidency, 18 Aug; BBVA Research": { ja: "大統領府（8月18日）、BBVAリサーチ", es: "Presidencia, 18 de agosto; BBVA Research" },
@@ -510,7 +512,7 @@ footer(s);
   pages.forEach((rows, pi) => {
     s = newSlide();
     const suffix = pages.length > 1 ? T(` (${pi + 1}/${pages.length})`, `（${pi + 1}/${pages.length}）`) : "";
-    heading(s, "Chronology of the Response (10-18 August)", "対応の時系列（8月10〜18日）", suffix);
+    heading(s, "Chronology of the Response (10-19 August)", "対応の時系列（8月10〜19日）", suffix);
     subNote(s, "Times are Colombia time (COT, UTC-5). The earthquake occurred at 07:34 COT = 21:34 JST on 10 August.",
       "時刻はコロンビア時間（COT、UTC-5）。地震発生は8月10日07:34 COT＝同日21:34 JST。");
     const rowsT = [[th(T("Time", "時刻")), th(T("Action", "事項")), th(T("Source", "出典"))]];
@@ -746,7 +748,7 @@ if (d.cali) {
 
 /* ============ 9. Damage to buildings, lifelines and services ============ */
 {
-  const nPages = Math.max(1, Math.ceil(d.damage.length / 8));
+  const nPages = Math.max(1, Math.ceil(d.damage.length / 7));
   const pages = chunk(d.damage, Math.ceil(d.damage.length / nPages));
   pages.forEach((rows, pi) => {
     s = newSlide();
