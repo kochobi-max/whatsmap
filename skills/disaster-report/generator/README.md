@@ -449,7 +449,7 @@ gsi.go.jp／布田川／日奈久／八代／嘉島／千葉大／QPS／防災�
 
 ## パッチをまとめて当てる
 
-10本を1つずつ叩く必要はない。
+11本を1つずつ叩く必要はない。
 
 ```bash
 # 1) まず確認（何も書き込まない）
@@ -461,10 +461,10 @@ node scripts/apply_all.js \
   --file "C:\Users\arakida\OneDrive - adrc.asia\LargeScaleDisasters\_kumamoto_generator\gen_deck.js"
 ```
 
-- 正しい順序で10本を当てる。**途中で1本でも失敗したらそこで止まる**
+- 正しい順序で11本を当てる。**途中で1本でも失敗したらそこで止まる**
 - 各パッチは適用前に置換対象を数え、適用後に構文チェックし、`.bak` を残す
 - 二重に実行しても「すでに適用済み」で飛ばす（冪等）
-- 権威版2,165行に対して検証済み: **2,166 → 2,649行**
+- 権威版2,165行に対して検証済み: **2,166 → 2,665行**
 - `--dry-run` は一時コピーに7本を実際に当てきってから捨てる。
   各パッチに `--dry-run` を渡す方式だと、後段のパッチ（例: `apply_bilingual_fields.js` は
   `apply_attribution_patch.js` が作る `intensitySeg()` を探す）が必ず空振りするため。
@@ -837,3 +837,54 @@ rels から取り、ジェネレータのセクション順と突き合わせて
 
 また `npm install` は OneDrive の中でやらない。`node_modules` が数千ファイル同期される。
 ホーム直下（`C:\Users\<user>`）に入れれば、Node が親を辿って見つける。
+
+---
+
+## apply_highlight_layout.js（11本目）— 潰れた画像の上に文字が載っていた
+
+主な被害①のスライドは、1ページ目の右側に画像を2枚積んでいた。
+
+```
+nhk_yatsushiro   y=1.15  h=3.60
+kumamoto_castle  y=4.85  h=1.75   ← 画像に使えるのは 1.75 - 0.66 = 1.09 インチ
+```
+
+`imageSlot()` は下端 0.66 インチをキャプション用に確保する。日英併記のキャプションは
+英1行＋日1行＋URLで3行になるので、0.64 インチの枠に収まらない。
+**潰れた画像の上に文字が重なる。** さらに2ページ目以降は右半分が空のままだった。
+
+直し方。
+
+- ページが2枚以上あるなら **1ページに1枚ずつ**、高さ 5.45 インチで置く
+- **画像が無いページは本文を全幅（12.5インチ）で使う** — 溢れも減る
+- ページが1枚しか無いときだけ従来どおり2枚積む（画像を落とさないため）
+
+画像が見つからないときのプレースホルダは従来どおり出す。
+「公開前に画像を挿入」の枠が消えると、欠けていることに気づけなくなる。
+
+検証は `damage_highlights` の structure 項目を5→20件に複製して2ページに分け、
+1ページ目に八代・2ページ目に熊本城が1枚ずつ入ることを確認した。
+
+### この種の不具合は「見れば分かる」が「ビルドでは分からない」
+
+ページ数も出るし例外も出ない。画像の解決も成功する。それでも枠に対して中身が大きすぎる。
+`_kumamoto_generator/` に `qa_overflow_check.py` と `qa_image_overlap_check.py` があるが、
+`build.sh` はこれらを呼んでいない。**ビルドの最後に必ず通すべき。**
+
+### パッチの適用順（11本）
+
+```
+1.  apply_event_patch.js         EVENT でイベント切り替え
+2.  apply_slide_gates.js         optional_slides で出し分け
+3.  apply_locator_patch.js       表紙3面ロケータのデータ駆動化
+4.  apply_receiver_slides.js     汎用キー6種の受け皿
+5.  apply_data_guards.js         欠損データでの停止を防ぐ
+6.  apply_attribution_patch.js   出典・キャプション・発震機構の外出し
+7.  apply_bilingual_fields.js    言語別キーを読む            ← 6 の intensitySeg() に依存
+8.  apply_receiver_slides_2.js   被災地域・余震・過去地震・所見・自由記述・巻末
+9.  apply_event_images.js        画像を images/<GLIDE>/ で分ける
+10. apply_image_report.js        画像の解決結果を一覧表示    ← 9 の imgDirs() に依存
+11. apply_highlight_layout.js    主な被害①の画像を1ページ1枚に
+```
+
+素の権威版2,165行に `apply_all.js` で11本通し、個別適用と**完全一致**（2,166 → 2,665行）。
