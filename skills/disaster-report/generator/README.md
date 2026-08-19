@@ -449,7 +449,7 @@ gsi.go.jp／布田川／日奈久／八代／嘉島／千葉大／QPS／防災�
 
 ## パッチをまとめて当てる
 
-12本を1つずつ叩く必要はない。
+13本を1つずつ叩く必要はない。
 
 ```bash
 # 1) まず確認（何も書き込まない）
@@ -461,7 +461,7 @@ node scripts/apply_all.js \
   --file "C:\Users\arakida\OneDrive - adrc.asia\LargeScaleDisasters\_kumamoto_generator\gen_deck.js"
 ```
 
-- 正しい順序で12本を当てる。**途中で1本でも失敗したらそこで止まる**
+- 正しい順序で13本を当てる。**途中で1本でも失敗したらそこで止まる**
 - 各パッチは適用前に置換対象を数え、適用後に構文チェックし、`.bak` を残す
 - 二重に実行しても「すでに適用済み」で飛ばす（冪等）
 - 権威版2,165行に対して検証済み: **2,166 → 2,687行**
@@ -1006,3 +1006,37 @@ python scripts/qa_layout_check.py out/KUM.pdf
 ```
 
 `libreoffice-core` だけでは pptx を読めない。`libreoffice-impress` が要る。
+
+---
+
+## apply_image_isolation.js（13本目）— 9本目では足りなかった
+
+`apply_event_images.js`（9本目）で探索順を `images/<GLIDE>/` → `images/` にした。
+イベント専用フォルダを先に見るので衝突は避けられる、と考えていた。**足りなかった。**
+
+専用フォルダに **無い** キーは共通フォルダに落ちる。共通フォルダには熊本の画像が
+全部入っているので、コロンビアをビルドすると次を拾った。
+
+```
+epicentre_distribution  images/epicentre_distribution.png   ← 熊本の震央分布図
+google_cities           images/google_cities.png            ← 熊本の市町村地図
+mechanism               images/mechanism_manual.png         ← 熊本の発震機構
+sentinel_asia           images/sentinel_asia.png            ← 熊本の発動ページ
+disaster_charter        images/disaster_charter.png         ← 同上
+```
+
+**例外は出ない。画像も入る。中身だけが別の災害のもの。**
+コロンビアの目視用ファイルを作る直前、10本目の一覧を読んで気づいた。
+一覧を出していなければ、そのまま渡していた。
+
+直し方。`images/<GLIDE>/` が存在するイベントでは、共通フォルダへ落ちてよいのは
+全イベント共通の画像（`adrc_logo` / `title_bg`）だけにする。それ以外は落とさず枠のままにする。
+**違う画像が出るくらいなら、枠の方がよい。** 欠けていることは10本目の一覧（`✗ 枠のみ`）で分かる。
+
+`images/<GLIDE>/` を持たないイベント（熊本）は従来どおり共通フォルダだけを見るので、
+出力は1バイトも変わらない。
+
+### 教訓
+
+「衝突を避ける」仕組みを入れたときは、**一致しなかった場合にどこへ落ちるか**まで見る。
+落ち先が他のイベントのフォルダなら、それは衝突を避けたことにならない。
