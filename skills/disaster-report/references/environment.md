@@ -26,13 +26,20 @@
 - **Python が UTF-8 で書いたファイルを `findstr` で探さない。** `findstr` は cp932 で
   照合するので日本語に一致しない。バッチから拾う行は ASCII で出す
   （`qa_layout_check.py` の `SUMMARY: N findings / M pages`）
-- **場所を通称で呼ばない。必ずフルパスで書く。** 「デスクトップ」は
-  `C:\Users\arakida\Desktop` と `OneDrive - adrc.asia\デスクトップ` の
-  2か所を指しうる。実際、前者に書いたレポートを「デスクトップに出ます」と伝えて
-  探してもらい、見つからないという往復を1回無駄にした。
-  ファイルは正しく書けていた。**言い方だけの問題だった。**
-  「ダウンロード」「ドキュメント」も同じ。
-  そもそも成果物は迷いようのない場所（PDFと同じ `LargeScaleDisasters\`）に置く
+- **この環境には、名前だけでは区別できないフォルダが複数ある。**
+  出力先を変えても構造は残るので、**やり取りでは常にフルパスを書く**。
+
+  | 通称 | 実際に指しうる場所 |
+  |---|---|
+  | デスクトップ | `C:\Users\arakida\Desktop` / `OneDrive - adrc.asia\デスクトップ` |
+  | 出力先 | `_kumamoto_generator\output\` / 実際の出力先である `LargeScaleDisasters\` |
+  | images | `_kumamoto_generator\images\` / `images\<GLIDE>\` |
+
+  実際、`C:\Users\arakida\Desktop` に書いたレポートを「デスクトップに出ます」と
+  伝えて探してもらい、往復を1回無駄にした。**ファイルは正しく書けていた。
+  名前の指し方だけの問題だった。** 成果物はPDFと同じ場所に置いて曖昧さを減らすが、
+  それは対症療法であって、通称で呼ばないことが本体である。
+
 - 相対パスの指示を出さない。`gen_deck.js` は自分の位置から `..\data` `..\images` を見るので、
   置き場所が1階層違うだけで全部外れる
 
