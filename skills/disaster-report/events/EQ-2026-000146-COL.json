@@ -1990,9 +1990,9 @@
    "url": "https://www.sgc.gov.co/detallesismo/SGC2026pqqmro/mmi"
   },
   "epicentre_distribution": {
-   "en": "SGC epicentre distribution",
-   "ja": "SGC 震央分布",
-   "url": "https://www.sgc.gov.co/"
+   "en": "Epicentre distribution: mainshock and 284 aftershocks, 10-19 Aug 2026 (SGC Catalogo de Sismicidad; base map Natural Earth)",
+   "ja": "震央分布図：本震および余震284回（2026年8月10〜19日）。SGC地震カタログ、地形はNatural Earth",
+   "url": "https://bdrsnc.sgc.gov.co/paginas1/catalogo/index.php"
   }
  },
  "mechanism_points": [
