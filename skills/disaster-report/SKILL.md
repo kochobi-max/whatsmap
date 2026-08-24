@@ -195,6 +195,31 @@ cd "$OUTDIR" && soffice --headless --convert-to pdf --outdir "$OUTDIR" *.pptx
 
 ## 5. 発行
 
+### 5-0. 毎日の流れ — 誰が何時に何をするか
+
+上の §1〜§4 は「1回の実行」の手順。日次運用では**3者が順に動く**。
+
+| 時刻(JST) | 担当 | やること |
+|---|---|---|
+| 07:30 | クラウド | データ更新 → `resolve_event.js` → `build_event.js` → プッシュ |
+| 08:10 | 荒木田さんのPC | `git pull` → ビルド → LargeScaleDisasters へコピー → **公開記録をプッシュ** |
+| 08:30 | クラウド | 公開記録を確認 → 数値急変ゲート → 研究部へ送信 → `_prev` 更新 |
+| 17:30 | クラウド | データ更新 → ビルド（**送信しない**） |
+
+**なぜPCを挟むのか**: クラウドから
+`C:\Users\arakida\OneDrive - adrc.asia\LargeScaleDisasters` へ書き込む経路が無いため。
+PC側の設定は1回だけで済む（`references/daily-publish-setup.md`）。
+
+**公開記録**（`_published/<GLIDE>.json`）は、PCが実際にコピーできたときだけ書かれる。
+**この記録が当日のものでなければメールは出ない。** 本文に「OneDriveに保存しました」と
+書く以上、保存されていないまま送ることがあってはならない。
+
+| PC側の結果 | メール |
+|---|---|
+| コピー成功・記録がプッシュされた | 送る |
+| コピーはできたが記録をプッシュできなかった | **送らない**。通知だけ |
+| PCが動かなかった | **送らない**。通知だけ |
+
 ### 5-1. OneDriveへ保存
 
 **保存先**: `C:\Users\arakida\OneDrive - adrc.asia\LargeScaleDisasters`（同名で上書き）
@@ -207,6 +232,10 @@ cd "$OUTDIR" && soffice --headless --convert-to pdf --outdir "$OUTDIR" *.pptx
 ### 5-2. 更新メール
 
 **07:00 の回のみ送信する。17:00 は生成・保存のみで送らない。**
+
+> **送信の定期タスクは claude.ai の Routines 画面で作る。**
+> MCP の `create_trigger` から作るとコネクタが付かず、Superhuman が無いので送れない。
+> 貼り付け用の本文は `references/daily-mail-routine.md`。
 §2 の数値急変ゲートに掛かっている場合は送らず、確認メールに切り替える。
 
 - **送信元**: `ma-arakida@adrc.asia`

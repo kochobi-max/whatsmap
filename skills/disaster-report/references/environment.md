@@ -146,3 +146,23 @@ test -f skills/disaster-report/SKILL.md || { echo "スキルが見つからな�
 
 新しい災害の cron を作るときも同じ。SKILL.md §0「新規イベントの追加」の
 cron 2本を作る手順は、この前置きとセットで初めて動く。
+
+### MCP から作った定期タスクにはコネクタが付かない
+
+`create_trigger`（MCP）で作ったタスクは、**Superhuman などのコネクタを持たない
+セッションを起こす。** 戻り値にこの警告が出るが、それが唯一の手がかりで、
+タスク自体は正常に作られたように見える。
+
+> this trigger stores no MCP connectors, so the sessions it fires will run
+> without connector (mcp__<server>__*) tools
+
+つまり **MCP から作った送信タスクはメールを送れない。**
+
+| タスクの中身 | 作る場所 |
+|---|---|
+| コード・データ更新・ビルドだけ | MCP から作ってよい |
+| **メール送信・カレンダー等コネクタを使う** | **claude.ai の Routines 画面** |
+
+貼り付け用の本文は `references/daily-mail-routine.md` にある。
+
+2026年8月24日、コロンビアの送信タスクをこれで一度作り直した。
