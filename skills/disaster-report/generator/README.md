@@ -1040,3 +1040,24 @@ disaster_charter        images/disaster_charter.png         ← 同上
 
 「衝突を避ける」仕組みを入れたときは、**一致しなかった場合にどこへ落ちるか**まで見る。
 落ち先が他のイベントのフォルダなら、それは衝突を避けたことにならない。
+
+---
+
+## クラウドでビルドする
+
+```bash
+bash generator/scripts/build_event.sh EQ-2026-000146-COL [出力先]
+```
+
+素の権威版 `generator/gen_deck.base.js` を一時ディレクトリへコピーし、14本のパッチを
+当ててから JA/EN の PPTX と PDF を作る。**権威版そのものは書き換わらない。**
+
+`gen_deck.base.js` を直接編集しないこと。詳細は `gen_deck.base.README.md`。
+
+### `apply_all.js` は14本すべてを当てる
+
+2026年8月24日まで、`apply_all.js` は**13本しか当てていなかった**。
+14本目の `apply_activation_pages.js`（発動ページの出し分け）が一覧から漏れており、
+手元で `apply_all.js` を回しても発動ページのパッチだけ当たらない状態だった。
+
+パッチを増やしたら `apply_all.js` の一覧にも足す。片方だけ足しても誰も気づかない。
