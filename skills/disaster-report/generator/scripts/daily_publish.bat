@@ -62,6 +62,20 @@ if errorlevel 1 goto :locked
 copy /Y "%REPO%\_build\%GLIDE%\*.pdf" "%DEST%\" >nul
 if errorlevel 1 goto :locked
 
+REM Record that publication actually happened, and push it, so the cloud
+REM can tell whether the update mail may truthfully say "saved to OneDrive".
+REM If the push fails the files are still published - that is a warning, not a failure.
+echo STEP: marker
+node "%REPO%\skills\disaster-report\generator\scripts\write_published.js" %GLIDE% "%DEST%"
+git add "skills/disaster-report/_published/%GLIDE%.json"
+git commit -m "chore(disaster-report): %GLIDE% published to LargeScaleDisasters" >nul 2>&1
+git push origin %BRANCH% >nul 2>&1
+if errorlevel 1 (
+  echo WARN: marker-not-pushed
+  echo Files are published. Only the marker could not be pushed.
+  echo The cloud will hold the update mail until it sees the marker.
+)
+
 echo STATUS: PUBLISHED %DEST%
 dir /b "%DEST%\ADRC_EQ_COL_Choco_*"
 exit /b 0
