@@ -254,3 +254,31 @@ Git for Windows の既定は `core.autocrlf=true`。**リポジトリに LF で�
 `WebSearch` は egress プロキシを通らないので、遮断中でも結果が返る。
 **これがあるために「調べられているように見えて一次情報に当たれていない」が成立する。**
 数値は必ず一次情報で確かめること。
+
+## WebFetch は egress の許可リストを見ていない
+
+**2026-08-28、許可リストに追加しても `WebFetch` は届かないことが分かった。**
+
+| 経路 | `www.sgc.gov.co`（8/20から許可済み） |
+|---|---|
+| `curl`（Bash） | **HTTP 200** |
+| `WebFetch` | **EGRESS_BLOCKED** |
+
+許可リストに何件足しても `WebFetch` では届かない。**一次情報の取得は
+`curl`（Bash）で行う。** そのための入口が `generator/scripts/fetch_url.js`。
+
+```bash
+node generator/scripts/fetch_url.js "<URL>"            # 本文だけ出す
+node generator/scripts/fetch_url.js "<URL>" --raw      # HTMLそのまま
+node generator/scripts/fetch_url.js "<URL>" --render   # JS描画のページ
+```
+
+これを知らずに `WebFetch` で調べると、**許可リストが正しくても「取得できず」に
+なる**。`check_sources.js` は `curl` で測るので OK と出る。**検査は通るのに
+実際には読めない**という食い違いが起きるので、取得経路を揃えること。
+
+### JavaScript で描画されるページ
+
+`portal.gestiondelriesgo.gov.co`（UNGRD, SharePoint）と `www.sgc.gov.co` は
+本文が静的HTMLに無い。`--render`（ヘッドレスChromium）でも UNGRD の記事本文は
+取れなかった（2026-08-28 時点）。**この2つは別の取得手段を確立する必要がある。**
