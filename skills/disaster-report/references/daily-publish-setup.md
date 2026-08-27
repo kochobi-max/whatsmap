@@ -39,7 +39,24 @@ npm install pptxgenjs
 set "REPO=C:\Users\arakida\whatsmap"
 ```
 
-## 4. まず手で1回動かす
+## 4. うまくいかないときは、まず check_setup.bat
+
+`...\generator\scripts\check_setup.bat` を**ダブルクリック**する。
+何も変更しない。必要なものが揃っているかを7項目みて、`OK` / `NG` を1行ずつ出すだけ。
+**窓は開いたまま止まる**ので、そのまま読める。
+
+```
+OK  1 git
+OK  2 node         v22.x
+NG  3 repo         no git clone at C:\Users\arakida\whatsmap
+       Fix: cd C:\Users\arakida  &&  git clone https://github.com/kochobi-max/whatsmap.git
+...
+```
+
+`NG` の行だけ見ればよい。直し方はその場に書いてある。
+全部 `OK` になってから次へ進む。
+
+## 5. まず手で1回動かす
 
 ```
 "C:\Users\arakida\whatsmap\skills\disaster-report\generator\scripts\daily_publish.bat"
@@ -58,7 +75,11 @@ set "REPO=C:\Users\arakida\whatsmap"
 
 **`STATUS:` の行だけ見ればよい。** それ以外は読まなくてよい。
 
-## 5. タスクスケジューラに登録する
+**ダブルクリックで実行してよい。** 窓は最後に開いたまま止まる。
+表示内容は `%TEMP%\adrc_daily_publish.txt` にも残るので、後から見返せる。
+（タスクスケジューラから走るときは止まらずに終了する）
+
+## 6. タスクスケジューラに登録する
 
 管理者の `cmd` で1行。毎日 08:10 JST に走る（クラウドの 08:00 更新の10分後）。
 
