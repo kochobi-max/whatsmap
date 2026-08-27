@@ -75,7 +75,7 @@ if exist "%REPO%\.git" (
   if errorlevel 1 goto :gitfail
 ) else (
   echo   not found - cloning into %REPO%
-  echo   A sign-in window may appear. That is normal, and only happens once.
+  echo   The repository is public, so no sign-in is needed to clone.
   cd /d "%HOMEDIR%"
   if errorlevel 1 (
     echo STATUS: FAIL no-home
@@ -86,7 +86,7 @@ if exist "%REPO%\.git" (
   if errorlevel 1 (
     echo STATUS: FAIL clone
     echo Could not clone the repository.
-    echo If it asked for a sign-in and you cancelled it, run this file again.
+    echo Check the network connection, then run this file again.
     exit /b 3
   )
   cd /d "%REPO%"
@@ -137,6 +137,10 @@ if not "%RC%"=="0" (
 echo.
 echo STATUS: ALL DONE
 echo The four files are in %DEST%
+echo.
+echo Note: the first time the record is pushed to GitHub, a sign-in
+echo window may appear. Sign in once; it will not ask again.
+echo If you missed it, run this file once more.
 echo.
 echo Next: register the daily task, in an ADMIN command prompt, one line:
 echo   schtasks /create /tn "ADRC disaster report daily" /tr "\"%REPO%\skills\disaster-report\generator\scripts\daily_publish.bat\"" /sc daily /st 08:10

@@ -122,11 +122,18 @@ if errorlevel 1 (
 ) else (
   git add "skills/disaster-report/_published/%GLIDE%.json"
   git commit -m "chore(disaster-report): %GLIDE% published to LargeScaleDisasters" >nul 2>&1
+  REM the cloud pushes to this branch about 35 minutes earlier, so rebase first
+  git pull --rebase origin %BRANCH% >nul 2>&1
   git push origin %BRANCH% >nul 2>&1
+  if errorlevel 1 (
+    git pull --rebase origin %BRANCH% >nul 2>&1
+    git push origin %BRANCH% >nul 2>&1
+  )
   if errorlevel 1 (
     echo WARN: marker-not-pushed
     echo Files are published. Only the marker could not be pushed,
     echo so the cloud will hold the update mail until it sees one.
+    echo If this is the first push, a GitHub sign-in window may be waiting.
   )
 )
 
