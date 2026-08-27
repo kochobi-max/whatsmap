@@ -46,8 +46,16 @@ process.on("exit", cleanup);
 
 const wgen = path.join(work, "generator");
 fs.mkdirSync(path.join(wgen, "scripts"), { recursive: true });
-fs.copyFileSync(path.join(SKILL, "generator", "gen_deck.base.js"),
-                path.join(wgen, "scripts", "gen_deck.js"));
+// 権威版を一時コピーへ。**改行を LF に正規化する。**
+// Windows の git は既定で CRLF に変換して取り出す。パッチの照合は行末に
+// \n を置いているので、CRLF のままだと 0 件になって当たらない。
+// 2026-08-27、Windows でここに当たった。
+{
+  const src = fs.readFileSync(path.join(SKILL, "generator", "gen_deck.base.js"), "utf8");
+  const lf = src.replace(/\r\n/g, "\n");
+  if (lf !== src) console.log("   normalised CRLF to LF before patching");
+  fs.writeFileSync(path.join(wgen, "scripts", "gen_deck.js"), lf, "utf8");
+}
 for (const f of fs.readdirSync(HERE)) {
   if (/^apply_.*\.js$/.test(f)) fs.copyFileSync(path.join(HERE, f), path.join(wgen, "scripts", f));
 }

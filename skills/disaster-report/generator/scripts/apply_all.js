@@ -52,7 +52,15 @@ function main() {
   }
   if (!fs.existsSync(file)) { console.error(`✗ 見つかりません: ${file}`); process.exit(1); }
 
-  const before = fs.readFileSync(file, "utf8");
+  let before = fs.readFileSync(file, "utf8");
+  // Windows の git は既定で CRLF に変換して取り出す。各パッチの照合は行末に \n を
+  // 置いているので、CRLF のままだと 0 件になって当たらない（2026-08-27 に踏んだ）。
+  // 当てる前に LF へ正規化する。JS の動作は変わらない。
+  if (!dryRun && before.includes("\r\n")) {
+    before = before.replace(/\r\n/g, "\n");
+    fs.writeFileSync(file, before, "utf8");
+    console.log("改行を CRLF から LF に正規化しました（パッチの照合が外れるため）");
+  }
   console.log(`対象: ${file}`);
   console.log(`行数: ${before.split("\n").length}`);
   console.log(dryRun ? "モード: --dry-run（元ファイルは書き換えません）\n" : "モード: 本適用\n");
@@ -67,7 +75,8 @@ function main() {
   if (dryRun) {
     tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), "apply_all-"));
     target = path.join(tmpDir, "gen_deck.js");
-    fs.copyFileSync(file, target);
+    // --dry-run では元ファイルを触らないので、一時コピー側だけ正規化する
+    fs.writeFileSync(target, before.replace(/\r\n/g, "\n"), "utf8");
   }
 
   const HERE = __dirname;
