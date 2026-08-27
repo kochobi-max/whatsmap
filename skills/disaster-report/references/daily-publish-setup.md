@@ -9,6 +9,31 @@ OneDrive のコネクタも、手元へファイルを渡す仕組みも用意�
 
 ---
 
+## いちばん簡単な方法（これだけでよい）
+
+**`ADRC_setup_and_publish.bat` を `C:\Users\arakida\` に置いて、ダブルクリックする。**
+
+クローン・`npm install`・ビルド・LargeScaleDisasters へのコピーまで全部やる。
+何度実行してもよい。窓は最後に開いたまま止まるので、**最後の `STATUS:` の行だけ見る**。
+
+| 最後の行 | 意味 |
+|---|---|
+| `STATUS: ALL DONE` | 4ファイルが出た。あとはタスクスケジューラに登録するだけ |
+| `STATUS: FAIL no-git` / `no-node` | Git for Windows / Node.js LTS を入れて、もう一度 |
+| `STATUS: FAIL clone` | サインイン窓を閉じてしまった可能性。もう一度実行する |
+| `STATUS: FAIL copy-locked` | PowerPoint か PDFビューアでファイルを開いたまま。閉じて再実行 |
+| その他の `FAIL` | その行をそのまま伝えてもらえれば分かる |
+
+表示は `%TEMP%\adrc_setup.txt` にも残る。
+
+**注意**: `daily_publish.bat` は**クローンした中**にしかない
+（`C:\Users\arakida\whatsmap\skills\disaster-report\generator\scripts\`）。
+クローン前は存在しないので、探しても見つからない。だから上の1ファイルから始める。
+
+以下は、中で何が起きているかを知りたいときの内訳。
+
+---
+
 ## 1. リポジトリを1回クローンする
 
 置き場所は **OneDrive の外**にする（OneDrive配下に置くと `node_modules` や `_build` が
