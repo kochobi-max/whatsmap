@@ -200,3 +200,22 @@ Git for Windows の既定は `core.autocrlf=true`。**リポジトリに LF で�
 - リポジトリ直下の `.gitattributes` で `* text=auto eol=lf`、`*.bat text eol=crlf`
 
 **`.bat` は CRLF のまま**でなければならない。LF にすると cmd が何も表示せずに終わる。
+
+## LibreOffice の在り処は決め打ちにしない
+
+`soffice.exe` の導入先は環境によって違う。2026-08-27、
+`C:\Program Files\LibreOffice\program\soffice.exe` だけを見ていて
+**PPTX はできているのに PDF 変換だけが落ちた**（`STATUS: FAIL soffice-missing`）。
+
+`generator/scripts/soffice.js` が、この順で探す。
+
+1. 環境変数 `SOFFICE`（指定が外れていればその旨を出してから次へ）
+2. `PATH`（`where` / `which`。`soffice.exe` `soffice` `soffice.com` `libreoffice`）
+3. よくある導入先 — `Program Files` / `Program Files (x86)` / `%LOCALAPPDATA%\Programs`。
+   **`LibreOffice 7.6` のような版番号付きフォルダも拾う**
+4. レジストリ `HKLM\...\App Paths\soffice.exe`
+
+`check_setup.bat` も**同じ `soffice.js` を呼ぶ**。検査とビルドで判定が食い違わないようにする。
+片方だけ直すと「検査は OK なのにビルドが落ちる」が起きる。
+
+見つからなかったときは、探した場所を全部並べてから終わる。

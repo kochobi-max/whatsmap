@@ -118,17 +118,28 @@ for (const U of ["JA", "EN"]) {
     process.exit(7);
   }
 }
-const soffice = process.platform === "win32"
-  ? (process.env.SOFFICE || "C:\\Program Files\\LibreOffice\\program\\soffice.exe")
-  : (process.env.SOFFICE || "soffice");
+const { resolveSoffice } = require("./soffice.js");
+const found = resolveSoffice();
+const soffice = found.path;
+if (!soffice) {
+  console.error("STATUS: FAIL soffice-missing");
+  console.error("LibreOffice (soffice) が見つかりません。探した場所:");
+  for (const t of found.tried) console.error("   " + t);
+  console.error("PATH と、よくある導入先と、レジストリの App Paths も見ています。");
+  console.error("対処: 環境変数 SOFFICE に soffice.exe のフルパスを入れて実行し直す。");
+  process.exit(8);
+}
+console.log("   soffice: " + soffice);
 const conv = spawnSync(soffice,
   ["--headless", "--convert-to", "pdf", "--outdir", OUTDIR,
    path.join(OUTDIR, filebase + "_JA.pptx"), path.join(OUTDIR, filebase + "_EN.pptx")],
   { stdio: ["ignore", "ignore", "inherit"] });
 if (conv.error) {
-  console.error("STATUS: FAIL soffice-missing");
-  console.error("soffice を起動できない: " + soffice);
-  console.error("対処: 環境変数 SOFFICE に soffice.exe のフルパスを入れる");
+  // 実体はあるのに起動できない。権限か、別プロセスが掴んでいる可能性
+  console.error("STATUS: FAIL soffice-launch");
+  console.error("見つかったが起動できない: " + soffice);
+  console.error(String(conv.error.message || conv.error));
+  console.error("対処: LibreOffice を開いたままなら閉じて実行し直す。");
   process.exit(8);
 }
 

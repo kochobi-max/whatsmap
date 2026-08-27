@@ -71,17 +71,19 @@ if not exist "%NODEMOD%\pptxgenjs" (
 )
 
 REM ---- 6. LibreOffice ----
-set "SOFF=C:\Program Files\LibreOffice\program\soffice.exe"
-if exist "%SOFF%" (
-  echo OK  6 soffice      %SOFF%
+REM  build_event.js is what actually looks for it: PATH, the usual install
+REM  folders (including versioned ones) and the registry. Ask it directly so
+REM  this check and the build never disagree.
+set "FINDSOFF=%~dp0soffice.js"
+if exist "%FINDSOFF%" (
+  for /f "tokens=*" %%s in ('node "%FINDSOFF%" 2^>nul') do set "SOFFHIT=%%s"
+)
+if defined SOFFHIT (
+  echo OK  6 soffice      %SOFFHIT%
 ) else (
-  if exist "C:\Program Files (x86)\LibreOffice\program\soffice.exe" (
-    echo OK  6 soffice     C:\Program Files ^(x86^)\LibreOffice\program\soffice.exe
-    echo        Note: not the default path. daily_publish.bat sets SOFFICE for you.
-  ) else (
-    echo NG  6 soffice      LibreOffice not found in the usual places
-    echo        Fix: tell Claude where soffice.exe is, or install LibreOffice
-  )
+  echo NG  6 soffice      LibreOffice not found
+       echo        Searched PATH, the usual install folders and the registry.
+       echo        Fix: install LibreOffice, or set SOFFICE to soffice.exe
 )
 
 REM ---- 7. destination ----
