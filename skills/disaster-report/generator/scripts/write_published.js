@@ -12,13 +12,10 @@
 const fs = require("fs");
 const path = require("path");
 
-const GLIDE = process.argv[2];
-const DEST = process.argv[3];
-if (!GLIDE || !DEST) {
-  console.error("usage: write_published.js <GLIDE> <dest-folder>");
-  process.exit(2);
-}
+// publish_local.js からは関数として呼ぶ。コマンドとしても従来どおり動く。
+module.exports = { writePublished };
 
+function writePublished(GLIDE, DEST) {
 const SKILL = path.resolve(__dirname, "..", "..");
 const eventJson = path.join(SKILL, "events", GLIDE + ".json");
 const ev = JSON.parse(fs.readFileSync(eventJson, "utf8"));
@@ -30,8 +27,7 @@ for (const U of ["JA", "EN"]) {
     const name = filebase + "_" + U + "." + ext;
     const p = path.join(DEST, name);
     if (!fs.existsSync(p)) {
-      console.error("STATUS: FAIL marker-missing-file " + name);
-      process.exit(3);
+      throw new Error("出力先に " + name + " が見当たらない");
     }
     const st = fs.statSync(p);
     files.push({ name: name, bytes: st.size, mtime: st.mtime.toISOString() });
@@ -60,4 +56,21 @@ const rec = {
 const dir = path.join(SKILL, "_published");
 fs.mkdirSync(dir, { recursive: true });
 fs.writeFileSync(path.join(dir, GLIDE + ".json"), JSON.stringify(rec, null, 2) + "\n", "utf8");
-console.log("MARKER: " + rec.published_date_jst + " " + files.length + " files");
+return rec;
+}
+
+if (require.main === module) {
+  const GLIDE = process.argv[2];
+  const DEST = process.argv[3];
+  if (!GLIDE || !DEST) {
+    console.error("usage: write_published.js <GLIDE> <dest-folder>");
+    process.exit(2);
+  }
+  try {
+    const rec = writePublished(GLIDE, DEST);
+    console.log("MARKER: " + rec.published_date_jst + " " + rec.files.length + " files");
+  } catch (err) {
+    console.error("STATUS: FAIL marker " + err.message);
+    process.exit(3);
+  }
+}
