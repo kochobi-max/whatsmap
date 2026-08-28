@@ -71,8 +71,13 @@ const pad = n => String(n).padStart(2, "0");
 const dateJst = jst.getFullYear() + "-" + pad(jst.getMonth() + 1) + "-" + pad(jst.getDate());
 const timeJst = pad(jst.getHours()) + ":" + pad(jst.getMinutes());
 
-// 中身は ASCII だけにする。PC の cmd は cp932 で読むので、
-// ここに日本語を入れると台帳の行が化けて for /f の解析が狂う。
+// 台帳の決めごとが2つある。どちらも PC の cmd 側の都合。
+//
+//   1. ASCII だけ。cmd は cp932 で読むので日本語を入れると行が化け、
+//      for /f の解析が狂う
+//   2. 改行は LF。CRLF にすると for /f が行末の CR を最後のトークンに
+//      くっつけることがあり、バイト数の文字列比較が必ず外れる。
+//      LF なら CR が付きようがない
 const man = [
   "GLIDE=" + GLIDE,
   "FILEBASE=" + filebase,
@@ -85,7 +90,7 @@ entries.forEach((e, i) => {
   man.push("FILE" + (i + 1) + "=" + e.name);
   man.push("BYTES" + (i + 1) + "=" + e.bytes);
 });
-const manifest = man.join("\r\n") + "\r\n";
+const manifest = man.join("\n") + "\n";
 if (/[^\x20-\x7e\r\n]/.test(manifest)) {
   console.error("STATUS: FAIL manifest-not-ascii");
   console.error("  台帳に ASCII 以外が混じった。cp932 で化けるので配布しない。");
@@ -102,13 +107,24 @@ if (DRY) { console.log("STATUS: DRY-RUN " + BRANCH); process.exit(0); }
 const blobs = [];
 for (const e of entries) {
   const sha = git("hash-object", "-w", "--", e.path);
+  // 台帳に書いたバイト数と、実際に配る中身の大きさが一致していること。
+  // .gitattributes のフィルタが噛むと静かにずれ、PC側はサイズ不一致で
+  // 「毎日ダウンロードに失敗する」ように見える。ここで先に気づく。
+  const stored = Number(git("cat-file", "-s", sha));
+  if (stored !== e.bytes) {
+    console.error("STATUS: FAIL dist-filtered " + e.name);
+    console.error("  手元 " + e.bytes + "B / 配る中身 " + stored + "B。");
+    console.error("  .gitattributes のフィルタが噛んでいる。binary 指定を確認すること。");
+    process.exit(3);
+  }
   blobs.push({ mode: "100644", sha, name: e.name });
 }
 {
-  const tmp = path.join(OUTDIR, ".manifest.tmp");
-  fs.writeFileSync(tmp, manifest, "latin1");
-  const sha = git("hash-object", "-w", "--", tmp);
-  fs.unlinkSync(tmp);
+  // --stdin（--path なし）だと .gitattributes のフィルタが一切かからない。
+  // ファイル経由にすると `* text=auto eol=lf` に噛まれて改行が書き換わり、
+  // 「書いたものと配ったものが違う」が起きる。実際に1度起こした。
+  const sha = execFileSync("git", ["hash-object", "-w", "--stdin"],
+    { cwd: REPO, encoding: "utf8", input: manifest }).trim();
   blobs.push({ mode: "100644", sha, name: "manifest.txt" });
 }
 
