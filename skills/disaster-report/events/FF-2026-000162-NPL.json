@@ -63,12 +63,12 @@
     "url": "https://www.google.com/maps/@28.28,85.38,9z"
    },
    {
-    "label": "BIPAD Portal, Ministry of Home Affairs, Nepal",
-    "url": "https://bipadportal.gov.np/"
-   },
-   {
     "label": "UNOSAT / UNITAR",
     "url": "https://reliefweb.int/map/nepal/nepal-satellite-detected-mudflow-rockflow-extent-26-27-august-2026-rasuwa-district-bagmati-province-imagery-analysis-2627082026-published-27082026-v1"
+   },
+   {
+    "label": "BIPAD Portal, Ministry of Home Affairs, Nepal",
+    "url": "https://bipadportal.gov.np/"
    }
   ]
  },
@@ -444,7 +444,7 @@
  "cities": [],
  "historical": [],
  "locator": {
-  "_comment": "3面図。**日本語版は荒木田さんのGoogleマップのスクリーンショット**（images/<key>_manual_ja.jpg）。英語版は自作の地図（同 <key>_en.png、generator/maps/npl_locator/make_locator_maps.py、境界線はネパール内務省BIPADポータル）。Googleマップの表示言語は日本語で、英語版に入れると英語の読み手が日本語を読むことになるため、言語ごとに持たせている（apply_language_figures.js）。 赤枠は出さない（box: false）。スクリーンショットがどの中心・縮尺で写っているかは正確には分からず、計算した枠は必ずずれる。Google のピンとハザードのアイコンが既に写っているので枠を足す必要もない。",
+  "_comment": "3面図は荒木田さんのGoogleマップのスクリーンショット。**言語ごとに撮り分けてある。**images/<key>_manual_ja.jpg（日本語表示）と <key>_manual_en.jpg（英語表示）。Googleマップの表示言語はブラウザ側で決まるので、片方だけで両版をまかなうと英語版に日本語が入る。実際に一度そうなった（apply_language_figures.js）。自作の地図（<key>.png / <key>_en.png、generator/maps/npl_locator/）はスクリーンショットが無いときの落とし先として残してある。赤枠は出さない（box: false）。スクリーンショットがどの中心・縮尺で写っているかは正確には分からず、計算した枠は必ずずれる。Googleのピンとハザードのアイコンが既に写っているので枠を足す必要もない。",
   "city_map": {
    "cLat": 28.15,
    "cLon": 85.35,
@@ -456,23 +456,20 @@
     "label_en": "World → Nepal",
     "label_ja": "世界→ネパール",
     "box": false,
-    "cap_en": "© BIPAD Portal / MoHA Nepal",
-    "cap_ja": "© Google"
+    "cap": "© Google"
    },
    {
     "key": "locator_region",
     "label_en": "Nepal → Rasuwa District",
     "label_ja": "ネパール→ラスワ郡",
     "box": false,
-    "cap_en": "© BIPAD Portal / MoHA Nepal",
-    "cap_ja": "© Google"
+    "cap": "© Google"
    },
    {
     "key": "google_cities",
     "label_en": "Bhote Koshi valley (Timure)",
     "label_ja": "ボテコシ川の谷（ティムレ）",
-    "cap_en": "© BIPAD / UNOSAT / USGS",
-    "cap_ja": "© Google"
+    "cap": "© Google"
    }
   ]
  },
