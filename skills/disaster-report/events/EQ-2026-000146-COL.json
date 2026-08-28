@@ -27,7 +27,7 @@
   "as_of_ja": "数値は2026年8月27日12:44（コロンビア時間）締めのUNGRD集計現在。16県・494市町村で死者329人、負傷4,592人、行方不明151人。住家被害は8月16日18:30締めの値（全壊26,392棟・損壊127,608棟）のまま。8月27日の集計には住家の数値が示されていない。UNGRDは、これらの数値の変動について地方から報告された数値の検証・統合によるものと説明している。すべて速報値。引用の際は集計時点を併記されたい。",
   "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
   "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-  "stamp": "2026-08-28 11:34 JST",
+  "stamp": "2026-08-29 08:35 JST",
   "update_date": "28/08/2026",
   "optional_slides": [
    "prior_event",
@@ -470,6 +470,13 @@
    "src": "UNGRD",
    "en": "UNGRD balance with a 12:44 cut-off, published from the National Crisis Room: 329 dead, 4,592 injured and 151 missing across 494 municipalities in 16 departments. UNGRD reports it is tracking the Registro Unico de Damnificados (RUD), the register that determines which affected families can access support and subsidies, and is monitoring emergency humanitarian assistance, temporary shelter and the availability of heavy machinery. The balance does not restate housing damage.",
    "ja": "12:44締めのUNGRD集計（国家危機管理室から公表）。16県・494市町村で死者329人、負傷4,592人、行方不明151人。UNGRDは、被災世帯が支援・補助金を受けられるかを決める被災者登録簿（RUD）の追跡と、緊急人道支援・仮設住居・重機の可用性の監視を進めているとしている。住家被害の数値はこの集計には示されていない。"
+  },
+  {
+   "time": "27 Aug 20:00",
+   "tier": "official",
+   "src": "OCHA",
+   "en": "OCHA Flash Update 010: more than 406,000 people (193,011 families) affected, concentrated in Risaralda, Valle del Cauca, Choco, Quindio and Caldas. At least 25 humanitarian organizations have assisted nearly 72,000 people in 36 municipalities; donors have mobilized more than US$40 million and CERF has allocated US$5 million.",
+   "ja": "OCHA Flash Update 010。406,000人超・193,011世帯が被災し、リサラルダ、バジェ・デル・カウカ、チョコ、キンディオ、カルダスに集中。25以上の人道機関が36市町村でおよそ72,000人を支援し、ドナーは4,000万米ドル超、CERFは500万米ドルを配分。"
   }
  ],
  "areas": [
@@ -606,10 +613,11 @@
    "item_en": "People affected",
    "item_ja": "被災者",
    "tier": "official",
-   "value_en": "120,671 families - 185,996 people - affected (UNGRD, 18:30 cut on 16 Aug), against 120,238 families (185,016 people) that morning",
-   "value_ja": "120,671世帯・185,996人が被災（UNGRD、8月16日18:30締め）。同日朝の120,238世帯・185,016人から増加",
-   "source_en": "UNGRD, 16 Aug 18:30",
-   "source_ja": "UNGRD（8月16日18:30）"
+   "value_en": "More than 406,000 people (193,011 families) affected, with the highest concentrations in Risaralda, Valle del Cauca, Choco, Quindio and Caldas (OCHA Flash Update 010, information as of 27 Aug 20:00). The UNGRD count of 120,671 families / 185,996 people is the 16 Aug 18:30 cut-off; the increase reflects the progress of assessment, not new damage.",
+   "value_ja": "406,000人超・193,011世帯が被災。集中しているのはリサラルダ、バジェ・デル・カウカ、チョコ、キンディオ、カルダス（OCHA Flash Update 010、8月27日20:00時点）。UNGRDの120,671世帯・185,996人は8月16日18:30締めの値であり、増加は新たな被害の発生ではなく被害評価の進展による。",
+   "source_en": "OCHA Flash Update 010, 27 Aug 20:00",
+   "source_ja": "OCHA Flash Update 010（8月27日20:00時点）",
+   "url": "https://reliefweb.int/report/colombia/colombia-flash-update-010-update-impact-earthquake-colombia-august-27-2026"
   },
   {
    "item_en": "Homes damaged or destroyed",
@@ -718,6 +726,16 @@
    "source_en": "Media / humanitarian agencies",
    "source_ja": "報道・人道機関",
    "tier": "media"
+  },
+  {
+   "item_en": "Humanitarian response and funding",
+   "item_ja": "人道支援と資金",
+   "value_en": "At least 25 humanitarian organizations have assisted nearly 72,000 people across 36 affected municipalities. Donors have mobilized more than US$40 million and the Central Emergency Response Fund (CERF) has allocated US$5 million for life-saving activities. OCHA states that the 2026 Humanitarian Response Plan Addendum requires additional funding to cover needs through the end of the year.",
+   "value_ja": "25以上の人道機関が、被災36市町村でおよそ72,000人に支援を提供している。ドナーは4,000万米ドル超を拠出し、中央緊急対応基金（CERF）は人命救助活動に500万米ドルを配分した。OCHAは、2026年人道支援計画のアデンダについて、年末までの必要を満たすには追加の資金が要るとしている。",
+   "source_en": "OCHA Flash Update 010, 27 Aug",
+   "source_ja": "OCHA Flash Update 010（8月27日）",
+   "tier": "official",
+   "url": "https://reliefweb.int/report/colombia/colombia-flash-update-010-update-impact-earthquake-colombia-august-27-2026"
   }
  ],
  "deaths_by_area": [
@@ -1735,6 +1753,12 @@
    "label_ja": "La Tercera 死者を下方修正し負傷者を上方修正",
    "url": "https://www.latercera.com/mundo/noticia/colombia-rebaja-a-casi-287-los-muertos-y-eleva-a-cerca-de-4150-los-heridos-por-el-terremoto/",
    "tier": "media"
+  },
+  {
+   "label_en": "OCHA - Colombia Flash Update 010 (27 Aug 2026)",
+   "label_ja": "OCHA コロンビア Flash Update 010（8月27日）",
+   "url": "https://reliefweb.int/report/colombia/colombia-flash-update-010-update-impact-earthquake-colombia-august-27-2026",
+   "tier": "official"
   }
  ],
  "source_policy_en": "Source hierarchy: official > media > TBC. Government and scientific-agency figures are used as primary; media reports are used only where official figures are not yet published and are labelled as such. Items still being verified are marked TBC. Preliminary figures are never replaced by larger unverified numbers.",
