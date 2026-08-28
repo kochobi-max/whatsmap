@@ -1743,11 +1743,12 @@
   "sgc_shakemap": "images/sgc_shakemap.png",
   "beachball": "images/beachball_manual.png",
   "emsr916": "images/emsr916_manual.jpg",
-  "usgs_pager": "images/usgs_pager_manual.jpg",
+  "usgs_pager": "images/usgs_pager.png",
   "sgc_hazard": "images/sgc_hazard_manual.jpg",
   "gem_treq_cali": "images/gem_treq_cali_manual.jpg",
   "intensity_map": "images/sgc_shakemap_manual.jpg",
-  "seismicity_timeseries": "images/aftershock_counts.png"
+  "seismicity_timeseries": "images/aftershock_counts.png",
+  "usgs_shakemap": "images/usgs_shakemap.jpg"
  },
  "photos": [],
  "intensity_map": {
@@ -1930,13 +1931,13 @@
   }
  ],
  "pager": {
-  "title_en": "USGS PAGER assessment (version 5)",
-  "title_ja": "USGS PAGERによる影響評価（第5版）",
+  "title_en": "USGS PAGER assessment (version 7)",
+  "title_ja": "USGS PAGERによる影響評価（第7版）",
   "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjl2/pager",
-  "text_en": "PAGER is the USGS rapid impact estimate, issued within minutes and revised as the event is refined; version 5 was created 2 hours 8 minutes after the earthquake. It is a probability distribution, not a forecast of a single number: the orange alert means significant casualties and damage are likely and that past orange alerts have required a regional or national response. Its most likely fatality band, 1,000-10,000, sat far above the 111 deaths reported nine hours after the event; 33 hours in the reported toll had risen to 182-240, into PAGER's 100-1,000 band, which the model gave a lower but substantial probability. The gap is normal at this stage and narrows as ground truth replaces modelled losses.",
-  "text_ja": "PAGERはUSGSによる迅速影響推計で、発生から数分で発表され、震源要素の精査に伴い改訂される。第5版は発災の2時間8分後に作成された。これは単一の予測値ではなく確率分布であり、オレンジ警報は「相当の人的被害と損害が生じる可能性が高く、過去のオレンジ警報は地域的または国家的な対応を要した」ことを意味する。最も確からしい死者数階級1,000〜10,000人は、発災9時間後の報告値111人を大きく上回っていたが、33時間後には報告値が182〜240人となり、PAGERが低いながらも相応の確率を与えていた100〜1,000人の階級に入った。この段階での乖離は通常のことであり、実測が推計に置き換わるにつれて差は縮まる。",
-  "figure_en": "USGS PAGER alert — estimated fatalities and economic losses (version 5)",
-  "figure_ja": "USGS PAGER 警報 — 推定死者数・経済損失（第5版）"
+  "text_en": "PAGER is the USGS rapid impact estimate, issued within minutes and revised as the event is refined. Version 7 was created eleven days after the earthquake and carries a RED alert, raised from the orange alert of the early versions. The alert has two components and the headline level is the higher of them: the fatality alert is orange (significant casualties likely), while the economic alert is red — estimated losses of 0-6% of Colombia's GDP, a level that past events have required a national or international response to meet. The fatality estimate is a probability distribution, not a single number: 33% for 100-1,000 deaths and 32% for 1,000-10,000. The reported toll of 329 (UNGRD, 27 Aug) sits in the 100-1,000 band. Estimated population exposed to MMI VIII is 1.13 million and to MMI VII 5.39 million; the cities carrying MMI VIII exposure include Pereira (591k), Armenia (301k), Zarzal (313k) and Quibdo (131k).",
+  "text_ja": "PAGERはUSGSによる迅速影響推計で、発生から数分で発表され、震源要素の精査に伴い改訂される。第7版は発災の11日後に作成され、初期の版のオレンジ警報から赤警報に引き上げられている。警報は2本立てで、表に出るのは高い方である。人的被害はオレンジ（相当の人的被害が生じる可能性が高い）、経済損失は赤で、推定損失はコロンビアのGDPの0〜6%にあたる。過去にこの水準の警報が出た地震は、国家的または国際的な対応を要している。死者数の推計は単一の値ではなく確率分布であり、100〜1,000人が33%、1,000〜10,000人が32%。UNGRDの8月27日集計329人はこの100〜1,000人の階級に入る。震度MMI VIIIの曝露人口は113万人、MMI VIIは539万人。MMI VIIIにかかる都市はペレイラ（59.1万人）、アルメニア（30.1万人）、サルサル（31.3万人）、キブド（13.1万人）など。",
+  "figure_en": "USGS PAGER one-pager (version 7) — alert levels, population exposure and selected city exposure",
+  "figure_ja": "USGS PAGER 一枚図（第7版）— 警報レベル・曝露人口・主要都市の曝露"
  },
  "toll_caption_en": "UNGRD balance with an 18:30 COT cut-off on 16 August. 120,671 families (185,996 people) affected across 472 municipalities in 15 departments; 26,392 homes destroyed and 127,608 damaged; 355 people and 496 animals rescued alive. Two cut-offs the same day: deaths 289 then 287, injured 4,187 then 4,147, missing 143 then 194. UNGRD states the reason - figures reported from the territories are being verified and consolidated, some sent before being checked - so quote the cut-off with the number.",
  "toll_caption_ja": "8月16日18:30締めのUNGRD集計。15県・472市町村で被災120,671世帯・185,996人。住宅全壊26,392棟・損壊127,608棟、生存救出355人・動物496頭。同じ日に2回の締めがあり、死者289人→287人、負傷4,187人→4,147人、行方不明143人→194人と動いた。UNGRDはその理由として、地方から報告された数値の検証・統合を進めており、一部は検証前に送られていたことを挙げている。引用の際は数値とあわせて集計時点を示されたい。",
