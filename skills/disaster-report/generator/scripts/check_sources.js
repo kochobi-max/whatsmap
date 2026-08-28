@@ -49,17 +49,23 @@ if (hosts.length === 0) {
 // ドメインまで一律 403 になり、全件「到達」と誤判定した（2026-08-28）。
 // curl は遮断されていれば接続自体が失敗して 000 を返す。実測と一致する。
 const { execFileSync } = require("child_process");
+const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36";
 
 function probe(host) {
   try {
+    // リダイレクトを追い、ブラウザのUAで名乗る。
+    // 2026-08-28、ICIMOD が独自UAに 403 を返し、遮断と読み違えるところだった。
+    // 403 の主は nginx で、プロキシ自体は通っていた。ブラウザのUAなら 200。
+    // リダイレクトも追わないと、nature.com のように 301 だけ見て終わる。
     const code = execFileSync("curl", [
-      "-sS", "-o", "/dev/null", "-w", "%{http_code}",
-      "--max-time", "25", "https://" + host + "/",
+      "-sS", "-L", "-o", "/dev/null", "-w", "%{http_code}",
+      "-A", UA, "--max-time", "25", "https://" + host + "/",
     ], { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }).trim();
     // 000 = 接続できていない（＝遮断）。それ以外は何らかの応答が返っている
-    return code === "000" || code === ""
-      ? { ok: false, note: "接続できない（遮断）" }
-      : { ok: true, note: "HTTP " + code };
+    if (code === "000" || code === "") return { ok: false, note: "接続できない（遮断）" };
+    // 3xx のまま終わるのは、飛び先が許可リストに無いとき。到達とは言えない
+    if (/^3\d\d$/.test(code)) return { ok: false, note: "HTTP " + code + "（飛び先が許可リストに無い疑い）" };
+    return { ok: true, note: "HTTP " + code };
   } catch (e) {
     return { ok: false, note: "接続できない（遮断）" };
   }

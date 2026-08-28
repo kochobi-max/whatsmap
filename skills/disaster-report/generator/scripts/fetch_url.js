@@ -28,7 +28,10 @@ const render = args.includes("--render");
 function viaCurl(u) {
   return execFileSync("curl", [
     "-sS", "-L", "--max-time", "90",
-    "-A", "Mozilla/5.0 (compatible; ADRC-disaster-report)",
+    // 名乗りを分けると弾く相手がいる。2026-08-28、ICIMOD が独自UAに 403 を返し、
+    // 「許可リストに無い」と読み違えるところだった。403 の主が nginx で、
+    // プロキシは通っていた（CONNECT は成立していた）。ブラウザのUAで 200 になる。
+    "-A", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36",
     u,
   ], { encoding: "utf8", maxBuffer: 64 * 1024 * 1024 });
 }

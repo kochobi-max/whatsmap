@@ -59,12 +59,12 @@
   ],
   "cover_sources": [
    {
-    "label": "UNOSAT / UNITAR",
-    "url": "https://reliefweb.int/map/nepal/nepal-satellite-detected-mudflow-rockflow-extent-26-27-august-2026-rasuwa-district-bagmati-province-imagery-analysis-2627082026-published-27082026-v1"
+    "label": "BIPAD Portal, Ministry of Home Affairs, Nepal",
+    "url": "https://bipadportal.gov.np/"
    },
    {
-    "label": "Google Maps © Google",
-    "url": "https://www.google.com/maps/"
+    "label": "UNOSAT / UNITAR",
+    "url": "https://reliefweb.int/map/nepal/nepal-satellite-detected-mudflow-rockflow-extent-26-27-august-2026-rasuwa-district-bagmati-province-imagery-analysis-2627082026-published-27082026-v1"
    }
   ]
  },
@@ -424,13 +424,16 @@
   }
  ],
  "images": {
-  "unosat_rasuwa": "images/unosat_rasuwa.png"
+  "unosat_rasuwa": "images/unosat_rasuwa.png",
+  "locator_world": "images/locator_world.png",
+  "locator_region": "images/locator_region.png",
+  "google_cities": "images/google_cities.png"
  },
  "damage_highlights": [],
  "cities": [],
  "historical": [],
  "locator": {
-  "_comment": "3面図。3枚目は震度図ではなく UNOSAT の被災範囲図を置く（地震ではないため）。",
+  "_comment": "3面図。地図は自作（generator/maps/npl_locator/make_locator_maps.py）。境界線はネパール内務省 BIPAD ポータル。Google の静的地図は使っていない。",
   "city_map": {
    "cLat": 28.15,
    "cLon": 85.35,
@@ -441,7 +444,7 @@
     "key": "locator_world",
     "label_en": "World → Nepal",
     "label_ja": "世界→ネパール",
-    "cap": "© Google",
+    "cap": "© BIPAD Portal / MoHA Nepal",
     "map": {
      "cLat": 28.4,
      "cLon": 84.1,
@@ -458,7 +461,7 @@
     "key": "locator_region",
     "label_en": "Nepal → Rasuwa District",
     "label_ja": "ネパール→ラスワ郡",
-    "cap": "© Google",
+    "cap": "© BIPAD Portal / MoHA Nepal",
     "map": {
      "cLat": 28.15,
      "cLon": 85.35,

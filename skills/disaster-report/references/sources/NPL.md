@@ -16,11 +16,25 @@
 | NDRRMA `ndrrma.gov.np` | 200 | **JSアプリでHTMLに中身が無い。APIパスは全て404。** 直接は使えない |
 | ReliefWeb `reliefweb.int`（サイト） | **200** | 実質いちばん頼れる。UNOSAT・IFRC・OCHA がここに集まる |
 | GDACS `gdacs.org` | 200 | API可 |
-| DHM（水文気象局）`dhm.gov.np` | **000** | 要 許可リスト追加 |
-| NEOC `neoc.gov.np` | **000** | 同上 |
-| DRR Portal `drrportal.gov.np` | **000** | 同上 |
-| 内務省 `moha.gov.np` | **000** | 同上 |
-| ICIMOD `icimod.org` | **403** | 同上。**氷河湖・氷河災害の一次研究機関。GLOF判定に要る** |
+| DHM（水文気象局） https://dhm.gov.np | **200**（8/28 許可後） | `www.` 付きは不可。**裸のホスト名で当たる** |
+| 内務省 https://moha.gov.np | **200**（同上） | 同上 |
+| ICIMOD https://icimod.org | **200**（同上） | **ブラウザのUAが要る**（下記）。`www.icimod.org` へ301 |
+| NEOC `neoc.gov.np` | **000** | 未許可のまま |
+| DRR Portal `drrportal.gov.np` | **000** | 未許可のまま |
+| Nature `www.nature.com` | **000** | `nature.com` は301で通るが、飛び先の `www.` が未許可 |
+
+### ホスト名は完全一致。`www.` の有無で結果が変わる
+
+2026-08-28、許可リストに追加してもらった直後、`www.dhm.gov.np` は 000 のままで
+`dhm.gov.np` は 200 だった。**追加を依頼するときは、実際に叩くホスト名をそのまま渡す。**
+リダイレクト先も別ホストなら別に要る（`nature.com` → `www.nature.com`）。
+
+### 403 を「遮断」と読み違えない
+
+ICIMOD は独自の User-Agent に **nginx が 403** を返す。プロキシは通っていて
+（`CONNECT` は成立している）、ブラウザの UA なら 200 になる。
+`fetch_url.js` と `check_sources.js` はブラウザの UA で名乗り、`-L` で追う。
+**403 の主が誰かを見ること。** 遮断なら 000 になる。
 
 **ReliefWeb API は使えない。** v1 は 410（decommissioned）、v2 は承認済み `appname` が要る。
 
@@ -154,6 +168,6 @@ DHM と氷河研究者の暫定仮説は、氷と岩の雪崩がレンデ川を�
 - **ICIMOD・DHM・NEOC・DRR Portal・MOHA が許可リストに無い。** どの湖がどう決壊したか、
   降水量、上流の状況が取れない。追加を依頼すること
 - `nature.com` にも届かない（000）。GLOF を扱った記事があるので追加を依頼する
-- ReliefWeb API の `appname` 申請（https://apidoc.reliefweb.int/parameters#appname）。
+- ReliefWeb API の `appname` 申請（apidoc.reliefweb.int/parameters#appname ※到達確認の対象外にするため URL 形式で書かない）。
   取れればサイトのHTML解析をやめられる
 - 中国側（チベット自治区・吉隆県）の情報源が無い。出水は国境の向こう側で始まっている
