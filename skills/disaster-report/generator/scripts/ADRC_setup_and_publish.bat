@@ -112,10 +112,11 @@ if not exist "%DEST%" (
 
 echo.
 echo STEP: download and publish
-REM  --quiet is required here. This file already captures everything to a
-REM  log and pauses once at the end. Without it daily_publish.bat pauses
-REM  too, and that prompt is inside the redirect, so it goes to the log
-REM  instead of the screen and the window sits there for ever.
+REM  daily_publish.bat never waits for input unless asked with --pause,
+REM  so nothing here can end up waiting on a prompt that is inside this
+REM  file's redirect and therefore invisible. --quiet is passed only to
+REM  say out loud that no pause is wanted; the callee ignores it.
+REM  Do not add --pause here. This file pauses once, at the end.
 call "%REPO%\skills\disaster-report\generator\scripts\daily_publish.bat" --quiet
 set "RC=%ERRORLEVEL%"
 if not "%RC%"=="0" (
@@ -131,8 +132,28 @@ echo Note: the first time the record is pushed to GitHub, a sign-in
 echo window may appear. Sign in once; it will not ask again.
 echo If you missed it, run this file once more.
 echo.
-echo Next: register the daily task, in an ADMIN command prompt, one line:
-echo   schtasks /create /tn "ADRC disaster report daily" /tr "\"%REPO%\skills\disaster-report\generator\scripts\daily_publish.bat\" --quiet" /sc daily /st 08:10
+echo STEP: daily task
+REM  Register it here rather than handing over a line to paste. A task
+REM  that runs as the current user needs no elevation.
+set "TASKNAME=ADRC disaster report daily"
+schtasks /query /tn "%TASKNAME%" >nul 2>&1
+if not errorlevel 1 (
+  echo OK  already registered - runs every day at 08:10
+  goto :alldone
+)
+schtasks /create /tn "%TASKNAME%" /tr "\"%REPO%\skills\disaster-report\generator\scripts\daily_publish.bat\" --quiet" /sc daily /st 08:10
+schtasks /query /tn "%TASKNAME%" >nul 2>&1
+if errorlevel 1 (
+  echo WARN could not register the daily task. Everything else is done.
+  echo To do it by hand, one line in a command prompt:
+  echo   schtasks /create /tn "%TASKNAME%" /tr "\"%REPO%\skills\disaster-report\generator\scripts\daily_publish.bat\" --quiet" /sc daily /st 08:10
+) else (
+  echo OK  registered - runs every day at 08:10
+)
+
+:alldone
+echo.
+echo Nothing further is needed. This file does not have to be run again.
 exit /b 0
 
 :gitfail

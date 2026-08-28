@@ -104,16 +104,17 @@ NG  3 repo         no git clone at C:\Users\arakida\whatsmap
 表示内容は `%TEMP%\adrc_daily_publish.txt` にも残るので、後から見返せる。
 （タスクスケジューラから走るときは止まらずに終了する）
 
-## 6. タスクスケジューラに登録する
+## 6. タスクスケジューラ（自動で登録されます）
 
-管理者の `cmd` で1行。毎日 08:10 JST に走る（クラウドの 08:00 更新の10分後）。
+`ADRC_setup_and_publish.bat` が最後に自分で登録する。毎日 08:10 JST。
+管理者権限は要らない（実行するのは本人のタスクなので）。
 
 ```
-schtasks /create /tn "ADRC disaster report daily" /tr "\"C:\Users\arakida\whatsmap\skills\disaster-report\generator\scripts\daily_publish.bat\" --quiet" /sc daily /st 08:10
+OK  registered - runs every day at 08:10
 ```
 
-**`--quiet` を落とさないこと。** これが無いとバッチは最後にキー入力を待ち、
-定期タスクがそこで止まったままになる。手で実行するときは付けなくてよい。
+すでに登録済みなら `already registered` と出て何もしない。
+何かの事情で登録できなかったときだけ、貼る用の1行がその場に表示される。
 
 確認と手動実行:
 

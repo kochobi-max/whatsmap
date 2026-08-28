@@ -31,12 +31,21 @@ set "WORK=%TEMP%\adrc_dist"
 set "LOG=%TEMP%\adrc_daily_publish.txt"
 set "SELFCOPY=%TEMP%\adrc_daily_publish_run.bat"
 
-REM  Wait for a key at the end, unless the caller said --quiet.
-REM  This used to be guessed from %%cmdcmdline%%, but Task Scheduler
-REM  launches the file the same way a double-click does, so the guess
-REM  would have made the daily task sit on "pause" for ever.
-set "INTERACTIVE=1"
-if /i "%~1"=="--quiet" set "INTERACTIVE="
+REM  NEVER wait for input unless the caller explicitly asks with --pause.
+REM
+REM  Twice on 2026-08-28 this window sat silent for ever. Both times a
+REM  caller was capturing our output with > "%%LOG%%" 2>&1, so the "press
+REM  any key" prompt went into the log file instead of the screen and
+REM  nothing was visible to press a key for. The work had finished; only
+REM  the window was stuck.
+REM
+REM  Guessing whether a human is watching does not work here: Task
+REM  Scheduler, a double-click and a call from another batch all look
+REM  alike. So do not guess. Silence is the default, and whoever wants a
+REM  pause asks for it. --quiet is still accepted and ignored, so a task
+REM  registered with it keeps working.
+set "INTERACTIVE="
+if /i "%~1"=="--pause" set "INTERACTIVE=1"
 
 REM  Run from a copy in %%TEMP%%.
 REM  cmd reads a batch file from disk as it goes. The git pull below can
