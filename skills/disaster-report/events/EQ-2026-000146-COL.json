@@ -36,7 +36,8 @@
    "seismic_intensity",
    "seismicity",
    "mechanism",
-   "tsunami_intensity"
+   "tsunami_intensity",
+   "affected_municipalities"
   ],
   "headline": {
    "deaths": 329,

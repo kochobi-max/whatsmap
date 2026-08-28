@@ -63,6 +63,11 @@ const GATES = [
   { key: "seismicity",        probe: /Slide 6:\s*Seismicity - Epicentre Distribution/,  note: "地震活動・震央分布・余震" },
   { key: "mechanism",         probe: /Slide 6b:\s*Source Mechanism & Waveform Analysis/, note: "発震機構・波形解析" },
   { key: "tsunami_intensity", probe: /Slide 7:\s*Tsunami & Intensity Distribution/,      note: "津波と震度分布" },
+
+  // 被災市町村の一覧。d.cities が空でも、枠だけの地図と見出しだけの表が出る。
+  // ネパール・インドネシアで空のページが1枚できた（2026-08-28 目視）。
+  // 市町村ごとの数値が取れる災害でだけ入れる。
+  { key: "affected_municipalities", probe: /Slide 4:\s*Affected Municipalities & Population/, note: "被災市町村と人口（データが無くても空ページが出る）" },
 ];
 
 const SECTION_RE = /^\/\* =+ Slide /;
