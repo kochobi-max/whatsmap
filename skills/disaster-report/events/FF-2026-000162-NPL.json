@@ -17,8 +17,8 @@
   "onedrive_dir": "C:\\Users\\arakida\\OneDrive - adrc.asia\\LargeScaleDisasters",
   "title_en": "2026 Bhote Koshi Debris Flow and Flash Flood (Nepal)",
   "title_ja": "2026年 ボテコシ川 土石流・鉄砲水（ネパール）",
-  "subtitle_en": "Rasuwa, Nuwakot, Dhading and Chitwan Districts - 26 August 2026",
-  "subtitle_ja": "ラスワ郡・ヌワコット郡・ダディン郡・チトワン郡、2026年8月26日",
+  "subtitle_en": "Rasuwa, Nuwakot, Dhading and Gorkha Districts - 26 August 2026",
+  "subtitle_ja": "ラスワ郡・ヌワコット郡・ダディン郡・ゴルカ郡、2026年8月26日",
   "edition_en": "2nd report",
   "edition_ja": "第2報",
   "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
@@ -31,13 +31,13 @@
   "tz_note_ja": "時刻は特記なき限りネパール標準時（NPT、UTC+5:45）。",
   "optional_slides": [],
   "headline": {
-   "deaths": 165,
+   "deaths": 539,
    "injured": 73,
-   "missing": 826,
+   "missing": 977,
    "houses_destroyed": null,
    "evacuees": null,
    "tier": "official",
-   "as_of": "2026-08-27 08:15 NPT (NDRRMA / Nepal Police)"
+   "as_of": "2026-08-28 (NEOC / 内務省)"
   },
   "chronology_note_en": "Government and agency actions from the onset of the flood - all official sources.",
   "chronology_note_ja": "発災からの政府・機関の主要な動き（すべて公的情報）。",
@@ -73,14 +73,14 @@
   ]
  },
  "_prev": {
-  "_comment": "初版のため前報なし",
-  "deaths": null,
-  "injured": null,
-  "missing": null,
+  "_comment": "第1報（8月27日 NDRRMA・ネパール警察）。数値急変ゲートの基準。",
+  "deaths": 165,
+  "injured": 73,
+  "missing": 826,
   "houses_destroyed": null,
   "evacuees": null,
-  "tier": null,
-  "as_of": ""
+  "tier": "official",
+  "as_of": "2026-08-27 08:15 NPT (NDRRMA / Nepal Police)"
  },
  "event": {
   "origin_time": "26 August 2026, approx. 09:00 NPT (UTC+5:45)",
@@ -102,62 +102,62 @@
   {
    "item_en": "Deaths",
    "item_ja": "死者",
-   "value_en": "165 confirmed (NDRRMA and Nepal Police, morning of 27 Aug), with 73 injured. The count moved fast as teams reached cut-off areas: 72 (NDRRMA) and 95 (Prime Minister's Office) on the evening of 26 Aug, then about 160 late that night with 157 bodies recovered. UNICEF stated on 27 Aug that an estimated 332 people had died, including at least 14 children; that figure is not reconciled with the NDRRMA/Police count and is recorded here as reported.",
-   "value_ja": "165人（NDRRMA・ネパール警察、8月27日朝）、負傷73人。孤立地域に救助隊が到達するにつれ急増した。8月26日夕はNDRRMA 72人・首相府95人、同日深夜に約160人（遺体収容157体）。UNICEFは8月27日に死者推計332人・うち子ども14人以上としているが、NDRRMA・警察の集計とは整合していない。両論を併記する。",
-   "source_en": "NDRRMA / Nepal Police, 27 Aug (a.m.); UNICEF, 27 Aug",
-   "source_ja": "NDRRMA・ネパール警察（8月27日午前）／UNICEF（8月27日）",
+   "value_en": "539 confirmed dead (NEOC, Ministry of Home Affairs, 28 Aug); 538 bodies recovered. By district: Chitwan 221, Nuwakot (east) 134, Gorkha 46, Kavrepalanchok 37, Dhading 34, Tanahun 28, Nuwakot (west) 27, Rasuwa 12. The toll rose from 165 on 27 Aug as search teams reached cut-off communities and downstream districts were counted. NEOC states the figures are initial and likely to change as verification continues.",
+   "value_ja": "539人（NEOC＝内務省国家緊急対策本部、8月28日）。遺体収容は538体。郡別はチトワン221、ヌワコット（東）134、ゴルカ46、カブレパランチョーク37、ダディン34、タナフン28、ヌワコット（西）27、ラスワ12。8月27日の165人から増えたのは、孤立地域に救助隊が到達し、下流の郡が集計に入ったため。NEOCは初期の数値であり、確認が進むにつれ変わるとしている。",
+   "source_en": "NEOC, Ministry of Home Affairs, 28 Aug",
+   "source_ja": "NEOC（内務省国家緊急対策本部）8月28日",
    "tier": "official",
-   "url": "https://reliefweb.int/report/nepal/nepal-flash-floods-rapid-situation-overview-27-august-2026"
+   "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-update-3"
   },
   {
    "item_en": "Missing",
    "item_ja": "行方不明",
-   "value_en": "826 listed as missing in Nepal alone in a Nepal Police bulletin issued around 08:15 on 27 Aug: 579 travellers (466 foreign nationals and 113 Nepalis), 85 security personnel (44 Nepali Army, 28 Nepal Police, 13 Armed Police Force), 161 residents of Rasuwa and one of Nuwakot. Most of the missing travellers were heading for the Kailash Mansarovar pilgrimage route through Tibet.",
-   "value_ja": "826人（ネパール警察、8月27日8時15分頃の発表。ネパール国内のみ）。内訳は旅行者579人（外国人466人・ネパール人113人）、治安要員85人（ネパール陸軍44・警察28・武装警察13）、ラスワ郡住民161人、ヌワコット郡住民1人。旅行者の多くはチベット経由のカイラス・マナサロワル巡礼路へ向かっていた。",
-   "source_en": "Nepal Police bulletin, 27 Aug approx. 08:15",
-   "source_ja": "ネパール警察（8月27日8時15分頃）",
+   "value_en": "977 missing (NEOC, 28 Aug). 105 personnel of the Nepal Army, Nepal Police, Armed Police Force and the customs and immigration offices; 228 reported by District Emergency Operations Centres in Rasuwa (161), Kavrepalanchok (66) and Nuwakot (1); and 644 foreign or overseas-resident nationals, comprising 517 foreign nationals and 127 Nepali nationals normally resident abroad.",
+   "value_ja": "977人（NEOC、8月28日）。内訳は、ネパール陸軍・警察・武装警察および税関・入国管理の職員105人、郡緊急対策本部（DEOC）からの報告228人（ラスワ161、カブレパランチョーク66、ヌワコット1）、外国人および国外在住者644人（外国人517人、国外在住のネパール人127人）。",
+   "source_en": "NEOC, 28 Aug",
+   "source_ja": "NEOC（8月28日）",
    "tier": "official",
-   "url": "https://reliefweb.int/report/nepal/nepal-flash-floods-rapid-situation-overview-27-august-2026"
+   "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-update-3"
   },
   {
-   "item_en": "Missing foreign nationals",
-   "item_ja": "行方不明の外国人",
-   "value_en": "466 of the 579 missing travellers were foreign nationals, including at least 133 Indian pilgrims and citizens of Malaysia (55), the United States (47), Australia (34), the United Kingdom (33) and Canada (24).",
-   "value_ja": "行方不明の旅行者579人のうち466人が外国人。インド人巡礼者133人以上のほか、マレーシア55人、米国47人、オーストラリア34人、英国33人、カナダ24人など。",
-   "source_en": "Nepal Police bulletin, 27 Aug",
-   "source_ja": "ネパール警察（8月27日）",
+   "item_en": "Injured",
+   "item_ja": "負傷者",
+   "value_en": "73 injured (NEOC, 28 Aug): Rasuwa 43, Nuwakot 27, Dhading 3.",
+   "value_ja": "73人（NEOC、8月28日）。ラスワ郡43人、ヌワコット郡27人、ダディン郡3人。",
+   "source_en": "NEOC, 28 Aug",
+   "source_ja": "NEOC（8月28日）",
    "tier": "official",
-   "url": "https://reliefweb.int/report/nepal/nepal-flash-floods-rapid-situation-overview-27-august-2026"
+   "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-update-3"
   },
   {
-   "item_en": "Others out of contact",
-   "item_ja": "連絡が取れていない者",
-   "value_en": "Separately reported: 60 hydropower-project workers, 26 employees of commercial banks and 15 staff of the Rasuwa customs office at Timure.",
-   "value_ja": "上記とは別に、水力発電事業の作業員60人、商業銀行職員26人、ティムレのラスワ税関職員15人と連絡が取れていない。",
-   "source_en": "Rapid Situation Overview, 27 Aug",
-   "source_ja": "状況概観（8月27日）",
+   "item_en": "Search and rescue",
+   "item_ja": "捜索・救助",
+   "value_en": "3,742 people rescued to date. The Government has mobilised 12,249 security personnel - Nepal Army 4,243, Nepal Police 4,348, Armed Police Force 3,658 - and 15 helicopters, 6 from the Nepal Army and 9 from the private sector.",
+   "value_ja": "これまでに3,742人を救助。政府は治安要員12,249人（ネパール陸軍4,243、警察4,348、武装警察3,658）とヘリコプター15機（陸軍6機、民間9機）を動員している。",
+   "source_en": "NEOC via UN Flash Update #3, 28 Aug",
+   "source_ja": "NEOC（国連 Flash Update #3、8月28日）",
    "tier": "official",
-   "url": "https://reliefweb.int/report/nepal/nepal-flash-floods-rapid-situation-overview-27-august-2026"
+   "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-update-3"
   },
   {
    "item_en": "Affected population",
    "item_ja": "被災者",
-   "value_en": "Around 93,000 people may have been affected, with assessments continuing in hard-to-reach areas (IFRC). At least 17,000 children have been impacted across Rasuwa, Nuwakot and Dhading (UNICEF). The NDRRMA states that 10,000 households require immediate relief.",
-   "value_ja": "被災者は約93,000人の可能性（IFRC。到達困難地域の調査が継続中）。ラスワ・ヌワコット・ダディンの3郡で子ども17,000人以上が影響を受けた（UNICEF）。NDRRMAは10,000世帯が緊急の救援を要するとしている。",
-   "source_en": "IFRC, 27 Aug; UNICEF, 27 Aug; NDRRMA",
-   "source_ja": "IFRC（8月27日）／UNICEF（8月27日）／NDRRMA",
+   "value_en": "Thirteen municipalities across the four worst-hit districts - Rasuwa, Nuwakot, Dhading and Gorkha - are identified as most affected, and several are likely to be declared disaster crisis zones. Food security partners estimate at least 20,000 households across Rasuwa and Nuwakot may need immediate food assistance, with impacts also reported in Dhading, Gorkha, Chitwan and Tanahun. About 18,000 households, more than 50,000 people, need emergency water, sanitation and hygiene support. Nutrition partners estimate about 17,000 children, 1,500 pregnant and breastfeeding women and 9,000 adolescents need immediate nutrition support.",
+   "value_ja": "被害が最も大きい4郡（ラスワ、ヌワコット、ダディン、ゴルカ）の13市町村が最も影響を受けたと特定され、いくつかは災害危機区域に指定される見込み。食料安全保障の関係機関は、ラスワ・ヌワコット両郡で少なくとも20,000世帯が緊急の食料支援を要する可能性があるとしている（ダディン、ゴルカ、チトワン、タナフンでも影響が報告されている）。約18,000世帯・50,000人超が緊急の水・衛生支援を必要とする。栄養分野の関係機関は、子ども約17,000人、妊産婦・授乳婦1,500人、思春期の若者9,000人が緊急の栄養支援を要すると推計している。",
+   "source_en": "UN Flash Update #3, 28 Aug",
+   "source_ja": "国連 Flash Update #3（8月28日）",
    "tier": "official",
-   "url": "https://reliefweb.int/report/nepal/ifrc-launches-chf-25-million-emergency-appeal-response-devastating-nepal-flash-floods"
+   "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-update-3"
   },
   {
    "item_en": "Displaced / in need",
    "item_ja": "避難・要支援者",
-   "value_en": "Not yet published. As of the 27 Aug data cut-off no government or humanitarian body had issued a consolidated total for people displaced, sheltering or in need. Treated as a priority information gap.",
-   "value_ja": "未発表。8月27日の集計時点で、避難者・避難所滞在者・要支援者の統合値を出した政府・人道機関は無い。優先的な情報の欠落として扱う。",
-   "source_en": "Rapid Situation Overview, 27 Aug",
-   "source_ja": "状況概観（8月27日）",
+   "value_en": "Displacement figures remain preliminary. Five known sites in Nuwakot District are together sheltering more than 1,000 displaced people against a combined capacity of 1,350. The whereabouts of people displaced from other districts are not yet known.",
+   "value_ja": "避難者数はなお暫定。ヌワコット郡で把握されている5か所の避難所が、収容力1,350人に対し合計1,000人超を受け入れている。他の郡で避難した人々の所在は把握できていない。",
+   "source_en": "UN Flash Update #3, 28 Aug",
+   "source_ja": "国連 Flash Update #3（8月28日）",
    "tier": "tbc",
-   "url": "https://reliefweb.int/report/nepal/nepal-flash-floods-rapid-situation-overview-27-august-2026"
+   "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-update-3"
   },
   {
    "item_en": "Hydropower",
@@ -232,12 +232,32 @@
   {
    "item_en": "Affected districts",
    "item_ja": "被災した郡",
-   "value_en": "Rasuwa, Nuwakot, Dhading and Chitwan. High alert was maintained along the Bhote Koshi-Trishuli corridor through Rasuwa, Nuwakot, Dhading, Gorkha and Chitwan.",
-   "value_ja": "ラスワ郡・ヌワコット郡・ダディン郡・チトワン郡。ボテコシ川〜トリシュリ川の回廊（ラスワ、ヌワコット、ダディン、ゴルカ、チトワン）に高度警戒が敷かれた。",
-   "source_en": "IRDR rapid analysis, 28 Aug",
-   "source_ja": "IRDR速報解析（8月28日）",
+   "value_en": "Rasuwa, Nuwakot, Dhading and Gorkha are the four worst-hit districts, with 13 municipalities identified as most affected. Deaths have also been recorded in Chitwan, Kavrepalanchok and Tanahun further downstream.",
+   "value_ja": "被害が最も大きいのはラスワ、ヌワコット、ダディン、ゴルカの4郡で、13市町村が最も影響を受けたと特定されている。さらに下流のチトワン、カブレパランチョーク、タナフンでも死者が出ている。",
+   "source_en": "NEOC / UN Flash Update #3, 28 Aug",
+   "source_ja": "NEOC・国連 Flash Update #3（8月28日）",
    "tier": "official",
-   "url": "https://reliefweb.int/report/nepal/irdr-rapid-analysis-report-scientific-anatomy-26-august-2026-bhotekoshi-flash-flood"
+   "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-update-3"
+  },
+  {
+   "item_en": "Land and agriculture",
+   "item_ja": "土地・農地",
+   "value_en": "Early estimates point to more than 11,000 hectares of damaged land, including about 2,732 hectares of lost agricultural land, and around 45 km of damaged transport corridors. Damage is still being verified.",
+   "value_ja": "初期推計で11,000haを超える土地が被災し、うち約2,732haの農地が失われた。輸送路は約45kmが被災。被害はなお確認中である。",
+   "source_en": "UN Flash Update #3, 28 Aug",
+   "source_ja": "国連 Flash Update #3（8月28日）",
+   "tier": "official",
+   "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-update-3"
+  },
+  {
+   "item_en": "Schools",
+   "item_ja": "学校",
+   "value_en": "Sixty-nine schools with almost 19,000 enrolled students sit within 500 m of the affected riverbanks; at least 23 will need to be rehabilitated.",
+   "value_ja": "被災した河岸から500m以内に69校・在籍児童生徒約19,000人の学校が所在し、少なくとも23校の復旧が必要となる。",
+   "source_en": "UN Flash Update #3, 28 Aug",
+   "source_ja": "国連 Flash Update #3（8月28日）",
+   "tier": "official",
+   "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-update-3"
   }
  ],
  "timeline": [
@@ -359,6 +379,13 @@
    "src": "JAXA / Sentinel Asia",
    "en": "JAXA schedules an ALOS-2 emergency observation. Analyses using Landsat-9 (Rissho University) and a 3D damage map from optical satellites (University of Tokyo) are shared through Sentinel Asia.",
    "ja": "JAXAがALOS-2の緊急観測を計画。立正大学によるLandsat-9解析、東京大学による光学衛星の3次元被害図が、センチネルアジアを通じて共有された。"
+  },
+  {
+   "time": "28 Aug",
+   "tier": "official",
+   "src": "NEOC / UN",
+   "en": "NEOC reports 539 confirmed dead, 977 missing and 73 injured. 3,742 people have been rescued; 12,249 security personnel and 15 helicopters are mobilised. The Cabinet lifts tax duties on incoming relief items and the One Door policy under which all relief had to be delivered by the government.",
+   "ja": "NEOCが死者539人・行方不明977人・負傷73人と発表。これまでに3,742人を救助し、治安要員12,249人とヘリ15機を動員。閣議は救援物資の輸入関税と、救援物資を政府一元で届ける One Door 方針を解除した。"
   }
  ],
  "response_measures": [
@@ -511,6 +538,12 @@
    "label_en": "IRDR Rapid Analysis Report - Scientific Anatomy of the 26 August 2026 Bhotekoshi Flash Flood (28 Aug 2026)",
    "label_ja": "IRDR 速報解析『2026年8月26日 ボテコシ鉄砲水の科学的解剖』（8月28日）",
    "url": "https://reliefweb.int/report/nepal/irdr-rapid-analysis-report-scientific-anatomy-26-august-2026-bhotekoshi-flash-flood",
+   "tier": "official"
+  },
+  {
+   "label_en": "UN - Nepal: Rasuwa Flood Flash Update #3 (28 Aug 2026)",
+   "label_ja": "国連 ネパール・ラスワ洪水 Flash Update #3（8月28日）",
+   "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-update-3",
    "tier": "official"
   }
  ],
