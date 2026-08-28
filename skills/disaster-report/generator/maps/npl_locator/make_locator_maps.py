@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
-"""ネパールの位置図2枚を自作する。
+"""ネパールの位置図3枚を自作する。
 
-    LANG_OUT=ja python3 make_locator_maps.py
+    python3 make_locator_maps.py
+
+**図の中の文字は英語だけ。** 日本語はスライドの見出しが持つ。
 
 出力（`../../images/FF-2026-000162-NPL/`）:
     locator_world.png    地域→ネパール（周辺国とネパールの位置）
@@ -38,7 +40,15 @@ from matplotlib.font_manager import FontProperties
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.abspath(os.path.join(HERE, "..", "..", "images", "FF-2026-000162-NPL"))
-LANG = (os.environ.get("LANG_OUT") or "bi").lower()
+# **図の中の文字は英語だけにする。**
+# 2026-08-28、LANG_OUT=ja で1組だけ作り、それを英語版のデッキにも使った。
+# 英語版の表紙に日本語が入るという、読み手にすぐ分かる誤りになった。
+#
+# 画像はキー1つにつき1ファイルで、言語ごとには持てない。
+# デッキの他の図（UNOSAT・USGS・ERCC）もすべて英語なので、
+# **図は英語、見出しは言語ごと**（locator.steps[].label_en / _ja）に揃える。
+# LANG_OUT は受け取るが、図の文字には使わない。
+LANG = "en"
 
 TARGET = "Rasuwa"
 # 出水はここから来た。UNOSAT が「氷雪崩の推定発生地点」を置いた位置。
