@@ -59,6 +59,10 @@
   ],
   "cover_sources": [
    {
+    "label": "Google Maps © Google",
+    "url": "https://www.google.com/maps/@28.28,85.38,9z"
+   },
+   {
     "label": "BIPAD Portal, Ministry of Home Affairs, Nepal",
     "url": "https://bipadportal.gov.np/"
    },
@@ -440,7 +444,7 @@
  "cities": [],
  "historical": [],
  "locator": {
-  "_comment": "3面図。地図は自作（generator/maps/npl_locator/make_locator_maps.py）。境界線はネパール内務省 BIPAD ポータル。Google の静的地図は使っていない。",
+  "_comment": "3面図。**日本語版は荒木田さんのGoogleマップのスクリーンショット**（images/<key>_manual_ja.jpg）。英語版は自作の地図（同 <key>_en.png、generator/maps/npl_locator/make_locator_maps.py、境界線はネパール内務省BIPADポータル）。Googleマップの表示言語は日本語で、英語版に入れると英語の読み手が日本語を読むことになるため、言語ごとに持たせている（apply_language_figures.js）。 赤枠は出さない（box: false）。スクリーンショットがどの中心・縮尺で写っているかは正確には分からず、計算した枠は必ずずれる。Google のピンとハザードのアイコンが既に写っているので枠を足す必要もない。",
   "city_map": {
    "cLat": 28.15,
    "cLon": 85.35,
@@ -451,41 +455,24 @@
     "key": "locator_world",
     "label_en": "World → Nepal",
     "label_ja": "世界→ネパール",
-    "cap": "© BIPAD Portal / MoHA Nepal",
-    "map": {
-     "cLat": 28.4,
-     "cLon": 84.1,
-     "zoom": 4
-    },
-    "box": {
-     "n": 30.5,
-     "s": 26.3,
-     "w": 80.0,
-     "e": 88.3
-    }
+    "box": false,
+    "cap_en": "© BIPAD Portal / MoHA Nepal",
+    "cap_ja": "© Google"
    },
    {
     "key": "locator_region",
     "label_en": "Nepal → Rasuwa District",
     "label_ja": "ネパール→ラスワ郡",
-    "cap": "© BIPAD Portal / MoHA Nepal",
-    "map": {
-     "cLat": 28.15,
-     "cLon": 85.35,
-     "zoom": 7
-    },
-    "box": {
-     "n": 28.4,
-     "s": 27.85,
-     "w": 85.05,
-     "e": 85.75
-    }
+    "box": false,
+    "cap_en": "© BIPAD Portal / MoHA Nepal",
+    "cap_ja": "© Google"
    },
    {
-    "key": "unosat_rasuwa",
-    "label_en": "UNOSAT - satellite-detected extent",
-    "label_ja": "UNOSAT 衛星による被災範囲",
-    "cap": "© UNOSAT / UNITAR"
+    "key": "google_cities",
+    "label_en": "Bhote Koshi valley (Timure)",
+    "label_ja": "ボテコシ川の谷（ティムレ）",
+    "cap_en": "© BIPAD / UNOSAT / USGS",
+    "cap_ja": "© Google"
    }
   ]
  },
@@ -504,5 +491,22 @@
   }
  ],
  "attribution_en": "Figures from NDRRMA, Nepal Police and UN agencies; source and cut-off shown per row. All figures provisional.",
- "attribution_ja": "NDRRMA・ネパール警察・国連機関等の集計。各行に出典と時点を示す。いずれも暫定値。"
+ "attribution_ja": "NDRRMA・ネパール警察・国連機関等の集計。各行に出典と時点を示す。いずれも暫定値。",
+ "extra_slides": [
+  {
+   "title_en": "UNOSAT - Satellite-detected Flood Extent, Rasuwa",
+   "title_ja": "UNOSAT 衛星解析による被災範囲（ラスワ郡）",
+   "intro_en": "Satellite-detected extent of the flood and debris along the Bhote Koshi, produced under the activation of the International Charter and Sentinel Asia. The analysis places the source of the surge upstream of Timure, near the China (Tibet A.R.) border.",
+   "intro_ja": "国際災害チャーターおよびセンチネルアジアの発動に基づき作成された、ボテコシ川沿いの出水・堆積範囲の衛星解析。出水の発生源はティムレの上流、中国（チベット自治区）との国境付近とされている。",
+   "image": "unosat_rasuwa",
+   "caption_en": "UNOSAT satellite-detected extent, Rasuwa District",
+   "caption_ja": "UNOSAT 衛星による被災範囲（ラスワ郡）",
+   "note_en": "UNOSAT describes the deposits as mudflow / rockflow. This is a description of what the imagery shows and does not contradict the GLOF attribution used by DHM, NDRRMA, ADRC, Sentinel Asia, JAXA and WFP.",
+   "note_ja": "UNOSATは堆積物を mudflow / rockflow と記述している。これは図に写っているものの呼び方であり、DHM・NDRRMA・ADRC・センチネルアジア・JAXA・WFP が用いる GLOF という位置づけと矛盾しない。",
+   "source": {
+    "label": "UNOSAT / UNITAR",
+    "url": "https://unosat.org/"
+   }
+  }
+ ]
 }

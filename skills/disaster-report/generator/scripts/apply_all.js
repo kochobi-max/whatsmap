@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /*
- * apply_all.js — 20本のパッチを正しい順序でまとめて当てる
+ * apply_all.js — 21本のパッチを正しい順序でまとめて当てる
  *
  * 使い方:
  *   node scripts/apply_all.js --file "<gen_deck.js のパス>" --dry-run   ← まずこれ
@@ -42,6 +42,7 @@ const ORDER = [
   ["apply_sat_page_numbering.js", "出ていないページの番号を見出しに書かない（3/3 だけが残る）"],
   ["apply_table_fit.js", "表がページ番号・出典行に重ならないよう行送りと下端を直す"],
   ["apply_fitrows_measured.js", "右側の表が折り返しで伸びて枠外へ出るのを止める"],
+  ["apply_locator_no_box.js", "表紙の赤枠を box: false で出さないようにする"],
 ];
 
 function main() {
