@@ -215,8 +215,8 @@
    "time": "26 Aug 11:00",
    "tier": "official",
    "src": "ADRC / Sentinel Asia",
-   "en": "Nepal's NDRRMA requests rapid satellite imagery. ADRC receives the request and activates Sentinel Asia and the International Charter the same day (Sentinel Asia emergency observation request SA-00658, requester: Department of Hydrology and Meteorology).",
-   "ja": "ネパールNDRRMAが緊急の衛星画像提供を要請。ADRCがこれを受け、同日中にセンチネルアジアと国際災害チャーターを発動した（センチネルアジア緊急観測要請 SA-00658、要請元は水文気象局）。"
+   "en": "Nepal's NDRRMA requests rapid satellite imagery. ADRC receives the request and activates Sentinel Asia (emergency observation request SA-00658, requester: Department of Hydrology and Meteorology).",
+   "ja": "ネパールNDRRMAが緊急の衛星画像提供を要請。ADRCがこれを受けてセンチネルアジアを発動した（緊急観測要請 SA-00658、要請元は水文気象局）。"
   },
   {
    "time": "26 Aug 11:45",
@@ -231,6 +231,13 @@
    "src": "UNOCHA / JAXA",
    "en": "UNOCHA's Bangkok office supplies two areas of interest for imagery tasking - the Syabrubesi area and the Timure area - which ADRC merges into the Sentinel Asia request.",
    "ja": "UNOCHAバンコク事務所が観測対象範囲（AOI）2か所（シャブルベシ地区、ティムレ地区）を提供。ADRCがセンチネルアジア側の要請に統合した。"
+  },
+  {
+   "time": "26 Aug 18:43",
+   "tier": "official",
+   "src": "International Charter",
+   "en": "The International Charter Space and Major Disasters is activated as #1052, with ADRC recorded as the requestor on behalf of the Department of Hydrology and Meteorology (14:58 UTC+02:00). Project management is assigned to UNITAR.",
+   "ja": "国際災害チャーターが Activation #1052 として発動（14:58 UTC+02:00）。要請者は「水文気象局に代わってADRC」と記録されている。案件管理はUNITAR。"
   },
   {
    "time": "26 Aug evening",
@@ -311,8 +318,8 @@
   {
    "tier": "official",
    "source": "ADRC / Sentinel Asia / International Charter, 26 Aug",
-   "en": "ADRC received the NDRRMA's request for rapid satellite imagery and activated both Sentinel Asia and the International Charter Space and Major Disasters on the day of the event. The Sentinel Asia emergency observation request is SA-00658, with Nepal's Department of Hydrology and Meteorology as requester.",
-   "ja": "ADRCはNDRRMAからの緊急衛星画像要請を受け、発災当日にセンチネルアジアと国際災害チャーターの双方を発動した。センチネルアジアの緊急観測要請番号はSA-00658、要請元はネパール水文気象局（DHM）。"
+   "en": "ADRC received the NDRRMA's request for rapid satellite imagery and activated both Sentinel Asia and the International Charter on the day of the event. The Charter records the requestor as \"ADRC on behalf of the Department of Hydrology and Meteorology (DHM)\" — Activation #1052, 26 August. The Sentinel Asia emergency observation request is SA-00658, and its record notes escalation to the International Charter and carries GLIDE FF-2026-000162-NPL.",
+   "ja": "ADRCはNDRRMAからの緊急衛星画像要請を受け、発災当日にセンチネルアジアと国際災害チャーターの双方を発動した。チャーター側の記載では要請者は「水文気象局（DHM）に代わってADRC」で、Activation #1052、8月26日。センチネルアジアの緊急観測要請番号は SA-00658 で、その記録には国際災害チャーターへのエスカレーションと GLIDE番号 FF-2026-000162-NPL が明記されている。"
   },
   {
    "tier": "official",
@@ -344,11 +351,11 @@
   },
   {
    "org": "International Charter",
-   "status": "Activated (#1052)",
+   "status": "Activated #1052 (26 Aug, 14:58 UTC+02:00)",
    "tier": "official",
    "url": "https://disasterscharter.org/activations/flood-in-nepal-activation-1052-",
-   "en": "Activated for this event through ADRC on 26 August. UNOSAT produced satellite-detected mudflow/rockflow extent maps for Rasuwa and Nuwakot districts from Sentinel-2 and PlanetScope imagery.",
-   "ja": "8月26日、ADRCを通じて発動。UNOSATがSentinel-2とPlanetScopeの画像から、ラスワ郡・ヌワコット郡の土石流・岩屑流の範囲図を作成した。"
+   "en": "Activation #1052. The Charter page records the requestor as \"ADRC on behalf of the Department of Hydrology and Meteorology (DHM), Ministry of Energy, Water Resources and Irrigation in Nepal\". Project management: Samir Belabbes (UNITAR). Value adding: NRSC, British Geological Survey, ISRO, SERTIT (iCube), Copernicus EMS, DHM, University of Ljubljana and the Cryospheric Society of Nepal. Three products had been published as of 28 August.",
+   "ja": "Activation #1052。チャーターの発動ページには要請者が「ネパール・エネルギー水資源灌漑省 水文気象局（DHM）に代わって ADRC」と記載されている。案件管理は Samir Belabbes（UNITAR）。付加価値解析は NRSC、英国地質調査所、ISRO、SERTIT（iCube）、コペルニクス緊急管理サービス、DHM、リュブリャナ大学、ネパール雪氷学会。8月28日時点で3件のプロダクトが公開されている。"
   },
   {
    "org": "UNOSAT",
