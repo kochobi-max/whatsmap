@@ -64,7 +64,7 @@
    },
    {
     "label": "UNOSAT / UNITAR",
-    "url": "https://reliefweb.int/map/nepal/nepal-satellite-detected-mudflow-rockflow-extent-26-27-august-2026-rasuwa-district-bagmati-province-imagery-analysis-2627082026-published-27082026-v1"
+    "url": "https://unosat.org/products/4259"
    },
    {
     "label": "BIPAD Portal, Ministry of Home Affairs, Nepal",
@@ -198,6 +198,16 @@
    "source_ja": "UNOSAT・UNITAR（8月27日公表。Sentinel-2 8月27日／PlanetScope 8月26日）",
    "tier": "official",
    "url": "https://reliefweb.int/map/nepal/nepal-satellite-detected-mudflow-rockflow-extent-26-27-august-2026-rasuwa-district-bagmati-province-imagery-analysis-2627082026-published-27082026-v1"
+  },
+  {
+   "item_en": "Satellite-detected extent (UNOSAT)",
+   "item_ja": "衛星解析による被災範囲（UNOSAT）",
+   "value_en": "Analysed area about 350 km2, of which an estimated 37 km2 is affected by floodwaters. About 5,000 of the 46,600 buildings in the analysed area are exposed to or near the affected areas; about 120 km of roads are potentially affected. Highest concentration: Bidur Municipality, Nuwakot District (about 2,600 buildings), then Gosaikunda Municipality, Rasuwa District (about 1,030). Preliminary; not validated in the field.",
+   "value_ja": "解析対象面積 約350km2 のうち、約37km2 が出水の影響を受けたと推定。解析範囲内の建物 約46,600棟のうち約5,000棟が影響範囲内またはその近傍、道路 約120km が影響を受けた可能性。最も集中しているのはヌワコット郡ビドゥル市の約2,600棟、次いでラスワ郡ゴサインクンダ村の約1,030棟。暫定値であり現地検証は未実施。",
+   "source_en": "UNOSAT product 4259, imagery 26-27 Aug, published 28 Aug 2026",
+   "source_ja": "UNOSAT 製品4259（8月26-27日の画像、8月28日公開）",
+   "tier": "official",
+   "url": "https://unosat.org/products/4259"
   }
  ],
  "timeline": [
@@ -432,6 +442,12 @@
    "label_ja": "BIPADポータル（内務省）災害統計",
    "url": "https://bipadportal.gov.np/",
    "tier": "official"
+  },
+  {
+   "label_en": "UNOSAT product 4259 - Rasuwa and Nuwakot, mudflow/rockflow extent (28 Aug 2026)",
+   "label_ja": "UNOSAT 製品4259 — ラスワ郡・ヌワコット郡 土石流/岩屑流の範囲（8月28日）",
+   "url": "https://unosat.org/products/4259",
+   "tier": "official"
   }
  ],
  "images": {
@@ -491,19 +507,27 @@
  "attribution_ja": "NDRRMA・ネパール警察・国連機関等の集計。各行に出典と時点を示す。いずれも暫定値。",
  "extra_slides": [
   {
-   "title_en": "UNOSAT - Satellite-detected Flood Extent, Rasuwa",
-   "title_ja": "UNOSAT 衛星解析による被災範囲（ラスワ郡）",
-   "intro_en": "Satellite-detected extent of the flood and debris along the Bhote Koshi, produced under the activation of the International Charter and Sentinel Asia. The analysis places the source of the surge upstream of Timure, near the China (Tibet A.R.) border.",
-   "intro_ja": "国際災害チャーターおよびセンチネルアジアの発動に基づき作成された、ボテコシ川沿いの出水・堆積範囲の衛星解析。出水の発生源はティムレの上流、中国（チベット自治区）との国境付近とされている。",
+   "title_en": "UNOSAT - Satellite-detected Mudflow / Rockflow Extent (Rasuwa and Nuwakot)",
+   "title_ja": "UNOSAT 衛星解析による土石流・岩屑流の範囲（ラスワ郡・ヌワコット郡）",
+   "intro_en": "Product 4259, imagery analysis 26 and 27 August 2026, published 28 August 2026 (v1). Sentinel-2 imagery of 27 August and PlanetScope imagery of 26 August. Within an analysed area of about 350 km2, an estimated 37 km2 appears to be affected by floodwaters. Approximately 5,000 of the 46,600 buildings in the analysed area are exposed to or located near the affected areas, and about 120 km of roads are potentially affected. The highest concentration is in Bidur Municipality, Nuwakot District (about 2,600 buildings), followed by Gosaikunda Municipality, Rasuwa District (about 1,030 buildings). The map also marks the possible triggering location of the ice-rock avalanche on the Tibetan side of the border.",
+   "intro_ja": "製品番号4259。2026年8月26日・27日の画像解析、8月28日公開（v1）。8月27日のSentinel-2と8月26日のPlanetScopeの画像による。解析対象面積 約350km2 のうち、約37km2 が出水の影響を受けたと推定される。解析範囲内の建物 約46,600棟のうち約5,000棟が影響範囲内またはその近傍にあり、道路 約120km が影響を受けた可能性がある。最も集中しているのはヌワコット郡ビドゥル市の約2,600棟で、次いでラスワ郡ゴサインクンダ村の約1,030棟。氷と岩の雪崩の発生地点と推定される位置（国境の中国側）も図示されている。",
    "image": "unosat_rasuwa",
-   "caption_en": "UNOSAT satellite-detected extent, Rasuwa District",
-   "caption_ja": "UNOSAT 衛星による被災範囲（ラスワ郡）",
-   "note_en": "UNOSAT describes the deposits as mudflow / rockflow. This is a description of what the imagery shows and does not contradict the GLOF attribution used by DHM, NDRRMA, ADRC, Sentinel Asia, JAXA and WFP.",
-   "note_ja": "UNOSATは堆積物を mudflow / rockflow と記述している。これは図に写っているものの呼び方であり、DHM・NDRRMA・ADRC・センチネルアジア・JAXA・WFP が用いる GLOF という位置づけと矛盾しない。",
+   "caption_en": "UNOSAT product 4259 - Rasuwa and Nuwakot Districts, Bagmati Province",
+   "caption_ja": "UNOSAT 製品4259 — バグマティ州ラスワ郡・ヌワコット郡",
+   "note_en": "UNOSAT states this is a preliminary analysis that has not yet been validated in the field. UNOSAT describes the deposits as mudflow / rockflow; this is a description of what the imagery shows and does not contradict the GLOF attribution used by DHM, NDRRMA, ADRC, Sentinel Asia, JAXA and WFP.",
+   "note_ja": "UNOSATは、これは暫定的な解析であり現地での検証は行われていないと明記している。堆積物を mudflow / rockflow と記述しているが、これは図に写っているものの呼び方であり、DHM・NDRRMA・ADRC・センチネルアジア・JAXA・WFP が用いる GLOF という位置づけと矛盾しない。",
    "source": {
-    "label": "UNOSAT / UNITAR",
-    "url": "https://unosat.org/"
-   }
+    "label": "UNOSAT / UNITAR product 4259",
+    "url": "https://unosat.org/products/4259"
+   },
+   "image_full": true
+  }
+ ],
+ "observations": [
+  {
+   "tier": "official",
+   "en": "The 28 August UNOSAT analysis extends downstream into Nuwakot District. The largest concentration of affected buildings is not in Rasuwa, where the surge began, but in Bidur Municipality in Nuwakot - about 2,600 buildings against about 1,030 in Gosaikunda, Rasuwa. Reporting that stops at the district where the event started understates the footprint.",
+   "ja": "8月28日のUNOSATの解析は、下流のヌワコット郡まで範囲を広げている。影響を受けた建物が最も集中しているのは、出水が始まったラスワ郡ではなく**ヌワコット郡ビドゥル市**である（約2,600棟に対し、ラスワ郡ゴサインクンダ村は約1,030棟）。発災地の郡だけを見ていると、被害の広がりを小さく見積もることになる。"
   }
  ]
 }

@@ -207,9 +207,14 @@ const EXTRA = `
   s = p.addSlide(); s.background = { color: WHITE };
   heading(s, x.title_en || x.title_ja, x.title_ja || x.title_en);
   const hasImg = !!(x.image && resolveImg(x.image));
-  const tx = 0.4, tw = hasImg ? 7.2 : 12.5;
+  // image_full: 図が主役のページ。**縦をめいっぱい使う。**
+  // 16:9 のスライドに A3 の縦長地図を置くと、幅ではなく高さで頭打ちになる。
+  // 幅いっぱいの枠に入れても大きくならず、かえって小さくなる（実測）。
+  // 高さを 4.6in から 5.15in へ伸ばすほうが効く。説明は左に回す。
+  const imgFull = hasImg && x.image_full === true;
+  const tx = 0.4, tw = hasImg ? (imgFull ? 7.6 : 7.2) : 12.5;
   let ty = 1.15;
-  if (hasImg) imageSlot(s, 7.9, 1.2, 5.0, 4.6, x.image, x.caption_en || "", x.caption_ja || "", (x.source && x.source.url) || "");
+  if (hasImg && !imgFull) imageSlot(s, 7.9, 1.2, 5.0, 4.6, x.image, x.caption_en || "", x.caption_ja || "", (x.source && x.source.url) || "");
   const intro = TT(x.intro_en || "", x.intro_ja || "");
   if (intro) {
     s.addText(intro, { x: tx, y: ty, w: tw, h: 1.60, fontSize: 11.5, color: INK, fontFace: FONT, align: "left", valign: "top", margin: 4, shrinkText: true });
@@ -231,8 +236,12 @@ const EXTRA = `
   } else if (!intro) {
     s.addText(TT(x.note_en || "", x.note_ja || ""), { x: tx, y: ty, w: tw, h: 5.0, fontSize: 11.5, color: INK, fontFace: FONT, align: "left", valign: "top", margin: 4, shrinkText: true });
   }
-  const note = (cols.length && rows.length) ? TT(x.note_en || "", x.note_ja || "") : "";
-  if (note) s.addText(note, { x: tx, y: 6.18, w: tw, h: 0.58, fontSize: 10, color: MUTED, fontFace: FONT, align: "left", valign: "top", margin: 3, shrinkText: true });
+  if (imgFull) {
+    imageSlot(s, 8.3, 1.15, 4.6, 5.15, x.image,
+      x.caption_en || "", x.caption_ja || "", (x.source && x.source.url) || "");
+  }
+  const note = ((cols.length && rows.length) || imgFull) ? TT(x.note_en || "", x.note_ja || "") : "";
+  if (note) s.addText(note, { x: tx, y: 6.42, w: tw, h: 0.44, fontSize: 9.5, color: MUTED, fontFace: FONT, align: "left", valign: "top", margin: 3, shrinkText: true });
   if (x.source && x.source.url) srcLine(s, [x.source]);
   footer(s);
 });
