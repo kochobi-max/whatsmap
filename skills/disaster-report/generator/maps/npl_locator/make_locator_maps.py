@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
-"""ネパールの位置図3枚を自作する。
+"""ネパールの位置図3枚を、**日本語版と英語版の2組**作る。
 
     python3 make_locator_maps.py
 
-**図の中の文字は英語だけ。** 日本語はスライドの見出しが持つ。
+出力（`../../images/FF-2026-000162-NPL/`）— 1枚につき3ファイル:
+    locator_world.png      共通（＝英語。言語別が無いときの落とし先）
+    locator_world_en.png   英語版のデッキが使う
+    locator_world_ja.png   日本語版のデッキが使う
 
-出力（`../../images/FF-2026-000162-NPL/`）:
-    locator_world.png    地域→ネパール（周辺国とネパールの位置）
-    locator_region.png   ネパール→ラスワ郡（全77郡と対象郡）
+同じく locator_region / google_cities。
+ジェネレータ側は `apply_language_figures.js`（17本目）が
+`<key>_<lang>.png` を先に探し、無ければ `<key>.png` に落ちる。
 
 ## なぜ自作するのか
 
@@ -40,15 +43,17 @@ from matplotlib.font_manager import FontProperties
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.abspath(os.path.join(HERE, "..", "..", "images", "FF-2026-000162-NPL"))
-# **図の中の文字は英語だけにする。**
 # 2026-08-28、LANG_OUT=ja で1組だけ作り、それを英語版のデッキにも使った。
 # 英語版の表紙に日本語が入るという、読み手にすぐ分かる誤りになった。
 #
-# 画像はキー1つにつき1ファイルで、言語ごとには持てない。
-# デッキの他の図（UNOSAT・USGS・ERCC）もすべて英語なので、
-# **図は英語、見出しは言語ごと**（locator.steps[].label_en / _ja）に揃える。
-# LANG_OUT は受け取るが、図の文字には使わない。
+# そのときの直しは「図の文字は英語だけにする」だった。**後退だった。**
+# 日本語版の読み手が、図の中だけ英語を読まされる。
+# 別のセッションが main の reports/colombia_eq_20260810/ で既に解いていて、
+# `<key>_ja.png` を言語ごとに持つ約束になっていた。同じやり方に揃える。
+#
+# LANG はこのモジュールの実行中に切り替わる。描画関数は label() 経由で見る。
 LANG = "en"
+SUFFIX = ""       # "" / "_en" / "_ja"
 
 TARGET = "Rasuwa"
 # 出水はここから来た。UNOSAT が「氷雪崩の推定発生地点」を置いた位置。
@@ -124,7 +129,8 @@ def frame(ax, w, e, s, n, step):
 
 def save(fig, name):
     os.makedirs(OUT, exist_ok=True)
-    path = os.path.join(OUT, name)
+    stem, ext = os.path.splitext(name)
+    path = os.path.join(OUT, stem + SUFFIX + ext)
     fig.savefig(path, dpi=200, bbox_inches="tight", pad_inches=0.04,
                 facecolor="white")
     plt.close(fig)
@@ -239,11 +245,17 @@ def map_cities(districts):
 
 
 def main():
-    print("LANG_OUT=" + LANG + " → " + OUT)
+    global LANG, SUFFIX
     districts = load()["districts"]
-    map_world(districts)
-    map_region(districts)
-    map_cities(districts)
+    # 共通（落とし先）は英語。そのうえで言語別を2組。
+    # 英語版のデッキに日本語が出ないのは、英語版が locator_world_en.png を
+    # 掴むからであって、共通ファイルの中身に頼らない。
+    for lang, suffix in (("en", ""), ("en", "_en"), ("ja", "_ja")):
+        LANG, SUFFIX = lang, suffix
+        print("%s%s → %s" % (lang, suffix or "（共通）", OUT))
+        map_world(districts)
+        map_region(districts)
+        map_cities(districts)
 
 
 main()

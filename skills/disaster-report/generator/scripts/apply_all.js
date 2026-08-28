@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /*
- * apply_all.js — 15本のパッチを正しい順序でまとめて当てる
+ * apply_all.js — 17本のパッチを正しい順序でまとめて当てる
  *
  * 使い方:
  *   node scripts/apply_all.js --file "<gen_deck.js のパス>" --dry-run   ← まずこれ
@@ -38,6 +38,7 @@ const ORDER = [
   ["apply_activation_pages.js", "発動ページを activation_pages で出し分ける"],
   ["apply_cover_and_figures.js", "表紙3行目のあふれ・PAGERの図・時系列の時間帯注記"],
   ["apply_country_neutral_headers.js", "日本固定の見出し（時系列・被害・発動ページ）を meta から読む"],
+  ["apply_language_figures.js", "図を <key>_ja.png のように言語ごとに持てるようにする"],
 ];
 
 function main() {
