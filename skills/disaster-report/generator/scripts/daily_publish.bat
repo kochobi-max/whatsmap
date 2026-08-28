@@ -15,7 +15,7 @@ REM  Run check_setup.bat first if anything is unclear.
 REM
 REM  Everything is written to a log AND shown on screen. When you
 REM  double-click this file the window stays open at the end.
-REM  Under Task Scheduler it just exits with a code.
+REM  The scheduled task passes --quiet so it never waits for a key.
 REM ============================================================
 setlocal EnableDelayedExpansion
 
@@ -29,11 +29,29 @@ set "DEST=C:\Users\arakida\OneDrive - adrc.asia\LargeScaleDisasters"
 set "RAW=https://raw.githubusercontent.com/kochobi-max/whatsmap/%DIST%/%GLIDE%"
 set "WORK=%TEMP%\adrc_dist"
 set "LOG=%TEMP%\adrc_daily_publish.txt"
+set "SELFCOPY=%TEMP%\adrc_daily_publish_run.bat"
 
-REM was this double-clicked? then keep the window open at the end
-set "INTERACTIVE="
-echo %cmdcmdline% | find /i "%~nx0" >nul
-if not errorlevel 1 set "INTERACTIVE=1"
+REM  Wait for a key at the end, unless the caller said --quiet.
+REM  This used to be guessed from %%cmdcmdline%%, but Task Scheduler
+REM  launches the file the same way a double-click does, so the guess
+REM  would have made the daily task sit on "pause" for ever.
+set "INTERACTIVE=1"
+if /i "%~1"=="--quiet" set "INTERACTIVE="
+
+REM  Run from a copy in %%TEMP%%.
+REM  cmd reads a batch file from disk as it goes. The git pull below can
+REM  replace THIS FILE while it is running, and cmd then carries on at a
+REM  byte offset inside different content. Copying first makes the file
+REM  being executed one that git never touches.
+if not defined ADRC_FROM_COPY (
+  set "ADRC_FROM_COPY=1"
+  copy /Y "%~f0" "%SELFCOPY%" >nul
+  if not errorlevel 1 (
+    cmd /c ""%SELFCOPY%" %*"
+    exit /b !ERRORLEVEL!
+  )
+  echo WARN: could not copy myself to %SELFCOPY% - running in place
+)
 
 call :main > "%LOG%" 2>&1
 set "RC=%ERRORLEVEL%"
@@ -155,21 +173,7 @@ if errorlevel 1 (
   echo WARN: marker-not-written
   echo Files are published. The cloud will hold the update mail.
 ) else (
-  git add "skills/disaster-report/_published/%GLIDE%.json"
-  git commit -m "chore(disaster-report): %GLIDE% published to LargeScaleDisasters" >nul 2>&1
-  REM the cloud pushes to this branch about 35 minutes earlier, so rebase first
-  git pull --rebase origin %BRANCH% >nul 2>&1
-  git push origin %BRANCH% >nul 2>&1
-  if errorlevel 1 (
-    git pull --rebase origin %BRANCH% >nul 2>&1
-    git push origin %BRANCH% >nul 2>&1
-  )
-  if errorlevel 1 (
-    echo WARN: marker-not-pushed
-    echo Files are published. Only the marker could not be pushed,
-    echo so the cloud will hold the update mail until it sees one.
-    echo If this is the first push, a GitHub sign-in window may be waiting.
-  )
+  call :pushmarker
 )
 
 echo STATUS: PUBLISHED %DEST%
@@ -197,6 +201,41 @@ if not "%GOT%"=="%WANT%" (
   exit /b 1
 )
 echo   ok %NAME% %GOT% bytes
+exit /b 0
+
+REM ------------------------------------------------------------
+REM  :pushmarker  - commit the record and prove it reached GitHub
+REM
+REM  2026-08-28: this step printed nothing and the record never arrived.
+REM  The commit failed (no user.name / user.email on this machine), the
+REM  push that followed then said "Everything up-to-date" and returned 0,
+REM  so the batch reported success with nothing pushed. Two changes:
+REM  the identity is passed on the command line so the commit cannot fail
+REM  that way, and the result is checked against GitHub instead of being
+REM  inferred from an exit code. Nothing goes to nul any more.
+:pushmarker
+set "MARKERPATH=skills/disaster-report/_published/%GLIDE%.json"
+git add "%MARKERPATH%"
+git -c user.name="ADRC publish" -c user.email="noreply@adrc.asia" commit -m "chore(disaster-report): %GLIDE% published to LargeScaleDisasters"
+REM the cloud pushes to this branch about 35 minutes earlier, so rebase first
+git pull --rebase origin %BRANCH%
+git push origin %BRANCH%
+if errorlevel 1 (
+  git pull --rebase origin %BRANCH%
+  git push origin %BRANCH%
+)
+REM Ask GitHub whether the file is really there. Do not trust the code.
+git fetch origin %BRANCH%
+git cat-file -e FETCH_HEAD:%MARKERPATH% 2>nul
+if errorlevel 1 (
+  echo WARN: marker-not-pushed
+  echo Files are published. Only the record could not be pushed,
+  echo so the cloud will hold the update mail until it sees one.
+  echo The git output above says why. If this is the first push,
+  echo a GitHub sign-in window may be waiting.
+  exit /b 0
+)
+echo   marker confirmed on GitHub
 exit /b 0
 
 :gitfail

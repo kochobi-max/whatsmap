@@ -109,8 +109,11 @@ NG  3 repo         no git clone at C:\Users\arakida\whatsmap
 管理者の `cmd` で1行。毎日 08:10 JST に走る（クラウドの 08:00 更新の10分後）。
 
 ```
-schtasks /create /tn "ADRC disaster report daily" /tr "\"C:\Users\arakida\whatsmap\skills\disaster-report\generator\scripts\daily_publish.bat\"" /sc daily /st 08:10
+schtasks /create /tn "ADRC disaster report daily" /tr "\"C:\Users\arakida\whatsmap\skills\disaster-report\generator\scripts\daily_publish.bat\" --quiet" /sc daily /st 08:10
 ```
+
+**`--quiet` を落とさないこと。** これが無いとバッチは最後にキー入力を待ち、
+定期タスクがそこで止まったままになる。手で実行するときは付けなくてよい。
 
 確認と手動実行:
 
@@ -165,6 +168,36 @@ https://raw.githubusercontent.com/kochobi-max/whatsmap/dist/EQ-2026-000146-COL/m
 - 前日と同じ内容が出る → クラウド側の更新が入っていない。ブランチのコミットを見る
 - `STATUS:` の行が1つも出ずに終わる → バッチが cp932/CRLF で壊れている可能性。
   このファイルは ASCII のみで書いてあるので、編集時に日本語を足さないこと
+- `STATUS: PUBLISHED` なのにメールが出ない → 公開記録が GitHub まで届いていない。
+  ログの `marker confirmed on GitHub` の行を見る。無ければ `WARN: marker-not-pushed`
+  が出ているはずで、その上に git の理由がそのまま出ている
+
+## 2026-08-28 にここで起きたこと
+
+`STATUS: PUBLISHED` が出て4ファイルも OneDrive に入ったのに、
+**公開記録が GitHub に届いていなかった。** バッチは成功と報告していた。
+
+git の出力を `>nul` に捨てたうえで、終了コードだけを見ていたのが原因。
+このPCに `user.name` / `user.email` が設定されておらず `git commit` が失敗し、
+続く `git push` は「Everything up-to-date」で **0 を返す**。
+バッチはそれを成功と読んだ。
+
+直したこと。
+
+- 名前とアドレスを `git -c` でコマンドラインから渡す。設定に依存させない
+- git の出力を捨てない。全部ログに残す
+- **終了コードを信用しない。** push のあとに `git fetch` して、
+  記録が本当に GitHub にあるかを `git cat-file -e` で確かめる
+
+ついでに同じ性質の穴を2つ塞いだ。
+
+- **バッチが自分自身を書き換えられていた。** 先頭の `git pull` は
+  `daily_publish.bat` を更新しうる。cmd はバッチをディスクから読みながら
+  実行するので、実行中に中身が入れ替わると別の内容の途中から動き出す。
+  いまは最初に `%TEMP%` へ自分をコピーし、そちらを実行する
+- **定期タスクが `pause` で止まるところだった。** 「ダブルクリックされたか」を
+  `%cmdcmdline%` で判定していたが、タスクスケジューラも同じ形で起動するため
+  区別できない。`--quiet` を渡す方式に変えた
 
 ---
 

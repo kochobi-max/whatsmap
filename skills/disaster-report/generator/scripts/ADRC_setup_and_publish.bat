@@ -128,7 +128,7 @@ echo window may appear. Sign in once; it will not ask again.
 echo If you missed it, run this file once more.
 echo.
 echo Next: register the daily task, in an ADMIN command prompt, one line:
-echo   schtasks /create /tn "ADRC disaster report daily" /tr "\"%REPO%\skills\disaster-report\generator\scripts\daily_publish.bat\"" /sc daily /st 08:10
+echo   schtasks /create /tn "ADRC disaster report daily" /tr "\"%REPO%\skills\disaster-report\generator\scripts\daily_publish.bat\" --quiet" /sc daily /st 08:10
 exit /b 0
 
 :gitfail
