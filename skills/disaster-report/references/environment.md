@@ -171,9 +171,23 @@ cron 2本を作る手順は、この前置きとセットで初めて動く。
 | コード・データ更新・ビルドだけ | MCP から作ってよい |
 | **メール送信・カレンダー等コネクタを使う** | **claude.ai の Routines 画面** |
 
-貼り付け用の本文は `references/daily-mail-routine.md` にある。
+貼り付け用の本文は `references/daily-mail-routine-prompt.txt`、
+画面の操作手順は `references/daily-mail-routine.md` にある。
 
 2026年8月24日、コロンビアの送信タスクをこれで一度作り直した。
+
+**`connectors` を指定して MCP から作る道は、この組織では塞がっている。**
+2026年8月28日に試すと、
+
+> create_trigger: the connectors parameter is not available for this organization.
+
+で拒否された。回避策は無いので、画面で作る以外にない。
+自分の側で片づけてあげられない数少ない作業のひとつなので、
+手順は画面のラベルどおりに書いておくこと。
+
+画面の要点は「Superhuman を**選ぶ**」ではない。
+**つないであるコネクタは既定で全部入っている**ので、
+`Superhuman Mail` を**消してしまわない**ことを確かめるのが正しい。
 
 ## Windows の git は改行を CRLF にして取り出す
 
