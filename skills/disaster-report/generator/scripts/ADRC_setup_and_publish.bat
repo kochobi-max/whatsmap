@@ -112,7 +112,11 @@ if not exist "%DEST%" (
 
 echo.
 echo STEP: download and publish
-call "%REPO%\skills\disaster-report\generator\scripts\daily_publish.bat"
+REM  --quiet is required here. This file already captures everything to a
+REM  log and pauses once at the end. Without it daily_publish.bat pauses
+REM  too, and that prompt is inside the redirect, so it goes to the log
+REM  instead of the screen and the window sits there for ever.
+call "%REPO%\skills\disaster-report\generator\scripts\daily_publish.bat" --quiet
 set "RC=%ERRORLEVEL%"
 if not "%RC%"=="0" (
   echo.

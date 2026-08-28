@@ -49,7 +49,9 @@ const rec = {
   published_date_jst: jst.getFullYear() + "-" + pad(jst.getMonth() + 1) + "-" + pad(jst.getDate()),
   destination: DEST,
   // メール本文に載せる版の情報。イベントJSONから取るので手で書かない
-  edition: (ev.meta && ev.meta.edition) || null,
+  // イベントJSONは edition_ja / edition_en を持つ。edition は無い。
+  // メール本文の「第N報」はここから取るので、拾えないと空欄で出る。
+  edition: (ev.meta && (ev.meta.edition_ja || ev.meta.edition || ev.meta.edition_en)) || null,
   update_date: (ev.meta && ev.meta.update_date) || null,
   stamp: (ev.meta && ev.meta.stamp) || null,
   files: files,
