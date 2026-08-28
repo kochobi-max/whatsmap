@@ -15,18 +15,18 @@
    "send_at": "07:00 JST のみ"
   },
   "onedrive_dir": "C:\\Users\\arakida\\OneDrive - adrc.asia\\LargeScaleDisasters",
-  "title_en": "2026 Bhote Koshi Glacial Lake Outburst Flood (Nepal)",
-  "title_ja": "2026年 ボテコシ川 氷河湖決壊洪水（ネパール）",
-  "subtitle_en": "Rasuwa District, Bagmati Province - 26 August 2026",
-  "subtitle_ja": "バグマティ州ラスワ郡、2026年8月26日",
-  "edition_en": "1st report",
-  "edition_ja": "第1報",
+  "title_en": "2026 Bhote Koshi Debris Flow and Flash Flood (Nepal)",
+  "title_ja": "2026年 ボテコシ川 土石流・鉄砲水（ネパール）",
+  "subtitle_en": "Rasuwa, Nuwakot, Dhading and Chitwan Districts - 26 August 2026",
+  "subtitle_ja": "ラスワ郡・ヌワコット郡・ダディン郡・チトワン郡、2026年8月26日",
+  "edition_en": "2nd report",
+  "edition_ja": "第2報",
   "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
   "prepared_by_ja": "アジア防災センター（ADRC）",
   "stamp": "2026-08-28 15:00 JST",
   "update_date": "28/08/2026",
-  "timeline_range_en": "26-28 August 2026 (Nepal Standard Time, UTC+5:45)",
-  "timeline_range_ja": "2026年8月26日〜28日（ネパール標準時 UTC+5:45）",
+  "timeline_range_en": "25-28 August 2026 (Nepal Standard Time, UTC+5:45)",
+  "timeline_range_ja": "2026年8月25日〜28日（ネパール標準時 UTC+5:45）",
   "tz_note_en": "All times are Nepal Standard Time (NPT, UTC+5:45) unless stated.",
   "tz_note_ja": "時刻は特記なき限りネパール標準時（NPT、UTC+5:45）。",
   "optional_slides": [],
@@ -84,19 +84,19 @@
  },
  "event": {
   "origin_time": "26 August 2026, approx. 09:00 NPT (UTC+5:45)",
-  "epicentre_en": "Lhende Khola, a Bhote Koshi tributary on the Nepal-China border, approx. 20 km upstream of the Miteri Bridge",
-  "epicentre_ja": "ネパール・中国国境のボテコシ川支流レンデ川。ミテリ橋の約20km上流",
-  "epicentre_short_en": "Lhende Khola / Rasuwa",
-  "epicentre_short_ja": "レンデ川・ラスワ郡",
+  "epicentre_en": "Source area around Deding in the Langtang region; the flood ran down the Bhote Koshi-Trishuli corridor",
+  "epicentre_ja": "発生源はランタン地域デディン付近。出水はボテコシ川〜トリシュリ川の回廊を流下した",
+  "epicentre_short_en": "Deding / Langtang - Bhote Koshi",
+  "epicentre_short_ja": "ランタン地域デディン付近／ボテコシ川",
   "lat": 28.28,
   "lon": 85.46,
   "magnitude": "",
   "depth_km": 0,
   "depth_display": "",
-  "mechanism_en": "Suspected glacial lake outburst flood (GLOF). Nepal's Department of Hydrology and Meteorology and independent glaciologists, working from satellite imagery shared by Chinese counterparts through ICIMOD, put forward the preliminary hypothesis that an ice-and-rock avalanche blocked the Lhende Khola, forming a temporary debris-dammed lake that then burst. The trigger has not been officially confirmed.",
-  "mechanism_ja": "氷河湖決壊洪水（GLOF）と見られる。ネパール水文気象局（DHM）と氷河研究者は、ICIMODを通じて中国側から共有された衛星画像に基づき、氷と岩の雪崩がレンデ川を堰き止めて一時的な土砂ダム湖を形成し、それが決壊したという暫定仮説を示している。発生機構は公式には確定していない。",
-  "summary_en": "A sudden surge of water entered the Bhote Koshi River from the Tibet Autonomous Region of China at about 09:00 NPT on 26 August 2026 and swept down through Rasuwa District and the Trishuli river system. The preliminary hypothesis, advanced by Nepal's Department of Hydrology and Meteorology and independent glaciologists from satellite imagery shared by Chinese counterparts through ICIMOD, is that an ice-and-rock avalanche blocked the Lhende Khola about 20 km upstream of the Miteri Bridge, forming a temporary debris-dammed lake that then burst. USGS first logged the signal as a magnitude 4.4 earthquake and has since revised it to a magnitude 5.2 glacial collapse - not a tectonic event - at 08:37 NPT, about 20 minutes before the water reached the border settlements. By the morning of 27 August the NDRRMA and Nepal Police put the confirmed toll at 165 dead and 73 injured, with 826 people listed as missing in Nepal alone, among them 466 foreign nationals. ADRC activated Sentinel Asia and the International Charter on the day of the event at the request of the NDRRMA.",
-  "summary_ja": "2026年8月26日9時頃（NPT）、中国チベット自治区側からボテコシ川に突発的な出水が入り、ラスワ郡とトリシュリ川水系を襲った。ネパール水文気象局（DHM）と氷河研究者は、ICIMODを通じて中国側から共有された衛星画像に基づき、氷と岩の雪崩がミテリ橋の約20km上流でレンデ川を堰き止め、一時的な土砂ダム湖を形成して決壊したとの暫定仮説を示している。USGSは当初この振動をM4.4の地震として記録したが、のちに地震ではなくM5.2の氷河崩落（8時37分NPT）と改訂した。水が国境の集落に達する約20分前にあたる。8月27日朝時点でNDRRMAとネパール警察は死者165人・負傷73人と発表し、行方不明はネパール国内だけで826人、うち外国人466人。ADRCは発災当日、NDRRMAの要請を受けてセンチネルアジアと国際災害チャーターを発動した。"
+  "mechanism_en": "Not a glacial lake outburst and not a rainfall flood. The IRDR rapid analysis of 28 August 2026 finds that an ice, rock and soil mass failure around Deding in the Langtang region detached at about 5,000 m at around 13:00-14:00 on 25 August and descended to the river at about 3,000 m, fracturing and mixing with soil, rock and debris on the way. The mass blocked the river and formed a temporary natural dam, which held for about 18-19 hours while water accumulated behind it. Melting of the trapped ice is thought to have loosened the material and promoted internal erosion. The dam breached at about 08:30-08:37 on 26 August, releasing water, ice, rock, soil and sediment; an M4.4 seismic signal and a roar were recorded at about 08:37. Rainfall and discharge records show no rainfall capable of explaining the flood. Continued inflow from the Mala River and other tributaries maintained downstream flow and masked the blockage, which is why the developing dam was not recognised from downstream. The precise source mechanism, breach dynamics, peak discharge and any seismic contribution require further study.",
+  "mechanism_ja": "氷河湖の決壊ではなく、降雨による洪水でもない。 2026年8月28日のIRDR速報解析は、ランタン地域デディン付近で氷・岩・土砂の塊が8月25日13〜14時ごろに標高約5,000mで崩落し、標高約3,000mの河道まで一気に落下したとしている。落下の途中で氷は砕け、土砂・岩屑と混合した。この塊が川を堰き止めて一時的な天然ダムを作り、約18〜19時間にわたって水を貯めた。閉じ込められた氷が融けたことで材料が緩み、内部侵食が進んだと考えられている。ダムは8月26日08時30分〜08時37分ごろに決壊し、水・氷・岩・土砂を一気に流下させた。08時37分ごろにM4.4の地震動と轟音が記録されている。降水量と流量の記録には、この規模の出水を説明できる降雨は無い。西側のマラ川などの支流から流入が続いていたため下流の水位は保たれ、上流の閉塞が下流からは分からなかった。発生源の詳細な機構、決壊の力学、ピーク流量、地震動との関係は今後の調査を要する。",
+  "summary_en": "At about 08:30-08:37 NPT on 26 August 2026 a temporary natural dam on the Bhote Koshi, formed the previous afternoon by an ice, rock and soil mass failure around Deding in the Langtang region, breached and released a debris-laden flood down the Bhote Koshi-Trishuli corridor. The flood reached Rasuwagadhi at about 09:00, Timure at about 09:15 and Betrawati at about 09:20. The steep, narrow valley kept the flow concentrated and fast, and the heavy load of ice, rock and sediment made it far more destructive than its water volume alone. Rasuwa, Nuwakot, Dhading and Chitwan Districts were affected. More than 32 bridges were washed away along the 42 km Betrawati-Rasuwagadhi corridor, the Timure and Rasuwagadhi customs facilities and Nepal-China border trade were severely damaged, and about 748 MW of hydropower capacity was affected. ADRC activated Sentinel Asia and the International Charter on the day of the event at the request of the Department of Hydrology and Meteorology.",
+  "summary_ja": "2026年8月26日08時30分〜08時37分ごろ（NPT）、前日午後にランタン地域デディン付近の氷・岩・土砂の崩落によってボテコシ川に形成された一時的な天然ダムが決壊し、岩屑を大量に含んだ出水がボテコシ川〜トリシュリ川の回廊を流下した。出水はラスワガディに約09時00分、ティムレに約09時15分、ベトラワティに約09時20分に到達している。急勾配で狭い谷が流れを集中させて速度を保ち、氷・岩・土砂の重い荷重が破壊力を大きく高めた。ラスワ郡・ヌワコット郡・ダディン郡・チトワン郡が被災。ベトラワティ〜ラスワガディ間42kmで32を超える橋梁が流失し、ティムレとラスワガディの税関施設とネパール・中国国境の交易が大きな被害を受け、約748MWの水力発電設備が影響を受けた。ADRCは発災当日、ネパール水文気象局（DHM）の要請を受けてセンチネルアジアと国際災害チャーターを発動した。"
  },
  "damage": [
   {
@@ -162,12 +162,12 @@
   {
    "item_en": "Hydropower",
    "item_ja": "水力発電",
-   "value_en": "The Rasuwagadhi, Chilime, Sanjen Khola, Upper Trishuli-1, Trishuli and Devighat plants and a 220 kV substation were damaged. The Ministry of Energy's same-day estimate put the loss at 431 MW; the assessment was still moving quickly.",
-   "value_ja": "ラスワガディ、チリメ、サンジェン・コーラ、アッパー・トリシュリ1、トリシュリ、デビガートの各発電所と220kV変電所が被害。エネルギー省の同日推計では喪失出力431MW。評価は流動的である。",
-   "source_en": "Ministry of Energy, 26-27 Aug",
-   "source_ja": "エネルギー省（8月26〜27日）",
+   "value_en": "About 748 MW of hydropower capacity was affected - 354 MW from operational projects and 394 MW from projects under construction (Nepal Electricity Authority, preliminary). Rasuwagadhi, Chilime and Trishuli-3A were reported damaged. The 220 kV Trishuli 3B hub substation was completely destroyed and multiple transmission lines were disrupted, so the effects reach beyond the flooded corridor.",
+   "value_ja": "約748MWの水力発電設備が影響を受けた（内訳は稼働中354MW・建設中394MW。ネパール電力庁の暫定値）。ラスワガディ、チリメ、トリシュリ3Aが損壊と報告されている。220kVトリシュリ3Bハブ変電所は全壊し、複数の送電線も途絶したため、影響は浸水した回廊の外へ及んでいる。",
+   "source_en": "Nepal Electricity Authority via IRDR, 28 Aug",
+   "source_ja": "ネパール電力庁（IRDR 8月28日経由）",
    "tier": "official",
-   "url": "https://reliefweb.int/report/nepal/nepal-flash-floods-rapid-situation-overview-27-august-2026"
+   "url": "https://reliefweb.int/report/nepal/irdr-rapid-analysis-report-scientific-anatomy-26-august-2026-bhotekoshi-flash-flood"
   },
   {
    "item_en": "Banks and customs",
@@ -208,15 +208,73 @@
    "source_ja": "UNOSAT 製品4259（8月26-27日の画像、8月28日公開）",
    "tier": "official",
    "url": "https://unosat.org/products/4259"
+  },
+  {
+   "item_en": "Bridges and roads",
+   "item_ja": "橋梁・道路",
+   "value_en": "More than 32 bridges were washed away and the 42 km Betrawati-Rasuwagadhi road corridor was damaged at multiple locations, severely restricting access to the border region and complicating rescue and relief.",
+   "value_ja": "32を超える橋梁が流失し、ベトラワティ〜ラスワガディ間42kmの道路が各所で被災。国境地域への到達が著しく制限され、救助・支援も難しくなった。",
+   "source_en": "IRDR rapid analysis, 28 Aug",
+   "source_ja": "IRDR速報解析（8月28日）",
+   "tier": "official",
+   "url": "https://reliefweb.int/report/nepal/irdr-rapid-analysis-report-scientific-anatomy-26-august-2026-bhotekoshi-flash-flood"
+  },
+  {
+   "item_en": "Border trade and customs",
+   "item_ja": "国境交易・税関",
+   "value_en": "Timure Bazaar, Timure Customs and Rasuwagadhi Customs, together with nearby security posts and commercial facilities, were destroyed or severely damaged, disrupting Nepal-China border trade and tourism.",
+   "value_ja": "ティムレ・バザール、ティムレ税関、ラスワガディ税関と、周辺の警備施設・商業施設が全壊または大きく損壊し、ネパール・中国間の国境交易と観光が止まった。",
+   "source_en": "IRDR rapid analysis, 28 Aug",
+   "source_ja": "IRDR速報解析（8月28日）",
+   "tier": "official",
+   "url": "https://reliefweb.int/report/nepal/irdr-rapid-analysis-report-scientific-anatomy-26-august-2026-bhotekoshi-flash-flood"
+  },
+  {
+   "item_en": "Affected districts",
+   "item_ja": "被災した郡",
+   "value_en": "Rasuwa, Nuwakot, Dhading and Chitwan. High alert was maintained along the Bhote Koshi-Trishuli corridor through Rasuwa, Nuwakot, Dhading, Gorkha and Chitwan.",
+   "value_ja": "ラスワ郡・ヌワコット郡・ダディン郡・チトワン郡。ボテコシ川〜トリシュリ川の回廊（ラスワ、ヌワコット、ダディン、ゴルカ、チトワン）に高度警戒が敷かれた。",
+   "source_en": "IRDR rapid analysis, 28 Aug",
+   "source_ja": "IRDR速報解析（8月28日）",
+   "tier": "official",
+   "url": "https://reliefweb.int/report/nepal/irdr-rapid-analysis-report-scientific-anatomy-26-august-2026-bhotekoshi-flash-flood"
   }
  ],
  "timeline": [
   {
+   "time": "25 Aug 13:00-14:00",
+   "tier": "official",
+   "src": "IRDR (28 Aug)",
+   "en": "An ice, rock and soil mass detaches at about 5,000 m around Deding in the Langtang region and descends to the river at about 3,000 m, fracturing and mixing with soil and debris on the way.",
+   "ja": "ランタン地域デディン付近の標高約5,000mで氷・岩・土砂の塊が崩落し、標高約3,000mの河道まで落下。落下の途中で氷は砕け、土砂・岩屑と混合した。"
+  },
+  {
+   "time": "25 Aug afternoon",
+   "tier": "official",
+   "src": "IRDR (28 Aug)",
+   "en": "The mass blocks the Bhote Koshi and forms a temporary natural dam. Water accumulates behind it for about 18-19 hours. Inflow from the Mala River and other tributaries keeps the downstream channel flowing, masking the blockage.",
+   "ja": "この塊がボテコシ川を堰き止め、一時的な天然ダムを形成。約18〜19時間にわたって水を貯める。西側のマラ川などの支流からの流入が下流の水位を保ち、上流の閉塞を分かりにくくした。"
+  },
+  {
+   "time": "26 Aug 08:30-08:37",
+   "tier": "official",
+   "src": "IRDR (28 Aug)",
+   "en": "The temporary dam breaches, releasing water, ice, rock, soil and sediment. An M4.4 seismic signal is recorded at about 08:37 and residents report a massive roar.",
+   "ja": "天然ダムが決壊し、水・氷・岩・土砂を一気に流下させる。08時37分ごろにM4.4の地震動が記録され、住民は轟音を聞いたと証言している。"
+  },
+  {
+   "time": "26 Aug 09:15",
+   "tier": "official",
+   "src": "IRDR (28 Aug)",
+   "en": "The flood reaches Timure at about 09:15 and Betrawati at about 09:20. The short travel times show exceptionally rapid movement through the narrow upper valley.",
+   "ja": "出水はティムレに約09時15分、ベトラワティに約09時20分に到達。到達時間の短さは、狭い上流部を極めて速く流下したことを示す。"
+  },
+  {
    "time": "26 Aug 08:37",
    "tier": "official",
-   "src": "USGS",
-   "en": "A seismic signal is recorded at 28.271N 85.515E, depth 0 km. USGS first logs it as a magnitude 4.4 earthquake, then revises the analysis: using nearby seismic stations, long-period seismic waves and satellite imagery it concludes the source was a magnitude 5.2 glacial collapse, not a tectonic earthquake (event us7000tbwb, type: landslide).",
-   "ja": "28.271N 85.515E、深さ0kmで地震動を観測。USGSは当初M4.4の地震として登録したが、近傍の地震観測点・長周期地震波・衛星画像から、地殻の地震ではなくM5.2の氷河崩落であると改訂した（イベントus7000tbwb、種別 landslide）。"
+   "src": "USGS / IRDR",
+   "en": "USGS logs a magnitude 4.4 signal, later revised to 5.2. IRDR reads this as ground vibration from the sudden dam breach rather than a tectonic earthquake.",
+   "ja": "USGSがM4.4の信号を記録（のちM5.2に改訂）。IRDRはこれを構造性の地震ではなく、天然ダムの急激な決壊による地面の振動と解釈している。"
   },
   {
    "time": "26 Aug 09:00",
@@ -448,6 +506,12 @@
    "label_ja": "UNOSAT 製品4259 — ラスワ郡・ヌワコット郡 土石流/岩屑流の範囲（8月28日）",
    "url": "https://unosat.org/products/4259",
    "tier": "official"
+  },
+  {
+   "label_en": "IRDR Rapid Analysis Report - Scientific Anatomy of the 26 August 2026 Bhotekoshi Flash Flood (28 Aug 2026)",
+   "label_ja": "IRDR 速報解析『2026年8月26日 ボテコシ鉄砲水の科学的解剖』（8月28日）",
+   "url": "https://reliefweb.int/report/nepal/irdr-rapid-analysis-report-scientific-anatomy-26-august-2026-bhotekoshi-flash-flood",
+   "tier": "official"
   }
  ],
  "images": {
@@ -507,6 +571,88 @@
  "attribution_ja": "NDRRMA・ネパール警察・国連機関等の集計。各行に出典と時点を示す。いずれも暫定値。",
  "extra_slides": [
   {
+   "title_en": "Mechanism - and How the Terminology Changed",
+   "title_ja": "発生機構と、呼び方が変わった経緯",
+   "intro_en": "This event was described as a suspected glacial lake outburst flood (GLOF) in the first days. The IRDR rapid analysis of 28 August identifies an ice, rock and soil mass failure that dammed the river and then breached - not the outburst of a glacial lake. Both wordings are recorded here with their dates. The earlier wording was the best reading available at the time, not an error to be hidden.",
+   "intro_ja": "本災害は発災直後、氷河湖決壊洪水（GLOF）の疑いとして扱われた。8月28日のIRDR速報解析は、氷・岩・土砂の崩落が川を堰き止め、それが決壊したものと特定している。氷河湖の決壊ではない。 ここでは両方の呼び方を日付とともに残す。当初の呼び方はその時点で得られていた最善の読みであり、隠すべき誤りではない。",
+   "columns": [
+    {
+     "key": "stage",
+     "label_en": "Stage",
+     "label_ja": "段階",
+     "w": 2.9
+    },
+    {
+     "key": "what",
+     "label_en": "What happened",
+     "label_ja": "内容",
+     "w": 7.3
+    },
+    {
+     "key": "when",
+     "label_en": "When",
+     "label_ja": "時刻",
+     "w": 2.3
+    }
+   ],
+   "rows": [
+    {
+     "stage_en": "Pre-event",
+     "stage_ja": "発災前",
+     "what_en": "Long-term environmental change in the northern Langtang region: water retreat, changing snow and ice conditions, increasing ice overburden.",
+     "what_ja": "ランタン地域北部の長期的な環境変化。水の後退、雪氷の状態の変化、氷の荷重の増加。",
+     "when_en": "-",
+     "when_ja": "—"
+    },
+    {
+     "stage_en": "Ice / rock avalanche",
+     "stage_ja": "氷・岩の崩落",
+     "what_en": "A massive volume of ice, rock and soil detaches at about 5,000 m around Deding and descends to about 3,000 m, fracturing and mixing during the descent.",
+     "what_ja": "デディン付近の標高約5,000mで氷・岩・土砂の大量の塊が崩落し、約3,000mまで落下。落下中に砕けて混合する。",
+     "when_en": "25 Aug, 13:00-14:00",
+     "when_ja": "8月25日 13〜14時"
+    },
+    {
+     "stage_en": "Temporary dam",
+     "stage_ja": "天然ダムの形成",
+     "what_en": "The collapsed ice-rock-debris mass blocks the channel and forms a natural impoundment dam.",
+     "what_ja": "崩落した氷・岩・岩屑の塊が河道を塞ぎ、天然のダムを作る。",
+     "when_en": "25 Aug, afternoon",
+     "when_ja": "8月25日 午後"
+    },
+    {
+     "stage_en": "Impoundment",
+     "stage_ja": "湛水",
+     "what_en": "Water accumulates for 18-19 hours from river flow and melting ice, raising lateral pressure on the dam. Inflow from the Mala River keeps the downstream channel flowing and masks the blockage.",
+     "what_ja": "河川流と氷の融解により18〜19時間にわたり湛水し、ダムへの側圧が高まる。マラ川からの流入が下流の流れを保ち、閉塞を覆い隠す。",
+     "when_en": "25-26 Aug",
+     "when_ja": "8月25〜26日"
+    },
+    {
+     "stage_en": "Sudden breach",
+     "stage_ja": "急激な決壊",
+     "what_en": "Rising pressure, together with ice melting within the debris and loosening and saturation of the soil, breaches the dam. Strong ground vibration is recorded as an M4.4 event and an explosion-like sound is heard.",
+     "what_ja": "側圧の上昇に加え、岩屑の中の氷の融解と土砂の緩み・飽和が重なってダムが決壊。強い地面の振動がM4.4として記録され、爆発音のような音が聞かれた。",
+     "when_en": "26 Aug, about 08:35",
+     "when_ja": "8月26日 08時35分ごろ"
+    },
+    {
+     "stage_en": "Downstream propagation",
+     "stage_ja": "下流への伝播",
+     "what_en": "Rasuwagadhi about 09:00, Timure about 09:15, Betrawati about 09:20. The steep, narrow corridor concentrated the flow; further downstream the valley widened, the flow slowed and less additional damage was reported.",
+     "what_ja": "ラスワガディ約09時00分、ティムレ約09時15分、ベトラワティ約09時20分。急勾配で狭い回廊が流れを集中させた。さらに下流では谷が広がって流速が落ち、追加の被害は限られた。",
+     "when_en": "26 Aug, 09:00-",
+     "when_ja": "8月26日 09時〜"
+    }
+   ],
+   "note_en": "IRDR states that the precise source mechanism, breach dynamics, peak discharge and any seismic contribution require further investigation. Earlier wording: DHM, NDRRMA, ADRC, Sentinel Asia, JAXA and WFP used 'GLOF' in the first days; UNOSAT described the deposits as mudflow / rockflow; DG ECHO used 'ice-rock avalanche and flash flood'. The GLIDE number FF-2026-000162-NPL (Flash Flood) is a registration category and is unaffected.",
+   "note_ja": "IRDRは、発生源の詳細な機構・決壊の力学・ピーク流量・地震動との関係は今後の調査を要すると明記している。当初の呼び方：DHM・NDRRMA・ADRC・センチネルアジア・JAXA・WFP は発災直後「GLOF」を用い、UNOSATは堆積物を mudflow / rockflow と記述、DG ECHO は ice-rock avalanche and flash flood としていた。GLIDE番号 FF-2026-000162-NPL（Flash Flood）は登録上の分類であり、この変更の影響を受けない。",
+   "source": {
+    "label": "IRDR Rapid Analysis Report, 28 Aug 2026",
+    "url": "https://reliefweb.int/report/nepal/irdr-rapid-analysis-report-scientific-anatomy-26-august-2026-bhotekoshi-flash-flood"
+   }
+  },
+  {
    "title_en": "UNOSAT - Satellite-detected Mudflow / Rockflow Extent (Rasuwa and Nuwakot)",
    "title_ja": "UNOSAT 衛星解析による土石流・岩屑流の範囲（ラスワ郡・ヌワコット郡）",
    "intro_en": "Product 4259, imagery analysis 26 and 27 August 2026, published 28 August 2026 (v1). Sentinel-2 imagery of 27 August and PlanetScope imagery of 26 August. Within an analysed area of about 350 km2, an estimated 37 km2 appears to be affected by floodwaters. Approximately 5,000 of the 46,600 buildings in the analysed area are exposed to or located near the affected areas, and about 120 km of roads are potentially affected. The highest concentration is in Bidur Municipality, Nuwakot District (about 2,600 buildings), followed by Gosaikunda Municipality, Rasuwa District (about 1,030 buildings). The map also marks the possible triggering location of the ice-rock avalanche on the Tibetan side of the border.",
@@ -527,7 +673,22 @@
   {
    "tier": "official",
    "en": "The 28 August UNOSAT analysis extends downstream into Nuwakot District. The largest concentration of affected buildings is not in Rasuwa, where the surge began, but in Bidur Municipality in Nuwakot - about 2,600 buildings against about 1,030 in Gosaikunda, Rasuwa. Reporting that stops at the district where the event started understates the footprint.",
-   "ja": "8月28日のUNOSATの解析は、下流のヌワコット郡まで範囲を広げている。影響を受けた建物が最も集中しているのは、出水が始まったラスワ郡ではなく**ヌワコット郡ビドゥル市**である（約2,600棟に対し、ラスワ郡ゴサインクンダ村は約1,030棟）。発災地の郡だけを見ていると、被害の広がりを小さく見積もることになる。"
+   "ja": "8月28日のUNOSATの解析は、下流のヌワコット郡まで範囲を広げている。影響を受けた建物が最も集中しているのは、出水が始まったラスワ郡ではなくヌワコット郡ビドゥル市である（約2,600棟に対し、ラスワ郡ゴサインクンダ村は約1,030棟）。発災地の郡だけを見ていると、被害の広がりを小さく見積もることになる。"
+  },
+  {
+   "tier": "official",
+   "en": "There was no rainfall capable of explaining this flood. Rainfall and discharge records show no heavy or sufficiently localised rain, which is what led IRDR to look upstream for a slope failure. Rainfall-threshold flood warning would not have caught this event.",
+   "ja": "この出水を説明できる降雨は無い。 降水量と流量の記録に、大雨も局地的な集中豪雨も見当たらないことが、IRDRが上流の斜面崩壊を疑う出発点になった。降雨のしきい値に頼る洪水警報では、この災害は捉えられない。"
+  },
+  {
+   "tier": "official",
+   "en": "The temporary dam was invisible from downstream. Inflow from the Mala River and other tributaries kept the downstream channel flowing normally for the 18-19 hours the blockage held, so nothing in the downstream record signalled what was building upstream.",
+   "ja": "天然ダムは下流からは見えなかった。 閉塞していた18〜19時間、西側のマラ川などからの流入が下流の水位を保っていたため、下流の記録には上流で何が起きているかを示すものが現れなかった。"
+  },
+  {
+   "tier": "official",
+   "en": "The damage was multi-sector and cascading. A single source-area disturbance propagated through a narrow, highly exposed mountain corridor and hit settlements, border trade, transport, energy, tourism, communications and the emergency response capacity itself at the same time.",
+   "ja": "被害は分野をまたいで連鎖した。 発生源での1つの崩壊が、狭く曝露の大きい山岳回廊を伝わり、集落・国境交易・交通・エネルギー・観光・通信、そして応急対応能力そのものを同時に直撃した。"
   }
  ]
 }
