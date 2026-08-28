@@ -144,7 +144,14 @@ if not "%M_GLIDE%"=="%GLIDE%" (
   exit /b 4
 )
 
+set "TODAY="
 for /f %%d in ('powershell -NoProfile -Command "(Get-Date).ToString('yyyy-MM-dd')"') do set "TODAY=%%d"
+if not defined TODAY (
+  echo STATUS: FAIL no-date
+  echo powershell did not return a date, so the build cannot be
+  echo checked for freshness. Nothing was copied.
+  exit /b 2
+)
 echo   built %M_BUILT_AT_JST% JST  /  today is %TODAY%
 if not "%M_BUILT_DATE_JST%"=="%TODAY%" (
   echo STATUS: SKIP stale-dist
@@ -166,6 +173,15 @@ copy /Y "%WORK%\*.pptx" "%DEST%\" >nul
 if errorlevel 1 goto :locked
 copy /Y "%WORK%\*.pdf" "%DEST%\" >nul
 if errorlevel 1 goto :locked
+
+echo STEP: sweep
+REM  Spanish editions are no longer produced (decision of 2026-08-28).
+REM  Leaving them in the folder means a stale deck sits next to a fresh
+REM  one under almost the same name, and nothing ever updates it.
+REM  Only these two exact names are touched. They go to the OneDrive
+REM  recycle bin, so they can be restored if this turns out to be wrong.
+call :drop "%DEST%\%M_FILEBASE%_ES.pptx"
+call :drop "%DEST%\%M_FILEBASE%_ES.pdf"
 
 echo STEP: marker
 node "%REPO%\skills\disaster-report\generator\scripts\write_published.js" %GLIDE% "%DEST%"
@@ -204,6 +220,18 @@ echo   ok %NAME% %GOT% bytes
 exit /b 0
 
 REM ------------------------------------------------------------
+REM  :drop <full path>  - remove one file that is no longer produced
+:drop
+if not exist "%~1" exit /b 0
+del /q "%~1"
+if exist "%~1" (
+  echo   WARN could not remove %~nx1 - it may be open
+  exit /b 0
+)
+echo   removed %~nx1 - no longer produced, recoverable from the OneDrive recycle bin
+exit /b 0
+
+REM ------------------------------------------------------------
 REM  :pushmarker  - commit the record and prove it reached GitHub
 REM
 REM  2026-08-28: this step printed nothing and the record never arrived.
@@ -224,10 +252,16 @@ if errorlevel 1 (
   git pull --rebase origin %BRANCH%
   git push origin %BRANCH%
 )
-REM Ask GitHub whether the file is really there. Do not trust the code.
+REM  Ask GitHub what it actually holds. Do not trust the exit codes.
+REM  "The file exists over there" is not enough either: yesterday's record
+REM  would pass that test while today's commit quietly failed. Compare the
+REM  content hash of the local file with the one in the pushed commit.
 git fetch origin %BRANCH%
-git cat-file -e FETCH_HEAD:%MARKERPATH% 2>nul
-if errorlevel 1 (
+set "LOCALSHA=x"
+set "REMOTESHA=y"
+for /f %%h in ('git hash-object "%MARKERPATH%" 2^>nul') do set "LOCALSHA=%%h"
+for /f %%h in ('git rev-parse FETCH_HEAD:%MARKERPATH% 2^>nul') do set "REMOTESHA=%%h"
+if not "!LOCALSHA!"=="!REMOTESHA!" (
   echo WARN: marker-not-pushed
   echo Files are published. Only the record could not be pushed,
   echo so the cloud will hold the update mail until it sees one.
@@ -235,7 +269,7 @@ if errorlevel 1 (
   echo a GitHub sign-in window may be waiting.
   exit /b 0
 )
-echo   marker confirmed on GitHub
+echo   marker confirmed on GitHub !LOCALSHA:~0,8!
 exit /b 0
 
 :gitfail
