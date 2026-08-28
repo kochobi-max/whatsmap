@@ -32,7 +32,11 @@
   "optional_slides": [
    "prior_event",
    "historical",
-   "closing"
+   "closing",
+   "seismic_intensity",
+   "seismicity",
+   "mechanism",
+   "tsunami_intensity"
   ],
   "headline": {
    "deaths": 329,

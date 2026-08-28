@@ -1,0 +1,498 @@
+{
+ "meta": {
+  "status": "active",
+  "glide": "FF-2026-000162-NPL",
+  "iso3": "NPL",
+  "filebase": "ADRC_FL_NPL_Rasuwa_20260826",
+  "sources_profile": "references/sources/NPL.md",
+  "primary_official_source": "NDRRMA / Nepal Police",
+  "mail": {
+   "to": [
+    "kenkyubu@adrc.asia",
+    "td-date@adrc.asia"
+   ],
+   "from": "ma-arakida@adrc.asia",
+   "send_at": "07:00 JST のみ"
+  },
+  "onedrive_dir": "C:\\Users\\arakida\\OneDrive - adrc.asia\\LargeScaleDisasters",
+  "title_en": "2026 Bhote Koshi Glacial Lake Outburst Flood (Nepal)",
+  "title_ja": "2026年 ボテコシ川 氷河湖決壊洪水（ネパール）",
+  "subtitle_en": "Rasuwa District, Bagmati Province - 26 August 2026",
+  "subtitle_ja": "バグマティ州ラスワ郡、2026年8月26日",
+  "edition_en": "1st report",
+  "edition_ja": "第1報",
+  "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
+  "prepared_by_ja": "アジア防災センター（ADRC）",
+  "stamp": "2026-08-28 15:00 JST",
+  "update_date": "28/08/2026",
+  "timeline_range_en": "26-28 August 2026 (Nepal Standard Time, UTC+5:45)",
+  "timeline_range_ja": "2026年8月26日〜28日（ネパール標準時 UTC+5:45）",
+  "tz_note_en": "All times are Nepal Standard Time (NPT, UTC+5:45) unless stated.",
+  "tz_note_ja": "時刻は特記なき限りネパール標準時（NPT、UTC+5:45）。",
+  "optional_slides": [],
+  "headline": {
+   "deaths": 165,
+   "injured": 73,
+   "missing": 826,
+   "houses_destroyed": null,
+   "evacuees": null,
+   "tier": "official",
+   "as_of": "2026-08-27 08:15 NPT (NDRRMA / Nepal Police)"
+  },
+  "chronology_note_en": "Government and agency actions from the onset of the flood - all official sources.",
+  "chronology_note_ja": "発災からの政府・機関の主要な動き（すべて公的情報）。",
+  "activation_by_en": "requested by DHM, activated through ADRC",
+  "activation_by_ja": "要請：ネパール水文気象局／発動：ADRC経由",
+  "chronology_sources": [
+   {
+    "label": "NDRRMA / Nepal Police",
+    "url": "https://reliefweb.int/disaster/ff-2026-000162-npl"
+   },
+   {
+    "label": "UNOSAT / UNITAR",
+    "url": "https://disasterscharter.org/activations/flood-in-nepal-activation-1052-"
+   },
+   {
+    "label": "Sentinel Asia",
+    "url": "https://sentinel-asia.org/EO/2026/article20260826NP.html"
+   }
+  ],
+  "cover_sources": [
+   {
+    "label": "UNOSAT / UNITAR",
+    "url": "https://reliefweb.int/map/nepal/nepal-satellite-detected-mudflow-rockflow-extent-26-27-august-2026-rasuwa-district-bagmati-province-imagery-analysis-2627082026-published-27082026-v1"
+   },
+   {
+    "label": "Google Maps © Google",
+    "url": "https://www.google.com/maps/"
+   }
+  ]
+ },
+ "_prev": {
+  "_comment": "初版のため前報なし",
+  "deaths": null,
+  "injured": null,
+  "missing": null,
+  "houses_destroyed": null,
+  "evacuees": null,
+  "tier": null,
+  "as_of": ""
+ },
+ "event": {
+  "origin_time": "26 August 2026, approx. 09:00 NPT (UTC+5:45)",
+  "epicentre_en": "Lhende Khola, a Bhote Koshi tributary on the Nepal-China border, approx. 20 km upstream of the Miteri Bridge",
+  "epicentre_ja": "ネパール・中国国境のボテコシ川支流レンデ川。ミテリ橋の約20km上流",
+  "epicentre_short_en": "Lhende Khola / Rasuwa",
+  "epicentre_short_ja": "レンデ川・ラスワ郡",
+  "lat": 28.28,
+  "lon": 85.46,
+  "magnitude": "",
+  "depth_km": 0,
+  "depth_display": "",
+  "mechanism_en": "Suspected glacial lake outburst flood (GLOF). Nepal's Department of Hydrology and Meteorology and independent glaciologists, working from satellite imagery shared by Chinese counterparts through ICIMOD, put forward the preliminary hypothesis that an ice-and-rock avalanche blocked the Lhende Khola, forming a temporary debris-dammed lake that then burst. The trigger has not been officially confirmed.",
+  "mechanism_ja": "氷河湖決壊洪水（GLOF）と見られる。ネパール水文気象局（DHM）と氷河研究者は、ICIMODを通じて中国側から共有された衛星画像に基づき、氷と岩の雪崩がレンデ川を堰き止めて一時的な土砂ダム湖を形成し、それが決壊したという暫定仮説を示している。発生機構は公式には確定していない。",
+  "summary_en": "A sudden surge of water entered the Bhote Koshi River from the Tibet Autonomous Region of China at about 09:00 NPT on 26 August 2026 and swept down through Rasuwa District and the Trishuli river system. The preliminary hypothesis, advanced by Nepal's Department of Hydrology and Meteorology and independent glaciologists from satellite imagery shared by Chinese counterparts through ICIMOD, is that an ice-and-rock avalanche blocked the Lhende Khola about 20 km upstream of the Miteri Bridge, forming a temporary debris-dammed lake that then burst. USGS first logged the signal as a magnitude 4.4 earthquake and has since revised it to a magnitude 5.2 glacial collapse - not a tectonic event - at 08:37 NPT, about 20 minutes before the water reached the border settlements. By the morning of 27 August the NDRRMA and Nepal Police put the confirmed toll at 165 dead and 73 injured, with 826 people listed as missing in Nepal alone, among them 466 foreign nationals. ADRC activated Sentinel Asia and the International Charter on the day of the event at the request of the NDRRMA.",
+  "summary_ja": "2026年8月26日9時頃（NPT）、中国チベット自治区側からボテコシ川に突発的な出水が入り、ラスワ郡とトリシュリ川水系を襲った。ネパール水文気象局（DHM）と氷河研究者は、ICIMODを通じて中国側から共有された衛星画像に基づき、氷と岩の雪崩がミテリ橋の約20km上流でレンデ川を堰き止め、一時的な土砂ダム湖を形成して決壊したとの暫定仮説を示している。USGSは当初この振動をM4.4の地震として記録したが、のちに地震ではなくM5.2の氷河崩落（8時37分NPT）と改訂した。水が国境の集落に達する約20分前にあたる。8月27日朝時点でNDRRMAとネパール警察は死者165人・負傷73人と発表し、行方不明はネパール国内だけで826人、うち外国人466人。ADRCは発災当日、NDRRMAの要請を受けてセンチネルアジアと国際災害チャーターを発動した。"
+ },
+ "damage": [
+  {
+   "item_en": "Deaths",
+   "item_ja": "死者",
+   "value_en": "165 confirmed (NDRRMA and Nepal Police, morning of 27 Aug), with 73 injured. The count moved fast as teams reached cut-off areas: 72 (NDRRMA) and 95 (Prime Minister's Office) on the evening of 26 Aug, then about 160 late that night with 157 bodies recovered. UNICEF stated on 27 Aug that an estimated 332 people had died, including at least 14 children; that figure is not reconciled with the NDRRMA/Police count and is recorded here as reported.",
+   "value_ja": "165人（NDRRMA・ネパール警察、8月27日朝）、負傷73人。孤立地域に救助隊が到達するにつれ急増した。8月26日夕はNDRRMA 72人・首相府95人、同日深夜に約160人（遺体収容157体）。UNICEFは8月27日に死者推計332人・うち子ども14人以上としているが、NDRRMA・警察の集計とは整合していない。両論を併記する。",
+   "source_en": "NDRRMA / Nepal Police, 27 Aug (a.m.); UNICEF, 27 Aug",
+   "source_ja": "NDRRMA・ネパール警察（8月27日午前）／UNICEF（8月27日）",
+   "tier": "official",
+   "url": "https://reliefweb.int/report/nepal/nepal-flash-floods-rapid-situation-overview-27-august-2026"
+  },
+  {
+   "item_en": "Missing",
+   "item_ja": "行方不明",
+   "value_en": "826 listed as missing in Nepal alone in a Nepal Police bulletin issued around 08:15 on 27 Aug: 579 travellers (466 foreign nationals and 113 Nepalis), 85 security personnel (44 Nepali Army, 28 Nepal Police, 13 Armed Police Force), 161 residents of Rasuwa and one of Nuwakot. Most of the missing travellers were heading for the Kailash Mansarovar pilgrimage route through Tibet.",
+   "value_ja": "826人（ネパール警察、8月27日8時15分頃の発表。ネパール国内のみ）。内訳は旅行者579人（外国人466人・ネパール人113人）、治安要員85人（ネパール陸軍44・警察28・武装警察13）、ラスワ郡住民161人、ヌワコット郡住民1人。旅行者の多くはチベット経由のカイラス・マナサロワル巡礼路へ向かっていた。",
+   "source_en": "Nepal Police bulletin, 27 Aug approx. 08:15",
+   "source_ja": "ネパール警察（8月27日8時15分頃）",
+   "tier": "official",
+   "url": "https://reliefweb.int/report/nepal/nepal-flash-floods-rapid-situation-overview-27-august-2026"
+  },
+  {
+   "item_en": "Missing foreign nationals",
+   "item_ja": "行方不明の外国人",
+   "value_en": "466 of the 579 missing travellers were foreign nationals, including at least 133 Indian pilgrims and citizens of Malaysia (55), the United States (47), Australia (34), the United Kingdom (33) and Canada (24).",
+   "value_ja": "行方不明の旅行者579人のうち466人が外国人。インド人巡礼者133人以上のほか、マレーシア55人、米国47人、オーストラリア34人、英国33人、カナダ24人など。",
+   "source_en": "Nepal Police bulletin, 27 Aug",
+   "source_ja": "ネパール警察（8月27日）",
+   "tier": "official",
+   "url": "https://reliefweb.int/report/nepal/nepal-flash-floods-rapid-situation-overview-27-august-2026"
+  },
+  {
+   "item_en": "Others out of contact",
+   "item_ja": "連絡が取れていない者",
+   "value_en": "Separately reported: 60 hydropower-project workers, 26 employees of commercial banks and 15 staff of the Rasuwa customs office at Timure.",
+   "value_ja": "上記とは別に、水力発電事業の作業員60人、商業銀行職員26人、ティムレのラスワ税関職員15人と連絡が取れていない。",
+   "source_en": "Rapid Situation Overview, 27 Aug",
+   "source_ja": "状況概観（8月27日）",
+   "tier": "official",
+   "url": "https://reliefweb.int/report/nepal/nepal-flash-floods-rapid-situation-overview-27-august-2026"
+  },
+  {
+   "item_en": "Affected population",
+   "item_ja": "被災者",
+   "value_en": "Around 93,000 people may have been affected, with assessments continuing in hard-to-reach areas (IFRC). At least 17,000 children have been impacted across Rasuwa, Nuwakot and Dhading (UNICEF). The NDRRMA states that 10,000 households require immediate relief.",
+   "value_ja": "被災者は約93,000人の可能性（IFRC。到達困難地域の調査が継続中）。ラスワ・ヌワコット・ダディンの3郡で子ども17,000人以上が影響を受けた（UNICEF）。NDRRMAは10,000世帯が緊急の救援を要するとしている。",
+   "source_en": "IFRC, 27 Aug; UNICEF, 27 Aug; NDRRMA",
+   "source_ja": "IFRC（8月27日）／UNICEF（8月27日）／NDRRMA",
+   "tier": "official",
+   "url": "https://reliefweb.int/report/nepal/ifrc-launches-chf-25-million-emergency-appeal-response-devastating-nepal-flash-floods"
+  },
+  {
+   "item_en": "Displaced / in need",
+   "item_ja": "避難・要支援者",
+   "value_en": "Not yet published. As of the 27 Aug data cut-off no government or humanitarian body had issued a consolidated total for people displaced, sheltering or in need. Treated as a priority information gap.",
+   "value_ja": "未発表。8月27日の集計時点で、避難者・避難所滞在者・要支援者の統合値を出した政府・人道機関は無い。優先的な情報の欠落として扱う。",
+   "source_en": "Rapid Situation Overview, 27 Aug",
+   "source_ja": "状況概観（8月27日）",
+   "tier": "tbc",
+   "url": "https://reliefweb.int/report/nepal/nepal-flash-floods-rapid-situation-overview-27-august-2026"
+  },
+  {
+   "item_en": "Hydropower",
+   "item_ja": "水力発電",
+   "value_en": "The Rasuwagadhi, Chilime, Sanjen Khola, Upper Trishuli-1, Trishuli and Devighat plants and a 220 kV substation were damaged. The Ministry of Energy's same-day estimate put the loss at 431 MW; the assessment was still moving quickly.",
+   "value_ja": "ラスワガディ、チリメ、サンジェン・コーラ、アッパー・トリシュリ1、トリシュリ、デビガートの各発電所と220kV変電所が被害。エネルギー省の同日推計では喪失出力431MW。評価は流動的である。",
+   "source_en": "Ministry of Energy, 26-27 Aug",
+   "source_ja": "エネルギー省（8月26〜27日）",
+   "tier": "official",
+   "url": "https://reliefweb.int/report/nepal/nepal-flash-floods-rapid-situation-overview-27-august-2026"
+  },
+  {
+   "item_en": "Banks and customs",
+   "item_ja": "金融機関・税関",
+   "value_en": "Nine commercial bank branches were swept away, with 26 staff unaccounted for. The Rasuwa customs office at Timure, on the border crossing to China, lost contact with 15 employees.",
+   "value_ja": "商業銀行9支店が流失し、職員26人の安否が不明。中国国境のティムレにあるラスワ税関では職員15人と連絡が取れていない。",
+   "source_en": "Rapid Situation Overview, 27 Aug",
+   "source_ja": "状況概観（8月27日）",
+   "tier": "official",
+   "url": "https://reliefweb.int/report/nepal/nepal-flash-floods-rapid-situation-overview-27-august-2026"
+  },
+  {
+   "item_en": "Lifelines",
+   "item_ja": "ライフライン",
+   "value_en": "Roads, bridges, water systems and telecommunications networks were badly damaged, leaving affected areas largely inaccessible and hampering the delivery of aid. At least four health facilities were severely damaged. Several phone towers were lost, so some of those unaccounted for may simply be out of communication.",
+   "value_ja": "道路・橋梁・水道・通信網が大きく損壊し、被災地の多くが到達困難となって支援の搬入を妨げている。医療施設少なくとも4か所が甚大な被害。通信鉄塔が失われており、安否不明者の一部は連絡が取れないだけの可能性がある。",
+   "source_en": "UNICEF, 27 Aug; Rapid Situation Overview",
+   "source_ja": "UNICEF（8月27日）／状況概観",
+   "tier": "official",
+   "url": "https://reliefweb.int/report/nepal/flash-floods-nepal-leave-more-17000-children-need-urgent-humanitarian-assistance-enar"
+  },
+  {
+   "item_en": "Satellite-detected extent",
+   "item_ja": "衛星で捉えた被災範囲",
+   "value_en": "Of 228 km2 analysed in Rasuwa District, 22 km2 was affected by floodwaters, mudflow or rockflow, and 1,920 of the 19,940 people living in the analysed area were exposed. By municipality: Gosaikunda 18 km2 and 1,160 people exposed, Uttargaya 3 km2 and 670, Kalika 1 km2 and 60, Aamachhodingmo 1 km2 and 30. The map also marks a potential ice-avalanche location on the Lende Khola inside the Tibet Autonomous Region, upstream of Rasuwa Gadhi. Preliminary; not yet validated in the field. A separate map covers Nuwakot District.",
+   "value_ja": "ラスワ郡では解析対象228km2のうち22km2が出水・土石流・岩屑流の影響を受け、解析域の居住人口19,940人のうち1,920人が被災域に曝露した。自治体別ではゴサインクンダ村18km2・1,160人、ウッタルガヤ村3km2・670人、カリカ村1km2・60人、アーマチョディンモ村1km2・30人。図には、チベット自治区内のレンデ川上流（ラスワガディの上流側）に「氷雪崩の推定発生地点」が示されている。暫定解析であり現地検証は未了。ヌワコット郡については別図がある。",
+   "source_en": "UNOSAT / UNITAR, published 27 Aug (Sentinel-2 27 Aug, PlanetScope 26 Aug)",
+   "source_ja": "UNOSAT・UNITAR（8月27日公表。Sentinel-2 8月27日／PlanetScope 8月26日）",
+   "tier": "official",
+   "url": "https://reliefweb.int/map/nepal/nepal-satellite-detected-mudflow-rockflow-extent-26-27-august-2026-rasuwa-district-bagmati-province-imagery-analysis-2627082026-published-27082026-v1"
+  }
+ ],
+ "timeline": [
+  {
+   "time": "26 Aug 08:37",
+   "tier": "official",
+   "src": "USGS",
+   "en": "A seismic signal is recorded at 28.271N 85.515E, depth 0 km. USGS first logs it as a magnitude 4.4 earthquake, then revises the analysis: using nearby seismic stations, long-period seismic waves and satellite imagery it concludes the source was a magnitude 5.2 glacial collapse, not a tectonic earthquake (event us7000tbwb, type: landslide).",
+   "ja": "28.271N 85.515E、深さ0kmで地震動を観測。USGSは当初M4.4の地震として登録したが、近傍の地震観測点・長周期地震波・衛星画像から、地殻の地震ではなくM5.2の氷河崩落であると改訂した（イベントus7000tbwb、種別 landslide）。"
+  },
+  {
+   "time": "26 Aug 09:00",
+   "tier": "official",
+   "src": "DHM / NDRRMA",
+   "en": "A sudden surge of water enters the Bhote Koshi River from the Tibet Autonomous Region of China. Timure, Syabrubesi, the Rasuwagadhi customs and border crossing and roughly a dozen riverside settlements in northern Rasuwa take the earliest and heaviest impact.",
+   "ja": "中国チベット自治区側からボテコシ川に突発的な出水。ティムレ、シャブルベシ、ラスワガディ検問所・税関、ラスワ郡北部の川沿い十数集落が最初に、かつ最も強く被災した。"
+  },
+  {
+   "time": "26 Aug 11:00",
+   "tier": "official",
+   "src": "ADRC / Sentinel Asia",
+   "en": "Nepal's NDRRMA requests rapid satellite imagery. ADRC receives the request and activates Sentinel Asia and the International Charter the same day (Sentinel Asia emergency observation request SA-00658, requester: Department of Hydrology and Meteorology).",
+   "ja": "ネパールNDRRMAが緊急の衛星画像提供を要請。ADRCがこれを受け、同日中にセンチネルアジアと国際災害チャーターを発動した（センチネルアジア緊急観測要請 SA-00658、要請元は水文気象局）。"
+  },
+  {
+   "time": "26 Aug 11:45",
+   "tier": "official",
+   "src": "USGS",
+   "en": "A second glacial-collapse signal, magnitude 4.2, is recorded at the same location (event us7000tc90).",
+   "ja": "同じ場所でM4.2の氷河崩落を再度観測（イベントus7000tc90）。"
+  },
+  {
+   "time": "26 Aug 12:30",
+   "tier": "official",
+   "src": "UNOCHA / JAXA",
+   "en": "UNOCHA's Bangkok office supplies two areas of interest for imagery tasking - the Syabrubesi area and the Timure area - which ADRC merges into the Sentinel Asia request.",
+   "ja": "UNOCHAバンコク事務所が観測対象範囲（AOI）2か所（シャブルベシ地区、ティムレ地区）を提供。ADRCがセンチネルアジア側の要請に統合した。"
+  },
+  {
+   "time": "26 Aug evening",
+   "tier": "official",
+   "src": "NDRRMA / PMO",
+   "en": "First official tolls diverge: 72 deaths (NDRRMA) and 95 (Prime Minister's Office). By late evening about 160 are reported, with 157 bodies recovered.",
+   "ja": "最初の公式発表は食い違い、NDRRMA 72人、首相府95人。同日深夜には約160人（遺体収容157体）となった。"
+  },
+  {
+   "time": "27 Aug 08:15",
+   "tier": "official",
+   "src": "Nepal Police",
+   "en": "A Nepal Police bulletin lists 826 people missing in Nepal alone: 579 travellers (466 foreign nationals, 113 Nepalis), 85 security personnel, 161 residents of Rasuwa and one of Nuwakot.",
+   "ja": "ネパール警察が、国内だけで行方不明826人と発表。旅行者579人（外国人466人・ネパール人113人）、治安要員85人、ラスワ郡住民161人、ヌワコット郡住民1人。"
+  },
+  {
+   "time": "27 Aug morning",
+   "tier": "official",
+   "src": "NDRRMA / Nepal Police",
+   "en": "The confirmed toll is put at 165 dead and 73 injured, superseding the previous evening's figures.",
+   "ja": "死者165人・負傷73人と発表。前夜の数値を更新した。"
+  },
+  {
+   "time": "27 Aug",
+   "tier": "official",
+   "src": "IFRC",
+   "en": "IFRC launches a CHF 25 million Emergency Appeal for 24 months, one day after releasing nearly CHF 1 million in emergency funding to the Nepal Red Cross Society. Around 93,000 people may have been affected.",
+   "ja": "IFRCが24か月・2,500万スイスフランの緊急アピールを開始。前日にはネパール赤十字社へ約100万スイスフランを緊急拠出していた。被災者は約93,000人の可能性。"
+  },
+  {
+   "time": "27 Aug",
+   "tier": "official",
+   "src": "UNICEF",
+   "en": "UNICEF appeals for US$17.2 million, reporting at least 17,000 children impacted across Rasuwa, Nuwakot and Dhading and at least four health facilities severely damaged.",
+   "ja": "UNICEFが1,720万米ドルの支援を要請。ラスワ・ヌワコット・ダディンの3郡で子ども17,000人以上が影響を受け、医療施設少なくとも4か所が甚大な被害と報告。"
+  },
+  {
+   "time": "27 Aug",
+   "tier": "official",
+   "src": "UNOSAT / Int'l Charter",
+   "en": "UNOSAT publishes satellite-detected mudflow/rockflow extent for Rasuwa and Nuwakot districts from Sentinel-2 (27 Aug) and PlanetScope (26 Aug) imagery.",
+   "ja": "UNOSATが、Sentinel-2（8月27日）とPlanetScope（8月26日）の画像から、ラスワ郡・ヌワコット郡の土石流・岩屑流の範囲図を公表。"
+  },
+  {
+   "time": "28 Aug",
+   "tier": "official",
+   "src": "JAXA / Sentinel Asia",
+   "en": "JAXA schedules an ALOS-2 emergency observation. Analyses using Landsat-9 (Rissho University) and a 3D damage map from optical satellites (University of Tokyo) are shared through Sentinel Asia.",
+   "ja": "JAXAがALOS-2の緊急観測を計画。立正大学によるLandsat-9解析、東京大学による光学衛星の3次元被害図が、センチネルアジアを通じて共有された。"
+  }
+ ],
+ "response_measures": [
+  {
+   "tier": "official",
+   "en": "The Government mobilized the Nepali Army, the Armed Police Force and Nepal Police for search, rescue and relief, supported by military and private helicopters.",
+   "ja": "政府はネパール陸軍・武装警察・警察を捜索救助と救援に動員し、軍および民間のヘリコプターがこれを支援している。"
+  },
+  {
+   "tier": "official",
+   "en": "The Cabinet ordered free medical treatment for the injured, financial assistance to bereaved families, the reopening of roads, restoration of power and telecommunications, and food and shelter for those displaced.",
+   "ja": "閣議は、負傷者の医療費無償化、遺族への財政支援、道路の啓開、電力・通信の復旧、避難者への食料と住まいの提供を決定した。"
+  },
+  {
+   "tier": "official",
+   "en": "Nepal requested assistance from China and India.",
+   "ja": "ネパールは中国とインドに支援を要請した。"
+  }
+ ],
+ "support_domestic": [
+  {
+   "tier": "official",
+   "source": "Nepal Red Cross Society / IFRC, 26-27 Aug",
+   "en": "The Nepal Red Cross Society began distributing water, tarpaulins, blankets and first-aid supplies, though many of the worst-affected communities in Rasuwa remain hard to reach because roads and bridges are destroyed.",
+   "ja": "ネパール赤十字社が飲料水、ターポリン、毛布、応急手当用品の配布を開始した。ただし道路と橋の損壊により、ラスワ郡の被害の大きい集落の多くは依然として到達困難である。"
+  }
+ ],
+ "support_international": [
+  {
+   "tier": "official",
+   "source": "ADRC / Sentinel Asia / International Charter, 26 Aug",
+   "en": "ADRC received the NDRRMA's request for rapid satellite imagery and activated both Sentinel Asia and the International Charter Space and Major Disasters on the day of the event. The Sentinel Asia emergency observation request is SA-00658, with Nepal's Department of Hydrology and Meteorology as requester.",
+   "ja": "ADRCはNDRRMAからの緊急衛星画像要請を受け、発災当日にセンチネルアジアと国際災害チャーターの双方を発動した。センチネルアジアの緊急観測要請番号はSA-00658、要請元はネパール水文気象局（DHM）。"
+  },
+  {
+   "tier": "official",
+   "source": "IFRC, 26-27 Aug",
+   "en": "IFRC released nearly CHF 1 million in emergency funding, then launched a 24-month Emergency Appeal for CHF 25 million covering shelter, cash assistance, health, household relief items, water, sanitation and hygiene, and mental health and psychosocial support.",
+   "ja": "IFRCは約100万スイスフランを緊急拠出したのち、24か月・2,500万スイスフランの緊急アピールを開始した。住まい、現金給付、保健、生活物資、水・衛生、心理社会的支援を対象とする。"
+  },
+  {
+   "tier": "official",
+   "source": "UNICEF, 27 Aug",
+   "en": "UNICEF appealed for US$17.2 million for emergency response and early recovery, and moved pre-positioned hygiene kits from the Humanitarian Staging Area at Tribhuvan International Airport to Rasuwa, Nuwakot and Dhading.",
+   "ja": "UNICEFは緊急対応と早期復旧のため1,720万米ドルを要請し、トリブバン国際空港の人道支援集積拠点に備蓄していた衛生キットをラスワ・ヌワコット・ダディンへ搬送している。"
+  },
+  {
+   "tier": "official",
+   "source": "Government of China / Government of India, 26-27 Aug",
+   "en": "China pledged relief funding and India is sending humanitarian supplies. Indian authorities in Bihar opened the Valmikinagar Barrage on the Gandak River as a precaution and prepared to evacuate 10,000-12,000 people downstream.",
+   "ja": "中国は救援資金の拠出を表明し、インドは人道支援物資を送っている。インド・ビハール州当局は予防措置としてガンダック川のバルミキナガル堰を開放し、下流の10,000〜12,000人の避難に備えた。"
+  }
+ ],
+ "satellite": [
+  {
+   "org": "Sentinel Asia",
+   "status": "Activated (SA-00658)",
+   "tier": "official",
+   "url": "https://sentinel-asia.org/EO/2026/article20260826NP.html",
+   "en": "Emergency observation request 20260826-Nepal-Flood, requested by Nepal's Department of Hydrology and Meteorology and activated by ADRC on the day of the event. JAXA scheduled an ALOS-2 emergency observation. The Sentinel Asia record states escalation to the International Charter: Yes, and carries GLIDE FF-2026-000162-NPL.",
+   "ja": "緊急観測要請 20260826-Nepal-Flood。ネパール水文気象局の要請を受け、ADRCが発災当日に発動した。JAXAはALOS-2の緊急観測を計画している。センチネルアジアの記録には国際災害チャーターへのエスカレーション「あり」、GLIDE番号 FF-2026-000162-NPL が明記されている。"
+  },
+  {
+   "org": "International Charter",
+   "status": "Activated (#1052)",
+   "tier": "official",
+   "url": "https://disasterscharter.org/activations/flood-in-nepal-activation-1052-",
+   "en": "Activated for this event through ADRC on 26 August. UNOSAT produced satellite-detected mudflow/rockflow extent maps for Rasuwa and Nuwakot districts from Sentinel-2 and PlanetScope imagery.",
+   "ja": "8月26日、ADRCを通じて発動。UNOSATがSentinel-2とPlanetScopeの画像から、ラスワ郡・ヌワコット郡の土石流・岩屑流の範囲図を作成した。"
+  },
+  {
+   "org": "UNOSAT",
+   "status": "Maps published 27 Aug",
+   "tier": "official",
+   "url": "https://reliefweb.int/map/nepal/nepal-satellite-detected-mudflow-rockflow-extent-26-27-august-2026-rasuwa-district-bagmati-province-imagery-analysis-2627082026-published-27082026-v1",
+   "en": "Of 228 km2 analysed in Rasuwa, 22 km2 was affected and 1,920 of 19,940 residents were exposed. The map marks a potential ice-avalanche location on the Lende Khola inside the Tibet Autonomous Region, and includes before/after insets at Timure (WorldView-3, 19 Apr 2024 and Sentinel-2, 27 Aug 2026).",
+   "ja": "ラスワ郡の解析対象228km2のうち22km2が被災、解析域の居住人口19,940人のうち1,920人が曝露。図にはチベット自治区内のレンデ川上流の「氷雪崩の推定発生地点」が示され、ティムレの被災前後（WorldView-3 2024年4月19日／Sentinel-2 2026年8月27日）の拡大図が添えられている。"
+  },
+  {
+   "org": "Rissho University / University of Tokyo",
+   "status": "Shared via Sentinel Asia",
+   "tier": "official",
+   "url": "https://sentinel-asia.org/",
+   "en": "A Landsat-9 based analysis and a 3D damaged-area map derived from optical satellite data were contributed by Sentinel Asia member researchers.",
+   "ja": "センチネルアジア参加研究者から、Landsat-9による解析と、光学衛星データによる3次元被害図が提供された。"
+  }
+ ],
+ "links": [
+  {
+   "label_en": "ReliefWeb - Nepal: Flash Floods, Aug 2026 (GLIDE FF-2026-000162-NPL)",
+   "label_ja": "ReliefWeb 災害ページ（GLIDE FF-2026-000162-NPL）",
+   "url": "https://reliefweb.int/disaster/ff-2026-000162-npl",
+   "tier": "official"
+  },
+  {
+   "label_en": "Sentinel Asia - emergency observation request for this event",
+   "label_ja": "センチネルアジア 本災害の緊急観測要請",
+   "url": "https://sentinel-asia.org/EO/2026/article20260826NP.html",
+   "tier": "official"
+  },
+  {
+   "label_en": "International Charter - Flood in Nepal, Activation #1052",
+   "label_ja": "国際災害チャーター Activation #1052",
+   "url": "https://disasterscharter.org/activations/flood-in-nepal-activation-1052-",
+   "tier": "official"
+  },
+  {
+   "label_en": "USGS - M 5.2 landslide (glacial collapse), 55 km NW of Kodari, Nepal",
+   "label_ja": "USGS M5.2 氷河崩落（コダリ北西55km）",
+   "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tbwb",
+   "tier": "official"
+  },
+  {
+   "label_en": "UNOSAT / International Charter - satellite-detected extent, Rasuwa District",
+   "label_ja": "UNOSAT・国際災害チャーター 被災範囲図（ラスワ郡）",
+   "url": "https://reliefweb.int/map/nepal/nepal-satellite-detected-mudflow-rockflow-extent-26-27-august-2026-rasuwa-district-bagmati-province-imagery-analysis-2627082026-published-27082026-v1",
+   "tier": "official"
+  },
+  {
+   "label_en": "IFRC - CHF 25 million Emergency Appeal",
+   "label_ja": "IFRC 緊急アピール（2,500万スイスフラン）",
+   "url": "https://reliefweb.int/report/nepal/ifrc-launches-chf-25-million-emergency-appeal-response-devastating-nepal-flash-floods",
+   "tier": "official"
+  },
+  {
+   "label_en": "UNICEF - US$17.2 million appeal",
+   "label_ja": "UNICEF 支援要請（1,720万米ドル）",
+   "url": "https://reliefweb.int/report/nepal/flash-floods-nepal-leave-more-17000-children-need-urgent-humanitarian-assistance-enar",
+   "tier": "official"
+  },
+  {
+   "label_en": "WFP Nepal External Situation Report, 27 August 2026",
+   "label_ja": "WFP ネパール状況報告（8月27日）",
+   "url": "https://reliefweb.int/report/nepal/wfp-nepal-external-situation-report-27-august-2026",
+   "tier": "official"
+  },
+  {
+   "label_en": "BIPAD Portal (Ministry of Home Affairs) - national incident database",
+   "label_ja": "BIPADポータル（内務省）災害統計",
+   "url": "https://bipadportal.gov.np/",
+   "tier": "official"
+  }
+ ],
+ "images": {
+  "unosat_rasuwa": "images/unosat_rasuwa.png"
+ },
+ "damage_highlights": [],
+ "cities": [],
+ "historical": [],
+ "locator": {
+  "_comment": "3面図。3枚目は震度図ではなく UNOSAT の被災範囲図を置く（地震ではないため）。",
+  "city_map": {
+   "cLat": 28.15,
+   "cLon": 85.35,
+   "zoom": 9
+  },
+  "steps": [
+   {
+    "key": "locator_world",
+    "label_en": "World → Nepal",
+    "label_ja": "世界→ネパール",
+    "cap": "© Google",
+    "map": {
+     "cLat": 28.4,
+     "cLon": 84.1,
+     "zoom": 4
+    },
+    "box": {
+     "n": 30.5,
+     "s": 26.3,
+     "w": 80.0,
+     "e": 88.3
+    }
+   },
+   {
+    "key": "locator_region",
+    "label_en": "Nepal → Rasuwa District",
+    "label_ja": "ネパール→ラスワ郡",
+    "cap": "© Google",
+    "map": {
+     "cLat": 28.15,
+     "cLon": 85.35,
+     "zoom": 7
+    },
+    "box": {
+     "n": 28.4,
+     "s": 27.85,
+     "w": 85.05,
+     "e": 85.75
+    }
+   },
+   {
+    "key": "unosat_rasuwa",
+    "label_en": "UNOSAT - satellite-detected extent",
+    "label_ja": "UNOSAT 衛星による被災範囲",
+    "cap": "© UNOSAT / UNITAR"
+   }
+  ]
+ },
+ "activation_pages": [
+  {
+   "key": "sentinel_asia",
+   "title_en": "Sentinel Asia - Flash Flood in Rasuwa District, Nepal (SA-00658, requested by DHM)",
+   "title_ja": "センチネルアジア 緊急観測 SA-00658（要請：ネパール水文気象局）",
+   "url": "https://sentinel-asia.org/EO/2026/article20260826NP.html"
+  },
+  {
+   "key": "disaster_charter",
+   "title_en": "International Charter - Flood in Nepal, Activation #1052",
+   "title_ja": "国際災害チャーター Flood in Nepal（Activation #1052）",
+   "url": "https://disasterscharter.org/activations/flood-in-nepal-activation-1052-"
+  }
+ ],
+ "attribution_en": "Figures from NDRRMA, Nepal Police and UN agencies; source and cut-off shown per row. All figures provisional.",
+ "attribution_ja": "NDRRMA・ネパール警察・国連機関等の集計。各行に出典と時点を示す。いずれも暫定値。"
+}

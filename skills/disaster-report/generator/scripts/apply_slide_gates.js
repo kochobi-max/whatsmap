@@ -50,6 +50,19 @@ const GATES = [
   // 参加機関の一覧（3/3）は d.satellite 駆動なので対象外。
   { key: "satellite_jp",   probe: /Slide 11:\s*Emergency Observation by Satellites/, note: "衛星による緊急観測 1/3（国土地理院 InSAR・全文ハードコード）" },
   { key: "satellite_jp",   probe: /Slide 12:\s*Emergency Observation by Satellites/, note: "衛星による緊急観測 2/3（千葉大CEReS・QPS-SAR・全文ハードコード）" },
+
+  // ここから下は「地震にしか意味が無い」スライド。2026-08-28 追加。
+  // このジェネレータは熊本の地震レポートを出自に持つため、震源・震度・余震・
+  // 津波のページが無条件に描画される。コロンビアも地震だったので表面化しなかったが、
+  // ネパールの氷河湖決壊洪水（FF-2026-000162-NPL）が最初の非地震イベントになった。
+  // 見出しも図の出典も気象庁固定なので、洪水では中身が丸ごと誤りになる。
+  //
+  // 既存イベント（COL / IDN）の optional_slides にはこの4キーを足してある。
+  // 足さないとページが消える。出力を変えないための措置。
+  { key: "seismic_intensity", probe: /Slide 5:\s*Epicentre & Seismic Intensity/,        note: "震源・震度（気象庁の震度分布図が前提）" },
+  { key: "seismicity",        probe: /Slide 6:\s*Seismicity - Epicentre Distribution/,  note: "地震活動・震央分布・余震" },
+  { key: "mechanism",         probe: /Slide 6b:\s*Source Mechanism & Waveform Analysis/, note: "発震機構・波形解析" },
+  { key: "tsunami_intensity", probe: /Slide 7:\s*Tsunami & Intensity Distribution/,      note: "津波と震度分布" },
 ];
 
 const SECTION_RE = /^\/\* =+ Slide /;

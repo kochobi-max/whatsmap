@@ -37,6 +37,7 @@ const ORDER = [
   ["apply_image_isolation.js", "他イベントの画像を掴まないようにする"],
   ["apply_activation_pages.js", "発動ページを activation_pages で出し分ける"],
   ["apply_cover_and_figures.js", "表紙3行目のあふれ・PAGERの図・時系列の時間帯注記"],
+  ["apply_country_neutral_headers.js", "日本固定の見出し（時系列・被害・発動ページ）を meta から読む"],
 ];
 
 function main() {
