@@ -19,39 +19,39 @@
   "title_ja": "2026年 チョコ地震（コロンビア）",
   "subtitle_en": "M7.4, San José del Palmar, Chocó Department - 10 August 2026",
   "subtitle_ja": "M7.4、チョコ県サンホセ・デル・パルマル、2026年8月10日",
-  "edition_en": "11th report",
-  "edition_ja": "第11報",
+  "edition_en": "12th report",
+  "edition_ja": "第12報",
   "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
   "prepared_by_ja": "アジア防災センター（ADRC）",
-  "as_of_en": "Figures as of the UNGRD balance with an 18:30 COT cut-off on 16 Aug 2026: 287 deaths, 4,147 injured, 194 missing, 355 people and 496 animals rescued alive, 472 municipalities in 15 departments, 120,671 families (185,996 people) affected, 26,392 homes destroyed and 127,608 damaged, 197 buildings collapsed. UNGRD attributes the movement in these counts to verification and consolidation of figures reported from the territories, some of which arrived unverified. All figures are preliminary; quote the cut-off with the number.",
-  "as_of_ja": "数値は2026年8月16日18:30（コロンビア時間）締めのUNGRD集計現在。死者287人、負傷4,147人、行方不明194人、生存救出355人・動物496頭、15県・472市町村。被災120,671世帯・185,996人、住宅全壊26,392棟・損壊127,608棟、建物倒壊197棟。UNGRDは、これらの数値の変動について、地方から報告された数値の検証と統合によるものであり、一部は未検証のまま送られていたと説明している。すべて速報値。引用の際は集計時点を併記されたい。",
+  "as_of_en": "Figures as of the UNGRD balance with a 12:44 COT cut-off on 27 Aug 2026: 329 deaths, 4,592 injured and 151 missing across 494 municipalities in 16 departments. Housing figures remain those of the 18:30 cut on 16 Aug (26,392 homes destroyed and 127,608 damaged); the 27 Aug balance does not restate them. UNGRD attributes movement in these counts to verification and consolidation of figures reported from the territories. All figures are preliminary; quote the cut-off with the number.",
+  "as_of_ja": "数値は2026年8月27日12:44（コロンビア時間）締めのUNGRD集計現在。16県・494市町村で死者329人、負傷4,592人、行方不明151人。住家被害は8月16日18:30締めの値（全壊26,392棟・損壊127,608棟）のまま。8月27日の集計には住家の数値が示されていない。UNGRDは、これらの数値の変動について地方から報告された数値の検証・統合によるものと説明している。すべて速報値。引用の際は集計時点を併記されたい。",
   "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
   "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-  "stamp": "2026-08-17 17:09 JST",
-  "update_date": "17/08/2026",
+  "stamp": "2026-08-28 11:34 JST",
+  "update_date": "28/08/2026",
   "optional_slides": [
    "prior_event",
    "historical",
    "closing"
   ],
   "headline": {
-   "deaths": 287,
-   "injured": 4147,
-   "missing": 194,
+   "deaths": 329,
+   "injured": 4592,
+   "missing": 151,
    "houses_destroyed": 26392,
    "evacuees": null,
    "tier": "official",
-   "as_of": "2026-08-16 18:30 COT (UNGRD)"
+   "as_of": "2026-08-27 12:44 COT (UNGRD)"
   }
  },
  "_prev": {
-  "deaths": null,
-  "injured": null,
-  "missing": null,
-  "houses_destroyed": null,
+  "deaths": 287,
+  "injured": 4147,
+  "missing": 194,
+  "houses_destroyed": 26392,
   "evacuees": null,
-  "tier": null,
-  "as_of": ""
+  "tier": "official",
+  "as_of": "2026-08-16 18:30 COT (UNGRD)"
  },
  "event": {
   "origin_time_local": "10 Aug 2026, 07:34:28 COT (UTC-5)",
@@ -454,6 +454,13 @@
    "src": "UNGRD",
    "en": "UNGRD balance with an 18:30 cut-off: 287 dead, 4,147 injured, 194 missing, 355 people and 496 animals rescued alive; 120,671 families (185,996 people) affected across 472 municipalities in 15 departments; 26,392 homes destroyed and 127,608 damaged; 197 buildings collapsed; 304 health, 3,207 educational and 4,059 community facilities; 410 roads, 95 aqueducts, 48 road bridges, 13 footbridges and five airports.",
    "ja": "18:30締めのUNGRD集計。死者287人、負傷4,147人、行方不明194人、生存救出355人・動物496頭。15県・472市町村で被災120,671世帯・185,996人。住宅全壊26,392棟・損壊127,608棟、建物倒壊197棟。医療304、教育3,207、コミュニティ4,059か所。道路410路線、上水道95系統、道路橋48橋、歩道橋13橋、空港5か所。"
+  },
+  {
+   "time": "27 Aug 12:44",
+   "tier": "official",
+   "src": "UNGRD",
+   "en": "UNGRD balance with a 12:44 cut-off, published from the National Crisis Room: 329 dead, 4,592 injured and 151 missing across 494 municipalities in 16 departments. UNGRD reports it is tracking the Registro Unico de Damnificados (RUD), the register that determines which affected families can access support and subsidies, and is monitoring emergency humanitarian assistance, temporary shelter and the availability of heavy machinery. The balance does not restate housing damage.",
+   "ja": "12:44締めのUNGRD集計（国家危機管理室から公表）。16県・494市町村で死者329人、負傷4,592人、行方不明151人。UNGRDは、被災世帯が支援・補助金を受けられるかを決める被災者登録簿（RUD）の追跡と、緊急人道支援・仮設住居・重機の可用性の監視を進めているとしている。住家被害の数値はこの集計には示されていない。"
   }
  ],
  "areas": [
@@ -532,29 +539,32 @@
   {
    "item_en": "Deaths",
    "item_ja": "死者",
-   "value_en": "287 (UNGRD, 18:30 cut on 16 Aug), down from 289 at the 07:30 cut that morning and 294 on 15 Aug. The series ran 273, 281, 285, 287, 288, 294, 289 and now 287; UNGRD attributes the movement to verification of figures sent from the territories. Chocó, Risaralda and Valle del Cauca remain the worst affected.",
-   "value_ja": "287人（UNGRD、8月16日18:30締め）。同日07:30締めの289人、15日の294人から減少。推移は273→281→285→287→288→294→289→287人であり、UNGRDはこの変動を地方から送られた数値の検証によるものと説明している。被害が最も大きいのはチョコ、リサラルダ、バジェ・デル・カウカの3県。",
-   "source_en": "UNGRD, 16 Aug 18:30",
-   "source_ja": "UNGRD（8月16日18:30）",
-   "tier": "official"
+   "value_en": "329 (UNGRD, 12:44 cut on 27 Aug), up from 287 at the 18:30 cut on 16 Aug. The series has run 273, 281, 285, 287, 288, 294, 289, 287 and now 329; UNGRD attributes the movement to verification and consolidation of figures reported from the territories.",
+   "value_ja": "329人（UNGRD、8月27日12:44締め）。8月16日18:30締めの287人から増加。推移は273→281→285→287→288→294→289→287→329。UNGRDは、変動は地方から報告された数値の検証・統合によるものと説明している。",
+   "source_en": "UNGRD, 27 Aug 12:44",
+   "source_ja": "UNGRD（8月27日12:44）",
+   "tier": "official",
+   "url": "https://x.com/UNGRD/status/2093031993852538880"
   },
   {
    "item_en": "Injured",
    "item_ja": "負傷者",
-   "value_en": "4,147 (UNGRD, 18:30 cut on 16 Aug), against 4,187 that morning and 3,935 on 15 Aug",
-   "value_ja": "4,147人（UNGRD、8月16日18:30締め）。同日朝の4,187人、15日の3,935人と比較",
-   "source_en": "UNGRD, 16 Aug 18:30",
-   "source_ja": "UNGRD（8月16日18:30）",
-   "tier": "official"
+   "value_en": "4,592 (UNGRD, 12:44 cut on 27 Aug), against 4,147 at the 18:30 cut on 16 Aug",
+   "value_ja": "4,592人（UNGRD、8月27日12:44締め）。8月16日18:30締めの4,147人から増加",
+   "source_en": "UNGRD, 27 Aug 12:44",
+   "source_ja": "UNGRD（8月27日12:44）",
+   "tier": "official",
+   "url": "https://x.com/UNGRD/status/2093031993852538880"
   },
   {
    "item_en": "Missing (reported to the authorities)",
    "item_ja": "行方不明（当局への届出）",
-   "value_en": "194 (UNGRD, 18:30 cut on 16 Aug), up from 143 that morning. The series has run 496, 377, 378, 202, 320, 143 and now 194: reports are filed, resolved and de-duplicated at the same time, and UNGRD attributes the movement to verification of territorial reports. It is not a measure of how many people are still under rubble; 355 have been rescued alive.",
-   "value_ja": "194人（UNGRD、8月16日18:30締め）。同日朝の143人から増加。推移は496→377→378→202→320→143→194人である。届出の受理、解決、重複整理が同時に進んでおり、UNGRDはこの変動を地方報告の検証によるものと説明している。瓦礫の下に残る人数を示す数値ではない。生存救出は355人。",
-   "source_en": "UNGRD / Fiscalía General de la Nación, 16 Aug 18:30",
-   "source_ja": "UNGRD、検察庁（8月16日18:30）",
-   "tier": "official"
+   "value_en": "151 (UNGRD, 12:44 cut on 27 Aug), down from 194 at the 18:30 cut on 16 Aug. The series has run 496, 377, 378, 202, 320, 143, 194 and now 151: reports are filed, resolved and de-duplicated at the same time, so this count moves in both directions.",
+   "value_ja": "151人（UNGRD、8月27日12:44締め）。8月16日18:30締めの194人から減少。推移は496→377→378→202→320→143→194→151。届出・解消・重複整理が同時に進むため、この数値は増減の両方向に動く。",
+   "source_en": "UNGRD, 27 Aug 12:44",
+   "source_ja": "UNGRD（8月27日12:44）",
+   "tier": "official",
+   "url": "https://x.com/UNGRD/status/2093031993852538880"
   },
   {
    "item_en": "Unresolved reports on citizen platforms",
@@ -595,8 +605,8 @@
   {
    "item_en": "Homes damaged or destroyed",
    "item_ja": "住宅被害（合計）",
-   "value_en": "154,000: 26,392 destroyed and 127,608 damaged (UNGRD, 18:30 cut on 16 Aug), essentially unchanged from that morning. The rise from 96,000 on 15 Aug was the assessment reaching further, not new damage. In El Cairo, a coffee town in the mountains of Valle del Cauca, 80% of the houses were damaged.",
-   "value_ja": "154,000棟。全壊26,392棟、損壊127,608棟（UNGRD、8月16日18:30締め）。同日朝からほぼ変化なし。8月15日の96,000棟からの増加は、新たな被害の発生ではなく被害評価の進展による。バジェ・デル・カウカ県山間部のコーヒー産地エル・カイロでは、住宅の80％が被害を受けた。",
+   "value_en": "[16 Aug 18:30 cut; the 27 Aug balance does not restate housing] 154,000: 26,392 destroyed and 127,608 damaged (UNGRD, 18:30 cut on 16 Aug), essentially unchanged from that morning. The rise from 96,000 on 15 Aug was the assessment reaching further, not new damage. In El Cairo, a coffee town in the mountains of Valle del Cauca, 80% of the houses were damaged.",
+   "value_ja": "【8月16日18:30締め。8月27日の集計には住家の数値の記載なし】154,000棟。全壊26,392棟、損壊127,608棟（UNGRD、8月16日18:30締め）。同日朝からほぼ変化なし。8月15日の96,000棟からの増加は、新たな被害の発生ではなく被害評価の進展による。バジェ・デル・カウカ県山間部のコーヒー産地エル・カイロでは、住宅の80％が被害を受けた。",
    "source_en": "UNGRD, 16 Aug 18:30",
    "source_ja": "UNGRD（8月16日18:30）",
    "tier": "official"
@@ -613,8 +623,8 @@
   {
    "item_en": "of which destroyed",
    "item_ja": "うち全壊",
-   "value_en": "26,392",
-   "value_ja": "26,392",
+   "value_en": "26,392 (16 Aug 18:30 cut)",
+   "value_ja": "26,392（8月16日18:30締め）",
    "source_en": "UNGRD, 16 Aug 18:30",
    "source_ja": "UNGRD（8月16日18:30）",
    "tier": "official"
@@ -2055,7 +2065,7 @@
      "key": "n",
      "label_en": "Figure",
      "label_ja": "数値",
-     "w": 2.0,
+     "w": 2,
      "align": "right"
     }
    ],
