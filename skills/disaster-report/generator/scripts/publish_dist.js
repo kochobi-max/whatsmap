@@ -14,6 +14,11 @@
  *   毎回まるごと作り直して force push する。履歴は常に1コミットしか無い。
  *   通常の作業ブランチには一切触らない（index も worktree も使わない）。
  *
+ *   **ただし、いま向こうにある他のイベントは読んで残す。**
+ *   2026-08-28、ネパールを出した時点でコロンビアが dist から消えた。
+ *   PC 側は台帳が 404 なら黙って飛ばすので、前日のファイルが残ったまま
+ *   誰も気づかない。押したあとに、残すはずのものが在るかを確かめる。
+ *
  * PC 側は raw.githubusercontent.com から curl で取る。リポジトリは public。
  */
 "use strict";
@@ -39,6 +44,7 @@ const OUTDIR = path.resolve(args[1] || path.join(REPO, "_build", GLIDE));
 
 const git = (...a) => execFileSync("git", a, { cwd: REPO, encoding: "utf8" }).trim();
 const gitBuf = (...a) => execFileSync("git", a, { cwd: REPO, encoding: "utf8", maxBuffer: 64 * 1024 * 1024 });
+const gitQuiet = (...a) => { try { return git(...a); } catch (_) { return ""; } };
 
 const ev = JSON.parse(fs.readFileSync(path.join(SKILL, "events", GLIDE + ".json"), "utf8"));
 const filebase = ev.meta.filebase;
@@ -132,7 +138,24 @@ const mktree = lines =>
   execFileSync("git", ["mktree"], { cwd: REPO, encoding: "utf8", input: lines.join("\n") + "\n" }).trim();
 
 const inner = mktree(blobs.map(b => b.mode + " blob " + b.sha + "\t" + b.name));
-const root = mktree(["040000 tree " + inner + "\t" + GLIDE]);
+
+// **他のイベントを消さない。**
+// 2026-08-28、ネパールを配布した時点でコロンビアが dist から消えた。
+// 毎回まるごと作り直す作りだったため、後から出したものが前のを上書きしていた。
+// PC 側は台帳が 404 なら「まだ配布されていません」と言って黙って飛ばすので、
+// **前日のファイルが置かれたまま、誰も気づかない。**
+// いまある dist の中身を読み、このイベントの枝だけ差し替える。
+const treeEntries = new Map();
+gitQuiet("fetch", "origin", BRANCH);
+const listing = gitQuiet("ls-tree", "FETCH_HEAD");
+for (const line of listing ? listing.split("\n") : []) {
+  const m = /^(\d+)\s+(\w+)\s+([0-9a-f]+)\t(.+)$/.exec(line.trim());
+  if (m) treeEntries.set(m[4], m[1] + " " + m[2] + " " + m[3] + "\t" + m[4]);
+}
+const kept = [...treeEntries.keys()].filter(k => k !== GLIDE);
+treeEntries.set(GLIDE, "040000 tree " + inner + "\t" + GLIDE);
+const root = mktree([...treeEntries.values()]);
+if (kept.length) console.log("   そのまま残す: " + kept.join(", "));
 
 // 親を付けない＝毎回1コミットだけの孤立ブランチ。履歴に16MBが積み上がらない
 const msg = "dist " + GLIDE + " " + dateJst + " " + timeJst + " JST\n";
@@ -160,6 +183,17 @@ if (!pushed) {
   console.error(String((lastErr && (lastErr.stderr || lastErr.message)) || "").trim());
   process.exit(4);
 }
+
+// 終了コードではなく、向こうに何があるかを見る
+gitQuiet("fetch", "origin", BRANCH);
+const after = new Set((gitQuiet("ls-tree", "--name-only", "FETCH_HEAD") || "").split("\n").filter(Boolean));
+const lost = [GLIDE, ...kept].filter(k => !after.has(k));
+if (lost.length) {
+  console.error("STATUS: FAIL dist-lost " + lost.join(", "));
+  console.error("  配布ブランチから消えている。PC はこれらを黙って飛ばす。");
+  process.exit(5);
+}
+console.log("   配布ブランチの中身: " + [...after].sort().join(", "));
 
 const raw = "https://raw.githubusercontent.com/kochobi-max/whatsmap/" + BRANCH + "/" + GLIDE + "/";
 console.log("STATUS: DIST " + BRANCH + " " + commit.slice(0, 8));
