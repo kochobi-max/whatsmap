@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /*
- * apply_all.js — 14本のパッチを正しい順序でまとめて当てる
+ * apply_all.js — 15本のパッチを正しい順序でまとめて当てる
  *
  * 使い方:
  *   node scripts/apply_all.js --file "<gen_deck.js のパス>" --dry-run   ← まずこれ
@@ -36,6 +36,7 @@ const ORDER = [
   ["apply_param_table_fit.js", "震源・震度の諸元表が下端を越えないよう文字を縮める"],
   ["apply_image_isolation.js", "他イベントの画像を掴まないようにする"],
   ["apply_activation_pages.js", "発動ページを activation_pages で出し分ける"],
+  ["apply_cover_and_figures.js", "表紙3行目のあふれ・PAGERの図・時系列の時間帯注記"],
 ];
 
 function main() {

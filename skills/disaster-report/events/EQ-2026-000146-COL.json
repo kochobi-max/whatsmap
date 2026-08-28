@@ -42,7 +42,9 @@
    "evacuees": null,
    "tier": "official",
    "as_of": "2026-08-27 12:44 COT (UNGRD)"
-  }
+  },
+  "tz_note_en": "Times are local (COT, UTC-5); entries whose exact time is not published are placed at the end of that day.",
+  "tz_note_ja": "時刻は現地時間（COT、UTC-5）。時刻が公表されていないものはその日の末尾に置いている。"
  },
  "_prev": {
   "deaths": 287,
@@ -110,7 +112,9 @@
   "source_en": "UNGRD / SGC / USGS",
   "source_ja": "UNGRD／SGC／USGS",
   "seismic_agency_en": "SGC",
-  "seismic_agency_ja": "SGC（コロンビア地質調査所）"
+  "seismic_agency_ja": "SGC（コロンビア地質調査所）",
+  "epicentre_short_ja": "チョコ県サンホセ・デル・パルマルの南5km（USGS）",
+  "epicentre_short_en": "5 km S of San Jose del Palmar, Choco (USGS)"
  },
  "tectonics": {
   "text_en": "Colombia lies at the junction of the Nazca, Caribbean and South America plates. Off the Pacific coast the Nazca plate subducts eastward beneath South America at roughly 50-60 mm/yr, and the descending slab reaches intermediate depths (70-300 km) beneath the Western and Central Cordilleras. This event ruptured inside that slab at about 110 km depth, which is why the shaking was felt over hundreds of kilometres - as far as Bogotá, Quito and Panamá City - while surface faulting and tsunami generation were absent. Intermediate-depth events radiate high-frequency energy efficiently and attenuate slowly, so damage tends to be distributed across many cities rather than concentrated in a narrow epicentral zone.",
@@ -211,6 +215,13 @@
    "ja": "SGCが第1報を発表（当初M6.6・深さ79km）。のちM7.4・深さ96kmに修正し、69観測点で決定（イベントSGC2026pqqmro）。被害評価のプロトコルを起動。"
   },
   {
+   "time": "12:13",
+   "tier": "official",
+   "src": "Copernicus EMS",
+   "en": "Copernicus EMS Rapid Mapping activated as EMSR916 (17:13 UTC), requested by EC Services / DG ECHO, for earthquake damage assessment mapping.",
+   "ja": "コペルニクスEMSのラピッドマッピングが EMSR916 として発動（17:13 UTC）。要請は欧州委員会サービス／DG ECHO、地震被害評価のマッピングのため。"
+  },
+  {
    "time": "Morning",
    "tier": "official",
    "src": "UNGRD",
@@ -267,13 +278,6 @@
    "ja": "大統領が現地対応の指揮のためペレイラに移動。"
   },
   {
-   "time": "12:13",
-   "tier": "official",
-   "src": "Copernicus EMS",
-   "en": "Copernicus EMS Rapid Mapping activated as EMSR916 (17:13 UTC), requested by EC Services / DG ECHO, for earthquake damage assessment mapping.",
-   "ja": "コペルニクスEMSのラピッドマッピングが EMSR916 として発動（17:13 UTC）。要請は欧州委員会サービス／DG ECHO、地震被害評価のマッピングのため。"
-  },
-  {
    "time": "Afternoon",
    "tier": "official",
    "src": "Presidency / UNGRD",
@@ -293,6 +297,20 @@
    "src": "International media",
    "en": "The reported national death toll rises to 132. Four people have been rescued alive from the rubble; more than 20 municipalities are reported affected, and power and telecommunications faults continue in Chocó.",
    "ja": "報道による全国の死者数が132人に増加。瓦礫から4人が救出。被災市町村は20を超えると報じられ、チョコ県では停電・通信障害が続く。"
+  },
+  {
+   "time": "11 Aug 07:31",
+   "tier": "official",
+   "src": "Japan (MOFA)",
+   "en": "Japan's Prime Minister posts condolences (21:31 JST) and Foreign Minister Motegi issues a message offering condolences and stating that the Government of Japan also stands ready to provide the necessary assistance and that Japan stands in strong solidarity with the people of Colombia.",
+   "ja": "日本の高市内閣総理大臣が哀悼とお見舞いを投稿（日本時間21:31）。茂木外務大臣が、哀悼とお見舞いに加え、日本政府として必要とされる支援を提供する用意がある旨、およびコロンビアの人々との強い連帯を表明するメッセージを発出。"
+  },
+  {
+   "time": "11 Aug 09:20",
+   "tier": "official",
+   "src": "SGC",
+   "en": "The SGC revises its solution for the mainshock to M7.4 at 103 km depth, 4.99 N 76.29 W, located with 119 stations and 208 phases. Its first bulletin had given M6.6 at 79 km and its second 7.4 at 96 km with 69 stations. (14:20 UTC)",
+   "ja": "SGCが本震の解をM7.4・深さ103km、北緯4.99度・西経76.29度に改訂。119観測点・208フェーズで決定。第1報はM6.6・深さ79km、第2報は7.4・深さ96km（69観測点）であった。（14:20 UTC）"
   },
   {
    "time": "11 Aug",
@@ -316,18 +334,11 @@
    "ja": "SGCが公表する余震回数は15:00（現地）で103回に達する（M3.0以下97回、M3.0〜4.0が5回、M4.0超1回）。日中のM3.9により被災各都市で建物からの避難が行われた。同期間のSGCカタログには147回の決定解があり、こちらは背景地震活動を含む広い数値である。"
   },
   {
-   "time": "11 Aug 14:20 UTC",
+   "time": "11 Aug",
    "tier": "official",
-   "src": "SGC",
-   "en": "The SGC revises its solution for the mainshock to M7.4 at 103 km depth, 4.99 N 76.29 W, located with 119 stations and 208 phases. Its first bulletin had given M6.6 at 79 km and its second 7.4 at 96 km with 69 stations.",
-   "ja": "SGCが本震の解をM7.4・深さ103km、北緯4.99度・西経76.29度に改訂。119観測点・208フェーズで決定。第1報はM6.6・深さ79km、第2報は7.4・深さ96km（69観測点）であった。"
-  },
-  {
-   "time": "11 Aug 07:31",
-   "tier": "official",
-   "src": "Japan (MOFA)",
-   "en": "Japan's Prime Minister posts condolences (21:31 JST) and Foreign Minister Motegi issues a message offering condolences and stating that the Government of Japan also stands ready to provide the necessary assistance and that Japan stands in strong solidarity with the people of Colombia.",
-   "ja": "日本の高市内閣総理大臣が哀悼とお見舞いを投稿（日本時間21:31）。茂木外務大臣が、哀悼とお見舞いに加え、日本政府として必要とされる支援を提供する用意がある旨、およびコロンビアの人々との強い連帯を表明するメッセージを発出。"
+   "src": "UN / OCHA",
+   "en": "OCHA states the humanitarian system is ready to support Colombia and names drinking water, hygiene and household items, health, food and shelter as the priority needs; no formal request for assistance has been received from the Colombian authorities.",
+   "ja": "OCHAが、人道支援システムはコロンビアを支援する用意があるとし、飲料水、衛生・生活用品、保健、食料、避難所を優先ニーズに挙げる。コロンビア当局からの正式な支援要請は受けていない。"
   },
   {
    "time": "12 Aug",
@@ -335,13 +346,6 @@
    "src": "Mayor of Cali",
    "en": "Cali city officials report 107 buildings collapsed, 643 with structural damage and 18 under evacuation order; 230 people trapped, 88 rescued, 69 dead and 1,008 injured in the city.",
    "ja": "カリ市当局が同市の被害を報告。建物倒壊107棟、構造的被害643棟、避難命令18棟、生き埋め230人、救出88人、死者69人、負傷1,008人。"
-  },
-  {
-   "time": "11 Aug",
-   "tier": "official",
-   "src": "UN / OCHA",
-   "en": "OCHA states the humanitarian system is ready to support Colombia and names drinking water, hygiene and household items, health, food and shelter as the priority needs; no formal request for assistance has been received from the Colombian authorities.",
-   "ja": "OCHAが、人道支援システムはコロンビアを支援する用意があるとし、飲料水、衛生・生活用品、保健、食料、避難所を優先ニーズに挙げる。コロンビア当局からの正式な支援要請は受けていない。"
   },
   {
    "time": "12 Aug",
@@ -379,6 +383,13 @@
    "ja": "大統領がサンカルロス宮殿でUNGRDの更新集計を発表。死者265人、負傷3,494人、行方不明496人、被災25,872世帯（53,816人）、住宅全壊11,347棟・損壊53,526棟、教育施設1,819か所・コミュニティ施設631か所が被害。あわせて経済緊急事態の宣言を発表した。"
   },
   {
+   "time": "12 Aug",
+   "tier": "official",
+   "src": "Presidency / Gobernación del Chocó",
+   "en": "Decree 1172 declares three days of national mourning from 12 August, flags at half-mast at home and in Colombian missions abroad. The same night the governor of Chocó ends the department's search-and-rescue phase after the last family sought in Quibdó, four people, is found alive.",
+   "ja": "大統領令第1172号により、8月12日から3日間の国家服喪を宣言。国内および在外公館で半旗を掲げる。同じ夜、チョコ県知事が、キブドで最後まで捜索されていた家族4人の生存確認を受けて県の捜索救助段階の終了を表明。"
+  },
+  {
    "time": "13 Aug 09:42",
    "tier": "official",
    "src": "SGC",
@@ -391,6 +402,13 @@
    "src": "UNGRD",
    "en": "UNGRD's director gives a new balance: 273 dead, 3,824 injured, 377 missing, 40,753 families (97,515 people) affected, 12,584 homes destroyed and 74,873 damaged, 172 buildings collapsed, 2,198 educational and 825 community facilities, 216 health facilities, 71 aqueducts, 29 banking offices and five airports. Medicina Legal has received 250 bodies, 227 recognised. Red alert continues in Cali, Pereira, Quibdó, Manizales and Armenia.",
    "ja": "UNGRD長官が新たな集計を発表。死者273人、負傷3,824人、行方不明377人、被災40,753世帯・97,515人、住宅全壊12,584棟・損壊74,873棟、建物倒壊172棟、教育施設2,198か所、コミュニティ施設825か所、医療施設216か所、上水道71系統、金融機関29拠点、空港5か所。法医学研究所には250遺体が搬入され、227体の身元が確認。カリ、ペレイラ、キブド、マニサレス、アルメニアで赤色警報が継続。"
+  },
+  {
+   "time": "14 Aug 07:00",
+   "tier": "official",
+   "src": "SGC",
+   "en": "SGC reports 184 aftershocks located since the mainshock, 15 of them above M3.0 and 2 above M4.0.",
+   "ja": "SGCが、本震以降に決定した余震は184回、うちM3.0超が15回、M4.0超が2回と報告。"
   },
   {
    "time": "14 Aug 09:00",
@@ -414,20 +432,6 @@
    "ja": "更新集計。死者288人、負傷4,018人、行方不明202人、救出354人。被災45,523世帯・102,263人、15県・426市町村。住宅全壊12,828棟・損壊73,455棟、建物倒壊121棟。医療240か所、教育2,205か所、コミュニティ1,208か所。道路210路線、上水道73系統、道路橋44橋、歩道橋13橋、空港5か所。09:00時点からの減少は、被害評価の重複記録が整理された結果である。"
   },
   {
-   "time": "14 Aug 07:00",
-   "tier": "official",
-   "src": "SGC",
-   "en": "SGC reports 184 aftershocks located since the mainshock, 15 of them above M3.0 and 2 above M4.0.",
-   "ja": "SGCが、本震以降に決定した余震は184回、うちM3.0超が15回、M4.0超が2回と報告。"
-  },
-  {
-   "time": "15 Aug",
-   "tier": "media",
-   "src": "International media",
-   "en": "Search continues for the missing while more than 100,000 people affected await assistance; in El Cairo (Valle del Cauca) 80% of the houses are reported damaged.",
-   "ja": "行方不明者の捜索が続く一方、10万人を超える被災者が支援を待つ。バジェ・デル・カウカ県エル・カイロでは住宅の80％が被害を受けたと報じられる。"
-  },
-  {
    "time": "15 Aug 06:30",
    "tier": "official",
    "src": "UNGRD",
@@ -435,11 +439,11 @@
    "ja": "06:30締めのUNGRD集計。死者294人、負傷3,935人、行方不明320人、生存救出353人・動物188頭。被災54,008世帯・115,461人、被害報告のあった市町村448。住宅全壊14,493棟・損壊81,506棟、建物倒壊66棟。被害が最も大きいのはチョコ、リサラルダ、バジェ・デル・カウカ。"
   },
   {
-   "time": "12 Aug",
-   "tier": "official",
-   "src": "Presidency / Gobernación del Chocó",
-   "en": "Decree 1172 declares three days of national mourning from 12 August, flags at half-mast at home and in Colombian missions abroad. The same night the governor of Chocó ends the department's search-and-rescue phase after the last family sought in Quibdó, four people, is found alive.",
-   "ja": "大統領令第1172号により、8月12日から3日間の国家服喪を宣言。国内および在外公館で半旗を掲げる。同じ夜、チョコ県知事が、キブドで最後まで捜索されていた家族4人の生存確認を受けて県の捜索救助段階の終了を表明。"
+   "time": "15 Aug",
+   "tier": "media",
+   "src": "International media",
+   "en": "Search continues for the missing while more than 100,000 people affected await assistance; in El Cairo (Valle del Cauca) 80% of the houses are reported damaged.",
+   "ja": "行方不明者の捜索が続く一方、10万人を超える被災者が支援を待つ。バジェ・デル・カウカ県エル・カイロでは住宅の80％が被害を受けたと報じられる。"
   },
   {
    "time": "16 Aug 07:30",
@@ -1742,7 +1746,8 @@
   "usgs_pager": "images/usgs_pager_manual.jpg",
   "sgc_hazard": "images/sgc_hazard_manual.jpg",
   "gem_treq_cali": "images/gem_treq_cali_manual.jpg",
-  "intensity_map": "images/sgc_shakemap_manual.jpg"
+  "intensity_map": "images/sgc_shakemap_manual.jpg",
+  "seismicity_timeseries": "images/aftershock_counts.png"
  },
  "photos": [],
  "intensity_map": {
@@ -1929,7 +1934,9 @@
   "title_ja": "USGS PAGERによる影響評価（第5版）",
   "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjl2/pager",
   "text_en": "PAGER is the USGS rapid impact estimate, issued within minutes and revised as the event is refined; version 5 was created 2 hours 8 minutes after the earthquake. It is a probability distribution, not a forecast of a single number: the orange alert means significant casualties and damage are likely and that past orange alerts have required a regional or national response. Its most likely fatality band, 1,000-10,000, sat far above the 111 deaths reported nine hours after the event; 33 hours in the reported toll had risen to 182-240, into PAGER's 100-1,000 band, which the model gave a lower but substantial probability. The gap is normal at this stage and narrows as ground truth replaces modelled losses.",
-  "text_ja": "PAGERはUSGSによる迅速影響推計で、発生から数分で発表され、震源要素の精査に伴い改訂される。第5版は発災の2時間8分後に作成された。これは単一の予測値ではなく確率分布であり、オレンジ警報は「相当の人的被害と損害が生じる可能性が高く、過去のオレンジ警報は地域的または国家的な対応を要した」ことを意味する。最も確からしい死者数階級1,000〜10,000人は、発災9時間後の報告値111人を大きく上回っていたが、33時間後には報告値が182〜240人となり、PAGERが低いながらも相応の確率を与えていた100〜1,000人の階級に入った。この段階での乖離は通常のことであり、実測が推計に置き換わるにつれて差は縮まる。"
+  "text_ja": "PAGERはUSGSによる迅速影響推計で、発生から数分で発表され、震源要素の精査に伴い改訂される。第5版は発災の2時間8分後に作成された。これは単一の予測値ではなく確率分布であり、オレンジ警報は「相当の人的被害と損害が生じる可能性が高く、過去のオレンジ警報は地域的または国家的な対応を要した」ことを意味する。最も確からしい死者数階級1,000〜10,000人は、発災9時間後の報告値111人を大きく上回っていたが、33時間後には報告値が182〜240人となり、PAGERが低いながらも相応の確率を与えていた100〜1,000人の階級に入った。この段階での乖離は通常のことであり、実測が推計に置き換わるにつれて差は縮まる。",
+  "figure_en": "USGS PAGER alert — estimated fatalities and economic losses (version 5)",
+  "figure_ja": "USGS PAGER 警報 — 推定死者数・経済損失（第5版）"
  },
  "toll_caption_en": "UNGRD balance with an 18:30 COT cut-off on 16 August. 120,671 families (185,996 people) affected across 472 municipalities in 15 departments; 26,392 homes destroyed and 127,608 damaged; 355 people and 496 animals rescued alive. Two cut-offs the same day: deaths 289 then 287, injured 4,187 then 4,147, missing 143 then 194. UNGRD states the reason - figures reported from the territories are being verified and consolidated, some sent before being checked - so quote the cut-off with the number.",
  "toll_caption_ja": "8月16日18:30締めのUNGRD集計。15県・472市町村で被災120,671世帯・185,996人。住宅全壊26,392棟・損壊127,608棟、生存救出355人・動物496頭。同じ日に2回の締めがあり、死者289人→287人、負傷4,187人→4,147人、行方不明143人→194人と動いた。UNGRDはその理由として、地方から報告された数値の検証・統合を進めており、一部は検証前に送られていたことを挙げている。引用の際は数値とあわせて集計時点を示されたい。",

@@ -80,12 +80,13 @@ if (!nm) {
 }
 fs.symlinkSync(nm, path.join(wgen, "node_modules"), "junction");
 
+const PATCH_COUNT = fs.readdirSync(HERE).filter(f => /^apply_(?!all)/.test(f)).length;
 console.log("STEP: patch");
 execFileSync(process.execPath,
   [path.join(wgen, "scripts", "apply_all.js"), "--file", path.join(wgen, "scripts", "gen_deck.js")],
   { cwd: wgen, stdio: ["ignore", "ignore", "inherit"] });
 const patchedLines = fs.readFileSync(path.join(wgen, "scripts", "gen_deck.js"), "utf8").split("\n").length;
-console.log("   14 patches applied (" + patchedLines + " lines)");
+console.log("   " + PATCH_COUNT + " patches applied (" + patchedLines + " lines)");
 
 fs.mkdirSync(OUTDIR, { recursive: true });
 const now = new Date();
