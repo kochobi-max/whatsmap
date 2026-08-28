@@ -71,3 +71,37 @@ Instituto de Hidrología, Meteorología y Estudios Ambientales
 | SGC | コロンビア地質局 |
 | IDEAM | 水文気象環境研究所 |
 | Gobernación del Chocó | チョコ県庁 |
+
+
+---
+
+## UNGRD の取り方（2026-08-28 に確立）
+
+**ポータルは SharePoint で、記事本文が静的HTMLに無い。** `curl` でも
+ヘッドレスChromium でも本文は取れない。**SharePoint の REST API だけが通る。**
+
+```bash
+node generator/scripts/fetch_ungrd.js --grep "sismo|terremoto" --limit 3
+node generator/scripts/fetch_ungrd.js --year 2026 --limit 20      # 一覧だけ
+```
+
+`WebFetch` は使わない。egress の許可リストを見ておらず、許可済みドメインでも
+`EGRESS_BLOCKED` を返す（`references/environment.md`）。
+
+### 取れるもの・取れないもの
+
+| | |
+|---|---|
+| **取れる** | UNGRD の記事本文（救助実績、対応方針、国際支援、評価手法など） |
+| **取れない** | **死者・負傷者・住家被害の数値集計** |
+
+**数値集計は UNGRD のサイトには記事として載らない。** 公式X（@UNGRD）で
+「balance con corte al ...」の形で発表され、報道がそれを引く。
+**x.com・nitter・datos.gov.co・ungrd.gov.co はいずれも遮断されている**（2026-08-28）。
+
+したがって数値は現状**報道経由でしか取れない**。SKILL.md §1 の出典階層に従い、
+UNGRD発表を報道が引いた値は **`tier: "media"`** とし、`sourceURL` に報道の
+URLを、本文に「UNGRD発表、◯月◯日◯時時点」と corte を明記する。
+**公式値として `tier: "official"` を付けない。**
+
+数値を公式ティアで扱いたい場合は、x.com などを許可リストに追加する必要がある。
