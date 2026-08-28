@@ -95,7 +95,17 @@ const pad = n => String(n).padStart(2, "0");
 const updateDate = process.env.UPDATE_DATE ||
   pad(jst.getDate()) + "/" + pad(jst.getMonth() + 1) + "/" + jst.getFullYear();
 
-console.log("STEP: build");
+// 表がページ番号・ADRC の帯に重なっていないかは、**出来上がった PDF を測って**確かめる。
+// 行の高さの見積もりは文字数からの計算なので、実際の組版とは必ずずれる。
+// 重なりが残っていたら1ページに詰める量を減らして組み直す。ページは増えてよい。
+// 2026-08-28、インドネシア版で表の最下辺がページ番号を横切っていた。
+const SCALES = [1, 0.90, 0.82, 0.75];
+let scale = SCALES[0];
+const pages = {};   // ループの外で持つ。最後に成功した回の値を使う
+
+for (let attempt = 0; attempt < SCALES.length; attempt++) {
+scale = SCALES[attempt];
+console.log("STEP: build" + (attempt ? "  (retry: 1ページの詰めを " + scale + " に)" : ""));
 for (const L of ["ja", "en"]) {
   const U = L.toUpperCase();
   execFileSync(process.execPath, [path.join(wgen, "scripts", "gen_deck.js")], {
@@ -103,6 +113,7 @@ for (const L of ["ja", "en"]) {
     stdio: ["ignore", "inherit", "inherit"],
     env: Object.assign({}, process.env, {
       LANG_OUT: L, UPDATE_DATE: updateDate, EVENT: GLIDE,
+      TABLE_BUDGET_SCALE: String(scale),
       OUT: path.join(OUTDIR, filebase + "_" + U + ".pptx"),
     }),
   });
@@ -144,7 +155,6 @@ if (conv.error) {
   process.exit(8);
 }
 
-const pages = {};
 for (const U of ["JA", "EN"]) {
   const p = path.join(OUTDIR, filebase + "_" + U + ".pdf");
   if (!fs.existsSync(p) || fs.statSync(p).size === 0) {
@@ -156,6 +166,17 @@ for (const U of ["JA", "EN"]) {
   pages[U] = (buf.toString("latin1").match(/\/Type\s*\/Page[^s]/g) || []).length;
 }
 
+// ここで測る。重なりが残っていれば詰めを減らしてもう一度。
+if (checkFooter()) break;
+if (attempt === SCALES.length - 1) {
+  console.error("STATUS: FAIL footer-overlap");
+  console.error("1ページの詰めを " + SCALES.join(" → ") + " まで下げても重なりが消えない。");
+  console.error("表の行そのものが長すぎる。イベントJSONの値を短くするか、");
+  console.error("check_footer_overlap.py の出力を見て手当てすること。");
+  process.exit(9);
+}
+}
+
 console.log("");
 console.log("OUTDIR: " + OUTDIR);
 for (const U of ["JA", "EN"]) {
@@ -164,4 +185,27 @@ for (const U of ["JA", "EN"]) {
     console.log("   " + f + "  " + Math.round(fs.statSync(path.join(OUTDIR, f)).size / 1024) + "KB");
   }
 }
-console.log("STATUS: OK JA=" + pages.JA + "p EN=" + pages.EN + "p");
+console.log("STATUS: OK JA=" + pages.JA + "p EN=" + pages.EN + "p"
+  + (scale === 1 ? "" : "  (1ページの詰め " + scale + ")"));
+
+function checkFooter() {
+  const script = path.join(HERE, "check_footer_overlap.py");
+  if (!fs.existsSync(script)) return true;
+  const pdfs = ["JA", "EN"].map(U => path.join(OUTDIR, filebase + "_" + U + ".pdf"));
+  // python3 が無い環境（Windows は py / python）でも動くよう順に試す。
+  // どれも無ければ検査を飛ばす。**検査できなかったことは「合格」ではない**ので、
+  // 飛ばしたことを必ず出す。
+  for (const exe of ["python3", "python", "py"]) {
+    const r = spawnSync(exe, [script].concat(pdfs), { encoding: "utf8" });
+    if (r.error) continue;
+    process.stdout.write(r.stdout || "");
+    process.stderr.write(r.stderr || "");
+    if (r.status === 2) {
+      console.log("   NOTE: pdfplumber that is missing - skipped the overlap check");
+      return true;
+    }
+    return r.status === 0;
+  }
+  console.log("   NOTE: no python - skipped the overlap check");
+  return true;
+}
