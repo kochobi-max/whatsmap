@@ -95,13 +95,24 @@ node generator/scripts/fetch_ungrd.js --year 2026 --limit 20      # 一覧だけ
 | **取れる** | UNGRD の記事本文（救助実績、対応方針、国際支援、評価手法など） |
 | **取れない** | **死者・負傷者・住家被害の数値集計** |
 
-**数値集計は UNGRD のサイトには記事として載らない。** 公式X（@UNGRD）で
-「balance con corte al ...」の形で発表され、報道がそれを引く。
-**x.com・nitter・datos.gov.co・ungrd.gov.co はいずれも遮断されている**（2026-08-28）。
+**数値集計は UNGRD のサイトには記事として載らない。** 公式X（@UNGRD）で発表される。
 
-したがって数値は現状**報道経由でしか取れない**。SKILL.md §1 の出典階層に従い、
-UNGRD発表を報道が引いた値は **`tier: "media"`** とし、`sourceURL` に報道の
-URLを、本文に「UNGRD発表、◯月◯日◯時時点」と corte を明記する。
-**公式値として `tier: "official"` を付けない。**
+## 数値集計の取り方 — 公式X（2026-08-28 に確立）
 
-数値を公式ティアで扱いたい場合は、x.com などを許可リストに追加する必要がある。
+```bash
+node generator/scripts/fetch_x.js UNGRD --grep "balance nacional|fallecid"
+```
+
+x.com はログインを求めるが、**返ってくるHTMLに GraphQL の状態が埋まっており、
+投稿本文がそのまま入っている**。長文投稿は `NoteTweet` 側に全文があり、
+タイムライン表示用は `t.co` で切り詰められている。**書き出しが同じなら長い方を採る**
+（集計の数値は末尾に来るので、短い方を残すと数値ごと落ちる）。
+
+**日時は投稿IDから復元する。** X の ID は snowflake で
+`ms = (id >> 22) + 1288834974657`。HTML に `created_at` が無くても確定でき、
+これが `as_of`（corte）の根拠になる。コロンビアは UTC-5（COT）。
+
+これにより数値を **`tier: "official"`** で扱える。`sourceURL` には
+`https://x.com/UNGRD/status/<id>` を入れる。報道で代用しない。
+
+`nitter` / `datos.gov.co` / `ungrd.gov.co` は遮断されたまま（2026-08-28）。
