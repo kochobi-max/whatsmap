@@ -109,6 +109,12 @@ function todayLocal() {
   return d.getFullYear() + "-" + p(d.getMonth() + 1) + "-" + p(d.getDate());
 }
 
+function nowLocal() {
+  const d = new Date();
+  const p = n => String(n).padStart(2, "0");
+  return todayLocal() + " " + p(d.getHours()) + ":" + p(d.getMinutes());
+}
+
 // ---------------------------------------------------------------- 本体
 let status = "OK";
 let anyPublished = false;
@@ -210,9 +216,33 @@ function publishOne(glide, markers) {
   if (man.BUILT_DATE_JST !== today) {
     say("STATUS: SKIP stale-dist");
     say("   配布されている最新は " + man.BUILT_DATE_JST + " のもので、今日のものではない。");
-    say("   何もコピーせず、記録も書かない。クラウド側はメールを見送る。");
+    say("   何もコピーしない。クラウド側はメールを見送る。");
     say("   これは意図した動作。前日のファイルを置き直して");
     say("   「本日更新しました」と書いたメールを出さないため。");
+    // **飛ばしたことを、クラウドからも見えるようにする。**
+    // 以前はここで何も書かずに終わっていたので、クラウド側からは
+    // 「PCが動いて飛ばした」のか「PCが動いていない」のかが区別できなかった。
+    // 2026-08-29、コロンビアが08:10の実行で飛ばされていたことに、
+    // 荒木田さんに「メールは出さないの？」と聞かれるまで気づけなかった。
+    try {
+      const dir = path.join(REPO, "skills", "disaster-report", "_published");
+      fs.mkdirSync(dir, { recursive: true });
+      const rel = "skills/disaster-report/_published/" + glide + ".skipped.json";
+      fs.writeFileSync(path.join(dir, glide + ".skipped.json"),
+        JSON.stringify({
+          glide,
+          skipped_at_jst: nowLocal(),
+          reason: "stale-dist",
+          dist_built_date_jst: man.BUILT_DATE_JST,
+          today_jst: today,
+          note: "配布ブランチのビルドが当日のものではないため、コピーしていない。" +
+                "クラウド側でビルドし直して publish_dist.js を回すこと。",
+        }, null, 2) + "\n", "utf8");
+      markers.push({ glide, rel });
+      say("   記録 " + glide + ".skipped.json（飛ばしたことをクラウドへ伝える）");
+    } catch (err) {
+      say("   WARN skip-marker: " + err.message);
+    }
     return 0;
   }
 
