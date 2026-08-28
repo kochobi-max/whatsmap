@@ -220,14 +220,34 @@ cd "$OUTDIR" && soffice --headless --convert-to pdf --outdir "$OUTDIR" *.pptx
 
 | 時刻(JST) | 担当 | やること |
 |---|---|---|
-| 07:30 | クラウド | データ更新 → `resolve_event.js` → `build_event.js` → プッシュ |
-| 08:10 | 荒木田さんのPC | `git pull` → ビルド → LargeScaleDisasters へコピー → **公開記録をプッシュ** |
+| 07:30 | クラウド | データ更新 → `resolve_event.js` → `build_event.js` → **`publish_dist.js`** → プッシュ |
+| 08:10 | 荒木田さんのPC | 4ファイルを**ダウンロード** → LargeScaleDisasters へコピー → **公開記録をプッシュ** |
 | 08:30 | クラウド | 公開記録を確認 → 数値急変ゲート → 研究部へ送信 → `_prev` 更新 |
-| 17:30 | クラウド | データ更新 → ビルド（**送信しない**） |
+| 17:30 | クラウド | データ更新 → ビルド → 配布（**送信しない**） |
 
 **なぜPCを挟むのか**: クラウドから
 `C:\Users\arakida\OneDrive - adrc.asia\LargeScaleDisasters` へ書き込む経路が無いため。
+**PCがやるのはコピーだけ。ビルドはしない。**
 PC側の設定は1回だけで済む（`references/daily-publish-setup.md`）。
+
+**PDF変換をPCから外した経緯**（2026-08-28）。
+当初はPCでビルドさせていたが、PDF変換に要る LibreOffice が入っていなかった。
+入れてもらう前提の手順は渡さない、と決めてこの形にした。
+いまPCに要るのは **git・node・curl** の3つだけで、いずれも既に入っている。
+
+配布のしかたは `generator/scripts/publish_dist.js`。
+ビルド済みの4ファイルと `manifest.txt` を、**配布専用の孤立ブランチ `dist` へ
+毎回まるごと作り直して force push する**。履歴は常に1コミットなので、
+1日16MBがリポジトリに積み上がらない。作業ブランチには触らない。
+PC側は `https://raw.githubusercontent.com/kochobi-max/whatsmap/dist/<GLIDE>/` から
+curl で取る（リポジトリは public なのでサインイン不要）。
+
+`manifest.txt` は **ASCII のみ**。PCの `cmd` は cp932 で読むため、
+日本語を入れると `for /f` の解析が狂う。`publish_dist.js` が非ASCIIを検出したら配布を止める。
+
+PC側は台帳の `BUILT_DATE_JST` が**当日でなければコピーしない**（`STATUS: SKIP stale-dist`）。
+クラウド側の朝のビルドが落ちた日に、前日のファイルを置き直して
+「本日更新しました」というメールを出さないため。
 
 **公開記録**（`_published/<GLIDE>.json`）は、PCが実際にコピーできたときだけ書かれる。
 **この記録が当日のものでなければメールは出ない。** 本文に「OneDriveに保存しました」と

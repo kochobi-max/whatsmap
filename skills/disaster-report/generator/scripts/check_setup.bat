@@ -7,13 +7,16 @@ REM  everything daily_publish.bat needs is in place, and prints one
 REM  line per item. The window stays open so you can read it.
 REM
 REM  Tell Claude only the lines that say NG.
+REM
+REM  Note: LibreOffice and pptxgenjs are NOT checked any more.
+REM  The cloud builds the files; this PC only downloads and copies.
 REM ============================================================
 setlocal EnableDelayedExpansion
 
 set "REPO=C:\Users\arakida\whatsmap"
 set "DEST=C:\Users\arakida\OneDrive - adrc.asia\LargeScaleDisasters"
-set "NODEMOD=C:\Users\arakida\node_modules"
 set "BRANCH=claude/workflow-automation-review-shyt35"
+set "DISTURL=https://raw.githubusercontent.com/kochobi-max/whatsmap/dist/EQ-2026-000146-COL/manifest.txt"
 set "LOG=%TEMP%\adrc_check_setup.txt"
 
 call :main > "%LOG%" 2>&1
@@ -46,44 +49,53 @@ if errorlevel 1 (
   for /f "tokens=*" %%v in ('node -v 2^>nul') do echo OK  2 node         %%v
 )
 
-REM ---- 3. the clone ----
+REM ---- 3. curl ----
+where curl >nul 2>&1
+if errorlevel 1 (
+  echo NG  3 curl         curl.exe not found on PATH
+  echo        It ships with Windows 10 1803 and later. Check PATH.
+) else (
+  echo OK  3 curl
+)
+
+REM ---- 4. the clone ----
 if not exist "%REPO%\.git" (
-  echo NG  3 repo         no git clone at %REPO%
+  echo NG  4 repo         no git clone at %REPO%
   echo        Fix: cd C:\Users\arakida  ^&^&  git clone https://github.com/kochobi-max/whatsmap.git
 ) else (
-  echo OK  3 repo         %REPO%
+  echo OK  4 repo         %REPO%
 )
 
-REM ---- 4. the skill files, i.e. the right branch ----
-if not exist "%REPO%\skills\disaster-report\generator\gen_deck.base.js" (
-  echo NG  4 branch       the skill is not in this checkout
+REM ---- 5. the skill files, i.e. the right branch ----
+if not exist "%REPO%\skills\disaster-report\events\EQ-2026-000146-COL.json" (
+  echo NG  5 branch       the skill is not in this checkout
   echo        Fix: cd /d "%REPO%"  ^&^&  git fetch origin %BRANCH%  ^&^&  git checkout %BRANCH%
 ) else (
-  echo OK  4 branch       skill files present
+  echo OK  5 branch       skill files present
 )
 
-REM ---- 5. pptxgenjs ----
-if not exist "%NODEMOD%\pptxgenjs" (
-  echo NG  5 pptxgenjs    not at %NODEMOD%
-  echo        Fix: cd C:\Users\arakida  ^&^&  npm install pptxgenjs
+REM ---- 6. can this PC reach the built files? ----
+REM  This is the whole point of the new arrangement: the cloud builds,
+REM  this PC downloads. If the download does not work nothing else matters.
+set "MAN=%TEMP%\adrc_check_manifest.txt"
+del "%MAN%" >nul 2>&1
+curl.exe -fsSL --retry 2 --retry-delay 2 -o "%MAN%" "%DISTURL%" >nul 2>&1
+if exist "%MAN%" (
+  set "BUILT="
+  for /f "usebackq tokens=1,* delims==" %%A in ("%MAN%") do (
+    if "%%A"=="BUILT_AT_JST" set "BUILT=%%B"
+  )
+  if defined BUILT (
+    echo OK  6 dist         newest build !BUILT! JST
+  ) else (
+    echo NG  6 dist         downloaded, but the file has no BUILT_AT_JST line
+  )
+  del "%MAN%" >nul 2>&1
 ) else (
-  echo OK  5 pptxgenjs    %NODEMOD%
-)
-
-REM ---- 6. LibreOffice ----
-REM  build_event.js is what actually looks for it: PATH, the usual install
-REM  folders (including versioned ones) and the registry. Ask it directly so
-REM  this check and the build never disagree.
-set "FINDSOFF=%~dp0soffice.js"
-if exist "%FINDSOFF%" (
-  for /f "tokens=*" %%s in ('node "%FINDSOFF%" 2^>nul') do set "SOFFHIT=%%s"
-)
-if defined SOFFHIT (
-  echo OK  6 soffice      %SOFFHIT%
-) else (
-  echo NG  6 soffice      LibreOffice not found
-       echo        Searched PATH, the usual install folders and the registry.
-       echo        Fix: install LibreOffice, or set SOFFICE to soffice.exe
+  echo NG  6 dist         could not download the built files
+  echo        %DISTURL%
+  echo        Either the cloud has not published yet, or this PC cannot
+  echo        reach raw.githubusercontent.com through the office network.
 )
 
 REM ---- 7. destination ----

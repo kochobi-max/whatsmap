@@ -1,11 +1,15 @@
 # 毎日の出力を自動にする — Windows側の1回だけの設定
 
-クラウドが毎朝データを更新し、**このPCがビルドして LargeScaleDisasters へ出す。**
-設定は1回だけ。以後こちらの操作は要らない。
+クラウドが毎朝データを更新し、**ビルドまで済ませる。**
+**このPCがやるのは、出来上がった4ファイルを取ってきて
+LargeScaleDisasters へ置くことだけ。** 設定は1回だけで、以後こちらの操作は要らない。
 
-なぜPC側でビルドするのか：クラウドから
+なぜPCを挟むのか：クラウドから
 `C:\Users\arakida\OneDrive - adrc.asia\LargeScaleDisasters` へ書き込む経路が無いため。
 OneDrive のコネクタも、手元へファイルを渡す仕組みも用意されていない。
+
+**このPCに要るのは git・node・curl の3つだけ。**
+LibreOffice も pptxgenjs も要らない（2026-08-28 に PDF 変換をクラウドへ移した）。
 
 ---
 
@@ -13,7 +17,7 @@ OneDrive のコネクタも、手元へファイルを渡す仕組みも用意�
 
 **`ADRC_setup_and_publish.bat` を `C:\Users\arakida\` に置いて、ダブルクリックする。**
 
-クローン・`npm install`・ビルド・LargeScaleDisasters へのコピーまで全部やる。
+クローン・ダウンロード・LargeScaleDisasters へのコピーまで全部やる。
 何度実行してもよい。窓は最後に開いたまま止まるので、**最後の `STATUS:` の行だけ見る**。
 
 | 最後の行 | 意味 |
@@ -46,14 +50,10 @@ git clone https://github.com/kochobi-max/whatsmap.git
 
 `C:\Users\arakida\whatsmap` ができる。
 
-## 2. pptxgenjs を入れる
+## 2. （なくなりました）
 
-`C:\Users\arakida\` に置く（OneDrive配下に作らないため）。
-
-```
-cd C:\Users\arakida
-npm install pptxgenjs
-```
+以前はここで `npm install pptxgenjs` をしてもらっていた。
+ビルドがクラウドへ移ったので不要。入れてしまっていても害は無い。
 
 ## 3. バッチのREPO行だけ確認する
 
@@ -92,11 +92,11 @@ NG  3 repo         no git clone at C:\Users\arakida\whatsmap
 | 最終行 | 意味 |
 |---|---|
 | `STATUS: PUBLISHED ...` | 4ファイルが LargeScaleDisasters に出た。成功 |
+| `STATUS: SKIP stale-dist` | クラウド側の当日ぶんがまだ無い。**何もコピーしていない**。異常ではない |
 | `STATUS: FAIL no-repo` | REPO の行が実際のクローン先と違う |
-| `STATUS: FAIL no-pptxgenjs` | 手順2をやっていない |
-| `STATUS: FAIL soffice-missing` | LibreOffice のパスが既定と違う。`set SOFFICE=...` を足す |
+| `STATUS: FAIL no-manifest` | クラウドの配布物に届かない。社内ネットか、朝のビルドが落ちている |
+| `STATUS: FAIL download` / `FAIL size` | 途中で切れた。**コピーはしていない**ので中身は無事。再実行 |
 | `STATUS: FAIL copy-locked` | PowerPoint か PDFビューアでファイルを開いたまま。閉じて再実行 |
-| `STATUS: FAIL pdf-locked` | 同上。古いPDFを消せなかった |
 
 **`STATUS:` の行だけ見ればよい。** それ以外は読まなくてよい。
 
@@ -139,11 +139,29 @@ ADRC_EQ_COL_Choco_20260810_EN.pptx / .pdf
 ## 対象の災害を増やすとき
 
 `daily_publish.bat` の `GLIDE` を増やす災害のぶんだけ複製するか、行を足す。
-イベントJSONの `meta.filebase` からファイル名が決まるので、バッチ側にファイル名は書かない。
+ファイル名はクラウドが出す `manifest.txt` に書いてあるので、バッチ側には書かない。
+
+## 中で何が起きているか
+
+クラウドは毎朝ビルドしたあと、4ファイルと `manifest.txt` を
+配布専用のブランチ `dist` へ置く。バッチはそこから curl で取ってくる。
+
+```
+https://raw.githubusercontent.com/kochobi-max/whatsmap/dist/EQ-2026-000146-COL/manifest.txt
+```
+
+`manifest.txt` にはファイル名・バイト数・**いつ作られたか**が入っている。
+バッチは、
+
+1. 作られた日が**当日でなければコピーしない**（`STATUS: SKIP stale-dist`）
+2. ダウンロードしたバイト数が台帳と**1バイトでも違えばコピーしない**
+
+の2つを確認してから LargeScaleDisasters に置く。
+どちらも「途中で切れたファイルで、いま出ている良いものを上書きしてしまう」ことを防ぐため。
 
 ## うまくいかないときに見るところ
 
-- ビルドはできているのに OneDrive に出ない → `STATUS: FAIL copy-locked`。ファイルを開いたまま
+- ダウンロードはできているのに OneDrive に出ない → `STATUS: FAIL copy-locked`。ファイルを開いたまま
 - 前日と同じ内容が出る → クラウド側の更新が入っていない。ブランチのコミットを見る
 - `STATUS:` の行が1つも出ずに終わる → バッチが cp932/CRLF で壊れている可能性。
   このファイルは ASCII のみで書いてあるので、編集時に日本語を足さないこと

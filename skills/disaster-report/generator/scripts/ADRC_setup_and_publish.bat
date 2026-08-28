@@ -7,9 +7,10 @@ REM  DOUBLE-CLICK it. Nothing else to find, nothing to type.
 REM
 REM  It does, in order:
 REM    1. clone the repository if it is not there yet (or update it)
-REM    2. install pptxgenjs if it is not there yet
-REM    3. build the Colombia report
-REM    4. copy the four files into LargeScaleDisasters
+REM    2. download today's four files, built in the cloud
+REM    3. copy them into LargeScaleDisasters
+REM
+REM  LibreOffice is NOT needed. Nothing is built on this PC any more.
 REM
 REM  Safe to run again any time. It is the same thing the daily
 REM  scheduled task will do.
@@ -54,13 +55,13 @@ if errorlevel 1 (
   exit /b 2
 )
 echo OK  node
-where npm >nul 2>&1
+where curl >nul 2>&1
 if errorlevel 1 (
-  echo STATUS: FAIL no-npm
-  echo npm is not on PATH. Reinstall Node.js LTS.
+  echo STATUS: FAIL no-curl
+  echo curl.exe is not on PATH. It ships with Windows 10 1803 and later.
   exit /b 2
 )
-echo OK  npm
+echo OK  curl
 
 echo.
 echo STEP: repository
@@ -95,26 +96,10 @@ if exist "%REPO%\.git" (
 )
 echo OK  repository ready
 
-if not exist "%REPO%\skills\disaster-report\generator\gen_deck.base.js" (
-  echo STATUS: FAIL no-generator
+if not exist "%REPO%\skills\disaster-report\generator\scripts\daily_publish.bat" (
+  echo STATUS: FAIL no-skill
   echo The skill files are missing from the checkout. Wrong branch?
   exit /b 3
-)
-
-echo.
-echo STEP: pptxgenjs
-if exist "%HOMEDIR%\node_modules\pptxgenjs" (
-  echo OK  already installed
-) else (
-  echo   installing into %HOMEDIR% - this takes a minute
-  cd /d "%HOMEDIR%"
-  call npm install pptxgenjs
-  if not exist "%HOMEDIR%\node_modules\pptxgenjs" (
-    echo STATUS: FAIL npm
-    echo npm install pptxgenjs did not produce %HOMEDIR%\node_modules\pptxgenjs
-    exit /b 4
-  )
-  echo OK  installed
 )
 
 if not exist "%DEST%" (
@@ -126,7 +111,7 @@ if not exist "%DEST%" (
 )
 
 echo.
-echo STEP: build and publish
+echo STEP: download and publish
 call "%REPO%\skills\disaster-report\generator\scripts\daily_publish.bat"
 set "RC=%ERRORLEVEL%"
 if not "%RC%"=="0" (

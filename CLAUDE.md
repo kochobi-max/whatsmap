@@ -14,7 +14,7 @@ ADRC（アジア防災センター）荒木田さんの業務自動化。**説�
 | OS | Windows。コンソールは `cmd`、既定コードページは **cp932** |
 | bash | Git Bash はあるが、**バッチから呼ぶ前提にしない** |
 | Python | あり。`pdfplumber` あり。**`pdftotext`（poppler）は無い** |
-| LibreOffice | あり（`soffice`）。PDF変換に使う |
+| LibreOffice | **無い。** 2026-08-28 に実機で確認済み。PDF変換はクラウド側でやる |
 | OneDrive | `C:\Users\arakida\OneDrive - adrc.asia\` 配下。**デスクトップもここにリダイレクトされている** |
 | node_modules | `C:\Users\arakida\` に置く。OneDrive配下に作ると数千ファイルが同期対象になる |
 
@@ -67,4 +67,6 @@ ADRC（アジア防災センター）荒木田さんの業務自動化。**説�
 - ジェネレータ本体は書き換えない。`generator/gen_deck.base.js` は**素のまま保つ**。
   改修は `scripts/apply_*.js` のパッチ側に書き、`apply_all.js` の一覧にも足す
 - ビルドは `node skills/disaster-report/generator/scripts/build_event.js <GLIDE>`
+- **PDF変換をPCに投げない。** LibreOffice が入っていない。ビルド後に
+  `publish_dist.js` で配布ブランチ `dist` へ出し、PCは curl で取るだけにする
 - 送信の前に `resolve_event.js` を必ず通す。数値急変ゲートに掛かったら送らない

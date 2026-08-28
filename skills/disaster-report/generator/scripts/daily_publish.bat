@@ -2,37 +2,33 @@
 REM ============================================================
 REM  daily_publish.bat - ADRC disaster report, daily publish
 REM
-REM    1. pulls the latest event data from GitHub
-REM    2. builds JA/EN PPTX + PDF from the versioned generator
-REM    3. copies all four files into LargeScaleDisasters
+REM  This PC no longer builds anything. The cloud builds the four
+REM  files and puts them on the "dist" branch; this file only
+REM
+REM    1. downloads them with curl
+REM    2. checks they are today's and the sizes match
+REM    3. copies them into LargeScaleDisasters
 REM    4. records that the copy succeeded, so the update mail may say so
 REM
+REM  Needs: git, node, curl. LibreOffice is NOT needed any more.
 REM  Run check_setup.bat first if anything is unclear.
 REM
 REM  Everything is written to a log AND shown on screen. When you
 REM  double-click this file the window stays open at the end.
 REM  Under Task Scheduler it just exits with a code.
 REM ============================================================
-setlocal
+setlocal EnableDelayedExpansion
 
 REM ---- edit this one line if you cloned somewhere else ----
 set "REPO=C:\Users\arakida\whatsmap"
 
 set "BRANCH=claude/workflow-automation-review-shyt35"
+set "DIST=dist"
 set "GLIDE=EQ-2026-000146-COL"
 set "DEST=C:\Users\arakida\OneDrive - adrc.asia\LargeScaleDisasters"
-set "PPTXGENJS_NODE_MODULES=C:\Users\arakida\node_modules"
+set "RAW=https://raw.githubusercontent.com/kochobi-max/whatsmap/%DIST%/%GLIDE%"
+set "WORK=%TEMP%\adrc_dist"
 set "LOG=%TEMP%\adrc_daily_publish.txt"
-
-if not defined SOFFICE (
-  if exist "C:\Program Files\LibreOffice\program\soffice.exe" (
-    set "SOFFICE=C:\Program Files\LibreOffice\program\soffice.exe"
-  ) else (
-    if exist "C:\Program Files (x86)\LibreOffice\program\soffice.exe" (
-      set "SOFFICE=C:\Program Files (x86)\LibreOffice\program\soffice.exe"
-    )
-  )
-)
 
 REM was this double-clicked? then keep the window open at the end
 set "INTERACTIVE="
@@ -65,6 +61,12 @@ if errorlevel 1 (
   echo node is not on PATH. Run check_setup.bat.
   exit /b 2
 )
+where curl >nul 2>&1
+if errorlevel 1 (
+  echo STATUS: FAIL no-curl
+  echo curl.exe is not on PATH. It ships with Windows 10 1803 and later.
+  exit /b 2
+)
 if not exist "%REPO%\.git" (
   echo STATUS: FAIL no-repo
   echo Not a git clone: %REPO%
@@ -93,25 +95,58 @@ if errorlevel 1 goto :gitfail
 git pull origin %BRANCH%
 if errorlevel 1 goto :gitfail
 
-if not exist "%REPO%\skills\disaster-report\generator\gen_deck.base.js" (
-  echo STATUS: FAIL no-generator
+if not exist "%REPO%\skills\disaster-report\events\%GLIDE%.json" (
+  echo STATUS: FAIL no-event
   echo The skill is not in this checkout. Wrong branch?
-  echo Expected: %REPO%\skills\disaster-report\generator\gen_deck.base.js
   exit /b 3
 )
 
-echo STEP: build
-node "%REPO%\skills\disaster-report\generator\scripts\build_event.js" %GLIDE% "%REPO%\_build\%GLIDE%"
+echo STEP: manifest
+if exist "%WORK%" rd /s /q "%WORK%"
+md "%WORK%" 2>nul
+if not exist "%WORK%" (
+  echo STATUS: FAIL no-workdir
+  echo Could not create the download folder %WORK%
+  echo Something is holding it open. Reboot, or clear %TEMP%.
+  exit /b 2
+)
+curl.exe -fsSL --retry 3 --retry-delay 3 -o "%WORK%\manifest.txt" "%RAW%/manifest.txt"
 if errorlevel 1 (
-  echo STATUS: FAIL build
-  echo See the build output above for the reason.
+  echo STATUS: FAIL no-manifest
+  echo Could not download %RAW%/manifest.txt
+  echo The cloud build has not published anything yet, or the network is down.
+  echo Nothing was copied. Try again later.
+  exit /b 4
+)
+for /f "usebackq tokens=1,* delims==" %%A in ("%WORK%\manifest.txt") do set "M_%%A=%%B"
+
+if not "%M_GLIDE%"=="%GLIDE%" (
+  echo STATUS: FAIL manifest-mismatch
+  echo The dist branch carries %M_GLIDE%, this file expects %GLIDE%.
   exit /b 4
 )
 
+for /f %%d in ('powershell -NoProfile -Command "(Get-Date).ToString('yyyy-MM-dd')"') do set "TODAY=%%d"
+echo   built %M_BUILT_AT_JST% JST  /  today is %TODAY%
+if not "%M_BUILT_DATE_JST%"=="%TODAY%" (
+  echo STATUS: SKIP stale-dist
+  echo The newest build on the dist branch is from %M_BUILT_DATE_JST%, not today.
+  echo Nothing was copied and no record was written, so the cloud will
+  echo hold the update mail. This is on purpose - it stops a mail that
+  echo says "updated today" when nothing new was produced.
+  exit /b 0
+)
+
+echo STEP: download
+for /L %%i in (1,1,%M_FILE_COUNT%) do (
+  call :getfile %%i
+  if errorlevel 1 exit /b 4
+)
+
 echo STEP: publish
-copy /Y "%REPO%\_build\%GLIDE%\*.pptx" "%DEST%\" >nul
+copy /Y "%WORK%\*.pptx" "%DEST%\" >nul
 if errorlevel 1 goto :locked
-copy /Y "%REPO%\_build\%GLIDE%\*.pdf" "%DEST%\" >nul
+copy /Y "%WORK%\*.pdf" "%DEST%\" >nul
 if errorlevel 1 goto :locked
 
 echo STEP: marker
@@ -138,7 +173,30 @@ if errorlevel 1 (
 )
 
 echo STATUS: PUBLISHED %DEST%
-dir /b "%DEST%\ADRC_EQ_COL_Choco_*"
+dir /b "%DEST%\%M_FILEBASE%*"
+exit /b 0
+
+REM ------------------------------------------------------------
+REM  :getfile <index>  - download one file and check its size
+REM  A short read is worse than no read: it copies a broken deck over
+REM  a good one. So the size from the manifest has to match exactly.
+:getfile
+call set "NAME=%%M_FILE%1%%"
+call set "WANT=%%M_BYTES%1%%"
+curl.exe -fsSL --retry 3 --retry-delay 3 -o "%WORK%\%NAME%" "%RAW%/%NAME%"
+if errorlevel 1 (
+  echo STATUS: FAIL download %NAME%
+  echo Nothing was copied into %DEST%.
+  exit /b 1
+)
+set "GOT="
+for %%F in ("%WORK%\%NAME%") do set "GOT=%%~zF"
+if not "%GOT%"=="%WANT%" (
+  echo STATUS: FAIL size %NAME% got %GOT% want %WANT%
+  echo The download is incomplete. Nothing was copied into %DEST%.
+  exit /b 1
+)
+echo   ok %NAME% %GOT% bytes
 exit /b 0
 
 :gitfail

@@ -15,7 +15,7 @@
 | node_modules | `C:\Users\arakida\` に置く（OneDrive配下に作ると数千ファイルが同期対象になる） |
 | bash | Git Bash あり。`build.sh` は bash で動く |
 | Python | あり。`pdfplumber` あり。**`pdftotext`（poppler）は無い** |
-| LibreOffice | あり（`soffice`）。PDF変換に使う |
+| LibreOffice | **無い。** 2026-08-28 に実機で確認済み。PDF変換はクラウド側でやる |
 
 ## 渡すものの作り方
 
@@ -201,6 +201,31 @@ Git for Windows の既定は `core.autocrlf=true`。**リポジトリに LF で�
 - リポジトリ直下の `.gitattributes` で `* text=auto eol=lf`、`*.bat text eol=crlf`
 
 **`.bat` は CRLF のまま**でなければならない。LF にすると cmd が何も表示せずに終わる。
+
+## PDF変換は荒木田さんのPCではやらない（2026-08-28）
+
+**このPCに LibreOffice は入っていない。** ここは4回、判断を間違えた場所。
+
+1. `environment.md` に「LibreOffice あり」と書いてあった。**誰も実機で確かめていなかった**
+2. パスを決め打ちしていて落ちた → 探索を賢くした（下の節）
+3. 探索を賢くしても落ちた。探した場所の一覧が**空**で、初めて「無い」と分かった
+4. そこで「インストールしてください」と渡そうとした。**これが4回目の間違い**
+
+決めたこと。**PDF変換はクラウドでやる。PCには何も入れてもらわない。**
+
+- クラウド: `build_event.js` → `publish_dist.js` で、4ファイルと `manifest.txt` を
+  配布専用の孤立ブランチ `dist` へ force push する（毎回1コミット。履歴が肥らない）
+- PC: `daily_publish.bat` が `raw.githubusercontent.com` から curl で取り、
+  LargeScaleDisasters へコピーするだけ。**要るのは git・node・curl の3つ**（いずれも導入済み）
+
+`manifest.txt` は **ASCII のみ**。cmd は cp932 で読むので日本語を入れると `for /f` が狂う。
+`publish_dist.js` が非ASCIIを見つけたら配布を止める。
+
+PC側は台帳の `BUILT_DATE_JST` が当日でなければコピーしない（`STATUS: SKIP stale-dist`）。
+クラウドの朝のビルドが落ちた日に前日のファイルを置き直して、
+「本日更新しました」と書いたメールを出さないため。
+
+以下の探索の節は残す。**熊本の作業を手元でやるときには依然として要る**ため。
 
 ## LibreOffice の在り処は決め打ちにしない
 
