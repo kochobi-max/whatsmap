@@ -171,3 +171,37 @@ DHM と氷河研究者の暫定仮説は、氷と岩の雪崩がレンデ川を�
 - ReliefWeb API の `appname` 申請（apidoc.reliefweb.int/parameters#appname ※到達確認の対象外にするため URL 形式で書かない）。
   取れればサイトのHTML解析をやめられる
 - 中国側（チベット自治区・吉隆県）の情報源が無い。出水は国境の向こう側で始まっている
+
+---
+
+## UNOSAT の製品ページは、いまの許可リストでは開けない
+
+2026-08-29、`https://unosat.org/products/4259` を指定されたが**届かなかった**。
+
+```
+curl: (56) CONNECT tunnel failed, response 403
+```
+
+プロキシの記録にも `connect_rejected … gateway answered 403 to CONNECT
+(policy denial) host: unosat.org:443` と残っている。**遮断であって障害ではない。**
+`www.unosat.org` も `unitar.org` も 000。
+
+### 回り道はある。ただし全部は載っていない
+
+UNOSAT の製品は ReliefWeb に転載される。**そちらは読める。**
+
+| 製品番号 | 内容 | ReliefWeb |
+|---|---|---|
+| 4257 | ラスワ郡 mudflow/rockflow 範囲（8/26-27） | あり（デッキで使用中） |
+| 4258 | **ヌワコット郡**（下流側）同（8/26-27） | あり。**未使用** |
+| 4259 | 不明 | **無い** |
+
+ReliefWeb の Nepal 地図一覧を全件見ても 4259 は出てこない。転載が遅れているか、
+別の国・別の種類の製品である可能性がある。**中身を見ずに推測して載せない。**
+
+### 頼むこと
+
+- 許可リストに **`unosat.org`**（裸のホスト名）を足してもらう。ホスト名は完全一致
+- 急ぐときは、製品ページの PNG / PDF を Google ドライブに置いてもらう。
+  そちらは Google Drive のコネクタで取れる
+
