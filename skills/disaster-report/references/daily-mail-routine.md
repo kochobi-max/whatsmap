@@ -1,118 +1,74 @@
-# 更新メールの定期タスク — claude.ai の Routines 画面で作る
+# 更新メールの定期タスク（claude.ai の Routines 画面で作る）
 
-## なぜ画面で作るのか
-
-**MCP（`create_trigger`）から作った定期タスクにはコネクタが付かない。**
-Superhuman が無いセッションが起きるので、メールを送れない。
-タスク自体は正常に作られたように見えるので気づきにくい。
-
-2026-08-28、`connectors` を指定して MCP から作ろうとしたが、
-
-> create_trigger: the connectors parameter is not available for this organization.
-
-で拒否された。**この組織では、コネクタ付きの定期タスクは画面からしか作れない。**
-メール送信・カレンダーを使う定期タスクは必ず画面で作る。
-
-## 画面での手順
-
-1. **https://claude.ai/code/routines** を開く
-2. **New routine** を押す
-3. **名前** — `コロンビア・チョコ地震 更新メール送信（08:30 JST）`
-4. **プロンプト欄** — `daily-mail-routine-prompt.txt` の中身を**全部**貼る。
-   モデル選択が付いているので Opus を選ぶ
-5. **リポジトリ** — `kochobi-max/whatsmap` を選ぶ
-6. **環境** — `Default` を選ぶ。
-   （情報源の許可リストはこの環境に入っている。別の環境を作らないこと）
-7. **Select a trigger** — `Schedule` を選び、**daily** で **08:30** を指定する。
-   時刻はこちらのタイムゾーンで入れればよい。UTC へ直す必要はない。
-   実際の起動は数分ずれることがある（仕様。毎回同じだけずれる）
-8. **Connectors**（フォームの一番下）— ここが要点。
-   **つないであるコネクタは既定で全部入っている。**
-   選ぶのではなく、**`Superhuman Mail` を消してしまわないこと**を確認する。
-   要らないものは外してよい
-9. **Create** を押す
-
-## 作ったあとの確認（必ずやる）
-
-一覧からこのタスクを開き、**Run now** を押して1回だけ手で走らせる。
-
-`_published/EQ-2026-000146-COL.json` がまだ無い状態なら、
-**「PC側の公開が確認できないため送信を見送った」で終わるのが正解。**
-ここでメールが飛んだら、公開確認のゲートが効いていない。作り直すこと。
-
-**一覧の緑色は「セッションが落ちずに終わった」という意味しかない。**
-中で何をしたかは、その実行を開いて読むまで分からない。緑を成功と読まないこと。
-
-## 直したいとき
-
-タスクの詳細画面で鉛筆アイコン → **Edit routine**。
-名前・プロンプト・リポジトリ・環境・コネクタ・トリガーを変えられる。
-**Repeats** のトグルで一時停止もできる（設定は残る）。
-
-## 貼り付ける本文
-
-**同じ内容を `daily-mail-routine-prompt.txt` に置いてある。**
-そちらを開いて全選択してコピーするほうが速い。以下は同じもの。
+**貼り付ける本文は `daily-mail-routine-prompt.txt`。** このファイルは設定値と、
+なぜ画面で作らなければならないかを書く。
 
 ---
 
-コロンビア・チョコ地震（GLIDE EQ-2026-000146-COL）の更新メールを研究部へ送ってください。
+## なぜ MCP から作れないのか
 
-## 0. 最初にこれをやる（省略不可）
+`create_trigger`（MCP）で作った定期タスクには**コネクタが付かない**。
 
-このセッションは main を clone して始まる。統一フォームのスキル一式は main には無い。
-
-```bash
-git fetch origin claude/workflow-automation-review-shyt35
-git checkout claude/workflow-automation-review-shyt35
-git pull origin claude/workflow-automation-review-shyt35
-test -f skills/disaster-report/SKILL.md || echo "MISSING_SKILL"
+```
+create_trigger: the connectors parameter is not available for this organization.
 ```
 
-`MISSING_SKILL` が出たら中断して、その旨だけ報告する。推測でファイルを作り直さない。
+コネクタが無いセッションには Superhuman の送信ツールが無いので、メールが送れない。
+しかも**タスク自体は正常に作られたように見える**ので、朝まで気づけない。
 
-## 1. 公開されたことを確かめる（送信の前提・省略不可）
+さらに、**画面で作ったタスクは MCP からは書き換えられない。**
 
-```bash
-cat skills/disaster-report/_published/EQ-2026-000146-COL.json
+```
+update_trigger: this routine was created via "http_api", not by an agent.
 ```
 
-このファイルは、荒木田さんのPCが `C:\Users\arakida\OneDrive - adrc.asia\LargeScaleDisasters` へ実際に4ファイルを出したときだけ書かれる。
+つまり、このタスクの本文を変えられるのは荒木田さんだけである。
+**本文を変えたくなったら、隣の `.txt` を更新したうえで画面に貼り直してもらう必要がある。**
+そのぶん本文は薄くしてある。判断のしくみは `resolve_event.js` や `SKILL.md` の側に置き、
+タスクはそれを読むだけにする。ここを厚くすると、直すたびに人の手が要る。
 
-- ファイルが**無い** → **メールを送らない。**「PC側の公開が確認できないため送信を見送った」とだけ報告して終わる
-- `published_date_jst` が**今日（JST）でない** → 同じく**送らない**。その日付を添えて報告して終わる
-- 今日の日付である → 送信へ進む
+---
 
-**この確認を飛ばして送らないこと。** メール本文に「OneDriveに保存しました」と書くので、実際に保存されていないまま送ると嘘になる。
+## 設定値
 
-## 2. 数値急変ゲート
+| 項目 | 値 |
+|---|---|
+| 名前 | 災害レポート 全イベント 更新メール送信（08:30 JST） |
+| スケジュール | 毎日 08:30 JST |
+| プロンプト | `daily-mail-routine-prompt.txt` の全文 |
+| コネクタ | **Superhuman Mail を必ず残す。既定で付いているものを外さない** |
+| 新しいセッションで実行 | はい |
+| リポジトリ | kochobi-max/whatsmap |
 
-```bash
-node skills/disaster-report/generator/scripts/resolve_event.js --event EQ-2026-000146-COL
+**イベントを名指ししない。** `meta.status: "active"` の全件が対象になる。
+災害が増えたときにすることは `events/<GLIDE>.json` を1本足すことだけで、
+このタスクは触らない。
+
+---
+
+## 動く順番
+
+```
+クラウド 07:30 JST  全イベント: 新資料の洗い出し → データ更新 → ビルド → dist へ配布
+PC       08:10 JST  全イベント: dist から取得 → LargeScaleDisasters へコピー → 公開記録をプッシュ
+クラウド 08:30 JST  全イベント: 公開記録を確認 → 照合 → ゲート → 送信 → _prev 更新
+クラウド 17:30 JST  全イベント: データ更新 → ビルド → 配布（送信なし）
 ```
 
-- `HOLD` で理由が**数値急変**（死者が前報比+50%以上、住家被害2倍以上、いずれかの数値の減少、ティア降格）→ **通常メールを送らず**、SKILL.md §2 の確認メールに切り替える。宛先は `ma-arakida@adrc.asia` のみ。前報値・今報値・出典URL・出典日を並べる
-- `HOLD` の理由が**初版（前報なし）だけ** → 送信してよい（荒木田さんの2026年8月24日の指示による）
-- `OK` → 送信する
+前の段が終わっていなければ、次の段は**送らない**。
 
-## 3. 送信
+- `_published/<GLIDE>.json` が今日でなければ送らない
+- `_published/<GLIDE>.skipped.json` が今日なら、PCは動いたが配布物が前日ビルドだった
+  という意味なので送らない
+- OneDrive のファイルと手元のビルドがバイト数で一致しなければ送らない
 
-`skills/disaster-report/SKILL.md` の §5-2 に**そのまま従う**。件名・本文の順序・免責・文体の禁止事項はすべてそこに書いてある。要点だけ再掲する。
+---
 
-- 送信元は **`ma-arakida@adrc.asia`**（`ma.arakida@gmail.com` にエイリアス設定済み）
-- 宛先: `kenkyubu@adrc.asia`, `td-date@adrc.asia`
-- Superhuman の `create_or_update_draft`（`from` に `ma-arakida@adrc.asia`、`body` に完成HTML）→ `send_draft`
-- **送信後、From が実際に adrc.asia になっているか確認する**
-- **`ma-arakida@adrc.asia` として送信できなければ、下書きのまま止める。** 別アカウントからは送らない。その場合は「下書きを用意した。ワンタップで送れる」と通知する
-- **署名ブロックは入れない。** 本文は「荒木田」の1行で終える
-- 「正念場」「予断を許さない」「懸念される」など、書き手の評価や情緒を足す語を使わない
+## 送らない日があるのは正常
 
-本文に載せる数値・ファイル名・ページ数は `_published/EQ-2026-000146-COL.json` と `events/EQ-2026-000146-COL.json` から取る。手で書かない。
+- 一次情報に新しい報が出ていない（`as_of` が前報と同一）
+- PCが動いていない、または配布物が前日ビルドで飛ばされた
+- 数値が急変してゲートに掛かった（確認メールへ切り替わる）
 
-## 4. 送ったあと
-
-送信できたら `events/EQ-2026-000146-COL.json` の `_prev` を**今送った版の headline** に更新し、コミットして `claude/workflow-automation-review-shyt35` へプッシュする。これで翌日から数値急変ゲートが効くようになる。
-
-## 報告
-
-送った / 送らなかった のどちらかと、その理由を1行で。送らなかった場合は何が足りなかったかを書く。黙って終わらないこと。
+**「毎日必ず送る」ではない。** 前回と同じ数値のメールを重ねて出すのは、
+研究部にとって雑音でしかない。送らなかった理由は必ず報告に残る。
