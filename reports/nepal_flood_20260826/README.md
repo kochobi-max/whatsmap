@@ -47,3 +47,13 @@ SMS警報は09:15に67万件配信されており、チトワンへの洪水到�
   等幅指定にも日本語フォールバックを併記すること。省くと日本語が中国語字形に落ちる。
 - レイアウトはヘッドレスChromiumで全要素のオーバーフローを実測して調整している。
   文言を増やす場合は `#board` 内の要素で scrollHeight > clientHeight が出ないか再確認すること。
+
+### 書き出し
+
+- `concept_A3.png` — A3横 300dpi（4961×3507px、pHYs付き）
+- `concept_A3.pdf` — A3横1ページ
+
+書き出し時は Google Fonts がヘッドレスChromiumから届かないため、
+npm の `@fontsource/{zen-old-mincho,biz-udpgothic,noto-sans-jp,ibm-plex-mono}` を
+ローカルCSSとして差し替えたコピーをレンダリングすること。
+これを省くとコンテナ既定の中国語フォントで描画される。
