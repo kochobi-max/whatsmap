@@ -498,6 +498,30 @@
    "url": "https://sentinel-asia.org/",
    "en": "A Landsat-9 based analysis and a 3D damaged-area map derived from optical satellite data were contributed by Sentinel Asia member researchers.",
    "ja": "センチネルアジア参加研究者から、Landsat-9による解析と、光学衛星データによる3次元被害図が提供された。"
+  },
+  {
+   "org": "TASA (Taiwan Space Agency)",
+   "status": "Uploaded 29 Aug",
+   "tier": "official",
+   "url": "https://sentinel-asia.org/",
+   "en": "Archive and observation data for 22 April 2026 and 28 August 2026, and a value-added product derived from a Sentinel-2 prior image and a FORMOSAT-5 post image (12 and 28 August 2026).",
+   "ja": "2026年4月22日および8月28日のアーカイブ・観測データ。あわせて、Sentinel-2の発災前画像とFORMOSAT-5の発災後画像から作成した付加価値プロダクト（8月12日・28日）。"
+  },
+  {
+   "org": "IWM (Institute of Water Modelling)",
+   "status": "Uploaded 28 Aug",
+   "tier": "official",
+   "url": "https://sentinel-asia.org/",
+   "en": "A value-added product produced using available Planet satellite imagery.",
+   "ja": "入手可能なPlanet衛星画像を用いて作成した付加価値プロダクト。"
+  },
+  {
+   "org": "ADRC",
+   "status": "AOI revised 27 Aug",
+   "tier": "official",
+   "url": "https://sentinel-asia.org/",
+   "en": "ADRC revised the wide-area area of interest on 27 August after the requester narrowed the source location. The Department of Hydrology and Meteorology gave the ice-avalanche coordinates as 28.295727N, 85.507802E, noting that the original AOI had been set before the origin was known.",
+   "ja": "8月27日、要請元が発生源の位置を絞り込んだことを受け、ADRCが広域の観測対象範囲（AOI）を見直した。ネパール水文気象局は氷雪崩の座標を北緯28.295727度・東経85.507802度としており、当初のAOIは発生源が分からない段階で設定したものだと説明している。"
   }
  ],
  "links": [
@@ -760,6 +784,11 @@
    "tier": "official",
    "en": "The damage was multi-sector and cascading. A single source-area disturbance propagated through a narrow, highly exposed mountain corridor and hit settlements, border trade, transport, energy, tourism, communications and the emergency response capacity itself at the same time.",
    "ja": "被害は分野をまたいで連鎖した。 発生源での1つの崩壊が、狭く曝露の大きい山岳回廊を伝わり、集落・国境交易・交通・エネルギー・観光・通信、そして応急対応能力そのものを同時に直撃した。"
+  },
+  {
+   "tier": "official",
+   "en": "The requester gave a precise source location. On 27 August the Department of Hydrology and Meteorology reported the ice-avalanche coordinates as 28.295727N, 85.507802E, drawn from Planet imagery, and noted that the original area of interest had been set before the origin was known. ADRC revised the wide-area AOI the same day.",
+   "ja": "要請元が発生源の位置を特定した。8月27日、ネパール水文気象局はPlanetの画像から氷雪崩の座標を北緯28.295727度・東経85.507802度と報告し、当初の観測対象範囲は発生源が分からない段階で設定したものだと説明した。ADRCは同日、広域のAOIを見直している。"
   }
  ]
 }

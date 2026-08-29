@@ -525,6 +525,30 @@
    "url": "https://disasterscharter.org/activations/earthquake-in-indonesia-activation-1050-",
    "en": "Requestor recorded as \"ADRC on behalf of BRIN\". Project management: Virgilius Rivan Seran (BRIN). Value adding: Masahiko Nagai (Yamaguchi University) and Yenni Vetrita (BRIN). Four products delivered between 22 and 26 August.",
    "ja": "要請者は「BRINに代わってADRC」。案件管理は Virgilius Rivan Seran 氏（BRIN）。付加価値解析は永井正彦氏（山口大学）と Yenni Vetrita 氏（BRIN）。8月22日から26日にかけて4件のプロダクトが提供された。"
+  },
+  {
+   "org": "JAXA (via RESTEC)",
+   "status": "Uploaded 24 Aug",
+   "tier": "official",
+   "url": "https://sentinel-asia.org/",
+   "en": "ALOS-2/4 archive and observation images. Archive observations of 30 May 2020 (L1.1, f3780/f3790, SB6) and 6 March 2021 (L1.1, f3780/f3790, SB7).",
+   "ja": "ALOS-2/4のアーカイブ・観測画像。アーカイブは2020年5月30日（L1.1、f3780/f3790、SB6）と2021年3月6日（L1.1、f3780/f3790、SB7）の観測。"
+  },
+  {
+   "org": "GIC-AIT",
+   "status": "Uploaded 26 Aug",
+   "tier": "official",
+   "url": "https://sentinel-asia.org/",
+   "en": "A value-added product produced using Sentinel-1 data observed on 20, 21 and 23 August 2026.",
+   "ja": "2026年8月20日・21日・23日に観測されたSentinel-1のデータを用いて作成した付加価値プロダクト。"
+  },
+  {
+   "org": "KGS (Kazakhstan)",
+   "status": "Uploaded 27 Aug",
+   "tier": "official",
+   "url": "https://sentinel-asia.org/",
+   "en": "Two KazEOSAT-1 observation images, both observed on 23 August 2026 at 02:01 and 02:02 UTC.",
+   "ja": "KazEOSAT-1の観測画像2点。いずれも2026年8月23日02時01分・02時02分（UTC）の観測。"
   }
  ],
  "historical": [],
