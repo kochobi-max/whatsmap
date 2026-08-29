@@ -1,0 +1,8 @@
+{
+  "glide": "EQ-2026-000150-IDN",
+  "skipped_at_jst": "2026-08-30 07:27",
+  "reason": "stale-dist",
+  "dist_built_date_jst": "2026-08-29",
+  "today_jst": "2026-08-30",
+  "note": "配布ブランチのビルドが当日のものではないため、コピーしていない。クラウド側でビルドし直して publish_dist.js を回すこと。"
+}
