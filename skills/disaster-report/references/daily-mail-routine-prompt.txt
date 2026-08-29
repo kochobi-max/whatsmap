@@ -1,4 +1,4 @@
-コロンビア・チョコ地震（GLIDE EQ-2026-000146-COL）の更新メールを研究部へ送ってください。
+ADRC の大規模災害レポートについて、**active な全イベント**の更新メールを研究部へ送ってください。イベントを名指ししません。`meta.status: "active"` のものが対象です。1件ずつ判断し、送るものだけ送ります。
 
 ## 0. 最初にこれをやる（省略不可）
 
@@ -13,29 +13,61 @@ test -f skills/disaster-report/SKILL.md || echo "MISSING_SKILL"
 
 `MISSING_SKILL` が出たら中断して、その旨だけ報告する。推測でファイルを作り直さない。
 
-## 1. 公開されたことを確かめる（送信の前提・省略不可）
+対象イベントの一覧はこれで出る。
 
 ```bash
-cat skills/disaster-report/_published/EQ-2026-000146-COL.json
+node skills/disaster-report/generator/scripts/resolve_event.js
 ```
 
-このファイルは、荒木田さんのPCが `C:\Users\arakida\OneDrive - adrc.asia\LargeScaleDisasters` へ実際に4ファイルを出したときだけ書かれる。
+## 1. イベントごとに、公開されたことを確かめる（送信の前提・省略不可）
 
-- ファイルが**無い** → **メールを送らない。**「PC側の公開が確認できないため送信を見送った」とだけ報告して終わる
-- `published_date_jst` が**今日（JST）でない** → 同じく**送らない**。その日付を添えて報告して終わる
-- 今日の日付である → 送信へ進む
+```bash
+ls skills/disaster-report/_published/
+cat skills/disaster-report/_published/<GLIDE>.json
+cat skills/disaster-report/_published/<GLIDE>.skipped.json 2>/dev/null
+```
+
+`<GLIDE>.json` は、荒木田さんのPCが `C:\Users\arakida\OneDrive - adrc.asia\LargeScaleDisasters` へ実際に4ファイルを出したときだけ書かれる。
+
+- **無い** → そのイベントは**送らない。**「PC側の公開が確認できない」と記録して次へ
+- `published_date_jst` が**今日（JST）でない** → **送らない。** その日付を添えて次へ
+- `<GLIDE>.skipped.json` があり `skipped_at_jst` が今日 → PCは動いたが配布物が当日ビルドでなく飛ばしている。**送らない。** `dist_built_date_jst` を添えて次へ
+- 今日の日付である → 次へ進む
 
 **この確認を飛ばして送らないこと。** メール本文に「OneDriveに保存しました」と書くので、実際に保存されていないまま送ると嘘になる。
+
+さらに、**OneDrive のファイルが手元のビルドと同じかを照合する。**
+
+```bash
+node -e '
+const fs=require("fs"),p=require("path"),g=process.argv[1];
+const r=JSON.parse(fs.readFileSync("skills/disaster-report/_published/"+g+".json","utf8"));
+let ok=true;
+for(const f of r.files){const l=p.join("_build",g,f.name);
+const b=fs.existsSync(l)?fs.statSync(l).size:-1;const s=b===f.bytes;ok&&=s;
+console.log((s?"一致 ":"不一致 ")+f.name+" OneDrive="+f.bytes+" 手元="+b);}
+console.log(ok?"MATCH":"MISMATCH");' <GLIDE>
+```
+
+`MISMATCH` なら**送らない。** 手元でビルドし直したものと OneDrive の中身が違う。その旨を報告する。
+（`_build/` が無い場合は `node skills/disaster-report/generator/scripts/build_event.js <GLIDE>` で作ってから照合する）
 
 ## 2. 数値急変ゲート
 
 ```bash
-node skills/disaster-report/generator/scripts/resolve_event.js --event EQ-2026-000146-COL
+node skills/disaster-report/generator/scripts/resolve_event.js --event <GLIDE>
 ```
 
-- `HOLD` で理由が**数値急変**（死者が前報比+50%以上、住家被害2倍以上、いずれかの数値の減少、ティア降格）→ **通常メールを送らず**、SKILL.md §2 の確認メールに切り替える。宛先は `ma-arakida@adrc.asia` のみ。前報値・今報値・出典URL・出典日を並べる
-- `HOLD` の理由が**初版（前報なし）だけ** → 送信してよい（荒木田さんの2026年8月24日の指示による）
-- `OK` → 送信する
+判定が `HOLD` のときは、**理由の行を読んで**次のとおり分ける。
+
+- 理由が **「as_of が前報と同一」** → **送らない。** 前回送ったのと同じ数値のメールを重ねて出さないため。
+  「一次情報に新しい報が出ていないため見送った」と記録して次へ。**これは失敗ではない**
+- 理由が **数値急変**（死者が前報比+50%以上、住家被害2倍以上、いずれかの数値の減少、ティア降格）
+  → **通常メールを送らず**、SKILL.md §2 の確認メールに切り替える。宛先は `ma-arakida@adrc.asia` のみ。
+  前報値・今報値・出典URL・出典日を並べる
+- 理由が **初版（前報なし）だけ** → 送信してよい（荒木田さんの2026年8月24日の指示による）
+
+判定が `OK` → 送信する。
 
 ## 3. 送信
 
@@ -44,17 +76,29 @@ node skills/disaster-report/generator/scripts/resolve_event.js --event EQ-2026-0
 - 送信元は **`ma-arakida@adrc.asia`**（`ma.arakida@gmail.com` にエイリアス設定済み）
 - 宛先: `kenkyubu@adrc.asia`, `td-date@adrc.asia`
 - Superhuman の `create_or_update_draft`（`from` に `ma-arakida@adrc.asia`、`body` に完成HTML）→ `send_draft`
-- **送信後、From が実際に adrc.asia になっているか確認する**
+- **送信後、`get_draft_send_status` が `closed / delivered` になるまで確認する。**「送信した」で終わらない
 - **`ma-arakida@adrc.asia` として送信できなければ、下書きのまま止める。** 別アカウントからは送らない。その場合は「下書きを用意した。ワンタップで送れる」と通知する
 - **署名ブロックは入れない。** 本文は「荒木田」の1行で終える
 - 「正念場」「予断を許さない」「懸念される」など、書き手の評価や情緒を足す語を使わない
+- **人命に関わる進行中の警告（上流の湖、余震、二次災害の注意喚起など）があれば、数値より先に本文の冒頭に置く**
+- 指標が変わったときは、その旨を「前報からの主な変化」に明記する。合算・平均化しない
 
-本文に載せる数値・ファイル名・ページ数は `_published/EQ-2026-000146-COL.json` と `events/EQ-2026-000146-COL.json` から取る。手で書かない。
+本文に載せる数値・ファイル名・ページ数は `_published/<GLIDE>.json` と `events/<GLIDE>.json` から取る。手で書かない。
 
 ## 4. 送ったあと
 
-送信できたら `events/EQ-2026-000146-COL.json` の `_prev` を**今送った版の headline** に更新し、コミットして `claude/workflow-automation-review-shyt35` へプッシュする。これで翌日から数値急変ゲートが効くようになる。
+送信できたイベントだけ、`events/<GLIDE>.json` の `_prev` を**今送った版の headline** に更新する。
+全イベント分をまとめてコミットし、`claude/workflow-automation-review-shyt35` へプッシュする。
+これで翌日から数値急変ゲートが効く。
+
+プッシュが `fetch first` で弾かれたら、`git pull --rebase origin claude/workflow-automation-review-shyt35` してから押し直す。
 
 ## 報告
 
-送った / 送らなかった のどちらかと、その理由を1行で。送らなかった場合は何が足りなかったかを書く。黙って終わらないこと。
+イベントごとに1行ずつ、次の形で書く。
+
+```
+<GLIDE>  送信（delivered）／見送り（理由）／下書きで停止（理由）
+```
+
+**1件も送らなかった日も、黙って終わらない。** 各イベントについてなぜ送らなかったかを書く。
