@@ -1,0 +1,487 @@
+<title>ヒマラヤ氷河災害 防災対策構想図</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=BIZ+UDPGothic:wght@400;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#ECEDE8; --panel:#F7F8F4; --sunk:#E3E5DF; --ink:#1A2124; --ink-2:#3D4649;
+  --muted:#6E7673; --line:#C9CDC5; --line-soft:#DDE0D9;
+  --accent:#0F5A63; --alert:#A93F1C; --alert-soft:#F0DCD3;
+  --c-detect:#0F5A63;  --c-detect-bg:#DCE8E8;
+  --c-predict:#2E6A8E; --c-predict-bg:#DBE5EC;
+  --c-alert:#9A6412;   --c-alert-bg:#EEE4CE;
+  --c-act:#4B6B36;     --c-act-bg:#E0E8D8;
+  --c-gov:#6B5580;     --c-gov-bg:#E6E0EC;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#11171A; --panel:#1A2225; --sunk:#0C1214; --ink:#E7EAE6; --ink-2:#BAC1BE;
+    --muted:#8B9692; --line:#2E3A3D; --line-soft:#232C2F;
+    --accent:#5FB8C2; --alert:#E08256; --alert-soft:#3A241B;
+    --c-detect:#63BCC6;  --c-detect-bg:#16383C;
+    --c-predict:#7CB3D6; --c-predict-bg:#173040;
+    --c-alert:#D8AC5C;   --c-alert-bg:#3A2E13;
+    --c-act:#9BC183;     --c-act-bg:#25341C;
+    --c-gov:#BCA3CE;     --c-gov-bg:#2F2539;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#11171A; --panel:#1A2225; --sunk:#0C1214; --ink:#E7EAE6; --ink-2:#BAC1BE;
+  --muted:#8B9692; --line:#2E3A3D; --line-soft:#232C2F;
+  --accent:#5FB8C2; --alert:#E08256; --alert-soft:#3A241B;
+  --c-detect:#63BCC6;  --c-detect-bg:#16383C;
+  --c-predict:#7CB3D6; --c-predict-bg:#173040;
+  --c-alert:#D8AC5C;   --c-alert-bg:#3A2E13;
+  --c-act:#9BC183;     --c-act-bg:#25341C;
+  --c-gov:#BCA3CE;     --c-gov-bg:#2F2539;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:"BIZ UDPGothic","Hiragino Kaku Gothic ProN","Yu Gothic",system-ui,sans-serif;
+  font-size:13px; line-height:1.7; -webkit-font-smoothing:antialiased;
+}
+.board{max-width:1640px;margin:0 auto;padding:26px 22px 44px}
+
+/* ---- title ---- */
+.hd{text-align:center;padding:10px 0 20px;border-bottom:3px double var(--ink);margin-bottom:20px}
+.hd h1{font-family:"Zen Old Mincho",serif;font-weight:900;font-size:clamp(26px,3.6vw,41px);line-height:1.25;letter-spacing:.02em;text-wrap:balance}
+.hd .st{font-size:clamp(12px,1.5vw,15px);color:var(--ink-2);margin-top:9px;font-weight:700}
+.hd .cl{
+  display:inline-block;margin-top:15px;padding:7px 20px;background:var(--c-detect-bg);
+  color:var(--c-detect);font-weight:700;font-size:clamp(12px,1.6vw,16px);letter-spacing:.01em;
+  border:1px solid var(--c-detect);
+}
+.hd .meta{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--muted);margin-top:12px;letter-spacing:.05em}
+
+/* ---- grid ---- */
+.row{display:grid;gap:14px;margin-bottom:14px}
+.r1{grid-template-columns:1fr 1.35fr 1.05fr}
+.r3{grid-template-columns:1.1fr 1.15fr 1fr}
+.r4{grid-template-columns:1.3fr 1fr}
+@media(max-width:1150px){.r1,.r3,.r4{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.r1,.r3,.r4{grid-template-columns:1fr}}
+
+/* ---- panel ---- */
+.p{background:var(--panel);border:1px solid var(--line);display:flex;flex-direction:column}
+.p>.ph{
+  display:flex;align-items:center;gap:9px;padding:8px 13px;
+  background:var(--sunk);border-bottom:1px solid var(--line);
+}
+.ph .no{
+  font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:600;color:var(--paper);
+  background:var(--ink);padding:2px 7px;letter-spacing:.06em;flex:none;
+}
+.ph h2{font-size:14.5px;font-weight:700;line-height:1.4;letter-spacing:.01em}
+.pb{padding:13px;flex:1}
+
+/* ---- timeline ---- */
+.tl{display:flex;flex-direction:column;gap:0}
+.tr{display:grid;grid-template-columns:62px 1fr;gap:9px;padding:5px 0;border-bottom:1px dotted var(--line-soft);align-items:baseline}
+.tr:last-child{border-bottom:none}
+.tt{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;color:var(--c-detect);font-variant-numeric:tabular-nums}
+.tr.hot .tt{color:var(--alert)}
+.td{font-size:12px;line-height:1.6}
+.tr.hot .td b{color:var(--alert)}
+.sumbar{
+  margin-top:11px;padding:8px 11px;background:var(--sunk);
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:600;text-align:center;letter-spacing:.03em;
+}
+
+/* ---- death chart ---- */
+.dc{display:flex;flex-direction:column;gap:3px}
+.dr{display:grid;grid-template-columns:96px 92px 1fr;gap:8px;align-items:center}
+.dn{font-size:11.5px;font-weight:700;line-height:1.3}
+.dn small{display:block;font-weight:400;color:var(--muted);font-size:9.5px;font-family:"IBM Plex Mono",monospace}
+.dl{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--ink-2);text-align:right;font-variant-numeric:tabular-nums}
+.dl.neg{color:var(--alert);font-weight:600}
+.db{display:flex;align-items:center;gap:7px}
+.db i{height:13px;background:var(--alert);display:block}
+.db b{font-family:"IBM Plex Mono",monospace;font-size:11px;font-variant-numeric:tabular-nums;font-weight:600}
+.note{font-size:10.5px;color:var(--muted);line-height:1.6;margin-top:9px;padding-top:8px;border-top:1px solid var(--line-soft)}
+
+/* ---- gaps ---- */
+.gl{display:flex;flex-direction:column;gap:8px}
+.gi{display:grid;grid-template-columns:44px 1fr;gap:9px;align-items:start}
+.gk{
+  font-family:"IBM Plex Mono",monospace;font-size:9.5px;font-weight:600;text-align:center;
+  background:var(--alert-soft);color:var(--alert);padding:3px 0;letter-spacing:.04em;
+}
+.gt{font-size:12px;font-weight:700;line-height:1.45}
+.gd{font-size:11px;color:var(--ink-2);line-height:1.6;margin-top:1px}
+.gd b{color:var(--alert);font-family:"IBM Plex Mono",monospace}
+
+/* ---- svg fig ---- */
+figure{margin:0}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-size:10.5px;color:var(--muted);line-height:1.65;margin-top:9px;padding-top:8px;border-top:1px solid var(--line-soft)}
+
+/* ---- generic lists ---- */
+.ml{display:flex;flex-direction:column;gap:7px}
+.mi{display:grid;grid-template-columns:38px 1fr;gap:9px;align-items:start;padding-bottom:7px;border-bottom:1px dotted var(--line-soft)}
+.mi:last-child{border-bottom:none;padding-bottom:0}
+.mk{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:600;text-align:center;padding:2px 0;letter-spacing:.03em}
+.mt{font-size:12px;font-weight:700;line-height:1.45}
+.mm{font-size:10.5px;color:var(--muted);line-height:1.55;font-family:"IBM Plex Mono",monospace;margin-top:1px}
+.mb{font-size:11px;color:var(--ink-2);line-height:1.6;margin-top:2px}
+
+/* ---- order table ---- */
+table{border-collapse:collapse;width:100%;font-size:11px}
+th,td{padding:6px 8px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line-soft);line-height:1.55}
+thead th{background:var(--sunk);font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;font-weight:600}
+tbody tr:last-child td{border-bottom:none}
+td.tm{font-family:"IBM Plex Mono",monospace;font-weight:600;color:var(--c-detect);white-space:nowrap;font-size:10.5px}
+
+/* ---- cannot ---- */
+.cx{background:var(--alert-soft);border-left:3px solid var(--alert);padding:9px 12px;margin-bottom:8px}
+.cx:last-child{margin-bottom:0}
+.cx h4{font-size:11.5px;font-weight:700;color:var(--alert);margin-bottom:2px}
+.cx p{font-size:11px;line-height:1.6;color:var(--ink-2)}
+
+/* ---- legend / glossary ---- */
+.foot{display:grid;grid-template-columns:1fr 1.15fr;gap:14px}
+@media(max-width:760px){.foot{grid-template-columns:1fr}}
+.lg{display:flex;flex-wrap:wrap;gap:6px 14px}
+.lgi{display:flex;align-items:center;gap:6px;font-size:11px}
+.lgi i{width:15px;height:11px;display:block;border:1px solid var(--line)}
+.gs{columns:2;column-gap:18px;font-size:10.5px;line-height:1.7;color:var(--ink-2)}
+@media(max-width:520px){.gs{columns:1}}
+.gs div{break-inside:avoid;margin-bottom:2px}
+.gs b{font-family:"IBM Plex Mono",monospace;color:var(--ink);font-weight:600}
+
+/* ---- mission ---- */
+.ms{
+  margin-top:14px;padding:20px 24px;background:var(--c-detect-bg);
+  border-top:3px solid var(--c-detect);border-bottom:1px solid var(--line);text-align:center;
+}
+.ms .a{font-family:"Zen Old Mincho",serif;font-size:clamp(16px,2.3vw,25px);font-weight:700;line-height:1.5;color:var(--c-detect);text-wrap:balance}
+.ms .b{font-size:12px;color:var(--ink-2);margin-top:9px;line-height:1.7;font-weight:700}
+.src{margin-top:16px;font-size:10px;color:var(--muted);line-height:1.7;font-family:"IBM Plex Mono",monospace;text-align:center;letter-spacing:.02em}
+</style>
+
+<div class="board">
+
+<header class="hd">
+  <h1>ヒマラヤ氷河災害 防災対策構想図</h1>
+  <div class="st">2026年8月26日 ネパール・ボテコシ／トリスリ川洪水を踏まえた、日本の技術による支援策（検討図）</div>
+  <div class="cl">投資すべきは「危険を検知する装置」ではなく「得た時間を避難に変える装置」</div>
+  <div class="meta">作成 2026-08-29 ／ 捜索継続中・数値は暫定 ／ 公開情報に基づく検討であり関係機関の公式見解ではない</div>
+</header>
+
+<!-- ============ ROW 1 ============ -->
+<div class="row r1">
+
+  <section class="p">
+    <div class="ph"><span class="no">1</span><h2>何が起きたか</h2></div>
+    <div class="pb">
+      <div class="tl">
+        <div class="tr hot"><span class="tt">08:37</span><span class="td"><b>源頭で氷岩なだれ</b>。幅約610mの氷体が約1,200m滑落。M5.2相当の地震動として<b>米国・ドイツの地震計にまで記録</b></span></div>
+        <div class="tr"><span class="tt">08:50</span><span class="td">シャブルベシの水位計が<b>送信停止</b>（＝破壊）</span></div>
+        <div class="tr hot"><span class="tt">09:05</span><span class="td">DHMが覚知。<b>国境通過から16分後</b></span></div>
+        <div class="tr"><span class="tt">09:15</span><span class="td">SMS一斉警報 <b>679,295件</b>／対象は4郡のみ</span></div>
+        <div class="tr"><span class="tt">09:20</span><span class="td">ベトラワティの水位計が送信停止</span></div>
+        <div class="tr hot"><span class="tt">約11:40</span><span class="td"><b>2度目の地震動（M4.2相当）</b>。二次崩壊または再決壊</span></div>
+        <div class="tr"><span class="tt">15:20</span><span class="td">ナラヤニ川デブガットに到達</span></div>
+        <div class="tr"><span class="tt">16:00</span><span class="td">同地点でピーク水位 <b>6.57m</b></span></div>
+      </div>
+      <div class="sumbar">崩壊から約 10 時間 ／ 約 168 km ／ 死者 675 名・不明 2,418 名</div>
+      <p class="note">前史：13か月前の2025年7月8日、ほぼ同じ回廊で氷河湖決壊洪水（11名死亡）。原因はチベット側プレプ氷河上に半年で形成・拡大した湖で、<b>誰も存在を把握していなかった</b>。同流域では28湖が高い決壊危険度と評価されている。</p>
+    </div>
+  </section>
+
+  <section class="p">
+    <div class="ph"><span class="no">2</span><h2>診断 ─ 死者はリードタイムが最も長かった場所に集中した</h2></div>
+    <div class="pb">
+      <div class="dc">
+        <div class="dr" style="border-bottom:1px solid var(--line);padding-bottom:4px;margin-bottom:3px">
+          <span class="dn" style="font-size:9.5px;color:var(--muted);font-family:'IBM Plex Mono',monospace">郡（上流→下流）</span>
+          <span class="dl" style="font-size:9.5px;color:var(--muted)">警報からの猶予</span>
+          <span class="db" style="font-size:9.5px;color:var(--muted);font-family:'IBM Plex Mono',monospace">収容遺体数</span>
+        </div>
+        <div class="dr"><span class="dn">ラスワ<small>RASUWA</small></span><span class="dl neg">−25分</span><span class="db"><i style="width:5%"></i><b>13</b></span></div>
+        <div class="dr"><span class="dn">ヌワコット<small>NUWAKOT</small></span><span class="dl">+5分</span><span class="db"><i style="width:21%"></i><b>51</b></span></div>
+        <div class="dr"><span class="dn">ダディン<small>DHADING</small></span><span class="dl">約1.5〜2時間</span><span class="db"><i style="width:18%"></i><b>45</b></span></div>
+        <div class="dr"><span class="dn">ゴルカ<small>GORKHA</small></span><span class="dl">約3〜4時間</span><span class="db"><i style="width:23%"></i><b>57</b></span></div>
+        <div class="dr"><span class="dn">タナフン<small>TANAHUN</small></span><span class="dl">約4〜5時間</span><span class="db"><i style="width:14%"></i><b>35</b></span></div>
+        <div class="dr"><span class="dn">チトワン<small>CHITWAN</small></span><span class="dl">6時間5分</span><span class="db"><i style="width:100%"></i><b>246</b></span></div>
+        <div class="dr"><span class="dn">ナワルパラシ東<small>警報対象外</small></span><span class="dl">約7〜8時間</span><span class="db"><i style="width:67%"></i><b>165</b></span></div>
+        <div class="dr"><span class="dn">ナワルパラシ西<small>警報対象外</small></span><span class="dl">約8〜9時間</span><span class="db"><i style="width:26%"></i><b>63</b></span></div>
+      </div>
+      <p class="note"><b style="color:var(--alert)">この図の決定的な留保：</b>「収容遺体数」は<b>死亡地点ではなく遺体の発見地点</b>である。上流で流された遺体が下流で収容された分の扱いによって、政策上の結論は正反対になりうる。だからこそ<b>検証調査（A-0）をあらゆる機材供与に先行させる</b>。／ただし留保を置いてもなお、警報対象外だった4郡（ゴルカ・タナフン・ナワルパラシ東西）で計320名＝全体の約47%が収容されている事実は動かない。</p>
+    </div>
+  </section>
+
+  <section class="p">
+    <div class="ph"><span class="no">3</span><h2>4つの空白</h2></div>
+    <div class="pb">
+      <div class="gl">
+        <div class="gi"><span class="gk">GAP 1</span><div>
+          <div class="gt">源頭の13分 ─ 検知の空白</div>
+          <div class="gd">崩壊に降雨は伴わない。降雨とモンスーン水文に立脚した既存EWSは<b>構造的に</b>氷岩なだれを見られない。上流20km圏に使える時間が残らなかった。</div></div></div>
+        <div class="gi"><span class="gk">GAP 2</span><div>
+          <div class="gt">沈黙が警報にならなかった</div>
+          <div class="gd">6局中<b>上流3局は警戒水位に達する前に沈黙</b>。装置は洪水に破壊されたのであり、沈黙は故障ではなく被災の証拠。運用側はそれを「欠測」として扱った。</div></div></div>
+        <div class="gi"><span class="gk">GAP 3</span><div>
+          <div class="gt">「洪水が発生しました」では人は動かない</div>
+          <div class="gd">67万件を09:15に一斉送信。しかしチトワン到達は<b>6時間後</b>。必要だったのは発生の告知でなく「あなたの集落に何時に届くか」と、その後の追跡更新だった。</div></div></div>
+        <div class="gi"><span class="gk">GAP 4</span><div>
+          <div class="gt">SMSが届かない人々に犠牲が集中</div>
+          <div class="gd">不明者のうち<b>933名が坑内労働者</b>、<b>589名が外国人</b>＝63%。坑内には電波も避難路もなく、トレッカーはネパール語SMSもコミュニティ網も持たない。既存警報の設計対象外だった。</div></div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ ROW 2 : main figure ============ -->
+<div class="row" style="grid-template-columns:1fr">
+  <section class="p">
+    <div class="ph"><span class="no">4</span><h2>対策の全体像 ─ リードタイム軸に対策を配置する</h2></div>
+    <div class="pb">
+      <figure>
+        <svg viewBox="0 0 1520 452" role="img" aria-label="洪水波のリードタイム軸上に対策を配置した図。源頭では地震計による即時検知と自動サイレン、中流では水位計による波の追跡、下流では到達時刻予測と警報範囲の拡張、全域では高台避難場所が対応する。下段には郡別の収容遺体数を示し、下流ほど猶予が長く死者も多い。">
+          <defs>
+            <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+            </marker>
+          </defs>
+
+          <text x="60" y="18" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600" fill="var(--muted)" letter-spacing="1.5">UPSTREAM · 自動化の領域（人の判断が間に合わない）</text>
+          <text x="1460" y="18" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600" fill="var(--muted)" letter-spacing="1.5">DOWNSTREAM · 予測と伝達の領域（時間はある）</text>
+          <line x1="60" y1="26" x2="1460" y2="26" stroke="var(--line)" stroke-width="1" stroke-dasharray="3 4"/>
+
+          <!-- measure boxes -->
+          <g>
+            <rect x="55" y="40" width="215" height="112" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.5"/>
+            <rect x="55" y="40" width="4" height="112" fill="var(--c-detect)"/>
+            <text x="70" y="60" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600" fill="var(--c-detect)">B-1 ／ 検知</text>
+            <text x="70" y="80" font-size="14.5" font-weight="700" fill="var(--ink)">源頭マスムーブメント</text>
+            <text x="70" y="98" font-size="14.5" font-weight="700" fill="var(--ink)">の即時検知</text>
+            <text x="70" y="118" font-size="11" fill="var(--ink-2)">地震計＋インフラサウンド。</text>
+            <text x="70" y="133" font-size="11" fill="var(--ink-2)">発生から60〜120秒で発報。</text>
+            <text x="70" y="147" font-size="10.5" font-family="IBM Plex Mono, monospace" fill="var(--c-detect)">▶ 防災科研 Hi-net／火山泥流検知</text>
+
+            <rect x="284" y="40" width="175" height="112" fill="var(--c-alert-bg)" stroke="var(--c-alert)" stroke-width="1.5"/>
+            <rect x="284" y="40" width="4" height="112" fill="var(--c-alert)"/>
+            <text x="299" y="60" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600" fill="var(--c-alert)">B-2 ／ 伝達</text>
+            <text x="299" y="80" font-size="14.5" font-weight="700" fill="var(--ink)">自動サイレン</text>
+            <text x="299" y="99" font-size="12" font-weight="700" fill="var(--ink)">人の判断を介さない</text>
+            <text x="299" y="119" font-size="11" fill="var(--ink-2)">センサとサイレンを直結。</text>
+            <text x="299" y="133" font-size="11" fill="var(--ink-2)">誤報の社会的許容が要件。</text>
+            <text x="299" y="147" font-size="10.5" font-family="IBM Plex Mono, monospace" fill="var(--c-alert)">▶ 十勝岳 ワイヤー・振動センサ</text>
+
+            <rect x="473" y="40" width="215" height="112" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.5"/>
+            <rect x="473" y="40" width="4" height="112" fill="var(--c-detect)"/>
+            <text x="488" y="60" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600" fill="var(--c-detect)">A-2 ／ 検知</text>
+            <text x="488" y="80" font-size="14.5" font-weight="700" fill="var(--ink)">危機管理型水位計で</text>
+            <text x="488" y="98" font-size="14.5" font-weight="700" fill="var(--ink)">波を追跡</text>
+            <text x="488" y="118" font-size="11" fill="var(--ink-2)">6局→30局。上昇率でトリガ。</text>
+            <text x="488" y="133" font-size="11" font-weight="700" fill="var(--alert)">欠測＝最大警報 として扱う</text>
+            <text x="488" y="147" font-size="10.5" font-family="IBM Plex Mono, monospace" fill="var(--c-detect)">▶ 国交省規格 100万円／電池5年</text>
+
+            <rect x="702" y="40" width="265" height="112" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.5"/>
+            <rect x="702" y="40" width="4" height="112" fill="var(--c-predict)"/>
+            <text x="717" y="60" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600" fill="var(--c-predict)">A-1 ／ 予測 ─ 最優先</text>
+            <text x="717" y="80" font-size="14.5" font-weight="700" fill="var(--ink)">到達時刻予測と集落別警報</text>
+            <text x="717" y="100" font-size="11" fill="var(--ink-2)">「洪水が発生しました」ではなく</text>
+            <text x="717" y="117" font-size="12" font-weight="700" fill="var(--c-predict)">「11:40に到達。10:30までに高台へ」</text>
+            <text x="717" y="133" font-size="11" fill="var(--ink-2)">波の進行に応じて予測を更新・再送信。</text>
+            <text x="717" y="147" font-size="10.5" font-family="IBM Plex Mono, monospace" fill="var(--c-predict)">▶ 水害リスクライン／タイムライン防災</text>
+
+            <rect x="981" y="40" width="225" height="112" fill="var(--c-alert-bg)" stroke="var(--c-alert)" stroke-width="1.5"/>
+            <rect x="981" y="40" width="4" height="112" fill="var(--c-alert)"/>
+            <text x="996" y="60" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600" fill="var(--c-alert)">A-3 ／ 伝達</text>
+            <text x="996" y="80" font-size="14.5" font-weight="700" fill="var(--ink)">警報範囲をハザード</text>
+            <text x="996" y="98" font-size="14.5" font-weight="700" fill="var(--ink)">の範囲へ拡張</text>
+            <text x="996" y="118" font-size="11" fill="var(--ink-2)">行政区分でなく河川回廊で定義。</text>
+            <text x="996" y="133" font-size="11" fill="var(--ink-2)">ナラヤニ全川＋インドへの越境通報。</text>
+            <text x="996" y="147" font-size="10.5" font-family="IBM Plex Mono, monospace" fill="var(--c-alert)">▶ CAP準拠／L-Alert の設計思想</text>
+
+            <rect x="1220" y="40" width="240" height="112" fill="var(--c-act-bg)" stroke="var(--c-act)" stroke-width="1.5"/>
+            <rect x="1220" y="40" width="4" height="112" fill="var(--c-act)"/>
+            <text x="1235" y="60" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600" fill="var(--c-act)">C-1 ／ 行動</text>
+            <text x="1235" y="80" font-size="14.5" font-weight="700" fill="var(--ink)">集落単位の高台避難場所</text>
+            <text x="1235" y="100" font-size="11" fill="var(--ink-2)">2025・2026年の浸水痕跡より高い位置に</text>
+            <text x="1235" y="115" font-size="11" fill="var(--ink-2)">各集落1か所＋そこへ至る階段・避難路。</text>
+            <text x="1235" y="133" font-size="11" font-weight="700" fill="var(--c-act)">構造物対策で最も費用対効果が高い</text>
+            <text x="1235" y="147" font-size="10.5" font-family="IBM Plex Mono, monospace" fill="var(--c-act)">▶ 日本の砂防・避難地整備</text>
+          </g>
+
+          <!-- connectors down to river -->
+          <g stroke="currentColor" stroke-width="1" opacity=".38">
+            <line x1="120" y1="152" x2="120" y2="196"/><line x1="350" y1="152" x2="350" y2="196"/>
+            <line x1="560" y1="152" x2="560" y2="196"/><line x1="820" y1="152" x2="820" y2="196"/>
+            <line x1="1070" y1="152" x2="1070" y2="196"/><line x1="1330" y1="152" x2="1330" y2="196"/>
+          </g>
+
+          <!-- time axis -->
+          <line x1="60" y1="200" x2="1460" y2="200" stroke="currentColor" stroke-width="1.5" marker-end="url(#ar)"/>
+          <g font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600" fill="var(--ink-2)" text-anchor="middle">
+            <text x="95" y="192">T+0</text><text x="345" y="192">T+13分</text><text x="520" y="192">T+43分</text>
+            <text x="800" y="192">T+3〜5h</text><text x="1060" y="192">T+6h05</text><text x="1330" y="192">T+7〜9h</text>
+          </g>
+          <g stroke="currentColor" stroke-width="1.5">
+            <line x1="95" y1="196" x2="95" y2="204"/><line x1="345" y1="196" x2="345" y2="204"/><line x1="520" y1="196" x2="520" y2="204"/>
+            <line x1="800" y1="196" x2="800" y2="204"/><line x1="1060" y1="196" x2="1060" y2="204"/><line x1="1330" y1="196" x2="1330" y2="204"/>
+          </g>
+
+          <!-- river band: widening downstream -->
+          <polygon points="60,228 1460,216 1460,266 60,246" fill="var(--c-predict)" opacity=".5"/>
+          <polygon points="60,228 1460,216 1460,232 60,236" fill="var(--c-predict)" opacity=".35"/>
+          <text x="70" y="242" font-size="11.5" font-weight="700" fill="var(--ink)">ボテコシ</text>
+          <text x="640" y="248" font-size="11.5" font-weight="700" fill="var(--ink)">トリスリ川</text>
+          <text x="1290" y="250" font-size="11.5" font-weight="700" fill="var(--ink)">ナラヤニ川 → インド</text>
+
+          <!-- settlements + deaths -->
+          <g text-anchor="middle">
+            <g font-size="11" font-weight="700" fill="var(--ink)">
+              <text x="95" y="292">ラスワ</text><text x="345" y="292">ヌワコット</text><text x="470" y="292">ダディン</text>
+              <text x="620" y="292">ゴルカ</text><text x="760" y="292">タナフン</text><text x="1010" y="292">チトワン</text>
+              <text x="1230" y="292">ナワルパラシ東</text><text x="1390" y="292">同 西</text>
+            </g>
+            <g fill="var(--alert)">
+              <rect x="82" y="302" width="26" height="4"/><rect x="332" y="302" width="26" height="15"/>
+              <rect x="457" y="302" width="26" height="13"/><rect x="607" y="302" width="26" height="16"/>
+              <rect x="747" y="302" width="26" height="10"/><rect x="997" y="302" width="26" height="70"/>
+              <rect x="1217" y="302" width="26" height="47"/><rect x="1377" y="302" width="26" height="18"/>
+            </g>
+            <g font-family="IBM Plex Mono, monospace" font-size="11.5" font-weight="600" fill="var(--alert)">
+              <text x="95" y="320">13</text><text x="345" y="331">51</text><text x="470" y="329">45</text>
+              <text x="620" y="332">57</text><text x="760" y="326">35</text><text x="1010" y="386">246</text>
+              <text x="1230" y="363">165</text><text x="1390" y="334">63</text>
+            </g>
+          </g>
+          <text x="60" y="404" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="var(--muted)">▼ 収容遺体数（NDRRMA, 2026-08-29 18:30）</text>
+
+          <!-- bottom band: always-on measures -->
+          <rect x="55" y="416" width="1405" height="30" fill="var(--c-gov-bg)" stroke="var(--c-gov)" stroke-width="1"/>
+          <text x="70" y="435" font-family="IBM Plex Mono, monospace" font-size="10.5" font-weight="600" fill="var(--c-gov)">全域・平時に効く</text>
+          <text x="205" y="435" font-size="11.5" fill="var(--ink)"><tspan font-weight="700">A-4</tspan> 坑内労働者・外国人プロトコル（緊急速報メール／トンネル安全基準）　<tspan font-weight="700">B-3</tspan> 天然ダム緊急対応ドクトリン（土砂災害防止法の緊急調査・無人化施工）　<tspan font-weight="700">B-4</tspan> 越境上流のLバンドSAR監視（ALOS-2/4・Sentinel Asia）　<tspan font-weight="700">C-3</tspan> 水力発電所のEWSノード化</text>
+        </svg>
+        <figcaption>横軸は源頭崩壊からの経過時間（等間隔ではない）。上流ほど猶予が短く人の判断が入らないため自動化が要り、下流ほど時間があるため予測と伝達が効く。実測で確認できる到達時刻はシャブルベシ08:50・ベトラワティ09:20・デブガット15:20の3点で、他は内挿による推定。河川距離も概算。</figcaption>
+      </figure>
+    </div>
+  </section>
+</div>
+
+<!-- ============ ROW 3 ============ -->
+<div class="row r3">
+
+  <section class="p">
+    <div class="ph"><span class="no">5</span><h2>日本の技術・実施主体マップ</h2></div>
+    <div class="pb">
+      <div class="ml">
+        <div class="mi"><span class="mk" style="background:var(--c-detect-bg);color:var(--c-detect)">検知</span><div>
+          <div class="mt">防災科学技術研究所 ／ 気象庁</div>
+          <div class="mm">Hi-net・V-net、火山泥流の地震・空振自動検知</div>
+          <div class="mb">土砂移動を地震学的に捉える実運用経験は日本が最も厚い。機材が安価で、観測点を自国内に置けるため<b>中国側との合意を待たずに構築できる</b>。</div></div></div>
+        <div class="mi"><span class="mk" style="background:var(--c-detect-bg);color:var(--c-detect)">検知</span><div>
+          <div class="mt">国土交通省 ／ 計測機器メーカー</div>
+          <div class="mm">危機管理型水位計、ワイヤー・振動センサ</div>
+          <div class="mb">2016年台風10号（岩泉町24名死亡）を受けて開発された「1台100万円以下・無給電5年・橋梁に後付け」規格。ネパールの制約条件にほぼ合致する。</div></div></div>
+        <div class="mi"><span class="mk" style="background:var(--c-predict-bg);color:var(--c-predict)">予測</span><div>
+          <div class="mt">土木研究所 ICHARM ／ 国交省</div>
+          <div class="mm">水害リスクライン、洪水予測、タイムライン防災</div>
+          <div class="mb">今回の災害自体が<b>モデル較正用の実測データを残している</b>（08:37発生／08:50／09:20／15:20到達／16:00ピーク6.57m）。2025年事例と併せ2ケース。</div></div></div>
+        <div class="mi"><span class="mk" style="background:var(--c-alert-bg);color:var(--c-alert)">伝達</span><div>
+          <div class="mt">総務省 ／ 通信事業者</div>
+          <div class="mm">緊急速報メール（ETWS／セルブロードキャスト）、L-Alert</div>
+          <div class="mb">加入者リストに依存せず該当エリアの全端末へ多言語で強制配信する方式。<b>ローミング中の外国SIMにも届く</b>ため、不明者589名の外国人層に直接対応する。</div></div></div>
+        <div class="mi"><span class="mk" style="background:var(--c-gov-bg);color:var(--c-gov)">越境</span><div>
+          <div class="mt">JAXA ／ Sentinel Asia ／ ADRC</div>
+          <div class="mm">ALOS-2・ALOS-4（LバンドSAR）、国際災害チャーター</div>
+          <div class="mb">ハザード源はチベット側にあり中国・ネパール間のデータ共有は容易でない。<b>日本が第三国として中立的に観測し地域枠組みで配布する</b>ことに固有の価値がある。</div></div></div>
+        <div class="mi"><span class="mk" style="background:var(--c-act-bg);color:var(--c-act)">構造</span><div>
+          <div class="mt">国交省砂防部 ／ JICA ／ JBIC・NEXI</div>
+          <div class="mm">天然ダム緊急調査、無人化施工、投融資条件</div>
+          <div class="mb">JICA「道路防災に係る能力強化プロジェクト」（2024年7月〜）が実施中で、接続先として最も速い。発電所の監視義務は融資・付保条件で担保する。</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="p">
+    <div class="ph"><span class="no">6</span><h2>実施の順序</h2></div>
+    <div class="pb">
+      <table>
+        <thead><tr><th>時期</th><th>やること</th><th>主体</th></tr></thead>
+        <tbody>
+          <tr><td class="tm">〜3か月</td><td><b>A-0 検証調査</b>──どこで・何時に・どんな警報を受けて人が死んだのかを確定させる。並行して残存堰止め湖の衛星監視を継続</td><td>学会合同調査団／JAXA／ADRC</td></tr>
+          <tr><td class="tm">〜1年</td><td>A-1 到達時刻予測、A-3 警報範囲の見直し、A-4 坑内・外国人プロトコル。水位計は先行20局</td><td>ICHARM／JICA／総務省</td></tr>
+          <tr><td class="tm">1〜2年</td><td>B-1 源頭検知網、B-2 自動サイレン、B-3 天然ダム対応の制度移転。水位計30局以上へ</td><td>防災科研／国交省砂防部</td></tr>
+          <tr><td class="tm">2〜5年</td><td>C-1 高台避難場所・避難路、C-2 土地利用誘導、C-3 発電所ノード化と金融条件</td><td>JICA／JBIC・NEXI</td></tr>
+          <tr><td class="tm">継続</td><td>越境データ共有の枠組み形成。日本＝中立的第三者としての観測提供を制度化</td><td>外務省／ICIMOD／ADRC</td></tr>
+        </tbody>
+      </table>
+      <p class="note"><b>機材が3年で死ぬ問題：</b>電源を要求しない（5年電池）／消耗品を使わない／通信を二重化（衛星IoT併設）／現地に部品在庫と修理者を置く／納入でなく<b>年間稼働率95%以上</b>で支払う。今回6局中3局が沈黙した事実は、平時の稼働率もまた論点であることを示す。</p>
+    </div>
+  </section>
+
+  <section class="p">
+    <div class="ph"><span class="no">7</span><h2>提案の信頼性のため明記する「できないこと」</h2></div>
+    <div class="pb">
+      <div class="cx"><h4>衛星ではこの氷岩なだれを予知できなかった</h4>
+        <p>氷体の脆性破壊は前兆変位に乏しく、観測頻度を上げても発生時刻の予測には至らない。「監視していれば防げた」と説明して導入すれば、次の災害で信頼を失う。衛星の役割は<b>湖沼インベントリの更新・発災後の即時把握・不安定斜面の絞り込み</b>の3つに限られる。</p></div>
+      <div class="cx"><h4>砂防堰堤ではこの規模は止まらない</h4>
+        <p>100km以上を流下する土石流と洪水を構造物で捕捉することは現実的でない。費用対効果が高いのは本川対策ではなく、集落単位の高台避難場所、支渓扇状地の導流堤、復旧構造物の耐流出設計である。</p></div>
+      <div class="cx"><h4>降水プロダクトは今回無力だった</h4>
+        <p>本事象に降雨は関与していない（2025年事例でも発災前4日間に降雨なし）。GSMaP等はモンスーン期の斜面崩壊には有効だが、氷河型には効かない。<b>降雨型と氷河型で独立した検知経路を持たせ、下流の警報配信部分だけを共有する</b>設計が要る。</p></div>
+      <div class="cx"><h4>QZSS災危通報は主経路にできない</h4>
+        <p>通信途絶時のバックアップとして魅力的だが、ネパールはサービス領域の西端付近で、深い谷では衛星仰角を確保できない可能性がある。<b>まず受信可能性の実測（PoC）から</b>。専用受信機を要する点も普及上の制約。</p></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ FOOT ============ -->
+<div class="row" style="grid-template-columns:1fr">
+  <section class="p">
+    <div class="pb">
+      <div class="foot">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:var(--muted);margin-bottom:8px">凡例（色分けの意味）</div>
+          <div class="lg">
+            <span class="lgi"><i style="background:var(--c-detect-bg);border-color:var(--c-detect)"></i>検知・観測</span>
+            <span class="lgi"><i style="background:var(--c-predict-bg);border-color:var(--c-predict)"></i>予測・判断</span>
+            <span class="lgi"><i style="background:var(--c-alert-bg);border-color:var(--c-alert)"></i>伝達・警報</span>
+            <span class="lgi"><i style="background:var(--c-act-bg);border-color:var(--c-act)"></i>行動・構造物</span>
+            <span class="lgi"><i style="background:var(--c-gov-bg);border-color:var(--c-gov)"></i>越境・制度</span>
+            <span class="lgi"><i style="background:var(--alert);border-color:var(--alert)"></i>人的被害</span>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:var(--muted);margin:16px 0 8px">施策ID</div>
+          <div style="font-size:10.5px;line-height:1.75;color:var(--ink-2)">
+            <b style="font-family:'IBM Plex Mono',monospace">A群</b>＝即効（〜1年・既存技術の移転）／<b style="font-family:'IBM Plex Mono',monospace">B群</b>＝中期（2年・日本に固有の強み）／<b style="font-family:'IBM Plex Mono',monospace">C群</b>＝構造物・土地利用（3〜10年）。優先順位は「創出できるリードタイム ÷ 費用 × ネパール側の維持管理能力」で判断した。
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:var(--muted);margin-bottom:8px">用語</div>
+          <div class="gs">
+            <div><b>DHM</b>：ネパール水文気象局</div>
+            <div><b>NDRRMA</b>：ネパール国家災害リスク削減・管理庁</div>
+            <div><b>GLOF</b>：氷河湖決壊洪水</div>
+            <div><b>ICIMOD</b>：国際総合山岳開発センター</div>
+            <div><b>ICHARM</b>：水災害・リスクマネジメント国際センター（土木研究所）</div>
+            <div><b>CAP</b>：共通警報プロトコル</div>
+            <div><b>ETWS/CB</b>：セルブロードキャスト型の緊急速報配信</div>
+            <div><b>SAR</b>：合成開口レーダ（雲を透過して観測できる）</div>
+            <div><b>InSAR</b>：SAR干渉解析による地表変位の検出</div>
+            <div><b>無人化施工</b>：遠隔操作の建設機械による土工（雲仙で実用化）</div>
+            <div><b>危機管理型水位計</b>：低コスト・無給電・後付け可能な簡易水位計</div>
+            <div><b>タイムライン防災</b>：到達時刻から逆算して行動を定める事前計画</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="ms">
+  <div class="a">上流を早く見つけ、下流に時間を届ける。</div>
+  <div class="b">この災害で失われたのは、危険を知る手段ではなく、知ってから逃げるまでの経路だった。<br>日本の技術は、その経路を作るために使える。</div>
+</div>
+
+<div class="src">
+出典：USGS ／ NDRRMA・Nepal Police（2026-08-29 18:30） ／ Kathmandu Post ／ Al Jazeera ／ NBC News ／ The Daily Star ／ Stimson Center ／ ICIMOD・UNDP ／ 国土交通省 ／ 防災科学技術研究所 ／ JAXA・Sentinel Asia ／ JICA ／ 内閣府（みちびき）<br>
+数値は捜索継続中の暫定値。郡別は収容遺体数であり死亡地点別ではない。政策判断に用いる前に一次資料での再確認を要する。
+</div>
+
+</div>
