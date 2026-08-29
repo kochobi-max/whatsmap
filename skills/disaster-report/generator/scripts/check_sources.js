@@ -23,13 +23,31 @@ const path = require("path");
 const GLIDE = process.argv[2];
 const SKILL = path.resolve(__dirname, "..", "..");
 
-// 情報源プロファイルからホストを拾う。一覧を二重管理しない
+// 情報源プロファイルからホストを拾う。一覧を二重管理しない。
+//
+// **参考扱いの情報源は、届かなくても日次を止めない。**
+// プロファイルの行に「要ログイン」または「到達確認の対象外」と書いてあれば、
+// その行のホストは参考扱いにする。状態は表に出すが、終了コードには数えない。
+//
+// 2026-08-30、インドネシアの OPTEMIS ダッシュボード
+// （optemis.sentinel-asia.org、プロファイル自身が「要ログイン」と書いている）で
+// 日次のビルドが丸ごと止まった。**そもそも認証が要るので機械では読めない。**
+// 読めない情報源のために、読める情報源からの更新まで止めるのは筋が悪い。
+//
+// 数値の出どころになる情報源には、この印を付けないこと。
+// 届かないことを「変化なし」と取り違えない、という門番の役目はそちらで果たす。
+const OPTIONAL_MARK = /要ログイン|到達確認の対象外/;
+
 function hostsFrom(file) {
   if (!fs.existsSync(file)) return [];
-  const txt = fs.readFileSync(file, "utf8");
-  const out = new Set();
-  for (const m of txt.matchAll(/https?:\/\/([a-z0-9.-]+)/gi)) out.add(m[1].toLowerCase());
-  return [...out];
+  const out = [];
+  for (const line of fs.readFileSync(file, "utf8").split("\n")) {
+    const optional = OPTIONAL_MARK.test(line);
+    for (const m of line.matchAll(/https?:\/\/([a-z0-9.-]+)/gi)) {
+      out.push({ h: m[1].toLowerCase(), optional });
+    }
+  }
+  return out;
 }
 
 const files = [path.join(SKILL, "references", "sources", "_global.md")];
@@ -37,7 +55,13 @@ if (GLIDE) {
   const iso3 = (GLIDE.split("-").pop() || "").toUpperCase();
   files.push(path.join(SKILL, "references", "sources", iso3 + ".md"));
 }
-const hosts = [...new Set(files.flatMap(hostsFrom))].sort();
+// 同じホストが必須の行と参考の行の両方に出たら、**必須として扱う**。
+const seen = new Map();
+for (const e of files.flatMap(hostsFrom)) {
+  if (!seen.has(e.h) || !e.optional) seen.set(e.h, e.optional);
+}
+const hosts = [...seen.keys()].sort();
+const isOptional = h => seen.get(h) === true;
 if (hosts.length === 0) {
   console.error("SOURCES: FAIL no-profile");
   console.error("情報源プロファイルが見つからない: " + files.join(", "));
@@ -74,10 +98,19 @@ function probe(host) {
 const results = hosts.map(h => Object.assign({ h }, probe(h)));
 results.sort((a, b) => a.h.localeCompare(b.h));
 for (const r of results) {
-  console.log((r.ok ? "OK  " : "NG  ") + r.h.padEnd(34) + r.note);
+  const tag = r.ok ? "OK  " : (isOptional(r.h) ? "--  " : "NG  ");
+  console.log(tag + r.h.padEnd(34) + r.note + (isOptional(r.h) ? "   （参考扱い）" : ""));
 }
 
-const bad = results.filter(r => !r.ok);
+const skipped = results.filter(r => !r.ok && isOptional(r.h));
+if (skipped.length) {
+  console.log("");
+  console.log("参考扱いのため、届かなくても止めない: " + skipped.map(r => r.h).join(", "));
+  console.log("  プロファイルに「要ログイン」または「到達確認の対象外」と書いてあるもの。");
+  console.log("  **数値の出どころではない。** 数値はほかの情報源から取ること。");
+}
+
+const bad = results.filter(r => !r.ok && !isOptional(r.h));
 if (bad.length) {
   console.error("");
   console.error("SOURCES: FAIL unreachable=" + bad.length + "/" + results.length);
@@ -88,4 +121,4 @@ if (bad.length) {
   process.exit(7);
 }
 console.log("");
-console.log("SOURCES: OK " + results.length + " reachable");
+console.log("SOURCES: OK " + (results.length - skipped.length) + "/" + results.length + " reachable");

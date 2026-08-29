@@ -57,6 +57,23 @@ Badan Riset dan Inovasi Nasional（国家研究革新庁）
 - Sentinel Asia の個別災害ページ → `_global.md`
 - EOR ダッシュボード: `https://optemis.sentinel-asia.org/`（要ログイン。所内の共有情報を使う）
 
+  **クラウドからは読めない。参考扱いにしてある。** 2026-08-30 に許可リストへ
+  追加してもらい、CONNECT トンネルは通るようになった（`CONNECT ... response 200`）が、
+  その先の TLS で止まる。
+
+  ```
+  TLSv1.2 (OUT), TLS alert, unknown CA
+  curl: (60) SSL certificate problem: unable to get local issuer certificate
+  ```
+
+  トンネル越しに提示される証明書の発行元が、こちらの CA 束で辿れない。
+  **TLS の検証は外さない。** そもそも要ログインで機械からは読めないので、
+  `check_sources.js` では「要ログイン」の印により参考扱いとし、
+  届かなくても日次を止めないようにした（行に「要ログイン」と書いてあることが印になる）。
+
+  ここから取りたい情報（緊急観測プロダクトの一覧）は
+  `sentinel-asia.org`（到達可）と ReliefWeb 経由の UNOSAT 製品で代替する。
+
 ## 5. 国際・報道
 
 - ReliefWeb（UNOCHA / IFRC / PMI＝インドネシア赤十字）→ `_global.md`
