@@ -34,6 +34,9 @@ LibreOffice も pptxgenjs も要らない（2026-08-28 に PDF 変換をクラ�
 （`C:\Users\arakida\whatsmap\skills\disaster-report\generator\scripts\`）。
 クローン前は存在しないので、探しても見つからない。だから上の1ファイルから始める。
 
+**あとから手で動かしたいときも、同じこのファイルです。** 定期実行が落ちた日に
+当日ぶんを OneDrive に入れ直すのも、これをダブルクリックするだけでよい。
+
 以下は、中で何が起きているかを知りたいときの内訳。
 
 ---
