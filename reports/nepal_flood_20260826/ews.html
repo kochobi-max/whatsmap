@@ -50,7 +50,7 @@ body{background:var(--paper);color:var(--ink);
 
 /* ---- header ---- */
 .hd{display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;
-  border-bottom:3px double var(--ink);padding-bottom:9px;height:78px;flex:none}
+  border-bottom:3px double var(--ink);padding-bottom:9px;height:76px;flex:none}
 .hd .mk{font-size:40px;color:var(--c-detect);line-height:0}
 .hd h1{font-family:"Zen Old Mincho","Hiragino Mincho ProN","Yu Mincho","MS PMincho",serif;font-weight:900;font-size:23px;line-height:1.12;letter-spacing:.02em}
 .hd .st{font-size:11px;color:var(--ink-2);margin-top:3px;font-weight:700}
@@ -60,8 +60,8 @@ body{background:var(--paper);color:var(--ink);
 
 /* ---- rows ---- */
 .row{display:grid;gap:9px;flex:none}
-.r1{grid-template-columns:1.06fr 1fr 1.1fr;height:244px}
-.r2{grid-template-columns:1fr;height:444px}
+.r1{grid-template-columns:1.06fr 1fr 1.1fr;height:260px}
+.r2{grid-template-columns:1fr;height:432px}
 .r3{grid-template-columns:1.1fr 1fr 1fr;height:210px}
 .r4{grid-template-columns:1fr;height:84px}
 
@@ -211,6 +211,18 @@ td.tm{font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Y
 .ph2 em.g{background:var(--alert)}
 .ph2 b{font-size:10.5px}
 .ph2 span{margin-left:auto;font-family:"IBM Plex Mono","BIZ UDPGothic",sans-serif;font-size:9px;color:var(--muted);white-space:nowrap}
+.mx{width:100%;border-collapse:collapse;font-size:9px}
+.mx thead th{background:var(--sunk);font-family:"IBM Plex Mono","BIZ UDPGothic",sans-serif;font-size:7.8px;letter-spacing:.05em;color:var(--muted);font-weight:600;padding:2px 5px;text-align:left}
+.mx td{padding:2px 5px;border-bottom:1px solid var(--line-soft);vertical-align:top;line-height:1.35}
+.mx td small{display:block;color:var(--muted);font-size:7.5px;line-height:1.3}
+.mx td .mono{font-family:"IBM Plex Mono","BIZ UDPGothic",sans-serif;font-size:8px;color:var(--c-detect)}
+.mx tr.hl td{background:var(--alert-soft)}
+.mx td.k,.mx td.n,.mx td.p{font-family:"IBM Plex Mono","BIZ UDPGothic",sans-serif;font-size:8px;font-weight:600;white-space:nowrap;text-align:right}
+.mx td.k{color:var(--muted)} .mx td.n{color:var(--c-predict)} .mx td.p{color:var(--c-alert)}
+.nc{margin-top:5px;padding:5px 7px;background:var(--alert-soft);border-left:3px solid var(--alert)}
+.nch{font-size:9px;font-weight:700;color:var(--alert);margin-bottom:2px}
+.ncr{font-size:8.4px;line-height:1.4;color:var(--ink-2)}
+.ncr b{color:var(--ink)} .ncr span{color:var(--muted);margin-left:5px}
 .pd{font-size:8.6px;color:var(--ink-2);line-height:1.45;margin-bottom:3px}
 .ph2{margin:5px 0 1px}
 .lat td{padding:1.5px 5px}
@@ -222,7 +234,7 @@ td.tm{font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Y
 .cx h4{font-size:10px}
 .cx p{font-size:8.8px;line-height:1.45}
 .gs{font-size:8px;line-height:1.4}
-.hd .st{font-size:10.2px;margin-top:2px}
+.hd .st{font-size:10px;margin-top:1px}
 .note{font-size:8.6px;line-height:1.48}
 .pb{padding:8px 10px}
 .kv dd{font-size:9.4px;line-height:1.42}
@@ -235,7 +247,7 @@ td.tm{font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Y
   <svg class="ico mk"><use href="#i-cast"/></svg>
   <div>
     <h1>ヒマラヤ統合EWS 構造図</h1>
-    <div class="st">降雨型洪水・土砂災害／氷岩なだれ／GLOF・河道閉塞を、既存の2系統の上で束ねる（検討図）</div>
+    <div class="st">降雨型洪水・土砂災害／氷岩なだれ／GLOF／大地震を、既存の2系統の上で束ねる（検討図）</div>
     <div class="meta">作成 2026-08-30 ／ 2026年8月26日ボテコシ／トリスリ川洪水の検討に基づく ／ 公式見解ではない</div>
   </div>
   <div class="cl">ゼロから作らない。すでにある2つの系を繋ぎ、<br>抜けている検知経路だけを足す。</div>
@@ -270,202 +282,230 @@ td.tm{font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Y
   </section>
 
   <section class="p">
-    <div class="ph"><span class="no">3</span><svg class="ico"><use href="#i-seismo"/></svg><h2>3つの現象、3つの検知原理</h2></div>
+    <div class="ph"><span class="no">3</span><svg class="ico"><use href="#i-seismo"/></svg><h2>ハザードの棚卸し ── 何を、どの経路で拾うか</h2></div>
     <div class="pb">
-      <div style="flex:1;min-height:0">
-        <div class="ph2"><em style="background:var(--muted)">R</em><b>降雨型の洪水・土砂災害 ＝ 雨量閾値</b><span>既存・稼働中</span></div>
-        <p class="pd">累積雨量と土壌雨量指数。<b>累積で最も多くの命を奪ってきたのはこちら</b>。弱点は<b>越境上流の雨が見えない</b>ことと短いリードタイム。日本の土砂災害警戒情報の移転価値が高い。</p>
-        <div class="ph2"><em>D1</em><b>氷岩なだれ ＝ 単一力震源</b><span>新規</span></div>
-        <p class="pd">滑動する土塊の反力が長周期に放射される。明瞭なP波を持たず数十秒〜数分続く ── <b>だから地震用の処理では捨てられる。</b></p>
-        <table class="lat">
-          <tr><td>表面波の到達（20〜50km）</td><td>7〜17 秒</td></tr>
-          <tr><td>判別に必要な信号長＋多点結合</td><td>25〜50 秒</td></tr>
-          <tr><td style="font-weight:700">発報レイテンシ</td><td style="color:var(--c-detect)">60〜120 秒</td></tr>
-        </table>
-        <div class="ph2"><em>D2</em><b>GLOF・河道閉塞 ＝ 河川微動</b><span>新規</span></div>
-        <p class="pd">決壊は<b>衝撃的な震源を持たない</b>。検知するのは洪水そのもの（1〜10Hz、掃流砂の衝突）。<b>2016年Gongbatongsha GLOFを同じ流域で2波に分離して捉えた実績がある。</b></p>
+      <table class="mx">
+        <thead><tr><th>ハザード</th><th>拾う経路</th><th>状態</th></tr></thead>
+        <tbody>
+          <tr><td>モンスーン降雨の洪水・土砂災害<small>累積では最も多くの命を奪ってきた</small></td><td><b>R</b> 雨量閾値＋土壌雨量指数</td><td class="k">既存<br>稼働中</td></tr>
+          <tr><td>氷岩なだれ・岩盤崩壊<small>2026年本件／2015年ランタン谷</small></td><td><b>D1</b> 単一力震源<br><span class="mono">発報 60〜120秒</span></td><td class="n">新規</td></tr>
+          <tr><td>GLOF・河道閉塞の決壊<small>2016年 Gongbatongsha／2025年 ラスワ</small></td><td><b>D2</b> 河川微動（1〜10Hz）</td><td class="n">新規</td></tr>
+          <tr><td>観測装置の被災<small>今回、上流3局が警戒水位前に沈黙</small></td><td><b>D3</b> 欠測＝警報</td><td class="n">新規</td></tr>
+          <tr class="hl"><td>大地震による同時多発斜面崩壊<small>2015年 Gorkha で25,000件</small></td><td><b>状態修飾子</b><br>全トリガの閾値を下げる</td><td class="n">新規</td></tr>
+        </tbody>
+      </table>
+      <div class="nc">
+        <div class="nch">この系では拾えないもの ── 明記しておく</div>
+        <div class="ncr"><b>雪崩</b><span>検知は D1 の小規模クラスで可能。予報は積雪観測が無く不可</span></div>
+        <div class="ncr"><b>地震そのものの直前警報</b><span>ネパールに国家EEWは無い（実証段階）</span></div>
+        <div class="ncr"><b>エアブラスト</b><span>2015年ランタン・2021年チャモリで発生。被害は流路の外にも及ぶ</span></div>
       </div>
-      <p class="note"><b>河岸の地震計は、流されない非接触の水位計である。</b>今回、上流3局の水位計は警戒水位前に沈黙した ── 洪水が壊したからだ。</p>
     </div>
   </section>
 </div>
 
 <div class="row r2">
   <section class="p">
-    <div class="ph"><span class="no">4</span><svg class="ico"><use href="#i-flow"/></svg><h2>5層アーキテクチャ ── 何を流用し、何を改修し、何を足すか</h2></div>
+    <div class="ph"><span class="no">4</span><svg class="ico"><use href="#i-flow"/></svg><h2>6層アーキテクチャ ── 何を流用し、何を改修し、何を足すか</h2></div>
     <div class="pb pb-fig">
       <figure>
-        <svg class="fig" viewBox="0 0 1520 360" role="img" aria-label="5層の統合EWSアーキテクチャ。降雨系と地震系という既存の2系統を色分けし、降雨型洪水・氷岩なだれ・GLOF・装置被災の4トリガを分けたまま、判断と伝達を1本に束ねる構成を示す。">
+        <svg class="fig" viewBox="0 0 1520 356" role="img" aria-label="6層の統合EWSアーキテクチャ。平時のリスク評価、センシング、伝送、処理、判断、伝達の各層で既存・要改修・新規を色分けし、降雨型・氷岩なだれ・GLOF・装置被災の4トリガと、大地震を状態修飾子として扱う構成を示す。">
           <defs><marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="var(--c-detect)"/></marker></defs>
 
-          <rect x="0" y="4" width="104" height="70" fill="var(--panel)" stroke="var(--line)"/>
-          <text x="9" y="19" font-family="IBM Plex Mono, BIZ UDPGothic, Hiragino Kaku Gothic ProN, Yu Gothic, sans-serif" font-size="9.6" font-weight="700" fill="var(--c-detect)">L1</text>
-          <text x="9" y="33" font-size="11" font-weight="700" fill="var(--ink)">センシング</text>
-          <text x="9" y="46" font-size="8.2" fill="var(--muted)">降雨系＋地震系</text>
+          <rect x="0" y="4" width="104" height="38" fill="var(--panel)" stroke="var(--line)"/>
+          <text x="9" y="18" font-family="IBM Plex Mono, BIZ UDPGothic, Hiragino Kaku Gothic ProN, Yu Gothic, sans-serif" font-size="9.4" font-weight="700" fill="var(--c-detect)">L0</text>
+          <text x="9" y="31" font-size="10.6" font-weight="700" fill="var(--ink)">平時のリスク評価</text>
+          <text x="9" y="43" font-size="8" fill="var(--muted)">どこに何を置くかを決める</text>
 
-          <rect x="120" y="8" width="317.3333333333333" height="29" fill="var(--sunk)" stroke="var(--line)" stroke-width="1"/>
-            <rect x="125" y="12" width="14" height="12.5" fill="var(--muted)"/>
-            <text x="132" y="21.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">既</text>
-            <text x="144" y="21.5" font-size="10.3" font-weight="700" fill="var(--ink)">DHM 雨量・水位「ライブウォッチ」280局</text>
-            <text x="127" y="34" font-size="8.4" fill="var(--ink-2)">降雨系の骨格。稼働中</text>
-            <rect x="446.3333333333333" y="8" width="223.99999999999997" height="29" fill="var(--sunk)" stroke="var(--line)" stroke-width="1"/>
-            <rect x="451.3333333333333" y="12" width="14" height="12.5" fill="var(--muted)"/>
-            <text x="458.3333333333333" y="21.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">既</text>
-            <text x="470.3333333333333" y="21.5" font-size="10.3" font-weight="700" fill="var(--ink)">気象レーダ 1／3局</text>
-            <text x="453.3333333333333" y="34" font-size="8.4" fill="var(--ink-2)">西部のみ2019年設置</text>
-            <rect x="679.3333333333333" y="8" width="267.55555555555554" height="29" fill="var(--sunk)" stroke="var(--line)" stroke-width="1"/>
-            <rect x="684.3333333333333" y="12" width="14" height="12.5" fill="var(--muted)"/>
-            <text x="691.3333333333333" y="21.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">既</text>
-            <text x="703.3333333333333" y="21.5" font-size="10.3" font-weight="700" fill="var(--ink)">NSC 広帯域地震計 約40局</text>
-            <text x="686.3333333333333" y="34" font-size="8.4" fill="var(--ink-2)">DMG／NEMRC</text>
-            <rect x="955.8888888888888" y="8" width="267.55555555555554" height="29" fill="var(--sunk)" stroke="var(--line)" stroke-width="1"/>
-            <rect x="960.8888888888888" y="12" width="14" height="12.5" fill="var(--muted)"/>
-            <text x="967.8888888888888" y="21.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">既</text>
-            <text x="979.8888888888888" y="21.5" font-size="10.3" font-weight="700" fill="var(--ink)">加速度計36台・東大JICA 8局</text>
-            <text x="962.8888888888888" y="34" font-size="8.4" fill="var(--ink-2)">中国CEA 10局が北部を補う</text>
-            <rect x="1232.4444444444443" y="8" width="267.55555555555554" height="29" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.6"/>
-            <rect x="1237.4444444444443" y="12" width="14" height="12.5" fill="var(--c-detect)"/>
-            <text x="1244.4444444444443" y="21.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">改</text>
-            <text x="1256.4444444444443" y="21.5" font-size="10.3" font-weight="700" fill="var(--ink)">DHM 水位観測局（回廊6局）</text>
-            <text x="1239.4444444444443" y="34" font-size="8.4" fill="var(--ink-2)">→30局へ。上昇率でトリガ</text>
+          <rect x="120" y="8" width="350.7777777777777" height="26" fill="var(--sunk)" stroke="var(--line)" stroke-width="1"/>
+            <rect x="125" y="11.5" width="13" height="11.5" fill="var(--muted)"/>
+            <text x="131.5" y="20.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">既</text>
+            <text x="143" y="20.5" font-size="10" font-weight="700" fill="var(--ink)">ICIMOD／UNDP 氷河湖目録 47湖</text>
+            <text x="126" y="31.5" font-size="8.2" fill="var(--ink-2)">ポイク・ギロン越境流域で28湖が高危険度</text>
+            <rect x="479.7777777777777" y="8" width="384.18518518518505" height="26" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.6"/>
+            <rect x="484.7777777777777" y="11.5" width="13" height="11.5" fill="var(--c-detect)"/>
+            <text x="491.2777777777777" y="20.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">改</text>
+            <text x="502.7777777777777" y="20.5" font-size="10" font-weight="700" fill="var(--ink)">静的目録 → SARで「増えた水域」を定期検出</text>
+            <text x="485.7777777777777" y="31.5" font-size="8.2" fill="var(--ink-2)">2025年の氷河上湖は半年で出現し目録に無かった</text>
+            <rect x="872.9629629629628" y="8" width="317.37037037037027" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="877.9629629629628" y="11.5" width="13" height="11.5" fill="var(--c-predict)"/>
+            <text x="884.4629629629628" y="20.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">新</text>
+            <text x="895.9629629629628" y="20.5" font-size="10" font-weight="700" fill="var(--ink)">InSARで不安定斜面を絞り込む</text>
+            <text x="878.9629629629628" y="31.5" font-size="8.2" fill="var(--ink-2)">ランタン・リルンは2015年にも大規模崩壊</text>
+            <rect x="1199.333333333333" y="8" width="300.66666666666663" height="26" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.6"/>
+            <rect x="1204.333333333333" y="11.5" width="13" height="11.5" fill="var(--c-detect)"/>
+            <text x="1210.833333333333" y="20.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">改</text>
+            <text x="1222.333333333333" y="20.5" font-size="10" font-weight="700" fill="var(--ink)">曝露の把握</text>
+            <text x="1205.333333333333" y="31.5" font-size="8.2" fill="var(--ink-2)">集落・道路・発電所坑口・トレッキング路</text>
 
-          <rect x="120" y="41" width="351.42857142857144" height="29" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
-            <rect x="125" y="45" width="14" height="12.5" fill="var(--c-predict)"/>
-            <text x="132" y="54.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">新</text>
-            <text x="144" y="54.5" font-size="10.3" font-weight="700" fill="var(--ink)">対象上流域に広帯域＋強震を3〜5局／流域</text>
-            <text x="127" y="67" font-size="8.4" fill="var(--ink-2)">岩盤上・想定洪水位より上</text>
-            <rect x="480.42857142857144" y="41" width="316.28571428571433" height="29" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
-            <rect x="485.42857142857144" y="45" width="14" height="12.5" fill="var(--c-predict)"/>
-            <text x="492.42857142857144" y="54.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">新</text>
-            <text x="504.42857142857144" y="54.5" font-size="10.3" font-weight="700" fill="var(--ink)">微気圧計を併設</text>
-            <text x="487.42857142857144" y="67" font-size="8.4" fill="var(--ink-2)">地震は空振を出さない＝質量移動を峻別</text>
-            <rect x="805.7142857142858" y="41" width="333.8571428571429" height="29" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
-            <rect x="810.7142857142858" y="45" width="14" height="12.5" fill="var(--c-predict)"/>
-            <text x="817.7142857142858" y="54.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">新</text>
-            <text x="829.7142857142858" y="54.5" font-size="10.3" font-weight="700" fill="var(--ink)">河岸に微動観測点</text>
-            <text x="812.7142857142858" y="67" font-size="8.4" fill="var(--ink-2)">流されない非接触の水位計</text>
-            <rect x="1148.5714285714287" y="41" width="351.42857142857144" height="29" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.6"/>
-            <rect x="1153.5714285714287" y="45" width="14" height="12.5" fill="var(--c-detect)"/>
-            <text x="1160.5714285714287" y="54.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">改</text>
-            <text x="1172.5714285714287" y="54.5" font-size="10.3" font-weight="700" fill="var(--ink)">GSMaP／GPM で越境上流の降雨を補う</text>
-            <text x="1155.5714285714287" y="67" font-size="8.4" fill="var(--ink-2)">チベット側の雨は地上観測が無い</text>
+          <rect x="0" y="46" width="104" height="68" fill="var(--panel)" stroke="var(--line)"/>
+          <text x="9" y="60" font-family="IBM Plex Mono, BIZ UDPGothic, Hiragino Kaku Gothic ProN, Yu Gothic, sans-serif" font-size="9.4" font-weight="700" fill="var(--c-detect)">L1</text>
+          <text x="9" y="73" font-size="10.6" font-weight="700" fill="var(--ink)">センシング</text>
+          <text x="9" y="85" font-size="8" fill="var(--muted)">降雨系＋地震系</text>
 
-          <rect x="0" y="78" width="104" height="38" fill="var(--panel)" stroke="var(--line)"/>
-          <text x="9" y="93" font-family="IBM Plex Mono, BIZ UDPGothic, Hiragino Kaku Gothic ProN, Yu Gothic, sans-serif" font-size="9.6" font-weight="700" fill="var(--c-detect)">L2</text>
-          <text x="9" y="107" font-size="11" font-weight="700" fill="var(--ink)">伝送</text>
+          <rect x="120" y="50" width="317.3333333333333" height="26" fill="var(--sunk)" stroke="var(--line)" stroke-width="1"/>
+            <rect x="125" y="53.5" width="13" height="11.5" fill="var(--muted)"/>
+            <text x="131.5" y="62.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">既</text>
+            <text x="143" y="62.5" font-size="10" font-weight="700" fill="var(--ink)">DHM 雨量・水位「ライブウォッチ」280局</text>
+            <text x="126" y="73.5" font-size="8.2" fill="var(--ink-2)">降雨系の骨格。稼働中</text>
+            <rect x="446.3333333333333" y="50" width="223.99999999999997" height="26" fill="var(--sunk)" stroke="var(--line)" stroke-width="1"/>
+            <rect x="451.3333333333333" y="53.5" width="13" height="11.5" fill="var(--muted)"/>
+            <text x="457.8333333333333" y="62.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">既</text>
+            <text x="469.3333333333333" y="62.5" font-size="10" font-weight="700" fill="var(--ink)">気象レーダ 1／3局</text>
+            <text x="452.3333333333333" y="73.5" font-size="8.2" fill="var(--ink-2)">西部のみ2019年設置</text>
+            <rect x="679.3333333333333" y="50" width="267.55555555555554" height="26" fill="var(--sunk)" stroke="var(--line)" stroke-width="1"/>
+            <rect x="684.3333333333333" y="53.5" width="13" height="11.5" fill="var(--muted)"/>
+            <text x="690.8333333333333" y="62.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">既</text>
+            <text x="702.3333333333333" y="62.5" font-size="10" font-weight="700" fill="var(--ink)">NSC 広帯域地震計 約40局</text>
+            <text x="685.3333333333333" y="73.5" font-size="8.2" fill="var(--ink-2)">DMG／NEMRC</text>
+            <rect x="955.8888888888888" y="50" width="267.55555555555554" height="26" fill="var(--sunk)" stroke="var(--line)" stroke-width="1"/>
+            <rect x="960.8888888888888" y="53.5" width="13" height="11.5" fill="var(--muted)"/>
+            <text x="967.3888888888888" y="62.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">既</text>
+            <text x="978.8888888888888" y="62.5" font-size="10" font-weight="700" fill="var(--ink)">加速度計36台・東大JICA 8局</text>
+            <text x="961.8888888888888" y="73.5" font-size="8.2" fill="var(--ink-2)">中国CEA 10局が北部を補う</text>
+            <rect x="1232.4444444444443" y="50" width="267.55555555555554" height="26" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.6"/>
+            <rect x="1237.4444444444443" y="53.5" width="13" height="11.5" fill="var(--c-detect)"/>
+            <text x="1243.9444444444443" y="62.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">改</text>
+            <text x="1255.4444444444443" y="62.5" font-size="10" font-weight="700" fill="var(--ink)">DHM 水位観測局（回廊6局）</text>
+            <text x="1238.4444444444443" y="73.5" font-size="8.2" fill="var(--ink-2)">→30局へ。上昇率でトリガ</text>
 
-          <rect x="120" y="81" width="672" height="32" fill="var(--sunk)" stroke="var(--line)" stroke-width="1"/>
-            <rect x="125" y="85" width="14" height="12.5" fill="var(--muted)"/>
-            <text x="132" y="94.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">既</text>
-            <text x="144" y="94.5" font-size="10.3" font-weight="700" fill="var(--ink)">既存テレメトリ（カトマンズへ）</text>
-            <text x="127" y="107" font-size="8.4" fill="var(--ink-2)">携帯／マイクロ波。谷筋を通るため同じ災害で切れる</text>
-            <rect x="802" y="81" width="698" height="32" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
-            <rect x="807" y="85" width="14" height="12.5" fill="var(--c-predict)"/>
-            <text x="814" y="94.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">新</text>
-            <text x="826" y="94.5" font-size="10.3" font-weight="700" fill="var(--ink)">衛星IoTによる二重化</text>
-            <text x="809" y="107" font-size="8.4" fill="var(--ink-2)">警報経路に要るのは波形でなくパラメータ。低帯域で足りる</text>
+          <rect x="120" y="82" width="351.42857142857144" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="125" y="85.5" width="13" height="11.5" fill="var(--c-predict)"/>
+            <text x="131.5" y="94.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">新</text>
+            <text x="143" y="94.5" font-size="10" font-weight="700" fill="var(--ink)">対象上流域に広帯域＋強震を3〜5局／流域</text>
+            <text x="126" y="105.5" font-size="8.2" fill="var(--ink-2)">岩盤上・想定洪水位より上</text>
+            <rect x="480.42857142857144" y="82" width="316.28571428571433" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="485.42857142857144" y="85.5" width="13" height="11.5" fill="var(--c-predict)"/>
+            <text x="491.92857142857144" y="94.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">新</text>
+            <text x="503.42857142857144" y="94.5" font-size="10" font-weight="700" fill="var(--ink)">微気圧計を併設</text>
+            <text x="486.42857142857144" y="105.5" font-size="8.2" fill="var(--ink-2)">地震は空振を出さない＝質量移動を峻別</text>
+            <rect x="805.7142857142858" y="82" width="333.8571428571429" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="810.7142857142858" y="85.5" width="13" height="11.5" fill="var(--c-predict)"/>
+            <text x="817.2142857142858" y="94.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">新</text>
+            <text x="828.7142857142858" y="94.5" font-size="10" font-weight="700" fill="var(--ink)">河岸に微動観測点</text>
+            <text x="811.7142857142858" y="105.5" font-size="8.2" fill="var(--ink-2)">流されない非接触の水位計</text>
+            <rect x="1148.5714285714287" y="82" width="351.42857142857144" height="26" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.6"/>
+            <rect x="1153.5714285714287" y="85.5" width="13" height="11.5" fill="var(--c-detect)"/>
+            <text x="1160.0714285714287" y="94.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">改</text>
+            <text x="1171.5714285714287" y="94.5" font-size="10" font-weight="700" fill="var(--ink)">GSMaP／GPM で越境上流の降雨を補う</text>
+            <text x="1154.5714285714287" y="105.5" font-size="8.2" fill="var(--ink-2)">チベット側の雨は地上観測が無い</text>
 
-          <rect x="0" y="120" width="104" height="98" fill="var(--panel)" stroke="var(--line)"/>
-          <text x="9" y="135" font-family="IBM Plex Mono, BIZ UDPGothic, Hiragino Kaku Gothic ProN, Yu Gothic, sans-serif" font-size="9.6" font-weight="700" fill="var(--c-detect)">L3</text>
-          <text x="9" y="149" font-size="11" font-weight="700" fill="var(--ink)">処理</text>
-          <text x="9" y="162" font-size="8.2" fill="var(--muted)">2系統を繋ぐ</text>
+          <rect x="0" y="118" width="104" height="32" fill="var(--panel)" stroke="var(--line)"/>
+          <text x="9" y="132" font-family="IBM Plex Mono, BIZ UDPGothic, Hiragino Kaku Gothic ProN, Yu Gothic, sans-serif" font-size="9.4" font-weight="700" fill="var(--c-detect)">L2</text>
+          <text x="9" y="145" font-size="10.6" font-weight="700" fill="var(--ink)">伝送</text>
 
-          <rect x="120" y="124" width="672" height="29" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.6"/>
-            <rect x="125" y="128" width="14" height="12.5" fill="var(--c-detect)"/>
-            <text x="132" y="137.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">改</text>
-            <text x="144" y="137.5" font-size="10.3" font-weight="700" fill="var(--ink)">降雨系：雨量閾値で272地区に洪水・土砂災害警報（2018〜）</text>
-            <text x="127" y="150" font-size="8.4" fill="var(--ink-2)">稼働中。ただし越境上流の雨が見えず、リードタイムが短い</text>
-            <rect x="802" y="124" width="698" height="29" fill="var(--alert-soft)" stroke="var(--alert)" stroke-width="1.6"/>
-            <rect x="807" y="128" width="14" height="12.5" fill="var(--alert)"/>
-            <text x="814" y="137.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">既</text>
-            <text x="826" y="137.5" font-size="10.3" font-weight="700" fill="var(--ink)">地震系：鋭い到達波を結合して震源決定</text>
-            <text x="809" y="150" font-size="8.4" fill="var(--ink-2)">立ち上がりの緩い質量移動は結合段階で捨てられる（今回 nst=0）</text>
+          <rect x="120" y="121" width="672" height="26" fill="var(--sunk)" stroke="var(--line)" stroke-width="1"/>
+            <rect x="125" y="124.5" width="13" height="11.5" fill="var(--muted)"/>
+            <text x="131.5" y="133.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">既</text>
+            <text x="143" y="133.5" font-size="10" font-weight="700" fill="var(--ink)">既存テレメトリ（カトマンズへ）</text>
+            <text x="126" y="144.5" font-size="8.2" fill="var(--ink-2)">携帯／マイクロ波。谷筋を通るため同じ災害で切れる</text>
+            <rect x="802" y="121" width="698" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="807" y="124.5" width="13" height="11.5" fill="var(--c-predict)"/>
+            <text x="813.5" y="133.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">新</text>
+            <text x="825" y="133.5" font-size="10" font-weight="700" fill="var(--ink)">衛星IoTによる二重化</text>
+            <text x="808" y="144.5" font-size="8.2" fill="var(--ink-2)">低帯域で足りる。大地震時は地上系の全損を前提に置く</text>
 
-          <rect x="120" y="157" width="272.2758620689655" height="29" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.6"/>
-            <rect x="125" y="161" width="14" height="12.5" fill="var(--c-detect)"/>
-            <text x="132" y="170.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">改</text>
-            <text x="144" y="170.5" font-size="10.3" font-weight="700" fill="var(--ink)">R 降雨・流出予測の強化</text>
-            <text x="127" y="183" font-size="8.4" fill="var(--ink-2)">土壌雨量指数／スネーク曲線</text>
-            <rect x="401.2758620689655" y="157" width="249.10344827586206" height="29" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
-            <rect x="406.2758620689655" y="161" width="14" height="12.5" fill="var(--c-predict)"/>
-            <text x="413.2758620689655" y="170.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">新</text>
-            <text x="425.2758620689655" y="170.5" font-size="10.3" font-weight="700" fill="var(--ink)">D1 単一力検知</text>
-            <text x="408.2758620689655" y="183" font-size="8.4" fill="var(--ink-2)">長周期20〜150s。質量移動</text>
-            <rect x="659.3793103448277" y="157" width="260.68965517241384" height="29" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
-            <rect x="664.3793103448277" y="161" width="14" height="12.5" fill="var(--c-predict)"/>
-            <text x="671.3793103448277" y="170.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">新</text>
-            <text x="683.3793103448277" y="170.5" font-size="10.3" font-weight="700" fill="var(--ink)">D2 河川微動検知</text>
-            <text x="666.3793103448277" y="183" font-size="8.4" fill="var(--ink-2)">1〜10Hz。掃流砂＝洪水</text>
-            <rect x="929.0689655172415" y="157" width="237.51724137931035" height="29" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
-            <rect x="934.0689655172415" y="161" width="14" height="12.5" fill="var(--c-predict)"/>
-            <text x="941.0689655172415" y="170.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">新</text>
-            <text x="953.0689655172415" y="170.5" font-size="10.3" font-weight="700" fill="var(--ink)">D3 欠測検知</text>
-            <text x="936.0689655172415" y="183" font-size="8.4" fill="var(--ink-2)">沈黙は被災の証拠</text>
-            <rect x="1175.5862068965519" y="157" width="324.4137931034483" height="29" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
-            <rect x="1180.5862068965519" y="161" width="14" height="12.5" fill="var(--c-predict)"/>
-            <text x="1187.5862068965519" y="170.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">新</text>
-            <text x="1199.5862068965519" y="170.5" font-size="10.3" font-weight="700" fill="var(--ink)">統合判定（確度3段階）</text>
-            <text x="1182.5862068965519" y="183" font-size="8.4" fill="var(--ink-2)">降雨系・非降雨系の両方を受ける</text>
+          <rect x="0" y="154" width="104" height="98" fill="var(--panel)" stroke="var(--line)"/>
+          <text x="9" y="168" font-family="IBM Plex Mono, BIZ UDPGothic, Hiragino Kaku Gothic ProN, Yu Gothic, sans-serif" font-size="9.4" font-weight="700" fill="var(--c-detect)">L3</text>
+          <text x="9" y="181" font-size="10.6" font-weight="700" fill="var(--ink)">処理</text>
+          <text x="9" y="193" font-size="8" fill="var(--muted)">2系統を繋ぐ</text>
 
-          <rect x="120" y="190" width="1380" height="22" fill="var(--c-predict-bg)" stroke="var(--c-predict)"/>
-            <text x="128" y="204.5" font-size="8.8" fill="var(--ink-2)"><tspan font-weight="700" fill="var(--c-predict)">ここが「統合」の実体　</tspan>降雨型は R、氷岩なだれは D1、GLOF・河道閉塞は D2、装置の被災は D3 が拾う。<tspan font-weight="700">トリガは4系統に分けたまま、判断と伝達だけを1本に束ねる</tspan> ── 1つで暫定発報、2つ一致で確度を上げる</text>
+          <rect x="120" y="158" width="672" height="26" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.6"/>
+            <rect x="125" y="161.5" width="13" height="11.5" fill="var(--c-detect)"/>
+            <text x="131.5" y="170.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">改</text>
+            <text x="143" y="170.5" font-size="10" font-weight="700" fill="var(--ink)">降雨系：雨量閾値で272地区に洪水・土砂災害警報（2018〜）</text>
+            <text x="126" y="181.5" font-size="8.2" fill="var(--ink-2)">稼働中。ただし越境上流の雨が見えず、リードタイムが短い</text>
+            <rect x="802" y="158" width="698" height="26" fill="var(--alert-soft)" stroke="var(--alert)" stroke-width="1.6"/>
+            <rect x="807" y="161.5" width="13" height="11.5" fill="var(--alert)"/>
+            <text x="813.5" y="170.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">既</text>
+            <text x="825" y="170.5" font-size="10" font-weight="700" fill="var(--ink)">地震系：鋭い到達波を結合して震源決定</text>
+            <text x="808" y="181.5" font-size="8.2" fill="var(--ink-2)">立ち上がりの緩い質量移動は結合段階で捨てられる（今回 nst=0）</text>
 
-          <rect x="0" y="222" width="104" height="62" fill="var(--panel)" stroke="var(--line)"/>
-          <text x="9" y="237" font-family="IBM Plex Mono, BIZ UDPGothic, Hiragino Kaku Gothic ProN, Yu Gothic, sans-serif" font-size="9.6" font-weight="700" fill="var(--c-detect)">L4</text>
-          <text x="9" y="251" font-size="11" font-weight="700" fill="var(--ink)">判断</text>
+          <rect x="120" y="190" width="272.2758620689655" height="26" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.6"/>
+            <rect x="125" y="193.5" width="13" height="11.5" fill="var(--c-detect)"/>
+            <text x="131.5" y="202.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">改</text>
+            <text x="143" y="202.5" font-size="10" font-weight="700" fill="var(--ink)">R 降雨・流出予測の強化</text>
+            <text x="126" y="213.5" font-size="8.2" fill="var(--ink-2)">土壌雨量指数／スネーク曲線</text>
+            <rect x="401.2758620689655" y="190" width="249.10344827586206" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="406.2758620689655" y="193.5" width="13" height="11.5" fill="var(--c-predict)"/>
+            <text x="412.7758620689655" y="202.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">新</text>
+            <text x="424.2758620689655" y="202.5" font-size="10" font-weight="700" fill="var(--ink)">D1 単一力検知</text>
+            <text x="407.2758620689655" y="213.5" font-size="8.2" fill="var(--ink-2)">質量移動。60〜120秒で発報</text>
+            <rect x="659.3793103448277" y="190" width="260.68965517241384" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="664.3793103448277" y="193.5" width="13" height="11.5" fill="var(--c-predict)"/>
+            <text x="670.8793103448277" y="202.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">新</text>
+            <text x="682.3793103448277" y="202.5" font-size="10" font-weight="700" fill="var(--ink)">D2 河川微動検知</text>
+            <text x="665.3793103448277" y="213.5" font-size="8.2" fill="var(--ink-2)">1〜10Hz。掃流砂＝洪水</text>
+            <rect x="929.0689655172415" y="190" width="237.51724137931035" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="934.0689655172415" y="193.5" width="13" height="11.5" fill="var(--c-predict)"/>
+            <text x="940.5689655172415" y="202.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">新</text>
+            <text x="952.0689655172415" y="202.5" font-size="10" font-weight="700" fill="var(--ink)">D3 欠測検知</text>
+            <text x="935.0689655172415" y="213.5" font-size="8.2" fill="var(--ink-2)">沈黙は被災の証拠</text>
+            <rect x="1175.5862068965519" y="190" width="324.4137931034483" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="1180.5862068965519" y="193.5" width="13" height="11.5" fill="var(--c-predict)"/>
+            <text x="1187.0862068965519" y="202.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">新</text>
+            <text x="1198.5862068965519" y="202.5" font-size="10" font-weight="700" fill="var(--ink)">統合判定</text>
+            <text x="1181.5862068965519" y="213.5" font-size="8.2" fill="var(--ink-2)">確度3段階。降雨系・非降雨系の両方を受ける</text>
 
-          <rect x="120" y="225" width="672" height="29" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
-            <rect x="125" y="229" width="14" height="12.5" fill="var(--c-predict)"/>
-            <text x="132" y="238.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">新</text>
-            <text x="144" y="238.5" font-size="10.3" font-weight="700" fill="var(--ink)">上流20km圏：センサ→サイレン直結</text>
-            <text x="127" y="251" font-size="8.4" fill="var(--ink-2)">人を判断ループから外す。猶予10分台では手続きが入らない</text>
-            <rect x="802" y="225" width="698" height="29" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.6"/>
-            <rect x="807" y="229" width="14" height="12.5" fill="var(--c-detect)"/>
-            <text x="814" y="238.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">改</text>
-            <text x="826" y="238.5" font-size="10.3" font-weight="700" fill="var(--ink)">下流：到達時刻予測に接続 → 集落別ETA</text>
-            <text x="809" y="251" font-size="8.4" fill="var(--ink-2)">降雨型・非降雨型に共通の出口。「11:40に到達、10:30までに高台へ」</text>
+          <rect x="120" y="222" width="1380" height="24" fill="var(--alert-soft)" stroke="var(--alert)" stroke-width="1.6"/>
+            <rect x="125" y="225.5" width="13" height="11.5" fill="var(--alert)"/>
+            <text x="131.5" y="234.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">新</text>
+            <text x="143" y="234.5" font-size="10" font-weight="700" fill="var(--alert)">大地震＝トリガではなく「状態修飾子」</text>
+            <text x="370" y="234.5" font-size="8.6" fill="var(--ink-2)">2015年 Gorkha M7.8 は<tspan font-weight="700">25,000件の同時多発斜面崩壊</tspan>と、ランタン谷の岩氷なだれ（350名以上）を起こした。地震検知時は R／D1／D2 の閾値を一段下げ、衛星タスキングを自動起動し、河道閉塞の発生を前提に置く</text>
 
-          <rect x="120" y="258" width="1380" height="21" fill="var(--alert-soft)" stroke="var(--alert)" stroke-width="1.6"/>
-            <rect x="125" y="262" width="14" height="12.5" fill="var(--alert)"/>
-            <text x="132" y="271.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">既</text>
-            <text x="144" y="271.5" font-size="9.8" font-weight="700" fill="var(--ink)">発令権限は NDRRMA／DHM にあるが、「地震系が検知した質量移動を降雨系の警報経路に入れる」ことを所掌する主体が存在しない</text>
+          <rect x="0" y="256" width="104" height="56" fill="var(--panel)" stroke="var(--line)"/>
+          <text x="9" y="270" font-family="IBM Plex Mono, BIZ UDPGothic, Hiragino Kaku Gothic ProN, Yu Gothic, sans-serif" font-size="9.4" font-weight="700" fill="var(--c-detect)">L4</text>
+          <text x="9" y="283" font-size="10.6" font-weight="700" fill="var(--ink)">判断</text>
 
-          <rect x="0" y="288" width="104" height="70" fill="var(--panel)" stroke="var(--line)"/>
-          <text x="9" y="303" font-family="IBM Plex Mono, BIZ UDPGothic, Hiragino Kaku Gothic ProN, Yu Gothic, sans-serif" font-size="9.6" font-weight="700" fill="var(--c-detect)">L5</text>
-          <text x="9" y="317" font-size="11" font-weight="700" fill="var(--ink)">伝達</text>
+          <rect x="120" y="259" width="672" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="125" y="262.5" width="13" height="11.5" fill="var(--c-predict)"/>
+            <text x="131.5" y="271.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">新</text>
+            <text x="143" y="271.5" font-size="10" font-weight="700" fill="var(--ink)">上流20km圏：センサ→サイレン直結</text>
+            <text x="126" y="282.5" font-size="8.2" fill="var(--ink-2)">人を判断ループから外す。猶予10分台では手続きが入らない</text>
+            <rect x="802" y="259" width="698" height="26" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.6"/>
+            <rect x="807" y="262.5" width="13" height="11.5" fill="var(--c-detect)"/>
+            <text x="813.5" y="271.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">改</text>
+            <text x="825" y="271.5" font-size="10" font-weight="700" fill="var(--ink)">下流：到達時刻予測に接続 → 集落別ETA</text>
+            <text x="808" y="282.5" font-size="8.2" fill="var(--ink-2)">降雨型・非降雨型に共通の出口</text>
 
-          <rect x="120" y="291" width="316.2352941176471" height="29" fill="var(--sunk)" stroke="var(--line)" stroke-width="1"/>
-            <rect x="125" y="295" width="14" height="12.5" fill="var(--muted)"/>
-            <text x="132" y="304.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">既</text>
-            <text x="144" y="304.5" font-size="10.3" font-weight="700" fill="var(--ink)">CBFEWS 8河川系</text>
-            <text x="127" y="317" font-size="8.4" fill="var(--ink-2)">ナラヤニ川を含む。この回廊に既にある</text>
-            <rect x="445.2352941176471" y="291" width="300.4235294117647" height="29" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.6"/>
-            <rect x="450.2352941176471" y="295" width="14" height="12.5" fill="var(--c-detect)"/>
-            <text x="457.2352941176471" y="304.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">改</text>
-            <text x="469.2352941176471" y="304.5" font-size="10.3" font-weight="700" fill="var(--ink)">SMS・ラジオ・TV・電話</text>
-            <text x="452.2352941176471" y="317" font-size="8.4" fill="var(--ink-2)">67万件の実績。範囲をハザード範囲へ</text>
-            <rect x="754.6588235294118" y="291" width="268.79999999999995" height="29" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
-            <rect x="759.6588235294118" y="295" width="14" height="12.5" fill="var(--c-predict)"/>
-            <text x="766.6588235294118" y="304.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">新</text>
-            <text x="778.6588235294118" y="304.5" font-size="10.3" font-weight="700" fill="var(--ink)">セルブロードキャスト</text>
-            <text x="761.6588235294118" y="317" font-size="8.4" fill="var(--ink-2)">多言語・外国SIMにも届く</text>
-            <rect x="1032.4588235294118" y="291" width="237.1764705882353" height="29" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
-            <rect x="1037.4588235294118" y="295" width="14" height="12.5" fill="var(--c-predict)"/>
-            <text x="1044.4588235294118" y="304.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">新</text>
-            <text x="1056.4588235294118" y="304.5" font-size="10.3" font-weight="700" fill="var(--ink)">坑内一斉警報</text>
-            <text x="1039.4588235294118" y="317" font-size="8.4" fill="var(--ink-2)">不明者933名の類型に対応</text>
-            <rect x="1278.6352941176472" y="291" width="221.36470588235292" height="29" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
-            <rect x="1283.6352941176472" y="295" width="14" height="12.5" fill="var(--c-predict)"/>
-            <text x="1290.6352941176472" y="304.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">新</text>
-            <text x="1302.6352941176472" y="304.5" font-size="10.3" font-weight="700" fill="var(--ink)">QZSS 災危通報</text>
-            <text x="1285.6352941176472" y="317" font-size="8.4" fill="var(--ink-2)">要 受信可能性PoC</text>
+          <rect x="120" y="289" width="1380" height="20" fill="var(--alert-soft)" stroke="var(--alert)" stroke-width="1.6"/>
+            <rect x="125" y="292.5" width="13" height="11.5" fill="var(--alert)"/>
+            <text x="131.5" y="301.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">既</text>
+            <text x="143" y="301.5" font-size="9.6" font-weight="700" fill="var(--ink)">発令権限は NDRRMA／DHM にあるが、「地震系が検知した質量移動を降雨系の警報経路に入れる」ことを所掌する主体が存在しない</text>
 
-          <rect x="120" y="324" width="1380" height="21" fill="var(--panel)" stroke="var(--line)"/>
-            <text x="128" y="338" font-size="9" fill="var(--ink-2)"><tspan font-weight="700">到達させる相手　</tspan>河岸集落　／　水力発電所の坑内労働者　／　トレッカー・外国人　／　治安・税関施設　／　輸送事業者　── 冗長な複数経路で</text>
+          <rect x="0" y="316" width="104" height="36" fill="var(--panel)" stroke="var(--line)"/>
+          <text x="9" y="330" font-family="IBM Plex Mono, BIZ UDPGothic, Hiragino Kaku Gothic ProN, Yu Gothic, sans-serif" font-size="9.4" font-weight="700" fill="var(--c-detect)">L5</text>
+          <text x="9" y="343" font-size="10.6" font-weight="700" fill="var(--ink)">伝達</text>
 
-          <g stroke="var(--c-detect)" stroke-width="1.6" marker-end="url(#fl)" opacity=".75"><path d="M52 74v3"/><path d="M52 116v3"/><path d="M52 218v3"/><path d="M52 284v3"/></g>
+          <rect x="120" y="319" width="316.2352941176471" height="26" fill="var(--sunk)" stroke="var(--line)" stroke-width="1"/>
+            <rect x="125" y="322.5" width="13" height="11.5" fill="var(--muted)"/>
+            <text x="131.5" y="331.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">既</text>
+            <text x="143" y="331.5" font-size="10" font-weight="700" fill="var(--ink)">CBFEWS 8河川系</text>
+            <text x="126" y="342.5" font-size="8.2" fill="var(--ink-2)">ナラヤニ川を含む。この回廊に既にある</text>
+            <rect x="445.2352941176471" y="319" width="300.4235294117647" height="26" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.6"/>
+            <rect x="450.2352941176471" y="322.5" width="13" height="11.5" fill="var(--c-detect)"/>
+            <text x="456.7352941176471" y="331.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">改</text>
+            <text x="468.2352941176471" y="331.5" font-size="10" font-weight="700" fill="var(--ink)">SMS・ラジオ・TV・電話</text>
+            <text x="451.2352941176471" y="342.5" font-size="8.2" fill="var(--ink-2)">67万件の実績。範囲をハザード範囲へ</text>
+            <rect x="754.6588235294118" y="319" width="268.79999999999995" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="759.6588235294118" y="322.5" width="13" height="11.5" fill="var(--c-predict)"/>
+            <text x="766.1588235294118" y="331.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">新</text>
+            <text x="777.6588235294118" y="331.5" font-size="10" font-weight="700" fill="var(--ink)">セルブロードキャスト</text>
+            <text x="760.6588235294118" y="342.5" font-size="8.2" fill="var(--ink-2)">多言語・外国SIMにも届く</text>
+            <rect x="1032.4588235294118" y="319" width="237.1764705882353" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="1037.4588235294118" y="322.5" width="13" height="11.5" fill="var(--c-predict)"/>
+            <text x="1043.9588235294118" y="331.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">新</text>
+            <text x="1055.4588235294118" y="331.5" font-size="10" font-weight="700" fill="var(--ink)">坑内一斉警報</text>
+            <text x="1038.4588235294118" y="342.5" font-size="8.2" fill="var(--ink-2)">不明者933名の類型に対応</text>
+            <rect x="1278.6352941176472" y="319" width="221.36470588235292" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="1283.6352941176472" y="322.5" width="13" height="11.5" fill="var(--c-predict)"/>
+            <text x="1290.1352941176472" y="331.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">新</text>
+            <text x="1301.6352941176472" y="331.5" font-size="10" font-weight="700" fill="var(--ink)">QZSS 災危通報</text>
+            <text x="1284.6352941176472" y="342.5" font-size="8.2" fill="var(--ink-2)">要 受信可能性PoC</text>
+
+          <g stroke="var(--c-detect)" stroke-width="1.5" marker-end="url(#fl)" opacity=".7"><path d="M52 42v3"/><path d="M52 114v3"/><path d="M52 150v3"/><path d="M52 252v3"/><path d="M52 312v3"/></g>
         </svg>
-        <figcaption>色は状態を表す。<b>灰＝既存をそのまま使う</b>／<b>赤枠＝既存だが今回機能しなかった</b>／<b>青緑＝既存を改修する</b>／<b>青＝新規に足す</b>。新規のうち恒久設備は L1 の3項目と L2 の衛星IoT のみ。<b>統合の実体は L3 にある</b> ── トリガを降雨型・氷岩なだれ・GLOF・装置被災の4系統に分けたまま、L4 の到達時刻予測と L5 の伝達経路だけを共有する。単一の検知器に賭けず、系統ごとに独立に発報できる構成にしている。</figcaption>
+        <figcaption>色は状態を表す。<b>灰＝既存をそのまま使う</b>／<b>赤枠＝既存だが今回機能しなかった</b>／<b>青緑＝既存を改修する</b>／<b>青＝新規に足す</b>。新規のうち恒久設備は L1 の3項目と L2 の衛星IoT のみ。<b>統合の実体は L3</b> ── トリガを4系統に分けたまま、L4 の到達時刻予測と L5 の伝達経路だけを共有する。単一の検知器に賭けず、系統ごとに独立に発報できる。<b>確度は3段階</b>（単一検知器＝予告／2検知器一致＝避難準備／下流の実測＝避難）。<b>L0 は平時の層</b>で、どこに観測点を置き閾値をいくつにするかを決める ── 静的な氷河湖目録では足りず、2025年の氷河上湖は半年で出現した。</figcaption>
       </figure>
     </div>
   </section>
