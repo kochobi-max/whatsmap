@@ -79,3 +79,31 @@ npm の `@fontsource/{zen-old-mincho,biz-udpgothic,noto-sans-jp,ibm-plex-mono}` 
 
 出力は `ews_A3.png`（300dpi）と `ews_A3.pdf`。再生成手順は上記と同じ
 （`@fontsource` のローカルCSSに差し替えてからレンダリング）。
+
+## 英語版（`concept_en.html` / `ews_en.html`）
+
+構想図とEWS構造図の英語版。内容・配色・グリッドは日本語版と同一で、
+書体だけを IBM Plex Serif（見出し）／IBM Plex Sans（本文）／IBM Plex Mono（数値・ラベル）の
+1スーパーファミリーに差し替えている。日本語フォントの参照は残していない。
+
+構造図のバッジは日本語版の 既／改／新 に対して **E（existing）／M（modified）／N（new）** を用いる。
+
+### 英語版で必要になった調整
+
+英字は同じ級数でも日本語より字面が横に広く、初回組版では
+`ews_en.html` で8要素、`concept_en.html` で14要素がクリップされた。
+そのため両ファイルとも `<style>` の末尾に英語版専用の級数調整ブロックを置いている
+（`.cx p` `.kv dd small` `.gs` 等を 0.2〜1.0px 下げる）。
+
+`concept_en.html` の中心図は幅固定のSVGボックスを持つため、
+7つの施策ボックスを「見出し／表題／説明2行／出典1行」の5行構成に組み直した
+（日本語版は4行）。ボックス内の各 `<text>` がボックス右端を越えていないかは
+`getBBox()` で実測して確認している。
+
+### 書き出し
+
+- `concept_en_A3.png` / `ews_en_A3.png` — A3横 300dpi（4961×3507px、pHYs付き）
+- `concept_en_A3.pdf` / `ews_en_A3.pdf` — A3横1ページ
+
+英語版は `@fontsource/{ibm-plex-serif,ibm-plex-sans,ibm-plex-mono}` を
+ローカルCSSに差し替えたコピーをレンダリングする。
