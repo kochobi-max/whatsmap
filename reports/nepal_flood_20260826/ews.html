@@ -1,0 +1,553 @@
+<title>ヒマラヤ統合EWS 構造図</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=BIZ+UDPGothic:wght@400;700&family=Noto+Sans+JP:wght@400;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#ECEDE8; --panel:#F7F8F4; --sunk:#E3E5DF; --ink:#1A2124; --ink-2:#3D4649;
+  --muted:#6E7673; --line:#C9CDC5; --line-soft:#DDE0D9;
+  --accent:#0F5A63; --alert:#A93F1C; --alert-soft:#F0DCD3;
+  --c-detect:#0F5A63;  --c-detect-bg:#DCE8E8;
+  --c-predict:#2E6A8E; --c-predict-bg:#DBE5EC;
+  --c-alert:#8F5C10;   --c-alert-bg:#EEE4CE;
+  --c-act:#42622E;     --c-act-bg:#E0E8D8;
+  --c-gov:#63507A;     --c-gov-bg:#E6E0EC;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#11171A; --panel:#1A2225; --sunk:#0C1214; --ink:#E7EAE6; --ink-2:#BAC1BE;
+    --muted:#8B9692; --line:#2E3A3D; --line-soft:#232C2F;
+    --accent:#5FB8C2; --alert:#E08256; --alert-soft:#3A241B;
+    --c-detect:#63BCC6;  --c-detect-bg:#16383C;
+    --c-predict:#7CB3D6; --c-predict-bg:#173040;
+    --c-alert:#D8AC5C;   --c-alert-bg:#3A2E13;
+    --c-act:#9BC183;     --c-act-bg:#25341C;
+    --c-gov:#BCA3CE;     --c-gov-bg:#2F2539;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#11171A; --panel:#1A2225; --sunk:#0C1214; --ink:#E7EAE6; --ink-2:#BAC1BE;
+  --muted:#8B9692; --line:#2E3A3D; --line-soft:#232C2F;
+  --accent:#5FB8C2; --alert:#E08256; --alert-soft:#3A241B;
+  --c-detect:#63BCC6;  --c-detect-bg:#16383C;
+  --c-predict:#7CB3D6; --c-predict-bg:#173040;
+  --c-alert:#D8AC5C;   --c-alert-bg:#3A2E13;
+  --c-act:#9BC183;     --c-act-bg:#25341C;
+  --c-gov:#BCA3CE;     --c-gov-bg:#2F2539;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);
+  font-family:"BIZ UDPGothic","Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;
+  -webkit-font-smoothing:antialiased;}
+#stage{width:100%;overflow:hidden}
+#board{width:1587px;height:1122px;transform-origin:top left;padding:16px 20px;
+  display:flex;flex-direction:column;gap:9px;background:var(--paper)}
+
+.ico{width:1em;height:1em;flex:none;fill:none;stroke:currentColor;stroke-width:1.9;
+  stroke-linecap:round;stroke-linejoin:round;vertical-align:-.14em}
+
+/* ---- header ---- */
+.hd{display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;
+  border-bottom:3px double var(--ink);padding-bottom:9px;height:76px;flex:none}
+.hd .mk{font-size:40px;color:var(--c-detect);line-height:0}
+.hd h1{font-family:"Zen Old Mincho","Hiragino Mincho ProN","Yu Mincho","MS PMincho",serif;font-weight:900;font-size:25px;line-height:1.15;letter-spacing:.02em}
+.hd .st{font-size:11px;color:var(--ink-2);margin-top:3px;font-weight:700}
+.hd .cl{background:var(--c-detect-bg);color:var(--c-detect);border:1px solid var(--c-detect);
+  padding:7px 14px;font-weight:700;font-size:12.5px;line-height:1.45;max-width:475px;text-align:center}
+.hd .meta{font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;font-size:8.3px;color:var(--muted);margin-top:3px;letter-spacing:.03em}
+
+/* ---- rows ---- */
+.row{display:grid;gap:9px;flex:none}
+.r1{grid-template-columns:1.06fr 1fr 1.1fr;height:248px}
+.r2{grid-template-columns:1fr;height:432px}
+.r3{grid-template-columns:1.1fr 1fr 1fr;height:210px}
+.r4{grid-template-columns:1fr;height:84px}
+
+.p{background:var(--panel);border:1px solid var(--line);display:flex;flex-direction:column;overflow:hidden}
+.ph{display:flex;align-items:center;gap:8px;padding:6px 11px;background:var(--sunk);
+  border-bottom:1px solid var(--line);flex:none}
+.ph .no{font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;font-size:9px;font-weight:600;color:var(--paper);
+  background:var(--ink);padding:2px 6px;letter-spacing:.05em;flex:none}
+.ph .ico{font-size:17px;color:var(--c-detect)}
+.ph h2{font-size:13px;font-weight:700;line-height:1.35;letter-spacing:.01em}
+.pb{padding:9px 11px;flex:1;min-height:0;display:flex;flex-direction:column}
+
+/* ---- p1 timeline ---- */
+.tr{display:grid;grid-template-columns:15px 48px 1fr;gap:5px;padding:1px 0;
+  border-bottom:1px dotted var(--line-soft);align-items:baseline}
+.tr .ico{font-size:12px;color:var(--muted);align-self:center}
+.tt{font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;font-size:10.5px;font-weight:600;color:var(--c-detect);font-variant-numeric:tabular-nums;line-height:1.3}
+.td{font-size:10px;line-height:1.45}
+.tr.hot .tt{color:var(--alert)} .tr.hot .ico{color:var(--alert)} .tr.hot .td b{color:var(--alert)}
+.grow{flex:1 1 auto;min-height:0;overflow:hidden}
+.sumbar{margin-top:6px;padding:5px 8px;background:var(--sunk);font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  font-size:10.5px;font-weight:600;text-align:center;letter-spacing:.02em;flex:none}
+.note{font-size:9px;color:var(--muted);line-height:1.5;margin-top:5px;padding-top:4px;
+  border-top:1px solid var(--line-soft);flex:none}
+
+/* ---- p2 chart ---- */
+.dr{display:grid;grid-template-columns:82px 74px 1fr;gap:6px;align-items:center;padding:0}
+.dn{font-size:10px;font-weight:700;line-height:1.2}
+.dn small{display:block;font-weight:400;color:var(--muted);font-size:8px;font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif}
+.dl{font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;font-size:9.5px;color:var(--ink-2);text-align:right;font-variant-numeric:tabular-nums}
+.dl.neg{color:var(--alert);font-weight:600}
+.db{display:flex;align-items:center;gap:6px}
+.db i{height:10px;background:var(--alert);display:block}
+.db b{font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;font-size:10px;font-variant-numeric:tabular-nums;font-weight:600}
+.dh{display:grid;grid-template-columns:84px 76px 1fr;gap:6px;font-size:8.5px;color:var(--muted);
+  font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;border-bottom:1px solid var(--line);padding-bottom:3px;margin-bottom:3px}
+.dh span:nth-child(2){text-align:right}
+
+/* ---- p3 gaps ---- */
+.gi{display:grid;grid-template-columns:16px 1fr;gap:7px;align-items:start;padding:3px 0;
+  border-bottom:1px dotted var(--line-soft)}
+.gi:last-child{border-bottom:none}
+.gi .ico{font-size:15px;color:var(--alert);margin-top:2px}
+.gt{font-size:11px;font-weight:700;line-height:1.35}
+.gt em{font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;font-size:8.5px;font-style:normal;color:var(--alert);margin-right:5px}
+.gd{font-size:9px;color:var(--ink-2);line-height:1.5;margin-top:1px}
+.gd b{color:var(--alert)}
+
+/* ---- figure ---- */
+figure{margin:0}
+figure svg.fig{width:100%;height:auto;display:block}
+.pb-fig{display:block}
+.allband{display:flex;align-items:center;gap:9px;margin-top:6px;padding:5px 10px;
+  background:var(--c-gov-bg);border:1px solid var(--c-gov);flex:none}
+.allband .ico{font-size:15px;color:var(--c-gov)}
+.allband .k{font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;font-size:9px;font-weight:600;color:var(--c-gov);
+  letter-spacing:.05em;flex:none;line-height:1.3}
+.allband .t{font-size:10px;line-height:1.5}
+figcaption{font-size:8.5px;color:var(--muted);line-height:1.5;margin-top:5px;flex:none}
+
+/* ---- p5 tech map ---- */
+.tg{display:grid;grid-template-columns:1fr 1fr;gap:6px 10px;flex:1;min-height:0}
+.mi{display:grid;grid-template-columns:18px 1fr;gap:6px;align-items:start;
+  border-left:2px solid var(--line);padding-left:6px}
+.mi .ico{font-size:16px;margin-top:1px}
+.mt{font-size:10px;font-weight:700;line-height:1.3}
+.mt em{font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;font-size:8px;font-style:normal;padding:1px 4px;margin-right:5px}
+.mm{font-size:9px;color:var(--muted);font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;line-height:1.45}
+.mb{font-size:9px;color:var(--ink-2);line-height:1.45;margin-top:1px}
+.mmi{font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;font-size:8px;color:var(--muted);display:block}
+.mb b{color:var(--ink)}
+
+/* ---- p6 table ---- */
+table{border-collapse:collapse;width:100%;font-size:9px}
+th,td{padding:2px 6px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line-soft);line-height:1.45}
+thead th{background:var(--sunk);font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;font-size:8px;letter-spacing:.05em;
+  color:var(--muted);text-transform:uppercase;font-weight:600}
+td.tm{font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;font-weight:600;color:var(--c-detect);white-space:nowrap;font-size:9px}
+
+/* ---- p7 cannot ---- */
+.cx{display:grid;grid-template-columns:15px 1fr;gap:6px;background:var(--alert-soft);
+  border-left:3px solid var(--alert);padding:4px 8px;margin-bottom:4px}
+.cx:last-child{margin-bottom:0}
+.cx .ico{font-size:14px;color:var(--alert);margin-top:2px}
+.cx h4{font-size:10.5px;font-weight:700;color:var(--alert);line-height:1.35}
+.cx p{font-size:9.5px;line-height:1.5;color:var(--ink-2);margin-top:1px}
+
+/* ---- foot ---- */
+.foot{display:grid;grid-template-columns:1.15fr 1.35fr 1.5fr;gap:14px;height:100%;align-items:center}
+.flab{font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;font-size:8px;letter-spacing:.09em;color:var(--muted);margin-bottom:3px}
+.lg{display:flex;flex-wrap:wrap;gap:2px 9px}
+.lgi{display:flex;align-items:center;gap:4px;font-size:8.2px}
+.lgi i{width:13px;height:9px;display:block;border:1px solid var(--line)}
+.gs{columns:2;column-gap:14px;font-size:8px;line-height:1.4;color:var(--ink-2)}
+.gs div{break-inside:avoid}
+.gs b{font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;color:var(--ink);font-weight:600}
+.ms{display:flex;align-items:center;gap:11px;background:var(--c-detect-bg);border-left:3px solid var(--c-detect);padding:8px 12px;height:100%}
+.ms .ico{font-size:26px;color:var(--c-detect);flex:none}
+.ms .a{font-family:"Zen Old Mincho","Hiragino Mincho ProN","Yu Mincho","MS PMincho",serif;font-size:16px;font-weight:700;line-height:1.35;color:var(--c-detect)}
+.ms .b{font-size:9px;color:var(--ink-2);line-height:1.5;margin-top:3px;font-weight:700}
+
+@media print{
+  @page{size:A3 landscape;margin:0}
+  #stage{height:auto!important;overflow:visible}
+  #board{transform:none!important}
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute;visibility:hidden" aria-hidden="true"><defs>
+<symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 3.5 22 20.5H2z"/><path d="M12 10v4.5"/><circle cx="12" cy="17.6" r=".9" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-bars" viewBox="0 0 24 24"><path d="M3 21h18"/><rect x="4.5" y="14" width="3.6" height="7"/><rect x="10.2" y="9" width="3.6" height="12"/><rect x="15.9" y="4" width="3.6" height="17"/></symbol>
+<symbol id="i-gap" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" stroke-dasharray="3.2 3"/><path d="M7.5 12h3M13.5 12h3"/></symbol>
+<symbol id="i-flow" viewBox="0 0 24 24"><circle cx="4.5" cy="12" r="2.4"/><circle cx="19.5" cy="5.5" r="2.4"/><circle cx="19.5" cy="18.5" r="2.4"/><path d="M6.8 11.1 17.2 6.4M6.8 12.9l10.4 4.7"/></symbol>
+<symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.4"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.2 5.2l2.1 2.1M16.7 16.7l2.1 2.1M18.8 5.2l-2.1 2.1M7.3 16.7l-2.1 2.1"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6.5V12l3.6 2.1"/></symbol>
+<symbol id="i-no" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M5.6 18.4 18.4 5.6"/></symbol>
+<symbol id="i-seismo" viewBox="0 0 24 24"><path d="M1.5 12h3.4l2.4-7.5L11 19.5l2.8-10.5 2.3 3h6.4"/></symbol>
+<symbol id="i-siren" viewBox="0 0 24 24"><path d="M2.5 9.2v5.6H6l5.2 4.4V4.8L6 9.2z"/><path d="M15 8.6a5 5 0 0 1 0 6.8M18.2 5.9a9.3 9.3 0 0 1 0 12.2"/></symbol>
+<symbol id="i-gauge" viewBox="0 0 24 24"><rect x="9.5" y="2.5" width="5" height="13"/><path d="M11 5.5h3M11 8.5h2M11 11.5h3"/><path d="M1.5 18.5c3 0 3 1.9 6 1.9s3-1.9 6-1.9 3 1.9 6 1.9 3-1.9 3-1.9"/></symbol>
+<symbol id="i-fore" viewBox="0 0 24 24"><circle cx="10" cy="12" r="7.6"/><path d="M10 7v5l3.4 2"/><path d="M19.4 12h3.2M20.9 10.2l1.7 1.8-1.7 1.8"/></symbol>
+<symbol id="i-cast" viewBox="0 0 24 24"><circle cx="12" cy="7.4" r="1.9"/><path d="M8.6 4a4.8 4.8 0 0 0 0 6.8M15.4 4a4.8 4.8 0 0 1 0 6.8M5.8 1.6a8.7 8.7 0 0 0 0 11.6M18.2 1.6a8.7 8.7 0 0 1 0 11.6"/><path d="m12 9.6-3 12.4h6z"/></symbol>
+<symbol id="i-hill" viewBox="0 0 24 24"><path d="M1.5 20.5h21"/><path d="m3.5 20.5 6.5-10 3.4 5.2 2-3 5.1 7.8"/><path d="M12.5 6.5v-5M10.3 3.4 12.5 1.2l2.2 2.2"/></symbol>
+<symbol id="i-sat" viewBox="0 0 24 24"><rect x="9.6" y="9" width="4.8" height="6.6"/><rect x="1.5" y="10.2" width="7" height="4.2"/><rect x="15.5" y="10.2" width="7" height="4.2"/><path d="M12 9V4M9.9 5.3 12 3.2l2.1 2.1"/></symbol>
+<symbol id="i-tunnel" viewBox="0 0 24 24"><path d="M3 21v-8.5a9 9 0 0 1 18 0V21"/><path d="M9 21v-8.5a3 3 0 0 1 6 0V21"/><path d="M1.5 21h21"/></symbol>
+<symbol id="i-run" viewBox="0 0 24 24"><circle cx="14.5" cy="4" r="2.2"/><path d="m13.5 7.5-3 4.5 3.5 3 1 6.5M10.5 12l-4 1.5M14 14.5l4.5 2.5"/></symbol>
+<symbol id="i-dam" viewBox="0 0 24 24"><path d="M9 21V8.5L12.5 4 16 8.5V21z"/><path d="M1.5 11h7M1.5 15.5h7M1.5 19h7M16 16h6.5"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><ellipse cx="12" cy="12" rx="4.2" ry="9"/></symbol>
+<symbol id="i-yen" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8.6 7.6 3.4 5 3.4-5M8.8 13h6.4M8.8 15.9h6.4M12 12.6V17"/></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2.5h8l4.5 4.5v14.5H6z"/><path d="M14 2.5V7h4.5"/><path d="M9 12h6.5M9 15.5h6.5M9 19h4"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><rect x="6.5" y="2" width="11" height="20" rx="1.8"/><path d="M10.5 18.6h3"/><path d="M9 5.5h6"/></symbol>
+<symbol id="i-mtn" viewBox="0 0 24 24"><path d="m2 20 7.5-13 4 6.5 2.5-4L22 20z"/><path d="M9.5 7 7 11.2h5z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-wave" viewBox="0 0 24 24"><path d="M1.5 7c3 0 3 2 6 2s3-2 6-2 3 2 6 2 3-2 3-2M1.5 13c3 0 3 2 6 2s3-2 6-2 3 2 6 2 3-2 3-2M1.5 19c3 0 3 2 6 2s3-2 6-2 3 2 6 2 3-2 3-2"/></symbol>
+</defs></svg>
+<style>
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 9px;align-items:baseline}
+.kv dt{font-family:"IBM Plex Mono","BIZ UDPGothic",sans-serif;font-size:8.5px;font-weight:600;color:var(--paper);background:var(--muted);padding:1px 5px;white-space:nowrap;justify-self:start}
+.kv dt.f{background:var(--c-detect)} .kv dt.n{background:var(--c-predict)} .kv dt.x{background:var(--alert)}
+.kv dd{font-size:10px;line-height:1.5}
+.kv dd b{font-weight:700}
+.kv dd small{display:block;color:var(--muted);font-size:8.8px;line-height:1.45}
+.lat{width:100%;border-collapse:collapse;font-size:9.5px}
+.lat td{padding:2.5px 5px;border-bottom:1px solid var(--line-soft)}
+.lat td:last-child{text-align:right;font-family:"IBM Plex Mono","BIZ UDPGothic",sans-serif;font-weight:600;white-space:nowrap}
+.lat tr:last-child td{border-bottom:none}
+.ph2{display:flex;align-items:baseline;gap:7px;margin:6px 0 2px}
+.ph2 em{font-family:"IBM Plex Mono","BIZ UDPGothic",sans-serif;font-style:normal;font-size:8.5px;font-weight:600;color:var(--paper);background:var(--c-detect);padding:1px 5px;flex:none}
+.ph2 em.g{background:var(--alert)}
+.ph2 b{font-size:10.5px}
+.ph2 span{margin-left:auto;font-family:"IBM Plex Mono","BIZ UDPGothic",sans-serif;font-size:9px;color:var(--muted);white-space:nowrap}
+.pd{font-size:8.6px;color:var(--ink-2);line-height:1.45;margin-bottom:3px}
+.ph2{margin:5px 0 1px}
+.lat td{padding:1.5px 5px}
+.lat{font-size:9.2px}
+.kv{gap:3px 8px}
+.kv dd{font-size:9.6px;line-height:1.45}
+.kv dd small{font-size:8.4px;line-height:1.4}
+.cx{padding:3px 7px;margin-bottom:3px}
+.cx h4{font-size:10px}
+.cx p{font-size:8.8px;line-height:1.45}
+.gs{font-size:8px;line-height:1.4}
+.hd .st{font-size:10.5px}
+.note{font-size:8.6px;line-height:1.48}
+.pb{padding:8px 10px}
+.kv dd{font-size:9.4px;line-height:1.42}
+.hd .cl{font-size:12px;padding:6px 13px}
+</style>
+
+<div id="stage" lang="ja"><div id="board">
+
+<header class="hd">
+  <svg class="ico mk"><use href="#i-cast"/></svg>
+  <div>
+    <h1>ヒマラヤ統合EWS 構造図</h1>
+    <div class="st">氷岩なだれ・GLOF・河道閉塞を、既存の国家地震観測網の上に載せて検知する（検討図）</div>
+    <div class="meta">作成 2026-08-30 ／ 2026年8月26日ボテコシ／トリスリ川洪水の検討に基づく ／ 公式見解ではない</div>
+  </div>
+  <div class="cl">ゼロから作らない。<br>すでにある観測網に、読み方と経路を足す。</div>
+</header>
+
+<div class="row r1">
+  <section class="p">
+    <div class="ph"><span class="no">1</span><svg class="ico"><use href="#i-gear"/></svg><h2>ネパールが既に持っているもの</h2></div>
+    <div class="pb">
+      <dl class="kv">
+        <dt>既</dt><dd><b>広帯域地震計 約40局</b><small>DMG／国家地震観測研究センター（NEMRC）が運用</small></dd>
+        <dt>既</dt><dd><b>加速度計 約36台・GNSS 約50点</b><small>強震観測と地殻変動監視</small></dd>
+        <dt>既</dt><dd><b>東京大学・JICA による8局</b><small>日本との地震観測協力は既に存在する。拡張の足場</small></dd>
+        <dt>既</dt><dd><b>中国地震局（CEA）10局</b><small>北部を中心に展開。越境側の標定精度に効きうる</small></dd>
+        <dt>既</dt><dd><b>DHM 水位観測局・洪水予警報</b><small>ボテコシ〜ナラヤニ回廊に6局。SMS一斉配信は67万件の実績</small></dd>
+      </dl>
+      <p class="note"><b>不足しているのは地震計ではない。</b>その信号を<b>質量移動と洪水として読む処理系</b>と、<b>警報に変える制度</b>である。本図が「新設」でなく「改良」である理由。</p>
+    </div>
+  </section>
+
+  <section class="p">
+    <div class="ph"><span class="no">2</span><svg class="ico" style="color:var(--alert)"><use href="#i-gap"/></svg><h2>では、なぜ機能しなかったのか</h2></div>
+    <div class="pb">
+      <dl class="kv">
+        <dt class="x">欠1</dt><dd><b>処理系が地震用に最適化されている</b><small>鋭い到達波を結合する設計。立ち上がりの緩い質量移動は結合段階で捨てられる。今回のカタログの <b>nst = 0</b> がその証拠</small></dd>
+        <dt class="x">欠2</dt><dd><b>観測点配置が国土均等</b><small>地震監視は全国一様を望むが、質量移動検知は対象上流域に密に置きたい</small></dd>
+        <dt class="x">欠3</dt><dd><b>地震以外の自動発報経路が無い</b><small>08:37も11:45も、解析者が事後に処理して初めてカタログに載った（登録は1日半後）</small></dd>
+        <dt class="x">欠4</dt><dd><b>所管が割れている</b><small>地震＝DMG／洪水警報＝DHM／対応＝NDRRMA。<b>「地震学的に検知した質量移動を河川警報に変える」所掌主体が存在しない</b></small></dd>
+      </dl>
+      <p class="note"><b>4つのうち3つはソフトウェアと制度の問題である。</b>ハードウェアの不足は欠2だけで、それも流域あたり数局の補填にとどまる。</p>
+    </div>
+  </section>
+
+  <section class="p">
+    <div class="ph"><span class="no">3</span><svg class="ico"><use href="#i-seismo"/></svg><h2>2つの現象、2つの検知原理</h2></div>
+    <div class="pb">
+      <div style="flex:1;min-height:0">
+        <div class="ph2"><em>D1</em><b>氷岩なだれ ＝ 単一力震源</b></div>
+        <p class="pd">滑動する土塊が地球を押し、反力が長周期（20〜150秒）に放射される。明瞭なP波を持たず数十秒〜数分続く ── <b>だから地震用の処理では捨てられる。</b></p>
+        <table class="lat">
+          <tr><td>表面波の到達（20〜50km）</td><td>7〜17 秒</td></tr>
+          <tr><td>判別に必要な信号長</td><td>20〜40 秒</td></tr>
+          <tr><td>多点結合・処理</td><td>5〜10 秒</td></tr>
+          <tr><td style="font-weight:700">発報レイテンシ</td><td style="color:var(--c-detect)">60〜120 秒</td></tr>
+        </table>
+        <div class="ph2" style="margin-top:8px"><em>D2</em><b>GLOF ＝ 河川微動</b></div>
+        <p class="pd">決壊は<b>衝撃的な震源を持たない</b>。検知するのは洪水そのもの ── 1〜10Hz、掃流砂の衝突。<b>2016年Gongbatongsha GLOFを、この同じ流域で観測網が2波に分離して捉えた。</b></p>
+      </div>
+      <p class="note"><b>河岸の地震計は、流されない非接触の水位計である。</b>今回、上流3局の水位計は警戒水位に達する前に沈黙した ── 洪水が壊したからだ。</p>
+    </div>
+  </section>
+</div>
+
+<div class="row r2">
+  <section class="p">
+    <div class="ph"><span class="no">4</span><svg class="ico"><use href="#i-flow"/></svg><h2>5層アーキテクチャ ── 何を流用し、何を改修し、何を足すか</h2></div>
+    <div class="pb pb-fig">
+      <figure>
+        <svg class="fig" viewBox="0 0 1520 358" role="img" aria-label="5層のEWSアーキテクチャ。既存・要改修・新規追加を色分けし、センシング、伝送、処理、判断、伝達の各層で何を流用し何を足すかを示す。">
+          <defs><marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="var(--c-detect)"/></marker></defs>
+
+          <rect x="0" y="4" width="104" height="70" fill="var(--panel)" stroke="var(--line)"/>
+          <text x="9" y="19" font-family="IBM Plex Mono, BIZ UDPGothic, Hiragino Kaku Gothic ProN, Yu Gothic, sans-serif" font-size="9.6" font-weight="700" fill="var(--c-detect)">L1</text>
+          <text x="9" y="33" font-size="11" font-weight="700" fill="var(--ink)">センシング</text>
+          <text x="9" y="46" font-size="8.2" fill="var(--muted)">既存40局＋補填</text>
+
+          <rect x="120" y="8" width="313.0841121495327" height="29" fill="var(--sunk)" stroke="var(--line)" stroke-width="1"/>
+            <rect x="125" y="12" width="14" height="12.5" fill="var(--muted)"/>
+            <text x="132" y="21.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">既</text>
+            <text x="144" y="21.5" font-size="10.3" font-weight="700" fill="var(--ink)">NSC 広帯域地震計 約40局</text>
+            <text x="127" y="34" font-size="8.4" fill="var(--ink-2)">DMG／国家地震観測研究センター（NEMRC）</text>
+            <rect x="443.0841121495327" y="8" width="244.20560747663552" height="29" fill="var(--sunk)" stroke="var(--line)" stroke-width="1"/>
+            <rect x="448.0841121495327" y="12" width="14" height="12.5" fill="var(--muted)"/>
+            <text x="455.0841121495327" y="21.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">既</text>
+            <text x="467.0841121495327" y="21.5" font-size="10.3" font-weight="700" fill="var(--ink)">加速度計 約36台</text>
+            <text x="450.0841121495327" y="34" font-size="8.4" fill="var(--ink-2)">強震観測</text>
+            <rect x="697.2897196261682" y="8" width="250.46728971962617" height="29" fill="var(--sunk)" stroke="var(--line)" stroke-width="1"/>
+            <rect x="702.2897196261682" y="12" width="14" height="12.5" fill="var(--muted)"/>
+            <text x="709.2897196261682" y="21.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">既</text>
+            <text x="721.2897196261682" y="21.5" font-size="10.3" font-weight="700" fill="var(--ink)">東京大学・JICA 8局</text>
+            <text x="704.2897196261682" y="34" font-size="8.4" fill="var(--ink-2)">設置済み。拡張の足場</text>
+            <rect x="957.7570093457944" y="8" width="244.20560747663552" height="29" fill="var(--sunk)" stroke="var(--line)" stroke-width="1"/>
+            <rect x="962.7570093457944" y="12" width="14" height="12.5" fill="var(--muted)"/>
+            <text x="969.7570093457944" y="21.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">既</text>
+            <text x="981.7570093457944" y="21.5" font-size="10.3" font-weight="700" fill="var(--ink)">中国CEA 10局</text>
+            <text x="964.7570093457944" y="34" font-size="8.4" fill="var(--ink-2)">北部を中心に展開</text>
+            <rect x="1211.96261682243" y="8" width="288.03738317757006" height="29" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.6"/>
+            <rect x="1216.96261682243" y="12" width="14" height="12.5" fill="var(--c-detect)"/>
+            <text x="1223.96261682243" y="21.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">改</text>
+            <text x="1235.96261682243" y="21.5" font-size="10.3" font-weight="700" fill="var(--ink)">DHM 水位観測局 6局</text>
+            <text x="1218.96261682243" y="34" font-size="8.4" fill="var(--ink-2)">→30局へ。上昇率でトリガ</text>
+
+          <rect x="120" y="41" width="445.9016393442623" height="29" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="125" y="45" width="14" height="12.5" fill="var(--c-predict)"/>
+            <text x="132" y="54.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">新</text>
+            <text x="144" y="54.5" font-size="10.3" font-weight="700" fill="var(--ink)">対象上流域に広帯域＋強震を3〜5局／流域</text>
+            <text x="127" y="67" font-size="8.4" fill="var(--ink-2)">岩盤上・想定洪水位より上に設置</text>
+            <rect x="575.9016393442623" y="41" width="445.9016393442623" height="29" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="580.9016393442623" y="45" width="14" height="12.5" fill="var(--c-predict)"/>
+            <text x="587.9016393442623" y="54.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">新</text>
+            <text x="599.9016393442623" y="54.5" font-size="10.3" font-weight="700" fill="var(--ink)">微気圧計（インフラサウンド）を併設</text>
+            <text x="582.9016393442623" y="67" font-size="8.4" fill="var(--ink-2)">地震は空振を出さない＝質量移動を峻別</text>
+            <rect x="1031.8032786885246" y="41" width="468.1967213114754" height="29" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="1036.8032786885246" y="45" width="14" height="12.5" fill="var(--c-predict)"/>
+            <text x="1043.8032786885246" y="54.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">新</text>
+            <text x="1055.8032786885246" y="54.5" font-size="10.3" font-weight="700" fill="var(--ink)">河岸に微動観測点を回廊沿いに配置</text>
+            <text x="1038.8032786885246" y="67" font-size="8.4" fill="var(--ink-2)">流されない非接触の水位計として働く</text>
+
+          <rect x="0" y="78" width="104" height="38" fill="var(--panel)" stroke="var(--line)"/>
+          <text x="9" y="93" font-family="IBM Plex Mono, BIZ UDPGothic, Hiragino Kaku Gothic ProN, Yu Gothic, sans-serif" font-size="9.6" font-weight="700" fill="var(--c-detect)">L2</text>
+          <text x="9" y="107" font-size="11" font-weight="700" fill="var(--ink)">伝送</text>
+
+          <rect x="120" y="81" width="672" height="32" fill="var(--sunk)" stroke="var(--line)" stroke-width="1"/>
+            <rect x="125" y="85" width="14" height="12.5" fill="var(--muted)"/>
+            <text x="132" y="94.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">既</text>
+            <text x="144" y="94.5" font-size="10.3" font-weight="700" fill="var(--ink)">既存テレメトリ（カトマンズへ）</text>
+            <text x="127" y="107" font-size="8.4" fill="var(--ink-2)">携帯／マイクロ波。谷筋を通るため同じ災害で切れる</text>
+            <rect x="802" y="81" width="698" height="32" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="807" y="85" width="14" height="12.5" fill="var(--c-predict)"/>
+            <text x="814" y="94.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">新</text>
+            <text x="826" y="94.5" font-size="10.3" font-weight="700" fill="var(--ink)">衛星IoTによる二重化</text>
+            <text x="809" y="107" font-size="8.4" fill="var(--ink-2)">警報経路に要るのは波形でなくパラメータ。低帯域で足りる</text>
+
+          <rect x="0" y="120" width="104" height="96" fill="var(--panel)" stroke="var(--line)"/>
+          <text x="9" y="135" font-family="IBM Plex Mono, BIZ UDPGothic, Hiragino Kaku Gothic ProN, Yu Gothic, sans-serif" font-size="9.6" font-weight="700" fill="var(--c-detect)">L3</text>
+          <text x="9" y="149" font-size="11" font-weight="700" fill="var(--ink)">処理</text>
+          <text x="9" y="162" font-size="8.2" fill="var(--muted)">最大の欠落</text>
+
+          <rect x="120" y="124" width="672" height="29" fill="var(--alert-soft)" stroke="var(--alert)" stroke-width="1.6"/>
+            <rect x="125" y="128" width="14" height="12.5" fill="var(--alert)"/>
+            <text x="132" y="137.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">既</text>
+            <text x="144" y="137.5" font-size="10.3" font-weight="700" fill="var(--ink)">地震処理系：鋭い到達波を結合して震源決定</text>
+            <text x="127" y="150" font-size="8.4" fill="var(--ink-2)">立ち上がりの緩い信号は結合段階で捨てられる（今回 nst=0）</text>
+            <rect x="802" y="124" width="698" height="29" fill="var(--alert-soft)" stroke="var(--alert)" stroke-width="1.6"/>
+            <rect x="807" y="128" width="14" height="12.5" fill="var(--alert)"/>
+            <text x="814" y="137.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">既</text>
+            <text x="826" y="137.5" font-size="10.3" font-weight="700" fill="var(--ink)">DHM 洪水予警報：降雨とモンスーン水文</text>
+            <text x="809" y="150" font-size="8.4" fill="var(--ink-2)">非降雨型の質量移動は原理的に見えない</text>
+
+          <rect x="120" y="157" width="335.82089552238807" height="29" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="125" y="161" width="14" height="12.5" fill="var(--c-predict)"/>
+            <text x="132" y="170.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">新</text>
+            <text x="144" y="170.5" font-size="10.3" font-weight="700" fill="var(--ink)">D1 単一力検知</text>
+            <text x="127" y="183" font-size="8.4" fill="var(--ink-2)">長周期20〜150s。質量移動</text>
+            <rect x="465.82089552238807" y="157" width="335.82089552238807" height="29" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="470.82089552238807" y="161" width="14" height="12.5" fill="var(--c-predict)"/>
+            <text x="477.82089552238807" y="170.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">新</text>
+            <text x="489.82089552238807" y="170.5" font-size="10.3" font-weight="700" fill="var(--ink)">D2 河川微動検知</text>
+            <text x="472.82089552238807" y="183" font-size="8.4" fill="var(--ink-2)">1〜10Hz。掃流砂の衝突＝洪水</text>
+            <rect x="811.6417910447761" y="157" width="308.95522388059703" height="29" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="816.6417910447761" y="161" width="14" height="12.5" fill="var(--c-predict)"/>
+            <text x="823.6417910447761" y="170.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">新</text>
+            <text x="835.6417910447761" y="170.5" font-size="10.3" font-weight="700" fill="var(--ink)">D3 欠測検知</text>
+            <text x="818.6417910447761" y="183" font-size="8.4" fill="var(--ink-2)">沈黙は故障でなく被災の証拠</text>
+            <rect x="1130.597014925373" y="157" width="369.40298507462694" height="29" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="1135.597014925373" y="161" width="14" height="12.5" fill="var(--c-predict)"/>
+            <text x="1142.597014925373" y="170.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">新</text>
+            <text x="1154.597014925373" y="170.5" font-size="10.3" font-weight="700" fill="var(--ink)">統合判定（確度3段階）</text>
+            <text x="1137.597014925373" y="183" font-size="8.4" fill="var(--ink-2)">1つで暫定／2つ一致で確度を上げる</text>
+
+          <rect x="120" y="190" width="1380" height="20" fill="var(--panel)" stroke="var(--line)"/>
+            <text x="128" y="204" font-size="8.8" fill="var(--ink-2)"><tspan font-weight="700" fill="var(--c-predict)">確度の段階　</tspan>L1 可能性（単一検知器・関係機関に予告）　→　L2 蓋然（2検知器が一致・避難準備）　→　L3 確認（下流の実測で裏付け・避難）</text>
+
+          <rect x="0" y="220" width="104" height="62" fill="var(--panel)" stroke="var(--line)"/>
+          <text x="9" y="235" font-family="IBM Plex Mono, BIZ UDPGothic, Hiragino Kaku Gothic ProN, Yu Gothic, sans-serif" font-size="9.6" font-weight="700" fill="var(--c-detect)">L4</text>
+          <text x="9" y="249" font-size="11" font-weight="700" fill="var(--ink)">判断</text>
+
+          <rect x="120" y="223" width="672" height="29" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="125" y="227" width="14" height="12.5" fill="var(--c-predict)"/>
+            <text x="132" y="236.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">新</text>
+            <text x="144" y="236.5" font-size="10.3" font-weight="700" fill="var(--ink)">上流20km圏：センサ→サイレン直結</text>
+            <text x="127" y="249" font-size="8.4" fill="var(--ink-2)">人を判断ループから外す。猶予10分台では手続きが入らない</text>
+            <rect x="802" y="223" width="698" height="29" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.6"/>
+            <rect x="807" y="227" width="14" height="12.5" fill="var(--c-detect)"/>
+            <text x="814" y="236.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">改</text>
+            <text x="826" y="236.5" font-size="10.3" font-weight="700" fill="var(--ink)">下流：到達時刻予測に接続 → 集落別ETA</text>
+            <text x="809" y="249" font-size="8.4" fill="var(--ink-2)">「11:40に到達。10:30までに高台へ」</text>
+
+          <rect x="120" y="256" width="1380" height="21" fill="var(--alert-soft)" stroke="var(--alert)" stroke-width="1.6"/>
+            <rect x="125" y="260" width="14" height="12.5" fill="var(--alert)"/>
+            <text x="132" y="269.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">既</text>
+            <text x="144" y="269.5" font-size="9.8" font-weight="700" fill="var(--ink)">発令権限は NDRRMA／DHM にあるが、「地震学的に検知した質量移動を河川回廊の警報に変える」ことを所掌する主体が存在しない</text>
+
+          <rect x="0" y="286" width="104" height="70" fill="var(--panel)" stroke="var(--line)"/>
+          <text x="9" y="301" font-family="IBM Plex Mono, BIZ UDPGothic, Hiragino Kaku Gothic ProN, Yu Gothic, sans-serif" font-size="9.6" font-weight="700" fill="var(--c-detect)">L5</text>
+          <text x="9" y="315" font-size="11" font-weight="700" fill="var(--ink)">伝達</text>
+
+          <rect x="120" y="289" width="320.84507042253523" height="29" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.6"/>
+            <rect x="125" y="293" width="14" height="12.5" fill="var(--c-detect)"/>
+            <text x="132" y="302.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">改</text>
+            <text x="144" y="302.5" font-size="10.3" font-weight="700" fill="var(--ink)">SMS一斉配信</text>
+            <text x="127" y="315" font-size="8.4" fill="var(--ink-2)">67万件の実績。範囲をハザード範囲へ</text>
+            <rect x="450.84507042253523" y="289" width="226.4788732394366" height="29" fill="var(--sunk)" stroke="var(--line)" stroke-width="1"/>
+            <rect x="455.84507042253523" y="293" width="14" height="12.5" fill="var(--muted)"/>
+            <text x="462.84507042253523" y="302.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">既</text>
+            <text x="474.84507042253523" y="302.5" font-size="10.3" font-weight="700" fill="var(--ink)">コミュニティ・サイレン</text>
+            <text x="457.84507042253523" y="315" font-size="8.4" fill="var(--ink-2)">既存の最終手段</text>
+            <rect x="687.3239436619718" y="289" width="314.55399061032864" height="29" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="692.3239436619718" y="293" width="14" height="12.5" fill="var(--c-predict)"/>
+            <text x="699.3239436619718" y="302.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">新</text>
+            <text x="711.3239436619718" y="302.5" font-size="10.3" font-weight="700" fill="var(--ink)">セルブロードキャスト</text>
+            <text x="694.3239436619718" y="315" font-size="8.4" fill="var(--ink-2)">多言語・外国SIMにも届く</text>
+            <rect x="1011.8779342723005" y="289" width="251.6431924882629" height="29" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="1016.8779342723005" y="293" width="14" height="12.5" fill="var(--c-predict)"/>
+            <text x="1023.8779342723005" y="302.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">新</text>
+            <text x="1035.8779342723005" y="302.5" font-size="10.3" font-weight="700" fill="var(--ink)">坑内一斉警報</text>
+            <text x="1018.8779342723005" y="315" font-size="8.4" fill="var(--ink-2)">不明者933名の類型に対応</text>
+            <rect x="1273.5211267605634" y="289" width="226.4788732394366" height="29" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="1278.5211267605634" y="293" width="14" height="12.5" fill="var(--c-predict)"/>
+            <text x="1285.5211267605634" y="302.5" text-anchor="middle" font-size="8.6" font-weight="700" fill="var(--paper)">新</text>
+            <text x="1297.5211267605634" y="302.5" font-size="10.3" font-weight="700" fill="var(--ink)">QZSS 災危通報</text>
+            <text x="1280.5211267605634" y="315" font-size="8.4" fill="var(--ink-2)">要 受信可能性PoC</text>
+
+          <rect x="120" y="322" width="1380" height="21" fill="var(--panel)" stroke="var(--line)"/>
+            <text x="128" y="336" font-size="9" fill="var(--ink-2)"><tspan font-weight="700">到達させる相手　</tspan>河岸集落　／　水力発電所の坑内労働者　／　トレッカー・外国人　／　治安・税関施設　／　輸送事業者　── 冗長な複数経路で</text>
+
+          <g stroke="var(--c-detect)" stroke-width="1.6" marker-end="url(#fl)" opacity=".75"><path d="M52 74v3"/><path d="M52 116v3"/><path d="M52 216v3"/><path d="M52 282v3"/></g>
+        </svg>
+        <figcaption>色は状態を表す。<b>灰＝既存をそのまま使う</b>／<b>赤枠＝既存だが今回機能しなかった</b>／<b>青緑＝既存を改修する</b>／<b>青＝新規に足す</b>。新規のうち恒久設備は L1 の3項目と L2 の衛星IoTのみで、他は処理系・判断ロジック・伝達経路である。L3 の3検知器は並列に走らせ、1つで暫定発報、2つ一致で確度を上げる ── 単一の検知器に賭けない。</figcaption>
+      </figure>
+    </div>
+  </section>
+</div>
+
+<div class="row r3">
+  <section class="p">
+    <div class="ph"><span class="no">5</span><svg class="ico"><use href="#i-clock"/></svg><h2>段階計画 ── Phase 0 が go / no-go</h2></div>
+    <div class="pb">
+      <div style="flex:1;min-height:0">
+        <div class="ph2"><em class="g">Phase 0</em><b>既存アーカイブの遡及解析</b><span>0〜6か月 ／ 〜0.5億円 ／ 機材ゼロ</span></div>
+        <p class="pd">約40局分の連続波形を遡って掘り、過去事例にラベルを付ける。<b>教師データ・閾値・誤報率が同時に得られ</b>、「何秒で捕捉できたか」を実証できる。</p>
+        <div class="ph2"><em>Phase 1</em><b>シャドーモード併走</b><span>6〜18か月 ／ 〜1億円</span></div>
+        <p class="pd">リアルタイム検知器を既存処理系と並走させる。警報は出さず、<b>実運用の誤報率だけを測る。</b></p>
+        <div class="ph2"><em>Phase 2</em><b>試験流域へ実装</b><span>18〜30か月 ／ 2〜4億円</span></div>
+        <p class="pd">ボテコシ／トリスリに観測点を補填、微気圧計・河岸微動観測点。上流20km圏に自動サイレン、下流に到達時刻予測。</p>
+        <div class="ph2"><em>Phase 3</em><b>他流域へ展開・越境統合</b><span>流域あたり 2〜3億円</span></div>
+      </div>
+      <p class="note"><b>Phase 0 で「十分な余裕をもって捕捉できない」と出れば、以降に投資すべきではない。</b>ほとんど費用がかからないのに、数億円の判断を左右する。</p>
+    </div>
+  </section>
+
+  <section class="p">
+    <div class="ph"><span class="no">6</span><svg class="ico" style="color:var(--c-gov)"><use href="#i-globe"/></svg><h2>技術より難しい3つ</h2></div>
+    <div class="pb">
+      <dl class="kv">
+        <dt class="n">1</dt><dd><b>所管を決める</b><small>DHMの洪水予警報の所掌を「非水文学的トリガも受け付ける」よう拡張するか、DMG・DHM・NDRRMA合同のセルを作るか。<b>これが無ければ検知しても警報に至る経路が無い。</b></small></dd>
+        <dt class="n">2</dt><dd><b>誤報予算を運用開始前に合意する</b><small>「河川を脅かす事象を1件も逃さないなら年3回の空振りは許容する」といった線を住民と合意し、訓練で体験させておく。<b>最初の空振りが不意打ちになった系は1年で電源を切られる。</b>技術判断ではなく政治判断である</small></dd>
+        <dt class="n">3</dt><dd><b>越境</b><small>震源はチベット側だが<b>地震波は国境を越える</b>。ネパール領内の観測点で検知でき、データ共有協定の成立を待たずに機能する ── これがこの設計の政治的な強み。共有できれば標定精度は上がる</small></dd>
+      </dl>
+      <p class="note"><b>参照設計：</b>スイス・イルグラーベン流域の土石流警報系は<b>2007年から完全自動</b>で運用され、砂防堰堤のジオフォンから発報まで人が介在しない。「センサとサイレンを直結する」思想が20年近く現実に回っている。</p>
+    </div>
+  </section>
+
+  <section class="p">
+    <div class="ph"><span class="no">7</span><svg class="ico" style="color:var(--alert)"><use href="#i-no"/></svg><h2>この系にできないこと</h2></div>
+    <div class="pb">
+      <div class="cx"><svg class="ico"><use href="#i-mtn"/></svg><div><h4>予知しない。山が動いてから始まる</h4>
+        <p>チャモリ2021では主崩壊の2.5時間前から前兆信号が出ていたが、事後に遡って見つけたもの。<b>研究トラックであって設計前提にしてはならない。</b></p></div></div>
+      <div class="cx"><svg class="ico"><use href="#i-wave"/></svg><div><h4>微動振幅は流量ではない</h4>
+        <p>土砂フラックスの代理指標で、較正は地点固有。小規模GLOFはモンスーン増水と紛れうる。識別子は絶対値でなく<b>変化率とスペクトル形状</b>。</p></div></div>
+      <div class="cx"><svg class="ico"><use href="#i-gap"/></svg><div><h4>閾値以下は捕らえられない</h4>
+        <p>河道を塞ぎうる最小規模は不明。閾値は「どのリスクを受け入れるか」の選択で、Phase 0 で数字にする。</p></div></div>
+      <div class="cx"><svg class="ico"><use href="#i-gauge"/></svg><div><h4>水位計を置き換えない</h4>
+        <p>水位計は較正値を、地震計は生存性を与える。<b>代替ではなく補完</b>。片方に寄せれば同じ失敗を別の形で繰り返す。</p></div></div>
+    </div>
+  </section>
+</div>
+
+<div class="row r4">
+  <section class="p"><div class="pb" style="padding:7px 11px">
+    <div class="foot" style="grid-template-columns:1.25fr 1.5fr 1.25fr">
+      <div>
+        <div class="flab">凡例（構造図の色分け）</div>
+        <div class="lg">
+          <span class="lgi"><i style="background:var(--sunk);border-color:var(--line)"></i>既 ＝ 既存をそのまま使う</span>
+          <span class="lgi"><i style="background:var(--alert-soft);border-color:var(--alert)"></i>既 ＝ 既存だが今回機能しなかった</span>
+          <span class="lgi"><i style="background:var(--c-detect-bg);border-color:var(--c-detect)"></i>改 ＝ 既存を改修する</span>
+          <span class="lgi"><i style="background:var(--c-predict-bg);border-color:var(--c-predict)"></i>新 ＝ 新規に足す</span>
+        </div>
+        <div style="font-size:8.6px;line-height:1.5;color:var(--ink-2);margin-top:5px">
+          恒久設備の新設は <b>L1の3項目とL2の衛星IoT</b> のみ。残りは<b>ソフトウェアと制度</b>である。
+        </div>
+      </div>
+      <div>
+        <div class="flab">日本が持ち込めるもの</div>
+        <div class="gs" style="columns:2">
+          <div><b>防災科研</b>：Hi-net／V-net、火山泥流の自動検知の実運用経験</div>
+          <div><b>東京大学・JICA</b>：ネパールに8局を設置済み、拡張の足場</div>
+          <div><b>国交省北海道開発局</b>：十勝岳のセンサ→サイレン直結モデル</div>
+          <div><b>土木研究所 ICHARM</b>：検知を到達時刻・避難時間に変換</div>
+          <div><b>JAXA・Sentinel Asia・ADRC</b>：越境上流の衛星監視</div>
+        </div>
+      </div>
+      <div class="ms">
+        <svg class="ico"><use href="#i-seismo"/></svg>
+        <div>
+          <div class="a">機構を問わず、発報する。</div>
+          <div class="b">「岩か氷か」を判定してはならない。答えるべきは「上流で大規模な質量移動が起きたか」の二値だけ。機構の同定には日数がかかり、本件では4日経っても見解が割れている。</div>
+        </div>
+      </div>
+    </div>
+  </div></section>
+</div>
+
+</div></div>
+
+<script>
+(function(){
+  var st=document.getElementById('stage'),b=document.getElementById('board');
+  function fit(){var s=Math.min(1,st.clientWidth/1587);b.style.transform='scale('+s+')';st.style.height=(1122*s)+'px';}
+  addEventListener('resize',fit);
+  if(document.fonts&&document.fonts.ready){document.fonts.ready.then(fit);}
+  fit();
+})();
+</script>
