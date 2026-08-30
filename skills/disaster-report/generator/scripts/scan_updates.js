@@ -128,6 +128,8 @@ function main() {
     }
   }
 
+  printWatchlist();
+
   console.log("");
   if (anyNew) {
     console.log("STATUS: NEW  未取り込みの資料がある。**題名で切らずに開くこと。**");
@@ -138,6 +140,25 @@ function main() {
     console.log("STATUS: NONE  未取り込みの資料は見当たらない。");
     console.log("  ただし ReliefWeb に出ていないものはここに出ない。政府サイトは別途見ること。");
   }
+}
+
+// 見送り済みの災害を毎回そえる。人が「非対応」と判断したものを毎朝報告し直さないため、
+// また、被害が拡大したときに誰も気づかないまま流れないため。
+// 判定そのものは watchlist.js が持つ（node watchlist.js --check <要請番号> --deaths N）。
+function printWatchlist() {
+  const wl = path.join(__dirname, "..", "..", "events", "_watchlist.json");
+  if (!fs.existsSync(wl)) return;
+  let db;
+  try { db = JSON.parse(fs.readFileSync(wl, "utf8")); } catch (e) { return; }
+  if (!db.entries || !db.entries.length) return;
+  console.log("");
+  console.log("── レポート化を見送った災害（人が判断済み。毎朝の報告に書かない） ──");
+  for (const e of db.entries) {
+    console.log("   " + e.id + "  " + e.country_ja + "  " + e.hazard_ja + "  （" + e.decided_on + " 判断）");
+  }
+  console.log("   被害が拡大していないかは、その都度これで判定する:");
+  console.log("     node skills/disaster-report/generator/scripts/watchlist.js --check <要請番号> --deaths <人数>");
+  console.log("   STATUS: RERAISE が出たときだけ、報告に書いて人に尋ねる。");
 }
 
 main();

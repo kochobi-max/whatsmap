@@ -65,6 +65,7 @@ skills/disaster-report/
   generator/                      # gen_deck.js ほか。全イベント共通
   events/
     _TEMPLATE.json                # スキーマ定義（新規作成時の雛形）
+    _watchlist.json               # レポート化を見送った災害の判断台帳（下記）
     EQ-2026-000135-JPN.json       # 令和8年 熊本地震
     EQ-2026-000146-COL.json       # コロンビア・チョコ地震
     EQ-2026-000150-IDN.json       # インドネシア NTT 地震
@@ -76,9 +77,42 @@ skills/disaster-report/
 引数でGLIDEまたは災害名が指定されたら該当JSONを使う。
 指定がない（定期タスク）場合は **`events/*.json` のうち `meta.status: "active"` の全件**を処理する。
 
+### 見送った災害を、毎朝報告し直さない（省略不可）
+
+センチネルアジアの通知メールには、レポート化していない災害の要請番号が毎日出てくる。
+**一度人が「非対応」と判断したものを、翌朝また候補として報告しない。**
+判断は `events/_watchlist.json` に書いてある。台帳を持たずに人の記憶に頼ると、
+同じ件を毎日報告し続けるか、被害が拡大したときに誰も気づかないかのどちらかになる。
+
+未レポートの要請番号を見つけたら、報告に書く前に必ずこれを通す。
+
+```bash
+node generator/scripts/watchlist.js --check SA-00659 --deaths 140
+```
+
+| 出力 | 終了コード | やること |
+|---|---|---|
+| `HOLD covered` | 0 | すでに `events/` にある。何もしない |
+| `HOLD` | 0 | 人が見送り済み。しきい値も超えていない。**報告に書かない** |
+| `NEW` | 3 | 台帳に無い。**報告に1行書いて人に尋ねる** |
+| `RERAISE` | 4 | 見送ったが、しきい値を超えた。**報告に書いて再提案する** |
+
+死者数などが分かっているなら `--deaths` `--magnitude` `--charter` `--adrc-requester` `--jdr`
+を付けて渡す。**渡さないと必ず `HOLD` になる。** 数値を確認したら、判定結果にかかわらず
+台帳の `observed` を埋めて残すこと。次に判定する人がゼロから調べ直さずに済む。
+
+しきい値は `ldi-cms-report` SKILL.md Step 5.5 の昇格基準をそのまま使っている。
+基準を変えるときは両方を直す。台帳だけ直すと、2つの経路で判断が食い違う。
+
+`node generator/scripts/scan_updates.js` は末尾に台帳の一覧を必ず出す。
+
 ### 新規イベントの追加
 
 `ldi-cms-report` Step 5.5 の昇格候補メールを人が承認したときのみ作成する。**勝手に作らない。**
+
+**`RERAISE` が出ても自分で作らない。** 昇格は組織の資源配分の判断で、人がする。
+承認されたら `_watchlist.json` の当該行を消してから `events/<GLIDE>.json` を作る。
+消し忘れると、レポート対象なのに台帳にも載った状態になる。
 
 1. `_TEMPLATE.json` をコピーして `events/<GLIDE>.json` を作る
 2. `meta.iso3` に対応する `references/sources/<ISO3>.md` があるか確認。なければ作る
