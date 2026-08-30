@@ -1,8 +1,8 @@
 {
   "glide": "EQ-2026-000146-COL",
-  "skipped_at_jst": "2026-08-30 07:27",
+  "skipped_at_jst": "2026-08-31 08:10",
   "reason": "stale-dist",
-  "dist_built_date_jst": "2026-08-29",
-  "today_jst": "2026-08-30",
+  "dist_built_date_jst": "2026-08-30",
+  "today_jst": "2026-08-31",
   "note": "配布ブランチのビルドが当日のものではないため、コピーしていない。クラウド側でビルドし直して publish_dist.js を回すこと。"
 }
