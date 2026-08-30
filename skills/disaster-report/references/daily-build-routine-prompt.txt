@@ -1,0 +1,135 @@
+ADRC の大規模災害レポートについて、**active な全イベント**の最新状況を確認し、イベントJSONを更新してビルドし、配布ブランチへ出してください。イベントを名指ししません。`meta.status: "active"` のものが対象です。
+
+## 0. 最初にこれをやる（省略不可）
+
+このセッションは main を clone して始まる。統一フォームのスキル一式は main には無い。
+
+```bash
+git fetch origin claude/workflow-automation-review-shyt35
+git checkout claude/workflow-automation-review-shyt35
+git pull origin claude/workflow-automation-review-shyt35
+test -f skills/disaster-report/SKILL.md || echo "MISSING_SKILL"
+```
+
+`MISSING_SKILL` が出たら中断して、その旨だけ報告する。推測でファイルを作り直さない。
+
+`skills/disaster-report/SKILL.md` を読む。§0-0（他のセッションの成果を先に探す）と §0-1（災害の種別は動く）も含めて読むこと。
+
+## 1. 未取り込みの資料を機械に出させる（省略不可）
+
+```bash
+node skills/disaster-report/generator/scripts/scan_updates.js
+```
+
+イベントごとに、`links[]` にまだ無い ReliefWeb の資料が並ぶ。
+
+- **「▼ 先に開く」に出たものは必ず開く。題名で切らない。**
+  2026-08-29、ネパールの IRDR 速報解析をこの一覧に出しておきながら題名だけで
+  判断して開かず、災害の種別が GLOF から土石流へ変わったことを見落とした
+- 取り込んだ資料は `links[]` に URL を足す。次回からここに出なくなる
+- `STATUS: UNREACHABLE` は「新しい資料が無い」ではない。届いていないだけである
+
+政府サイト（BNPB・UNGRD・NDRRMA・NEOC など）は ReliefWeb に出ないことがあるので、
+`references/sources/<ISO3>.md` に書かれた一次情報源も各イベントで直接見ること。
+
+## 2. センチネルアジアの通知メールを読む（省略不可）
+
+**どの機関がどの衛星で何を提供したかは、メールにしか無い。**
+公開記事ページ（`sentinel-asia.org/EO/...`）にはこの粒度が出ない。
+OPTEMIS ダッシュボードは要ログインで、クラウドからは TLS で止まる。**メールで読む。**
+
+Superhuman の `list_threads` で次を引く。
+
+```
+from: ["sentinel-asia.org"]
+start_date: 直近7日
+limit: 30
+```
+
+件名が `[SA-XXXXX-message]` のものが本体。本文が「氏名・日時・メッセージ」の3列の表に
+なっていて、提供・解析の記録がそこに書かれている。`get_thread` で本文を読む。
+
+読む対象は、いま active なイベントの要請番号だけでよい。番号は
+`events/<GLIDE>.json` の `satellite[]` や `activation_pages[]` から分かる
+（例: ネパール SA-00658、インドネシア SA-00656）。
+
+拾ったら `events/<GLIDE>.json` の `satellite[]` に足す。形は既存の行に合わせる。
+
+```json
+{ "org": "TASA (Taiwan Space Agency)", "status": "Uploaded 29 Aug", "tier": "official",
+  "url": "https://sentinel-asia.org/",
+  "en": "...", "ja": "..." }
+```
+
+**要請元や ADRC の書き込みも読む。** 発生源の座標、観測対象範囲（AOI）の見直し、
+災害の見立ての変更が、ここに書かれていることがある。
+2026-08-27、ネパールの要請元が氷雪崩の座標 28.295727N, 85.507802E を
+この経路で示していた。UNOSAT の図から目分量で読むより正確だった。
+
+件名の種類:
+`-requested` 要請受理 / `-activated` 発動 / `-DPN` データ提供機関の指名 /
+`-DAN` 解析機関の指名 / `-message` **提供・解析の記録（本体）** / `-updated` 要請内容の更新
+
+**まだレポート化していない災害の要請番号が出てきたら、報告に1行書く。**
+自分で新しいイベントを作らない。昇格の判断は人がする。
+
+## 3. データ更新
+
+イベントごとに、数値・時系列・種別が動いていれば `events/<GLIDE>.json` を更新する。
+
+- **更新前の headline を `_prev` に移さない。** `_prev` は**メールを送ったときだけ**更新する。
+  送信タスクが差分を出すための基準なので、ここで動かすとゲートが効かなくなる
+- `meta.stamp` / `meta.update_date` / `meta.edition_ja` / `meta.edition_en` を更新する
+- 確定した履歴は消さない。行の追加で表現する。時系列は時刻順に並べ直す
+- 出典URLと出典日を必ず記録する
+- 機関によって数値の指標が違うときは**合算・平均化しない。** 発表機関と日付を付けて併記する
+  （例: ネパールの「行方不明」は NEOC の届出ベースと WFP の「連絡不通を含む」で別物）
+- 種別・発生機構が新しい解析で変わったら、**前の呼び方を消さない。** 変遷を日付つきで残す
+
+数値を推測で埋めない。公式値が無ければ tbc のまま残す。
+`WebSearch` は egress プロキシを通らないので、遮断中でも結果が返る。
+**WebSearch の結果だけで数値を書き換えないこと。** 取得は `generator/scripts/fetch_url.js`（curl）を使う。
+
+## 4. 検証・ビルド・配布（1コマンド）
+
+```bash
+node skills/disaster-report/generator/scripts/build_all.js
+```
+
+active な全イベントを check_sources → resolve_event → build_event → publish_dist まで通し、
+最後に表でまとめる。1件が落ちても他は止まらない。
+
+- `SOURCES-FAIL` → そのイベントは**ビルドしない。** 到達できなかったドメインを報告に書き、
+  「ネットワークポリシーの許可リストに追加が必要」と添える。
+  **絶対に「変化なし」と結論しない**
+- `INVALID` → スキーマ違反。直すまで進まない
+- `HOLD` → ビルドと配布はする。メールは送信タスクが判断する
+- `BUILD-FAIL` / `DIST-FAIL` → その行をそのまま報告する
+
+**配布（publish_dist）を飛ばさない。** これを通さないと、荒木田さんのPCが当日ぶんを
+取れず `STATUS: SKIP stale-dist` で止まり、OneDrive が前日のまま据え置かれる。
+
+## 5. プッシュ
+
+データを更新した場合はコミットして `claude/workflow-automation-review-shyt35` へプッシュする。
+`_build/` はコミットしない。`dist` は publish_dist.js が別に扱うので手で push しない。
+
+プッシュが `fetch first` で弾かれたら、荒木田さんのPCが公開記録を出している。
+`git pull --rebase origin claude/workflow-automation-review-shyt35` してから押し直す。
+
+## やらないこと
+
+- **メールは送らない。** 送信は 08:30 の別タスクが、PC側の公開を確かめてから行う。
+  センチネルアジアのメールは**読むだけ**
+- **新しいイベントを勝手に作らない。** 昇格の判断は人がする
+- **PDF変換をPCに投げない。** 荒木田さんのPCに LibreOffice は入っていない。PDFはここで作りきる
+
+## 報告（この5点を必ず書く）
+
+1. `scan_updates.js` で未取り込みだった資料と、開いた結果（取り込んだ／関係なかった）
+2. センチネルアジアのメールから拾った提供記録（機関・衛星・日付）。無ければ「新しい提供記録なし」
+3. `build_all.js` のまとめの表をそのまま
+4. 動いた数値の一覧、または「一次情報に到達したうえで変化なし」
+5. 許可リストへの追加が必要なドメイン、および未レポート化の要請番号があればその一覧
+
+途中で止まった場合は、どの段階で何が無くて止まったかを1行で書く。黙って終わらないこと。
