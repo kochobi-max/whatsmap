@@ -19,25 +19,25 @@
     "title_ja": "2026年 ボテコシ川 土石流・鉄砲水（ネパール）",
     "subtitle_en": "Rasuwa, Nuwakot and Dhading Districts - 26 August 2026",
     "subtitle_ja": "ラスワ郡・ヌワコット郡・ダディン郡、2026年8月26日",
-    "edition_en": "4th report",
-    "edition_ja": "第4報",
+    "edition_en": "5th report",
+    "edition_ja": "第5報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
-    "stamp": "2026-08-31 08:40 JST",
-    "update_date": "30/08/2026",
-    "timeline_range_en": "25-30 August 2026 (Nepal Standard Time, UTC+5:45)",
-    "timeline_range_ja": "2026年8月25日〜30日（ネパール標準時 UTC+5:45）",
+    "stamp": "2026-09-01 07:39 JST",
+    "update_date": "31/08/2026",
+    "timeline_range_en": "25-31 August 2026 (Nepal Standard Time, UTC+5:45)",
+    "timeline_range_ja": "2026年8月25日〜31日（ネパール標準時 UTC+5:45）",
     "tz_note_en": "All times are Nepal Standard Time (NPT, UTC+5:45) unless stated.",
     "tz_note_ja": "時刻は特記なき限りネパール標準時（NPT、UTC+5:45）。",
     "optional_slides": [],
     "headline": {
-      "deaths": 734,
-      "injured": 242,
-      "missing": 2448,
+      "deaths": 903,
+      "injured": 267,
+      "missing": 4247,
       "houses_destroyed": null,
       "evacuees": null,
       "tier": "official",
-      "as_of": "2026-08-30 (WFP 状況報告／政府集計に基づく)"
+      "as_of": "2026-08-31 09:00 NPT (NDRRMA, via OCHA/UN RC Nepal Flash Update #4)"
     },
     "chronology_note_en": "Government and agency actions from the onset of the flood - all official sources.",
     "chronology_note_ja": "発災からの政府・機関の主要な動き（すべて公的情報）。",
@@ -102,42 +102,42 @@
     {
       "item_en": "Deaths",
       "item_ja": "死者",
-      "value_en": "616 deaths (WFP situation report of 29 Aug, based on government figures), across Dhading, Nuwakot and Rasuwa. The NEOC count of 28 Aug was 539, with 538 bodies recovered; by district Chitwan 221, Nuwakot (east) 134, Gorkha 46, Kavrepalanchok 37, Dhading 34, Tanahun 28, Nuwakot (west) 27, Rasuwa 12. The toll has risen as search teams reached cut-off communities and downstream districts entered the count. Figures remain initial and are expected to change as verification proceeds.",
-      "value_ja": "616人（WFP 8月29日状況報告、政府集計に基づく）。ダディン、ヌワコット、ラスワの各郡。8月28日のNEOC集計では539人（遺体収容538体）で、郡別はチトワン221、ヌワコット（東）134、ゴルカ46、カブレパランチョーク37、ダディン34、タナフン28、ヌワコット（西）27、ラスワ12。孤立地域への到達と下流の郡の集計参入により増えている。いずれも初期の数値であり、確認が進むにつれ変わる。",
-      "source_en": "WFP situation report, 29 Aug (government figures); NEOC, 28 Aug",
-      "source_ja": "WFP 状況報告（8月29日・政府集計）／NEOC（8月28日）",
+      "value_en": "903 deaths (NDRRMA's 09:00 bulletin, 31 Aug, via OCHA/UN RC Nepal Flash Update #4), across Dhading, Nuwakot, Rasuwa and downstream districts. The toll has risen as search teams reach cut-off communities and downstream districts enter the count: NEOC counted 539 (28 Aug), WFP reported 616 (government figures, 29 Aug) and about 734 (30 Aug). Figures remain initial and are expected to change as verification proceeds.",
+      "value_ja": "903人（NDRRMA 8月31日09:00発表、OCHA/国連ネパール常駐調整官事務所 Flash Update #4経由）。ダディン、ヌワコット、ラスワおよび下流の各郡。孤立地域への到達と下流の郡の集計参入により増え続けている：NEOC集計539人（8月28日）、WFP報告616人（政府集計、8月29日）、約734人（8月30日）。いずれも初期の数値であり、確認が進むにつれ変わる。",
+      "source_en": "NDRRMA, 31 Aug 09:00, via OCHA/UN RC Nepal Flash Update #4",
+      "source_ja": "NDRRMA（8月31日09:00、OCHA/国連ネパール常駐調整官事務所 Flash Update #4経由）",
       "tier": "official",
-      "url": "https://reliefweb.int/report/nepal/wfp-nepal-external-situation-report-29-august-2026"
+      "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-update-4-31-august-2026"
     },
     {
       "item_en": "Missing",
       "item_ja": "行方不明",
-      "value_en": "1,924 people missing or out of contact across Dhading, Nuwakot and Rasuwa (WFP, 29 Aug). This is a broader measure than the NEOC count of missing persons reported to the authorities, which stood at 977 on 28 Aug (105 personnel of the army, police, armed police and the customs and immigration offices; 228 via District Emergency Operations Centres in Rasuwa 161, Kavrepalanchok 66, Nuwakot 1; and 644 foreign or overseas-resident nationals). The two are not interchangeable.",
-      "value_ja": "1,924人が行方不明または連絡が取れていない（WFP、8月29日。ダディン・ヌワコット・ラスワ）。これは当局への行方不明届に基づくNEOCの集計より広い概念で、NEOCは8月28日時点で977人としている（陸軍・警察・武装警察および税関・入国管理の職員105人、郡緊急対策本部からの報告228人〈ラスワ161、カブレパランチョーク66、ヌワコット1〉、外国人および国外在住者644人）。互換的には使えない。",
-      "source_en": "WFP, 29 Aug; NEOC, 28 Aug",
-      "source_ja": "WFP（8月29日）／NEOC（8月28日）",
+      "value_en": "4,247 people reported missing (NDRRMA's 09:00 bulletin, 31 Aug, via OCHA/UN RC Nepal Flash Update #4). This reported-missing series has run NEOC's 977 (28 Aug, reports to the authorities) to WFP's 2,448 (30 Aug) to now 4,247; NDRRMA/OCHA give no explanation for the latest rise, which may reflect additional missing-person reports being registered as communications and access improve rather than new casualties - this has not been confirmed. Separately, WFP's 29 Aug figure of 1,924 people missing or out of contact was described as a broader measure than NEOC's reported-to-authorities count; the two bases are not interchangeable.",
+      "value_ja": "4,247人（NDRRMA 8月31日09:00発表、OCHA/国連ネパール常駐調整官事務所 Flash Update #4経由）。この「届出に基づく行方不明」の系列は、NEOC977人（8月28日）→WFP2,448人（8月30日）→今回4,247人と推移している。NDRRMA・OCHAは今回の増加の理由を説明していない。通信・到達の改善に伴い行方不明届が新たに登録された可能性はあるが、確認できていない。なお、WFPが8月29日に示した1,924人（行方不明または連絡が取れない者）は、NEOCの「当局への届出」に基づく集計より広い概念とされており、両者は互換的に使えない。",
+      "source_en": "NDRRMA, 31 Aug 09:00, via OCHA/UN RC Nepal Flash Update #4",
+      "source_ja": "NDRRMA（8月31日09:00、OCHA/国連ネパール常駐調整官事務所 Flash Update #4経由）",
       "tier": "official",
-      "url": "https://reliefweb.int/report/nepal/wfp-nepal-external-situation-report-29-august-2026"
+      "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-update-4-31-august-2026"
     },
     {
       "item_en": "Injured",
       "item_ja": "負傷者",
-      "value_en": "73 injured (NEOC, 28 Aug): Rasuwa 43, Nuwakot 27, Dhading 3.",
-      "value_ja": "73人（NEOC、8月28日）。ラスワ郡43人、ヌワコット郡27人、ダディン郡3人。",
-      "source_en": "NEOC, 28 Aug",
-      "source_ja": "NEOC（8月28日）",
+      "value_en": "267 injured, of whom 156 have been discharged (NDRRMA's 09:00 bulletin, 31 Aug, via OCHA/UN RC Nepal Flash Update #4). NEOC's 28 Aug count was 73 (Rasuwa 43, Nuwakot 27, Dhading 3); WFP reported about 242 on 30 Aug.",
+      "value_ja": "267人が負傷、うち156人が退院済み（NDRRMA 8月31日09:00発表、OCHA/国連ネパール常駐調整官事務所 Flash Update #4経由）。NEOCの8月28日集計では73人（ラスワ43、ヌワコット27、ダディン3）、WFPは8月30日時点で約242人としていた。",
+      "source_en": "NDRRMA, 31 Aug 09:00, via OCHA/UN RC Nepal Flash Update #4",
+      "source_ja": "NDRRMA（8月31日09:00、OCHA/国連ネパール常駐調整官事務所 Flash Update #4経由）",
       "tier": "official",
-      "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-update-3"
+      "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-update-4-31-august-2026"
     },
     {
       "item_en": "Search and rescue",
       "item_ja": "捜索・救助",
-      "value_en": "More than 4,450 people rescued. The Government has deployed more than 15,400 security personnel and 15 helicopters for search, rescue and relief. Temporary shelter has been arranged for approximately 3,500 displaced people. Twelve thematic coordination teams have been established, covering communications, electricity restoration, transport connectivity and relief distribution among others.",
-      "value_ja": "4,450人超を救助。政府は治安要員15,400人超とヘリコプター15機を捜索・救助・救援に投入している。約3,500人の避難者に仮設の避難先を確保した。通信、電力復旧、交通の確保、救援物資の配分などを担当する12の分野別調整チームが設置されている。",
-      "source_en": "WFP situation report, 29 Aug",
-      "source_ja": "WFP 状況報告（8月29日）",
+      "value_en": "10,451 people rescued to date (NDRRMA, 31 Aug), including 252 foreign nationals and 3,344 Nepalis airlifted by helicopter; more than 8,198 had been rescued as of 30 Aug and more than 4,450 as of 29 Aug. The Government has mobilised 20,819 security personnel and deployed 34 trucks, 35 jeeps and 8 helicopters, with 5 helicopter runs delivering medical supplies. A command post has been activated and 15 thematic coordination teams cover health, communications, roads and electricity restoration.",
+      "value_ja": "これまでに10,451人を救助（NDRRMA、8月31日）。うち外国人252人、ヘリコプターで空輸されたネパール人3,344人を含む。8月30日時点では8,198人超、8月29日時点では4,450人超だった。政府は治安要員20,819人を動員し、トラック34台・ジープ35台・ヘリコプター8機を投入、うち5便で医療物資を空輸した。指揮所が設置され、保健・通信・道路・電力復旧を担当する15の分野別調整チームが活動している。",
+      "source_en": "NDRRMA, 31 Aug, via OCHA/UN RC Nepal Flash Update #4",
+      "source_ja": "NDRRMA（8月31日、OCHA/国連ネパール常駐調整官事務所 Flash Update #4経由）",
       "tier": "official",
-      "url": "https://reliefweb.int/report/nepal/wfp-nepal-external-situation-report-29-august-2026"
+      "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-update-4-31-august-2026"
     },
     {
       "item_en": "Affected population",
@@ -420,6 +420,13 @@
       "src": "WFP / NDRRMA",
       "en": "WFP situation report: the death toll rises to approximately 734, with around 242 injured and 2,448 people still reported missing; more than 8,198 people have been rescued to date. Damage to infrastructure continues to hamper access, including approximately 40 km of roads, more than 80 bridges and at least 14 hydropower and energy facilities along the Bhote Koshi-Trishuli corridor. WFP has dispatched 31.8 mt of food assistance and secured approximately USD 5.4 million through Australia, CERF and the United States.",
       "ja": "WFP状況報告。死者は約734人に増加し、負傷者約242人、行方不明者2,448人。これまでに8,198人以上が救助された。ボテコシ・トリスリ川沿いで道路約40km、橋梁80か所以上、水力発電・エネルギー施設少なくとも14か所が被災し、進入の妨げが続いている。WFPは食料31.8トンを送り、豪州・CERF・米国から約USD540万を確保した。"
+    },
+    {
+      "time": "31 Aug",
+      "tier": "official",
+      "src": "NDRRMA / OCHA-UN RC Nepal",
+      "en": "OCHA/UN RC Nepal Flash Update #4: NDRRMA's 09:00 bulletin puts the death toll at 903, with 267 injured (156 discharged) and 4,247 still reported missing. 10,451 people have been rescued to date, including 252 foreign nationals and 3,344 Nepalis airlifted by helicopter; 20,819 personnel are mobilised. The Government has allocated NPR 10 million each in emergency funds to Rasuwa and Nuwakot and NPR 0.5 million to Dhading. Joint Nepal-India-China rescue operations continue at the Trishuli 3A, Haku Besi, Trishuli 3B and Chilime hydropower sites. The Mugling-Malekhu section of the Prithvi Highway remains fully blocked by toe-cutting at Krishna Bhir and Parewa Bhir; power has been restored in Dhading and Nuwakot, with work continuing in Rasuwa.",
+      "ja": "OCHA/国連ネパール常駐調整官事務所 Flash Update #4。NDRRMAの09:00発表によると、死者903人、負傷267人（うち156人退院済み）、行方不明4,247人。これまでに10,451人を救助し、うち外国人252人、ヘリコプターで空輸されたネパール人3,344人を含む。要員20,819人を動員。政府はラスワ郡・ヌワコット郡に各NPR1,000万、ダディン郡にNPR50万の緊急資金を配分した。トリシュリ3A、ハクベシ、トリシュリ3B、チリメの各水力発電施設でネパール・インド・中国による合同救助活動が続いている。プリトビ・ハイウェイのムグリン〜マレクー区間は、クリシュナ・ビル、パレワ・ビルの法面崩壊により全面通行止めが続く。電力はダディン郡・ヌワコット郡で復旧し、ラスワ郡では復旧作業が続いている。"
     }
   ],
   "response_measures": [
@@ -513,6 +520,22 @@
       "url": "https://sentinel-asia.org/",
       "en": "Archive and observation data for 22 April 2026 and 28 August 2026, and a value-added product derived from a Sentinel-2 prior image and a FORMOSAT-5 post image (12 and 28 August 2026).",
       "ja": "2026年4月22日および8月28日のアーカイブ・観測データ。あわせて、Sentinel-2の発災前画像とFORMOSAT-5の発災後画像から作成した付加価値プロダクト（8月12日・28日）。"
+    },
+    {
+      "org": "JAXA (via RESTEC)",
+      "status": "Uploaded 31 Aug",
+      "tier": "official",
+      "url": "https://sentinel-asia.org/",
+      "en": "ALOS-2 archive/observation imagery and RGB composite data uploaded, covering observations of 19 December 2025, 30 January 2026 and 28 August 2026.",
+      "ja": "ALOS-2のアーカイブ・観測画像とRGB合成画像が提供された。観測日は2025年12月19日、2026年1月30日、2026年8月28日。"
+    },
+    {
+      "org": "GIC-AIT",
+      "status": "Uploaded 31 Aug",
+      "tier": "official",
+      "url": "https://sentinel-asia.org/",
+      "en": "A value-added product produced using Sentinel-1 data acquired on 28 and 31 August 2026 and Sentinel-2 imagery acquired on 27 August 2026.",
+      "ja": "2026年8月28日・31日に取得されたSentinel-1データと、8月27日に取得されたSentinel-2画像を用いて作成した付加価値プロダクト。"
     },
     {
       "org": "IWM (Institute of Water Modelling)",
@@ -614,6 +637,11 @@
       "url": "https://reliefweb.int/report/nepal/wfp-nepal-external-situation-report-30-august-2026",
       "en": "WFP Nepal External Situation Report, 30 August 2026",
       "ja": "WFP ネパール状況報告（2026年8月30日）"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-update-4-31-august-2026",
+      "en": "OCHA/UN RC Nepal - Rasuwa Flood Flash Update #4, 31 August 2026",
+      "ja": "OCHA/国連ネパール常駐調整官事務所 Flash Update #4（2026年8月31日）"
     }
   ],
   "images": {

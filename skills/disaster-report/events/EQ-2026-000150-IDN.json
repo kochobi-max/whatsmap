@@ -21,8 +21,8 @@
   "jma_name_en": "",
   "edition": "",
   "prepared_by": "Asian Disaster Reduction Center (ADRC)",
-  "stamp": "2026-08-28 23:30 JST",
-  "update_date": "28/08/2026",
+  "stamp": "2026-09-01 07:39 JST",
+  "update_date": "31/08/2026",
   "timeline_range_en": "15-28 August 2026 (Western Indonesian Time, UTC+7)",
   "timeline_range_ja": "2026年8月15日〜28日（西部インドネシア時間 WIB、UTC+7）",
   "disseminate_en": "",
@@ -661,6 +661,42 @@
    "label_en": "BMKG - press release on recovery cooperation",
    "label_ja": "BMKG：復旧協力に関する報道発表",
    "url": "https://www.bmkg.go.id/siaran-pers/bmkg-pemerintah-pusat-dan-pemerintah-daerah-kolaborasi-percepat-pemulihan-bencana-gempa-flores",
+   "tier": "official"
+  },
+  {
+   "label_en": "AHA Centre - Flash Update No.1 (17 Aug 2026, day-1 data, superseded)",
+   "label_ja": "AHA Centre Flash Update No.1（8月17日、発災当日の数値・以降の報で更新済み）",
+   "url": "https://reliefweb.int/report/indonesia/flash-update-no-1-m77-earthquake-east-nusa-tenggara-indonesia-15-august-2026",
+   "tier": "official"
+  },
+  {
+   "label_en": "OCHA Asia-Pacific El Nino / Middle East snapshot, 28 Aug 2026 (regional, not earthquake-specific)",
+   "label_ja": "OCHA アジア太平洋 エルニーニョ・中東情勢スナップショット（8月28日、地震とは無関係の地域資料）",
+   "url": "https://reliefweb.int/report/indonesia/asia-and-pacific-snapshot-el-nino-middle-east-crisis-28-august-2026",
+   "tier": "official"
+  },
+  {
+   "label_en": "Caritas Indonesia - community support update",
+   "label_ja": "Caritas Indonesia 支援活動レポート",
+   "url": "https://reliefweb.int/report/indonesia/caritas-indonesia-stands-communities-affected-earthquake",
+   "tier": "media"
+  },
+  {
+   "label_en": "CARE Indonesia - 15,000 litres clean water distribution",
+   "label_ja": "CARE Indonesia 飲料水1万5千リットル配布",
+   "url": "https://reliefweb.int/report/indonesia/care-indonesia-distributes-15000-litres-clean-water-earthquake-survivors",
+   "tier": "media"
+  },
+  {
+   "label_en": "AHA Centre - ASEAN Weekly Disaster Update, week 33 (10-16 Aug 2026)",
+   "label_ja": "AHA Centre ASEAN週次災害アップデート（第33週、8月10-16日）",
+   "url": "https://reliefweb.int/report/indonesia/asean-weekly-disaster-update-week-33-10-16-august-2026",
+   "tier": "official"
+  },
+  {
+   "label_en": "IOM - Rohingya refugee response flash appeal (unrelated crisis)",
+   "label_ja": "IOM ロヒンギャ難民対応フラッシュアピール（本地震とは別件）",
+   "url": "https://reliefweb.int/report/indonesia/iom-flash-appeal-rohingya-refugee-response-january-december-2026",
    "tier": "official"
   }
  ],
