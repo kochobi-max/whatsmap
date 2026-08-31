@@ -262,7 +262,7 @@ td.tm{font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:600;color:v
   <div>
     <h1>Integrated Himalayan EWS &mdash; System Architecture</h1>
     <div class="st">Binding monsoon flooding &amp; landslides / ice&ndash;rock avalanche / GLOF / major earthquake onto the two systems Nepal already runs (working draft)</div>
-    <div class="meta">Drafted 2026-08-30 &middot; Based on analysis of the 26 August 2026 Bhote Koshi&ndash;Trishuli flood &middot; Not an official position</div>
+    <div class="meta">Drafted 2026-08-30 &middot; Revised 2026-08-31 &middot; Based on analysis of the 26 August 2026 Bhote Koshi&ndash;Trishuli flood &middot; Not an official position</div>
   </div>
   <div class="cl">Do not build from zero. Connect the two<br>systems that exist; add only the missing<br>detection paths.</div>
 </header>
@@ -288,7 +288,7 @@ td.tm{font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:600;color:v
       <dl class="kv">
         <dt class="x">Gap 1</dt><dd><b>The rainfall track presupposes rainfall</b><small>No rain was involved in this event (confirmed by DHM). Neither the 280 stations nor the 272 area thresholds <b>could respond in principle</b></small></dd>
         <dt class="x">Gap 2</dt><dd><b>The seismic track presupposes earthquakes</b><small>Associators are built on sharp arrivals. A slow-onset mass movement is discarded at association. <b>nst = 0</b> in this event&rsquo;s catalogue entries is the evidence</small></dd>
-        <dt class="x">Gap 3</dt><dd><b>The two tracks are not wired together</b><small>Even with an M5.2 on the record, nothing carries it into the flood alerting path. <b>Both 08:37 and 11:45 reached the catalogue only after an analyst processed them &mdash; posted a day and a half later</b></small></dd>
+        <dt class="x">Gap 3</dt><dd><b>The two tracks are not wired together</b><small>Even with an M5.2 on the record (GFZ: Mw 5.7), nothing carries it into the flood alerting path. <b>Both 08:37 and 11:45 reached the catalogue only after an analyst processed them &mdash; posted a day and a half later</b></small></dd>
         <dt class="x">Gap 4</dt><dd><b>Mandates are split</b><small>Earthquakes = DMG / flood &amp; landslide warning = DHM / response = NDRRMA</small></dd>
       </dl>
       <p class="note"><b>Each track works for its own hazard. Neither owned this hazard, and they were not connected to each other.</b> That is what &ldquo;integration&rdquo; has to fix &mdash; and none of Gaps 1&ndash;4 is a shortage of hardware.</p>
@@ -302,9 +302,9 @@ td.tm{font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:600;color:v
         <thead><tr><th>Hazard</th><th>Detection path</th><th>Status</th></tr></thead>
         <tbody>
           <tr><td>Monsoon flooding &amp; landslides<small>Cumulatively the largest killer of all</small></td><td><b>R</b> rainfall threshold + soil water index</td><td class="k">existing<br>operating</td></tr>
-          <tr><td>Ice&ndash;rock avalanche / rock collapse<small>2026 this event / 2015 Langtang</small></td><td><b>D1</b> single-force source<br><span class="mono">alert in 60&ndash;120 s</span></td><td class="n">new</td></tr>
-          <tr><td>GLOF / landslide-dam breach<small>2016 Gongbatongsha / 2025 Rasuwa</small></td><td><b>D2</b> fluvial tremor (1&ndash;10 Hz)</td><td class="n">new</td></tr>
-          <tr><td>Loss of the instruments themselves<small>Here, 3 upstream gauges fell silent below alert stage</small></td><td><b>D3</b> missing data = alarm</td><td class="n">new</td></tr>
+          <tr><td>Ice&ndash;rock avalanche / rock collapse<small>This event = Langtang Lirung N face / 2015 Langtang</small></td><td><b>D1</b> single-force source<br><span class="mono">alert in 60&ndash;120 s</span></td><td class="n">new</td></tr>
+          <tr><td>GLOF / landslide-dam breach<small>This event&rsquo;s initial mechanism + the barrier lake of 28 Aug</small></td><td><b>D2</b> fluvial tremor (1&ndash;10 Hz)</td><td class="n">new</td></tr>
+          <tr><td>Loss of the instruments themselves<small>Upstream gauges went silent together after 08:40; the 30 Aug rise was noticed by ear</small></td><td><b>D3</b> missing data = alarm</td><td class="n">new</td></tr>
           <tr class="hl"><td>Widespread coseismic slope failure<small>25,000 landslides in Gorkha 2015</small></td><td><b>State modifier</b><br>lowers every trigger threshold</td><td class="n">new</td></tr>
         </tbody>
       </table>
@@ -538,7 +538,7 @@ td.tm{font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:600;color:v
         <p class="pd">Fill station gaps in the Bhote Koshi&ndash;Trishuli; add infrasound and riverbank tremor sites. Automatic sirens within 20 km upstream; arrival-time prediction downstream.</p>
         <div class="ph2"><em>Phase 3</em><b>Roll out to other basins &middot; transboundary integration</b><span>USD 1.4&ndash;2.1 M per basin</span></div>
       </div>
-      <p class="note"><b>If Phase 0 shows events cannot be caught with adequate margin, nothing further should be funded.</b> It costs almost nothing and governs a multi-million-dollar decision.</p>
+      <p class="note"><b>If Phase 0 shows events cannot be caught with adequate margin, nothing further should be funded.</b> It costs almost nothing and governs a multi-million-dollar decision. This event&rsquo;s Mw 5.7 and M4.2 are its first labelled cases.</p>
     </div>
   </section>
 
@@ -599,7 +599,7 @@ td.tm{font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:600;color:v
         <svg class="ico"><use href="#i-seismo"/></svg>
         <div>
           <div class="a">Alert regardless of mechanism.</div>
-          <div class="b">The system must not try to decide &ldquo;rock or ice&rdquo;. The only question it answers is binary: has a large mass movement occurred upstream? Identifying the mechanism takes days &mdash; four days on, views still diverge.</div>
+          <div class="b">The system must not try to decide &ldquo;rock or ice&rdquo;. The only question it answers is binary: has a large mass movement occurred upstream? Settling the mechanism here took five days, over four revisions.</div>
         </div>
       </div>
     </div>

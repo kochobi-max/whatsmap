@@ -248,7 +248,7 @@ td.tm{font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Y
   <div>
     <h1>ヒマラヤ統合EWS 構造図</h1>
     <div class="st">降雨型洪水・土砂災害／氷岩なだれ／GLOF／大地震を、既存の2系統の上で束ねる（検討図）</div>
-    <div class="meta">作成 2026-08-30 ／ 2026年8月26日ボテコシ／トリスリ川洪水の検討に基づく ／ 公式見解ではない</div>
+    <div class="meta">作成 2026-08-30 ／ 改訂 2026-08-31 ／ 2026年8月26日ボテコシ／トリスリ川洪水の検討に基づく ／ 公式見解ではない</div>
   </div>
   <div class="cl">ゼロから作らない。すでにある2つの系を繋ぎ、<br>抜けている検知経路だけを足す。</div>
 </header>
@@ -274,7 +274,7 @@ td.tm{font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Y
       <dl class="kv">
         <dt class="x">欠1</dt><dd><b>降雨系は降雨を前提とする</b><small>本事象に降雨は関与していない（DHMが確認）。280局も272地区の閾値も、<b>原理的に反応しようがない</b></small></dd>
         <dt class="x">欠2</dt><dd><b>地震系は地震を前提とする</b><small>鋭い到達波を結合する設計。立ち上がりの緩い質量移動は結合段階で捨てられる。今回のカタログの <b>nst = 0</b> がその証拠</small></dd>
-        <dt class="x">欠3</dt><dd><b>2つの系が繋がっていない</b><small>地震系がM5.2を記録していても、それが降雨系の警報経路に入る配線が無い。<b>08:37も11:45も、解析者が事後に処理して初めてカタログに載った</b>（登録は1日半後）</small></dd>
+        <dt class="x">欠3</dt><dd><b>2つの系が繋がっていない</b><small>地震系がM5.2（GFZはMw5.7）を記録していても、それが降雨系の警報経路に入る配線が無い。<b>08:37も11:45も、解析者が事後に処理して初めてカタログに載った</b>（登録は1日半後）</small></dd>
         <dt class="x">欠4</dt><dd><b>所管が割れている</b><small>地震＝DMG／洪水・土砂警報＝DHM／対応＝NDRRMA</small></dd>
       </dl>
       <p class="note"><b>2つの系はそれぞれ自分のハザードには機能する。どちらも今回のハザードを担当せず、互いに繋がっていなかった。</b>これが「統合」を要する理由であり、欠1〜4のうちハードウェア不足は1つも無い。</p>
@@ -288,9 +288,9 @@ td.tm{font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Y
         <thead><tr><th>ハザード</th><th>拾う経路</th><th>状態</th></tr></thead>
         <tbody>
           <tr><td>モンスーン降雨の洪水・土砂災害<small>累積では最も多くの命を奪ってきた</small></td><td><b>R</b> 雨量閾値＋土壌雨量指数</td><td class="k">既存<br>稼働中</td></tr>
-          <tr><td>氷岩なだれ・岩盤崩壊<small>2026年本件／2015年ランタン谷</small></td><td><b>D1</b> 単一力震源<br><span class="mono">発報 60〜120秒</span></td><td class="n">新規</td></tr>
-          <tr><td>GLOF・河道閉塞の決壊<small>2016年 Gongbatongsha／2025年 ラスワ</small></td><td><b>D2</b> 河川微動（1〜10Hz）</td><td class="n">新規</td></tr>
-          <tr><td>観測装置の被災<small>今回、上流3局が警戒水位前に沈黙</small></td><td><b>D3</b> 欠測＝警報</td><td class="n">新規</td></tr>
+          <tr><td>氷岩なだれ・岩盤崩壊<small>本件＝ランタン・リルン北面／2015年ランタン谷</small></td><td><b>D1</b> 単一力震源<br><span class="mono">発報 60〜120秒</span></td><td class="n">新規</td></tr>
+          <tr><td>GLOF・河道閉塞の決壊<small>本件の初期機構＋8/28越流の堰止湖／2025年ラスワ</small></td><td><b>D2</b> 河川微動（1〜10Hz）</td><td class="n">新規</td></tr>
+          <tr><td>観測装置の被災<small>上流局が08:40以降に一斉沈黙。8/30の再増水も轟音で覚知</small></td><td><b>D3</b> 欠測＝警報</td><td class="n">新規</td></tr>
           <tr class="hl"><td>大地震による同時多発斜面崩壊<small>2015年 Gorkha で25,000件</small></td><td><b>状態修飾子</b><br>全トリガの閾値を下げる</td><td class="n">新規</td></tr>
         </tbody>
       </table>
@@ -496,7 +496,7 @@ td.tm{font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Y
             <rect x="1037.4588235294118" y="322.5" width="13" height="11.5" fill="var(--c-predict)"/>
             <text x="1043.9588235294118" y="331.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">新</text>
             <text x="1055.4588235294118" y="331.5" font-size="10" font-weight="700" fill="var(--ink)">坑内一斉警報</text>
-            <text x="1038.4588235294118" y="342.5" font-size="8.2" fill="var(--ink-2)">不明者933名の類型に対応</text>
+            <text x="1038.4588235294118" y="342.5" font-size="8.2" fill="var(--ink-2)">不明者4,247名の類型に対応</text>
             <rect x="1278.6352941176472" y="319" width="221.36470588235292" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
             <rect x="1283.6352941176472" y="322.5" width="13" height="11.5" fill="var(--c-predict)"/>
             <text x="1290.1352941176472" y="331.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">新</text>
@@ -524,7 +524,7 @@ td.tm{font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Y
         <p class="pd">ボテコシ／トリスリに観測点を補填、微気圧計・河岸微動観測点。上流20km圏に自動サイレン、下流に到達時刻予測。</p>
         <div class="ph2"><em>Phase 3</em><b>他流域へ展開・越境統合</b><span>流域あたり 2〜3億円</span></div>
       </div>
-      <p class="note"><b>Phase 0 で「十分な余裕をもって捕捉できない」と出れば、以降に投資すべきではない。</b>ほとんど費用がかからないのに、数億円の判断を左右する。</p>
+      <p class="note"><b>Phase 0 で「十分な余裕をもって捕捉できない」と出れば、以降に投資すべきではない。</b>ほとんど費用がかからないのに、数億円の判断を左右する。本件のMw5.7とMw4.2は、この検定の最初の教師データになる。</p>
     </div>
   </section>
 
@@ -585,7 +585,7 @@ td.tm{font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Y
         <svg class="ico"><use href="#i-seismo"/></svg>
         <div>
           <div class="a">機構を問わず、発報する。</div>
-          <div class="b">「岩か氷か」を判定してはならない。答えるべきは「上流で大規模な質量移動が起きたか」の二値だけ。機構の同定には日数がかかり、本件では4日経っても見解が割れている。</div>
+          <div class="b">「岩か氷か」を判定してはならない。答えるべきは「上流で大規模な質量移動が起きたか」の二値だけ。本件で機構が収束するまでに5日を要し、その間に読みは4度動いた。</div>
         </div>
       </div>
     </div>

@@ -169,13 +169,15 @@ td.tm{font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:600;color:v
   #board{transform:none!important}
 }
 /* English typesetting: Latin sets wider than Japanese at the same nominal size */
-.td{font-size:9.1px;line-height:1.34}
+.td{font-size:8.75px;line-height:1.3}
+.tt{font-size:9.5px}
 .tt{font-size:9.8px}
 .tr{padding:0}
-.sumbar{font-size:9.6px;margin-top:4px;padding:4px 8px}
-.note{font-size:8.3px;line-height:1.42;margin-top:4px}
-.gt{font-size:10.2px;line-height:1.3}
-.gd{font-size:8.4px;line-height:1.4}
+.tr .ico{font-size:11px}
+.sumbar{font-size:9.2px;margin-top:3px;padding:3px 8px}
+.note{font-size:8.05px;line-height:1.38;margin-top:3px;padding-top:3px}
+.gt{font-size:9.9px;line-height:1.28}
+.gd{font-size:8.15px;line-height:1.36}
 .gi{padding:2px 0}
 .dn{font-size:9.4px}
 .dn small{font-size:7.4px}
@@ -183,7 +185,7 @@ td.tm{font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:600;color:v
 .db b{font-size:9.2px}
 .dh{font-size:7.8px}
 .mt{font-size:9.4px;line-height:1.28}
-.mm,.mb{font-size:8.3px;line-height:1.38}
+.mm,.mb{font-size:8.15px;line-height:1.36}
 .mmi{font-size:7.5px}
 .tg{gap:4px 9px}
 table{font-size:8.4px}
@@ -236,9 +238,9 @@ figcaption{font-size:7.9px;line-height:1.4;margin-top:4px}
   <div>
     <h1>Himalayan Glacial Disaster &mdash; DRR Concept Diagram</h1>
     <div class="st">Support options drawing on Japanese technology, following the 25&ndash;26 August 2026 Bhote Koshi&ndash;Trishuli flood in Nepal (working draft)</div>
-    <div class="meta">Drafted 2026-08-30 &middot; The source reconstruction is still being revised (this sheet shows the best reading as of 2026-08-30 together with its revision history) &middot; Search ongoing; figures provisional &middot; Not an official position of any agency</div>
+    <div class="meta">Drafted 2026-08-30 &middot; Revised 2026-08-31 &middot; Figures are NDRRMA as of 2026-08-31 09:00 NPT; search ongoing &middot; Not an official position of any agency</div>
   </div>
-  <div class="cl">The source mechanism is still unsettled.<br>But the 6&ndash;10 hours downstream certainly existed &mdash; and did not turn into evacuation.</div>
+  <div class="cl">The source mechanism has largely converged.<br>But the 6&ndash;10 hours downstream existed under every reading &mdash; and did not turn into evacuation.</div>
 </header>
 
 <!-- ===== ROW 1 ===== -->
@@ -247,14 +249,14 @@ figcaption{font-size:7.9px;line-height:1.4;margin-top:4px}
     <div class="ph"><span class="no">1</span><svg class="ico"><use href="#i-warn"/></svg><h2>What happened</h2></div>
     <div class="pb">
       <div class="grow">
-        <div class="tr hot"><svg class="ico"><use href="#i-mtn"/></svg><span class="tt">08:37</span><span class="td"><b>The glacier terminus fails together with its bedrock</b> (~5,200 m elevation, ~600 m wide, 1,200 m drop). The M5.2 signal <b>was produced by the collapse</b>. It enters the Lhende River and turns <b>directly into a debris flow</b></span></div>
-        <div class="tr"><svg class="ico"><use href="#i-gauge"/></svg><span class="tt">08:50<br>09:20</span><span class="td">Two stage gauges <b>stop transmitting</b> (= destroyed). 09:05 DHM becomes aware (<b>16 min after the wave crossed the border</b>)</span></div>
-        <div class="tr"><svg class="ico"><use href="#i-phone"/></svg><span class="tt">09:15</span><span class="td">Mass SMS alert: <b>679,295 messages</b>. Only 4 districts targeted</span></div>
-        <div class="tr hot"><svg class="ico"><use href="#i-mtn"/></svg><span class="tt">11:45</span><span class="td"><b>A second collapse on the same slope</b> (M4.2). Search teams are entering the valley &mdash; <b>no warning is issued</b></span></div>
+        <div class="tr hot"><svg class="ico"><use href="#i-mtn"/></svg><span class="tt">08:37</span><span class="td"><b>An ice mass fails on the north face of Langtang Lirung</b> (~610 m wide, 0.2 km&sup2;, 1,200 m drop). It <b>briefly dams the Lhende</b>, then breaches as one surge. M5.2 / Mw 5.7 <b>came from the collapse</b></span></div>
+        <div class="tr"><svg class="ico"><use href="#i-gauge"/></svg><span class="tt">08:50<br>09:20</span><span class="td">Stage gauges <b>stop transmitting</b> (= destroyed). 09:05 DHM becomes aware, <b>16 min after the wave crossed the border</b></span></div>
+        <div class="tr"><svg class="ico"><use href="#i-phone"/></svg><span class="tt">09:15</span><span class="td">Mass SMS alert: <b>679,295 messages</b>. Only 4 districts</span></div>
+        <div class="tr hot"><svg class="ico"><use href="#i-mtn"/></svg><span class="tt">11:45</span><span class="td"><b>A second collapse on the same slope</b> (M4.2). Search teams are entering the valley &mdash; <b>no warning issued</b></span></div>
         <div class="tr"><svg class="ico"><use href="#i-wave"/></svg><span class="tt">15:20<br>16:00</span><span class="td">Reaches Devghat &rarr; peak <b>6.57 m</b> (no second peak)</span></div>
       </div>
-      <div class="sumbar">About 10 hours from collapse to the lowest reach &middot; 675 dead, 2,418 missing</div>
-      <p class="note"><b>This chronology changed three times in four days.</b> First USGS report &rarr; IRDR (previous-day collapse + 18&ndash;19 h of impoundment) &rarr; satellite analysis (direct debris flow, no evidence of a dam). Because there are no instruments upstream, everything rests on inference from remote data. A GLOF struck the same corridor in July 2025 (11 dead).</p>
+      <div class="sumbar">About 10 hours from collapse to the lowest reach &middot; 903 dead, 4,247 missing</div>
+      <p class="note"><b>This chronology moved four times in five days, and has now converged.</b> First USGS report &rarr; IRDR (previous-day collapse + 18&ndash;19 h of impoundment) &rarr; satellite analysis (no dam) &rarr; <b>ICIMOD / USGS: a brief blockage and breach</b>. With no instruments upstream, everything rested on remote inference &mdash; which is what produced the swings. A GLOF struck the same corridor in July 2025 (11 dead).</p>
     </div>
   </section>
 
@@ -263,16 +265,16 @@ figcaption{font-size:7.9px;line-height:1.4;margin-top:4px}
     <div class="pb">
       <div class="grow">
         <div class="dh"><span>District (upstream &rarr; downstream)</span><span>Margin after alert</span><span>Bodies recovered</span></div>
-        <div class="dr"><span class="dn">Rasuwa</span><span class="dl neg">&minus;25 min</span><span class="db"><i style="width:5%"></i><b>13</b></span></div>
-        <div class="dr"><span class="dn">Nuwakot</span><span class="dl">+5 min</span><span class="db"><i style="width:21%"></i><b>51</b></span></div>
-        <div class="dr"><span class="dn">Dhading</span><span class="dl">~1.5&ndash;2 h</span><span class="db"><i style="width:18%"></i><b>45</b></span></div>
-        <div class="dr"><span class="dn">Gorkha</span><span class="dl">~3&ndash;4 h</span><span class="db"><i style="width:23%"></i><b>57</b></span></div>
-        <div class="dr"><span class="dn">Tanahun</span><span class="dl">~4&ndash;5 h</span><span class="db"><i style="width:14%"></i><b>35</b></span></div>
-        <div class="dr"><span class="dn">Chitwan</span><span class="dl">6 h 05 min</span><span class="db"><i style="width:100%"></i><b>246</b></span></div>
-        <div class="dr"><span class="dn">Nawalparasi E<small>not alerted</small></span><span class="dl">~7&ndash;8 h</span><span class="db"><i style="width:67%"></i><b>165</b></span></div>
-        <div class="dr"><span class="dn">Nawalparasi W<small>not alerted</small></span><span class="dl">~8&ndash;9 h</span><span class="db"><i style="width:26%"></i><b>63</b></span></div>
+        <div class="dr"><span class="dn">Rasuwa</span><span class="dl neg">&minus;25 min</span><span class="db"><i style="width:9%"></i><b>24</b></span></div>
+        <div class="dr"><span class="dn">Nuwakot</span><span class="dl">+5 min</span><span class="db"><i style="width:35%"></i><b>95</b></span></div>
+        <div class="dr"><span class="dn">Dhading</span><span class="dl">~1.5&ndash;2 h</span><span class="db"><i style="width:20%"></i><b>55</b></span></div>
+        <div class="dr"><span class="dn">Gorkha</span><span class="dl">~3&ndash;4 h</span><span class="db"><i style="width:23%"></i><b>62</b></span></div>
+        <div class="dr"><span class="dn">Tanahun</span><span class="dl">~4&ndash;5 h</span><span class="db"><i style="width:14%"></i><b>37</b></span></div>
+        <div class="dr"><span class="dn">Chitwan</span><span class="dl">6 h 05 min</span><span class="db"><i style="width:100%"></i><b>272</b></span></div>
+        <div class="dr"><span class="dn">Nawalparasi E<small>not alerted</small></span><span class="dl">~7&ndash;8 h</span><span class="db"><i style="width:76%"></i><b>207</b></span></div>
+        <div class="dr"><span class="dn">Nawalparasi W<small>not alerted</small></span><span class="dl">~8&ndash;9 h</span><span class="db"><i style="width:56%"></i><b>151</b></span></div>
       </div>
-      <p class="note"><b style="color:var(--alert)">A decisive caveat:</b> &ldquo;bodies recovered&rdquo; is <b>where a body was found, not where the person died</b>. Depending on how bodies carried down from upstream are treated, the policy conclusion can invert. That is exactly why <b>the verification survey (A-0) must precede any equipment donation</b>. What does not move: 320 people &mdash; about 47% of the total &mdash; were recovered in the four districts that were never alerted (Gorkha, Tanahun, Nawalparasi East and West).</p>
+      <p class="note"><b style="color:var(--alert)">A decisive caveat:</b> &ldquo;bodies recovered&rdquo; is <b>where a body was found, not where the person died</b>, and <b>recovery is rate-limited by regaining access</b> (from 29 to 31 Aug the upstream counts caught up: Rasuwa 13&rarr;24, Nuwakot 51&rarr;95). That is exactly why <b>the verification survey (A-0) must precede any equipment donation</b>. The shape still holds: 457 people &mdash; <b>50.6% of the total</b> &mdash; were recovered in the four districts that were never alerted; the three lowest districts alone hold <b>69.8%</b>; Rasuwa, closest to the source, holds <b>2.7%</b>.</p>
     </div>
   </section>
 
@@ -280,17 +282,17 @@ figcaption{font-size:7.9px;line-height:1.4;margin-top:4px}
     <div class="ph"><span class="no">3</span><svg class="ico" style="color:var(--alert)"><use href="#i-gap"/></svg><h2>Four blind spots</h2></div>
     <div class="pb">
       <div class="gi"><svg class="ico"><use href="#i-gap"/></svg><div>
-        <div class="gt"><em>GAP 1</em>Four days on, what happened at the source is still unsettled</div>
-        <div class="gd">First USGS report &rarr; IRDR (previous-day collapse + prolonged impoundment) &rarr; satellite analysis (direct debris flow): <b>three versions in four days</b>. Views diverge because there are no upstream instruments and everything is remote inference. That, in itself, is the case for putting monitoring there.</div></div></div>
+        <div class="gt"><em>GAP 1</em>Pinning down the source took five days, four revisions</div>
+        <div class="gd">USGS &rarr; IRDR (prolonged impoundment) &rarr; satellite (no dam) &rarr; <b>ICIMOD / USGS: a brief blockage and breach</b>. Readings diverge because there are no upstream instruments and everything is remote inference. That, in itself, is the case for putting monitoring there.</div></div></div>
       <div class="gi"><svg class="ico"><use href="#i-gauge"/></svg><div>
         <div class="gt"><em>GAP 2</em>Monitoring watches only for a rise in water</div>
-        <div class="gd">The Rasuwagadhi gauge (446.22) showed no prior change. The three upstream stations <b>fell silent before reaching alert stage</b>, and that silence &mdash; itself the evidence of destruction &mdash; was logged as &ldquo;missing data&rdquo;. Neither a falling stage nor missing data is treated as an anomaly.</div></div></div>
+        <div class="gd">The Rasuwagadhi gauge (446.22) showed no prior change. The upstream stations <b>stopped transmitting together after 08:40</b>, and that silence &mdash; itself the evidence of destruction &mdash; was logged as &ldquo;missing data&rdquo;. <b>The renewed rise on 30 Aug was likewise noticed by the river&rsquo;s roar, not by an instrument.</b> Neither a falling stage nor missing data is treated as an anomaly.</div></div></div>
       <div class="gi"><svg class="ico"><use href="#i-phone"/></svg><div>
         <div class="gt"><em>GAP 3</em>&ldquo;A flood has occurred&rdquo; does not move people</div>
         <div class="gd">670,000 messages went out at 09:15, yet the wave reached Chitwan <b>six hours later</b>. What was needed was not notice that something had happened but &ldquo;what time it arrives at your village&rdquo;, followed by tracking updates.</div></div></div>
       <div class="gi"><svg class="ico"><use href="#i-tunnel"/></svg><div>
         <div class="gt"><em>GAP 4</em>Casualties concentrated among those SMS cannot reach</div>
-        <div class="gd">Of the missing, <b>933 are tunnel workers</b> and <b>589 are foreign nationals</b> &mdash; 63%. Tunnels have neither signal nor escape routes; trekkers have neither Nepali-language SMS nor community networks. Neither group is in the design scope of the existing warning system.</div></div></div>
+        <div class="gd">Of the 4,247 missing, <b>592 are foreign nationals</b> (288 Indian, 90 American, 53 Ukrainian, 51 Malaysian, 35 Australian, 33 British and others), plus a large number of tunnel workers. Tunnels have neither signal nor escape routes; trekkers have neither Nepali-language SMS nor community networks. Neither group is in the design scope of the existing warning system.</div></div></div>
     </div>
   </section>
 </div>
@@ -305,7 +307,7 @@ figcaption{font-size:7.9px;line-height:1.4;margin-top:4px}
           <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="currentColor"/></marker>
           <marker id="arc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="var(--c-detect)"/></marker></defs>
 
-          <text x="55" y="13" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" font-weight="600" fill="var(--muted)" letter-spacing="1.1">AT THE SOURCE &mdash; THE MECHANISM IS NOT YET SETTLED</text>
+          <text x="55" y="13" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" font-weight="600" fill="var(--muted)" letter-spacing="1.1">AT THE SOURCE &mdash; SETTLED AFTER FIVE DAYS</text>
           <text x="1462" y="13" text-anchor="end" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" font-weight="600" fill="var(--muted)" letter-spacing="1.1">AFTER THE COLLAPSE &mdash; 100 KM IN UP TO 10 HOURS (THE ALERT WENT OUT; EVACUATION DID NOT FOLLOW)</text>
           <line x1="572" y1="4" x2="572" y2="246" stroke="var(--line)" stroke-dasharray="4 4"/>
 
@@ -329,10 +331,10 @@ figcaption{font-size:7.9px;line-height:1.4;margin-top:4px}
             <rect x="389" y="22" width="168" height="76" fill="var(--c-predict-bg)" stroke="var(--c-predict)"/>
             <rect x="389" y="22" width="4" height="76" fill="var(--c-predict)" stroke="none"/>
             <svg x="400" y="28" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--c-predict)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21V8.5L12.5 4 16 8.5V21z"/><path d="M1.5 11h7M1.5 15.5h7M1.5 19h7M16 16h6.5"/></svg>
-            <text x="418" y="40" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="7.7" font-weight="600" fill="var(--c-predict)">B-3 / PREDICT &mdash; CONDITIONAL</text>
+            <text x="418" y="40" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="7.7" font-weight="600" fill="var(--c-predict)">B-3 / PREDICT &mdash; NEEDED HERE</text>
             <text x="400" y="58" font-size="11" font-weight="700" fill="var(--ink)">Blockage assessment</text>
-            <text x="400" y="70" font-size="8.2" font-weight="400" fill="var(--ink-2)">May not apply to this event,</text>
-            <text x="400" y="80" font-size="8.2" font-weight="400" fill="var(--ink-2)">but the capability is still needed</text>
+            <text x="400" y="70" font-size="8.2" font-weight="700" fill="var(--alert)">It happened twice: in the initial</text>
+            <text x="400" y="80" font-size="8.2" font-weight="700" fill="var(--alert)">mechanism, and again on 28 Aug</text>
             <text x="400" y="92" font-size="7.6" font-family="IBM Plex Mono, ui-monospace, monospace" fill="var(--c-predict)">&#9654; Japan&#8217;s emergency-survey rules</text>
             <rect x="590" y="22" width="200" height="76" fill="var(--c-alert-bg)" stroke="var(--c-alert)"/>
             <rect x="590" y="22" width="4" height="76" fill="var(--c-alert)" stroke="none"/>
@@ -370,27 +372,27 @@ figcaption{font-size:7.9px;line-height:1.4;margin-top:4px}
 
           <g stroke="currentColor" opacity=".3"><path d="M135 98v14M302 98v14M473 98v14M690 98v14M902 98v14M1129 98v14M1356 98v14"/></g>
 
-          <text x="55" y="119" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="9.5" font-weight="600" fill="var(--alert)" letter-spacing=".5">SOURCE MECHANISM UNRESOLVED &mdash; THREE VERSIONS IN FOUR DAYS</text>
+          <text x="55" y="119" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="9.5" font-weight="600" fill="var(--alert)" letter-spacing=".5">SOURCE MECHANISM &mdash; FOUR REVISIONS IN FIVE DAYS, NOW CONVERGED</text>
 
           <rect x="55" y="124" width="502" height="27" fill="var(--sunk)" stroke="var(--line)"/>
-          <text x="64" y="136" font-size="8.6" fill="var(--ink-2)">First USGS: the 08:37 collapse is the origin &rarr; IRDR: a 13:00 collapse the day before, breach after 18&ndash;19 h</text>
-          <text x="64" y="147" font-size="8.6" fill="var(--ink-2)">&rarr; GFZ and satellite analysis: the 08:37 collapse becomes a debris flow directly; no evidence of a sustained blockage</text>
+          <text x="64" y="136" font-size="8.2" fill="var(--muted)">1 USGS: the 08:37 collapse is the origin &rarr; 2 IRDR: a 13:00 collapse the day before, breach after 18&ndash;19 h &rarr; 3 satellite: no dam</text>
+          <text x="64" y="147" font-size="8.5" font-weight="700" fill="var(--c-detect)">4 ICIMOD / USGS: the Langtang Lirung ice-rock avalanche briefly dams the Lhende, then breaches as one surge</text>
 
           <rect x="55" y="155" width="502" height="62" fill="var(--alert-soft)" stroke="var(--alert)" stroke-width="1.4"/>
-          <text x="64" y="167" font-size="9.3" font-weight="700" fill="var(--alert)">Orders of magnitude &mdash; only the excess volume constrains the source</text>
+          <text x="64" y="167" font-size="9.3" font-weight="700" fill="var(--alert)">Orders of magnitude &mdash; only the excess constrains the source (now measured)</text>
           <text x="64" y="179" font-size="8.3" fill="var(--ink-2)">Frictional melt (even spending all of the 1,200 m drop &mdash; 11.8 kJ/kg &mdash; caps melt at 3.5% of the ice mass)</text>
           <text x="551" y="179" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.5" font-weight="600" text-anchor="end" fill="var(--ink)">10⁵–10⁶ m³</text>
           <text x="64" y="190" font-size="8.3" fill="var(--ink-2)">18&ndash;19 h of channel blockage and impoundment (a catchment the size of the Lhende)</text>
           <text x="551" y="190" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.5" font-weight="600" text-anchor="end" fill="var(--ink)">10⁶ m³</text>
-          <text x="64" y="201" font-size="8.3" fill="var(--ink-2)">Total volume past Devghat (includes baseflow; cannot constrain the source)</text>
+          <text x="64" y="201" font-size="8.3" fill="var(--ink-2)">Total volume past Devghat (includes baseflow; cannot constrain the source). Peak flow 5,850 m&sup3;/s</text>
           <text x="551" y="201" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.5" font-weight="600" text-anchor="end" fill="var(--ink)">10⁸ m³</text>
-          <text x="64" y="212" font-size="8.3" font-weight="700" fill="var(--alert)">&#8627; of which the excess above baseflow &mdash; this is what constrains the source</text>
-          <text x="551" y="212" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.5" font-weight="700" text-anchor="end" fill="var(--alert)">10⁷ m³</text>
+          <text x="64" y="212" font-size="8.3" font-weight="700" fill="var(--alert)">&#8627; the excess above baseflow &mdash; same order as the fallen ice (0.2 km&sup2;); friction can melt only 3.5%</text>
+          <text x="551" y="212" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.5" font-weight="700" text-anchor="end" fill="var(--alert)">2×10⁷ m³</text>
 
           <rect x="55" y="221" width="502" height="25" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.4"/>
-          <text x="64" y="232" font-size="8.8" font-weight="700" fill="var(--c-detect)">Seismic records for 25 Aug &mdash; queried 2026-08-30: nothing found</text>
-          <text x="64" y="242" font-size="7.8" fill="var(--ink-2)">USGS lists only the two 26 Aug events within 300 km over 8 days (<tspan font-weight="700">both type=landslide, depth 0 km</tspan>). Nothing on 25 Aug.</text>
-          <text x="549" y="232" text-anchor="end" font-size="7.6" fill="var(--muted)">waveform-level check still outstanding</text>
+          <text x="64" y="232" font-size="8.8" font-weight="700" fill="var(--c-detect)">The renewed rise on 30 Aug &mdash; the same gap, reproduced four days later</text>
+          <text x="64" y="242" font-size="7.8" fill="var(--ink-2)">Flow rose again and NDRRMA alerted. Noticed not by an instrument but by <tspan font-weight="700">a report that the river&rsquo;s roar had grown</tspan>. Search suspended.</text>
+          <text x="549" y="232" text-anchor="end" font-size="7.6" fill="var(--muted)">the barrier lake was largely empty by 30 Aug</text>
 
           <line x1="590" y1="124" x2="1462" y2="124" stroke="currentColor" stroke-width="1.4" marker-end="url(#ar)"/>
           <g stroke="currentColor" stroke-width="1.4"><path d="M620 120v8M700 120v8M900 120v8M1080 120v8M1300 120v8"/></g>
@@ -412,18 +414,18 @@ figcaption{font-size:7.9px;line-height:1.4;margin-top:4px}
               <text x="1255" y="196">Nawalparasi E</text><text x="1400" y="196">W</text>
             </g>
             <g fill="var(--alert)">
-              <rect x="610" y="202" width="20" height="2"/><rect x="692" y="202" width="20" height="6"/>
-              <rect x="780" y="202" width="20" height="5"/><rect x="860" y="202" width="20" height="7"/>
+              <rect x="610" y="202" width="20" height="3"/><rect x="692" y="202" width="20" height="10"/>
+              <rect x="780" y="202" width="20" height="6"/><rect x="860" y="202" width="20" height="7"/>
               <rect x="935" y="202" width="20" height="4"/><rect x="1070" y="202" width="20" height="30"/>
-              <rect x="1245" y="202" width="20" height="20"/><rect x="1390" y="202" width="20" height="8"/>
+              <rect x="1245" y="202" width="20" height="23"/><rect x="1390" y="202" width="20" height="17"/>
             </g>
             <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="9.5" font-weight="600" fill="var(--alert)">
-              <text x="620" y="214">13</text><text x="702" y="219">51</text><text x="790" y="217">45</text>
-              <text x="870" y="220">57</text><text x="945" y="216">35</text><text x="1080" y="243">246</text>
-              <text x="1255" y="233">165</text><text x="1400" y="221">63</text>
+              <text x="620" y="216">24</text><text x="702" y="223">95</text><text x="790" y="219">55</text>
+              <text x="870" y="220">62</text><text x="945" y="217">37</text><text x="1080" y="243">272</text>
+              <text x="1255" y="236">207</text><text x="1400" y="230">151</text>
             </g>
           </g>
-          <text x="1462" y="246" text-anchor="end" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.5" fill="var(--muted)">&#9650; Bodies recovered (NDRRMA, 2026-08-29 18:30)</text>
+          <text x="1462" y="246" text-anchor="end" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.5" fill="var(--muted)">&#9650; Bodies recovered (NDRRMA, 2026-08-31 09:00)</text>
         </svg>
 
         <div class="allband">
@@ -431,7 +433,7 @@ figcaption{font-size:7.9px;line-height:1.4;margin-top:4px}
           <span class="k">BASIN-WIDE,<br>PEACETIME</span>
           <span class="t"><b>A-4</b> Protocols for tunnel workers and foreign nationals (cell broadcast / tunnel safety standards) &nbsp; <b>C-1</b> High-ground refuges and escape routes for every settlement &nbsp; <b>C-3</b> Hydropower plants as EWS nodes (monitoring obligations secured through loan and insurance conditions) &nbsp; <b>A-0</b> Verification survey (settle the source mechanism; census of where and when each death occurred and which alert was received)</span>
         </div>
-        <figcaption>Left: how the source reconstruction changed three times in four days (as of 2026-08-30). Right: propagation of the flood wave after the collapse (the horizontal axis is not to scale). The margin available at the source is disputed, but <b>the 6&ndash;10 hours downstream exist under every hypothesis</b>. Only three arrival times are measured &mdash; Syabrubesi 08:50, Betrawati 09:20, Devghat 15:20; the rest are interpolated. Bodies recovered is not a count by place of death.</figcaption>
+        <figcaption>Left: how the reading of the source moved four times in five days (as of 2026-08-31). Right: propagation of the flood wave after the collapse (the horizontal axis is not to scale). The margin at the source varies with the reading, but <b>the 6&ndash;10 hours downstream exist under every one of them</b>. Only three arrival times are measured &mdash; Syabrubesi 08:50, Betrawati 09:20, Devghat 15:20; the rest are interpolated. On the Trishuli, a 9 m rise at Galchchi and 7 m at Malekhu were recorded within 30 minutes. Bodies recovered is not a count by place of death, and recovery is rate-limited by regaining access.</figcaption>
       </figure>
     </div>
   </section>
@@ -445,7 +447,7 @@ figcaption{font-size:7.9px;line-height:1.4;margin-top:4px}
       <div class="tg">
         <div class="mi" style="border-left-color:var(--c-detect)"><svg class="ico" style="color:var(--c-detect)"><use href="#i-seismo"/></svg><div>
           <div class="mt"><em style="background:var(--c-detect-bg);color:var(--c-detect)">DETECT</em>NIED / Japan Meteorological Agency</div>
-          <div class="mb"><span class="mmi">Hi-net, V-net; automatic seismic and infrasound detection of lahars</span>Stations sit inside Nepal, so the system <b>can be built without waiting for agreement with China</b>. It needs no identification of mechanism, so it works while expert views still diverge.</div></div></div>
+          <div class="mb"><span class="mmi">Hi-net, V-net; automatic seismic and infrasound detection of lahars</span>Stations sit inside Nepal, so the system <b>can be built without waiting for agreement with China</b>. It needs no identification of mechanism, so it works while views still diverge.</div></div></div>
         <div class="mi" style="border-left-color:var(--c-detect)"><svg class="ico" style="color:var(--c-detect)"><use href="#i-gauge"/></svg><div>
           <div class="mt"><em style="background:var(--c-detect-bg);color:var(--c-detect)">DETECT</em>MLIT / instrument manufacturers</div>
           <div class="mb"><span class="mmi">Crisis-management stage gauges; wire and vibration sensors</span>The &ldquo;under &yen;1 M, five years unpowered, retrofittable&rdquo; specification adopted after Typhoon Lionrock in 2016 (24 dead in Iwaizumi).</div></div></div>
@@ -460,7 +462,7 @@ figcaption{font-size:7.9px;line-height:1.4;margin-top:4px}
           <div class="mb"><span class="mmi">ALOS-2 and -4 (L-band SAR); International Disasters Charter</span>There is distinct value in <b>Japan observing and distributing neutrally, as a third country</b>.</div></div></div>
         <div class="mi" style="border-left-color:var(--c-act)"><svg class="ico" style="color:var(--c-act)"><use href="#i-yen"/></svg><div>
           <div class="mt"><em style="background:var(--c-act-bg);color:var(--c-act)">STRUCTURAL</em>MLIT Sabo Dept. / JICA / JBIC and NEXI</div>
-          <div class="mb"><span class="mmi">Emergency survey of landslide dams; unmanned construction</span><b>A statutory procedure that runs impounded volume &rarr; breach discharge &rarr; inundation estimate within 24&ndash;48 h.</b> Whether it applies here awaits the mechanism being settled.</div></div></div>
+          <div class="mb"><span class="mmi">Emergency survey of landslide dams; unmanned construction</span><b>A statutory procedure that runs impounded volume &rarr; breach discharge &rarr; inundation estimate within 24&ndash;48 h.</b> Needed both for the brief initial blockage and for the barrier lake that overtopped on 28 Aug.</div></div></div>
       </div>
     </div>
   </section>
@@ -471,7 +473,7 @@ figcaption{font-size:7.9px;line-height:1.4;margin-top:4px}
       <table>
         <thead><tr><th>When</th><th>What</th><th>Who</th></tr></thead>
         <tbody>
-          <tr><td class="tm">0&ndash;3 mo</td><td><b>A-0 verification survey</b> &mdash; settle the source mechanism; census of place and time of death and of which alert was received. In parallel, satellite monitoring of the unstable mass</td><td>Joint academic survey team / JAXA / ADRC</td></tr>
+          <tr><td class="tm">0&ndash;3 mo</td><td><b>A-0 verification survey</b> &mdash; settle the blockage duration and the water budget; census of place and time of death and of which alert was received. In parallel, satellite monitoring of the unstable mass</td><td>Joint academic survey team / JAXA / ADRC</td></tr>
           <tr><td class="tm">0&ndash;1 yr</td><td>A-1 arrival-time forecasting; A-3 review of alert coverage; A-4 tunnel and foreign-national protocols</td><td>ICHARM / JICA / MIC</td></tr>
           <tr><td class="tm">1&ndash;2 yr</td><td>B-1 source detection network (alerts on mass movement regardless of mechanism); B-2 automatic sirens; B-3 transfer of the channel-blockage procedure. Stage gauges to 30+</td><td>NIED / MLIT Sabo Dept.</td></tr>
           <tr><td class="tm">2&ndash;5 yr</td><td>C-1 high-ground refuges and escape routes; C-2 land-use guidance; C-3 power plants as nodes, with financial conditions</td><td>JICA / JBIC and NEXI</td></tr>
@@ -534,7 +536,7 @@ figcaption{font-size:7.9px;line-height:1.4;margin-top:4px}
         <svg class="ico"><use href="#i-run"/></svg>
         <div>
           <div class="a">Find it early upstream. Deliver time downstream.</div>
-          <div class="b">What this disaster lacked was not a means of knowing the danger, but a path from knowing to escaping.<span style="color:var(--muted);font-weight:400"> &nbsp;Sources: GFZ, ICIMOD, Copernicus / Planet satellite analysis, IRDR, USGS, NDRRMA, MLIT, NIED, JAXA, JICA and others</span></div>
+          <div class="b">What this disaster lacked was not a means of knowing the danger, but a path from knowing to escaping. On 30 Aug, too, it was a human ear that noticed.<span style="color:var(--muted);font-weight:400"> &nbsp;Sources: GFZ, ICIMOD, Copernicus / Planet satellite analysis, IRDR, USGS, NDRRMA, MLIT, NIED, JAXA, JICA and others</span></div>
         </div>
       </div>
     </div>
