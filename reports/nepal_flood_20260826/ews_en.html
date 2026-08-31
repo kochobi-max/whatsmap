@@ -244,15 +244,15 @@ td.tm{font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:600;color:v
 .cx h4{font-size:9.3px;line-height:1.28}
 .cx p{font-size:8.15px;line-height:1.36}
 .kv dd small{font-size:8.05px;line-height:1.34}
-.pd{font-size:8.05px;line-height:1.34;margin-bottom:1px}
+.pd{font-size:7.9px;line-height:1.32;margin-bottom:1px}
 .ph2 b{font-size:9.7px}
-.gs{font-size:7.15px;line-height:1.3}
+.gs{font-size:7.05px;line-height:1.28}
 .note{font-size:8.2px;line-height:1.4}
-.lg{font-size:7.7px;gap:2px 8px}
+.lg{font-size:7.6px;gap:2px 7px}
 .ms .b{font-size:8px;line-height:1.4}
 .flab{margin-bottom:2px}
 .foot .gs div{margin-bottom:1.5px}
-.ms .b{font-size:7.7px;line-height:1.35}
+.ms .b{font-size:7.45px;line-height:1.3}
 </style>
 
 <div id="stage" lang="en"><div id="board">
@@ -515,7 +515,7 @@ td.tm{font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:600;color:v
             <rect x="1280.9627906976746" y="322.5" width="12" height="11.5" fill="var(--c-predict)"/>
             <text x="1286.9627906976746" y="331.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">N</text>
             <text x="1297.9627906976746" y="331.5" font-size="9.6" font-weight="700" fill="var(--ink)">QZSS DC Report</text>
-            <text x="1281.9627906976746" y="342.5" font-size="8" fill="var(--ink-2)">receivability PoC required</text>
+            <text x="1281.9627906976746" y="342.5" font-size="8" fill="var(--ink-2)">mountains need field testing</text>
 
           <g stroke="var(--c-detect)" stroke-width="1.5" marker-end="url(#fl)" opacity=".7"><path d="M55 42v3"/><path d="M55 114v3"/><path d="M55 150v3"/><path d="M55 252v3"/><path d="M55 312v3"/></g>
         </svg>
@@ -531,19 +531,19 @@ td.tm{font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:600;color:v
     <div class="pb">
       <div class="grow">
         <div class="ph2"><em class="g">Phase 0</em><b>Retrospective analysis of existing archives</b><span>0&ndash;6 months &middot; &lt; USD 0.35 M &middot; no hardware</span></div>
-        <p class="pd">Mine ~40 stations&rsquo; continuous waveforms backwards and label past events. <b>Training data, thresholds and false-alarm rate fall out together.</b></p>
-        <div class="ph2"><em>Phase 1</em><b>Shadow-mode operation</b><span>6&ndash;18 months &middot; &lt; USD 0.7 M</span></div>
-        <p class="pd">Run the detector alongside the existing processing chain. Issue no warnings; <b>measure the operational false-alarm rate.</b></p>
-        <div class="ph2"><em>Phase 2</em><b>Implement in a pilot basin</b><span>18&ndash;30 months &middot; USD 1.4&ndash;2.8 M</span></div>
+        <p class="pd">Go back through the recorded waveforms of ~40 stations and find the collapses that already happened. <b>Threshold values, and how often a false alarm would fire, come straight out of the real data.</b></p>
+        <div class="ph2"><em>Phase 1</em><b>Trial running (no warnings issued)</b><span>6&ndash;18 months &middot; &lt; USD 0.7 M</span></div>
+        <p class="pd">Run the detection alongside the existing processing chain. Issue no warnings, and <b>measure only how often it would have fired in error.</b></p>
+        <div class="ph2"><em>Phase 2</em><b>Pilot deployment</b><span>18&ndash;30 months &middot; USD 1.4&ndash;2.8 M</span></div>
         <p class="pd">Fill station gaps in the Bhote Koshi&ndash;Trishuli; add infrasound and riverbank tremor sites. Automatic sirens within 20 km upstream; arrival-time prediction downstream.</p>
         <div class="ph2"><em>Phase 3</em><b>Roll out to other basins &middot; transboundary integration</b><span>USD 1.4&ndash;2.1 M per basin</span></div>
       </div>
-      <p class="note"><b>If Phase 0 shows events cannot be caught with adequate margin, nothing further should be funded.</b> It costs almost nothing and governs a multi-million-dollar decision. This event&rsquo;s Mw 5.7 and M4.2 are its first labelled cases.</p>
+      <p class="note"><b>If Phase 0 shows events cannot be caught with adequate margin, nothing further should be funded.</b> It costs almost nothing and governs a multi-million-dollar decision. This event&rsquo;s two records are the first material to test it against.</p>
     </div>
   </section>
 
   <section class="p">
-    <div class="ph"><span class="no">6</span><svg class="ico" style="color:var(--c-gov)"><use href="#i-globe"/></svg><h2>Three things harder than the technology</h2></div>
+    <div class="ph"><span class="no">6</span><svg class="ico" style="color:var(--c-gov)"><use href="#i-globe"/></svg><h2>Policy questions</h2></div>
     <div class="pb">
       <dl class="kv">
         <dt class="n">1</dt><dd><b>Assign the mandate</b><small>Widen DHM&rsquo;s flood-warning remit to accept non-hydrological triggers, or stand up a joint DMG&ndash;DHM&ndash;NDRRMA cell. <b>Without it, detection has no route to a warning.</b></small></dd>
@@ -555,16 +555,16 @@ td.tm{font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:600;color:v
   </section>
 
   <section class="p">
-    <div class="ph"><span class="no">7</span><svg class="ico" style="color:var(--alert)"><use href="#i-no"/></svg><h2>What this system cannot do</h2></div>
+    <div class="ph"><span class="no">7</span><svg class="ico" style="color:var(--alert)"><use href="#i-no"/></svg><h2>Outside the scope</h2></div>
     <div class="pb">
       <div class="cx"><svg class="ico"><use href="#i-mtn"/></svg><div><h4>It does not predict. It begins once the mountain moves</h4>
-        <p>The Chamoli 2021 precursor (2.5 h ahead) was found retrospectively. <b>A research track &mdash; never a design assumption.</b></p></div></div>
-      <div class="cx"><svg class="ico"><use href="#i-wave"/></svg><div><h4>Tremor amplitude is not discharge</h4>
-        <p>A proxy for sediment flux; calibration is site-specific. A small GLOF can hide inside a monsoon rise. The discriminants are <b>rate of change and spectral shape</b>.</p></div></div>
-      <div class="cx"><svg class="ico"><use href="#i-gap"/></svg><div><h4>Below threshold, nothing is seen</h4>
-        <p>The smallest volume that can block a channel is unknown. The threshold is a choice of which risk is accepted &mdash; Phase 0 turns it into a number.</p></div></div>
-      <div class="cx"><svg class="ico"><use href="#i-gauge"/></svg><div><h4>It does not replace stage gauges</h4>
-        <p>Gauges give calibration; seismometers give survivability. <b>Complementary, not substitutes</b>. Leaning on either alone repeats the failure in another form.</p></div></div>
+        <p>The 2.5-hour precursor at Chamoli in 2021 was found afterwards, by going back through the records. Important as research, but <b>it cannot be a design assumption.</b></p></div></div>
+      <div class="cx"><svg class="ico"><use href="#i-wave"/></svg><div><h4>The size of the shaking is not the discharge</h4>
+        <p>Shaking is a guide to how much sediment is moving, and it has to be tuned per site. A small GLOF can hide inside a monsoon rise; what tells them apart is <b>how fast it grows and the shape of the frequencies</b>.</p></div></div>
+      <div class="cx"><svg class="ico"><use href="#i-gap"/></svg><div><h4>Small events go unseen</h4>
+        <p>We do not yet know the smallest volume that can block a channel. Where to set the threshold is a judgement about how much risk to accept &mdash; Phase 0 turns it into a number.</p></div></div>
+      <div class="cx"><svg class="ico"><use href="#i-gauge"/></svg><div><h4>It is not a substitute for stage gauges</h4>
+        <p>Gauges give measured values; seismometers give survivability. <b>They complement each other</b>. Leaning on either alone repeats the same failure in another form.</p></div></div>
     </div>
   </section>
 </div>
@@ -598,8 +598,8 @@ td.tm{font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:600;color:v
       <div class="ms">
         <svg class="ico"><use href="#i-seismo"/></svg>
         <div>
-          <div class="a">Alert regardless of mechanism.</div>
-          <div class="b">The system must not try to decide &ldquo;rock or ice&rdquo;. The only question it answers is binary: has a large mass movement occurred upstream? Settling the mechanism here took five days, over four revisions.</div>
+          <div class="a">Alert automatically when an event occurs.</div>
+          <div class="b">The system does not need to decide &ldquo;rock or ice&rdquo;. The only question is whether a large collapse has occurred upstream. <b>Issue the warning without waiting for the detailed analysis</b> &mdash; pinning down the cause takes days, and here too the reading moved.</div>
         </div>
       </div>
     </div>

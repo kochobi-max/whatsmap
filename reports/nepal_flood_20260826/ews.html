@@ -239,6 +239,15 @@ td.tm{font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Y
 .pb{padding:8px 10px}
 .kv dd{font-size:9.4px;line-height:1.42}
 .hd .cl{font-size:12px;padding:6px 13px}
+/* 2026-08-31 改訂：やわらかい言い回しで本文が伸びた分の調整 */
+.cx{padding:2.5px 7px;margin-bottom:2px}
+.cx h4{font-size:9.3px;line-height:1.26}
+.cx p{font-size:8.05px;line-height:1.36}
+.lgi{font-size:8px}
+.lg{gap:2px 8px}
+.gs{font-size:7.7px;line-height:1.38}
+.ms .b{font-size:8.5px;line-height:1.45}
+.ms .a{font-size:15px}
 </style>
 
 <div id="stage" lang="ja"><div id="board">
@@ -501,7 +510,7 @@ td.tm{font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Y
             <rect x="1283.6352941176472" y="322.5" width="13" height="11.5" fill="var(--c-predict)"/>
             <text x="1290.1352941176472" y="331.5" text-anchor="middle" font-size="8.2" font-weight="700" fill="var(--paper)">新</text>
             <text x="1301.6352941176472" y="331.5" font-size="10" font-weight="700" fill="var(--ink)">QZSS 災危通報</text>
-            <text x="1284.6352941176472" y="342.5" font-size="8.2" fill="var(--ink-2)">要 受信可能性PoC</text>
+            <text x="1284.6352941176472" y="342.5" font-size="8.2" fill="var(--ink-2)">山間部は要 受信実測</text>
 
           <g stroke="var(--c-detect)" stroke-width="1.5" marker-end="url(#fl)" opacity=".7"><path d="M52 42v3"/><path d="M52 114v3"/><path d="M52 150v3"/><path d="M52 252v3"/><path d="M52 312v3"/></g>
         </svg>
@@ -517,19 +526,19 @@ td.tm{font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Y
     <div class="pb">
       <div style="flex:1;min-height:0">
         <div class="ph2"><em class="g">Phase 0</em><b>既存アーカイブの遡及解析</b><span>0〜6か月 ／ 〜0.5億円 ／ 機材ゼロ</span></div>
-        <p class="pd">約40局分の連続波形を遡って掘り、過去事例にラベルを付ける。<b>教師データ・閾値・誤報率が同時に得られる。</b></p>
-        <div class="ph2"><em>Phase 1</em><b>シャドーモード併走</b><span>6〜18か月 ／ 〜1億円</span></div>
-        <p class="pd">リアルタイム検知器を既存処理系と並走させる。警報は出さず、<b>実運用の誤報率だけを測る。</b></p>
-        <div class="ph2"><em>Phase 2</em><b>試験流域へ実装</b><span>18〜30か月 ／ 2〜4億円</span></div>
+        <p class="pd">約40局分の記録済み波形を遡って調べ、過去に起きた崩壊を洗い出す。<b>判定の基準値と、空振りがどれくらい出るかが、実データから決まる。</b></p>
+        <div class="ph2"><em>Phase 1</em><b>試験運転（警報は出さない）</b><span>6〜18か月 ／ 〜1億円</span></div>
+        <p class="pd">検知の仕組みを既存の処理系と並べて動かす。警報は出さずに、<b>実際の運用で空振りがどれだけ出るかだけを測る。</b></p>
+        <div class="ph2"><em>Phase 2</em><b>パイロット実験</b><span>18〜30か月 ／ 2〜4億円</span></div>
         <p class="pd">ボテコシ／トリスリに観測点を補填、微気圧計・河岸微動観測点。上流20km圏に自動サイレン、下流に到達時刻予測。</p>
         <div class="ph2"><em>Phase 3</em><b>他流域へ展開・越境統合</b><span>流域あたり 2〜3億円</span></div>
       </div>
-      <p class="note"><b>Phase 0 で「十分な余裕をもって捕捉できない」と出れば、以降に投資すべきではない。</b>ほとんど費用がかからないのに、数億円の判断を左右する。本件のMw5.7とMw4.2は、この検定の最初の教師データになる。</p>
+      <p class="note"><b>Phase 0 で「十分な余裕をもって捕捉できない」と出れば、以降に投資すべきではない。</b>ほとんど費用がかからないのに、数億円の判断を左右する。本件の2つの記録が、その最初の検証材料になる。</p>
     </div>
   </section>
 
   <section class="p">
-    <div class="ph"><span class="no">6</span><svg class="ico" style="color:var(--c-gov)"><use href="#i-globe"/></svg><h2>技術より難しい3つ</h2></div>
+    <div class="ph"><span class="no">6</span><svg class="ico" style="color:var(--c-gov)"><use href="#i-globe"/></svg><h2>ポリシーの課題</h2></div>
     <div class="pb">
       <dl class="kv">
         <dt class="n">1</dt><dd><b>所管を決める</b><small>DHMの洪水予警報の所掌を「非水文学的トリガも受け付ける」よう拡張するか、DMG・DHM・NDRRMA合同のセルを作るか。<b>これが無ければ検知しても警報に至る経路が無い。</b></small></dd>
@@ -541,16 +550,16 @@ td.tm{font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Y
   </section>
 
   <section class="p">
-    <div class="ph"><span class="no">7</span><svg class="ico" style="color:var(--alert)"><use href="#i-no"/></svg><h2>この系にできないこと</h2></div>
+    <div class="ph"><span class="no">7</span><svg class="ico" style="color:var(--alert)"><use href="#i-no"/></svg><h2>対象範囲外について</h2></div>
     <div class="pb">
-      <div class="cx"><svg class="ico"><use href="#i-mtn"/></svg><div><h4>予知しない。山が動いてから始まる</h4>
-        <p>チャモリ2021の前兆信号（2.5時間前）は事後に遡って見つけたもの。<b>研究トラックであって設計前提にしてはならない。</b></p></div></div>
-      <div class="cx"><svg class="ico"><use href="#i-wave"/></svg><div><h4>微動振幅は流量ではない</h4>
-        <p>土砂フラックスの代理指標で較正は地点固有。小規模GLOFはモンスーン増水と紛れうる。識別子は<b>変化率とスペクトル形状</b>。</p></div></div>
-      <div class="cx"><svg class="ico"><use href="#i-gap"/></svg><div><h4>閾値以下は捕らえられない</h4>
-        <p>河道を塞ぎうる最小規模は不明。閾値は「どのリスクを受け入れるか」の選択で、Phase 0 で数字にする。</p></div></div>
-      <div class="cx"><svg class="ico"><use href="#i-gauge"/></svg><div><h4>水位計を置き換えない</h4>
-        <p>水位計は較正値を、地震計は生存性を与える。<b>代替ではなく補完</b>。片方に寄せれば同じ失敗を別の形で繰り返す。</p></div></div>
+      <div class="cx"><svg class="ico"><use href="#i-mtn"/></svg><div><h4>予知はしない。山が動いてから始まる</h4>
+        <p>チャモリ2021の2.5時間前の前触れは、後から記録を遡って見つけたものです。研究としては重要ですが、<b>設計の前提には置けません。</b></p></div></div>
+      <div class="cx"><svg class="ico"><use href="#i-wave"/></svg><div><h4>揺れの大きさは流量そのものではない</h4>
+        <p>揺れは流れる土砂の量を映す目安で、地点ごとの合わせ込みが要ります。小さなGLOFは雨期の増水に紛れることがあり、見分ける手がかりは<b>増え方の速さと周波数の形</b>です。</p></div></div>
+      <div class="cx"><svg class="ico"><use href="#i-gap"/></svg><div><h4>小さい規模のものは捉えられない</h4>
+        <p>川を塞ぎうる最小の規模はまだ分かりません。どこに基準値を置くかは「どこまでのリスクを受け入れるか」の判断で、Phase 0 で数字にします。</p></div></div>
+      <div class="cx"><svg class="ico"><use href="#i-gauge"/></svg><div><h4>水位計の代わりにはならない</h4>
+        <p>水位計は実測の値を、地震計は壊れにくさを与えます。<b>置き換えではなく補い合う関係</b>です。どちらかに寄せれば、同じ失敗を別の形で繰り返します。</p></div></div>
     </div>
   </section>
 </div>
@@ -584,8 +593,8 @@ td.tm{font-family:"IBM Plex Mono","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Y
       <div class="ms">
         <svg class="ico"><use href="#i-seismo"/></svg>
         <div>
-          <div class="a">機構を問わず、発報する。</div>
-          <div class="b">「岩か氷か」を判定してはならない。答えるべきは「上流で大規模な質量移動が起きたか」の二値だけ。本件で機構が収束するまでに5日を要し、その間に読みは4度動いた。</div>
+          <div class="a">イベント発生で自動的に警報を出す。</div>
+          <div class="b">警報を出すのに「岩か氷か」を判定する必要はありません。答えるべきは「上流で大きな崩壊が起きたか」だけです。<b>詳細な分析を待たずに警報を出す</b> ── 原因の特定には日数がかかり、今回も見方は動きました。</div>
         </div>
       </div>
     </div>
