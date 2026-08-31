@@ -377,6 +377,36 @@ Git for Windows の既定は `core.autocrlf=true`。**リポジトリに LF で�
 
 **`.bat` は CRLF のまま**でなければならない。LF にすると cmd が何も表示せずに終わる。
 
+## クラウド側のセッションにも soffice の実体部分・pptxgenjs が無いことがある（2026-08-31/09-01）
+
+「PDF変換はクラウドでやる」と決めた側で、その日のセッションに `soffice --version` は通るのに
+`--convert-to pdf` が **どんなファイルに対しても** `Error: source file could not be loaded` を
+返す事故が起きた（`echo hello > test.txt` の変換ですら失敗した。pptxの中身の問題ではない）。
+
+原因は `dpkg -l | grep libreoffice` で分かった。入っていたのは
+`libreoffice-core` / `libreoffice-common` など基盤部分だけで、
+**`libreoffice-impress` `libreoffice-writer` `libreoffice-draw` が無かった**。
+soffice本体は起動するが、文書を読み書きするフィルタが無いので何も開けない。
+
+同じセッションで `node generator/scripts/gen_deck.js` も
+`pptxgenjs が見つからない` で落ちた。`generator/node_modules` はリポジトリに
+コミットされておらず、セッションは毎回 `main`（またはこのブランチ）を
+clone して始まるため、**前回どこかのセッションが `npm install` していても引き継がれない。**
+
+対処（このセッションで実施。次回また消えている前提で書く）：
+
+```bash
+apt-get update && apt-get install -y libreoffice-impress libreoffice-writer
+cd skills/disaster-report/generator && npm install pptxgenjs
+```
+
+いずれも `_build/` や `node_modules/` と同様にコミットしない前提の使い捨て環境なので、
+`build_all.js` が `no-pptxgenjs` や PDFが0件のまま `STATUS: OK` 相当の表示を出したら、
+まずこの2つを疑う。`check_setup.bat`（PC側）と違い、クラウド側にはこれを検査する
+スクリプトが無い。次に直すなら `build_all.js` の先頭に軽い自己診断
+（`soffice --convert-to pdf` を空ファイルに試す／`require.resolve('pptxgenjs')`）を
+足して、`SOURCES-FAIL` と同じ扱いで早期に止める方が今回のような手戻りを防げる。
+
 ## PDF変換は荒木田さんのPCではやらない（2026-08-28）
 
 **このPCに LibreOffice は入っていない。** ここは4回、判断を間違えた場所。
