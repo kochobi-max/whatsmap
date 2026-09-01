@@ -536,11 +536,11 @@
  "satellite": [
   {
    "org": "Sentinel Asia",
-   "status": "Activated (15 Aug)",
+   "status": "Activated 15 Aug, ended by ADRC 31 Aug",
    "tier": "official",
    "url": "https://sentinel-asia.org/EO/2026/article20260815ID.html",
-   "en": "Emergency observation request for the Flores region earthquake, requested by BRIN and activated on the day of the event. The record notes escalation to the International Charter and carries GLIDE EQ-2026-000150-IDN.",
-   "ja": "フローレス地方の地震に対する緊急観測要請。BRINの要請により発災当日に発動。記録には国際災害チャーターへのエスカレーションと GLIDE番号 EQ-2026-000150-IDN が明記されている。"
+   "en": "Emergency observation request for the Flores region earthquake, requested by BRIN and activated on the day of the event. The record notes escalation to the International Charter and carries GLIDE EQ-2026-000150-IDN. ADRC (M. Sugiura) formally ended the EOR (SA-00656) on 31 Aug 2026, 23:45 JST.",
+   "ja": "フローレス地方の地震に対する緊急観測要請。BRINの要請により発災当日に発動。記録には国際災害チャーターへのエスカレーションと GLIDE番号 EQ-2026-000150-IDN が明記されている。ADRC（杉浦氏）が2026年8月31日23:45（日本時間）、要請（SA-00656）を正式に終了した。"
   },
   {
    "org": "International Charter",
