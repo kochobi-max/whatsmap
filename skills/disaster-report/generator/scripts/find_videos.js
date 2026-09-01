@@ -237,7 +237,9 @@ const handles = (ev.meta && ev.meta.video_handles) || [];
 
 console.log("── 動画候補  " + glide + "  " + (ev.meta.title_ja || ""));
 console.log("   検索語: " + queries.join(" ／ "));
-console.log("   載せてよい媒体の一覧: " + (TRUSTED.length ? TRUSTED.length + "件（_video.md）" : "**未設定** → 全件が要確認になる"));
+console.log("   載せてよい媒体の一覧: 媒体 " + TRUSTED.channels.length + "件 / ドメイン "
+  + TRUSTED.domains.length + "件（_video.md）"
+  + (TRUSTED.channels.length ? "" : "  ← **未設定。全件が要確認になる**"));
 console.log("");
 
 const seen = new Set();
@@ -269,7 +271,81 @@ for (const h of handles) {
   }
 }
 
+// 公開日をどう出すか
+// ------------------
+// 検索結果は「6 days ago」のような相対表記しか持たない。動画ページを1本ずつ開けば
+// JSON-LD の uploadDate（正確な日付）が取れるが、**連投すると YouTube が
+// google.com/sorry へ 302 で飛ばす**（2026-09-01 確認）。数本で頭打ちになる。
+//
+// そこで、まず動画ページを控えめに試し、弾かれたら相対表記から日付を**推定**する。
+// 推定値は必ず「約」を付けて出す。**正確な日付のふりをさせない。**
+let throttled = false;
+function exactDate(row) {
+  if (throttled || row.source !== "YouTube") return false;
+  let head;
+  try {
+    head = execFileSync("curl", ["-sS", "--max-time", "30", "--compressed", "-D", "-", "-o", "/dev/null",
+      "-A", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36",
+      row.url], { encoding: "latin1", maxBuffer: 4 * 1024 * 1024 });
+  } catch { return false; }
+  if (/google\.com\/sorry/i.test(head)) { throttled = true; return false; }
+  if (!/^HTTP\/[\d.]+ 200/mi.test(head)) return false;
+  let html;
+  try { html = curl(row.url); } catch { return false; }
+  const m = /"uploadDate"\s*:\s*"(\d{4}-\d{2}-\d{2})/.exec(html);
+  if (!m) return false;
+  row.published = m[1];
+  row.exact = true;
+  return true;
+}
+
+// 「6 days ago」→ 日付。YouTube は切り捨てで丸めるので前後1日ずれうる。
+const DAY = 86400000;
+function approxDate(row) {
+  const t = String(row.published || "");
+  const m = /(\d+)\s*(second|minute|hour|day|week|month|year)s?\s*(ago)?/i.exec(t)
+         || /(\d+)\s*([smhdwy])\s*ago/i.exec(t);
+  if (!m) return;
+  const n = parseInt(m[1], 10);
+  const u = m[2].toLowerCase();
+  const mult = u.startsWith("s") && u !== "second" ? 1000
+    : { second: 1000, minute: 60000, hour: 3600000, day: DAY, week: 7 * DAY,
+        month: 30 * DAY, year: 365 * DAY, m: 60000, h: 3600000, d: DAY, w: 7 * DAY, y: 365 * DAY }[u];
+  if (!mult) return;
+  const d = new Date(Date.now() - n * mult);
+  row.published = d.toISOString().slice(0, 10);
+  row.exact = false;
+  row.approxNote = "（" + t.trim() + " からの推定）";
+}
+
+function datedRow(row) { if (!exactDate(row)) approxDate(row); }
+
+// 題名に「16 Dead」のような当時の数値が入っていることがある。公開時点で固まるため、
+// 本文の最新値と並べると読み手が混乱する。機械で見つけて人に見せる。
+// 2026-09-01、NDTV の 8月26日の題名が「At Least 16 Dead」で、本文は死者734人だった。
+const STALE_NUM = /\b\d[\d,]*\s*(dead|killed|died|missing|injured|feared)\b|\b(dead|killed|missing|injured)\s*[:\-]?\s*\d/i;
+function markStale(r) {
+  if (STALE_NUM.test(r.title || "")) r.stale = true;
+}
+
+// 発災より前に公開された動画は、**同じ川の別の年の洪水**である可能性が高い。
+// ボテコシ川は過去にも決壊している。題名だけでは区別できないので日付で弾く。
+// 2026-09-01、8月26日の災害を検索して 2026-08-25 公開の動画が上位に出た。
+const EVENT_DATE = (ev.meta && ev.meta.event_date) || null;
+function markBeforeEvent(r) {
+  if (!EVENT_DATE || !/^\d{4}-\d{2}-\d{2}$/.test(r.published || "")) return;
+  // 推定日は前後1日ずれうる。確実に前と言えるときだけ落とす。
+  const margin = r.exact ? 0 : 1;
+  const cut = new Date(new Date(EVENT_DATE + "T00:00:00Z").getTime() - margin * 86400000)
+    .toISOString().slice(0, 10);
+  if (r.published < cut) r.beforeEvent = true;
+}
+
 const okRows = rows.filter(r => r.ok).slice(0, LIMIT);
+for (const r of okRows) { datedRow(r); markStale(r); markBeforeEvent(r); }
+// 発災前のものは載せない。人が見るまで要確認へ落とす。
+const beforeRows = okRows.filter(r => r.beforeEvent);
+const okFinal = okRows.filter(r => !r.beforeEvent);
 const chk = rows.filter(r => !r.ok).slice(0, LIMIT);
 
 const show = (label, list) => {
@@ -278,28 +354,45 @@ const show = (label, list) => {
   for (const r of list) {
     console.log("   " + r.url);
     console.log("     " + (r.title || "").slice(0, 100));
-    console.log("     " + [r.channel, r.published, r.length, r.source].filter(Boolean).join("  /  "));
+    const dsp = r.published ? (r.exact ? r.published : "約 " + r.published) : "";
+    console.log("     " + [r.channel, dsp, r.length, r.source].filter(Boolean).join("  /  ")
+      + (r.approxNote || ""));
+    if (r.stale) console.log("     ⚠ 題名に公開当時の数値が入っている。本文の最新値と食い違う。"
+      + "載せるなら、その旨を1行添えるか、この1件を落とす");
   }
   console.log("");
 };
 
-show("載せてよい媒体", okRows);
-if (SHOW_ALL || !okRows.length) {
+show("載せてよい媒体", okFinal);
+if (beforeRows.length) {
+  console.log("── 発災（" + EVENT_DATE + "）より前に公開されている（" + beforeRows.length + "件）");
+  console.log("   **同じ場所の別の年の災害である可能性が高い。載せない。**");
+  for (const r of beforeRows) console.log("   " + r.published + "  " + r.url + "\n     " + (r.title || "").slice(0, 90));
+  console.log("");
+}
+if (SHOW_ALL || !okFinal.length) {
   show("要確認（_video.md に無い媒体。人が見るまでメールに入れない）", chk);
 }
 
-if (okRows.length) {
+if (okFinal.length) {
   console.log("── メールに貼るHTML（そのままコピーしてよい）");
   console.log("<p><b>参考映像（外部配布不可）</b></p>");
   console.log("<p>下記は各媒体が公開しているものへのリンクです。ADRCが撮影・検証したものではありません。<br/>");
   console.log("出所と公開日は各媒体の表示に基づきます。レポート本体には含めていません。</p>");
   console.log("<ul>");
-  for (const r of okRows) {
+  for (const r of okFinal) {
     const cap = (r.title || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
     console.log('<li><a href="' + r.url + '">' + cap + "</a><br/>"
-      + [r.channel, r.published].filter(Boolean).join("、") + "</li>");
+      + [r.channel, (r.published ? (r.exact ? r.published : "約 " + r.published) : "")]
+          .filter(Boolean).join("、") + "（原題の訳: {{訳}}）"
+      + (r.stale ? "<br/>※題名の数値は" + (r.published || "公開") + "時点のものです。本文の数値が最新です。" : "")
+      + "</li>");
   }
   console.log("</ul>");
+  console.log("");
+  console.log("   ※ `{{訳}}` を**原題の日本語訳**に置き換えてから貼ること。");
+  console.log("      訳すのは題名だけ。映像の中身を説明しない（こちらは再生していない）。");
+  console.log("      置き換え忘れたまま送らないこと。");
   console.log("");
 }
 
@@ -308,4 +401,10 @@ if (blockedHosts.length) {
   console.log("  ネットワークポリシーの許可リストに追加が必要。**「動画が無い」ではない。**");
   process.exit(7);
 }
-console.log("STATUS: OK  載せてよい媒体 " + okRows.length + "件 / 要確認 " + chk.length + "件");
+if (throttled) {
+  console.log("   ※ YouTube の連投制限（google.com/sorry）に当たったため、以降の公開日は");
+  console.log("      相対表記からの**推定**です。日付は「約」付きで出しています。");
+  console.log("");
+}
+console.log("STATUS: OK  載せてよい媒体 " + okFinal.length + "件 / 発災前 " + beforeRows.length
+  + "件 / 要確認 " + chk.length + "件");
