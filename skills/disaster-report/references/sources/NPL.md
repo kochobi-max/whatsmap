@@ -16,12 +16,34 @@
 | NDRRMA `ndrrma.gov.np` | 200 | **JSアプリでHTMLに中身が無い。APIパスは全て404。** 直接は使えない |
 | ReliefWeb `reliefweb.int`（サイト） | **200** | 実質いちばん頼れる。UNOSAT・IFRC・OCHA がここに集まる |
 | GDACS `gdacs.org` | 200 | API可 |
-| DHM（水文気象局） https://dhm.gov.np | **200**（8/28 許可後） | `www.` 付きは不可。**裸のホスト名で当たる** |
+| DHM（水文気象局） https://dhm.gov.np | 8/28 **200** ／ 9/1 **応答なし** | `www.` 付きは不可。**裸のホスト名で当たる**。下記参照 |
 | 内務省 https://moha.gov.np | **200**（同上） | 同上 |
 | ICIMOD https://icimod.org | **200**（同上） | **ブラウザのUAが要る**（下記）。`www.icimod.org` へ301 |
 | NEOC `neoc.gov.np` | **000** | 未許可のまま |
 | DRR Portal `drrportal.gov.np` | **000** | 未許可のまま |
 | Nature `www.nature.com` | **000** | `nature.com` は301で通るが、飛び先の `www.` が未許可 |
+
+### DHM が応答しないとき（2026-09-01）
+
+`dhm.gov.np` は 8月28日には 200 を返していたが、9月1日は
+`Connection reset by peer` で落ちた。**これは遮断ではない。**
+プロキシのトンネルは即座に開いており、拒否されたのは上流である。
+
+区別のしかた:
+
+| 見えかた | 意味 | 打つ手 |
+|---|---|---|
+| `CONNECT tunnel failed, response 403` | ポリシー拒否 | 許可リストへの追加を頼む |
+| `Connection reset by peer` / タイムアウト | サイト側が応答していない | **頼んでも直らない。** 時間をおく |
+
+`check_sources.js` はこの2つを分けて表示する（2026-09-01 に改修）。
+**「許可リストの問題ではない」と出たドメインを、荒木田さんに足させないこと。**
+
+同じ日、`www.dhm.gov.np`（www 付き）は 403 だった。許可リストに入っているのは
+裸のホスト名だけである。**www の有無は別のホスト名**。
+
+DHM が落ちている日は、NDRRMA（`ndrrma.gov.np`）、内務省（`moha.gov.np`）、
+BIPAD ポータル（`bipadportal.gov.np`）で埋める。いずれも 9月1日時点で 200。
 
 ### ホスト名は完全一致。`www.` の有無で結果が変わる
 

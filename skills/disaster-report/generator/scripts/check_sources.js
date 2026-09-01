@@ -75,24 +75,38 @@ if (hosts.length === 0) {
 const { execFileSync } = require("child_process");
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36";
 
+// 「届かない」を1色で塗らない。**遮断とサイト側の不調は、打つ手が違う。**
+//
+//   ポリシー拒否   CONNECT に 403 が返る。トンネルが開かない
+//                  → 許可リストへの追加を頼む
+//   サイト側の不調 トンネルは開くが、上流が応答しない（タイムアウト）
+//                  → 許可リストは関係ない。頼んでも直らない。時間をおいて再試行
+//
+// 2026-09-01、dhm.gov.np がこれで紛れた。8月28日には 200 が返っていたのに
+// 「接続できない（遮断）」と出たため、荒木田さんに許可済みのドメインを
+// もう一度足させるところだった。curl の stderr を読めば区別できる。
 function probe(host) {
-  try {
-    // リダイレクトを追い、ブラウザのUAで名乗る。
-    // 2026-08-28、ICIMOD が独自UAに 403 を返し、遮断と読み違えるところだった。
-    // 403 の主は nginx で、プロキシ自体は通っていた。ブラウザのUAなら 200。
-    // リダイレクトも追わないと、nature.com のように 301 だけ見て終わる。
-    const code = execFileSync("curl", [
+  const run = () => {
+    const r = require("child_process").spawnSync("curl", [
       "-sS", "-L", "-o", "/dev/null", "-w", "%{http_code}",
       "-A", UA, "--max-time", "25", "https://" + host + "/",
-    ], { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }).trim();
-    // 000 = 接続できていない（＝遮断）。それ以外は何らかの応答が返っている
-    if (code === "000" || code === "") return { ok: false, note: "接続できない（遮断）" };
-    // 3xx のまま終わるのは、飛び先が許可リストに無いとき。到達とは言えない
-    if (/^3\d\d$/.test(code)) return { ok: false, note: "HTTP " + code + "（飛び先が許可リストに無い疑い）" };
-    return { ok: true, note: "HTTP " + code };
-  } catch (e) {
-    return { ok: false, note: "接続できない（遮断）" };
+    ], { encoding: "utf8" });
+    return { code: String(r.stdout || "").trim(), err: String(r.stderr || "") };
+  };
+  let { code, err } = run();
+
+  if (code === "000" || code === "") {
+    // CONNECT が 403 で弾かれた＝ポリシー拒否。ここだけが許可リストの話
+    if (/CONNECT tunnel failed|response 40[37]|Received HTTP code 40[37] from proxy/i.test(err))
+      return { ok: false, policy: true, note: "ポリシーで拒否（許可リストに無い）" };
+    if (/Operation timed out|Connection timed out|timed out after/i.test(err))
+      return { ok: false, policy: false, note: "許可はされているが、サイトが応答しない（タイムアウト）" };
+    if (/Could not resolve host/i.test(err))
+      return { ok: false, policy: false, note: "ホスト名が解決できない（綴りかDNS）" };
+    return { ok: false, policy: false, note: "接続できない（" + (err.split("\n")[0] || "理由不明").slice(0, 60) + "）" };
   }
+  if (/^3\d\d$/.test(code)) return { ok: false, policy: true, note: "HTTP " + code + "（飛び先が許可リストに無い疑い）" };
+  return { ok: true, policy: false, note: "HTTP " + code };
 }
 
 const results = hosts.map(h => Object.assign({ h }, probe(h)));
@@ -115,9 +129,23 @@ if (bad.length) {
   console.error("");
   console.error("SOURCES: FAIL unreachable=" + bad.length + "/" + results.length);
   console.error("届かない情報源がある。**「変化なし」と結論してはいけない。**");
-  console.error("クラウドのネットワークポリシー（Custom の許可リスト）に");
-  console.error("次のドメインが入っているか確認する:");
-  for (const r of bad) console.error("   " + r.h);
+
+  // 打つ手が違うので、分けて出す。**許可済みのドメインをもう一度足させない。**
+  const pol = bad.filter(r => r.policy);
+  const site = bad.filter(r => !r.policy);
+  if (pol.length) {
+    console.error("");
+    console.error("【許可リストへの追加が要る】ポリシーで拒否されている:");
+    for (const r of pol) console.error("   " + r.h + "  — " + r.note);
+    console.error("   www の有無は別のホスト名として扱われる。表示どおりの綴りで足すこと。");
+  }
+  if (site.length) {
+    console.error("");
+    console.error("【許可リストの問題ではない】サイト側が応答していない:");
+    for (const r of site) console.error("   " + r.h + "  — " + r.note);
+    console.error("   **足しても直らない。** 荒木田さんに追加を頼まないこと。");
+    console.error("   時間をおいて再試行し、その日は他の情報源で埋めて、届かなかった旨を報告に書く。");
+  }
   process.exit(7);
 }
 console.log("");
