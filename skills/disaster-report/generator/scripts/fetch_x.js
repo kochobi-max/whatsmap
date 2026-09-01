@@ -67,21 +67,7 @@ console.log("");
 
 const re = grep ? new RegExp(grep, "i") : null;
 
-// 同じ投稿が2通り入っている。タイムライン表示用は t.co で切り詰められ、
-// NoteTweet 側に全文がある。**書き出しが同じなら長い方を採る。**
-// 先に来た短い方を残すと、集計の数値が入っている末尾ごと落ちる（2026-08-28）。
-const byHead = new Map();
-for (const m of html.matchAll(/text:"((?:[^"\\]|\\.)*)"/g)) {
-  const t = dec(m[1]);
-  if (t.length < 70) continue;
-  const k = t.slice(0, 40);
-  const prev = byHead.get(k);
-  if (!prev || t.length > prev.t.length) byHead.set(k, { t, index: m.index });
-}
-
-let shown = 0;
-for (const { t, index } of [...byHead.values()].sort((a, b) => a.index - b.index)) {
-  if (re && !re.test(t)) continue;
+const nearIdBefore = index => {
   const before = html.slice(Math.max(0, index - 4000), index);
   let near = null;
   for (const b of before.matchAll(/([A-Za-z0-9+/=]{20,})/g)) {
@@ -89,6 +75,27 @@ for (const { t, index } of [...byHead.values()].sort((a, b) => a.index - b.index
     const mm = /^(?:Note)?Tweet:(\d{15,25})$/.exec(d);
     if (mm) near = BigInt(mm[1]);
   }
+  return near;
+};
+
+// 同じ投稿が2通り入っている。タイムライン表示用は t.co で切り詰められ、
+// NoteTweet 側に全文がある。**同じ投稿IDなら長い方（省略されていない方）を採る。**
+// 2026-09-01: 書き出しが同じ定型文の**別の日の投稿**を、テキストの先頭40字だけで
+// 同一視して片方を捨てていた（短いほうが必ず古い投稿とは限らない）。
+// 投稿ID（近傍から復元）でまとめてから長さで選ぶよう直した。
+const byId = new Map();
+for (const m of html.matchAll(/text:"((?:[^"\\]|\\.)*)"/g)) {
+  const t = dec(m[1]);
+  if (t.length < 70) continue;
+  const near = nearIdBefore(m.index);
+  const k = near !== null ? String(near) : "idx:" + m.index;
+  const prev = byId.get(k);
+  if (!prev || t.length > prev.t.length) byId.set(k, { t, index: m.index, near });
+}
+
+let shown = 0;
+for (const { t, index, near } of [...byId.values()].sort((a, b) => a.index - b.index)) {
+  if (re && !re.test(t)) continue;
   console.log("=".repeat(70));
   if (near) console.log("投稿時刻: " + fmt(stamp(near)) + "   https://x.com/" + handle + "/status/" + near);
   console.log(t);
