@@ -70,6 +70,15 @@
         "label": "BIPAD Portal, Ministry of Home Affairs, Nepal",
         "url": "https://bipadportal.gov.np/"
       }
+    ],
+    "video_queries": [
+      "Rasuwa Bhote Koshi flash flood 26 August 2026",
+      "Nepal Bhote Koshi debris flow Rasuwa Nuwakot",
+      "नेपाल रसुवा भोटेकोशी बाढी"
+    ],
+    "video_handles": [
+      "NepalPoliceHQ",
+      "NDRRMA_Nepal"
     ]
   },
   "_prev": {
