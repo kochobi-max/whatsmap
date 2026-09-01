@@ -43,19 +43,29 @@ const ev = JSON.parse(fs.readFileSync(evPath, "utf8"));
 // ── 載せてよい媒体 ──────────────────────────────────────────
 // 編集責任がはっきりしている先だけ。ここに無いものは人が見るまで載せない。
 const TRUSTED_FILE = path.join(ROOT, "references", "sources", "_video.md");
+// 見出しごとに読む。「載せてよいドメイン」の節はドメイン、それ以外の節はチャンネル名。
 function loadTrusted() {
-  const out = [];
-  if (!fs.existsSync(TRUSTED_FILE)) return out;
+  const domains = [], channels = [];
+  if (!fs.existsSync(TRUSTED_FILE)) return { domains, channels };
+  let inDomains = false;
   for (const line of fs.readFileSync(TRUSTED_FILE, "utf8").split("\n")) {
+    if (/^##\s/.test(line)) { inDomains = /載せてよいドメイン/.test(line); continue; }
     const m = /^\s*[-*]\s*`([^`]+)`/.exec(line);
-    if (m) out.push(m[1].trim().toLowerCase());
+    if (!m) continue;
+    (inDomains ? domains : channels).push(m[1].trim().toLowerCase());
   }
-  return out;
+  return { domains, channels };
 }
 const TRUSTED = loadTrusted();
 const isTrusted = ch => {
   const c = String(ch || "").toLowerCase();
-  return TRUSTED.some(t => c === t || c.includes(t));
+  return TRUSTED.channels.some(t => c === t || c.includes(t));
+};
+// ドメインは末尾一致。aljazeera.com は www.aljazeera.com にも当たるが、
+// evil-aljazeera.com には当たらない（"." を挟んで見る）。
+const trustedDomain = host => {
+  const h = String(host || "").toLowerCase().replace(/^www\./, "");
+  return TRUSTED.domains.find(d => h === d || h.endsWith("." + d)) || null;
 };
 
 function curl(url) {
@@ -64,6 +74,64 @@ function curl(url) {
     url], { encoding: "latin1", maxBuffer: 96 * 1024 * 1024 });
 }
 function utf8(s) { return Buffer.from(s, "latin1").toString("utf8"); }
+
+// ── 報道の動画ページを検証する ────────────────────────────
+// URLを渡すと、実際に取得して次を確かめる。
+//   1. 200 で返ること（貼ってから切れているリンクを出さない）
+//   2. ドメインが _video.md の「載せてよいドメイン」にあること
+//   3. JSON-LD に "@type":"VideoObject" があること
+//      = そのページが自分で「これは動画である」と名乗っていること
+// 題名と公開日時は、こちらで書き写さずページ自身の値を使う。
+function verifyPage(url) {
+  let host;
+  try { host = new URL(url).hostname; } catch { return { url, ok: false, why: "URLとして読めない" }; }
+  const dom = trustedDomain(host);
+  if (!dom) return { url, host, ok: false, why: "_video.md の載せてよいドメインに無い" };
+
+  let html, code;
+  try {
+    html = execFileSync("curl", ["-sS", "--max-time", "40", "--compressed", "-L",
+      "-w", "\n@@HTTP@@%{http_code}",
+      "-A", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36",
+      url], { encoding: "latin1", maxBuffer: 64 * 1024 * 1024 });
+  } catch (e) {
+    return { url, host, ok: false, why: "取得できない — " + String(e.message).slice(0, 90) };
+  }
+  const cm = /@@HTTP@@(\d{3})\s*$/.exec(html);
+  code = cm ? cm[1] : "???";
+  if (code !== "200") return { url, host, ok: false, why: "HTTP " + code };
+
+  // JSON-LD を全部拾って VideoObject を探す
+  let vo = null;
+  for (const m of html.matchAll(/<script[^>]+application\/ld\+json[^>]*>(.*?)<\/script>/gs)) {
+    let j; try { j = JSON.parse(utf8(m[1])); } catch { continue; }
+    const walk = n => {
+      if (vo || !n || typeof n !== "object") return;
+      if (Array.isArray(n)) { for (const x of n) walk(x); return; }
+      if (n["@type"] === "VideoObject") { vo = n; return; }
+      for (const k of Object.keys(n)) walk(n[k]);
+    };
+    walk(j);
+    if (vo) break;
+  }
+  if (!vo) return { url, host, ok: false, why: "動画ページではない（VideoObject が無い）" };
+
+  // 媒体名は、ページが名乗るものを優先する。メールには "aljazeera.com" ではなく
+  // "Al Jazeera" と出したい。VideoObject の publisher → og:site_name → ドメインの順。
+  let pub = vo.publisher && (vo.publisher.name || vo.publisher);
+  if (typeof pub !== "string" || !pub.trim()) {
+    const om = /<meta[^>]+property="og:site_name"[^>]+content="([^"]+)"/i.exec(html)
+            || /<meta[^>]+content="([^"]+)"[^>]+property="og:site_name"/i.exec(html);
+    pub = om ? utf8(om[1]) : dom;
+  }
+  return {
+    url, host, ok: true, domain: dom,
+    title: String(vo.name || "").trim(),
+    date: String(vo.uploadDate || vo.datePublished || "").slice(0, 10),
+    publisher: String(pub).trim(),
+    description: String(vo.description || "").trim()
+  };
+}
 
 // ── YouTube ────────────────────────────────────────────────
 // 検索結果ページの初期HTMLに ytInitialData が埋まっている。JSは要らない。
@@ -126,6 +194,38 @@ function xLatest(handle) {
     items.push({ id, url: "https://x.com/" + handle + "/status/" + id, channel: "@" + handle });
   }
   return { blocked: false, err: null, items };
+}
+
+// ── --verify: URLを渡して検証だけする ─────────────────────
+const verifyUrls = args.filter(a => /^https?:\/\//.test(a));
+if (verifyUrls.length) {
+  console.log("── 参考映像の検証  " + glide + "  " + (ev.meta.title_ja || ""));
+  console.log("");
+  const okv = [], ngv = [];
+  for (const u of verifyUrls) { const r = verifyPage(u); (r.ok ? okv : ngv).push(r); }
+  for (const r of okv) {
+    console.log("   OK   " + r.url);
+    console.log("        " + r.title);
+    console.log("        " + r.publisher + "  /  公開 " + r.date);
+  }
+  for (const r of ngv) console.log("   NG   " + r.url + "\n        " + r.why);
+  console.log("");
+  if (okv.length) {
+    console.log("── メールに貼るHTML（そのままコピーしてよい）");
+    console.log("<p><b>参考映像（所内限り。外部への転載は不可）</b></p>");
+    console.log("<p>各報道機関が公開しているものへのリンクです。ADRCが撮影・検証したものでは");
+    console.log("ありません。媒体名と公開日は各ページの表示によります。レポート本体には含めていません。</p>");
+    console.log("<ul>");
+    for (const r of okv) {
+      const esc = t => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+      console.log('<li><a href="' + r.url + '">' + esc(r.title) + "</a><br/>"
+        + esc(r.publisher) + "、" + r.date + "</li>");
+    }
+    console.log("</ul>");
+    console.log("");
+  }
+  console.log("STATUS: VERIFY  OK " + okv.length + "件 / NG " + ngv.length + "件");
+  process.exit(ngv.length && !okv.length ? 1 : 0);
 }
 
 // ── 検索語 ────────────────────────────────────────────────

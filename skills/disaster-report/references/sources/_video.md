@@ -9,6 +9,27 @@
 
 書き方は「- \`チャンネル名の一部\`」。小文字で部分一致する。
 
+## 載せてよいドメイン（報道の動画ページ）
+
+`find_videos.js --verify <URL>` は、ここに載っているドメインのURLだけを `OK` にする。
+ページを実際に取得し、**JSON-LD に `"@type":"VideoObject"` があること**まで確かめる。
+題名・公開日時も、そのページ自身が名乗っている値を使う。人手で書き写さない。
+
+書き方は「- `ドメイン`」。末尾一致で見る（`aljazeera.com` は `www.aljazeera.com` にも当たる）。
+
+- `aljazeera.com`
+- `bbc.com`
+- `bbc.co.uk`
+- `apnews.com`
+- `reuters.com`
+- `kathmandupost.com`
+- `english.onlinekhabar.com`
+- `myrepublica.nagariknetwork.com`
+- `unicef.org`
+- `wfp.org`
+- `ifrc.org`
+- `un.org`
+
 ## 政府・公的機関（ネパール）
 
 - `Nepal Police`
@@ -73,6 +94,17 @@
 迷ったら足さない。要確認のまま人に見せれば済む。
 
 ## 2026-09-01 の状況
+
+`www.youtube.com` / `youtube.com` は許可リストに足してもらったあとも **403（ポリシー拒否）**
+のまま。同じセッションで `bbc.com` `apnews.com` `aljazeera.com` `kathmandupost.com` は
+開いたので、伝播の問題ではない。**ポリシー拒否は再試行しない。**
+`find_videos.js` の YouTube 経路は当面使えない。
+
+`www.reuters.com` は 401 を返す。到達はしているが本文が取れない。
+
+**報道各社の動画ページのほうが、この用途には適している。** 編集責任がはっきりしており、
+ページ自身が JSON-LD で `VideoObject` と公開日時を名乗るので、
+こちらが題名や日付を書き写す必要がない。
 
 `www.youtube.com` はネットワークポリシーで 403（拒否）。許可リストに入るまで
 `find_videos.js` は `STATUS: BLOCKED` を返す。**「動画が無い」ではない。**

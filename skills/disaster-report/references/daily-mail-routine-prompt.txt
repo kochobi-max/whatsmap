@@ -82,6 +82,10 @@ node skills/disaster-report/generator/scripts/resolve_event.js --event <GLIDE>
 - 「正念場」「予断を許さない」「懸念される」など、書き手の評価や情緒を足す語を使わない
 - **人命に関わる進行中の警告（上流の湖、余震、二次災害の注意喚起など）があれば、数値より先に本文の冒頭に置く**
 - 指標が変わったときは、その旨を「前報からの主な変化」に明記する。合算・平均化しない
+- **参考映像**（SKILL.md §5-2 の「参考映像」に従う）。`WebSearch` で候補URLを出し、
+  `node skills/disaster-report/generator/scripts/find_videos.js <GLIDE> <URL>...` に
+  かけて `OK` になったものだけを、本文の後半に貼る。`NG` は載せない。
+  1件も無い日はその段落ごと省く。無理に埋めない
 
 本文に載せる数値・ファイル名・ページ数は `_published/<GLIDE>.json` と `events/<GLIDE>.json` から取る。手で書かない。
 
