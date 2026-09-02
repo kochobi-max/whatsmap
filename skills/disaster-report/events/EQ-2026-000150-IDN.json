@@ -85,14 +85,14 @@
     ]
   },
   "_prev": {
-    "_comment": "2026-08-29 08:21 JST 送信済み（第2報）。BNPB 8月26日の値。翌日の数値急変ゲートの基準。",
-    "deaths": 105,
-    "injured": 1678,
+    "_comment": "2026-09-03 08:47 JST 送信済み（第3報）。BNPB 8月31日09:00 WIB時点（AHA Centre経由）の値。負傷者数の減少（1,678→1,658）は数値急変ゲートに抵触したため確認メールを送り、荒木田さんが2026-09-03 08:41 JSTに「問題ないので送信して」と承認したことを受けて送信した。翌日の数値急変ゲートの基準。",
+    "deaths": 120,
+    "injured": 1658,
     "missing": null,
     "houses_destroyed": 81436,
-    "evacuees": 179037,
+    "evacuees": 188673,
     "tier": "official",
-    "as_of": "2026-08-26 (BNPB 長官スハルヤント氏の大統領報告)"
+    "as_of": "2026-08-31 09:00 WIB (BNPB, via AHA Centre ASEAN Weekly Disaster Update Week 35)"
   },
   "locator": {
     "_comment": "表紙の3面図は、荒木田さんが作られた日英併記版 ADRC_EQ_IDN_Flores_20260815_BI.pptx の表紙から引き継いだもの。図中の文字は日英併記で、両言語版で共用できる。",
