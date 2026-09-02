@@ -1,34 +1,34 @@
 {
   "glide": "EQ-2026-000146-COL",
-  "published_at_jst": "2026-09-02 09:22",
-  "published_date_jst": "2026-09-02",
+  "published_at_jst": "2026-09-03 08:10",
+  "published_date_jst": "2026-09-03",
   "destination": "C:\\Users\\arakida\\OneDrive - adrc.asia\\LargeScaleDisasters",
-  "edition": "第14報",
-  "update_date": "01/09/2026",
-  "stamp": "2026-09-01 08:34 JST",
+  "edition": "第15報",
+  "update_date": "03/09/2026",
+  "stamp": "2026-09-03 07:41 JST",
   "files": [
     {
       "name": "ADRC_EQ_COL_Choco_20260810_JA.pptx",
-      "bytes": 6338907,
-      "mtime": "2026-09-02T00:22:10.916Z"
+      "bytes": 6435728,
+      "mtime": "2026-09-02T23:10:05.621Z"
     },
     {
       "name": "ADRC_EQ_COL_Choco_20260810_JA.pdf",
-      "bytes": 2600160,
-      "mtime": "2026-09-02T00:22:11.664Z"
+      "bytes": 2437351,
+      "mtime": "2026-09-02T23:10:06.052Z"
     },
     {
       "name": "ADRC_EQ_COL_Choco_20260810_EN.pptx",
-      "bytes": 6483009,
-      "mtime": "2026-09-02T00:22:12.537Z"
+      "bytes": 6640849,
+      "mtime": "2026-09-02T23:10:06.875Z"
     },
     {
       "name": "ADRC_EQ_COL_Choco_20260810_EN.pdf",
-      "bytes": 2189443,
-      "mtime": "2026-09-02T00:22:13.001Z"
+      "bytes": 2217373,
+      "mtime": "2026-09-02T23:10:07.453Z"
     }
   ],
   "verified": "manifest",
-  "dist_built_at_jst": "2026-09-02 09:12",
-  "dist_built_date_jst": "2026-09-02"
+  "dist_built_at_jst": "2026-09-03 07:59",
+  "dist_built_date_jst": "2026-09-03"
 }
