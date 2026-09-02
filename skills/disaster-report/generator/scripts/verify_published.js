@@ -43,12 +43,20 @@ const skip = path.join(SKILL, "_published", glide + ".skipped.json");
 
 console.log("── 公開の確認  " + glide + "  （今日 " + today + " JST）");
 
+// 見送りと成功の両方が今日あることがある。**新しいほうが本当である。**
+// 2026-09-02、08:10 の見送り（配布物が前日ビルド）のあと、配布を作り直して
+// 09:22 に成功したのに、見送りのほうを先に見て NO-SEND を返した。
+const pubRec = fs.existsSync(pub) ? JSON.parse(fs.readFileSync(pub, "utf8")) : null;
+const pubStamp = (pubRec && pubRec.published_at_jst) || "";
+
 if (fs.existsSync(skip)) {
-  const s = JSON.parse(fs.readFileSync(skip, "utf8"));
-  if (s.skipped_at_jst && s.skipped_at_jst.slice(0, 10) === today) {
+  const sk = JSON.parse(fs.readFileSync(skip, "utf8"));
+  const skipStamp = sk.skipped_at_jst || "";
+  const skipIsNewer = skipStamp > pubStamp;      // 文字列比較で足りる形式
+  if (skipStamp.slice(0, 10) === today && skipIsNewer) {
     console.log("   PCは動いたが、配布物が当日ビルドでないため飛ばしている。");
-    console.log("   skipped_at_jst = " + s.skipped_at_jst);
-    console.log("   dist_built_date_jst = " + s.dist_built_date_jst);
+    console.log("   skipped_at_jst = " + sk.skipped_at_jst);
+    console.log("   dist_built_date_jst = " + sk.dist_built_date_jst);
     console.log("STATUS: NO-SEND stale-dist");
     console.log("  クラウド側で build_all.js を回し直し、PCで ADRC_setup_and_publish.bat を実行する。");
     process.exit(1);
@@ -61,7 +69,7 @@ if (!fs.existsSync(pub)) {
   process.exit(1);
 }
 
-const r = JSON.parse(fs.readFileSync(pub, "utf8"));
+const r = pubRec;
 console.log("   published_at_jst = " + r.published_at_jst + "   " + (r.edition || ""));
 for (const f of r.files) console.log("     " + f.name + "  " + f.bytes + " bytes");
 
