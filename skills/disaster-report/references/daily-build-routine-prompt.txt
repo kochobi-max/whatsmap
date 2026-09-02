@@ -32,6 +32,21 @@ node skills/disaster-report/generator/scripts/scan_updates.js
 政府サイト（BNPB・UNGRD・NDRRMA・NEOC など）は ReliefWeb に出ないことがあるので、
 `references/sources/<ISO3>.md` に書かれた一次情報源も各イベントで直接見ること。
 
+**ネパールは NDRRMA の状況報告が一次。ReliefWeb より早く、数値が細かい。**
+
+```bash
+node skills/disaster-report/generator/scripts/fetch_ndrrma.js --en
+node skills/disaster-report/generator/scripts/fetch_ndrrma.js --get <PDFのURL>
+```
+
+2026-09-02、9月1日09:00の状況報告第1号（死者987・行方不明3,916）を取りこぼし、
+荒木田さんに手で渡してもらった。NDRRMA のサイトは JS アプリで curl に中身が
+見えないが、**API は動いている。** 詳しくは `references/sources/NPL.md` の
+「NDRRMA の状況報告は API から取れる」。
+
+**JS のサイトを「中身が無い」で終わらせない。** 配信されている JS を落として
+`"/xxx/yyy/"` の形のパスを書き出せば、エンドポイントが見つかることがある。
+
 ## 2. センチネルアジアの通知メールを読む（省略不可）
 
 **どの機関がどの衛星で何を提供したかは、メールにしか無い。**

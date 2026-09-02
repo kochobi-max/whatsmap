@@ -19,11 +19,11 @@
     "title_ja": "2026年 ボテコシ川 土石流・鉄砲水（ネパール）",
     "subtitle_en": "Rasuwa, Nuwakot and Dhading Districts - 26 August 2026",
     "subtitle_ja": "ラスワ郡・ヌワコット郡・ダディン郡、2026年8月26日",
-    "edition_en": "6th report",
-    "edition_ja": "第6報",
+    "edition_en": "7th report",
+    "edition_ja": "第7報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
-    "stamp": "2026-09-02 09:20 JST",
+    "stamp": "2026-09-02 09:40 JST",
     "update_date": "01/09/2026",
     "timeline_range_en": "25 August - 1 September 2026 (Nepal Standard Time, UTC+5:45)",
     "timeline_range_ja": "2026年8月25日〜9月1日（ネパール標準時 UTC+5:45）",
@@ -31,13 +31,13 @@
     "tz_note_ja": "時刻は特記なき限りネパール標準時（NPT、UTC+5:45）。",
     "optional_slides": [],
     "headline": {
-      "deaths": 903,
-      "injured": 267,
-      "missing": 4247,
+      "deaths": 987,
+      "injured": 279,
+      "missing": 3916,
       "houses_destroyed": null,
       "evacuees": null,
       "tier": "official",
-      "as_of": "2026-08-31 09:00 NPT (NDRRMA, via OCHA/UN RC Nepal Flash Update #4)"
+      "as_of": "2026-09-01 09:00 NPT (NDRRMA 状況報告第1号)"
     },
     "chronology_note_en": "Government and agency actions from the onset of the flood - all official sources.",
     "chronology_note_ja": "発災からの政府・機関の主要な動き（すべて公的情報）。",
@@ -444,6 +444,20 @@
       "src": "Government of the Republic of Korea",
       "en": "The Republic of Korea decides to dispatch the Korea Disaster Relief Team (KDRT) following a request from the Government of Nepal for support to search and rescue operations. The team of 44 members from the Ministry of Foreign Affairs, KOICA and the National Fire Agency, headed by Lee Kyoo-ho, Director-General for Development Cooperation, departs on the night of 1 September aboard Korean military transport aircraft. Korea had earlier announced USD 1 million in humanitarian assistance through international organizations on 27 August.",
       "ja": "韓国政府が、ネパール政府からの捜索・救助支援の要請を受けて、韓国災害救助隊（KDRT）の派遣を決定。外務省・KOICA・消防庁などからなる44人で、外務省開発協力局長の李圭虎氏が団長。9月1日夜、韓国軍の輸送機でネパールへ向かう。韓国は8月27日に、現地で活動する国際機関を通じた100万米ドルの人道支援も表明していた。"
+    },
+    {
+      "time": "1 Sep 09:00",
+      "tier": "official",
+      "src": "NDRRMA",
+      "en": "NDRRMA Situation Report #01: 987 deceased (including recovered human remains) and 3,916 people reported missing across 62 districts. 279 injured have been treated (168 discharged, 79 still under treatment, 29 referred); the Nepal Army has provided medical treatment to 2,740 people. 11,814 people have been rescued in total, of whom 3,702 by helicopter (253 foreign nationals and 3,449 Nepalis) over 573 air operations. 21,011 security personnel are deployed, including teams from Korea, China and India for joint search and rescue at the Trishuli 3A, Haku Besi, Trishuli 3B and Chilime hydropower sites. Five districts are affected - Rasuwa and Nuwakot severely, with approximately 1.6 million people impacted, and Dhading, Gorkha and Chitwan moderately. 41 motorable bridges have been washed away and 4 damaged.",
+      "ja": "NDRRMA 状況報告第1号。死者987人（収容した遺体の一部を含む）、行方不明3,916人（全国62郡から届出）。負傷279人が手当てを受け、168人が退院、79人が治療中、29人が転院。ネパール陸軍は2,740人に医療を提供。救助は累計11,814人で、うちヘリコプターによる救助が3,702人（外国人253人、ネパール人3,449人）、航空運用は573回。治安要員21,011人を動員し、韓国・中国・インドの部隊がトリシュリ3A、ハクベシ、トリシュリ3B、チリメの各水力発電所で合同の捜索・救助にあたっている。被災は5郡で、ラスワ郡・ヌワコット郡が甚大（影響を受けた人口は約160万人）、ダディン・ゴルカ・チトワンの3郡が中程度。車両通行可能な橋梁41橋が流失、4橋が損壊。"
+    },
+    {
+      "time": "1 Sep",
+      "tier": "official",
+      "src": "NDRRMA",
+      "en": "3,702 households (14,461 people: 7,453 male, 7,008 female, including 3,650 children and 1,204 older persons) remain isolated in Gosaikunda and Amachhodingmo Rural Municipalities in Rasuwa, with road, electricity and communication services disrupted for up to six days. 30 holding centres accommodate 3,930 people (Nuwakot 19 centres / 2,653 people; Rasuwa 11 centres / 1,277 people). In Nuwakot 1,267 houses are reported fully damaged and 1,253 partially damaged; satellite mapping identifies 4,689 buildings inside the flood-affected zone, which NDRRMA describes as estimated exposure and not verified damage.",
+      "ja": "ラスワ郡のゴサインクンダ、アマチョディンモの両村では3,702世帯・14,461人（男性7,453人、女性7,008人。うち子ども3,650人、高齢者1,204人）が孤立したままで、道路・電力・通信が最大6日間途絶している。避難所30か所に3,930人（ヌワコット19か所2,653人、ラスワ11か所1,277人）。ヌワコットでは住家1,267棟が全壊、1,253棟が半壊と報告された。衛星判読では浸水範囲内に4,689棟の建物が確認されているが、NDRRMAはこれを「推定される曝露であり、確認された被害ではない」としている。"
     }
   ],
   "response_measures": [
@@ -682,6 +696,11 @@
       "url": "https://reliefweb.int/report/nepal/water-mission-responds-devastating-flash-floods-nepal",
       "en": "Water Mission responds to devastating flash floods in Nepal",
       "ja": "Water Mission によるネパール鉄砲水への対応"
+    },
+    {
+      "url": "https://www.ndrrma.gov.np/",
+      "en": "NDRRMA - Rasuwa-Bhotekoshi Flood: Search, Rescue and Relief Response, Situation Report #01 (1 September 2026, 09:00)",
+      "ja": "NDRRMA「ラスワ・ボテコシ洪水 捜索・救助・救援対応」状況報告第1号（2026年9月1日09:00）"
     }
   ],
   "images": {

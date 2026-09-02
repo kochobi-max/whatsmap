@@ -13,7 +13,7 @@
 | 情報源 | 到達 | 備考 |
 |---|---|---|
 | BIPAD Portal `bipadportal.gov.np` | **200** | APIが公開されている。ただし**遅れる**（下記） |
-| NDRRMA `ndrrma.gov.np` | 200 | **JSアプリでHTMLに中身が無い。APIパスは全て404。** 直接は使えない |
+| NDRRMA `ndrrma.gov.np` | 200 | JSアプリだが **APIは動く。状況報告はここが一次。** 下記 |
 | ReliefWeb `reliefweb.int`（サイト） | **200** | 実質いちばん頼れる。UNOSAT・IFRC・OCHA がここに集まる |
 | GDACS `gdacs.org` | 200 | API可 |
 | DHM（水文気象局） https://dhm.gov.np | 8/28 **200** ／ 9/1 **応答なし** | `www.` 付きは不可。**裸のホスト名で当たる**。下記参照 |
@@ -113,11 +113,46 @@ id=80929  Flood at Rasugadhi, Gosaikunda Rural Municipality-2
 **数値の出典は必ず元機関名（NDRRMA / IFRC / WFP など）と日付で記録する。**
 ReliefWeb は配信者であって発表者ではない。
 
-## 3. NDRRMA — 国家防災庁（**直接は読めない**）
+## 3. NDRRMA — 国家防災庁。**状況報告の一次はここ**
 
-https://ndrrma.gov.np — トップはJSアプリでHTMLに中身が無く、`/api/...` は全て404。
-**NDRRMAの数値は ReliefWeb 経由（WFP・OCHA の引用）で取る**のが現状の唯一の道。
-許可リストに `drrportal.gov.np` を足せれば、そちらに日報が出る。
+### NDRRMA の状況報告は API から取れる（2026-09-02 訂正）
+
+**ここには「`/api/...` は全て404。直接は使えない」と書いてあった。誤りだった。**
+
+2026-09-02、NDRRMA の状況報告第1号（9月1日09:00、死者987・行方不明3,916）を
+こちらは見つけられず、荒木田さんに手で渡してもらった。ChatGPT は見つけていた。
+**許可リストの問題でもネットワークの問題でもない。** `ndrrma.gov.np` は許可済みで
+200 を返す。トップが 566 バイトの JS アプリの外枠なので curl に中身が見えないだけで、
+API は動いている。叩いたパスが違っただけだった。
+
+```bash
+node generator/scripts/fetch_ndrrma.js          # 一覧（新しい順）
+node generator/scripts/fetch_ndrrma.js --en     # 英語版だけ
+node generator/scripts/fetch_ndrrma.js --get <PDFのURL>   # 本文
+```
+
+エンドポイント（ラスワ洪水の専用一覧。16件、毎日更新される）:
+
+```
+https://ndrrma.gov.np/api/v1/publication/rasuwa-sitrep/
+```
+
+PDFは `https://ndrrma.gov.np/mediafiles/rasuwa/...` に置かれる。
+英語版は題名かファイル名に `English` / `_ENG_` が入る。ネパール語の朝夕の更新も出る。
+
+**JavaScript のサイトを「中身が無い」で終わらせない。** 配信されている JS を読めば
+エンドポイントが書いてある。今回は `ndrrma.gov.np/assets/index-*.js` の中に
+`/publication/rasuwa-sitrep/` がそのまま入っていた。手順:
+
+1. トップの HTML から `<script src="/assets/index-*.js">` を拾う
+2. その JS を落として `"/xxx/yyy/"` の形のパスを全部書き出す
+3. ベースURL（同じ JS の中に `https://ndrrma.gov.np/api/v1` がある）と繋いで叩く
+
+ほかに使えるパス: `/rescues/rescued-statistics/`、`/rescues/missing-persons/`、
+`/pressnotenews/press-note/`、`/publication/publications/`。
+
+**いちばんの問題は、一度「無い」と書いた自分のメモをそのまま信じ続けたことである。**
+CLAUDE.md の「『〜は無い』と断定しない」は、書いたあとにも効く。
 
 ## 4. GDACS
 
