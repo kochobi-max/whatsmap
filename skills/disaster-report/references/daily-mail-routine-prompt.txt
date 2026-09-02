@@ -22,35 +22,27 @@ node skills/disaster-report/generator/scripts/resolve_event.js
 ## 1. イベントごとに、公開されたことを確かめる（送信の前提・省略不可）
 
 ```bash
-ls skills/disaster-report/_published/
-cat skills/disaster-report/_published/<GLIDE>.json
-cat skills/disaster-report/_published/<GLIDE>.skipped.json 2>/dev/null
+node skills/disaster-report/generator/scripts/verify_published.js <GLIDE>
 ```
 
-`<GLIDE>.json` は、荒木田さんのPCが `C:\Users\arakida\OneDrive - adrc.asia\LargeScaleDisasters` へ実際に4ファイルを出したときだけ書かれる。
+- `STATUS: SEND-OK` → 次へ進む
+- `STATUS: NO-SEND ...` → **そのイベントは送らない。** 表示された理由を報告に書いて次へ
 
-- **無い** → そのイベントは**送らない。**「PC側の公開が確認できない」と記録して次へ
-- `published_date_jst` が**今日（JST）でない** → **送らない。** その日付を添えて次へ
-- `<GLIDE>.skipped.json` があり `skipped_at_jst` が今日 → PCは動いたが配布物が当日ビルドでなく飛ばしている。**送らない。** `dist_built_date_jst` を添えて次へ
-- 今日の日付である → 次へ進む
+この1コマンドで、公開記録の有無・当日かどうか・PCが見送っていないかを見る。
 
-**この確認を飛ばして送らないこと。** メール本文に「OneDriveに保存しました」と書くので、実際に保存されていないまま送ると嘘になる。
+**作り直して照合しないこと。PDFは絶対に一致しない。**
+PPTX は pptxgenjs が決定的に作るので何度作っても同じだが、**PDF は LibreOffice が
+変換のたびに違うバイト列を吐く**（作成日時などが埋まる）。定期タスクは毎回
+まっさらなセッションで走るので `_build/` が無く、必ず作り直す。つまり
+「作り直して OneDrive と突き合わせる」照合は**構造的に必ず落ちる。**
 
-さらに、**OneDrive のファイルが手元のビルドと同じかを照合する。**
+2026-09-02、この照合のせいでコロンビア第14報とインドネシア第3報が OneDrive に
+入っているのに**メールが1通も出なかった。** タスクは SUCCEEDED で終わっていた。
 
-```bash
-node -e '
-const fs=require("fs"),p=require("path"),g=process.argv[1];
-const r=JSON.parse(fs.readFileSync("skills/disaster-report/_published/"+g+".json","utf8"));
-let ok=true;
-for(const f of r.files){const l=p.join("_build",g,f.name);
-const b=fs.existsSync(l)?fs.statSync(l).size:-1;const s=b===f.bytes;ok&&=s;
-console.log((s?"一致 ":"不一致 ")+f.name+" OneDrive="+f.bytes+" 手元="+b);}
-console.log(ok?"MATCH":"MISMATCH");' <GLIDE>
-```
-
-`MISMATCH` なら**送らない。** 手元でビルドし直したものと OneDrive の中身が違う。その旨を報告する。
-（`_build/` が無い場合は `node skills/disaster-report/generator/scripts/build_event.js <GLIDE>` で作ってから照合する）
+バイト数の照合は **PC側が済ませている**。`publish_local.js` が配布台帳
+（`manifest.txt`）の `BYTESn` と落としたファイルを突き合わせ、違えば
+`STATUS: FAIL size` で止まり、公開記録も書かれない。
+**記録があること自体が、照合が通った証拠である。**
 
 ## 2. 数値急変ゲート
 

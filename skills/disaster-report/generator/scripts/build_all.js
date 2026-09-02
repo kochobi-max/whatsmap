@@ -87,6 +87,12 @@ function main() {
                   note: "到達できない: " + (ng || "不明") + " — 変化なしと結論しないこと" });
       continue;                                   // 届かないならビルドもしない
     }
+    // WARN はビルドを止めない。**ただしまとめの行に残し、報告から消えないようにする。**
+    // 2026-09-02、DHM 1件の不調でネパールが丸ごと1日抜けた。止めない代わりに、
+    // 「今日はこの情報源を見られていない」を最後まで持ち回る。
+    const warnHosts = /SOURCES: WARN/.test(cs.out)
+      ? (cs.out.match(/^\s+(\S+)\s+— /gm) || []).map(l => l.trim().split(/\s+/)[0]).join(", ")
+      : "";
 
     // 2. 検証と数値急変ゲート。HOLD でもビルドはする（メールを送らないだけ）
     console.log("\n-- resolve_event");
@@ -107,12 +113,13 @@ function main() {
     const pages = (lastStatus(bd.out).match(/JA=\d+p EN=\d+p/) || [""])[0];
 
     // 4. 配布。**これを飛ばすとPCが当日ぶんを取れず、OneDrive が前日のまま据え置かれる。**
-    if (NO_DIST) { rows.push({ g, r: gate, note: pages + "（配布なし）" }); continue; }
+    const warnNote = warnHosts ? "  ⚠未到達: " + warnHosts : "";
+    if (NO_DIST) { rows.push({ g, r: gate, note: pages + "（配布なし）" + warnNote }); continue; }
     console.log("\n-- publish_dist");
     const pb = run("publish_dist.js", [g]);
     rows.push({
       g, r: pb.code === 0 ? gate : "DIST-FAIL",
-      note: pb.code === 0 ? pages : lastStatus(pb.out),
+      note: (pb.code === 0 ? pages : lastStatus(pb.out)) + warnNote,
     });
   }
 

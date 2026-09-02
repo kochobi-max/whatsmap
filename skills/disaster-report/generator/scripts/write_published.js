@@ -15,7 +15,16 @@ const path = require("path");
 // publish_local.js からは関数として呼ぶ。コマンドとしても従来どおり動く。
 module.exports = { writePublished };
 
-function writePublished(GLIDE, DEST) {
+// 第3引数 man は配布台帳（manifest.txt）を読んだもの。publish_local.js が渡す。
+// **バイト数の照合は、ここへ来る前に publish_local.js が済ませている。**
+// 台帳の BYTESn と実際に落ちたファイルを突き合わせ、違えば STATUS: FAIL size で止まる。
+// その事実をここに書き残し、クラウド側が「作り直して照合し直す」ことをしないで済むようにする。
+//
+// 2026-09-02、クラウド側の送信タスクが「_build/ を作り直して OneDrive と照合する」
+// 手順を持っていたため、**PDF が必ず不一致になり、メールが1通も出なくなった。**
+// PPTX は pptxgenjs が決定的に作るので一致するが、PDF は LibreOffice が変換のたびに
+// 違うバイト列を吐く（作成日時などが埋まる）。**PDF は再現ビルドで照合できない。**
+function writePublished(GLIDE, DEST, man) {
 const SKILL = path.resolve(__dirname, "..", "..");
 const eventJson = path.join(SKILL, "events", GLIDE + ".json");
 const ev = JSON.parse(fs.readFileSync(eventJson, "utf8"));
@@ -51,6 +60,10 @@ const rec = {
   update_date: (ev.meta && ev.meta.update_date) || null,
   stamp: (ev.meta && ev.meta.stamp) || null,
   files: files,
+  // 配布物との照合結果。クラウド側はこれを見る。作り直して比べない
+  verified: man ? "manifest" : null,
+  dist_built_at_jst: (man && man.BUILT_AT_JST) || null,
+  dist_built_date_jst: (man && man.BUILT_DATE_JST) || null,
 };
 
 const dir = path.join(SKILL, "_published");

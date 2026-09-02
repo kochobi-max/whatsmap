@@ -300,7 +300,7 @@ function publishOne(glide, markers) {
   const { writePublished } = require("./write_published.js");
   let rec;
   try {
-    rec = writePublished(glide, dest);
+    rec = writePublished(glide, dest, man);
   } catch (err) {
     say("WARN: marker-not-written");
     say("   " + err.message);

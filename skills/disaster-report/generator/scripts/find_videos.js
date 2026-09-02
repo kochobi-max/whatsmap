@@ -323,7 +323,16 @@ function datedRow(row) { if (!exactDate(row)) approxDate(row); }
 // 題名に「16 Dead」のような当時の数値が入っていることがある。公開時点で固まるため、
 // 本文の最新値と並べると読み手が混乱する。機械で見つけて人に見せる。
 // 2026-09-01、NDTV の 8月26日の題名が「At Least 16 Dead」で、本文は死者734人だった。
-const STALE_NUM = /\b\d[\d,]*\s*(dead|killed|died|missing|injured|feared)\b|\b(dead|killed|missing|injured)\s*[:\-]?\s*\d/i;
+// 数字だけでなく「thousands missing」のような語も拾う。
+// 2026-09-02、コロンビアで Al Jazeera の 8月18日の題名が
+// "Search for thousands missing" だった。9月1日時点の行方不明は136人である。
+const STALE_NUM = new RegExp([
+  "\\b\\d[\\d,]*\\s*(dead|killed|died|missing|injured|feared)\\b",
+  "\\b(dead|killed|missing|injured)\\s*[:\\-]?\\s*\\d",
+  "\\b(thousands|hundreds|dozens|scores)\\s+(of\\s+\\w+\\s+)?(dead|killed|missing|feared|injured)\\b",
+  "\\b(dead|killed|missing|feared|injured)\\s+(thousands|hundreds|dozens)\\b",
+  "\\bsearch for (thousands|hundreds|dozens)\\b",
+].join("|"), "i");
 function markStale(r) {
   if (STALE_NUM.test(r.title || "")) r.stale = true;
 }

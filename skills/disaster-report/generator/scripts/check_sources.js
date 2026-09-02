@@ -124,11 +124,62 @@ if (skipped.length) {
   console.log("  **数値の出どころではない。** 数値はほかの情報源から取ること。");
 }
 
+// ── どこまでを「止める理由」にするか ────────────────────────
+//
+// 2026-09-02、ネパールが丸ごと1日抜けた。前日から DHM のサイトが応答して
+// おらず、13件中1件が落ちただけで check_sources が FAIL を返し、
+// build_all が「SOURCES-FAIL → ビルドしない」に従った。配布ブランチが前日の
+// ままになり、PCが stale-dist で見送り、メールも出ない。**1件のサイト都合で
+// レポート全体が止まるのは筋が悪い。** 2026-08-30 の OPTEMIS と同じ話である。
+//
+// 分け方:
+//   ポリシー拒否            → **止める。** 系統的に見えていない。人が動けば直る
+//   一次情報源が応答しない  → **止める。** 数値の出どころが無い
+//   3件以上が応答しない     → **止める。** 相手側の不調にしては多い
+//   それ以外（1〜2件の不調）→ 止めない。**ただし必ず報告に書かせる**
 const bad = results.filter(r => !r.ok && !isOptional(r.h));
+
+let primaryLabel = "";
+if (GLIDE) {
+  try {
+    primaryLabel = String(JSON.parse(fs.readFileSync(
+      path.join(SKILL, "events", GLIDE + ".json"), "utf8")).meta.primary_official_source || "");
+  } catch { /* 読めなければ一次情報源の判定はしない */ }
+}
+// "ndrrma.gov.np" と "NDRRMA / Nepal Police" を突き合わせる
+const isPrimaryHost = h => {
+  const key = String(h).split(".")[0].toLowerCase();
+  return key.length >= 3 && primaryLabel.toLowerCase().includes(key);
+};
+
+const policyBad = bad.filter(r => r.policy);
+const siteBad = bad.filter(r => !r.policy);
+const primaryDown = siteBad.filter(r => isPrimaryHost(r.h));
+const mustStop = policyBad.length > 0 || primaryDown.length > 0 || siteBad.length >= 3;
+
+if (bad.length && !mustStop) {
+  console.log("");
+  console.log("SOURCES: WARN reachable=" + (results.length - bad.length - skipped.length)
+    + "/" + results.length);
+  console.log("次の情報源は、許可はされているがサイト側が応答していない:");
+  for (const r of siteBad) console.log("   " + r.h + "  — " + r.note);
+  console.log("");
+  console.log("  **許可リストの問題ではない。追加を頼まないこと。**");
+  console.log("  ビルドは進めてよい。ただし**報告に必ずこの行を書く。**");
+  console.log("  その情報源にしか無い数値は、今日は更新できていない。");
+  console.log("  「変化なし」と書かないこと。");
+  process.exit(0);
+}
+
 if (bad.length) {
   console.error("");
   console.error("SOURCES: FAIL unreachable=" + bad.length + "/" + results.length);
   console.error("届かない情報源がある。**「変化なし」と結論してはいけない。**");
+  console.error("止めた理由: " + [
+    policyBad.length ? "ポリシー拒否 " + policyBad.length + "件" : null,
+    primaryDown.length ? "一次情報源が応答しない（" + primaryDown.map(r => r.h).join(", ") + "）" : null,
+    siteBad.length >= 3 ? "応答しないサイトが " + siteBad.length + "件" : null,
+  ].filter(Boolean).join(" / "));
 
   // 打つ手が違うので、分けて出す。**許可済みのドメインをもう一度足させない。**
   const pol = bad.filter(r => r.policy);
