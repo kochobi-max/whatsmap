@@ -63,27 +63,55 @@ function activeEvents(arg) {
   return out;
 }
 
-function listing(iso3) {
-  const html = curl("https://reliefweb.int/country/" + iso3.toLowerCase());
-  if (!html) return null;                       // 取れなかった。「無い」ではない
+// 記事リンクを拾う。ReliefWeb の slug は題名から作られているので、そのまま題名に使える。
+// リバーから拾うときだけ必要になる、ISO3 → ReliefWeb の国 slug。
+// 国別ページが使えている限りこの表は要らない（多数決で決まる）。
+const SLUG = { NPL: "nepal", COL: "colombia", IDN: "indonesia", JPN: "japan",
+               PHL: "philippines", VNM: "viet-nam" };
+
+function harvest(html) {
   const seen = new Map();
   const re = /href="(https:\/\/reliefweb\.int\/(?:report|map)\/([a-z-]+)\/([^"]+))"/g;
   let m;
-  const byCountry = new Map();
   while ((m = re.exec(html))) {
     if (seen.has(m[1])) continue;
-    // slug をそのまま題名の代わりにする。ReliefWeb の slug は題名から作られていて読める
     seen.set(m[1], { country: m[2], title: m[3].replace(/-/g, " ") });
-    byCountry.set(m[2], (byCountry.get(m[2]) || 0) + 1);
   }
+  return seen;
+}
+
+// 国別ページが空を返すことがある。**それを「取り込み済み」と読み違えない。**
+// 2026-09-02、reliefweb.int/country/npl が 200 で 32KB を返しながら記事リンクを
+// 1件も含まず、scan_updates が「一覧 0 件。すべて links[] に取り込み済み。」と
+// 報告した。同じ時刻に col は15件、idn は6件を返している。ネパールだけである。
+// 実際には韓国の救助隊派遣（9月1日）など新しい資料が出ていた。
+//
+// 0件だったときは、更新リバー（/updates）から同じ国 slug の項目を拾い直す。
+// それでも0件なら「取得できていない」と言う。「無い」とは言わない。
+function listing(iso3) {
+  const html = curl("https://reliefweb.int/country/" + iso3.toLowerCase());
+  if (!html) return null;                       // 取れなかった。「無い」ではない
+  let seen = harvest(html);
+  let fellBack = false;
+  if (seen.size === 0) {
+    // 国別ページが空。更新リバーから拾い直す
+    const river = curl("https://reliefweb.int/updates");
+    if (river) { seen = harvest(river); fellBack = true; }
+  }
+  const byCountry = new Map();
+  for (const [, v] of seen) byCountry.set(v.country, (byCountry.get(v.country) || 0) + 1);
   // 国別ページには「関連」として他国の項目も並ぶ（南アジア地域版など）。
   // その国のページなのだから、いちばん多い国セグメントがその国である。
   // ISO3 から slug を引く表を持たずに済ませる。
   let own = null, best = 0;
   for (const [c, n] of byCountry) if (n > best) { own = c; best = n; }
-  return [...seen.entries()]
+  // リバーから拾ったときは「いちばん多い国」が対象国とは限らない。国名で絞る。
+  if (fellBack) own = SLUG[iso3.toUpperCase()] || own;
+  const rows = [...seen.entries()]
     .filter(([, v]) => v.country === own)
     .map(([url, v]) => ({ url, title: v.title }));
+  rows.fellBack = fellBack;
+  return rows;
 }
 
 function main() {
@@ -109,7 +137,16 @@ function main() {
     const cited = new Set((d.links || []).map(l => l.url));
     const fresh = items.filter(it => !cited.has(it.url));
     if (!fresh.length) {
-      console.log("   一覧 " + items.length + " 件。すべて links[] に取り込み済み。");
+      if (items.length === 0) {
+      anyUnreachable = true;
+      console.log("   ! 一覧が **0件**。ReliefWeb から記事リンクが1件も取れていない。");
+      console.log("     **「新しい資料が無い」ではない。取得できていない。**");
+      console.log("     reliefweb.int/country/" + m.iso3.toLowerCase() + " を直接開いて確かめること。");
+    } else {
+      console.log("   一覧 " + items.length + " 件"
+        + (items.fellBack ? "（国別ページが空だったため /updates から取得）" : "")
+        + "。すべて links[] に取り込み済み。");
+    }
       continue;
     }
     anyNew = true;

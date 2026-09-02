@@ -19,14 +19,14 @@
     "title_ja": "2026年 ボテコシ川 土石流・鉄砲水（ネパール）",
     "subtitle_en": "Rasuwa, Nuwakot and Dhading Districts - 26 August 2026",
     "subtitle_ja": "ラスワ郡・ヌワコット郡・ダディン郡、2026年8月26日",
-    "edition_en": "5th report",
-    "edition_ja": "第5報",
+    "edition_en": "6th report",
+    "edition_ja": "第6報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
-    "stamp": "2026-09-01 07:39 JST",
-    "update_date": "31/08/2026",
-    "timeline_range_en": "25-31 August 2026 (Nepal Standard Time, UTC+5:45)",
-    "timeline_range_ja": "2026年8月25日〜31日（ネパール標準時 UTC+5:45）",
+    "stamp": "2026-09-02 09:20 JST",
+    "update_date": "01/09/2026",
+    "timeline_range_en": "25 August - 1 September 2026 (Nepal Standard Time, UTC+5:45)",
+    "timeline_range_ja": "2026年8月25日〜9月1日（ネパール標準時 UTC+5:45）",
     "tz_note_en": "All times are Nepal Standard Time (NPT, UTC+5:45) unless stated.",
     "tz_note_ja": "時刻は特記なき限りネパール標準時（NPT、UTC+5:45）。",
     "optional_slides": [],
@@ -437,6 +437,13 @@
       "src": "NDRRMA / OCHA-UN RC Nepal",
       "en": "OCHA/UN RC Nepal Flash Update #4: NDRRMA's 09:00 bulletin puts the death toll at 903, with 267 injured (156 discharged) and 4,247 still reported missing. 10,451 people have been rescued to date, including 252 foreign nationals and 3,344 Nepalis airlifted by helicopter; 20,819 personnel are mobilised. The Government has allocated NPR 10 million each in emergency funds to Rasuwa and Nuwakot and NPR 0.5 million to Dhading. Joint Nepal-India-China rescue operations continue at the Trishuli 3A, Haku Besi, Trishuli 3B and Chilime hydropower sites. The Mugling-Malekhu section of the Prithvi Highway remains fully blocked by toe-cutting at Krishna Bhir and Parewa Bhir; power has been restored in Dhading and Nuwakot, with work continuing in Rasuwa.",
       "ja": "OCHA/国連ネパール常駐調整官事務所 Flash Update #4。NDRRMAの09:00発表によると、死者903人、負傷267人（うち156人退院済み）、行方不明4,247人。これまでに10,451人を救助し、うち外国人252人、ヘリコプターで空輸されたネパール人3,344人を含む。要員20,819人を動員。政府はラスワ郡・ヌワコット郡に各NPR1,000万、ダディン郡にNPR50万の緊急資金を配分した。トリシュリ3A、ハクベシ、トリシュリ3B、チリメの各水力発電施設でネパール・インド・中国による合同救助活動が続いている。プリトビ・ハイウェイのムグリン〜マレクー区間は、クリシュナ・ビル、パレワ・ビルの法面崩壊により全面通行止めが続く。電力はダディン郡・ヌワコット郡で復旧し、ラスワ郡では復旧作業が続いている。"
+    },
+    {
+      "time": "1 Sep",
+      "tier": "official",
+      "src": "Government of the Republic of Korea",
+      "en": "The Republic of Korea decides to dispatch the Korea Disaster Relief Team (KDRT) following a request from the Government of Nepal for support to search and rescue operations. The team of 44 members from the Ministry of Foreign Affairs, KOICA and the National Fire Agency, headed by Lee Kyoo-ho, Director-General for Development Cooperation, departs on the night of 1 September aboard Korean military transport aircraft. Korea had earlier announced USD 1 million in humanitarian assistance through international organizations on 27 August.",
+      "ja": "韓国政府が、ネパール政府からの捜索・救助支援の要請を受けて、韓国災害救助隊（KDRT）の派遣を決定。外務省・KOICA・消防庁などからなる44人で、外務省開発協力局長の李圭虎氏が団長。9月1日夜、韓国軍の輸送機でネパールへ向かう。韓国は8月27日に、現地で活動する国際機関を通じた100万米ドルの人道支援も表明していた。"
     }
   ],
   "response_measures": [
@@ -488,6 +495,14 @@
       "source": "Government of China / Government of India, 26-27 Aug",
       "en": "China pledged relief funding and India is sending humanitarian supplies. Indian authorities in Bihar opened the Valmikinagar Barrage on the Gandak River as a precaution and prepared to evacuate 10,000-12,000 people downstream.",
       "ja": "中国は救援資金の拠出を表明し、インドは人道支援物資を送っている。インド・ビハール州当局は予防措置としてガンダック川のバルミキナガル堰を開放し、下流の10,000〜12,000人の避難に備えた。"
+    },
+    {
+      "org_en": "Republic of Korea",
+      "org_ja": "韓国",
+      "tier": "official",
+      "en": "Korea Disaster Relief Team (KDRT), 44 members from the Ministry of Foreign Affairs, KOICA and the National Fire Agency, departing 1 September by military transport aircraft for search and rescue support; USD 1 million in humanitarian assistance through international organizations announced on 27 August.",
+      "ja": "韓国災害救助隊（KDRT）44人（外務省・KOICA・消防庁ほか）を9月1日に軍輸送機で派遣し、捜索・救助を支援。8月27日には国際機関を通じた100万米ドルの人道支援を表明。",
+      "url": "https://reliefweb.int/report/nepal/dispatch-korea-disaster-relief-team-kdrt-response-flood-damage-nepal"
     }
   ],
   "satellite": [
@@ -652,6 +667,21 @@
       "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-update-4-31-august-2026",
       "en": "OCHA/UN RC Nepal - Rasuwa Flood Flash Update #4, 31 August 2026",
       "ja": "OCHA/国連ネパール常駐調整官事務所 Flash Update #4（2026年8月31日）"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/dispatch-korea-disaster-relief-team-kdrt-response-flood-damage-nepal",
+      "en": "Dispatch of Korea Disaster Relief Team (KDRT) in Response to Flood Damage in Nepal (Govt. of the Republic of Korea, 1 Sep 2026)",
+      "ja": "韓国災害救助隊（KDRT）の派遣（韓国政府、2026年9月1日）"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/nepal-flood-emergency-situation-report-reporting-period-30-31-august-2026",
+      "en": "Tzu Chi Nepal Flood Emergency Situation Report, 30-31 August 2026",
+      "ja": "慈済 ネパール洪水 緊急状況報告（2026年8月30〜31日）"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/water-mission-responds-devastating-flash-floods-nepal",
+      "en": "Water Mission responds to devastating flash floods in Nepal",
+      "ja": "Water Mission によるネパール鉄砲水への対応"
     }
   ],
   "images": {
