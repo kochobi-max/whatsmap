@@ -21,8 +21,8 @@
     "jma_name_en": "",
     "edition": "",
     "prepared_by": "Asian Disaster Reduction Center (ADRC)",
-    "stamp": "2026-09-01 08:34 JST",
-    "update_date": "01/09/2026",
+    "stamp": "2026-09-03 07:41 JST",
+    "update_date": "03/09/2026",
     "timeline_range_en": "15-31 August 2026 (Western Indonesian Time, UTC+7)",
     "timeline_range_ja": "2026年8月15日〜31日（西部インドネシア時間 WIB、UTC+7）",
     "disseminate_en": "",
@@ -312,6 +312,26 @@
       "source_ja": "GDACS（DG ECHO・ERCC 日報地図経由）",
       "tier": "official",
       "url": "https://reliefweb.int/map/indonesia/indonesia-77-m-earthquake-and-tsunami-14-august-dg-echo-daily-map-18082026"
+    },
+    {
+      "item_en": "Health facilities damaged (hospitals / community health centres)",
+      "item_ja": "医療施設被害（病院／地域保健センター）",
+      "value_en": "9 hospitals and 68 community health centres (puskesmas) damaged, as of 30 Aug (Gender Alert #1, jointly issued by Indonesia's Ministry of Women's Empowerment and Child Protection, the Indonesia Humanitarian Coordination Platform, UNFPA and UN Women, published 2 Sep). This is a hospital/puskesmas breakdown not previously published; it sits alongside, and has not been reconciled with, the BNPB 26 Aug figure of 172 health units damaged (including 19 puskesmas not yet operational).",
+      "value_ja": "病院9か所、地域保健センター（プスケスマス）68か所が被害（8月30日時点、Gender Alert #1、インドネシア女性エンパワーメント・子ども保護省、Indonesia Humanitarian Coordination Platform、UNFPA、UN Womenの共同発表、9月2日公表）。病院とプスケスマスを分けた内訳はこれまで未公表であり、BNPBの8月26日報にある医療施設被害172か所（うちプスケスマス19か所が未稼働）とは突合できていない。",
+      "source_en": "UN Women / UNFPA, Gender Alert #1, 2 Sep 2026 (data as of 30 Aug)",
+      "source_ja": "UN Women／UNFPA「Gender Alert #1」（2026年9月2日公表、データは8月30日時点）",
+      "tier": "official",
+      "url": "https://reliefweb.int/report/indonesia/gender-alert-1-critical-protection-needs-women-and-girls-following-flores-earthquake-indonesia"
+    },
+    {
+      "item_en": "Protection needs of women and girls",
+      "item_ja": "女性・女児の保護ニーズ",
+      "value_en": "Gender Alert #1 identifies heightened protection risks for women and girls in displacement settings - gender-based violence, limited access to maternal and reproductive health services, and gaps in safe and inclusive evacuation facilities - and calls for gender-responsive assistance, disaggregated data collection, GBV coordination and survivor-centred services, and gender- and disability-inclusive WASH, shelter and evacuation facilities.",
+      "value_ja": "Gender Alert #1は、避難生活における女性・女児への保護リスクの高まり（ジェンダーに基づく暴力、母子保健・リプロダクティブヘルスサービスへのアクセス制約、安全で包摂的な避難施設の不足）を指摘し、ジェンダーに配慮した支援、性別・年齢・障害別データの収集強化、GBV対応の調整と被害者中心のサービス、ジェンダー・障害に配慮したWASH・避難施設の整備を求めている。",
+      "source_en": "UN Women / UNFPA, Gender Alert #1, 2 Sep 2026",
+      "source_ja": "UN Women／UNFPA「Gender Alert #1」（2026年9月2日）",
+      "tier": "media",
+      "url": "https://reliefweb.int/report/indonesia/gender-alert-1-critical-protection-needs-women-and-girls-following-flores-earthquake-indonesia"
     }
   ],
   "damage_highlights": [],
@@ -738,6 +758,12 @@
       "label_en": "AHA Centre - ASEAN Weekly Disaster Update, week 35 (24-30 Aug 2026)",
       "label_ja": "AHA Centre ASEAN週次災害アップデート（第35週、8月24-30日）",
       "url": "https://reliefweb.int/report/indonesia/asean-weekly-disaster-update-week-35-24-30-august-2026",
+      "tier": "official"
+    },
+    {
+      "label_en": "Gender Alert #1 - Protection needs of women and girls, Flores earthquake (2 Sep 2026)",
+      "label_ja": "Gender Alert #1：フローレス地震における女性・女児の保護ニーズ（9月2日）",
+      "url": "https://reliefweb.int/report/indonesia/gender-alert-1-critical-protection-needs-women-and-girls-following-flores-earthquake-indonesia",
       "tier": "official"
     }
   ],
