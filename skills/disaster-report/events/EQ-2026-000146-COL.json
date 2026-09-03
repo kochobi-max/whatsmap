@@ -57,14 +57,14 @@
     ]
   },
   "_prev": {
-    "_comment": "2026-09-03 08:46 JST 送信済み（第15報）。UNGRD 9月2日06:30締めの値。住家全壊の減少（37,542→36,336）は数値急変ゲートに抵触したため確認メールを送り、荒木田さんが2026-09-03 08:40 JSTに「問題ないので送信して」と承認したことを受けて送信した。翌日の数値急変ゲートの基準。",
+    "_comment": "2026-09-04 08:47 JST 送信済み（第16報）。UNGRD 9月3日06:30締めの値。行方不明の減少（136→122）は missing が非単調ゲート（monotonic: false）のため数値急変ゲートに抵触せず、resolve_event.js は OK と判定、確認メールを経ずに通常送信した。翌日の数値急変ゲートの基準。",
     "deaths": 331,
     "injured": 4519,
-    "missing": 136,
+    "missing": 122,
     "houses_destroyed": 36336,
     "evacuees": null,
     "tier": "official",
-    "as_of": "2026-09-02 06:30 COT (UNGRD)"
+    "as_of": "2026-09-03 06:30 COT (UNGRD)"
   },
   "event": {
     "origin_time_local": "10 Aug 2026, 07:34:28 COT (UTC-5)",
