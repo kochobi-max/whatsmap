@@ -268,6 +268,37 @@ CLAUDE.md の「通称でフォルダを呼ばない。フルパスを書く」�
 `.skipped.json` は「PCが動かなかった」と「PCが動いて見送った」を分けるために
 2026-08-30 に足したもの。今回それが効いて、原因の切り分けが1回で済んだ。
 
+## ビルド用コンテナの LibreOffice が毎回そろっているとは限らない（2026-09-03）
+
+定期タスクのコンテナに **`libreoffice-core` だけが入っていて `libreoffice-impress`
+が欠けていた日**があった。`/usr/bin/soffice` は在るので `soffice.js` の探索は通る。
+しかし **pptx の取り込みフィルタが無いため、PDF が1枚も出ない。**
+
+`build_event.js` は `STATUS: FAIL no-pdf` で止まるので、黙って空を出しはしない。
+**ただし止まるだけでは、その朝のレポートが出ない。** 定期タスクが自分で
+`apt-get install` して復旧させたが、**コンテナは毎回作り直されるので残らない。**
+
+そこで `ensure_soffice.js` を PDF 変換の手前に入れた。
+
+```bash
+node generator/scripts/ensure_soffice.js          # 確かめ、欠けていれば入れ直す
+node generator/scripts/ensure_soffice.js --check  # 確かめるだけ
+```
+
+- 判定は**バイナリの有無ではなく、Impress のモジュールが在るか**で行う
+  （`/usr/lib/libreoffice/program/libwpftimpresslo.so` ほか）
+- 欠けていて root なら `apt-get install -y libreoffice-impress` を自動で行う
+- 入れたあと、**試験用の pptx を1枚実際に変換して確かめる。**
+  「入った」で終わらせない
+- 入れられなかったときは `STATUS: FAIL impress-install` を返し、
+  apt のミラーに届いていない可能性を添える。**黙って先へ進まない**
+
+Linux のときだけ働く。荒木田さんのPCには LibreOffice を入れない方針で、
+PC側は PDF を作らず配布ブランチから受け取るため、この確認は要らない。
+
+**イメージ側で恒常的に直すのが本筋である。** ここでの自動復旧は、
+それまでの間、毎朝のレポートを止めないためのもの。
+
 ## 「成功した」と書いてあるのに、何も起きていないことがある
 
 2026-08-28、PC側のバッチが `STATUS: PUBLISHED` を出し、4ファイルも

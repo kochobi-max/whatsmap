@@ -142,6 +142,25 @@ if (!soffice) {
   process.exit(8);
 }
 console.log("   soffice: " + soffice);
+
+// **soffice が在ることと、pptx を変換できることは別である。**
+// 2026-09-03、ビルド用コンテナに libreoffice-core だけが入っていて
+// libreoffice-impress が欠けていた。/usr/bin/soffice は在るので探索は通るが、
+// 取り込みフィルタが無いため PDF が1枚も出ず、STATUS: FAIL no-pdf で毎回止まった。
+// 定期タスクが apt-get で入れ直したが、コンテナは毎回作り直されるので残らない。
+// 止まるだけでは毎朝レポートが出ないので、ここで直してから進む。
+if (process.platform === "linux") {
+  const ens = spawnSync(process.execPath, [path.join(__dirname, "ensure_soffice.js")],
+    { encoding: "utf8", timeout: 900000 });
+  const text = (ens.stdout || "") + (ens.stderr || "");
+  for (const line of text.split("\n")) if (line.trim() && !/^\s+soffice: /.test(line)) console.log("   " + line.trim());
+  if (ens.status !== 0) {
+    console.error("STATUS: FAIL soffice-impress");
+    console.error("PDF変換ができる状態ではありません。上の行をそのまま報告してください。");
+    process.exit(8);
+  }
+}
+
 const conv = spawnSync(soffice,
   ["--headless", "--convert-to", "pdf", "--outdir", OUTDIR,
    path.join(OUTDIR, filebase + "_JA.pptx"), path.join(OUTDIR, filebase + "_EN.pptx")],
