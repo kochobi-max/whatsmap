@@ -19,16 +19,16 @@
     "title_ja": "2026年 チョコ地震（コロンビア）",
     "subtitle_en": "M7.4, San José del Palmar, Chocó Department - 10 August 2026",
     "subtitle_ja": "M7.4、チョコ県サンホセ・デル・パルマル、2026年8月10日",
-    "edition_en": "15th report",
-    "edition_ja": "第15報",
+    "edition_en": "16th report",
+    "edition_ja": "第16報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
-    "as_of_en": "Figures as of the UNGRD balance with a 06:30 COT cut-off on 2 Sep 2026: 331 deaths, 4,519 injured, 136 missing and 364 rescued alive across 497 municipalities in 16 departments (all four unchanged from 1 Sep). Housing: 201,005 homes damaged and 36,336 destroyed, plus 5,889 buildings damaged and 709 collapsed. The destroyed-housing count fell from 37,542 (1 Sep 06:30 cut); UNGRD gives no explanation for the change, and as with earlier revisions this report treats it as reclassification during ongoing consolidation rather than a reduction in reported impact. OCHA's Flash Update 011 (2 Sep, 17:00 cut) separately corroborates the lower order of magnitude, citing more than 36,000 homes destroyed. UNGRD again describes the figures as preliminary and still being consolidated by territorial entities and operational agencies. All figures are preliminary; quote the cut-off with the number.",
-    "as_of_ja": "数値は2026年9月2日06:30（コロンビア時間）締めのUNGRD集計現在。16県・497市町村で死者331人、負傷4,519人、行方不明136人、生存救出364人（いずれも9月1日から横ばい）。住家は損壊201,005棟・全壊36,336棟、ほかに建物損壊5,889棟・倒壊709棟。全壊棟数は9月1日06:30締めの37,542棟から減少した。UNGRDは理由を説明していないが、これまでの改定と同様、集計継続中の区分見直しによるものとして扱い、被害の縮小とは記載しない。OCHAのFlash Update 011（9月2日17:00時点）も別途「住家全壊36,000棟超」とし、同水準の値を示している。UNGRDは引き続き、数値は速報値であり地方団体・実施機関による集計が継続中としている。すべて速報値。引用の際は集計時点を併記されたい。",
+    "as_of_en": "Figures as of the UNGRD balance with a 06:30 COT cut-off on 3 Sep 2026: 331 deaths, 4,519 injured, 364 rescued alive (all unchanged from 2 Sep) and 122 missing across 498 municipalities in 16 departments (up from 497 on 2 Sep). The missing count fell from 136 at the 2 Sep 06:30 cut; UNGRD gives no explanation for the decrease, and as with earlier revisions (e.g. the destroyed-housing count on 2 Sep) this report treats it as reconciliation of reports filed, resolved and de-duplicated during ongoing consolidation rather than new information about casualties. Housing: 201,010 homes damaged (up from 201,005) and 36,336 destroyed (unchanged), plus 5,889 buildings damaged and 709 collapsed (both unchanged). UNGRD again describes the figures as preliminary and still being consolidated by territorial entities and operational agencies. All figures are preliminary; quote the cut-off with the number.",
+    "as_of_ja": "数値は2026年9月3日06:30（コロンビア時間）締めのUNGRD集計現在。16県・498市町村（9月2日の497から増加）で死者331人、負傷4,519人、生存救出364人（いずれも9月2日から横ばい）、行方不明122人。行方不明は9月2日06:30締めの136人から減少した。UNGRDは理由を説明していないが、これまでの改定（9月2日の全壊棟数など）と同様、集計継続中の届出・解消・重複整理によるものとして扱い、死傷者に関する新しい情報の反映とは記載しない。住家は損壊201,010棟（201,005棟から増加）・全壊36,336棟（横ばい）、ほかに建物損壊5,889棟・倒壊709棟（いずれも横ばい）。UNGRDは引き続き、数値は速報値であり地方団体・実施機関による集計が継続中としている。すべて速報値。引用の際は集計時点を併記されたい。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-09-03 07:41 JST",
-    "update_date": "03/09/2026",
+    "stamp": "2026-09-04 07:44 JST",
+    "update_date": "04/09/2026",
     "optional_slides": [
       "prior_event",
       "historical",
@@ -42,11 +42,11 @@
     "headline": {
       "deaths": 331,
       "injured": 4519,
-      "missing": 136,
+      "missing": 122,
       "houses_destroyed": 36336,
       "evacuees": null,
       "tier": "official",
-      "as_of": "2026-09-02 06:30 COT (UNGRD)"
+      "as_of": "2026-09-03 06:30 COT (UNGRD)"
     },
     "tz_note_en": "Times are local (COT, UTC-5); entries whose exact time is not published are placed at the end of that day.",
     "tz_note_ja": "時刻は現地時間（COT、UTC-5）。時刻が公表されていないものはその日の末尾に置いている。",
@@ -510,6 +510,13 @@
       "src": "OCHA",
       "en": "OCHA Flash Update 011: more than 466,600 people affected, including 331 deaths, thousands injured and missing, and more than 36,000 homes destroyed - consistent with UNGRD's same-day balance. At least 29 humanitarian organisations have assisted nearly 123,000 people in 49 municipalities; international cooperation has mobilised more than USD 40 million; the Humanitarian Response Plan Addendum continues to seek funding for needs through the end of the year. The update also flags 'double affectation' - communities facing both earthquake damage and risks tied to the armed conflict - as a persistent concern.",
       "ja": "OCHA Flash Update 011。被災者466,600人超（うち死者331人、負傷・行方不明者多数）、住家全壊36,000棟超。同日のUNGRD集計と整合する水準。人道機関29以上が49市町村でおよそ123,000人を支援。国際協力による拠出は4,000万米ドル超。人道対応計画への補遺は年末までの資金確保を継続して求めている。あわせて、地震被害と武力紛争に伴うリスクの双方に直面する「二重被災」が引き続き課題であるとしている。"
+    },
+    {
+      "time": "3 Sep 06:30",
+      "tier": "official",
+      "src": "UNGRD",
+      "en": "UNGRD balance with a 06:30 cut-off: 331 dead, 4,519 injured and 364 rescued (all unchanged from 2 Sep); missing fell to 122 from 136 at the 2 Sep cut, with no explanation given; 293,743 families (466,606 people, unchanged) affected across 498 municipalities in 16 departments (up from 497). Housing: 201,010 homes damaged (up from 201,005) and 36,336 destroyed (unchanged), plus 5,889 buildings damaged and 709 collapsed (both unchanged). Infrastructure: 400 health, 4,292 educational (up from 4,287) and 5,600 community facilities; 468 roads, 5 airports, 140 aqueducts, 91 road bridges and 13 footbridges affected (all unchanged). 3,023 animals affected and 2,976 rescued (unchanged). UNGRD again describes the figures as preliminary and still being consolidated by territorial entities and operational agencies.",
+      "ja": "06:30締めのUNGRD集計。死者331人、負傷4,519人、生存救出364人（いずれも9月2日から横ばい）。行方不明は9月2日締めの136人から122人へ減少し、理由は示されていない。16県・498市町村（497から増加）で被災293,743世帯・466,606人（横ばい）。住家は損壊201,010棟（201,005棟から増加）・全壊36,336棟（横ばい）、ほか建物損壊5,889棟・倒壊709棟（いずれも横ばい）。医療400、教育4,292（4,287から増加）、コミュニティ5,600か所。道路468路線、空港5か所、上水道140系統、道路橋91橋、歩道橋13橋が被害（いずれも横ばい）。動物3,023頭が被災、2,976頭を救出（横ばい）。UNGRDは引き続き、数値は速報値であり地方団体・実施機関による集計が継続中としている。"
     }
   ],
   "areas": [
@@ -588,42 +595,42 @@
     {
       "item_en": "Deaths",
       "item_ja": "死者",
-      "value_en": "331 (UNGRD, 06:30 cut on 2 Sep), unchanged from the 1 Sep 06:30 cut. The series has run 273, 281, 285, 287, 288, 294, 289, 287, 329, 331, 331 and now 331 again; UNGRD attributes earlier movement to verification and consolidation of figures reported from the territories.",
-      "value_ja": "331人（UNGRD、9月2日06:30締め）。9月1日06:30締めの331人から横ばい。推移は273→281→285→287→288→294→289→287→329→331→331→331。UNGRDは、これまでの変動は地方から報告された数値の検証・統合によるものと説明している。",
-      "source_en": "UNGRD, 2 Sep 06:30",
-      "source_ja": "UNGRD（9月2日06:30）",
+      "value_en": "331 (UNGRD, 06:30 cut on 3 Sep), unchanged from the 2 Sep 06:30 cut. The series has run 273, 281, 285, 287, 288, 294, 289, 287, 329, 331, 331, 331 and now 331 again; UNGRD attributes earlier movement to verification and consolidation of figures reported from the territories.",
+      "value_ja": "331人（UNGRD、9月3日06:30締め）。9月2日06:30締めの331人から横ばい。推移は273→281→285→287→288→294→289→287→329→331→331→331→331。UNGRDは、これまでの変動は地方から報告された数値の検証・統合によるものと説明している。",
+      "source_en": "UNGRD, 3 Sep 06:30",
+      "source_ja": "UNGRD（9月3日06:30）",
       "tier": "official",
-      "url": "https://x.com/UNGRD/status/2095167808891961347"
+      "url": "https://x.com/UNGRD/status/2095511717660721508"
     },
     {
       "item_en": "Injured",
       "item_ja": "負傷者",
-      "value_en": "4,519 (UNGRD, 06:30 cut on 2 Sep), unchanged from the 1 Sep 06:30 cut.",
-      "value_ja": "4,519人（UNGRD、9月2日06:30締め）。9月1日06:30締めから横ばい。",
-      "source_en": "UNGRD, 2 Sep 06:30",
-      "source_ja": "UNGRD（9月2日06:30）",
+      "value_en": "4,519 (UNGRD, 06:30 cut on 3 Sep), unchanged from the 2 Sep 06:30 cut.",
+      "value_ja": "4,519人（UNGRD、9月3日06:30締め）。9月2日06:30締めから横ばい。",
+      "source_en": "UNGRD, 3 Sep 06:30",
+      "source_ja": "UNGRD（9月3日06:30）",
       "tier": "official",
-      "url": "https://x.com/UNGRD/status/2095167808891961347"
+      "url": "https://x.com/UNGRD/status/2095511717660721508"
     },
     {
       "item_en": "Missing (reported to the authorities)",
       "item_ja": "行方不明（当局への届出）",
-      "value_en": "136 (UNGRD, 06:30 cut on 2 Sep), unchanged from the 1 Sep 06:30 cut. The series has run 496, 377, 378, 202, 320, 143, 194, 151, 136, 136 and now 136 again: reports are filed, resolved and de-duplicated at the same time, so this count moves in both directions.",
-      "value_ja": "136人（UNGRD、9月2日06:30締め）。9月1日06:30締めから横ばい。推移は496→377→378→202→320→143→194→151→136→136→136。届出・解消・重複整理が同時に進むため、この数値は増減の両方向に動く。",
-      "source_en": "UNGRD, 2 Sep 06:30",
-      "source_ja": "UNGRD（9月2日06:30）",
+      "value_en": "122 (UNGRD, 06:30 cut on 3 Sep), down from 136 at the 2 Sep 06:30 cut. The series has run 496, 377, 378, 202, 320, 143, 194, 151, 136, 136, 136 and now 122: reports are filed, resolved and de-duplicated at the same time, so this count moves in both directions; UNGRD gives no explanation for this decrease, and it is treated here as reconciliation rather than a new finding about casualties.",
+      "value_ja": "122人（UNGRD、9月3日06:30締め）。9月2日06:30締めの136人から減少。推移は496→377→378→202→320→143→194→151→136→136→136→122。届出・解消・重複整理が同時に進むため、この数値は増減の両方向に動く。UNGRDは今回の減少について理由を説明していない。ここでは死傷者に関する新しい知見ではなく、集計上の整理として扱う。",
+      "source_en": "UNGRD, 3 Sep 06:30",
+      "source_ja": "UNGRD（9月3日06:30）",
       "tier": "official",
-      "url": "https://x.com/UNGRD/status/2095167808891961347"
+      "url": "https://x.com/UNGRD/status/2095511717660721508"
     },
     {
       "item_en": "Rescued alive (national balance)",
       "item_ja": "生存救出（全国集計）",
-      "value_en": "364 (UNGRD, 06:30 cut on 2 Sep), unchanged from 1 Sep, plus 2,976 animals rescued (unchanged) and 3,023 affected. This is the national balance figure carried alongside the casualty count; see the separate 16 Aug entry below for named rescue cases.",
-      "value_ja": "364人（UNGRD、9月2日06:30締め）。9月1日から横ばい。ほかに動物2,976頭を救出（横ばい）、3,023頭が被災。これは死傷者数と併せて示される全国集計の値であり、個別の救出事例は下記8月16日時点の記載を参照。",
-      "source_en": "UNGRD, 2 Sep 06:30",
-      "source_ja": "UNGRD（9月2日06:30）",
+      "value_en": "364 (UNGRD, 06:30 cut on 3 Sep), unchanged from 2 Sep, plus 2,976 animals rescued (unchanged) and 3,023 affected (unchanged). This is the national balance figure carried alongside the casualty count; see the separate 16 Aug entry below for named rescue cases.",
+      "value_ja": "364人（UNGRD、9月3日06:30締め）。9月2日から横ばい。ほかに動物2,976頭を救出（横ばい）、3,023頭が被災（横ばい）。これは死傷者数と併せて示される全国集計の値であり、個別の救出事例は下記8月16日時点の記載を参照。",
+      "source_en": "UNGRD, 3 Sep 06:30",
+      "source_ja": "UNGRD（9月3日06:30）",
       "tier": "official",
-      "url": "https://x.com/UNGRD/status/2095167808891961347"
+      "url": "https://x.com/UNGRD/status/2095511717660721508"
     },
     {
       "item_en": "Unresolved reports on citizen platforms",
@@ -646,100 +653,100 @@
     {
       "item_en": "Municipalities affected",
       "item_ja": "被災市町村",
-      "value_en": "497 municipalities in 16 departments (UNGRD, 06:30 cut on 2 Sep), unchanged from the 1 Sep 06:30 cut (against 494 municipalities in 16 departments on 27 Aug and 472 municipalities in 15 departments at the 18:30 cut on 16 Aug).",
-      "value_ja": "16県・497市町村（UNGRD、9月2日06:30締め）。9月1日06:30締めから横ばい（8月27日時点の16県・494市町村、8月16日18:30締めの15県・472市町村から増加した水準）。",
-      "source_en": "UNGRD, 2 Sep 06:30",
-      "source_ja": "UNGRD（9月2日06:30）",
+      "value_en": "498 municipalities in 16 departments (UNGRD, 06:30 cut on 3 Sep), up from 497 at the 2 Sep 06:30 cut (against 494 municipalities in 16 departments on 27 Aug and 472 municipalities in 15 departments at the 18:30 cut on 16 Aug).",
+      "value_ja": "16県・498市町村（UNGRD、9月3日06:30締め）。9月2日06:30締めの497市町村から増加（8月27日時点の16県・494市町村、8月16日18:30締めの15県・472市町村から増加してきた水準）。",
+      "source_en": "UNGRD, 3 Sep 06:30",
+      "source_ja": "UNGRD（9月3日06:30）",
       "tier": "official",
-      "url": "https://x.com/UNGRD/status/2095167808891961347"
+      "url": "https://x.com/UNGRD/status/2095511717660721508"
     },
     {
       "item_en": "People affected",
       "item_ja": "被災者",
       "tier": "official",
-      "value_en": "293,743 families (466,606 people) affected (UNGRD, 06:30 cut on 2 Sep), up from 290,252 families at the 1 Sep 06:30 cut (people count unchanged). OCHA's Flash Update 011 corroborates the people-affected figure as of 2 Sep 17:00 (\"more than 466,600\"). OCHA's earlier Flash Update 010 separately reported more than 406,000 people (193,011 families) as of 27 Aug 20:00, concentrated in Risaralda, Valle del Cauca, Choco, Quindio and Caldas; the two organisations' bases are not confirmed to be identical, so both are shown with their dates.",
-      "value_ja": "293,743世帯・466,606人が被災（UNGRD、9月2日06:30締め）。9月1日06:30締めの290,252世帯から増加（人数は横ばい）。OCHAのFlash Update 011（9月2日17:00時点）も被災者数「466,600人超」として整合。OCHAの先のFlash Update 010は別途、406,000人超・193,011世帯（8月27日20:00時点、リサラルダ、バジェ・デル・カウカ、チョコ、キンディオ、カルダスに集中）としていた。両機関の集計基準が同一かは確認できていないため、いずれも日付を付して併記する。",
-      "source_en": "UNGRD, 2 Sep 06:30; OCHA Flash Update 011, 2 Sep 17:00",
-      "source_ja": "UNGRD（9月2日06:30）／OCHA Flash Update 011（9月2日17:00時点）",
-      "url": "https://x.com/UNGRD/status/2095167808891961347"
+      "value_en": "293,743 families (466,606 people) affected (UNGRD, 06:30 cut on 3 Sep), unchanged from the 2 Sep 06:30 cut. OCHA's Flash Update 011 corroborates the people-affected figure as of 2 Sep 17:00 (\"more than 466,600\"). OCHA's earlier Flash Update 010 separately reported more than 406,000 people (193,011 families) as of 27 Aug 20:00, concentrated in Risaralda, Valle del Cauca, Choco, Quindio and Caldas; the two organisations' bases are not confirmed to be identical, so both are shown with their dates.",
+      "value_ja": "293,743世帯・466,606人が被災（UNGRD、9月3日06:30締め）。9月2日06:30締めから横ばい。OCHAのFlash Update 011（9月2日17:00時点）も被災者数「466,600人超」として整合。OCHAの先のFlash Update 010は別途、406,000人超・193,011世帯（8月27日20:00時点、リサラルダ、バジェ・デル・カウカ、チョコ、キンディオ、カルダスに集中）としていた。両機関の集計基準が同一かは確認できていないため、いずれも日付を付して併記する。",
+      "source_en": "UNGRD, 3 Sep 06:30; OCHA Flash Update 011, 2 Sep 17:00",
+      "source_ja": "UNGRD（9月3日06:30）／OCHA Flash Update 011（9月2日17:00時点）",
+      "url": "https://x.com/UNGRD/status/2095511717660721508"
     },
     {
       "item_en": "Homes damaged or destroyed",
       "item_ja": "住宅被害（合計）",
-      "value_en": "237,341: 36,336 destroyed and 201,005 damaged (UNGRD, 06:30 cut on 2 Sep), against 238,471 (37,542 destroyed and 200,929 damaged) at the 1 Sep 06:30 cut. The destroyed count fell by 1,206 while the damaged count rose; UNGRD gives no explanation, and this report treats it as reclassification during consolidation rather than a reduction in reported impact. OCHA's Flash Update 011 (2 Sep 17:00) separately cites more than 36,000 homes destroyed, consistent with the lower UNGRD figure. In El Cairo, a coffee town in the mountains of Valle del Cauca, 80% of the houses were damaged (as of 16 Aug).",
-      "value_ja": "237,341棟。全壊36,336棟、損壊201,005棟（UNGRD、9月2日06:30締め）。9月1日06:30締めの238,471棟（全壊37,542棟・損壊200,929棟）から変化。全壊は1,206棟減少し、損壊は増加した。UNGRDは理由を説明していないが、被害の縮小ではなく集計継続中の区分見直しとして扱う。OCHAのFlash Update 011（9月2日17:00時点）も別途「住家全壊36,000棟超」とし、UNGRDの新しい低い値と整合する。バジェ・デル・カウカ県山間部のコーヒー産地エル・カイロでは住宅の80％が被害を受けた（8月16日時点）。",
-      "source_en": "UNGRD, 2 Sep 06:30; OCHA Flash Update 011, 2 Sep 17:00",
-      "source_ja": "UNGRD（9月2日06:30）／OCHA Flash Update 011（9月2日17:00時点）",
+      "value_en": "237,346: 36,336 destroyed and 201,010 damaged (UNGRD, 06:30 cut on 3 Sep), against 237,341 (36,336 destroyed and 201,005 damaged) at the 2 Sep 06:30 cut. The destroyed count is unchanged; the damaged count rose slightly. OCHA's Flash Update 011 (2 Sep 17:00) separately cites more than 36,000 homes destroyed, consistent with the UNGRD figure. In El Cairo, a coffee town in the mountains of Valle del Cauca, 80% of the houses were damaged (as of 16 Aug).",
+      "value_ja": "237,346棟。全壊36,336棟、損壊201,010棟（UNGRD、9月3日06:30締め）。9月2日06:30締めの237,341棟（全壊36,336棟・損壊201,005棟）からわずかに増加。全壊は横ばい、損壊がわずかに増加した。OCHAのFlash Update 011（9月2日17:00時点）も別途「住家全壊36,000棟超」とし、UNGRDの値と整合する。バジェ・デル・カウカ県山間部のコーヒー産地エル・カイロでは住宅の80％が被害を受けた（8月16日時点）。",
+      "source_en": "UNGRD, 3 Sep 06:30; OCHA Flash Update 011, 2 Sep 17:00",
+      "source_ja": "UNGRD（9月3日06:30）／OCHA Flash Update 011（9月2日17:00時点）",
       "tier": "official",
-      "url": "https://x.com/UNGRD/status/2095167808891961347"
+      "url": "https://x.com/UNGRD/status/2095511717660721508"
     },
     {
       "item_en": "of which seriously damaged",
       "item_ja": "うち重大な損壊",
-      "value_en": "201,005 (UNGRD, 06:30 cut on 2 Sep), up from 200,929 at the 1 Sep 06:30 cut.",
-      "value_ja": "201,005（UNGRD、9月2日06:30締め）。9月1日06:30締めの200,929から増加。",
-      "source_en": "UNGRD, 2 Sep 06:30",
-      "source_ja": "UNGRD（9月2日06:30）",
+      "value_en": "201,010 (UNGRD, 06:30 cut on 3 Sep), up from 201,005 at the 2 Sep 06:30 cut.",
+      "value_ja": "201,010（UNGRD、9月3日06:30締め）。9月2日06:30締めの201,005から増加。",
+      "source_en": "UNGRD, 3 Sep 06:30",
+      "source_ja": "UNGRD（9月3日06:30）",
       "tier": "official"
     },
     {
       "item_en": "of which destroyed",
       "item_ja": "うち全壊",
-      "value_en": "36,336 (UNGRD, 06:30 cut on 2 Sep), down from 37,542 at the 1 Sep 06:30 cut. UNGRD gives no explanation for the decrease.",
-      "value_ja": "36,336（UNGRD、9月2日06:30締め）。9月1日06:30締めの37,542から減少。UNGRDは減少の理由を説明していない。",
-      "source_en": "UNGRD, 2 Sep 06:30",
-      "source_ja": "UNGRD（9月2日06:30）",
+      "value_en": "36,336 (UNGRD, 06:30 cut on 3 Sep), unchanged from the 2 Sep 06:30 cut.",
+      "value_ja": "36,336（UNGRD、9月3日06:30締め）。9月2日06:30締めから横ばい。",
+      "source_en": "UNGRD, 3 Sep 06:30",
+      "source_ja": "UNGRD（9月3日06:30）",
       "tier": "official"
     },
     {
       "item_en": "Buildings collapsed",
       "item_ja": "建物倒壊",
-      "value_en": "709 nationally, plus 5,889 buildings damaged (UNGRD, 06:30 cut on 2 Sep), up from 651 collapsed and 5,871 damaged at the 1 Sep 06:30 cut (against 197 collapsed at the 18:30 cut on 16 Aug, 66 that morning and 121 on 14 Aug). Asocapitales separately counted 243 collapsed structures in the capital cities as of 16 Aug; Cali city officials reported 107 collapsed and 643 structurally damaged as of 16 Aug.",
-      "value_ja": "全国で709棟が倒壊、ほか5,889棟が損壊（UNGRD、9月2日06:30締め）。9月1日06:30締めの倒壊651棟・損壊5,871棟から増加（8月16日18:30締めの倒壊197棟、同日朝66棟、8月14日121棟から積み上がった水準）。Asocapitalesは別途、県都で243棟の倒壊を数えていた（8月16日時点）。カリ市当局は倒壊107棟・構造的被害643棟と報告していた（8月16日時点）。",
-      "source_en": "UNGRD, 2 Sep 06:30; Asocapitales (16 Aug); Alcaldía de Cali (16 Aug)",
-      "source_ja": "UNGRD（9月2日06:30）、Asocapitales（8月16日時点）、カリ市（8月16日時点）",
+      "value_en": "709 nationally, plus 5,889 buildings damaged (UNGRD, 06:30 cut on 3 Sep), unchanged from the 2 Sep 06:30 cut (against 197 collapsed at the 18:30 cut on 16 Aug, 66 that morning and 121 on 14 Aug). Asocapitales separately counted 243 collapsed structures in the capital cities as of 16 Aug; Cali city officials reported 107 collapsed and 643 structurally damaged as of 16 Aug.",
+      "value_ja": "全国で709棟が倒壊、ほか5,889棟が損壊（UNGRD、9月3日06:30締め）。9月2日06:30締めから横ばい（8月16日18:30締めの倒壊197棟、同日朝66棟、8月14日121棟から積み上がった水準）。Asocapitalesは別途、県都で243棟の倒壊を数えていた（8月16日時点）。カリ市当局は倒壊107棟・構造的被害643棟と報告していた（8月16日時点）。",
+      "source_en": "UNGRD, 3 Sep 06:30; Asocapitales (16 Aug); Alcaldía de Cali (16 Aug)",
+      "source_ja": "UNGRD（9月3日06:30）、Asocapitales（8月16日時点）、カリ市（8月16日時点）",
       "tier": "official",
-      "url": "https://x.com/UNGRD/status/2095167808891961347"
+      "url": "https://x.com/UNGRD/status/2095511717660721508"
     },
     {
       "item_en": "Health facilities",
       "item_ja": "医療施設",
-      "value_en": "400 damaged (UNGRD, 06:30 cut on 2 Sep), unchanged from the 1 Sep 06:30 cut (406 at the 31 Aug 06:30 cut, 304 at the 18:30 cut on 16 Aug, 240 that morning and 18 on 10 Aug); 7 health institutions closed as of 16 Aug. About 30% of the University Hospital in Cali collapsed, including three floors (paediatrics, internal medicine, part of the neonatal unit). The Interior Minister said on 14 Aug that the hospital network in Buenaventura is overwhelmed.",
-      "value_ja": "400か所が被害（UNGRD、9月2日06:30締め）。9月1日06:30締めから横ばい（8月31日06:30締め406か所、8月16日18:30締め304か所、同日朝240か所、8月10日18か所）。医療機関7か所が閉鎖（8月16日時点）。カリの大学病院は約30％が崩壊し、小児科・内科・新生児科の一部を含む3フロアが失われた。内務大臣は8月14日、ブエナベントゥーラの病院網が対応能力を超えていると述べた。",
-      "source_en": "UNGRD, 2 Sep 06:30; Ministry of the Interior (14 Aug); Valle del Cauca government",
-      "source_ja": "UNGRD（9月2日06:30）、内務省（8月14日）、バジェ・デル・カウカ県",
+      "value_en": "400 damaged (UNGRD, 06:30 cut on 3 Sep), unchanged from the 2 Sep 06:30 cut (406 at the 31 Aug 06:30 cut, 304 at the 18:30 cut on 16 Aug, 240 that morning and 18 on 10 Aug); 7 health institutions closed as of 16 Aug. About 30% of the University Hospital in Cali collapsed, including three floors (paediatrics, internal medicine, part of the neonatal unit). The Interior Minister said on 14 Aug that the hospital network in Buenaventura is overwhelmed.",
+      "value_ja": "400か所が被害（UNGRD、9月3日06:30締め）。9月2日06:30締めから横ばい（8月31日06:30締め406か所、8月16日18:30締め304か所、同日朝240か所、8月10日18か所）。医療機関7か所が閉鎖（8月16日時点）。カリの大学病院は約30％が崩壊し、小児科・内科・新生児科の一部を含む3フロアが失われた。内務大臣は8月14日、ブエナベントゥーラの病院網が対応能力を超えていると述べた。",
+      "source_en": "UNGRD, 3 Sep 06:30; Ministry of the Interior (14 Aug); Valle del Cauca government",
+      "source_ja": "UNGRD（9月3日06:30）、内務省（8月14日）、バジェ・デル・カウカ県",
       "tier": "official",
-      "url": "https://x.com/UNGRD/status/2095167808891961347"
+      "url": "https://x.com/UNGRD/status/2095511717660721508"
     },
     {
       "item_en": "Educational facilities",
       "item_ja": "教育施設",
-      "value_en": "4,287 affected (UNGRD, 06:30 cut on 2 Sep), down slightly from 4,290 at the 1 Sep 06:30 cut (4,268 at 31 Aug, 3,207 at the 18:30 cut on 16 Aug, 2,205 that morning and 52 on 10 Aug)",
-      "value_ja": "4,287か所が被害（UNGRD、9月2日06:30締め）。9月1日06:30締めの4,290か所からわずかに減少（8月31日4,268か所、8月16日18:30締め3,207か所、同日朝2,205か所、8月10日52か所）",
-      "source_en": "UNGRD, 2 Sep 06:30",
-      "source_ja": "UNGRD（9月2日06:30）",
+      "value_en": "4,292 affected (UNGRD, 06:30 cut on 3 Sep), up slightly from 4,287 at the 2 Sep 06:30 cut (4,290 at 1 Sep, 4,268 at 31 Aug, 3,207 at the 18:30 cut on 16 Aug, 2,205 that morning and 52 on 10 Aug)",
+      "value_ja": "4,292か所が被害（UNGRD、9月3日06:30締め）。9月2日06:30締めの4,287か所からわずかに増加（9月1日4,290か所、8月31日4,268か所、8月16日18:30締め3,207か所、同日朝2,205か所、8月10日52か所）",
+      "source_en": "UNGRD, 3 Sep 06:30",
+      "source_ja": "UNGRD（9月3日06:30）",
       "tier": "official",
-      "url": "https://x.com/UNGRD/status/2095167808891961347"
+      "url": "https://x.com/UNGRD/status/2095511717660721508"
     },
     {
       "item_en": "Community facilities",
       "item_ja": "コミュニティ施設",
-      "value_en": "5,600 damaged (UNGRD, 06:30 cut on 2 Sep), down from 5,698 at the 1 Sep 06:30 cut (5,524 at 31 Aug, 4,059 at the 18:30 cut on 16 Aug, 1,208 that morning)",
-      "value_ja": "5,600か所が被害（UNGRD、9月2日06:30締め）。9月1日06:30締めの5,698か所から減少（8月31日5,524か所、8月16日18:30締め4,059か所、同日朝1,208か所）",
-      "source_en": "UNGRD, 2 Sep 06:30",
-      "source_ja": "UNGRD（9月2日06:30）",
+      "value_en": "5,600 damaged (UNGRD, 06:30 cut on 3 Sep), unchanged from the 2 Sep 06:30 cut (5,698 at 1 Sep, 5,524 at 31 Aug, 4,059 at the 18:30 cut on 16 Aug, 1,208 that morning)",
+      "value_ja": "5,600か所が被害（UNGRD、9月3日06:30締め）。9月2日06:30締めから横ばい（9月1日5,698か所、8月31日5,524か所、8月16日18:30締め4,059か所、同日朝1,208か所）",
+      "source_en": "UNGRD, 3 Sep 06:30",
+      "source_ja": "UNGRD（9月3日06:30）",
       "tier": "official",
-      "url": "https://x.com/UNGRD/status/2095167808891961347"
+      "url": "https://x.com/UNGRD/status/2095511717660721508"
     },
     {
       "item_en": "Roads",
       "item_ja": "道路",
-      "value_en": "468 roads damaged (UNGRD, 06:30 cut on 2 Sep), unchanged from the 1 Sep 06:30 cut (462 at 31 Aug, 410 at the 18:30 cut on 16 Aug, 210 that morning and 18 on 10 Aug); 91 road bridges and 13 footbridges also damaged, unchanged (against 48 road bridges and 13 footbridges on 16 Aug)",
-      "value_ja": "道路468路線が被害（UNGRD、9月2日06:30締め）。9月1日06:30締めから横ばい（8月31日462路線、8月16日18:30締め410路線、同日朝210路線、8月10日18路線）。道路橋91橋、歩道橋13橋も被害（横ばい。8月16日時点は道路橋48橋・歩道橋13橋）",
-      "source_en": "UNGRD, 2 Sep 06:30",
-      "source_ja": "UNGRD（9月2日06:30）",
+      "value_en": "468 roads damaged (UNGRD, 06:30 cut on 3 Sep), unchanged from the 2 Sep 06:30 cut (462 at 31 Aug, 410 at the 18:30 cut on 16 Aug, 210 that morning and 18 on 10 Aug); 91 road bridges and 13 footbridges also damaged, unchanged (against 48 road bridges and 13 footbridges on 16 Aug)",
+      "value_ja": "道路468路線が被害（UNGRD、9月3日06:30締め）。9月2日06:30締めから横ばい（8月31日462路線、8月16日18:30締め410路線、同日朝210路線、8月10日18路線）。道路橋91橋、歩道橋13橋も被害（横ばい。8月16日時点は道路橋48橋・歩道橋13橋）",
+      "source_en": "UNGRD, 3 Sep 06:30",
+      "source_ja": "UNGRD（9月3日06:30）",
       "tier": "official",
-      "url": "https://x.com/UNGRD/status/2095167808891961347"
+      "url": "https://x.com/UNGRD/status/2095511717660721508"
     },
     {
       "item_en": "Airports",
@@ -772,12 +779,12 @@
     {
       "item_en": "Animals affected",
       "item_ja": "動物被害",
-      "value_en": "3,023 animals affected and 2,976 rescued nationally (UNGRD, 06:30 cut on 2 Sep), up from 3,018 affected at the 1 Sep 06:30 cut (rescued unchanged), against 768 affected and 496 rescued at the 16 Aug 18:30 cut.",
-      "value_ja": "全国で動物3,023頭が被災、2,976頭を救出（UNGRD、9月2日06:30締め）。9月1日06:30締めの被災3,018頭から増加（救出は横ばい）。8月16日18:30締めは被災768頭・救出496頭。",
-      "source_en": "UNGRD, 2 Sep 06:30",
-      "source_ja": "UNGRD（9月2日06:30）",
+      "value_en": "3,023 animals affected and 2,976 rescued nationally (UNGRD, 06:30 cut on 3 Sep), unchanged from the 2 Sep 06:30 cut, against 768 affected and 496 rescued at the 16 Aug 18:30 cut.",
+      "value_ja": "全国で動物3,023頭が被災、2,976頭を救出（UNGRD、9月3日06:30締め）。9月2日06:30締めから横ばい。8月16日18:30締めは被災768頭・救出496頭。",
+      "source_en": "UNGRD, 3 Sep 06:30",
+      "source_ja": "UNGRD（9月3日06:30）",
       "tier": "official",
-      "url": "https://x.com/UNGRD/status/2095167808891961347"
+      "url": "https://x.com/UNGRD/status/2095511717660721508"
     },
     {
       "item_en": "Displacement",
@@ -1961,6 +1968,27 @@
       "url": "https://reliefweb.int/report/colombia/informe-de-monitoreo-de-proteccion-trimestral-de-drc-colombia-abril-junio-2026",
       "tier": "media",
       "_note": "ラグアヒラ・ナリーニョ・ノルテデサンタンデル県の一般保護状況に関する四半期報告（対象は地震前の期間）。地震の数値・機構に関係なし。"
+    },
+    {
+      "label_en": "IOM Colombia Earthquake Situation Report #7 (31 Aug 2026)",
+      "label_ja": "IOM コロンビア地震状況報告第7号（8月31日）",
+      "url": "https://reliefweb.int/report/colombia/colombia-earthquake-situation-report-7-31-aug-2026",
+      "tier": "official",
+      "_note": "本文はUNGRDの8月31日09:30集計（死者331・負傷4,505等）を引用しており、当レポートが既に反映済みの9月2日以降のUNGRD値より古い。優先度別ニーズや国内対応（住宅再建予算等）の記述を確認したが、数値・機構の更新は無し。"
+    },
+    {
+      "label_en": "IOM Colombia Earthquake Situation Report #7 (Spanish, 31 Aug 2026)",
+      "label_ja": "IOM コロンビア地震状況報告第7号（スペイン語版、8月31日）",
+      "url": "https://reliefweb.int/report/colombia/respuesta-al-terremoto-en-colombia-reporte-de-situacion-7-31-agosto-2026",
+      "tier": "official",
+      "_note": "上記英語版と同一内容のスペイン語版。"
+    },
+    {
+      "label_en": "AMDA Emergency Relief #2: Earthquake in Colombia (3 Sep 2026)",
+      "label_ja": "AMDA緊急救援活動報告#2（コロンビア地震、9月3日）",
+      "url": "https://reliefweb.int/report/colombia/amda-emergency-relief-2-earthquake-colombia-3-september-2026",
+      "tier": "media",
+      "_note": "AMDA（アジア医師連絡協議会）看護師のカリでの医療支援活動記録。数値・機構の更新なし。"
     }
   ],
   "source_policy_en": "Source hierarchy: official > media > TBC. Government and scientific-agency figures are used as primary; media reports are used only where official figures are not yet published and are labelled as such. Items still being verified are marked TBC. Preliminary figures are never replaced by larger unverified numbers.",

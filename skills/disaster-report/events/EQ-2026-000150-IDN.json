@@ -21,8 +21,8 @@
     "jma_name_en": "",
     "edition": "",
     "prepared_by": "Asian Disaster Reduction Center (ADRC)",
-    "stamp": "2026-09-03 07:41 JST",
-    "update_date": "03/09/2026",
+    "stamp": "2026-09-04 07:44 JST",
+    "update_date": "04/09/2026",
     "timeline_range_en": "15-31 August 2026 (Western Indonesian Time, UTC+7)",
     "timeline_range_ja": "2026年8月15日〜31日（西部インドネシア時間 WIB、UTC+7）",
     "disseminate_en": "",
@@ -765,6 +765,13 @@
       "label_ja": "Gender Alert #1：フローレス地震における女性・女児の保護ニーズ（9月2日）",
       "url": "https://reliefweb.int/report/indonesia/gender-alert-1-critical-protection-needs-women-and-girls-following-flores-earthquake-indonesia",
       "tier": "official"
+    },
+    {
+      "label_en": "Gender Alert #1 - Anticipating the impact of El Niño 2026 (Indonesia, national)",
+      "label_ja": "Gender Alert #1：2026年エルニーニョの影響見通し（インドネシア、全国）",
+      "url": "https://reliefweb.int/report/indonesia/gender-alert-1-anticipating-impact-el-nino-2026-women-girls-and-vulnerable-groups-indonesia",
+      "tier": "media",
+      "_note": "エルニーニョ（干ばつ・食料不安等）に関する全国的なジェンダー分析。フローレス地震とは無関係。数値・機構の更新なし。"
     }
   ],
   "attribution_en": "Figures reported by BNPB and relayed by IFRC/PMI and humanitarian partners; source and cut-off shown per row. All provisional.",

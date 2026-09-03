@@ -19,14 +19,14 @@
     "title_ja": "2026年 ボテコシ川 土石流・鉄砲水（ネパール）",
     "subtitle_en": "Rasuwa, Nuwakot and Dhading Districts - 26 August 2026",
     "subtitle_ja": "ラスワ郡・ヌワコット郡・ダディン郡、2026年8月26日",
-    "edition_en": "8th report",
-    "edition_ja": "第8報",
+    "edition_en": "9th report",
+    "edition_ja": "第9報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
-    "stamp": "2026-09-03 07:41 JST",
-    "update_date": "03/09/2026",
-    "timeline_range_en": "25 August - 1 September 2026 (Nepal Standard Time, UTC+5:45)",
-    "timeline_range_ja": "2026年8月25日〜9月1日（ネパール標準時 UTC+5:45）",
+    "stamp": "2026-09-04 07:44 JST",
+    "update_date": "04/09/2026",
+    "timeline_range_en": "25 August - 3 September 2026 (Nepal Standard Time, UTC+5:45)",
+    "timeline_range_ja": "2026年8月25日〜9月3日（ネパール標準時 UTC+5:45）",
     "tz_note_en": "All times are Nepal Standard Time (NPT, UTC+5:45) unless stated.",
     "tz_note_ja": "時刻は特記なき限りネパール標準時（NPT、UTC+5:45）。",
     "optional_slides": [],
@@ -495,6 +495,13 @@
       "src": "NDRRMA",
       "en": "NDRRMA Situation Report #11: 1,050 deaths (by district: Chitwan 321, Nawalparasi East 216, Nawalparasi West 170, Nuwakot 142, Gorkha 65, Dhading 57, Tanahu 38, Rasuwa 41), 3,916 out of contact (unchanged from the day's earlier cuts) and 292 treated for injuries across 16 health facilities (182 discharged, 74 under treatment, 33 referred, 3 died during treatment). 11,993 people rescued to date, including 4,364 by helicopter. 21,314 security personnel mobilised. The Prithvi Highway remains blocked at the Krishnabhir/Parewabhir section (Malekhu-Muglin) by continuing toe-cutting erosion of the road embankment; an alternative route is being sought. Nearly all cell towers in the affected corridor are back in service (Nepal Telecom: all 110 damaged towers restored; Ncell: 75 of 78). Power has been restored via a separate line from the Sanjen hydropower plant to most of Aamachhodingmo Rural Municipality, Rasuwa. Unidentified bodies are being held at 21 hospitals across districts pending identification.",
       "ja": "NDRRMA状況報告第11号。死者1,050人（郡別：チトワン321、ナワルパラシ東216、ナワルパラシ西170、ヌワコット142、ゴルカ65、ダディン57、タナフ38、ラスワ41）、連絡不通3,916人（同日のこれまでの締めから横ばい）、16の医療施設で計292人を負傷治療（退院182、治療継続74、転送33、治療中死亡3）。これまでの救助者数は11,993人、うちヘリコプター救助4,364人。治安要員21,314人を動員。プリトビ・ハイウェイはムグリン〜マレクー間のクリシュナビール／パレワビール地区で、道路盛土の侵食（トー・カッティング）が継続し依然通行止め、迂回路を模索中。被災回廊内の携帯電話基地局はほぼ復旧（ネパール・テレコムは被害110基地局すべて復旧、エヌセルは78基地局中75基地局復旧）。ラスワ郡アマチョディンモ村の大部分で、サンジェン水力発電所からの別系統により電力が復旧。身元不明の遺体は各郡の病院21か所で保管され、身元確認を継続中。"
+    },
+    {
+      "time": "3 Sep",
+      "tier": "official",
+      "src": "Government of Japan",
+      "en": "The Government of Japan decided to dispatch a Japan Disaster Relief (JDR) expert team to support identification of the deceased, in response to a request from the Government of Nepal. No new NDRRMA situation report (beyond #11, 1 Sep 18:00) had been published as of this update; NDRRMA's official casualty figures are unchanged.",
+      "ja": "日本政府は、ネパール政府からの要請を受け、身元確認（遺体の識別）支援のため国際緊急援助隊（JDR）専門家チームの派遣を決定した。本更新時点でNDRRMAの新しい状況報告（第11号・9月1日18:00より後のもの）は公表されておらず、NDRRMAの公式な死傷者数は横ばいである。"
     }
   ],
   "response_measures": [
@@ -554,6 +561,14 @@
       "en": "Korea Disaster Relief Team (KDRT), 44 members from the Ministry of Foreign Affairs, KOICA and the National Fire Agency, departing 1 September by military transport aircraft for search and rescue support; USD 1 million in humanitarian assistance through international organizations announced on 27 August.",
       "ja": "韓国災害救助隊（KDRT）44人（外務省・KOICA・消防庁ほか）を9月1日に軍輸送機で派遣し、捜索・救助を支援。8月27日には国際機関を通じた100万米ドルの人道支援を表明。",
       "url": "https://reliefweb.int/report/nepal/dispatch-korea-disaster-relief-team-kdrt-response-flood-damage-nepal"
+    },
+    {
+      "org_en": "Japan",
+      "org_ja": "日本",
+      "tier": "official",
+      "en": "The Government of Japan decided on 3 September to dispatch a Japan Disaster Relief (JDR) expert team to support identification (of the deceased), in response to a request from the Government of Nepal.",
+      "ja": "日本政府は9月3日、ネパール政府からの要請を受け、身元確認（遺体の識別）支援のため国際緊急援助隊（JDR）専門家チームの派遣を決定した。",
+      "url": "https://reliefweb.int/report/nepal/dispatch-japan-disaster-relief-jdr-expert-team-response-flash-flood-nepal"
     }
   ],
   "satellite": [
@@ -788,6 +803,29 @@
       "url": "https://reliefweb.int/report/nepal/nepal-flood-2026-dref-operation-mdrnp022",
       "en": "IFRC - Nepal Flood 2026, DREF Operation (MDRNP022), 1 September 2026",
       "ja": "IFRC「ネパール洪水2026」DREFオペレーション（MDRNP022）、9月1日"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/dispatch-japan-disaster-relief-jdr-expert-team-response-flash-flood-nepal",
+      "en": "Government of Japan - Dispatch of the JDR Expert Team in Response to the Flash Flood in Nepal, 3 September 2026",
+      "ja": "日本政府「洪水被害に対応する国際緊急援助隊（JDR）専門家チームの派遣について」、9月3日"
+    },
+    {
+      "url": "https://reliefweb.int/map/nepal/nepal-flash-floods-26th-august-2026-flood-extent-affected-districts-dhading-nuwakot-and-rasuwa-03092026",
+      "en": "MapAction - Flood Extent in Affected Districts: Dhading, Nuwakot and Rasuwa (03/09/2026)",
+      "ja": "MapAction「被災郡（ダディン・ヌワコット・ラスワ）の浸水範囲」地図（9月3日版）",
+      "_note": "地図のみで新規の数値・機構情報なし。確認済み。"
+    },
+    {
+      "url": "https://reliefweb.int/map/nepal/nepal-flash-floods-26th-august-2026-reference-map-nuwakot-district-03092026",
+      "en": "MapAction - Reference Map of Nuwakot District (03/09/2026)",
+      "ja": "MapAction「ヌワコット郡基図」（9月3日版）",
+      "_note": "地図のみで新規の数値・機構情報なし。確認済み。"
+    },
+    {
+      "url": "https://reliefweb.int/map/nepal/nepal-flash-floods-26th-august-2026-reference-map-rasuwa-district-03092026",
+      "en": "MapAction - Reference Map of Rasuwa District (03/09/2026)",
+      "ja": "MapAction「ラスワ郡基図」（9月3日版）",
+      "_note": "地図のみで新規の数値・機構情報なし。確認済み。"
     }
   ],
   "images": {
