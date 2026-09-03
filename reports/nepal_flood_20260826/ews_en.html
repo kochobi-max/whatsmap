@@ -224,7 +224,7 @@ td.tm{font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:600;color:v
 .ncr{font-size:8.4px;line-height:1.4;color:var(--ink-2)}
 .ncr b{color:var(--ink)} .ncr span{color:var(--muted);margin-left:5px}
 .pd{font-size:8.6px;color:var(--ink-2);line-height:1.45;margin-bottom:3px}
-.ph2{margin:5px 0 1px}
+.ph2{margin:3px 0 1px}
 .lat td{padding:1.5px 5px}
 .lat{font-size:9.2px}
 .kv{gap:3px 8px}
@@ -237,17 +237,17 @@ td.tm{font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:600;color:v
 .hd .st{font-size:10px;margin-top:1px}
 .note{font-size:8.6px;line-height:1.48}
 .pb{padding:8px 10px}
-.kv dd{font-size:9.4px;line-height:1.42}
+.kv dd{font-size:9.2px;line-height:1.38}
 .hd .cl{font-size:12px;padding:6px 13px}
 /* English typesetting: Latin sets wider than Japanese at the same nominal size */
 .cx{padding:3px 7px;margin-bottom:2px}
 .cx h4{font-size:9.3px;line-height:1.28}
 .cx p{font-size:8.15px;line-height:1.36}
-.kv dd small{font-size:8.05px;line-height:1.34}
-.pd{font-size:7.9px;line-height:1.32;margin-bottom:1px}
-.ph2 b{font-size:9.7px}
+.kv dd small{font-size:7.85px;line-height:1.3}
+.pd{font-size:7.5px;line-height:1.28;margin-bottom:0}
+.ph2 b{font-size:9.5px}
 .gs{font-size:7.05px;line-height:1.28}
-.note{font-size:8.2px;line-height:1.4}
+.note{font-size:8px;line-height:1.36;margin-top:3px;padding-top:3px}
 .lg{font-size:7.6px;gap:2px 7px}
 .ms .b{font-size:8px;line-height:1.4}
 .flab{margin-bottom:2px}
@@ -262,7 +262,7 @@ td.tm{font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:600;color:v
   <div>
     <h1>Integrated Himalayan EWS &mdash; System Architecture</h1>
     <div class="st">Binding monsoon flooding &amp; landslides / ice&ndash;rock avalanche / GLOF / major earthquake onto the two systems Nepal already runs (working draft)</div>
-    <div class="meta">Drafted 2026-08-30 &middot; Revised 2026-08-31 &middot; Based on analysis of the 26 August 2026 Bhote Koshi&ndash;Trishuli flood &middot; Not an official position</div>
+    <div class="meta">Drafted 2026-08-30 &middot; Revised 2026-09-03 &middot; Based on analysis of the 26 August 2026 Bhote Koshi&ndash;Trishuli flood &middot; Not an official position</div>
   </div>
   <div class="cl">Do not build from zero. Connect the two<br>systems that exist; add only the missing<br>detection paths.</div>
 </header>
@@ -302,7 +302,7 @@ td.tm{font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:600;color:v
         <thead><tr><th>Hazard</th><th>Detection path</th><th>Status</th></tr></thead>
         <tbody>
           <tr><td>Monsoon flooding &amp; landslides<small>Cumulatively the largest killer of all</small></td><td><b>R</b> rainfall threshold + soil water index</td><td class="k">existing<br>operating</td></tr>
-          <tr><td>Ice&ndash;rock avalanche / rock collapse<small>This event = Langtang Lirung N face / 2015 Langtang</small></td><td><b>D1</b> single-force source<br><span class="mono">alert in 60&ndash;120 s</span></td><td class="n">new</td></tr>
+          <tr><td>Ice&ndash;rock avalanche / rock collapse<small>This event = Langtang Lirung N face, bedrock and all / 2015 Langtang</small></td><td><b>D1</b> single-force source<br><span class="mono">alert in 60&ndash;120 s</span></td><td class="n">new</td></tr>
           <tr><td>GLOF / landslide-dam breach<small>This event&rsquo;s initial mechanism + the barrier lake of 28 Aug</small></td><td><b>D2</b> fluvial tremor (1&ndash;10 Hz)</td><td class="n">new</td></tr>
           <tr><td>Loss of the instruments themselves<small>Upstream gauges went silent together after 08:40; the 30 Aug rise was noticed by ear</small></td><td><b>D3</b> missing data = alarm</td><td class="n">new</td></tr>
           <tr class="hl"><td>Widespread coseismic slope failure<small>25,000 landslides in Gorkha 2015</small></td><td><b>State modifier</b><br>lowers every trigger threshold</td><td class="n">new</td></tr>
@@ -345,12 +345,12 @@ td.tm{font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:600;color:v
             <rect x="897.3333333333334" y="11.5" width="12" height="11.5" fill="var(--c-predict)"/>
             <text x="903.3333333333334" y="20.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">N</text>
             <text x="914.3333333333334" y="20.5" font-size="9.6" font-weight="700" fill="var(--ink)">InSAR screening of unstable slopes</text>
-            <text x="898.3333333333334" y="31.5" font-size="8" fill="var(--ink-2)">Langtang Lirung also failed in 2015</text>
+            <text x="898.3333333333334" y="31.5" font-size="8" fill="var(--ink-2)">thawing permafrost loses the ice that binds the rock</text>
             <rect x="1217.2962962962963" y="8" width="282.70370370370375" height="26" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.6"/>
             <rect x="1222.2962962962963" y="11.5" width="12" height="11.5" fill="var(--c-detect)"/>
             <text x="1228.2962962962963" y="20.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">M</text>
-            <text x="1239.2962962962963" y="20.5" font-size="9.6" font-weight="700" fill="var(--ink)">Exposure mapping</text>
-            <text x="1223.2962962962963" y="31.5" font-size="8" fill="var(--ink-2)">settlements, roads, hydropower adits, trekking routes</text>
+            <text x="1239.2962962962963" y="20.5" font-size="9.6" font-weight="700" fill="var(--ink)">Screening for source slopes</text>
+            <text x="1223.2962962962963" y="31.5" font-size="8" fill="var(--ink-2)">&gt;30&deg;, above 3,000 m, permafrost, near a large river</text>
 
           <rect x="0" y="46" width="110" height="68" fill="var(--panel)" stroke="var(--line)"/>
           <text x="9" y="60" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="9.4" font-weight="700" fill="var(--c-detect)">L1</text>
@@ -510,7 +510,7 @@ td.tm{font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:600;color:v
             <rect x="1029.2558139534885" y="322.5" width="12" height="11.5" fill="var(--c-predict)"/>
             <text x="1035.2558139534885" y="331.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">N</text>
             <text x="1046.2558139534885" y="331.5" font-size="9.6" font-weight="700" fill="var(--ink)">Underground works alarm</text>
-            <text x="1030.2558139534885" y="342.5" font-size="8" fill="var(--ink-2)">matches the 933 missing tunnel workers</text>
+            <text x="1030.2558139534885" y="342.5" font-size="8" fill="var(--ink-2)">some 500 were left inside tunnels</text>
             <rect x="1275.9627906976746" y="319" width="224.0372093023256" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
             <rect x="1280.9627906976746" y="322.5" width="12" height="11.5" fill="var(--c-predict)"/>
             <text x="1286.9627906976746" y="331.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">N</text>
@@ -531,14 +531,14 @@ td.tm{font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:600;color:v
     <div class="pb">
       <div class="grow">
         <div class="ph2"><em class="g">Phase 0</em><b>Retrospective analysis of existing archives</b><span>0&ndash;6 months &middot; &lt; USD 0.35 M &middot; no hardware</span></div>
-        <p class="pd">Go back through the recorded waveforms of ~40 stations and find the collapses that already happened. <b>Threshold values, and how often a false alarm would fire, come straight out of the real data.</b></p>
+        <p class="pd">Go back through ~40 stations&rsquo; recorded waveforms and find the collapses that already happened. <b>Threshold values, and how often a false alarm would fire, come straight out of the data.</b></p>
         <div class="ph2"><em>Phase 1</em><b>Trial running (no warnings issued)</b><span>6&ndash;18 months &middot; &lt; USD 0.7 M</span></div>
-        <p class="pd">Run the detection alongside the existing processing chain. Issue no warnings, and <b>measure only how often it would have fired in error.</b></p>
+        <p class="pd">Run the detection alongside the existing chain. Issue no warnings, and <b>measure only how often it would have fired in error.</b></p>
         <div class="ph2"><em>Phase 2</em><b>Pilot deployment</b><span>18&ndash;30 months &middot; USD 1.4&ndash;2.8 M</span></div>
         <p class="pd">Fill station gaps in the Bhote Koshi&ndash;Trishuli; add infrasound and riverbank tremor sites. Automatic sirens within 20 km upstream; arrival-time prediction downstream.</p>
         <div class="ph2"><em>Phase 3</em><b>Roll out to other basins &middot; transboundary integration</b><span>USD 1.4&ndash;2.1 M per basin</span></div>
       </div>
-      <p class="note"><b>If Phase 0 shows events cannot be caught with adequate margin, nothing further should be funded.</b> It costs almost nothing and governs a multi-million-dollar decision. This event&rsquo;s two records are the first material to test it against.</p>
+      <p class="note"><b>If Phase 0 shows events cannot be caught with adequate margin, nothing further should be funded.</b> It costs almost nothing and governs a multi-million-dollar decision. Of 60 large Himalayan rock&ndash;ice avalanches, <b>about half cascaded, killing ~10&times; as many</b> (Zhong et al. 2025). The cascade is what this is for.</p>
     </div>
   </section>
 
@@ -547,8 +547,8 @@ td.tm{font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:600;color:v
     <div class="pb">
       <dl class="kv">
         <dt class="n">1</dt><dd><b>Assign the mandate</b><small>Widen DHM&rsquo;s flood-warning remit to accept non-hydrological triggers, or stand up a joint DMG&ndash;DHM&ndash;NDRRMA cell. <b>Without it, detection has no route to a warning.</b></small></dd>
-        <dt class="n">2</dt><dd><b>Agree the false-alarm budget before go-live</b><small>Settle a line with communities &mdash; &ldquo;three false alarms a year are acceptable if no river-threatening event is missed&rdquo; &mdash; and rehearse it in drills. <b>A system whose first false alarm comes as a surprise is switched off within a year.</b> A political decision, not a technical one</small></dd>
-        <dt class="n">3</dt><dd><b>Transboundary</b><small>The source sits on the Tibetan side, but <b>seismic waves cross borders</b>. Stations inside Nepal can detect it, so the system works without waiting for a data-sharing agreement &mdash; the political strength of this design</small></dd>
+        <dt class="n">2</dt><dd><b>Agree the false-alarm budget before go-live</b><small>Settle a line with communities &mdash; &ldquo;three false alarms a year are acceptable if no river-threatening event is missed&rdquo; &mdash; and rehearse it. <b>A system whose first false alarm comes as a surprise is switched off within a year.</b> A political decision, not a technical one</small></dd>
+        <dt class="n">3</dt><dd><b>Transboundary</b><small>This source was <b>inside Nepal</b>, outside China&rsquo;s warning system: Nepal must detect it itself. Seismic waves also cross borders, so a Tibetan-side source is caught by stations in Nepal without waiting for a data-sharing agreement &mdash; the political strength of this design</small></dd>
       </dl>
       <p class="note"><b>Reference design:</b> the Illgraben debris-flow warning system in Switzerland has run <b>fully automatically since 2007</b>, with no human between check-dam geophones and the alarm. &ldquo;Wire the sensor straight to the siren&rdquo; has worked in the field for nearly two decades.</p>
     </div>
@@ -558,7 +558,7 @@ td.tm{font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:600;color:v
     <div class="ph"><span class="no">7</span><svg class="ico" style="color:var(--alert)"><use href="#i-no"/></svg><h2>Outside the scope</h2></div>
     <div class="pb">
       <div class="cx"><svg class="ico"><use href="#i-mtn"/></svg><div><h4>It does not predict. It begins once the mountain moves</h4>
-        <p>The 2.5-hour precursor at Chamoli in 2021 was found afterwards, by going back through the records. Important as research, but <b>it cannot be a design assumption.</b></p></div></div>
+        <p>The 2.5-hour precursor at Chamoli in 2021, and the ground-temperature anomaly reported two days before this event, were both found afterwards. Important as research, but <b>not a design assumption.</b></p></div></div>
       <div class="cx"><svg class="ico"><use href="#i-wave"/></svg><div><h4>The size of the shaking is not the discharge</h4>
         <p>Shaking is a guide to how much sediment is moving, and it has to be tuned per site. A small GLOF can hide inside a monsoon rise; what tells them apart is <b>how fast it grows and the shape of the frequencies</b>.</p></div></div>
       <div class="cx"><svg class="ico"><use href="#i-gap"/></svg><div><h4>Small events go unseen</h4>
