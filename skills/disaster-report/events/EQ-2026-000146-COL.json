@@ -19,15 +19,15 @@
     "title_ja": "2026年 チョコ地震（コロンビア）",
     "subtitle_en": "M7.4, San José del Palmar, Chocó Department - 10 August 2026",
     "subtitle_ja": "M7.4、チョコ県サンホセ・デル・パルマル、2026年8月10日",
-    "edition_en": "16th report",
-    "edition_ja": "第16報",
+    "edition_en": "17th report",
+    "edition_ja": "第17報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
     "as_of_en": "Figures as of the UNGRD balance with a 06:30 COT cut-off on 3 Sep 2026: 331 deaths, 4,519 injured, 364 rescued alive (all unchanged from 2 Sep) and 122 missing across 498 municipalities in 16 departments (up from 497 on 2 Sep). The missing count fell from 136 at the 2 Sep 06:30 cut; UNGRD gives no explanation for the decrease, and as with earlier revisions (e.g. the destroyed-housing count on 2 Sep) this report treats it as reconciliation of reports filed, resolved and de-duplicated during ongoing consolidation rather than new information about casualties. Housing: 201,010 homes damaged (up from 201,005) and 36,336 destroyed (unchanged), plus 5,889 buildings damaged and 709 collapsed (both unchanged). UNGRD again describes the figures as preliminary and still being consolidated by territorial entities and operational agencies. All figures are preliminary; quote the cut-off with the number.",
     "as_of_ja": "数値は2026年9月3日06:30（コロンビア時間）締めのUNGRD集計現在。16県・498市町村（9月2日の497から増加）で死者331人、負傷4,519人、生存救出364人（いずれも9月2日から横ばい）、行方不明122人。行方不明は9月2日06:30締めの136人から減少した。UNGRDは理由を説明していないが、これまでの改定（9月2日の全壊棟数など）と同様、集計継続中の届出・解消・重複整理によるものとして扱い、死傷者に関する新しい情報の反映とは記載しない。住家は損壊201,010棟（201,005棟から増加）・全壊36,336棟（横ばい）、ほかに建物損壊5,889棟・倒壊709棟（いずれも横ばい）。UNGRDは引き続き、数値は速報値であり地方団体・実施機関による集計が継続中としている。すべて速報値。引用の際は集計時点を併記されたい。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-09-04 07:44 JST",
+    "stamp": "2026-09-04 09:30 JST",
     "update_date": "04/09/2026",
     "optional_slides": [
       "prior_event",
@@ -495,7 +495,8 @@
       "time": "1 Sep 06:30",
       "tier": "official",
       "src": "UNGRD",
-      "en": "UNGRD balance with a 06:30 cut-off: 331 dead (unchanged), 4,519 injured, 136 missing (unchanged) and 364 rescued (unchanged); 290,252 families (466,606 people) affected across 497 municipalities in 16 departments. Housing: 200,929 homes damaged and 37,542 destroyed, plus 5,871 buildings damaged and 651 collapsed. Infrastructure: 400 health, 4,290 educational and 5,698 community facilities; 468 roads, 5 airports, 140 aqueducts, 91 road bridges and 13 footbridges affected. 3,018 animals affected and 2,976 rescued (unchanged). UNGRD again describes the figures as preliminary and still being consolidated by territorial entities and operational agencies."
+      "en": "UNGRD balance with a 06:30 cut-off: 331 dead (unchanged), 4,519 injured, 136 missing (unchanged) and 364 rescued (unchanged); 290,252 families (466,606 people) affected across 497 municipalities in 16 departments. Housing: 200,929 homes damaged and 37,542 destroyed, plus 5,871 buildings damaged and 651 collapsed. Infrastructure: 400 health, 4,290 educational and 5,698 community facilities; 468 roads, 5 airports, 140 aqueducts, 91 road bridges and 13 footbridges affected. 3,018 animals affected and 2,976 rescued (unchanged). UNGRD again describes the figures as preliminary and still being consolidated by territorial entities and operational agencies.",
+      "ja": "06:30締めのUNGRD集計。死者331人（横ばい）、負傷4,519人、行方不明136人（横ばい）、生存救出364人（横ばい）。16県・497市町村で被災290,252世帯・466,606人。住家は損壊200,929棟・全壊37,542棟、ほか建物損壊5,871棟・倒壊651棟。医療400、教育4,290、コミュニティ5,698か所。道路468路線、空港5か所、上水道140系統、道路橋91橋、歩道橋13橋が被害。動物3,018頭が被災、2,976頭を救出（横ばい）。UNGRDは引き続き、数値は速報値であり地方団体・実施機関による集計が継続中としている。"
     },
     {
       "time": "2 Sep 06:30",
@@ -517,6 +518,20 @@
       "src": "UNGRD",
       "en": "UNGRD balance with a 06:30 cut-off: 331 dead, 4,519 injured and 364 rescued (all unchanged from 2 Sep); missing fell to 122 from 136 at the 2 Sep cut, with no explanation given; 293,743 families (466,606 people, unchanged) affected across 498 municipalities in 16 departments (up from 497). Housing: 201,010 homes damaged (up from 201,005) and 36,336 destroyed (unchanged), plus 5,889 buildings damaged and 709 collapsed (both unchanged). Infrastructure: 400 health, 4,292 educational (up from 4,287) and 5,600 community facilities; 468 roads, 5 airports, 140 aqueducts, 91 road bridges and 13 footbridges affected (all unchanged). 3,023 animals affected and 2,976 rescued (unchanged). UNGRD again describes the figures as preliminary and still being consolidated by territorial entities and operational agencies.",
       "ja": "06:30締めのUNGRD集計。死者331人、負傷4,519人、生存救出364人（いずれも9月2日から横ばい）。行方不明は9月2日締めの136人から122人へ減少し、理由は示されていない。16県・498市町村（497から増加）で被災293,743世帯・466,606人（横ばい）。住家は損壊201,010棟（201,005棟から増加）・全壊36,336棟（横ばい）、ほか建物損壊5,889棟・倒壊709棟（いずれも横ばい）。医療400、教育4,292（4,287から増加）、コミュニティ5,600か所。道路468路線、空港5か所、上水道140系統、道路橋91橋、歩道橋13橋が被害（いずれも横ばい）。動物3,023頭が被災、2,976頭を救出（横ばい）。UNGRDは引き続き、数値は速報値であり地方団体・実施機関による集計が継続中としている。"
+    },
+    {
+      "time": "2 Sep 19:02",
+      "tier": "official",
+      "src": "UNGRD (official X)",
+      "en": "UNGRD announced a temporary economic subsidy of COP 787,907-1,050,543 per month for three months for RUD-registered families whose homes were destroyed or declared uninhabitable.",
+      "ja": "UNGRDが、RUDに登録され住宅が全壊または居住不能と判定された世帯を対象に、月額78万7,907〜105万543コロンビアペソを3か月間支給する一時的な経済支援を発表した。"
+    },
+    {
+      "time": "4 Sep",
+      "tier": "official",
+      "src": "UNGRD / WFP (official X)",
+      "en": "As of this update, UNGRD's most recent published balance remained the 3 Sep 06:30 cut-off (no new balance had posted as of mid-afternoon on 4 Sep); UNGRD's director met WFP Colombia's country director to coordinate food-assistance actions for affected families.",
+      "ja": "本更新時点で、UNGRDが公表した最新の集計は9月3日06:30締めのままである（9月4日午後時点で新しい集計の投稿は無い）。UNGRD長官はWFPコロンビアのカントリーディレクターと会談し、被災世帯への食料支援策を協議した。"
     }
   ],
   "areas": [
@@ -1000,6 +1015,12 @@
       "tier": "official",
       "en": "Relief measures announced during the tour: three months of relief on public-utility bills for households registered as affected, a rent subsidy for those who lost their homes, a census and characterisation of damaged housing ahead of repairs, and a shock plan for education and housing. On the evening of 12 August the President announced the declaration of an economic emergency, a constitutional mechanism intended to speed up the response.",
       "ja": "巡回中に発表された救済措置：被災世帯として登録された者に対する公共料金の3か月間の減免、住宅を失った者への家賃補助、修復に先立つ住宅被害の悉皆調査と類型化、教育・住宅の緊急対策。8月12日夕方、大統領は経済緊急事態の宣言を発表した。対応を迅速化するための憲法上の仕組みである。"
+    },
+    {
+      "tier": "official",
+      "source": "UNGRD, 2 Sep",
+      "en": "UNGRD activated a temporary economic subsidy, announced 2 September, for families registered in the Single Registry of Victims (RUD) whose homes were destroyed or declared uninhabitable by the 10 August earthquake: a monthly payment of between COP 787,907 and COP 1,050,543 (depending on the municipality's category) for three months. UNGRD stresses that only municipal and departmental authorities may register households in the RUD; affected people cannot register directly, and any correction must go through the relevant territorial entity.",
+      "ja": "UNGRDは9月2日、単一被災者登録簿（RUD）に登録され、8月10日の地震により住宅が全壊または居住不能と判定された世帯を対象に、一時的な経済支援を発表した。市町村の区分に応じて月額78万7,907〜105万543コロンビアペソを3か月間支給する。UNGRDは、RUDへの登録は市町村・県当局の責任で行うものであり被災者本人が直接登録することはできず、訂正が必要な場合も管轄の地方自治体を通す必要があると注意喚起している。"
     }
   ],
   "support_international": [
@@ -1080,6 +1101,12 @@
       "en": "International NGOs mobilising: Direct Relief and Americares (medical supplies), Save the Children (child protection and education), International Rescue Committee (assessment near the epicentre in Chocó), Convoy of Hope (relief goods).",
       "ja": "国際NGOが対応を開始：ダイレクト・リリーフとアメリケアズ（医療物資）、セーブ・ザ・チルドレン（子どもの保護・教育）、国際救援委員会（チョコ県の震央付近で調査）、コンボイ・オブ・ホープ（救援物資）。",
       "source": "NGO announcements"
+    },
+    {
+      "tier": "official",
+      "source": "UNGRD via official social media, 4 Sep",
+      "en": "UNGRD director David Santiago Tamayo Roldan and deputy director for disaster management Hernan Dario Diaz Diaz met with Nils Grede, WFP Colombia's representative and country director, to coordinate food-assistance actions for families affected by the 10 August earthquake.",
+      "ja": "UNGRD長官デビッド・サンティアゴ・タマヨ・ロルダン氏と災害対応担当副長官エルナン・ダリオ・ディアス・ディアス氏は、WFPコロンビア代表兼カントリーディレクターのニルス・グレデ氏と会談し、8月10日の地震で被災した世帯への食料支援策を協議した。"
     }
   ],
   "satellite": [
@@ -1989,6 +2016,13 @@
       "url": "https://reliefweb.int/report/colombia/amda-emergency-relief-2-earthquake-colombia-3-september-2026",
       "tier": "media",
       "_note": "AMDA（アジア医師連絡協議会）看護師のカリでの医療支援活動記録。数値・機構の更新なし。"
+    },
+    {
+      "label_en": "3iS - Manizales, Colombia: Barrios afectados (affected neighbourhoods) map, 10 August 2026 earthquake (03/09/2026)",
+      "label_ja": "3iS「マニサレス市 被災地区マップ」（8月10日地震、9月3日版）",
+      "url": "https://reliefweb.int/map/colombia/manizales-colombia-barrios-afectados-terremoto-10-de-agosto-2026-03092026",
+      "tier": "media",
+      "_note": "UNOSAT/UNITARの既存被害点データを地図化したもの。新規の数値・機構情報なし。確認済み。"
     }
   ],
   "source_policy_en": "Source hierarchy: official > media > TBC. Government and scientific-agency figures are used as primary; media reports are used only where official figures are not yet published and are labelled as such. Items still being verified are marked TBC. Preliminary figures are never replaced by larger unverified numbers.",
