@@ -1,0 +1,1141 @@
+{
+  "_comment": "2026年8月15日 インドネシア・東ヌサトゥンガラ州（フローレス島沖）地震（M7.7）。骨格のみ。被害数値・時系列・出典は disaster-report SKILL.md §1 に従い、BNPB / BMKG を一次情報源として毎回の実行で埋める。ここに推定値を書き込まないこと。ADRC加盟国であり、BRIN要請の Sentinel Asia EO（SA-00656）と国際災害チャーターが展開している。",
+  "meta": {
+    "status": "active",
+    "glide": "EQ-2026-000150-IDN",
+    "iso3": "IDN",
+    "filebase": "ADRC_EQ_IDN_NTT_20260815",
+    "sources_profile": "references/sources/IDN.md",
+    "primary_official_source": "BNPB (Badan Nasional Penanggulangan Bencana)",
+    "mail": {
+      "to": [
+        "kenkyubu@adrc.asia",
+        "td-date@adrc.asia"
+      ],
+      "from": "ma-arakida@adrc.asia",
+      "send_at": "07:00 JST のみ"
+    },
+    "onedrive_dir": "C:\\Users\\arakida\\OneDrive - adrc.asia\\LargeScaleDisasters",
+    "title_en": "2026 East Nusa Tenggara Earthquake (Indonesia)",
+    "title_ja": "2026年 東ヌサトゥンガラ地震（インドネシア）",
+    "jma_name_en": "",
+    "edition": "",
+    "prepared_by": "Asian Disaster Reduction Center (ADRC)",
+    "stamp": "2026-09-04 09:35 JST",
+    "update_date": "04/09/2026",
+    "timeline_range_en": "15-31 August 2026 (Western Indonesian Time, UTC+7)",
+    "timeline_range_ja": "2026年8月15日〜31日（西部インドネシア時間 WIB、UTC+7）",
+    "disseminate_en": "",
+    "disseminate_ja": "",
+    "optional_slides": [],
+    "_optional_slides_comment": "日本固有スライドは該当データを持たせないことで自動的に落ちる。衛星観測（Sentinel Asia / 国際災害チャーター）のスライドは satellite[] にデータを入れれば描画される。",
+    "headline": {
+      "deaths": 120,
+      "injured": 1658,
+      "missing": null,
+      "houses_destroyed": 81436,
+      "evacuees": 188673,
+      "tier": "official",
+      "as_of": "2026-08-31 09:00 WIB (BNPB, via AHA Centre ASEAN Weekly Disaster Update Week 35)"
+    },
+    "subtitle_en": "M7.7, offshore Nagekeo Regency, Flores Island, East Nusa Tenggara - 15 August 2026",
+    "subtitle_ja": "M7.7、東ヌサトゥンガラ州フローレス島 ナゲケオ県沖、2026年8月15日",
+    "edition_en": "3rd report",
+    "edition_ja": "第3報",
+    "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
+    "prepared_by_ja": "アジア防災センター（ADRC）",
+    "tz_note_en": "Times follow BNPB's own reporting in WIB (UTC+7) unless stated.",
+    "tz_note_ja": "時刻はBNPBの発表に合わせ、特記なき限り西部インドネシア時間（WIB、UTC+7）。",
+    "chronology_note_en": "Government and agency actions from the earthquake - all official sources.",
+    "chronology_note_ja": "発災からの政府・機関の主要な動き（すべて公的情報）。",
+    "activation_by_en": "requested by ADRC on behalf of BRIN",
+    "activation_by_ja": "要請：BRINに代わってADRC",
+    "chronology_sources": [
+      {
+        "label": "BNPB (via ReliefWeb)",
+        "url": "https://reliefweb.int/disaster/eq-2026-000150-idn"
+      },
+      {
+        "label": "USGS",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkt2"
+      },
+      {
+        "label": "International Charter / Sentinel Asia",
+        "url": "https://disasterscharter.org/activations/earthquake-in-indonesia-activation-1050-"
+      }
+    ],
+    "cover_sources": [
+      {
+        "label": "BMKG",
+        "url": "https://www.bmkg.go.id/"
+      },
+      {
+        "label": "BNPB (via ReliefWeb)",
+        "url": "https://reliefweb.int/disaster/eq-2026-000150-idn"
+      },
+      {
+        "label": "USGS",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkt2"
+      }
+    ],
+    "event_date": "2026-08-15",
+    "video_queries": [
+      "gempa Nusa Tenggara Timur Agustus 2026",
+      "Indonesia East Nusa Tenggara earthquake August 2026"
+    ]
+  },
+  "_prev": {
+    "_comment": "2026-09-03 08:47 JST 送信済み（第3報）。BNPB 8月31日09:00 WIB時点（AHA Centre経由）の値。負傷者数の減少（1,678→1,658）は数値急変ゲートに抵触したため確認メールを送り、荒木田さんが2026-09-03 08:41 JSTに「問題ないので送信して」と承認したことを受けて送信した。翌日の数値急変ゲートの基準。",
+    "deaths": 120,
+    "injured": 1658,
+    "missing": null,
+    "houses_destroyed": 81436,
+    "evacuees": 188673,
+    "tier": "official",
+    "as_of": "2026-08-31 09:00 WIB (BNPB, via AHA Centre ASEAN Weekly Disaster Update Week 35)"
+  },
+  "locator": {
+    "_comment": "表紙の3面図は、荒木田さんが作られた日英併記版 ADRC_EQ_IDN_Flores_20260815_BI.pptx の表紙から引き継いだもの。図中の文字は日英併記で、両言語版で共用できる。",
+    "city_map": {
+      "cLat": -8.31,
+      "cLon": 121.35,
+      "zoom": 8
+    },
+    "steps": [
+      {
+        "key": "locator_world",
+        "label_en": "World",
+        "label_ja": "世界",
+        "cap": "© BMKG / GSHHS"
+      },
+      {
+        "key": "locator_region",
+        "label_en": "Indonesia",
+        "label_ja": "インドネシア",
+        "cap": "© BMKG / GSHHS"
+      },
+      {
+        "key": "locator_flores",
+        "label_en": "Flores, NTT",
+        "label_ja": "フローレス島（東ヌサトゥンガラ州）",
+        "cap": "© BNPB / BMKG"
+      }
+    ]
+  },
+  "event": {
+    "origin_time": "15 August 2026, 04:58:24 WIB (05:58:24 WITA local time on Flores; 14 August 21:58 UTC)",
+    "epicentre_en": "Offshore Nagekeo Regency, about 30 km northeast of Mbay, Flores Island, East Nusa Tenggara",
+    "epicentre_ja": "東ヌサトゥンガラ州フローレス島、ナゲケオ県ンバイの北東約30km沖",
+    "epicentre_short_en": "Flores Sea / Nagekeo",
+    "epicentre_short_ja": "フローレス海・ナゲケオ県沖",
+    "lat": -8.3101,
+    "lon": 121.3517,
+    "magnitude": "M7.7",
+    "mag_usgs": "Mww 7.7",
+    "usgs_name": "us6000tkt2",
+    "depth_km": 10,
+    "depth_display": "10 km (USGS) / 15 km (BMKG)",
+    "mechanism_en": "BMKG placed the epicentre 30 km northeast of Mbay, Nagekeo Regency, at 15 km depth; USGS reported Mww 7.7 at 10 km. The USGS moment tensor solution gives Mww 7.8 at 23.5 km. Maximum estimated shaking is MMI VIII, with 51 felt reports. The source is the Flores Back-Arc Thrust.",
+    "mechanism_ja": "BMKGは震央をナゲケオ県ンバイの北東30km、深さ15kmとし、USGSは Mww7.7・深さ10kmとした。USGSのモーメントテンソル解は Mww7.8・深さ23.5km。推定最大震度はMMI VIII、体感報告51件。発生源はフローレス背弧断層。",
+    "summary_en": "A magnitude 7.7 earthquake struck offshore Nagekeo Regency, East Nusa Tenggara, at 04:58 WIB on 15 August 2026, about 30 km northeast of Mbay on Flores Island. BMKG issued a tsunami warning for several coastal areas and lifted it at 07:31 WIB. Seven regencies were affected: West Manggarai, Manggarai, East Manggarai, Ngada, Nagekeo, Ende and Sikka. BNPB reported 105 deaths, 1,678 injured or ill, 179,037 displaced and 81,436 houses affected as of 26 August; the AHA Centre's ASEAN Weekly Disaster Update subsequently cited BNPB figures of 120 deaths, 1,658 injured and about 188,673 displaced as of 09:00 WIB on 31 August. The toll rose steadily as access improved: 47 deaths on 16 August, 69 on 18 August, 100 on 24 August, 105 on 26 August and 120 on 31 August. ADRC requested both Sentinel Asia and the International Charter on the day of the earthquake on behalf of BRIN.",
+    "summary_ja": "2026年8月15日4時58分（WIB）、東ヌサトゥンガラ州ナゲケオ県沖でM7.7の地震が発生した。震央はフローレス島ンバイの北東約30km。BMKGは沿岸の一部に津波警報を出し、7時31分に解除した。被災は西マンガライ、マンガライ、東マンガライ、ンガダ、ナゲケオ、エンデ、シッカの7県に及ぶ。BNPBは8月26日時点で死者105人、負傷・疾病1,678人、避難者179,037人、住家被害（影響）81,436棟と発表しており、その後AHA CentreのASEAN週報が8月31日09:00 WIB時点のBNPB値として死者120人、負傷1,658人、避難者約188,673人を引用している。到達が進むにつれ数値は増え続けており、死者は8月16日47人、18日69人、24日100人、26日105人、31日120人と推移した。ADRCは発災当日、BRINに代わってセンチネルアジアと国際災害チャーターの双方を要請した。",
+    "tectonic_en": "The earthquake was generated by the Flores Back-Arc Thrust.",
+    "tectonic_ja": "フローレス背弧断層（Flores Back-Arc Thrust）による地震。"
+  },
+  "damage": [
+    {
+      "item_en": "Deaths",
+      "item_ja": "死者",
+      "value_en": "120 (BNPB, via AHA Centre, as of 09:00 WIB 31 Aug), up from 105 at the 26 Aug report. BNPB distinguishes 48 deaths caused directly by the earthquake from 57 recorded afterwards through Basarnas SAR operations and health-facility reports, including patients who died in treatment and vulnerable people affected by trauma (26 Aug breakdown). The count rose as access improved: 2 and then 47 on 15 Aug, 68 on 17 Aug, 71 on 19 Aug, 100 on 24 Aug, 105 on 26 Aug, 120 on 31 Aug. The AHA Centre's ASEAN Weekly Disaster Update is the source for the 31 Aug figure; BNPB has not published its own bulletin with this cut-off.",
+      "value_ja": "120人（BNPB、AHA Centre経由、8月31日09:00 WIB時点）。8月26日報の105人から増加。BNPBは地震の直接被害による48人と、その後Basarnasの捜索救助活動および医療機関の報告を通じて計上された57人を区別している（8月26日時点の内訳）。後者には治療中に亡くなった患者や、精神的打撃を受けた要配慮者が含まれる。到達が進むにつれ増加し、8月15日2人→47人、17日68人、19日71人、24日100人、26日105人、31日120人と推移した。8月31日時点の値はAHA CentreのASEAN週報が出典で、BNPB自身によるこの締切のBulletin は未確認。",
+      "source_en": "BNPB, via AHA Centre ASEAN Weekly Disaster Update Week 35, 31 Aug 09:00 WIB",
+      "source_ja": "BNPB（AHA Centre「ASEAN Weekly Disaster Update Week 35」経由、8月31日09:00 WIB時点）",
+      "tier": "official",
+      "url": "https://reliefweb.int/report/indonesia/asean-weekly-disaster-update-week-35-24-30-august-2026"
+    },
+    {
+      "item_en": "Injured / ill",
+      "item_ja": "負傷・疾病",
+      "value_en": "1,658 (BNPB, via AHA Centre, as of 09:00 WIB 31 Aug), down slightly from 1,678 at the 26 Aug report. Neither BNPB nor the AHA Centre explains the decrease; it may reflect reclassification between the 26 Aug BNPB bulletin and the AHA Centre's own citation rather than a correction to an earlier over-count, but this has not been confirmed. The figure moved 13 (15 Aug) to 213 (17 Aug) to 1,199 (18 Aug, of which 115 serious and 1,084 minor) to 1,603 (24 Aug) to 1,678 (26 Aug) to 1,658 (31 Aug).",
+      "value_ja": "1,658人（BNPB、AHA Centre経由、8月31日09:00 WIB時点）。8月26日報の1,678人からわずかに減少。BNPB・AHA Centreとも減少の理由を説明していない。8月26日のBNPB報とAHA Centreによる引用の間の再分類による可能性はあるが、それ以前の集計の訂正であるかは確認できていない。13人（8月15日）→213人（17日）→1,199人（18日、うち重傷115人・軽傷1,084人）→1,603人（24日）→1,678人（26日）→1,658人（31日）と推移した。",
+      "source_en": "BNPB, via AHA Centre ASEAN Weekly Disaster Update Week 35, 31 Aug 09:00 WIB",
+      "source_ja": "BNPB（AHA Centre「ASEAN Weekly Disaster Update Week 35」経由、8月31日09:00 WIB時点）",
+      "tier": "official",
+      "url": "https://reliefweb.int/report/indonesia/asean-weekly-disaster-update-week-35-24-30-august-2026"
+    },
+    {
+      "item_en": "Displaced",
+      "item_ja": "避難者",
+      "value_en": "Approximately 188,673 (BNPB, via AHA Centre, as of 09:00 WIB 31 Aug), up from 179,037 at the 26 Aug report. The figure moved about 2,000 (15 Aug) to 9,290 (16 Aug) to 46,252 (18 Aug) to 59,647 (19 Aug) to 180,327 (24 Aug) to 179,037 (26 Aug) to approximately 188,673 (31 Aug). BNPB attributes the very large caseload substantially to fear of continuing aftershocks and to circulating hoaxes predicting a larger earthquake and tsunami, not to housing loss alone.",
+      "value_ja": "約188,673人（BNPB、AHA Centre経由、8月31日09:00 WIB時点）。8月26日報の179,037人から増加。約2,000人（8月15日）→9,290人（16日）→46,252人（18日）→59,647人（19日）→180,327人（24日）→179,037人（26日）→約188,673人（31日）と推移した。BNPBは避難者数が極めて多い要因を、住家の喪失だけでなく、継続する余震への恐怖と、より大きな地震・津波を予告するデマの流布に帰している。",
+      "source_en": "BNPB, via AHA Centre ASEAN Weekly Disaster Update Week 35, 31 Aug 09:00 WIB",
+      "source_ja": "BNPB（AHA Centre「ASEAN Weekly Disaster Update Week 35」経由、8月31日09:00 WIB時点）",
+      "tier": "official",
+      "url": "https://reliefweb.int/report/indonesia/asean-weekly-disaster-update-week-35-24-30-august-2026"
+    },
+    {
+      "item_en": "Houses affected",
+      "item_ja": "住家被害（影響）",
+      "value_en": "81,436 houses affected (BNPB, 26 Aug). This is a broader measure than the 24 August data lock of 77,912 damaged houses, which carries the by-regency breakdown. The two must not be used interchangeably; confirm the definitional boundary before external use.",
+      "value_ja": "81,436棟が影響を受けた（BNPB、8月26日）。これは県別内訳を伴う8月24日データ確定の「住家被害 77,912棟」より広い概念である。互換的に用いてはならない。対外使用の前に定義の境界を確認すること。",
+      "source_en": "BNPB, 26 Aug",
+      "source_ja": "BNPB（8月26日）",
+      "tier": "official",
+      "url": "https://news.harianjogja.com/r-1268934/update-gempa-flores-105-orang-meninggal-dan-81436-rumah-terdampak"
+    },
+    {
+      "item_en": "Houses damaged (data lock)",
+      "item_ja": "住家被害（確定集計）",
+      "value_en": "77,912 (BNPB data lock, 24 Aug): 24,597 destroyed, 18,537 moderately damaged, 34,778 lightly damaged. This is the figure that carries the by-regency breakdown.",
+      "value_ja": "77,912棟（BNPB、8月24日データ確定）。内訳は全壊24,597棟・半壊18,537棟・一部損壊34,778棟。県別内訳を伴うのはこちらの数値である。",
+      "source_en": "BNPB data lock, 24 Aug, via ANTARA",
+      "source_ja": "BNPB（8月24日データ確定、ANTARA経由）",
+      "tier": "official",
+      "url": "https://www.antaranews.com/berita/5713387/bnpb-percepat-rehab-rekon-rumah-rusak-karena-gempa-di-flores-ntt"
+    },
+    {
+      "item_en": "Public facilities (26 Aug)",
+      "item_ja": "公共施設（8月26日）",
+      "value_en": "Education 658 units, health 172 units (19 puskesmas not yet operational; 122 tents deployed), places of worship 172, government offices 187, other public facilities 89 (BNPB, 26 Aug). These differ from the 24 August figures below; BNPB has not published a reconciliation, so both are shown with their dates.",
+      "value_ja": "教育施設658棟、保健施設172棟（19保健所が未復旧、テント122張を配備）、宗教施設172棟、官公庁187棟、その他公共施設89棟（BNPB、8月26日）。下の8月24日の数値とは異なる。BNPBは両者の関係を公表していないため、日付を付して併記する。",
+      "source_en": "BNPB / Ministry of Health, 26 Aug",
+      "source_ja": "BNPB・保健省（8月26日）",
+      "tier": "official",
+      "url": "https://news.harianjogja.com/r-1268964/gempa-flores-19-puskesmas-belum-pulih-dan-122-tenda-disiapkan"
+    },
+    {
+      "item_en": "Public facilities (27 Aug, BNPB dashboard via IHCP)",
+      "item_ja": "公共施設（8月27日、BNPBダッシュボード／IHCP経由）",
+      "value_en": "Health 118 units, places of worship 499, office units 530, other public facilities 39, irrigation facilities 19, road points 128 and bridges 71 damaged, as of 27 Aug 09:00 WIB (BNPB dashboard, cited by the Indonesian Humanitarian Coordination Platform / MPBI). The health-facility count matches the 24 Aug figure below; the places-of-worship and office counts are far higher than either the 24 Aug or 26 Aug figures above. BNPB has not published a reconciliation across these three counts, so all are shown with their dates rather than replacing one another.",
+      "value_ja": "保健施設118、宗教施設499、官公庁530、その他公共施設39、灌漑施設19、道路被害箇所128、橋梁71が被害、8月27日09:00 WIB時点（BNPBダッシュボード、インドネシア人道調整プラットフォーム／MPBI経由の引用）。保健施設の数値は下記8月24日の値と一致するが、宗教施設・官公庁の数値は上記8月24日・26日のいずれの値よりも大幅に大きい。BNPBはこの3つの数値間の関係を公表していないため、いずれか一方に置き換えず日付を付して併記する。",
+      "source_en": "BNPB dashboard, via Indonesian Humanitarian Coordination Platform (MPBI) Situation Report No. 7, 27 Aug",
+      "source_ja": "BNPBダッシュボード（インドネシア人道調整プラットフォーム／MPBI 状況報告第7号、8月27日、経由）",
+      "tier": "official",
+      "url": "https://reliefweb.int/report/indonesia/indonesian-humanitarian-coordination-platform-situation-report-no-7-earthquake-and-tsunami-flores-and-surrounding-areas-28-august-2026"
+    },
+    {
+      "item_en": "Infrastructure",
+      "item_ja": "インフラ",
+      "value_en": "Power and telecommunications restored to 100% (Telkomsel had reached 85% by 17 Aug). All road sections closed by landslides, including the Trans-Flores highway at Nangaba, are functionally passable again. No bridge severely damaged; some approaches affected by landslides. Five airports and two seaports were affected on 15 Aug and the Maumere port passenger terminal collapsed; logistics now move by air and sea.",
+      "value_ja": "電力・通信は100%復旧（Telkomselは8月17日時点で85%）。Nangabaのトランス・フローレス道路を含め、地滑りで閉塞していた全区間が機能的に通行可能となった。重大な損傷を受けた橋梁はなく、一部で取付部が地滑りの影響を受けた。8月15日時点で5空港・2港湾が被災し、マウメレ港の旅客待合棟が倒壊。現在は空路・海路で物資を輸送している。",
+      "source_en": "BNPB / ANTARA / Beritasatu, 26 Aug",
+      "source_ja": "BNPB・ANTARA・Beritasatu（8月26日）",
+      "tier": "official",
+      "url": "https://www.antaranews.com/berita/5709283/bnpb-listrik-dan-sinyal-di-flores-pulih-100-persen-pascagempa"
+    },
+    {
+      "item_en": "Emergency response period",
+      "item_ja": "緊急対応期間",
+      "value_en": "NTT Province extended the emergency response period to 12 September 2026. It was reported as a 14-day extension, but 29 August to 12 September inclusive is 15 days, so the stated end date and duration do not fully agree.",
+      "value_ja": "NTT州は緊急対応期間を2026年9月12日まで延長した。報道は「14日間の延長」とするが、8月29日から9月12日は両端を含めて15日であり、終期と日数が一致しない。",
+      "source_en": "Governor Melki Laka Lena, 27 Aug",
+      "source_ja": "メルキ・ラカ・レナ州知事（8月27日）",
+      "tier": "official",
+      "url": "https://haluanntt.com/2026/08/27/pemprov-ntt-perpanjang-tanggap-darurat-gempa-flores-hingga-12-september-2026/"
+    },
+    {
+      "item_en": "Public facilities (24 Aug)",
+      "item_ja": "公共施設（8月24日）",
+      "value_en": "1,378 educational facilities, 118 health facilities, 504 government offices and 396 places of worship damaged (BNPB, 24 Aug). On 18 August the figures were 283 educational, 211 health, 97 government, 96 places of worship and 106 business premises.",
+      "value_ja": "教育施設1,378、保健施設118、官公庁504、宗教施設396が被害（BNPB、8月24日）。8月18日時点では教育283、保健211、官公庁97、宗教96、事業所106だった。",
+      "source_en": "BNPB, 24 Aug",
+      "source_ja": "BNPB（8月24日）",
+      "tier": "official",
+      "url": "https://reliefweb.int/report/indonesia/idn-earthquake-08-2026-field-report-update-3-m77-east-nusa-tenggara-earthquake-4-2026-08-24"
+    },
+    {
+      "item_en": "Affected regencies",
+      "item_ja": "被災した県",
+      "value_en": "Seven regencies in East Nusa Tenggara: West Manggarai, Manggarai, East Manggarai, Ngada, Nagekeo, Ende and Sikka. Displacement was also reported in Bima Regency, West Nusa Tenggara (71 people on 18 Aug) and in the Selayar Islands.",
+      "value_ja": "東ヌサトゥンガラ州の7県。西マンガライ、マンガライ、東マンガライ、ンガダ、ナゲケオ、エンデ、シッカ。西ヌサトゥンガラ州ビマ県（8月18日時点71人）とスラヤル諸島でも避難が報告されている。",
+      "source_en": "BNPB / IFRC-PMI",
+      "source_ja": "BNPB／IFRC・PMI",
+      "tier": "official",
+      "url": "https://reliefweb.int/disaster/eq-2026-000150-idn"
+    },
+    {
+      "item_en": "Tsunami",
+      "item_ja": "津波",
+      "value_en": "Warning issued with the 05:09:54 WIB bulletin and lifted at 07:30 WIB. Seven BMKG tide gauges recorded 0.14-0.94 m: Maurole (Ende) 0.94, Kuwapante Port 0.38, Labuan Bajo 0.36, East Flores 0.25, Sikka 0.19, Dompu 0.17, Bakalan (Alor) 0.14. BNPB's aerial assessment characterised the tsunami impact as minor and no tsunami deaths have been reported. Some secondary compilations cite a maximum run-up of 1.61 m, which exceeds every BMKG gauge value and is not used here as a primary figure.",
+      "value_ja": "警報は05:09:54 WIBの更新報で発表され、07:30 WIBに解除された。BMKG検潮所7地点で0.14〜0.94mを観測（マウロレ（エンデ県）0.94m、クワパンテ港0.38m、ラブアンバジョ0.36m、東フローレス0.25m、シッカ0.19m、ドンプ0.17m、バカラン（アロール）0.14m）。BNPBの航空調査は津波の影響を軽微と評価し、津波による死者の報告はない。二次的な集約情報には最大遡上高1.61mとするものがあるが、BMKGのいずれの観測値も上回るため一次値として採用しない。",
+      "source_en": "BMKG, 15 Aug (7 tide gauges); BNPB aerial assessment",
+      "source_ja": "BMKG（8月15日・検潮所7地点）、BNPB航空調査",
+      "tier": "official",
+      "url": "https://news.harianjogja.com/r-1268779/bnpb-petakan-dampak-gempa-ntt-dari-udara-tsunami-dinilai-minor"
+    },
+    {
+      "item_en": "Aftershocks",
+      "item_ja": "余震",
+      "value_en": "BMKG recorded 341 aftershocks of magnitude 2.5 to 6.2 by 17 August, including M6.1 and M5.9 events. USGS separately located an M6.1 at 22:28 UTC on 14 August, 30 minutes after the main shock. Thousands of aftershocks have continued, discouraging families from returning to damaged homes.",
+      "value_ja": "BMKGは8月17日までにM2.5〜6.2の余震341回を記録し、M6.1・M5.9を含む。USGSは本震の30分後、8月14日22時28分（UTC）にM6.1を別途決定している。その後も余震が続き、住民が損壊した住居へ戻ることをためらう要因となっている。",
+      "source_en": "BMKG, 17 Aug / USGS",
+      "source_ja": "BMKG（8月17日）／USGS",
+      "tier": "official",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkt2"
+    },
+    {
+      "item_en": "PAGER",
+      "item_ja": "USGS PAGER",
+      "value_en": "Yellow alert for both estimated fatalities and estimated economic losses. Maximum estimated shaking MMI VIII; 51 felt reports.",
+      "value_ja": "推定死者数・推定経済損失ともに黄色警報。推定最大震度はMMI VIII、体感報告51件。",
+      "source_en": "USGS PAGER, last updated 17 Aug 21:56 UTC",
+      "source_ja": "USGS PAGER（8月17日21時56分UTC更新）",
+      "tier": "official",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkt2"
+    },
+    {
+      "item_en": "Access",
+      "item_ja": "到達・アクセス",
+      "value_en": "The Larantuka-Maumere road is passable; the Ende-Nagekeo road was cut. Damaged roads, power outages and communication disruptions have hampered assessment and relief. Access along major routes has since improved, but remote villages and island communities remain logistically constrained. Existing dry-season and El Nino water shortages compound the situation.",
+      "value_ja": "ララントゥカ〜マウメレ間の道路は通行可能、エンデ〜ナゲケオ間は寸断された。道路損壊・停電・通信途絶が調査と救援を妨げてきた。主要路線の状況は改善したが、山間の集落と離島は依然として制約が大きい。乾季とエルニーニョによる既存の水不足も重なっている。",
+      "source_en": "IFRC & PMI, 16-24 Aug",
+      "source_ja": "IFRC・PMI（8月16〜24日）",
+      "tier": "official",
+      "url": "https://reliefweb.int/report/indonesia/idn-earthquake-08-2026-field-report-update-3-m77-east-nusa-tenggara-earthquake-4-2026-08-24"
+    },
+    {
+      "item_en": "For comparison - 1992",
+      "item_ja": "参考：1992年フローレス地震",
+      "value_en": "The 12 December 1992 Flores earthquake was also M7.7, at 28 km depth, and caused more than 2,500 fatalities according to BNPB. The 2026 event has a comparable magnitude at shallower depth.",
+      "value_ja": "1992年12月12日のフローレス地震も M7.7、深さ28kmで、BNPBによれば死者2,500人以上。2026年の地震は規模が同等で、震源はより浅い。",
+      "source_en": "BNPB, cited in DG ECHO / ERCC daily map, 18 Aug",
+      "source_ja": "BNPB（DG ECHO・ERCC 日報地図 8月18日の引用）",
+      "tier": "official",
+      "url": "https://reliefweb.int/map/indonesia/indonesia-77-m-earthquake-and-tsunami-14-august-dg-echo-daily-map-18082026"
+    },
+    {
+      "item_en": "GDACS",
+      "item_ja": "GDACS 警報",
+      "value_en": "GDACS issued a red alert for this earthquake.",
+      "value_ja": "GDACSはこの地震に対し赤警報を発表した。",
+      "source_en": "GDACS, via DG ECHO / ERCC daily map",
+      "source_ja": "GDACS（DG ECHO・ERCC 日報地図経由）",
+      "tier": "official",
+      "url": "https://reliefweb.int/map/indonesia/indonesia-77-m-earthquake-and-tsunami-14-august-dg-echo-daily-map-18082026"
+    },
+    {
+      "item_en": "Health facilities damaged (hospitals / community health centres)",
+      "item_ja": "医療施設被害（病院／地域保健センター）",
+      "value_en": "9 hospitals and 68 community health centres (puskesmas) damaged, as of 30 Aug (Gender Alert #1, jointly issued by Indonesia's Ministry of Women's Empowerment and Child Protection, the Indonesia Humanitarian Coordination Platform, UNFPA and UN Women, published 2 Sep). This is a hospital/puskesmas breakdown not previously published; it sits alongside, and has not been reconciled with, the BNPB 26 Aug figure of 172 health units damaged (including 19 puskesmas not yet operational).",
+      "value_ja": "病院9か所、地域保健センター（プスケスマス）68か所が被害（8月30日時点、Gender Alert #1、インドネシア女性エンパワーメント・子ども保護省、Indonesia Humanitarian Coordination Platform、UNFPA、UN Womenの共同発表、9月2日公表）。病院とプスケスマスを分けた内訳はこれまで未公表であり、BNPBの8月26日報にある医療施設被害172か所（うちプスケスマス19か所が未稼働）とは突合できていない。",
+      "source_en": "UN Women / UNFPA, Gender Alert #1, 2 Sep 2026 (data as of 30 Aug)",
+      "source_ja": "UN Women／UNFPA「Gender Alert #1」（2026年9月2日公表、データは8月30日時点）",
+      "tier": "official",
+      "url": "https://reliefweb.int/report/indonesia/gender-alert-1-critical-protection-needs-women-and-girls-following-flores-earthquake-indonesia"
+    },
+    {
+      "item_en": "Protection needs of women and girls",
+      "item_ja": "女性・女児の保護ニーズ",
+      "value_en": "Gender Alert #1 identifies heightened protection risks for women and girls in displacement settings - gender-based violence, limited access to maternal and reproductive health services, and gaps in safe and inclusive evacuation facilities - and calls for gender-responsive assistance, disaggregated data collection, GBV coordination and survivor-centred services, and gender- and disability-inclusive WASH, shelter and evacuation facilities.",
+      "value_ja": "Gender Alert #1は、避難生活における女性・女児への保護リスクの高まり（ジェンダーに基づく暴力、母子保健・リプロダクティブヘルスサービスへのアクセス制約、安全で包摂的な避難施設の不足）を指摘し、ジェンダーに配慮した支援、性別・年齢・障害別データの収集強化、GBV対応の調整と被害者中心のサービス、ジェンダー・障害に配慮したWASH・避難施設の整備を求めている。",
+      "source_en": "UN Women / UNFPA, Gender Alert #1, 2 Sep 2026",
+      "source_ja": "UN Women／UNFPA「Gender Alert #1」（2026年9月2日）",
+      "tier": "media",
+      "url": "https://reliefweb.int/report/indonesia/gender-alert-1-critical-protection-needs-women-and-girls-following-flores-earthquake-indonesia"
+    }
+  ],
+  "damage_highlights": [],
+  "timeline": [
+    {
+      "time": "15 Aug",
+      "tier": "official",
+      "src": "Sentinel Asia",
+      "en": "Sentinel Asia emergency observation is activated for the Flores region earthquake at the request of the National Research and Innovation Agency (BRIN); the record notes escalation to the International Charter and carries GLIDE EQ-2026-000150-IDN.",
+      "ja": "センチネルアジアの緊急観測が、国家研究革新庁（BRIN）の要請によりフローレス地方の地震に対して発動。記録には国際災害チャーターへのエスカレーションと GLIDE番号 EQ-2026-000150-IDN が明記されている。"
+    },
+    {
+      "time": "15 Aug 04:58",
+      "tier": "official",
+      "src": "BMKG / USGS",
+      "en": "A magnitude 7.7 earthquake strikes offshore Nagekeo Regency, East Nusa Tenggara, about 30 km northeast of Mbay on Flores Island. USGS gives Mww 7.7 at 10 km depth (14 Aug 21:58 UTC); BMKG reports 15 km.",
+      "ja": "東ヌサトゥンガラ州ナゲケオ県沖、フローレス島ンバイの北東約30kmでM7.7の地震。USGSは Mww7.7・深さ10km（8月14日21時58分UTC）、BMKGは深さ15kmとしている。"
+    },
+    {
+      "time": "15 Aug 05:28",
+      "tier": "official",
+      "src": "USGS",
+      "en": "An M6.1 aftershock is located in the same area, 30 minutes after the main shock.",
+      "ja": "本震の30分後、同じ海域でM6.1の余震。"
+    },
+    {
+      "time": "15 Aug 07:31",
+      "tier": "official",
+      "src": "BMKG",
+      "en": "BMKG lifts the tsunami warning at 07:31 WIB. Tide gauges around the Flores Sea recorded maximum wave heights between 0.30 m and 1.61 m, with arrival times of 10 to 60 minutes.",
+      "ja": "BMKGが7時31分（WIB）に津波警報を解除。フローレス海周辺の検潮所は最大波高0.30〜1.61mを記録し、到達時間は10〜60分だった。"
+    },
+    {
+      "time": "15 Aug 08:00",
+      "tier": "official",
+      "src": "BNPB",
+      "en": "BNPB first report: 2 deaths at Laurentius Say Port, Maumere.",
+      "ja": "BNPB初報：マウメレの Laurentius Say 港で死者2人。"
+    },
+    {
+      "time": "15 Aug 13:54",
+      "tier": "official",
+      "src": "International Charter",
+      "en": "The International Charter Space and Major Disasters is activated as #1050 (13:54 UTC+09:00), with ADRC recorded as the requestor on behalf of BRIN. Project management is assigned to BRIN.",
+      "ja": "国際災害チャーターが Activation #1050 として発動（13:54 UTC+09:00）。要請者は「BRINに代わってADRC」と記録されている。案件管理はBRIN。"
+    },
+    {
+      "time": "15 Aug 18:48",
+      "tier": "official",
+      "src": "BNPB",
+      "en": "BNPB reports 47 deaths. Landslides sever the Trans-Flores highway and Nagekeo Regency is isolated.",
+      "ja": "BNPBが死者47人と発表。地滑りでトランス・フローレス道路が寸断され、ナゲケオ県が孤立。"
+    },
+    {
+      "time": "16 Aug 00:00",
+      "tier": "official",
+      "src": "BNPB",
+      "en": "BNPB reports 47 deaths and 101 injuries, with more than 5,000 people displaced and 1,357 houses damaged (914 severely).",
+      "ja": "BNPBが死者47人・負傷101人、避難者5,000人超、住家被害1,357棟（うち全壊相当914棟）と発表。"
+    },
+    {
+      "time": "17 Aug",
+      "tier": "official",
+      "src": "BMKG / BNPB",
+      "en": "BMKG has recorded 341 aftershocks of M2.5-6.2. The displaced figure is revised to 9,290.",
+      "ja": "BMKGがM2.5〜6.2の余震341回を記録。避難者は9,290人に修正された。"
+    },
+    {
+      "time": "17 Aug 08:46",
+      "tier": "official",
+      "src": "BMKG / BNPB",
+      "en": "An Mw 5.5 aftershock kills two people in Ngada Regency, one of them in a landslide (times in WITA, WIB+1h).",
+      "ja": "Mw5.5の余震でンガダ県に死者2人（うち1人は土砂崩れ）。時刻はWITA（WIB+1時間）。"
+    },
+    {
+      "time": "18 Aug",
+      "tier": "official",
+      "src": "BNPB / IFRC-PMI",
+      "en": "The toll reaches 69 deaths and 1,199 injured, with 46,252 displaced and 11,213 houses damaged. 283 educational, 211 health and 97 government facilities are affected.",
+      "ja": "死者69人・負傷1,199人、避難者46,252人、住家被害11,213棟。教育283・保健211・官公庁97の施設が被害。"
+    },
+    {
+      "time": "20 Aug 06:45",
+      "tier": "official",
+      "src": "BMKG / BNPB",
+      "en": "An Mw 5.8 aftershock; one death at Ruteng hospital is reported in association with it (WITA).",
+      "ja": "Mw5.8の余震。これに関連してルテンの病院で1人の死亡が報告された（WITA）。"
+    },
+    {
+      "time": "22 Aug",
+      "tier": "official",
+      "src": "Int'l Charter / BRIN",
+      "en": "Sentinel-1 SLC coherence analyses (VH and VV polarisation) are delivered under the Charter activation.",
+      "ja": "チャーターの発動に基づき、Sentinel-1 のコヒーレンス解析（VH・VV偏波）が提供される。"
+    },
+    {
+      "time": "23 Aug 05:00",
+      "tier": "official",
+      "src": "BMKG",
+      "en": "BMKG has recorded 5,688 aftershocks.",
+      "ja": "BMKG：余震5,688回を記録。"
+    },
+    {
+      "time": "24 Aug 09:00",
+      "tier": "official",
+      "src": "BNPB",
+      "en": "BNPB reports 100 deaths, 1,603 injured or ill and 180,327 displaced, with 73,818 houses damaged, 1,378 educational facilities, 118 health facilities, 504 government offices and 396 places of worship affected.",
+      "ja": "BNPBが死者100人・負傷疾病1,603人・避難者180,327人、住家被害73,818棟、教育施設1,378・保健施設118・官公庁504・宗教施設396の被害と発表。"
+    },
+    {
+      "time": "25 Aug",
+      "tier": "official",
+      "src": "Int'l Charter",
+      "en": "A line-of-sight displacement analysis of the Flores earthquake is delivered.",
+      "ja": "フローレス地震の視線方向変位解析が提供される。"
+    },
+    {
+      "time": "26 Aug",
+      "tier": "official",
+      "src": "Int'l Charter",
+      "en": "A SAR-based earthquake damage proxy map is delivered.",
+      "ja": "SARによる被害推定図（damage proxy map）が提供される。"
+    },
+    {
+      "time": "27 Aug",
+      "tier": "official",
+      "src": "BNPB Pusdatinkom",
+      "en": "BNPB deploys assessment teams to all seven affected regencies to accelerate rehabilitation and reconstruction, without waiting for the emergency period to end.",
+      "ja": "BNPBが復旧・復興を加速するため、緊急対応期間の終了を待たずに被災7県すべてへアセスメントチームを派遣。"
+    },
+    {
+      "time": "29 Aug - 12 Sep",
+      "tier": "official",
+      "src": "Governor of NTT",
+      "en": "NTT Province extends the emergency response period.",
+      "ja": "NTT州が緊急対応期間を延長。"
+    },
+    {
+      "time": "27-28 Aug",
+      "tier": "official",
+      "src": "IHCP (MPBI), citing BNPB dashboard",
+      "en": "The Indonesian Humanitarian Coordination Platform's multi-stakeholder meeting on 25 Aug and its Situation Report No. 7 (published 28 Aug, citing the BNPB dashboard as of 27 Aug 09:00 WIB) flag continuing gaps in IDP data collection, especially among self-settled displaced people in West Manggarai, and record damage to 118 health facilities, 499 places of worship, 530 office units, 39 other public facilities, 19 irrigation facilities, 128 road points and 71 bridges.",
+      "ja": "インドネシア人道調整プラットフォーム（IHCP）の8月25日多機関調整会議、および8月28日公表の状況報告第7号（BNPBダッシュボード8月27日09:00 WIB時点を引用）は、特に西マンガライ県の自主避難者を中心にIDPデータ収集の課題が続いていると指摘し、保健施設118・宗教施設499・官公庁530・その他公共施設39・灌漑施設19・道路被害箇所128・橋梁71の被害を記録している。"
+    },
+    {
+      "time": "31 Aug 09:00",
+      "tier": "official",
+      "src": "AHA Centre (ASEAN), citing BNPB",
+      "en": "The AHA Centre's ASEAN Weekly Disaster Update Week 35 reports that BNPB's emergency response period for the earthquake has been extended to 12 September, and records 120 deaths, 1,658 injured and approximately 188,673 displaced as of 09:00 WIB on 31 August.",
+      "ja": "AHA Centreの「ASEAN Weekly Disaster Update Week 35」は、BNPBが地震の緊急対応期間を9月12日まで延長したと報告し、8月31日09:00 WIB時点で死者120人、負傷1,658人、避難者約188,673人と記録している。"
+    }
+  ],
+  "intensity": {},
+  "tsunami": {},
+  "cities": [],
+  "aftershocks": [
+    {
+      "time": "15 Aug 07:00 WIB",
+      "mag": "54",
+      "place_en": "Cumulative events (BMKG)",
+      "place_ja": "積算回数（BMKG）"
+    },
+    {
+      "time": "15 Aug 15:00 WIB",
+      "mag": "265",
+      "place_en": "Cumulative events (BMKG)",
+      "place_ja": "積算回数（BMKG）"
+    },
+    {
+      "time": "23 Aug 05:00 WIB",
+      "mag": "5,688",
+      "place_en": "Cumulative events (BMKG)",
+      "place_ja": "積算回数（BMKG）"
+    },
+    {
+      "time": "25 Aug",
+      "mag": "7,259",
+      "place_en": "Cumulative events, 143 felt (BMKG via BNPB)",
+      "place_ja": "積算回数、うち有感143回（BMKG、BNPB経由）"
+    }
+  ],
+  "aftershock_stats": {
+    "total": 7259,
+    "note_en": "7,259 events between 15 and 25 August, 143 of them felt. The largest aftershock was M6.2 (BMKG via BNPB, 26 Aug); no event exceeded the M7.7 mainshock. By 26 August the felt rate had fallen to about one event per day, and an M4.6 shook Ruteng on 27 August.",
+    "note_ja": "8月15日から25日までに7,259回、うち有感143回。最大余震はM6.2（BMKG、BNPB経由、8月26日）で、本震M7.7を上回るイベントはない。8月26日時点で有感頻度は1日1回程度まで低下し、8月27日にはルテンでM4.6を観測した。"
+  },
+  "response_measures": [
+    {
+      "tier": "official",
+      "en": "More than 3,500 military, police and search-and-rescue personnel (BASARNAS) were deployed to search rubble and clear roads.",
+      "ja": "軍・警察・捜索救助庁（BASARNAS）の3,500人以上が投入され、瓦礫の捜索と道路の啓開にあたった。"
+    },
+    {
+      "tier": "official",
+      "en": "Local authorities were considering declaring a state of emergency for East Nusa Tenggara in order to release disaster relief funds and speed the distribution of food, water and medical aid.",
+      "ja": "州当局は、災害救助資金の執行と食料・水・医療の配布を早めるため、東ヌサトゥンガラ州への緊急事態宣言を検討していた。"
+    }
+  ],
+  "support_domestic": [
+    {
+      "tier": "official",
+      "source": "PMI (Indonesian Red Cross) / IFRC, 16-24 Aug",
+      "en": "The Indonesian Red Cross (PMI) is responding alongside IFRC under DREF operation MDRID029. Priority needs are emergency shelter, safe water and sanitation, healthcare, essential household items, protection and psychosocial support.",
+      "ja": "インドネシア赤十字（PMI）がIFRCとともに対応し、DREF（MDRID029）が立ち上がっている。優先課題は緊急の住まい、安全な水と衛生、保健医療、生活必需品、保護と心理社会的支援。"
+    }
+  ],
+  "support_international": [
+    {
+      "tier": "official",
+      "source": "ADRC / Sentinel Asia / International Charter, 15 Aug",
+      "en": "ADRC requested both Sentinel Asia and the International Charter Space and Major Disasters on the day of the earthquake, on behalf of Indonesia's National Research and Innovation Agency (BRIN). The Charter records the requestor as \"ADRC on behalf of BRIN\" - Activation #1050, 15 August, 13:54 UTC+09:00.",
+      "ja": "ADRCは発災当日、インドネシア国家研究革新庁（BRIN）に代わって、センチネルアジアと国際災害チャーターの双方を要請した。チャーターの記録では要請者は「BRINに代わってADRC」、Activation #1050、8月15日13時54分（UTC+09:00）。"
+    },
+    {
+      "tier": "official",
+      "source": "International Charter, 22-26 Aug",
+      "en": "Value adding was contributed by Masahiko Nagai (Yamaguchi University) and Yenni Vetrita (BRIN). Four products were delivered: Sentinel-1 SLC coherence analyses in VH and VV polarisation (22 August), a line-of-sight displacement analysis (25 August) and a SAR-based earthquake damage proxy map (26 August).",
+      "ja": "付加価値解析は永井正彦氏（山口大学）と Yenni Vetrita 氏（BRIN）が担当。Sentinel-1 のコヒーレンス解析（VH偏波・VV偏波、8月22日）、視線方向変位解析（8月25日）、SARによる被害推定図（8月26日）の4件が提供された。"
+    },
+    {
+      "tier": "official",
+      "source": "IFRC, from 16 Aug",
+      "en": "IFRC opened a DREF operation (MDRID029) for the Flores earthquake response. Caritas Indonesia and CARE Indonesia are also responding; CARE reported distributing 15,000 litres of clean water.",
+      "ja": "IFRCはフローレス地震対応としてDREF（MDRID029）を立ち上げた。カリタス・インドネシア、CAREインドネシアも対応しており、CAREは清潔な水15,000リットルの配布を報告している。"
+    }
+  ],
+  "satellite": [
+    {
+      "org": "Sentinel Asia",
+      "status": "Activated 15 Aug, ended by ADRC 31 Aug",
+      "tier": "official",
+      "url": "https://sentinel-asia.org/EO/2026/article20260815ID.html",
+      "en": "Emergency observation request for the Flores region earthquake, requested by BRIN and activated on the day of the event. The record notes escalation to the International Charter and carries GLIDE EQ-2026-000150-IDN. ADRC (M. Sugiura) formally ended the EOR (SA-00656) on 31 Aug 2026, 23:45 JST.",
+      "ja": "フローレス地方の地震に対する緊急観測要請。BRINの要請により発災当日に発動。記録には国際災害チャーターへのエスカレーションと GLIDE番号 EQ-2026-000150-IDN が明記されている。ADRC（杉浦氏）が2026年8月31日23:45（日本時間）、要請（SA-00656）を正式に終了した。"
+    },
+    {
+      "org": "International Charter",
+      "status": "Activated #1050 (15 Aug, 13:54 UTC+09:00)",
+      "tier": "official",
+      "url": "https://disasterscharter.org/activations/earthquake-in-indonesia-activation-1050-",
+      "en": "Requestor recorded as \"ADRC on behalf of BRIN\". Project management: Virgilius Rivan Seran (BRIN). Value adding: Masahiko Nagai (Yamaguchi University) and Yenni Vetrita (BRIN). Four products delivered between 22 and 26 August.",
+      "ja": "要請者は「BRINに代わってADRC」。案件管理は Virgilius Rivan Seran 氏（BRIN）。付加価値解析は永井正彦氏（山口大学）と Yenni Vetrita 氏（BRIN）。8月22日から26日にかけて4件のプロダクトが提供された。"
+    },
+    {
+      "org": "JAXA (via RESTEC)",
+      "status": "Uploaded 24 Aug",
+      "tier": "official",
+      "url": "https://sentinel-asia.org/",
+      "en": "ALOS-2/4 archive and observation images. Archive observations of 30 May 2020 (L1.1, f3780/f3790, SB6) and 6 March 2021 (L1.1, f3780/f3790, SB7).",
+      "ja": "ALOS-2/4のアーカイブ・観測画像。アーカイブは2020年5月30日（L1.1、f3780/f3790、SB6）と2021年3月6日（L1.1、f3780/f3790、SB7）の観測。"
+    },
+    {
+      "org": "GIC-AIT",
+      "status": "Uploaded 26 Aug",
+      "tier": "official",
+      "url": "https://sentinel-asia.org/",
+      "en": "A value-added product produced using Sentinel-1 data observed on 20, 21 and 23 August 2026.",
+      "ja": "2026年8月20日・21日・23日に観測されたSentinel-1のデータを用いて作成した付加価値プロダクト。"
+    },
+    {
+      "org": "KGS (Kazakhstan)",
+      "status": "Uploaded 27 Aug",
+      "tier": "official",
+      "url": "https://sentinel-asia.org/",
+      "en": "Two KazEOSAT-1 observation images, both observed on 23 August 2026 at 02:01 and 02:02 UTC.",
+      "ja": "KazEOSAT-1の観測画像2点。いずれも2026年8月23日02時01分・02時02分（UTC）の観測。"
+    }
+  ],
+  "historical": [],
+  "images": {
+    "usgs_shakemap": "images/usgs_shakemap.jpg",
+    "usgs_pager": "images/usgs_pager.png",
+    "echo_map": "images/echo_map.png",
+    "locator_world": "images/locator_world.png",
+    "locator_region": "images/locator_region.png",
+    "locator_flores": "images/locator_flores.png"
+  },
+  "links": [
+    {
+      "label_en": "ReliefWeb - Indonesia: Earthquake, Aug 2026 (GLIDE EQ-2026-000150-IDN)",
+      "label_ja": "ReliefWeb 災害ページ（GLIDE EQ-2026-000150-IDN）",
+      "url": "https://reliefweb.int/disaster/eq-2026-000150-idn",
+      "tier": "official"
+    },
+    {
+      "label_en": "USGS - M 7.7, 68 km NNW of Ende, Indonesia",
+      "label_ja": "USGS M7.7（エンデ北北西68km）",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkt2",
+      "tier": "official"
+    },
+    {
+      "label_en": "International Charter - Earthquake in Indonesia, Activation #1050",
+      "label_ja": "国際災害チャーター Activation #1050",
+      "url": "https://disasterscharter.org/activations/earthquake-in-indonesia-activation-1050-",
+      "tier": "official"
+    },
+    {
+      "label_en": "ERCC / DG ECHO daily map - Indonesia 7.7 M earthquake and tsunami (18 Aug 2026)",
+      "label_ja": "ERCC・DG ECHO 日報地図（8月18日）",
+      "url": "https://reliefweb.int/map/indonesia/indonesia-77-m-earthquake-and-tsunami-14-august-dg-echo-daily-map-18082026",
+      "tier": "official"
+    },
+    {
+      "label_en": "Sentinel Asia - Earthquake in Flores region, Indonesia",
+      "label_ja": "センチネルアジア 緊急観測要請",
+      "url": "https://sentinel-asia.org/EO/2026/article20260815ID.html",
+      "tier": "official"
+    },
+    {
+      "label_en": "Field Report Update 3: M7.7 East Nusa Tenggara Earthquake (24 Aug 2026)",
+      "label_ja": "現地報告 第3報（8月24日）",
+      "url": "https://reliefweb.int/report/indonesia/idn-earthquake-08-2026-field-report-update-3-m77-east-nusa-tenggara-earthquake-4-2026-08-24",
+      "tier": "official"
+    },
+    {
+      "label_en": "BMKG - Meteorology, Climatology and Geophysical Agency",
+      "label_ja": "BMKG（気象気候地球物理庁）",
+      "url": "https://www.bmkg.go.id/",
+      "tier": "official"
+    },
+    {
+      "label_en": "AHA Centre - Flash Update No.1 (15 Aug 2026)",
+      "label_ja": "AHAセンター Flash Update No.1（2026年8月15日）",
+      "url": "https://ahacentre.org/flash-update/flash-update-no-1-m7-7-earthquake-in-east-nusa-tenggara-indonesia-15-august-2026/",
+      "tier": "official"
+    },
+    {
+      "label_en": "AHA Centre - Weekly Disaster Update 17-23 Aug 2026",
+      "label_ja": "AHAセンター Weekly Disaster Update（8月17〜23日）",
+      "url": "https://ahacentre.org/weekly-disaster-update/weekly-disaster-update-17-23-august-2026/",
+      "tier": "official"
+    },
+    {
+      "label_en": "ReliefWeb - Situation Report No. 6 (25 Aug 2026)",
+      "label_ja": "ReliefWeb Situation Report No.6（8月25日）",
+      "url": "https://reliefweb.int/report/indonesia/indonesian-humanitarian-coordination-platform-situation-report-no-6-earthquake-and-tsunami-flores-and-surrounding-areas-25-august-2026",
+      "tier": "official"
+    },
+    {
+      "label_en": "BNPB - news index",
+      "label_ja": "BNPB 続報一覧",
+      "url": "https://www.bnpb.go.id/berita",
+      "tier": "official"
+    },
+    {
+      "label_en": "ANTARA - BNPB accelerates rehabilitation; house damage by regency (27 Aug)",
+      "label_ja": "ANTARA：BNPBが復旧・復興を加速、県別住家被害（8月27日）",
+      "url": "https://www.antaranews.com/berita/5713387/bnpb-percepat-rehab-rekon-rumah-rusak-karena-gempa-di-flores-ntt",
+      "tier": "official"
+    },
+    {
+      "label_en": "ANTARA - power and telecommunications 100% restored",
+      "label_ja": "ANTARA：電力・通信100%復旧",
+      "url": "https://www.antaranews.com/berita/5709283/bnpb-listrik-dan-sinyal-di-flores-pulih-100-persen-pascagempa",
+      "tier": "official"
+    },
+    {
+      "label_en": "Harian Jogja - BNPB: 105 deaths, 179,037 evacuees, 81,436 houses (27 Aug)",
+      "label_ja": "Harian Jogja：BNPB 死者105人・避難者179,037人・住家81,436棟（8月27日）",
+      "url": "https://news.harianjogja.com/r-1268934/update-gempa-flores-105-orang-meninggal-dan-81436-rumah-terdampak",
+      "tier": "media"
+    },
+    {
+      "label_en": "Harian Jogja - 19 puskesmas not yet recovered, 122 tents",
+      "label_ja": "Harian Jogja：19保健所が未復旧、テント122張",
+      "url": "https://news.harianjogja.com/r-1268964/gempa-flores-19-puskesmas-belum-pulih-dan-122-tenda-disiapkan",
+      "tier": "media"
+    },
+    {
+      "label_en": "Haluan NTT - emergency period extended to 12 September 2026",
+      "label_ja": "Haluan NTT：緊急対応期間を9月12日まで延長",
+      "url": "https://haluanntt.com/2026/08/27/pemprov-ntt-perpanjang-tanggap-darurat-gempa-flores-hingga-12-september-2026/",
+      "tier": "official"
+    },
+    {
+      "label_en": "BMKG - press release on recovery cooperation",
+      "label_ja": "BMKG：復旧協力に関する報道発表",
+      "url": "https://www.bmkg.go.id/siaran-pers/bmkg-pemerintah-pusat-dan-pemerintah-daerah-kolaborasi-percepat-pemulihan-bencana-gempa-flores",
+      "tier": "official"
+    },
+    {
+      "label_en": "AHA Centre - Flash Update No.1 (17 Aug 2026, day-1 data, superseded)",
+      "label_ja": "AHA Centre Flash Update No.1（8月17日、発災当日の数値・以降の報で更新済み）",
+      "url": "https://reliefweb.int/report/indonesia/flash-update-no-1-m77-earthquake-east-nusa-tenggara-indonesia-15-august-2026",
+      "tier": "official"
+    },
+    {
+      "label_en": "OCHA Asia-Pacific El Nino / Middle East snapshot, 28 Aug 2026 (regional, not earthquake-specific)",
+      "label_ja": "OCHA アジア太平洋 エルニーニョ・中東情勢スナップショット（8月28日、地震とは無関係の地域資料）",
+      "url": "https://reliefweb.int/report/indonesia/asia-and-pacific-snapshot-el-nino-middle-east-crisis-28-august-2026",
+      "tier": "official"
+    },
+    {
+      "label_en": "Caritas Indonesia - community support update",
+      "label_ja": "Caritas Indonesia 支援活動レポート",
+      "url": "https://reliefweb.int/report/indonesia/caritas-indonesia-stands-communities-affected-earthquake",
+      "tier": "media"
+    },
+    {
+      "label_en": "CARE Indonesia - 15,000 litres clean water distribution",
+      "label_ja": "CARE Indonesia 飲料水1万5千リットル配布",
+      "url": "https://reliefweb.int/report/indonesia/care-indonesia-distributes-15000-litres-clean-water-earthquake-survivors",
+      "tier": "media"
+    },
+    {
+      "label_en": "AHA Centre - ASEAN Weekly Disaster Update, week 33 (10-16 Aug 2026)",
+      "label_ja": "AHA Centre ASEAN週次災害アップデート（第33週、8月10-16日）",
+      "url": "https://reliefweb.int/report/indonesia/asean-weekly-disaster-update-week-33-10-16-august-2026",
+      "tier": "official"
+    },
+    {
+      "label_en": "IOM - Rohingya refugee response flash appeal (unrelated crisis)",
+      "label_ja": "IOM ロヒンギャ難民対応フラッシュアピール（本地震とは別件）",
+      "url": "https://reliefweb.int/report/indonesia/iom-flash-appeal-rohingya-refugee-response-january-december-2026",
+      "tier": "official"
+    },
+    {
+      "label_en": "IHCP (MPBI) - Situation Report No. 7 (28 Aug 2026, BNPB dashboard as of 27 Aug)",
+      "label_ja": "IHCP（MPBI）状況報告第7号（8月28日公表、BNPBダッシュボード8月27日時点）",
+      "url": "https://reliefweb.int/report/indonesia/indonesian-humanitarian-coordination-platform-situation-report-no-7-earthquake-and-tsunami-flores-and-surrounding-areas-28-august-2026",
+      "tier": "official"
+    },
+    {
+      "label_en": "AHA Centre - ASEAN Weekly Disaster Update, week 35 (24-30 Aug 2026)",
+      "label_ja": "AHA Centre ASEAN週次災害アップデート（第35週、8月24-30日）",
+      "url": "https://reliefweb.int/report/indonesia/asean-weekly-disaster-update-week-35-24-30-august-2026",
+      "tier": "official"
+    },
+    {
+      "label_en": "Gender Alert #1 - Protection needs of women and girls, Flores earthquake (2 Sep 2026)",
+      "label_ja": "Gender Alert #1：フローレス地震における女性・女児の保護ニーズ（9月2日）",
+      "url": "https://reliefweb.int/report/indonesia/gender-alert-1-critical-protection-needs-women-and-girls-following-flores-earthquake-indonesia",
+      "tier": "official"
+    },
+    {
+      "label_en": "Gender Alert #1 - Anticipating the impact of El Niño 2026 (Indonesia, national)",
+      "label_ja": "Gender Alert #1：2026年エルニーニョの影響見通し（インドネシア、全国）",
+      "url": "https://reliefweb.int/report/indonesia/gender-alert-1-anticipating-impact-el-nino-2026-women-girls-and-vulnerable-groups-indonesia",
+      "tier": "media",
+      "_note": "エルニーニョ（干ばつ・食料不安等）に関する全国的なジェンダー分析。フローレス地震とは無関係。数値・機構の更新なし。"
+    }
+  ],
+  "attribution_en": "Figures reported by BNPB and relayed by IFRC/PMI and humanitarian partners; source and cut-off shown per row. All provisional.",
+  "attribution_ja": "BNPBの発表を IFRC・PMI 等が伝えたもの。各行に出典と時点を示す。いずれも暫定値。",
+  "activation_pages": [
+    {
+      "key": "sentinel_asia",
+      "title_en": "Sentinel Asia - Earthquake in Flores region, Indonesia (requested by BRIN)",
+      "title_ja": "センチネルアジア 緊急観測（要請：BRIN）",
+      "url": "https://sentinel-asia.org/EO/2026/article20260815ID.html"
+    },
+    {
+      "key": "disaster_charter",
+      "title_en": "International Charter - Earthquake in Indonesia, Activation #1050",
+      "title_ja": "国際災害チャーター Activation #1050",
+      "url": "https://disasterscharter.org/activations/earthquake-in-indonesia-activation-1050-"
+    }
+  ],
+  "extra_slides": [
+    {
+      "title_en": "Housing Damage by Regency",
+      "title_ja": "県別 住家被害",
+      "intro_en": "BNPB data lock, 24 August 2026. Manggarai Timur and Manggarai together account for 46% of all damaged houses and 54% of houses destroyed.",
+      "intro_ja": "BNPB 2026年8月24日データ確定。東マンガライ県とマンガライ県で全損壊棟数の46%、全壊棟数の54%を占める。",
+      "columns": [
+        {
+          "key": "regency",
+          "label_en": "Regency",
+          "label_ja": "県",
+          "w": 3.4
+        },
+        {
+          "key": "dest",
+          "label_en": "Destroyed",
+          "label_ja": "全壊",
+          "align": "right",
+          "w": 2.2
+        },
+        {
+          "key": "mod",
+          "label_en": "Moderate",
+          "label_ja": "半壊",
+          "align": "right",
+          "w": 2.2
+        },
+        {
+          "key": "light",
+          "label_en": "Light",
+          "label_ja": "一部損壊",
+          "align": "right",
+          "w": 2.3
+        },
+        {
+          "key": "total",
+          "label_en": "Total",
+          "label_ja": "計",
+          "align": "right",
+          "w": 2.4
+        }
+      ],
+      "rows": [
+        {
+          "regency_en": "Manggarai Timur",
+          "regency_ja": "東マンガライ県",
+          "dest": "6,833",
+          "mod": "4,996",
+          "light": "6,973",
+          "total": "18,802"
+        },
+        {
+          "regency_en": "Manggarai",
+          "regency_ja": "マンガライ県",
+          "dest": "6,360",
+          "mod": "5,196",
+          "light": "5,552",
+          "total": "17,108"
+        },
+        {
+          "regency_en": "Manggarai Barat",
+          "regency_ja": "西マンガライ県",
+          "dest": "3,732",
+          "mod": "2,014",
+          "light": "5,067",
+          "total": "10,813"
+        },
+        {
+          "regency_en": "Nagekeo",
+          "regency_ja": "ナゲケオ県",
+          "dest": "3,218",
+          "mod": "1,598",
+          "light": "4,828",
+          "total": "9,644"
+        },
+        {
+          "regency_en": "Ngada",
+          "regency_ja": "ンガダ県",
+          "dest": "2,256",
+          "mod": "2,116",
+          "light": "5,190",
+          "total": "9,562"
+        },
+        {
+          "regency_en": "Ende",
+          "regency_ja": "エンデ県",
+          "dest": "1,208",
+          "mod": "1,725",
+          "light": "4,547",
+          "total": "7,480"
+        },
+        {
+          "regency_en": "Sikka",
+          "regency_ja": "シッカ県",
+          "dest": "990",
+          "mod": "892",
+          "light": "2,621",
+          "total": "4,503"
+        },
+        {
+          "regency_en": "Total",
+          "regency_ja": "計",
+          "dest": "24,597",
+          "mod": "18,537",
+          "light": "34,778",
+          "total": "77,912"
+        }
+      ],
+      "note_en": "Nagekeo - nearest the epicentre and cut off in the first days - ranks fourth by total damage and third by overall impact in BNPB's assessment, which is consistent with its early absence from national tallies having been a reporting lag rather than an absence of damage. That reading is an ADRC inference, not an official finding.",
+      "note_ja": "震央最近傍で発災直後に孤立していたナゲケオ県は、損壊総数で4位、BNPBの総合的な被害評価で3位である。これは、発災初期に同県が国家集計に現れなかった理由が被害の不在ではなく集計の遅れであったとする見方と整合する。ただしこれはADRCの推論であり、公式の見解ではない。",
+      "source": {
+        "label": "BNPB data lock 24 Aug 2026 (via ANTARA)",
+        "url": "https://www.antaranews.com/berita/5713387/bnpb-percepat-rehab-rekon-rumah-rusak-karena-gempa-di-flores-ntt"
+      }
+    },
+    {
+      "title_en": "Response - Central Government",
+      "title_ja": "対応状況 — 中央政府",
+      "columns": [
+        {
+          "key": "actor",
+          "label_en": "Actor",
+          "label_ja": "主体",
+          "w": 3
+        },
+        {
+          "key": "action",
+          "label_en": "Action",
+          "label_ja": "対応",
+          "w": 9.5
+        }
+      ],
+      "rows": [
+        {
+          "actor_en": "President",
+          "actor_ja": "大統領",
+          "action_en": "Prabowo Subianto visited Nagekeo and the Maumere evacuation posts on 26 August, chairing a response meeting on site. Earlier he ordered 50,000 relief packages (275 t).",
+          "action_ja": "プラボウォ大統領が8月26日にナゲケオとマウメレの避難所を視察し、現地で対応会議を主宰。先に5万パッケージ（275トン）の発送を指示。"
+        },
+        {
+          "actor_en": "National command",
+          "actor_ja": "国家指揮系統",
+          "action_en": "Posko Pengendalian Nasional activated from day one. Tiered task forces (Satgas): regency level led by each bupati, provincial level by the governor, and a central government mentoring task force.",
+          "action_ja": "発災初日から国家統制ポスコを起動。階層型の対策本部（Satgas）を編成し、県レベルは各県知事、州レベルは州知事、中央政府は支援・伴走型のSatgasを設置。"
+        },
+        {
+          "actor_en": "Forward posts",
+          "actor_ja": "前方拠点",
+          "action_en": "Two forward posts split the seven regencies: Labuan Bajo covers Manggarai Barat, Manggarai, Manggarai Timur and Nagekeo; Maumere covers Sikka, Ende and Ngada.",
+          "action_ja": "前方ポスコ2か所で7県を分担。ラブアンバジョが西マンガライ・マンガライ・東マンガライ・ナゲケオ、マウメレがシッカ・エンデ・ンガダを担当。"
+        },
+        {
+          "actor_en": "Line ministries",
+          "actor_ja": "関係省庁",
+          "action_en": "Ministry of Health field hospital designed to remain safe during aftershocks; Ministry of Energy generators; Ministry of Higher Education waived tuition for 5,000 affected students; Ministry of Religious Affairs strengthened its response.",
+          "action_ja": "保健省が余震時にも安全な設計の野外病院を設置、エネルギー鉱物資源省が発電機、高等教育省が被災学生5,000人の学費を免除、宗教省が対応を強化。"
+        },
+        {
+          "actor_en": "Logistics",
+          "actor_ja": "物流",
+          "action_en": "Citilink carried 91.5 t of relief cargo; Baznas and other bodies are operating public kitchens.",
+          "action_ja": "Citilinkが救援物資91.5トンを輸送。Baznas等が炊き出しを運営。"
+        }
+      ],
+      "source": {
+        "label": "ANTARA / BNPB / Kompas",
+        "url": "https://www.antaranews.com/video/5712568/presiden-tinjau-penanganan-dampak-gempa-bumi-di-nagekeo-ntt"
+      }
+    },
+    {
+      "title_en": "Recovery and Reconstruction",
+      "title_ja": "復旧・復興",
+      "intro_en": "The response has entered rehabilitation and reconstruction while the emergency period still runs to 12 September 2026.",
+      "intro_ja": "緊急対応期間が2026年9月12日まで継続する一方で、対応は復旧・復興段階に入っている。",
+      "columns": [
+        {
+          "key": "work",
+          "label_en": "Workstream",
+          "label_ja": "取り組み",
+          "w": 3.4
+        },
+        {
+          "key": "content",
+          "label_en": "Content",
+          "label_ja": "内容",
+          "w": 9.1
+        }
+      ],
+      "rows": [
+        {
+          "work_en": "Assessment teams",
+          "work_ja": "アセスメント班",
+          "content_en": "BNPB deployed teams to all seven affected regencies to accelerate rehabilitation and reconstruction of damaged housing.",
+          "content_ja": "BNPBが被災7県すべてにチームを派遣し、住家の復旧・復興を加速。"
+        },
+        {
+          "work_en": "Not waiting for the emergency phase to end",
+          "work_ja": "緊急対応期間の終了を待たない",
+          "content_en": "Assessment preparation and damage-grading standardisation proceed in parallel with the emergency response period.",
+          "content_ja": "アセスメントの準備と被害判定の標準化を、緊急対応期間と並行して進める。"
+        },
+        {
+          "work_en": "By name by address",
+          "work_ja": "個人単位のデータ",
+          "content_en": "Technical guidance delivered to local government agencies (OPD) and hundreds of volunteer enumerators, beginning in Manggarai Barat and Manggarai, to produce name-and-address level data.",
+          "content_ja": "地方行政機関（OPD）と数百人のボランティア調査員に技術指導を実施。西マンガライ県・マンガライ県から開始し、氏名・住所単位のデータを整備。"
+        },
+        {
+          "work_en": "Build back better",
+          "work_ja": "より良い復興",
+          "content_en": "Reconstruction is to follow build back better principles so that rebuilt housing is more resilient, based on objective and auditable data.",
+          "content_ja": "再建は build back better の原則に沿い、客観的で検証可能なデータに基づいて、より強靭な住宅を目指す。"
+        },
+        {
+          "work_en": "Housing repair funding",
+          "work_ja": "住宅修復資金",
+          "content_en": "The government is preparing repair funding for affected households. Per-household rates and the total budget had not been published.",
+          "content_ja": "政府は被災世帯向けの住宅修復資金を準備中。世帯あたりの単価と総額は未公表。"
+        }
+      ],
+      "source": {
+        "label": "BNPB (Pusdatinkom, 27 Aug 2026) via ANTARA",
+        "url": "https://www.antaranews.com/berita/5713387/bnpb-percepat-rehab-rekon-rumah-rusak-karena-gempa-di-flores-ntt"
+      }
+    },
+    {
+      "title_en": "Items to Confirm in the Next Cycle",
+      "title_ja": "次回への確認事項",
+      "columns": [
+        {
+          "key": "item",
+          "label_en": "Item",
+          "label_ja": "項目",
+          "w": 3.6
+        },
+        {
+          "key": "detail",
+          "label_en": "Detail",
+          "label_ja": "内容",
+          "w": 7.6
+        },
+        {
+          "key": "pri",
+          "label_en": "Priority",
+          "label_ja": "優先度",
+          "align": "center",
+          "w": 1.3
+        }
+      ],
+      "rows": [
+        {
+          "item_en": "Reconciling the two house figures",
+          "item_ja": "住家2数値の整合",
+          "detail_en": "81,436 'affected' (26 Aug) versus 77,912 'damaged' (24 Aug data lock). Confirm the definitional boundary before external use.",
+          "detail_ja": "81,436棟「影響」（8/26）と77,912棟「被害」（8/24確定）。対外使用前に定義の境界を確認すること。",
+          "pri_en": "High",
+          "pri_ja": "高"
+        },
+        {
+          "item_en": "Public-facility counts",
+          "item_ja": "公共施設の集計",
+          "detail_en": "The 24 August and 26 August BNPB figures differ substantially (education 1,378 vs 658). Identify which measure each uses.",
+          "detail_ja": "8月24日と26日のBNPBの数値が大きく異なる（教育1,378棟と658棟）。それぞれが何を数えているかを特定する。",
+          "pri_en": "High",
+          "pri_ja": "高"
+        },
+        {
+          "item_en": "Final death toll composition",
+          "item_ja": "死者の内訳の確定",
+          "detail_en": "The 48 direct / 57 subsequent split will likely be revised as health-facility and SAR records are reconciled.",
+          "detail_ja": "直接48人・事後57人の区分は、医療機関と捜索救助の記録の突合により見直される見込み。",
+          "pri_en": "Med",
+          "pri_ja": "中"
+        },
+        {
+          "item_en": "Maximum tsunami run-up",
+          "item_ja": "最大遡上高",
+          "detail_en": "Secondary compilations cite 1.61 m against a maximum BMKG gauge value of 0.94 m. Identify the basis before citing.",
+          "detail_ja": "二次情報は1.61mとするが、BMKG観測の最大値は0.94m。引用前に根拠を特定すること。",
+          "pri_en": "Med",
+          "pri_ja": "中"
+        },
+        {
+          "item_en": "USGS PAGER revision",
+          "item_ja": "USGS PAGERの改訂",
+          "detail_en": "Confirm whether the alert level was revised upward after the toll reached 105.",
+          "detail_ja": "死者105人到達後に警報レベルが上方改訂されたかを確認。",
+          "pri_en": "Med",
+          "pri_ja": "中"
+        },
+        {
+          "item_en": "Emergency period after 12 September",
+          "item_ja": "9月12日以降の緊急対応期間",
+          "detail_en": "Confirm whether the period is extended again or transitions formally to recovery.",
+          "detail_ja": "期間が再延長されるか、正式に復興段階へ移行するかを確認。",
+          "pri_en": "Med",
+          "pri_ja": "中"
+        },
+        {
+          "item_en": "Displacement drivers",
+          "item_ja": "避難の要因",
+          "detail_en": "BNPB attributes much of the 179,037 caseload to fear and hoaxes rather than housing loss; the shelter caseload may fall quickly once aftershocks subside.",
+          "detail_ja": "BNPBは179,037人の多くを住家喪失ではなく恐怖とデマに帰している。余震が収まれば避難者数は急減する可能性がある。",
+          "pri_en": "Med",
+          "pri_ja": "中"
+        },
+        {
+          "item_en": "Lewotobi Laki-laki eruption",
+          "item_ja": "レウォトビ・ラキラキ火山",
+          "detail_en": "Flores Timur is outside the earthquake-affected area but under volcanic response; watch for compounding demands on NTT provincial capacity.",
+          "detail_ja": "東フローレス県は地震被災地の外だが火山対応下にある。NTT州の対応能力への複合的負荷に注意。",
+          "pri_en": "Low",
+          "pri_ja": "低"
+        }
+      ],
+      "source": {
+        "label": "ADRC compilation",
+        "url": "https://reliefweb.int/disaster/eq-2026-000150-idn"
+      }
+    }
+  ],
+  "observations": [
+    {
+      "tier": "official",
+      "en": "The sequence has been unusually productive: 7,259 events to 25 August, against 265 in the first ten hours. The largest aftershock was M6.2 and no event exceeded the mainshock.",
+      "ja": "地震活動は非常に活発で、8月25日までに7,259回に達した（発災10時間時点では265回）。最大余震はM6.2で、本震を上回るイベントはない。"
+    },
+    {
+      "tier": "official",
+      "en": "Aftershocks are distributed along the north coast of Flores - Aesesa, Riung, Kota Ambai, Manggarai and Ruteng - consistent with an E-W striking rupture on the Flores Back-Arc Thrust.",
+      "ja": "余震はフローレス島北岸（Aesesa、Riung、Kota Ambai、Manggarai、Ruteng）に沿って分布し、フローレス背弧衝上断層の東西走向の破壊と整合する。"
+    },
+    {
+      "tier": "official",
+      "en": "The first-day totals understated the final picture by one to two orders of magnitude: deaths 2 to 105, evacuees about 2,000 to 179,037, injuries 13 to 1,678. This is characteristic of a shallow event that severs road and telecom access to the worst-hit districts.",
+      "ja": "発災当日の集計は最終像を1〜2桁過小評価していた（死者2人→105人、避難者約2,000人→179,037人、負傷13人→1,678人）。被害最大地区への道路・通信を寸断する浅発地震に特徴的な現象である。"
+    },
+    {
+      "tier": "official",
+      "en": "BNPB attributes the very large displacement caseload substantially to fear of continuing aftershocks and to hoaxes predicting a larger earthquake, not to housing loss alone. Government and partners are running counter-messaging.",
+      "ja": "BNPBは避難者数が極めて多い要因を、住家の喪失だけでなく、継続する余震への恐怖と、より大きな地震を予告するデマに帰している。政府と関係機関は打ち消し広報を実施している。"
+    },
+    {
+      "tier": "tbc",
+      "en": "Rupture length, slip distribution and a finite-fault model had not been published in accessible sources at the time of writing. Figures remain provisional; BNPB collects data in stages from hamlet level upward and the by-name-by-address survey is still running.",
+      "ja": "破壊長・すべり分布・有限断層モデルは、本資料作成時点でアクセス可能なソースに未公表。数値はいずれも暫定であり、BNPBは集落レベルから段階的に収集を継続、氏名・住所単位の調査も進行中である。"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+# ビルド成果物。配布は dist ブランチ（publish_dist.js）で行うのでコミットしない
+_build/
+
+# npm install で復元できる。package.json/package-lock.json はコミットする
+node_modules/
