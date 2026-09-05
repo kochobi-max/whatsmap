@@ -74,8 +74,26 @@ console.log("   published_at_jst = " + r.published_at_jst + "   " + (r.edition |
 for (const f of r.files) console.log("     " + f.name + "  " + f.bytes + " bytes");
 
 if (r.published_date_jst !== today) {
-  console.log("   公開日が今日ではない。");
-  console.log("STATUS: NO-SEND old-record " + r.published_date_jst);
+  // **なぜ古いのかを言う。** 「old-record」だけでは打つ手が分からない。
+  // 2026-09-05、荒木田さんのPCがオフラインで3件とも止まったが、
+  // 報告は「NO-SEND old-record 2026-09-04」としか言わなかった。
+  //
+  //   今日の見送り記録がある   → PCは動いた。配布物が当日ビルドでなく飛ばした
+  //   今日の見送り記録も無い   → **PCがそもそも動いていない**（電源・ネットワーク・
+  //                              タスクスケジューラのいずれか）
+  const skipToday = fs.existsSync(skip)
+    && (JSON.parse(fs.readFileSync(skip, "utf8")).skipped_at_jst || "").slice(0, 10) === today;
+  console.log("   公開日が今日ではない（" + r.published_date_jst + "）。");
+  if (skipToday) {
+    console.log("   今日の見送り記録がある。**PCは動いたが、配布物が当日ビルドでないため飛ばした。**");
+    console.log("STATUS: NO-SEND old-record " + r.published_date_jst + " (pc-skipped)");
+  } else {
+    console.log("   今日の見送り記録も無い。**PCがそもそも動いていない。**");
+    console.log("   電源が入っていないか、ネットワークに繋がっていないか、");
+    console.log("   タスクスケジューラの定期実行（08:10 JST）が走っていない。");
+    console.log("   対処: PCで C:\\Users\\arakida\\ADRC_setup_and_publish.bat を実行する。");
+    console.log("STATUS: NO-SEND old-record " + r.published_date_jst + " (pc-not-run)");
+  }
   process.exit(1);
 }
 
