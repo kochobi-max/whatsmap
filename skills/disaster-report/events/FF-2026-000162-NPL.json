@@ -19,14 +19,14 @@
     "title_ja": "2026年 ボテコシ川 土石流・鉄砲水（ネパール）",
     "subtitle_en": "Rasuwa, Nuwakot and Dhading Districts - 26 August 2026",
     "subtitle_ja": "ラスワ郡・ヌワコット郡・ダディン郡、2026年8月26日",
-    "edition_en": "10th report",
-    "edition_ja": "第10報",
+    "edition_en": "11th report",
+    "edition_ja": "第11報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
-    "stamp": "2026-09-04 09:20 JST",
-    "update_date": "04/09/2026",
-    "timeline_range_en": "25 August - 4 September 2026 (Nepal Standard Time, UTC+5:45)",
-    "timeline_range_ja": "2026年8月25日〜9月4日（ネパール標準時 UTC+5:45）",
+    "stamp": "2026-09-05 12:30 JST",
+    "update_date": "05/09/2026",
+    "timeline_range_en": "25 August - 5 September 2026 (Nepal Standard Time, UTC+5:45)",
+    "timeline_range_ja": "2026年8月25日〜9月5日（ネパール標準時 UTC+5:45）",
     "tz_note_en": "All times are Nepal Standard Time (NPT, UTC+5:45) unless stated.",
     "tz_note_ja": "時刻は特記なき限りネパール標準時（NPT、UTC+5:45）。",
     "optional_slides": [],
@@ -37,7 +37,7 @@
       "houses_destroyed": null,
       "evacuees": null,
       "tier": "official",
-      "as_of": "2026-09-04 (WFP Nepal Situation Report on the Rasuwa Flood Response, citing government figures; NDRRMA's own published situation report remains #11, 1 Sep 18:00 NPT, with deaths 1,050 / missing 3,916)"
+      "as_of": "2026-09-05 (OCHA/UN RC Nepal Rasuwa Flood Situation Report No. 6, attributing the same figures to NDRRMA, 3 Sep 19:00; unchanged from the 4 Sep WFP report. NDRRMA's own published PDF situation report remains #11, 1 Sep 18:00 NPT, with deaths 1,050 / missing 3,916)"
     },
     "chronology_note_en": "Government and agency actions from the onset of the flood - all official sources.",
     "chronology_note_ja": "発災からの政府・機関の主要な動き（すべて公的情報）。",
@@ -112,20 +112,20 @@
     {
       "item_en": "Deaths",
       "item_ja": "死者",
-      "value_en": "1,050 deaths (NDRRMA Situation Report #11, 1 Sep 18:00 NPT), by district: Chitwan 321, Nawalparasi East 216, Nawalparasi West 170, Nuwakot 142, Gorkha 65, Dhading 57, Tanahu 38, Rasuwa 41. The toll rose through the day of 1 Sep: 987 at the 1 Sep 09:00 cut, 1,003 at the 1 Sep 13:00 cut (cited in OCHA's Rasuwa Flood Flash Update #5), and 1,050 at this 1 Sep 18:00 cut, including 3 deaths recorded during hospital treatment. Earlier: 903 (31 Aug 09:00), 734 (30 Aug), 616 (29 Aug, WFP citing government figures), 539 (NEOC, 28 Aug). The large downstream district counts (Chitwan, Nawalparasi) reflect the surge travelling far down the Trishuli-Narayani river system, not a second event. No NDRRMA PDF situation report beyond #11 has been published as of this update; the figures below for 3-4 Sep come from UN agency situation reports that attribute their numbers to government/authorities without citing a specific NDRRMA report number. IOM's Nepal Flood Response Situation Report #3 (as of 3 Sep) put the toll at 1,259; WFP's Nepal Situation Report on the Rasuwa Flood Response (4 Sep) states \"reported fatalities have risen to 1,259\", the same figure, suggesting both are citing the same underlying government count without it having moved between the two cut-offs. Neither report gives a district breakdown or exact cut-off time for this figure.",
-      "value_ja": "1,050人（NDRRMA状況報告第11号、9月1日18:00 NPT）。郡別内訳：チトワン321、ナワルパラシ東216、ナワルパラシ西170、ヌワコット142、ゴルカ65、ダディン57、タナフ38、ラスワ41。9月1日中に987人（同日09:00締め）→1,003人（同日13:00締め、OCHA「Rasuwa Flood Flash Update #5」引用）→1,050人（本18:00締め、うち治療中の死亡3人を含む）と推移した。それ以前は903人（8月31日09:00）、734人（8月30日）、616人（8月29日、WFPが政府集計を引用）、539人（NEOC、8月28日）。下流のチトワン・ナワルパラシで多数を占めるのは、トリシュリ川からナラヤニ川へと出水が遠く下流まで及んだためであり、別の災害ではない。本更新時点で、NDRRMAの第11号より後のPDF状況報告は公表されていない。以下9月3〜4日の数値は国連機関の状況報告によるもので、いずれも「政府・当局」を出典とするのみでNDRRMAの報番号は示していない。IOM「ネパール洪水対応状況報告第3号」（9月3日時点）は死者1,259人とし、WFP「ラスワ洪水対応状況報告」（9月4日）も「死者は1,259人に増加」と同じ数値を示している。両者が同じ政府集計を引用し、その間に数値が動いていない可能性がある。いずれの報告も郡別内訳や正確な締め時刻は示していない。",
-      "source_en": "WFP Nepal Situation Report on the Rasuwa Flood Response, 4 Sep 2026 (citing government figures); also IOM Nepal Flood Response Situation Report #3, 3 Sep 2026. Last NDRRMA PDF: Situation Report #11, 1 Sep 18:00 NPT",
-      "source_ja": "WFP「ラスワ洪水対応状況報告」（9月4日、政府集計を引用）／IOM「ネパール洪水対応状況報告第3号」（9月3日）。NDRRMAのPDFとしては状況報告第11号（9月1日18:00 NPT）が最新",
+      "value_en": "1,050 deaths (NDRRMA Situation Report #11, 1 Sep 18:00 NPT), by district: Chitwan 321, Nawalparasi East 216, Nawalparasi West 170, Nuwakot 142, Gorkha 65, Dhading 57, Tanahu 38, Rasuwa 41. The toll rose through the day of 1 Sep: 987 at the 1 Sep 09:00 cut, 1,003 at the 1 Sep 13:00 cut (cited in OCHA's Rasuwa Flood Flash Update #5), and 1,050 at this 1 Sep 18:00 cut, including 3 deaths recorded during hospital treatment. Earlier: 903 (31 Aug 09:00), 734 (30 Aug), 616 (29 Aug, WFP citing government figures), 539 (NEOC, 28 Aug). The large downstream district counts (Chitwan, Nawalparasi) reflect the surge travelling far down the Trishuli-Narayani river system, not a second event. No NDRRMA PDF situation report beyond #11 has been published as of this update; the figures below for 3-4 Sep come from UN agency situation reports that attribute their numbers to government/authorities without citing a specific NDRRMA report number. IOM's Nepal Flood Response Situation Report #3 (as of 3 Sep) put the toll at 1,259; WFP's Nepal Situation Report on the Rasuwa Flood Response (4 Sep) states \"reported fatalities have risen to 1,259\", the same figure, suggesting both are citing the same underlying government count without it having moved between the two cut-offs. Neither report gives a district breakdown or exact cut-off time for this figure. OCHA's Rasuwa Flood Situation Report No. 6 (as of 5 Sep) is the first to attach a specific cut to this figure, attributing it to \"NDRRMA, 3 September, 19:00\"; still no NDRRMA PDF matching that cut has been found.",
+      "value_ja": "1,050人（NDRRMA状況報告第11号、9月1日18:00 NPT）。郡別内訳：チトワン321、ナワルパラシ東216、ナワルパラシ西170、ヌワコット142、ゴルカ65、ダディン57、タナフ38、ラスワ41。9月1日中に987人（同日09:00締め）→1,003人（同日13:00締め、OCHA「Rasuwa Flood Flash Update #5」引用）→1,050人（本18:00締め、うち治療中の死亡3人を含む）と推移した。それ以前は903人（8月31日09:00）、734人（8月30日）、616人（8月29日、WFPが政府集計を引用）、539人（NEOC、8月28日）。下流のチトワン・ナワルパラシで多数を占めるのは、トリシュリ川からナラヤニ川へと出水が遠く下流まで及んだためであり、別の災害ではない。本更新時点で、NDRRMAの第11号より後のPDF状況報告は公表されていない。以下9月3〜4日の数値は国連機関の状況報告によるもので、いずれも「政府・当局」を出典とするのみでNDRRMAの報番号は示していない。IOM「ネパール洪水対応状況報告第3号」（9月3日時点）は死者1,259人とし、WFP「ラスワ洪水対応状況報告」（9月4日）も「死者は1,259人に増加」と同じ数値を示している。両者が同じ政府集計を引用し、その間に数値が動いていない可能性がある。いずれの報告も郡別内訳や正確な締め時刻は示していない。OCHA「ラスワ洪水状況報告第6号」（9月5日時点）は、初めてこの数値に具体的な締め時刻を付し、「NDRRMA、9月3日19:00」としている。ただしこの締めに対応するNDRRMAのPDFはなお見つかっていない。",
+      "source_en": "WFP Nepal Situation Report on the Rasuwa Flood Response, 4 Sep 2026 (citing government figures); also IOM Nepal Flood Response Situation Report #3, 3 Sep 2026; OCHA Rasuwa Flood Situation Report No. 6, 5 Sep 2026 (attributing to NDRRMA, 3 Sep 19:00). Last NDRRMA PDF: Situation Report #11, 1 Sep 18:00 NPT",
+      "source_ja": "WFP「ラスワ洪水対応状況報告」（9月4日、政府集計を引用）／IOM「ネパール洪水対応状況報告第3号」（9月3日）／OCHA「ラスワ洪水状況報告第6号」（9月5日、NDRRMA・9月3日19:00と明記）。NDRRMAのPDFとしては状況報告第11号（9月1日18:00 NPT）が最新",
       "tier": "official",
       "url": "https://reliefweb.int/report/nepal/wfp-nepal-situation-report-rasuwa-flood-response-04-september-2026"
     },
     {
       "item_en": "Missing",
       "item_ja": "行方不明",
-      "value_en": "3,916 people out of contact (approx.; NDRRMA Situation Report #11, 1 Sep 18:00 NPT), unchanged from the 1 Sep 09:00 and (per OCHA) 13:00 cuts the same day. Breakdown: security-agency personnel 2,423 (62%), government-agency personnel 663 (17%), foreign nationals 583 (15%), Nepalis travelling with foreign tourists 164 (4%), reports received from DEOC 63 (2%). NDRRMA gives no explanation for why this count has not moved while deaths have risen through the day; earlier this reported-missing series ran NEOC's 977 (28 Aug) to WFP's 2,448 (30 Aug) to 4,247 (31 Aug 09:00) to 3,916 (1 Sep). Separately, WFP's 29 Aug figure of 1,924 people missing or out of contact was described as a broader measure than NEOC's reported-to-authorities count; the two bases are not interchangeable. By 3 Sep, IOM's Situation Report #3 puts this figure at 5,053; WFP's 4 Sep report gives 5,083 (\"still missing\"). Neither UN report specifies whether this continues the same reported-missing series as NDRRMA's 3,916 or reflects a broader out-of-contact measure of the kind WFP has used before (see the 29 Aug note above); no NDRRMA PDF situation report beyond #11 confirms either figure.",
-      "value_ja": "約3,916人が連絡不通（NDRRMA状況報告第11号、9月1日18:00 NPT）。同日09:00締め、および（OCHA経由の）13:00締めから横ばい。内訳：治安機関要員2,423人（62%）、政府機関要員663人（17%）、外国人583人（15%）、外国人旅行者に同行していたネパール人164人（4%）、DEOC経由の届出63人（2%）。死者数が同日中に増え続けている一方でこの数値が動いていない理由をNDRRMAは説明していない。この「届出に基づく行方不明」の系列は、NEOC977人（8月28日）→WFP2,448人（8月30日）→4,247人（8月31日09:00）→3,916人（9月1日）と推移している。なお、WFPが8月29日に示した1,924人（行方不明または連絡が取れない者）は、NEOCの「当局への届出」に基づく集計より広い概念とされており、両者は互換的に使えない。9月3日時点でIOM状況報告第3号はこの数値を5,053人とし、WFPの9月4日報告は5,083人（「なお行方不明」）としている。いずれの国連機関報告も、これがNDRRMAの3,916人と同じ「届出ベース」の系列を継続するものか、WFPが8月29日に示したような広い「連絡不通」概念によるものかを明示していない。NDRRMAのPDF状況報告（第11号が最新）では、いずれの数値も確認できていない。",
-      "source_en": "WFP Nepal Situation Report on the Rasuwa Flood Response, 4 Sep 2026 (citing government figures); also IOM Nepal Flood Response Situation Report #3, 3 Sep 2026. Last NDRRMA PDF: Situation Report #11, 1 Sep 18:00 NPT",
-      "source_ja": "WFP「ラスワ洪水対応状況報告」（9月4日、政府集計を引用）／IOM「ネパール洪水対応状況報告第3号」（9月3日）。NDRRMAのPDFとしては状況報告第11号（9月1日18:00 NPT）が最新",
+      "value_en": "3,916 people out of contact (approx.; NDRRMA Situation Report #11, 1 Sep 18:00 NPT), unchanged from the 1 Sep 09:00 and (per OCHA) 13:00 cuts the same day. Breakdown: security-agency personnel 2,423 (62%), government-agency personnel 663 (17%), foreign nationals 583 (15%), Nepalis travelling with foreign tourists 164 (4%), reports received from DEOC 63 (2%). NDRRMA gives no explanation for why this count has not moved while deaths have risen through the day; earlier this reported-missing series ran NEOC's 977 (28 Aug) to WFP's 2,448 (30 Aug) to 4,247 (31 Aug 09:00) to 3,916 (1 Sep). Separately, WFP's 29 Aug figure of 1,924 people missing or out of contact was described as a broader measure than NEOC's reported-to-authorities count; the two bases are not interchangeable. By 3 Sep, IOM's Situation Report #3 puts this figure at 5,053; WFP's 4 Sep report gives 5,083 (\"still missing\"). Neither UN report specifies whether this continues the same reported-missing series as NDRRMA's 3,916 or reflects a broader out-of-contact measure of the kind WFP has used before (see the 29 Aug note above); no NDRRMA PDF situation report beyond #11 confirms either figure. OCHA's Rasuwa Flood Situation Report No. 6 (as of 5 Sep) also gives 5,083, attributed to \"NDRRMA, 3 September, 19:00\", alongside 12,038 rescued - the same rescue figure IOM had reported on 3 Sep.",
+      "value_ja": "約3,916人が連絡不通（NDRRMA状況報告第11号、9月1日18:00 NPT）。同日09:00締め、および（OCHA経由の）13:00締めから横ばい。内訳：治安機関要員2,423人（62%）、政府機関要員663人（17%）、外国人583人（15%）、外国人旅行者に同行していたネパール人164人（4%）、DEOC経由の届出63人（2%）。死者数が同日中に増え続けている一方でこの数値が動いていない理由をNDRRMAは説明していない。この「届出に基づく行方不明」の系列は、NEOC977人（8月28日）→WFP2,448人（8月30日）→4,247人（8月31日09:00）→3,916人（9月1日）と推移している。なお、WFPが8月29日に示した1,924人（行方不明または連絡が取れない者）は、NEOCの「当局への届出」に基づく集計より広い概念とされており、両者は互換的に使えない。9月3日時点でIOM状況報告第3号はこの数値を5,053人とし、WFPの9月4日報告は5,083人（「なお行方不明」）としている。いずれの国連機関報告も、これがNDRRMAの3,916人と同じ「届出ベース」の系列を継続するものか、WFPが8月29日に示したような広い「連絡不通」概念によるものかを明示していない。NDRRMAのPDF状況報告（第11号が最新）では、いずれの数値も確認できていない。OCHA「ラスワ洪水状況報告第6号」（9月5日時点）も同じ5,083人を「NDRRMA、9月3日19:00」の出典として示し、救助12,038人も併記している（この救助数値はIOMが9月3日時点で示していたものと同じ）。",
+      "source_en": "WFP Nepal Situation Report on the Rasuwa Flood Response, 4 Sep 2026 (citing government figures); also IOM Nepal Flood Response Situation Report #3, 3 Sep 2026; OCHA Rasuwa Flood Situation Report No. 6, 5 Sep 2026 (attributing to NDRRMA, 3 Sep 19:00). Last NDRRMA PDF: Situation Report #11, 1 Sep 18:00 NPT",
+      "source_ja": "WFP「ラスワ洪水対応状況報告」（9月4日、政府集計を引用）／IOM「ネパール洪水対応状況報告第3号」（9月3日）／OCHA「ラスワ洪水状況報告第6号」（9月5日、NDRRMA・9月3日19:00と明記）。NDRRMAのPDFとしては状況報告第11号（9月1日18:00 NPT）が最新",
       "tier": "official",
       "url": "https://reliefweb.int/report/nepal/wfp-nepal-situation-report-rasuwa-flood-response-04-september-2026"
     },
@@ -172,12 +172,22 @@
     {
       "item_en": "Displaced / in need",
       "item_ja": "避難・要支援者",
-      "value_en": "Displacement figures remain preliminary. Five known sites in Nuwakot District are together sheltering more than 1,000 displaced people against a combined capacity of 1,350 (28 Aug); the whereabouts of people displaced from other districts were not yet known at that point. By 1 September, OCHA's Rasuwa Flood Flash Update #5 reported 3,458 displaced people living in 27 displacement sites in Nuwakot and Rasuwa, mostly in schools, though key gaps remain in who is displaced, where, and their needs. Relief is not reaching all affected areas: parts of Tarkeshwar (Nuwakot) had received no assistance, all wards of Aamachhodingmo (Rasuwa) remained inaccessible by road, and four rural municipalities in Dhading lacked safe drinking water. Access is constrained by 41 destroyed bridges and blocked highways. NDRRMA's Situation Report #11 (1 Sep 18:00) separately counts 27 holding centres (Nuwakot 16, Rasuwa 11) currently housing 2,466 people in Nuwakot, 398 in Rasuwa, 260 in Dhading and 329 in Kathmandu; the two counts (OCHA's 'displacement sites' and NDRRMA's 'holding centres') have not been reconciled.",
-      "value_ja": "避難者数はなお暫定。ヌワコット郡で把握されている5か所の避難所が、収容力1,350人に対し合計1,000人超を受け入れている（8月28日時点）。他の郡で避難した人々の所在はその時点で把握できていなかった。9月1日時点でOCHAの「Rasuwa Flood Flash Update #5」は、ヌワコット・ラスワ両郡の避難拠点27か所（大半は学校）に3,458人が避難していると報告。ただし誰がどこに避難し何を必要としているかの把握には依然として大きな空白がある。支援が全ての被災地域に届いていない：ヌワコット郡タルケシュワルの一部は支援を受けておらず、ラスワ郡アマチョディンモの全ワードは道路で到達不能、ダディン郡の4村では安全な飲料水が不足。橋梁41本の流失と幹線道路の寸断がアクセスを制約している。NDRRMA状況報告第11号（9月1日18:00）は別途、避難所（ホールディングセンター）27か所（ヌワコット16、ラスワ11）に、ヌワコット2,466人・ラスワ398人・ダディン260人・カトマンズ329人が滞在中としている。OCHAの「避難拠点」とNDRRMAの「ホールディングセンター」の2つの集計は突合されていない。",
-      "source_en": "UN Flash Update #3, 28 Aug; OCHA Rasuwa Flood Flash Update #5, as of 1 Sep; NDRRMA Situation Report #11, 1 Sep 18:00 NPT",
-      "source_ja": "国連 Flash Update #3（8月28日）／OCHA「Rasuwa Flood Flash Update #5」（9月1日時点）／NDRRMA 状況報告第11号（9月1日18:00 NPT）",
+      "value_en": "Displacement figures remain preliminary. Five known sites in Nuwakot District are together sheltering more than 1,000 displaced people against a combined capacity of 1,350 (28 Aug); the whereabouts of people displaced from other districts were not yet known at that point. By 1 September, OCHA's Rasuwa Flood Flash Update #5 reported 3,458 displaced people living in 27 displacement sites in Nuwakot and Rasuwa, mostly in schools, though key gaps remain in who is displaced, where, and their needs. Relief is not reaching all affected areas: parts of Tarkeshwar (Nuwakot) had received no assistance, all wards of Aamachhodingmo (Rasuwa) remained inaccessible by road, and four rural municipalities in Dhading lacked safe drinking water. Access is constrained by 41 destroyed bridges and blocked highways. NDRRMA's Situation Report #11 (1 Sep 18:00) separately counts 27 holding centres (Nuwakot 16, Rasuwa 11) currently housing 2,466 people in Nuwakot, 398 in Rasuwa, 260 in Dhading and 329 in Kathmandu; the two counts (OCHA's 'displacement sites' and NDRRMA's 'holding centres') have not been reconciled. By 5 September, OCHA's Rasuwa Flood Situation Report No. 6 puts displacement at 3,844 people across 34 sites in Nuwakot, Rasuwa, Dhading and Kathmandu - up from the 1 Sep count of 3,458 across 27 sites in only two of those districts. Separately, IOM's Displacement Tracking Matrix estimates 4,288 households were affected by the floods, of which 2,886 households were displaced; IOM's earlier Situation Report #3 (3 Sep) had given a narrower, Nuwakot-only figure of 1,897 households displaced. None of these household- and person-based counts (OCHA sites, NDRRMA holding centres, IOM DTM) have been reconciled with one another.",
+      "value_ja": "避難者数はなお暫定。ヌワコット郡で把握されている5か所の避難所が、収容力1,350人に対し合計1,000人超を受け入れている（8月28日時点）。他の郡で避難した人々の所在はその時点で把握できていなかった。9月1日時点でOCHAの「Rasuwa Flood Flash Update #5」は、ヌワコット・ラスワ両郡の避難拠点27か所（大半は学校）に3,458人が避難していると報告。ただし誰がどこに避難し何を必要としているかの把握には依然として大きな空白がある。支援が全ての被災地域に届いていない：ヌワコット郡タルケシュワルの一部は支援を受けておらず、ラスワ郡アマチョディンモの全ワードは道路で到達不能、ダディン郡の4村では安全な飲料水が不足。橋梁41本の流失と幹線道路の寸断がアクセスを制約している。NDRRMA状況報告第11号（9月1日18:00）は別途、避難所（ホールディングセンター）27か所（ヌワコット16、ラスワ11）に、ヌワコット2,466人・ラスワ398人・ダディン260人・カトマンズ329人が滞在中としている。OCHAの「避難拠点」とNDRRMAの「ホールディングセンター」の2つの集計は突合されていない。9月5日時点でOCHA「ラスワ洪水状況報告第6号」は、避難者数をヌワコット・ラスワ・ダディン・カトマンズの4郡34か所・3,844人としている（9月1日時点は2郡27か所・3,458人）。別途、IOMの避難民追跡調査（DTM）は、洪水で被災した世帯を4,288、うち避難した世帯を2,886と推計している。IOMの状況報告第3号（9月3日）が示していた1,897世帯（ヌワコット郡のみ）より広い集計である。これらOCHA・NDRRMA・IOMの世帯・人数ベースの集計は、いずれも互いに突合されていない。",
+      "source_en": "UN Flash Update #3, 28 Aug; OCHA Rasuwa Flood Flash Update #5, as of 1 Sep; NDRRMA Situation Report #11, 1 Sep 18:00 NPT; OCHA Rasuwa Flood Situation Report No. 6, as of 5 Sep",
+      "source_ja": "国連 Flash Update #3（8月28日）／OCHA「Rasuwa Flood Flash Update #5」（9月1日時点）／NDRRMA 状況報告第11号（9月1日18:00 NPT）／OCHA「ラスワ洪水状況報告第6号」（9月5日時点）",
       "tier": "official",
-      "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-update-5-1-september-2026"
+      "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-situation-report-no-6"
+    },
+    {
+      "item_en": "Humanitarian appeal (financial)",
+      "item_ja": "人道アピール（資金）",
+      "value_en": "The Humanitarian Country Team's Nepal: Rasuwa Flood Flash Appeal (OCHA/UN RC Nepal, 4 Sep) seeks US$49.6 million to assist 84,270 people (19,284 households) in 17 municipalities across six districts (Rasuwa, Nuwakot, Dhading, Chitwan, Gorkha and Tanahu) through the end of 2026. Requirements cover ten sectors, with roughly three quarters concentrated in five: food security (US$7.94 million), WASH (US$7.9 million), health (US$7.6 million), logistics and emergency telecommunications (US$7.33 million) and shelter (US$7.1 million). The appeal complements the Government's Official Disaster Relief Appeal of 27 August and is a time-bound humanitarian response, not a recovery plan; recovery needs will be addressed through the Post-Disaster Needs Assessment. Ahead of the appeal, the CERF allocation was recalibrated to US$2.5 million to sustain the immediate response in the worst-affected districts.",
+      "value_ja": "人道country teamによる「ネパール：ラスワ洪水 フラッシュアピール」（OCHA／国連ネパール常駐調整官事務所、9月4日）は、6郡（ラスワ、ヌワコット、ダディン、チトワン、ゴルカ、タナフ）17市町村の84,270人（19,284世帯）を対象に、2026年末までの支援として4,960万米ドルを要請している。10分野にわたる資金需要のうち約4分の3を占める上位5分野は、食料安全保障（794万ドル）、水・衛生（790万ドル）、保健（760万ドル）、ロジスティクス・緊急通信（733万ドル）、シェルター（710万ドル）。同アピールは政府の8月27日付「公式災害救援アピール」を補完するものであり、復旧計画ではなく期限を区切った人道対応で、復旧・復興のニーズは「災害後ニーズ評価（PDNA）」で扱われる。アピールに先立ち、被害の大きい郡での当面の対応を維持するためCERF拠出は250万米ドルへ再調整された。",
+      "source_en": "OCHA/UN RC Nepal - Nepal: Rasuwa Flood Flash Appeal, 4 Sep 2026; confirmed via Rasuwa Flood Situation Report No. 6, 5 Sep 2026",
+      "source_ja": "OCHA／国連ネパール常駐調整官事務所「ネパール：ラスワ洪水 フラッシュアピール」（9月4日）／「ラスワ洪水状況報告第6号」（9月5日）で確認",
+      "tier": "official",
+      "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-appeal-4-september-2026"
     },
     {
       "item_en": "Hydropower",
@@ -516,6 +526,13 @@
       "src": "WFP",
       "en": "WFP Nepal Situation Report on the Rasuwa Flood Response (4 Sep): reported fatalities have risen to 1,259, with 5,083 people still missing (both figures again attributed to government/authorities, without a specific NDRRMA report number). WFP has dispatched 85.8 t of food rations for 15 days to Dhading, Nuwakot and Rasuwa, plus 2.8 t of BP-5 and 40 boxes (0.45 t) of fortified biscuits, and has facilitated 101 transport movements (57 supporting Government-led relief, 44 WFP dispatches). Three local governments across the Trishuli River in Rasuwa remain cut off by road. Separately, the Humanitarian Country Team's Nepal: Rasuwa Flood Flash Appeal (OCHA/UN RC Nepal, 4 Sep) reiterates the 84,270-person, 17-municipality, six-district affected estimate (NDRRMA-based) and adds about 19,284 households affected, with all 84,270 targeted for assistance; the appeal frames these as exposure-model estimates to be refined through joint assessment.",
       "ja": "WFP「ラスワ洪水対応状況報告」（9月4日）。死者は1,259人に増加、行方不明はなお5,083人（いずれも「政府・当局」を出典とし、NDRRMAの報番号は示されていない）。WFPはダディン・ヌワコット・ラスワへ15日分の食料85.8トン、BP-5強化ビスケット2.8トンと強化ビスケット40箱（0.45トン）を配布し、輸送101回（政府主導の救援支援57回、WFP独自配送44回）を実施した。ラスワ郡のトリシュリ川対岸の3自治体は依然として道路が寸断され孤立している。別途、人道country teamによる「ネパール：ラスワ洪水 フラッシュアピール」（OCHA／国連ネパール常駐調整官事務所、9月4日）は、6郡17市町村・被災者84,270人という（NDRRMAに基づく）推計を踏襲し、新たに約19,284世帯が被災、84,270人全員を支援対象とするとしている。同アピールはこれらを、今後の合同調査で精緻化される曝露モデルの推計だとしている。"
+    },
+    {
+      "time": "5 Sep",
+      "tier": "official",
+      "src": "OCHA / UN RC Nepal",
+      "en": "OCHA/UN RC Nepal's Rasuwa Flood Situation Report No. 6 (as of 5 Sep) is the first UN report to attribute the 1,259 deaths / 5,083 out-of-contact / 12,038 rescued figures to a dated NDRRMA cut (3 September, 19:00), rather than an unspecified \"government/authorities\" source; no NDRRMA PDF for this cut has still been found. The report also gives an updated displacement count: 3,844 displaced people across 34 sites in Nuwakot, Rasuwa, Dhading and Kathmandu (up from OCHA's 1 Sep count of 3,458 across 27 sites in Nuwakot and Rasuwa only). IOM's Displacement Tracking Matrix estimates 4,288 households affected, of which 2,886 were displaced. The Humanitarian Country Team's Flash Appeal seeks US$49.6 million for 84,270 people (19,284 households) in 17 municipalities across six districts, with the largest sector requirements in food security (US$7.94m), WASH (US$7.9m), health (US$7.6m), logistics/emergency telecoms (US$7.33m) and shelter (US$7.1m); the CERF allocation has been recalibrated to US$2.5 million pending the appeal. A WFP-supported UN/partner coordination base is being established in Bidur, Nuwakot.",
+      "ja": "OCHA／国連ネパール常駐調整官事務所「ラスワ洪水状況報告第6号」（9月5日時点）は、死者1,259人・行方不明（連絡不通）5,083人・救助12,038人という数値を、初めて「NDRRMAの9月3日19:00締め」という具体的な出典に結びつけた国連報告である（従来は「政府・当局」としか示されていなかった）。ただしこの締め時刻に対応するNDRRMAのPDFはなお見つかっていない。同報告は避難者数も更新し、ヌワコット・ラスワ・ダディン・カトマンズの4郡34か所に3,844人が避難しているとした（9月1日時点のOCHA集計はヌワコット・ラスワ2郡27か所・3,458人）。IOMの避難民追跡調査（DTM）は、洪水で被災した世帯を4,288、うち避難した世帯を2,886と推計している。人道country teamのフラッシュアピールは、6郡17市町村の84,270人（19,284世帯）向けに4,960万米ドルを要請しており、分野別では食料安全保障（794万ドル）、水・衛生（790万ドル）、保健（760万ドル）、ロジスティクス・緊急通信（733万ドル）、シェルター（710万ドル）が大きい。CERF拠出はアピールに先立ち250万米ドルへ再調整された。WFPの支援によりヌワコット郡ビドゥルに国連・パートナー向けの調整拠点が設置されつつある。"
     }
   ],
   "response_measures": [
@@ -873,6 +890,17 @@
       "en": "MapAction - Reference Map of Bidur Municipality (04/09/2026)",
       "ja": "MapAction「ビドゥル市基図」（9月4日版）",
       "_note": "地図のみで新規の数値・機構情報なし。確認済み。"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-situation-report-no-6",
+      "en": "OCHA/UN RC Nepal - Rasuwa Flood Situation Report No. 6 (as of 5 September 2026)",
+      "ja": "OCHA／国連ネパール常駐調整官事務所「ラスワ洪水状況報告第6号」（9月5日時点）"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-situation-report-no-6-5-september-2026",
+      "en": "OCHA/UN RC Nepal - Nepal: Rasuwa Flood Situation Report No-6 (As of 5 September 2026) [ReliefWeb duplicate listing of the above]",
+      "ja": "OCHA／国連ネパール常駐調整官事務所「ラスワ洪水状況報告第6号」（9月5日時点、ReliefWeb上の同一資料の別掲載）",
+      "_note": "同一PDFの2つのReliefWeb掲載。本文の内容は一致。"
     }
   ],
   "images": {
