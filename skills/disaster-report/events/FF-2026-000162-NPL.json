@@ -19,25 +19,25 @@
     "title_ja": "2026年 ボテコシ川 土石流・鉄砲水（ネパール）",
     "subtitle_en": "Rasuwa, Nuwakot and Dhading Districts - 26 August 2026",
     "subtitle_ja": "ラスワ郡・ヌワコット郡・ダディン郡、2026年8月26日",
-    "edition_en": "11th report",
-    "edition_ja": "第11報",
+    "edition_en": "12th report",
+    "edition_ja": "第12報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
-    "stamp": "2026-09-05 12:30 JST",
-    "update_date": "05/09/2026",
-    "timeline_range_en": "25 August - 5 September 2026 (Nepal Standard Time, UTC+5:45)",
-    "timeline_range_ja": "2026年8月25日〜9月5日（ネパール標準時 UTC+5:45）",
+    "stamp": "2026-09-07 09:20 JST",
+    "update_date": "06/09/2026",
+    "timeline_range_en": "25 August - 6 September 2026 (Nepal Standard Time, UTC+5:45)",
+    "timeline_range_ja": "2026年8月25日〜9月6日（ネパール標準時 UTC+5:45）",
     "tz_note_en": "All times are Nepal Standard Time (NPT, UTC+5:45) unless stated.",
     "tz_note_ja": "時刻は特記なき限りネパール標準時（NPT、UTC+5:45）。",
     "optional_slides": [],
     "headline": {
-      "deaths": 1259,
-      "injured": 292,
-      "missing": 5083,
+      "deaths": 1341,
+      "injured": 6075,
+      "missing": 4996,
       "houses_destroyed": null,
       "evacuees": null,
       "tier": "official",
-      "as_of": "2026-09-05 (OCHA/UN RC Nepal Rasuwa Flood Situation Report No. 6, attributing the same figures to NDRRMA, 3 Sep 19:00; unchanged from the 4 Sep WFP report. NDRRMA's own published PDF situation report remains #11, 1 Sep 18:00 NPT, with deaths 1,050 / missing 3,916)"
+      "as_of": "2026-09-06 11:00 NPT (NDRRMA。The Rising Nepal 9月6日報道による。NDRRMA自身のPDF状況報告は9月1日18:00の第11号のまま)"
     },
     "chronology_note_en": "Government and agency actions from the onset of the flood - all official sources.",
     "chronology_note_ja": "発災からの政府・機関の主要な動き（すべて公的情報）。",
@@ -533,6 +533,20 @@
       "src": "OCHA / UN RC Nepal",
       "en": "OCHA/UN RC Nepal's Rasuwa Flood Situation Report No. 6 (as of 5 Sep) is the first UN report to attribute the 1,259 deaths / 5,083 out-of-contact / 12,038 rescued figures to a dated NDRRMA cut (3 September, 19:00), rather than an unspecified \"government/authorities\" source; no NDRRMA PDF for this cut has still been found. The report also gives an updated displacement count: 3,844 displaced people across 34 sites in Nuwakot, Rasuwa, Dhading and Kathmandu (up from OCHA's 1 Sep count of 3,458 across 27 sites in Nuwakot and Rasuwa only). IOM's Displacement Tracking Matrix estimates 4,288 households affected, of which 2,886 were displaced. The Humanitarian Country Team's Flash Appeal seeks US$49.6 million for 84,270 people (19,284 households) in 17 municipalities across six districts, with the largest sector requirements in food security (US$7.94m), WASH (US$7.9m), health (US$7.6m), logistics/emergency telecoms (US$7.33m) and shelter (US$7.1m); the CERF allocation has been recalibrated to US$2.5 million pending the appeal. A WFP-supported UN/partner coordination base is being established in Bidur, Nuwakot.",
       "ja": "OCHA／国連ネパール常駐調整官事務所「ラスワ洪水状況報告第6号」（9月5日時点）は、死者1,259人・行方不明（連絡不通）5,083人・救助12,038人という数値を、初めて「NDRRMAの9月3日19:00締め」という具体的な出典に結びつけた国連報告である（従来は「政府・当局」としか示されていなかった）。ただしこの締め時刻に対応するNDRRMAのPDFはなお見つかっていない。同報告は避難者数も更新し、ヌワコット・ラスワ・ダディン・カトマンズの4郡34か所に3,844人が避難しているとした（9月1日時点のOCHA集計はヌワコット・ラスワ2郡27か所・3,458人）。IOMの避難民追跡調査（DTM）は、洪水で被災した世帯を4,288、うち避難した世帯を2,886と推計している。人道country teamのフラッシュアピールは、6郡17市町村の84,270人（19,284世帯）向けに4,960万米ドルを要請しており、分野別では食料安全保障（794万ドル）、水・衛生（790万ドル）、保健（760万ドル）、ロジスティクス・緊急通信（733万ドル）、シェルター（710万ドル）が大きい。CERF拠出はアピールに先立ち250万米ドルへ再調整された。WFPの支援によりヌワコット郡ビドゥルに国連・パートナー向けの調整拠点が設置されつつある。"
+    },
+    {
+      "time": "6 Sep 11:00",
+      "tier": "official",
+      "src": "NDRRMA（The Rising Nepal 報道）",
+      "en": "NDRRMA update as of 11:00, reported by The Rising Nepal (RSS) on 6 September: 1,341 bodies recovered and 4,996 people on the missing list, including 589 foreigners and around 100 security personnel and employees. By district the recovered bodies are Rasuwa 163, Nuwakot 195, Dhading 67, Chitwan 362, Gorkha 74, Tanahu 38, Nawalparasi East 222 and Nawalparasi West 220. 98 bodies have been identified and handed over to families. 13,104 people have been rescued and 6,075 injured have been treated. 3,652 affected people are accommodated at 39 relief camps in Rasuwa, Nuwakot, Dhading and Kathmandu. 21,465 security personnel are mobilised (Nepal Police 7,975, Nepali Army 9,287, Armed Police Force 4,203). Relief has moved from Kathmandu in 83 truckloads, 38 jeeps and 9 helicopter flights, with the Armed Police Force dispatching aid to Rasuwa and Nuwakot in 173 flights.",
+      "ja": "NDRRMAの11:00時点の集計（The Rising Nepal〈RSS配信〉9月6日報道）。遺体収容1,341人、行方不明の名簿に4,996人（外国人589人、治安要員・職員約100人を含む）。郡別の遺体収容はラスワ163、ヌワコット195、ダディン67、チトワン362、ゴルカ74、タナフン38、ナワルパラシ東222、同西220。98人の身元が確認され遺族に引き渡された。救助は13,104人、負傷者6,075人が手当てを受けた。ラスワ・ヌワコット・ダディン・カトマンズの救援キャンプ39か所に3,652人が滞在。動員した治安要員は21,465人（ネパール警察7,975、ネパール陸軍9,287、武装警察4,203）。カトマンズからトラック83台・ジープ38台・ヘリ9便で物資を輸送し、武装警察がラスワ・ヌワコットへ173便を飛ばした。"
+    },
+    {
+      "time": "6 Sep",
+      "tier": "official",
+      "src": "MoFA / NDRRMA（The Rising Nepal 報道）",
+      "en": "A preliminary Rapid Damage and Needs Assessment (RDNA), reported by the Ministry of Foreign Affairs on 5 September and carried by The Rising Nepal on 6 September, indicates about 32,933 people affected and about 7,570 houses damaged or affected. 55 km of roads, 37 motorable bridges and 68 suspension bridges were destroyed; the Department of Roads separately put damage to roads and motorable bridges alone at NPR 20 billion. About 1,806 hectares of agricultural land, 13 hydropower projects, one solar plant and two transmission lines were damaged, with 783 MW of hydropower capacity affected. The full RDNA report is not yet published; NDRRMA says an expert team is finalising it. A comprehensive Post Disaster Needs Assessment (PDNA) is being undertaken in parallel. A 15-member Disaster Assistance and Response Team (DART) from Australia arrived on Friday and an 11-member Special Malaysian Disaster Assistance and Rescue Team (SMART) arrived on Saturday morning.",
+      "ja": "迅速被害・ニーズ評価（RDNA）の暫定結果。外務省が9月5日に示し、The Rising Nepal が9月6日に報じた。被災は約32,933人、住家は約7,570棟が損壊または被災。道路55km、車道橋37橋、吊り橋68橋が破壊された。道路局は別途、道路と車道橋だけで200億ネパールルピーの被害としている。農地約1,806ha、水力発電13事業、太陽光発電1か所、送電線2条が被害を受け、水力発電容量783MWが影響を受けた。RDNAの完全な報告は未公表で、NDRRMAは専門家チームが最終化中としている。並行して包括的な災害後ニーズ評価（PDNA）も実施されている。豪州の災害支援・対応チーム（DART）15人が金曜に、マレーシアの特別災害支援・救助チーム（SMART）11人が土曜朝に到着した。"
     }
   ],
   "response_measures": [
@@ -901,6 +915,16 @@
       "en": "OCHA/UN RC Nepal - Nepal: Rasuwa Flood Situation Report No-6 (As of 5 September 2026) [ReliefWeb duplicate listing of the above]",
       "ja": "OCHA／国連ネパール常駐調整官事務所「ラスワ洪水状況報告第6号」（9月5日時点、ReliefWeb上の同一資料の別掲載）",
       "_note": "同一PDFの2つのReliefWeb掲載。本文の内容は一致。"
+    },
+    {
+      "url": "https://risingnepaldaily.com/news/86182",
+      "en": "NDRRMA records recovery of 1,341 bodies; 4,996 in missing list since Bhotekoshi floods (The Rising Nepal, 6 Sep 2026)",
+      "ja": "NDRRMA、遺体1,341人を収容・行方不明4,996人（The Rising Nepal、2026年9月6日）"
+    },
+    {
+      "url": "https://risingnepaldaily.com/news/86159",
+      "en": "Bhotekoshi torrent affects 32,933 people, 7,570 houses (The Rising Nepal, 6 Sep 2026)",
+      "ja": "ボテコシ川の出水、被災32,933人・住家7,570棟（The Rising Nepal、2026年9月6日）"
     }
   ],
   "images": {
