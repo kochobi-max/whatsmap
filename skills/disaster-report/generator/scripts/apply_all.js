@@ -44,6 +44,7 @@ const ORDER = [
   ["apply_fitrows_measured.js", "右側の表が折り返しで伸びて枠外へ出るのを止める"],
   ["apply_locator_no_box.js", "表紙の赤枠を box: false で出さないようにする"],
   ["apply_title_fit.js", "見出しが右上のADRCロゴに潜り込むのを止める（shrinkTextはLibreOfficeで効かない）"],
+  ["apply_cover_line_fit.js", "表紙の規模・震源の行が右上のADRCロゴに潜り込むのを止める"],
 ];
 
 function main() {

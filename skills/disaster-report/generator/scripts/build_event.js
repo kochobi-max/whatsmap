@@ -204,8 +204,42 @@ for (const U of ["JA", "EN"]) {
     console.log("   " + f + "  " + Math.round(fs.statSync(path.join(OUTDIR, f)).size / 1024) + "KB");
   }
 }
+// **フッター帯との重なりだけでは足りない。画像との重なりも見る。**
+// 2026-09-06、ネパールの見出しが右上のADRCロゴに 51pt 潜り込んでいたが、
+// check_footer_overlap.py はフッター帯しか見ないので素通りした。
+// 気づけたのは qa_layout_check.py を手で通したときである。以後は毎回通す。
+//
+// ここでは**止めない。** 止めるとその朝のレポートが出なくなる。
+// 代わりに STATUS 行に必ず出し、build_all.js のまとめにも持ち回る。
+const layout = checkLayout();
 console.log("STATUS: OK JA=" + pages.JA + "p EN=" + pages.EN + "p"
-  + (scale === 1 ? "" : "  (1ページの詰め " + scale + ")"));
+  + (scale === 1 ? "" : "  (1ページの詰め " + scale + ")")
+  + (layout === null ? "  ⚠レイアウト検査は実行できず" :
+     layout > 0 ? "  ⚠レイアウト " + layout + "件（文字が枠外／画像と重なり）" : ""));
+
+// 0件なら 0、指摘があればその件数、検査できなければ null を返す。
+// **検査できなかったことは「合格」ではない。** 区別して返す。
+function checkLayout() {
+  const script = path.join(HERE, "qa_layout_check.py");
+  if (!fs.existsSync(script)) return null;
+  const pdfs = ["JA", "EN"].map(U => path.join(OUTDIR, filebase + "_" + U + ".pdf"));
+  for (const exe of ["python3", "python", "py"]) {
+    const r = spawnSync(exe, [script].concat(pdfs), { encoding: "utf8" });
+    if (r.error) continue;
+    const out = (r.stdout || "") + (r.stderr || "");
+    let total = 0, seen = false;
+    for (const m of out.matchAll(/SUMMARY:\s*(\d+)\s+findings/g)) { total += Number(m[1]); seen = true; }
+    if (!seen) continue;
+    if (total > 0) {
+      console.log("");
+      console.log("── レイアウト検査の指摘（ビルドは止めない）");
+      for (const line of out.split("\n")) if (/p\.\d|はみ出し|重なり/.test(line)) console.log("   " + line.trim());
+      console.log("");
+    }
+    return total;
+  }
+  return null;
+}
 
 function checkFooter() {
   const script = path.join(HERE, "check_footer_overlap.py");
