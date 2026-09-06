@@ -154,6 +154,27 @@ PDFは `https://ndrrma.gov.np/mediafiles/rasuwa/...` に置かれる。
 **いちばんの問題は、一度「無い」と書いた自分のメモをそのまま信じ続けたことである。**
 CLAUDE.md の「『〜は無い』と断定しない」は、書いたあとにも効く。
 
+## 3-1. 現地報道 — NDRRMA の数値は、PDF より先に報道に出る（2026-09-06）
+
+**NDRRMA の PDF が止まっていても、現地報道は「NDRRMA によれば」として続報を出している。**
+2026-09-06 時点で NDRRMA のサイト上の最新は9月1日18:00の第11号だが、
+The Rising Nepal は死者1,252人と郡別内訳（ラスワ127、ヌワコット177、ダディン60、
+チトワン355、ゴルカ69、タナフン38、ナワルパラシ東218、同西190、インド18）を報じている。
+
+**荒木田さんの判断（2026-09-06）: NDRRMA のページに無くても、報道が
+「NDRRMA によれば」としていれば採用する。**
+
+| 媒体 | ドメイン | 状態 |
+|---|---|---|
+| The Rising Nepal（国営系英字紙） | `risingnepaldaily.com` | **403（要 許可リスト追加）** |
+| Kathmandu Post | `kathmandupost.com` | 200 |
+| Online Khabar English | `english.onlinekhabar.com` | 未確認 |
+| My Republica | `myrepublica.nagariknetwork.com` | 未確認 |
+
+取り込み方は SKILL.md §1 の「公的機関のページに無くても、報道が『〜によれば』と
+していれば採用する」に従う。**媒体名・記事日付・NDRRMA の締め時刻の3つを必ず併記し、
+出典区分は「報道（NDRRMA の引用）」として PDF を直接読んだものと区別する。**
+
 ## 4. GDACS
 
 ```
