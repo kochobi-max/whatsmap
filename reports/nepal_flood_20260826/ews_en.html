@@ -1,0 +1,625 @@
+<title>Integrated Himalayan EWS</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#ECEDE8; --panel:#F7F8F4; --sunk:#E3E5DF; --ink:#1A2124; --ink-2:#3D4649;
+  --muted:#6E7673; --line:#C9CDC5; --line-soft:#DDE0D9;
+  --accent:#0F5A63; --alert:#A93F1C; --alert-soft:#F0DCD3;
+  --c-detect:#0F5A63;  --c-detect-bg:#DCE8E8;
+  --c-predict:#2E6A8E; --c-predict-bg:#DBE5EC;
+  --c-alert:#8F5C10;   --c-alert-bg:#EEE4CE;
+  --c-act:#42622E;     --c-act-bg:#E0E8D8;
+  --c-gov:#63507A;     --c-gov-bg:#E6E0EC;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#11171A; --panel:#1A2225; --sunk:#0C1214; --ink:#E7EAE6; --ink-2:#BAC1BE;
+    --muted:#8B9692; --line:#2E3A3D; --line-soft:#232C2F;
+    --accent:#5FB8C2; --alert:#E08256; --alert-soft:#3A241B;
+    --c-detect:#63BCC6;  --c-detect-bg:#16383C;
+    --c-predict:#7CB3D6; --c-predict-bg:#173040;
+    --c-alert:#D8AC5C;   --c-alert-bg:#3A2E13;
+    --c-act:#9BC183;     --c-act-bg:#25341C;
+    --c-gov:#BCA3CE;     --c-gov-bg:#2F2539;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#11171A; --panel:#1A2225; --sunk:#0C1214; --ink:#E7EAE6; --ink-2:#BAC1BE;
+  --muted:#8B9692; --line:#2E3A3D; --line-soft:#232C2F;
+  --accent:#5FB8C2; --alert:#E08256; --alert-soft:#3A241B;
+  --c-detect:#63BCC6;  --c-detect-bg:#16383C;
+  --c-predict:#7CB3D6; --c-predict-bg:#173040;
+  --c-alert:#D8AC5C;   --c-alert-bg:#3A2E13;
+  --c-act:#9BC183;     --c-act-bg:#25341C;
+  --c-gov:#BCA3CE;     --c-gov-bg:#2F2539;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);
+  font-family:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;}
+#stage{width:100%;overflow:hidden}
+#board{width:1587px;height:1122px;transform-origin:top left;padding:16px 20px;
+  display:flex;flex-direction:column;gap:9px;background:var(--paper)}
+
+.ico{width:1em;height:1em;flex:none;fill:none;stroke:currentColor;stroke-width:1.9;
+  stroke-linecap:round;stroke-linejoin:round;vertical-align:-.14em}
+
+/* ---- header ---- */
+.hd{display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;
+  border-bottom:3px double var(--ink);padding-bottom:9px;height:76px;flex:none}
+.hd .mk{font-size:40px;color:var(--c-detect);line-height:0}
+.hd h1{font-family:"IBM Plex Serif",Georgia,serif;font-weight:700;font-size:23px;line-height:1.12;letter-spacing:.02em}
+.hd .st{font-size:11px;color:var(--ink-2);margin-top:3px;font-weight:700}
+.hd .cl{background:var(--c-detect-bg);color:var(--c-detect);border:1px solid var(--c-detect);
+  padding:7px 14px;font-weight:700;font-size:12.5px;line-height:1.45;max-width:475px;text-align:center}
+.hd .meta{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:8.2px;color:var(--muted);margin-top:2px;letter-spacing:.03em}
+
+/* ---- rows ---- */
+.row{display:grid;gap:9px;flex:none}
+.r1{grid-template-columns:1.06fr 1fr 1.1fr;height:260px}
+.r2{grid-template-columns:1fr;height:432px}
+.r3{grid-template-columns:1.1fr 1fr 1fr;height:210px}
+.r4{grid-template-columns:1fr;height:84px}
+
+.p{background:var(--panel);border:1px solid var(--line);display:flex;flex-direction:column;overflow:hidden}
+.ph{display:flex;align-items:center;gap:8px;padding:6px 11px;background:var(--sunk);
+  border-bottom:1px solid var(--line);flex:none}
+.ph .no{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:9px;font-weight:600;color:var(--paper);
+  background:var(--ink);padding:2px 6px;letter-spacing:.05em;flex:none}
+.ph .ico{font-size:17px;color:var(--c-detect)}
+.ph h2{font-size:13px;font-weight:700;line-height:1.35;letter-spacing:.01em}
+.pb{padding:9px 11px;flex:1;min-height:0;display:flex;flex-direction:column}
+
+/* ---- p1 timeline ---- */
+.tr{display:grid;grid-template-columns:15px 48px 1fr;gap:5px;padding:1px 0;
+  border-bottom:1px dotted var(--line-soft);align-items:baseline}
+.tr .ico{font-size:12px;color:var(--muted);align-self:center}
+.tt{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10.5px;font-weight:600;color:var(--c-detect);font-variant-numeric:tabular-nums;line-height:1.3}
+.td{font-size:10px;line-height:1.45}
+.tr.hot .tt{color:var(--alert)} .tr.hot .ico{color:var(--alert)} .tr.hot .td b{color:var(--alert)}
+.grow{flex:1 1 auto;min-height:0;overflow:hidden}
+.sumbar{margin-top:6px;padding:5px 8px;background:var(--sunk);font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:10.5px;font-weight:600;text-align:center;letter-spacing:.02em;flex:none}
+.note{font-size:9px;color:var(--muted);line-height:1.5;margin-top:5px;padding-top:4px;
+  border-top:1px solid var(--line-soft);flex:none}
+
+/* ---- p2 chart ---- */
+.dr{display:grid;grid-template-columns:82px 74px 1fr;gap:6px;align-items:center;padding:0}
+.dn{font-size:10px;font-weight:700;line-height:1.2}
+.dn small{display:block;font-weight:400;color:var(--muted);font-size:8px;font-family:"IBM Plex Mono",ui-monospace,monospace}
+.dl{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:9.5px;color:var(--ink-2);text-align:right;font-variant-numeric:tabular-nums}
+.dl.neg{color:var(--alert);font-weight:600}
+.db{display:flex;align-items:center;gap:6px}
+.db i{height:10px;background:var(--alert);display:block}
+.db b{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;font-variant-numeric:tabular-nums;font-weight:600}
+.dh{display:grid;grid-template-columns:84px 76px 1fr;gap:6px;font-size:8.5px;color:var(--muted);
+  font-family:"IBM Plex Mono",ui-monospace,monospace;border-bottom:1px solid var(--line);padding-bottom:3px;margin-bottom:3px}
+.dh span:nth-child(2){text-align:right}
+
+/* ---- p3 gaps ---- */
+.gi{display:grid;grid-template-columns:16px 1fr;gap:7px;align-items:start;padding:3px 0;
+  border-bottom:1px dotted var(--line-soft)}
+.gi:last-child{border-bottom:none}
+.gi .ico{font-size:15px;color:var(--alert);margin-top:2px}
+.gt{font-size:11px;font-weight:700;line-height:1.35}
+.gt em{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:8.5px;font-style:normal;color:var(--alert);margin-right:5px}
+.gd{font-size:9px;color:var(--ink-2);line-height:1.5;margin-top:1px}
+.gd b{color:var(--alert)}
+
+/* ---- figure ---- */
+figure{margin:0}
+figure svg.fig{width:100%;height:auto;display:block}
+.pb-fig{display:block}
+.allband{display:flex;align-items:center;gap:9px;margin-top:6px;padding:5px 10px;
+  background:var(--c-gov-bg);border:1px solid var(--c-gov);flex:none}
+.allband .ico{font-size:15px;color:var(--c-gov)}
+.allband .k{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:9px;font-weight:600;color:var(--c-gov);
+  letter-spacing:.05em;flex:none;line-height:1.3}
+.allband .t{font-size:10px;line-height:1.5}
+figcaption{font-size:8.5px;color:var(--muted);line-height:1.5;margin-top:5px;flex:none}
+
+/* ---- p5 tech map ---- */
+.tg{display:grid;grid-template-columns:1fr 1fr;gap:6px 10px;flex:1;min-height:0}
+.mi{display:grid;grid-template-columns:18px 1fr;gap:6px;align-items:start;
+  border-left:2px solid var(--line);padding-left:6px}
+.mi .ico{font-size:16px;margin-top:1px}
+.mt{font-size:10px;font-weight:700;line-height:1.3}
+.mt em{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:8px;font-style:normal;padding:1px 4px;margin-right:5px}
+.mm{font-size:9px;color:var(--muted);font-family:"IBM Plex Mono",ui-monospace,monospace;line-height:1.45}
+.mb{font-size:9px;color:var(--ink-2);line-height:1.45;margin-top:1px}
+.mmi{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:8px;color:var(--muted);display:block}
+.mb b{color:var(--ink)}
+
+/* ---- p6 table ---- */
+table{border-collapse:collapse;width:100%;font-size:9px}
+th,td{padding:2px 6px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line-soft);line-height:1.45}
+thead th{background:var(--sunk);font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:8px;letter-spacing:.05em;
+  color:var(--muted);text-transform:uppercase;font-weight:600}
+td.tm{font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:600;color:var(--c-detect);white-space:nowrap;font-size:9px}
+
+/* ---- p7 cannot ---- */
+.cx{display:grid;grid-template-columns:15px 1fr;gap:6px;background:var(--alert-soft);
+  border-left:3px solid var(--alert);padding:4px 8px;margin-bottom:4px}
+.cx:last-child{margin-bottom:0}
+.cx .ico{font-size:14px;color:var(--alert);margin-top:2px}
+.cx h4{font-size:10.5px;font-weight:700;color:var(--alert);line-height:1.35}
+.cx p{font-size:9.5px;line-height:1.5;color:var(--ink-2);margin-top:1px}
+
+/* ---- foot ---- */
+.foot{display:grid;grid-template-columns:1.15fr 1.35fr 1.5fr;gap:14px;height:100%;align-items:center}
+.flab{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:8px;letter-spacing:.09em;color:var(--muted);margin-bottom:3px}
+.lg{display:flex;flex-wrap:wrap;gap:2px 9px}
+.lgi{display:flex;align-items:center;gap:4px;font-size:8.2px}
+.lgi i{width:13px;height:9px;display:block;border:1px solid var(--line)}
+.gs{columns:2;column-gap:14px;font-size:8px;line-height:1.4;color:var(--ink-2)}
+.gs div{break-inside:avoid}
+.gs b{font-family:"IBM Plex Mono",ui-monospace,monospace;color:var(--ink);font-weight:600}
+.ms{display:flex;align-items:center;gap:11px;background:var(--c-detect-bg);border-left:3px solid var(--c-detect);padding:8px 12px;height:100%}
+.ms .ico{font-size:26px;color:var(--c-detect);flex:none}
+.ms .a{font-family:"IBM Plex Serif",Georgia,serif;font-size:15.5px;font-weight:700;line-height:1.35;color:var(--c-detect)}
+.ms .b{font-size:9px;color:var(--ink-2);line-height:1.5;margin-top:3px;font-weight:700}
+
+@media print{
+  @page{size:A3 landscape;margin:0}
+  #stage{height:auto!important;overflow:visible}
+  #board{transform:none!important}
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute;visibility:hidden" aria-hidden="true"><defs>
+<symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 3.5 22 20.5H2z"/><path d="M12 10v4.5"/><circle cx="12" cy="17.6" r=".9" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-bars" viewBox="0 0 24 24"><path d="M3 21h18"/><rect x="4.5" y="14" width="3.6" height="7"/><rect x="10.2" y="9" width="3.6" height="12"/><rect x="15.9" y="4" width="3.6" height="17"/></symbol>
+<symbol id="i-gap" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" stroke-dasharray="3.2 3"/><path d="M7.5 12h3M13.5 12h3"/></symbol>
+<symbol id="i-flow" viewBox="0 0 24 24"><circle cx="4.5" cy="12" r="2.4"/><circle cx="19.5" cy="5.5" r="2.4"/><circle cx="19.5" cy="18.5" r="2.4"/><path d="M6.8 11.1 17.2 6.4M6.8 12.9l10.4 4.7"/></symbol>
+<symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.4"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.2 5.2l2.1 2.1M16.7 16.7l2.1 2.1M18.8 5.2l-2.1 2.1M7.3 16.7l-2.1 2.1"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6.5V12l3.6 2.1"/></symbol>
+<symbol id="i-no" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M5.6 18.4 18.4 5.6"/></symbol>
+<symbol id="i-seismo" viewBox="0 0 24 24"><path d="M1.5 12h3.4l2.4-7.5L11 19.5l2.8-10.5 2.3 3h6.4"/></symbol>
+<symbol id="i-siren" viewBox="0 0 24 24"><path d="M2.5 9.2v5.6H6l5.2 4.4V4.8L6 9.2z"/><path d="M15 8.6a5 5 0 0 1 0 6.8M18.2 5.9a9.3 9.3 0 0 1 0 12.2"/></symbol>
+<symbol id="i-gauge" viewBox="0 0 24 24"><rect x="9.5" y="2.5" width="5" height="13"/><path d="M11 5.5h3M11 8.5h2M11 11.5h3"/><path d="M1.5 18.5c3 0 3 1.9 6 1.9s3-1.9 6-1.9 3 1.9 6 1.9 3-1.9 3-1.9"/></symbol>
+<symbol id="i-fore" viewBox="0 0 24 24"><circle cx="10" cy="12" r="7.6"/><path d="M10 7v5l3.4 2"/><path d="M19.4 12h3.2M20.9 10.2l1.7 1.8-1.7 1.8"/></symbol>
+<symbol id="i-cast" viewBox="0 0 24 24"><circle cx="12" cy="7.4" r="1.9"/><path d="M8.6 4a4.8 4.8 0 0 0 0 6.8M15.4 4a4.8 4.8 0 0 1 0 6.8M5.8 1.6a8.7 8.7 0 0 0 0 11.6M18.2 1.6a8.7 8.7 0 0 1 0 11.6"/><path d="m12 9.6-3 12.4h6z"/></symbol>
+<symbol id="i-hill" viewBox="0 0 24 24"><path d="M1.5 20.5h21"/><path d="m3.5 20.5 6.5-10 3.4 5.2 2-3 5.1 7.8"/><path d="M12.5 6.5v-5M10.3 3.4 12.5 1.2l2.2 2.2"/></symbol>
+<symbol id="i-sat" viewBox="0 0 24 24"><rect x="9.6" y="9" width="4.8" height="6.6"/><rect x="1.5" y="10.2" width="7" height="4.2"/><rect x="15.5" y="10.2" width="7" height="4.2"/><path d="M12 9V4M9.9 5.3 12 3.2l2.1 2.1"/></symbol>
+<symbol id="i-tunnel" viewBox="0 0 24 24"><path d="M3 21v-8.5a9 9 0 0 1 18 0V21"/><path d="M9 21v-8.5a3 3 0 0 1 6 0V21"/><path d="M1.5 21h21"/></symbol>
+<symbol id="i-run" viewBox="0 0 24 24"><circle cx="14.5" cy="4" r="2.2"/><path d="m13.5 7.5-3 4.5 3.5 3 1 6.5M10.5 12l-4 1.5M14 14.5l4.5 2.5"/></symbol>
+<symbol id="i-dam" viewBox="0 0 24 24"><path d="M9 21V8.5L12.5 4 16 8.5V21z"/><path d="M1.5 11h7M1.5 15.5h7M1.5 19h7M16 16h6.5"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><ellipse cx="12" cy="12" rx="4.2" ry="9"/></symbol>
+<symbol id="i-yen" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8.6 7.6 3.4 5 3.4-5M8.8 13h6.4M8.8 15.9h6.4M12 12.6V17"/></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2.5h8l4.5 4.5v14.5H6z"/><path d="M14 2.5V7h4.5"/><path d="M9 12h6.5M9 15.5h6.5M9 19h4"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><rect x="6.5" y="2" width="11" height="20" rx="1.8"/><path d="M10.5 18.6h3"/><path d="M9 5.5h6"/></symbol>
+<symbol id="i-mtn" viewBox="0 0 24 24"><path d="m2 20 7.5-13 4 6.5 2.5-4L22 20z"/><path d="M9.5 7 7 11.2h5z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-wave" viewBox="0 0 24 24"><path d="M1.5 7c3 0 3 2 6 2s3-2 6-2 3 2 6 2 3-2 3-2M1.5 13c3 0 3 2 6 2s3-2 6-2 3 2 6 2 3-2 3-2M1.5 19c3 0 3 2 6 2s3-2 6-2 3 2 6 2 3-2 3-2"/></symbol>
+</defs></svg>
+<style>
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 9px;align-items:baseline}
+.kv dt{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:8.5px;font-weight:600;color:var(--paper);background:var(--muted);padding:1px 5px;white-space:nowrap;justify-self:start}
+.kv dt.f{background:var(--c-detect)} .kv dt.n{background:var(--c-predict)} .kv dt.x{background:var(--alert)}
+.kv dd{font-size:10px;line-height:1.5}
+.kv dd b{font-weight:700}
+.kv dd small{display:block;color:var(--muted);font-size:8.8px;line-height:1.45}
+.lat{width:100%;border-collapse:collapse;font-size:9.5px}
+.lat td{padding:2.5px 5px;border-bottom:1px solid var(--line-soft)}
+.lat td:last-child{text-align:right;font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:600;white-space:nowrap}
+.lat tr:last-child td{border-bottom:none}
+.ph2{display:flex;align-items:baseline;gap:7px;margin:6px 0 2px}
+.ph2 em{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:8.5px;font-weight:600;color:var(--paper);background:var(--c-detect);padding:1px 5px;flex:none}
+.ph2 em.g{background:var(--alert)}
+.ph2 b{font-size:10.5px}
+.ph2 span{margin-left:auto;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:9px;color:var(--muted);white-space:nowrap}
+.mx{width:100%;border-collapse:collapse;font-size:9px}
+.mx thead th{background:var(--sunk);font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:7.8px;letter-spacing:.05em;color:var(--muted);font-weight:600;padding:2px 5px;text-align:left}
+.mx td{padding:2px 5px;border-bottom:1px solid var(--line-soft);vertical-align:top;line-height:1.35}
+.mx td small{display:block;color:var(--muted);font-size:7.5px;line-height:1.3}
+.mx td .mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:8px;color:var(--c-detect)}
+.mx tr.hl td{background:var(--alert-soft)}
+.mx td.k,.mx td.n,.mx td.p{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:8px;font-weight:600;white-space:nowrap;text-align:right}
+.mx td.k{color:var(--muted)} .mx td.n{color:var(--c-predict)} .mx td.p{color:var(--c-alert)}
+.nc{margin-top:5px;padding:5px 7px;background:var(--alert-soft);border-left:3px solid var(--alert)}
+.nch{font-size:9px;font-weight:700;color:var(--alert);margin-bottom:2px}
+.ncr{font-size:8.4px;line-height:1.4;color:var(--ink-2)}
+.ncr b{color:var(--ink)} .ncr span{color:var(--muted);margin-left:5px}
+.pd{font-size:8.6px;color:var(--ink-2);line-height:1.45;margin-bottom:3px}
+.ph2{margin:3px 0 1px}
+.lat td{padding:1.5px 5px}
+.lat{font-size:9.2px}
+.kv{gap:3px 8px}
+.kv dd{font-size:9.6px;line-height:1.45}
+.kv dd small{font-size:8.4px;line-height:1.4}
+.cx{padding:3px 7px;margin-bottom:3px}
+.cx h4{font-size:10px}
+.cx p{font-size:8.8px;line-height:1.45}
+.gs{font-size:8px;line-height:1.4}
+.hd .st{font-size:10px;margin-top:1px}
+.note{font-size:8.6px;line-height:1.48}
+.pb{padding:8px 10px}
+.kv dd{font-size:9.2px;line-height:1.38}
+.hd .cl{font-size:12px;padding:6px 13px}
+/* English typesetting: Latin sets wider than Japanese at the same nominal size */
+.cx{padding:3px 7px;margin-bottom:2px}
+.cx h4{font-size:9.3px;line-height:1.28}
+.cx p{font-size:8.15px;line-height:1.36}
+.kv dd small{font-size:7.85px;line-height:1.3}
+.pd{font-size:7.5px;line-height:1.28;margin-bottom:0}
+.ph2 b{font-size:9.5px}
+.gs{font-size:7.05px;line-height:1.28}
+.note{font-size:8px;line-height:1.36;margin-top:3px;padding-top:3px}
+.lg{font-size:7.6px;gap:2px 7px}
+.ms .b{font-size:8px;line-height:1.4}
+.flab{margin-bottom:2px}
+.foot .gs div{margin-bottom:1.5px}
+.ms .b{font-size:7.45px;line-height:1.3}
+</style>
+
+<div id="stage" lang="en"><div id="board">
+
+<header class="hd">
+  <svg class="ico mk"><use href="#i-cast"/></svg>
+  <div>
+    <h1>Integrated Himalayan EWS &mdash; System Architecture</h1>
+    <div class="st">Binding monsoon flooding &amp; landslides / ice&ndash;rock avalanche / GLOF / major earthquake onto the two systems Nepal already runs (working draft)</div>
+    <div class="meta">Drafted 2026-08-30 &middot; Revised 2026-09-04 &middot; Based on analysis of the 26 August 2026 Bhote Koshi&ndash;Trishuli flood &middot; Not an official position</div>
+  </div>
+  <div class="cl">Do not build from zero. Connect the two<br>systems that exist; add only the missing<br>detection paths.</div>
+</header>
+
+<div class="row r1">
+  <section class="p">
+    <div class="ph"><span class="no">1</span><svg class="ico"><use href="#i-gear"/></svg><h2>The two systems Nepal already has</h2></div>
+    <div class="pb">
+      <dl class="kv">
+        <dt>Rain</dt><dd><b>DHM rainfall &amp; river &ldquo;live watch&rdquo;: 280 stations</b><small>Web telemetry since 2010. The backbone of the rainfall track</small></dd>
+        <dt>Rain</dt><dd><b>Threshold-based flood &amp; landslide warning (since 2018)</b><small>272 hazard areas delineated; SMS is sent when upstream rainfall crosses threshold</small></dd>
+        <dt>Rain</dt><dd><b>CBFEWS in 8 river systems &middot; 3-day rainfall forecast</b><small>Koshi, Karnali, West Rapti and others. <b>Narayani is included &mdash; already present in this corridor</b></small></dd>
+        <dt>Rain</dt><dd><b>1 of 3 planned weather radars</b><small>Installed in the west in 2019. Central and east: not yet</small></dd>
+        <dt>Seis</dt><dd><b>~40 broadband seismometers &middot; ~36 accelerometers</b><small>DMG / NEMRC, plus 8 Univ. of Tokyo&ndash;JICA stations and 10 China CEA stations</small></dd>
+      </dl>
+      <p class="note"><b>For rainfall-driven hazards, the chain from detection to dissemination is already complete.</b> What failed here was not the absence of a system but the fact that <b>the system presupposes rain</b>.</p>
+    </div>
+  </section>
+
+  <section class="p">
+    <div class="ph"><span class="no">2</span><svg class="ico" style="color:var(--alert)"><use href="#i-gap"/></svg><h2>So why did nothing fire?</h2></div>
+    <div class="pb">
+      <dl class="kv">
+        <dt class="x">Gap 1</dt><dd><b>The rainfall track presupposes rainfall</b><small>No rain was involved in this event (confirmed by DHM). Neither the 280 stations nor the 272 area thresholds <b>could respond in principle</b></small></dd>
+        <dt class="x">Gap 2</dt><dd><b>The seismic track presupposes earthquakes</b><small>Associators are built on sharp arrivals. A slow-onset mass movement is discarded at association. <b>nst = 0</b> in this event&rsquo;s catalogue entries is the evidence</small></dd>
+        <dt class="x">Gap 3</dt><dd><b>The two tracks are not wired together</b><small>Even with an M5.2 on the record (GFZ: Mw 5.7), nothing carries it into the flood alerting path. <b>Both 08:37 and 11:45 reached the catalogue only after an analyst processed them &mdash; posted a day and a half later</b></small></dd>
+        <dt class="x">Gap 4</dt><dd><b>Mandates are split</b><small>Earthquakes = DMG / flood &amp; landslide warning = DHM / response = NDRRMA</small></dd>
+      </dl>
+      <p class="note"><b>Each track works for its own hazard. Neither owned this hazard, and they were not connected to each other.</b> That is what &ldquo;integration&rdquo; has to fix &mdash; and none of Gaps 1&ndash;4 is a shortage of hardware.</p>
+    </div>
+  </section>
+
+  <section class="p">
+    <div class="ph"><span class="no">3</span><svg class="ico"><use href="#i-seismo"/></svg><h2>Hazard stocktake &mdash; what is caught, and by which path</h2></div>
+    <div class="pb">
+      <table class="mx">
+        <thead><tr><th>Hazard</th><th>Detection path</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Monsoon flooding &amp; landslides<small>Cumulatively the largest killer of all</small></td><td><b>R</b> rainfall threshold + soil water index</td><td class="k">existing<br>operating</td></tr>
+          <tr><td>Ice&ndash;rock avalanche / rock collapse<small>This event = Langtang Lirung N face, bedrock and all / 2015 Langtang</small></td><td><b>D1</b> single-force source<br><span class="mono">alert in 60&ndash;120 s</span></td><td class="n">new</td></tr>
+          <tr><td>GLOF / landslide-dam breach<small>This event&rsquo;s initial mechanism + the barrier lake of 28 Aug</small></td><td><b>D2</b> fluvial tremor (1&ndash;10 Hz)</td><td class="n">new</td></tr>
+          <tr><td>Loss of the instruments themselves<small>Upstream gauges went silent together after 08:40; the 30 Aug rise was noticed by ear</small></td><td><b>D3</b> missing data = alarm</td><td class="n">new</td></tr>
+          <tr class="hl"><td>Widespread coseismic slope failure<small>25,000 landslides in Gorkha 2015</small></td><td><b>State modifier</b><br>lowers every trigger threshold</td><td class="n">new</td></tr>
+        </tbody>
+      </table>
+      <div class="nc">
+        <div class="nch">What this system cannot catch &mdash; stated explicitly</div>
+        <div class="ncr"><b>Snow avalanche</b><span>Detectable as a small-magnitude D1 class. Forecasting is impossible &mdash; no snowpack observation exists</span></div>
+        <div class="ncr"><b>Earthquake early warning itself</b><span>Nepal has no national EEW (demonstration stage only)</span></div>
+        <div class="ncr"><b>Air blast</b><span>Occurred at Langtang 2015 and Chamoli 2021. Damage reaches beyond the flow path</span></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="row r2">
+  <section class="p">
+    <div class="ph"><span class="no">4</span><svg class="ico"><use href="#i-flow"/></svg><h2>Six-layer architecture &mdash; what is reused, what is modified, what is added</h2></div>
+    <div class="pb pb-fig">
+      <figure>
+        <svg class="fig" viewBox="0 0 1520 356" role="img" aria-label="Six-layer integrated early warning architecture. Baseline risk, sensing, telemetry, processing, decision and dissemination, colour-coded for existing, modified and new, with four parallel triggers and a major earthquake treated as a state modifier.">
+          <defs><marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="var(--c-detect)"/></marker></defs>
+
+          <rect x="0" y="4" width="110" height="38" fill="var(--panel)" stroke="var(--line)"/>
+          <text x="9" y="18" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="9.4" font-weight="700" fill="var(--c-detect)">L0</text>
+          <text x="9" y="30" font-size="10" font-weight="700" fill="var(--ink)">Baseline risk</text>
+          <text x="9" y="41" font-size="7.6" fill="var(--muted)">sets where sensors go</text>
+
+          <rect x="126" y="8" width="349.2222222222223" height="26" fill="var(--sunk)" stroke="var(--line)" stroke-width="1"/>
+            <rect x="131" y="11.5" width="12" height="11.5" fill="var(--muted)"/>
+            <text x="137" y="20.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">E</text>
+            <text x="148" y="20.5" font-size="9.6" font-weight="700" fill="var(--ink)">ICIMOD / UNDP glacial lake inventory, 47 lakes</text>
+            <text x="132" y="31.5" font-size="8" fill="var(--ink-2)">28 highly susceptible in the Poiqu-Gyirong transboundary basins</text>
+            <rect x="484.2222222222223" y="8" width="399.1111111111111" height="26" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.6"/>
+            <rect x="489.2222222222223" y="11.5" width="12" height="11.5" fill="var(--c-detect)"/>
+            <text x="495.2222222222223" y="20.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">M</text>
+            <text x="506.2222222222223" y="20.5" font-size="9.6" font-weight="700" fill="var(--ink)">Static inventory → periodic SAR detection of new water</text>
+            <text x="490.2222222222223" y="31.5" font-size="8" fill="var(--ink-2)">the 2025 supraglacial lake formed in six months, on no list</text>
+            <rect x="892.3333333333334" y="8" width="315.96296296296293" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="897.3333333333334" y="11.5" width="12" height="11.5" fill="var(--c-predict)"/>
+            <text x="903.3333333333334" y="20.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">N</text>
+            <text x="914.3333333333334" y="20.5" font-size="9.6" font-weight="700" fill="var(--ink)">InSAR screening of unstable slopes</text>
+            <text x="898.3333333333334" y="31.5" font-size="8" fill="var(--ink-2)">thawing permafrost loses the ice that binds the rock</text>
+            <rect x="1217.2962962962963" y="8" width="282.70370370370375" height="26" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.6"/>
+            <rect x="1222.2962962962963" y="11.5" width="12" height="11.5" fill="var(--c-detect)"/>
+            <text x="1228.2962962962963" y="20.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">M</text>
+            <text x="1239.2962962962963" y="20.5" font-size="9.6" font-weight="700" fill="var(--ink)">Screening for source slopes</text>
+            <text x="1223.2962962962963" y="31.5" font-size="8" fill="var(--ink-2)">&gt;30&deg;, above 3,000 m, permafrost, near a large river</text>
+
+          <rect x="0" y="46" width="110" height="68" fill="var(--panel)" stroke="var(--line)"/>
+          <text x="9" y="60" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="9.4" font-weight="700" fill="var(--c-detect)">L1</text>
+          <text x="9" y="72" font-size="10" font-weight="700" fill="var(--ink)">Sensing</text>
+          <text x="9" y="83" font-size="7.6" fill="var(--muted)">rainfall + seismic</text>
+
+          <rect x="126" y="50" width="325.29357798165137" height="26" fill="var(--sunk)" stroke="var(--line)" stroke-width="1"/>
+            <rect x="131" y="53.5" width="12" height="11.5" fill="var(--muted)"/>
+            <text x="137" y="62.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">E</text>
+            <text x="148" y="62.5" font-size="9.6" font-weight="700" fill="var(--ink)">DHM rainfall &amp; river "live watch", 280 stations</text>
+            <text x="132" y="73.5" font-size="8" fill="var(--ink-2)">backbone of the rainfall path. Operational</text>
+            <rect x="460.29357798165137" y="50" width="220.95412844036696" height="26" fill="var(--sunk)" stroke="var(--line)" stroke-width="1"/>
+            <rect x="465.29357798165137" y="53.5" width="12" height="11.5" fill="var(--muted)"/>
+            <text x="471.29357798165137" y="62.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">E</text>
+            <text x="482.29357798165137" y="62.5" font-size="9.6" font-weight="700" fill="var(--ink)">Weather radar, 1 of 3</text>
+            <text x="466.29357798165137" y="73.5" font-size="8" fill="var(--ink-2)">west only, installed 2019</text>
+            <rect x="690.2477064220184" y="50" width="257.77981651376143" height="26" fill="var(--sunk)" stroke="var(--line)" stroke-width="1"/>
+            <rect x="695.2477064220184" y="53.5" width="12" height="11.5" fill="var(--muted)"/>
+            <text x="701.2477064220184" y="62.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">E</text>
+            <text x="712.2477064220184" y="62.5" font-size="9.6" font-weight="700" fill="var(--ink)">NSC broadband seismometers, ~40</text>
+            <text x="696.2477064220184" y="73.5" font-size="8" fill="var(--ink-2)">DMG / NEMRC</text>
+            <rect x="957.0275229357799" y="50" width="270.0550458715596" height="26" fill="var(--sunk)" stroke="var(--line)" stroke-width="1"/>
+            <rect x="962.0275229357799" y="53.5" width="12" height="11.5" fill="var(--muted)"/>
+            <text x="968.0275229357799" y="62.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">E</text>
+            <text x="979.0275229357799" y="62.5" font-size="9.6" font-weight="700" fill="var(--ink)">36 accelerometers, 8 Univ. Tokyo-JICA</text>
+            <text x="963.0275229357799" y="73.5" font-size="8" fill="var(--ink-2)">China CEA adds 10 across the north</text>
+            <rect x="1236.0825688073396" y="50" width="263.91743119266056" height="26" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.6"/>
+            <rect x="1241.0825688073396" y="53.5" width="12" height="11.5" fill="var(--c-detect)"/>
+            <text x="1247.0825688073396" y="62.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">M</text>
+            <text x="1258.0825688073396" y="62.5" font-size="9.6" font-weight="700" fill="var(--ink)">DHM stage gauges, 6 in the corridor</text>
+            <text x="1242.0825688073396" y="73.5" font-size="8" fill="var(--ink-2)">→ 30. Trigger on rate of rise</text>
+
+          <rect x="126" y="82" width="366.10769230769233" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="131" y="85.5" width="12" height="11.5" fill="var(--c-predict)"/>
+            <text x="137" y="94.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">N</text>
+            <text x="148" y="94.5" font-size="9.6" font-weight="700" fill="var(--ink)">3-5 broadband + strong-motion per headwater basin</text>
+            <text x="132" y="105.5" font-size="8" fill="var(--ink-2)">on bedrock, above any credible flood level</text>
+            <rect x="501.10769230769233" y="82" width="317.75384615384615" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="506.10769230769233" y="85.5" width="12" height="11.5" fill="var(--c-predict)"/>
+            <text x="512.1076923076923" y="94.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">N</text>
+            <text x="523.1076923076923" y="94.5" font-size="9.6" font-weight="700" fill="var(--ink)">Co-located microbarometers</text>
+            <text x="507.10769230769233" y="105.5" font-size="8" fill="var(--ink-2)">earthquakes emit little infrasound - it separates mass movement</text>
+            <rect x="827.8615384615384" y="82" width="317.75384615384615" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="832.8615384615384" y="85.5" width="12" height="11.5" fill="var(--c-predict)"/>
+            <text x="838.8615384615384" y="94.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">N</text>
+            <text x="849.8615384615384" y="94.5" font-size="9.6" font-weight="700" fill="var(--ink)">Riverside tremor stations</text>
+            <text x="833.8615384615384" y="105.5" font-size="8" fill="var(--ink-2)">a non-contact gauge the flood cannot destroy</text>
+            <rect x="1154.6153846153845" y="82" width="345.3846153846154" height="26" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.6"/>
+            <rect x="1159.6153846153845" y="85.5" width="12" height="11.5" fill="var(--c-detect)"/>
+            <text x="1165.6153846153845" y="94.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">M</text>
+            <text x="1176.6153846153845" y="94.5" font-size="9.6" font-weight="700" fill="var(--ink)">GSMaP / GPM for transboundary rainfall</text>
+            <text x="1160.6153846153845" y="105.5" font-size="8" fill="var(--ink-2)">no ground observation on the Tibetan side</text>
+
+          <rect x="0" y="118" width="110" height="32" fill="var(--panel)" stroke="var(--line)"/>
+          <text x="9" y="132" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="9.4" font-weight="700" fill="var(--c-detect)">L2</text>
+          <text x="9" y="144" font-size="10" font-weight="700" fill="var(--ink)">Telemetry</text>
+
+          <rect x="126" y="121" width="668" height="26" fill="var(--sunk)" stroke="var(--line)" stroke-width="1"/>
+            <rect x="131" y="124.5" width="12" height="11.5" fill="var(--muted)"/>
+            <text x="137" y="133.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">E</text>
+            <text x="148" y="133.5" font-size="9.6" font-weight="700" fill="var(--ink)">Existing telemetry to Kathmandu</text>
+            <text x="132" y="144.5" font-size="8" fill="var(--ink-2)">cellular / microwave. Follows the valley, so the same event severs it</text>
+            <rect x="804" y="121" width="696" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="809" y="124.5" width="12" height="11.5" fill="var(--c-predict)"/>
+            <text x="815" y="133.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">N</text>
+            <text x="826" y="133.5" font-size="9.6" font-weight="700" fill="var(--ink)">Satellite IoT as a second path</text>
+            <text x="810" y="144.5" font-size="8" fill="var(--ink-2)">the alert path carries parameters, not waveforms. Assume total terrestrial loss in a major earthquake</text>
+
+          <rect x="0" y="154" width="110" height="98" fill="var(--panel)" stroke="var(--line)"/>
+          <text x="9" y="168" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="9.4" font-weight="700" fill="var(--c-detect)">L3</text>
+          <text x="9" y="180" font-size="10" font-weight="700" fill="var(--ink)">Processing</text>
+          <text x="9" y="191" font-size="7.6" fill="var(--muted)">joining two systems</text>
+
+          <rect x="126" y="158" width="668" height="26" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.6"/>
+            <rect x="131" y="161.5" width="12" height="11.5" fill="var(--c-detect)"/>
+            <text x="137" y="170.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">M</text>
+            <text x="148" y="170.5" font-size="9.6" font-weight="700" fill="var(--ink)">Rainfall path: thresholds alert 272 delineated areas (since 2018)</text>
+            <text x="132" y="181.5" font-size="8" fill="var(--ink-2)">operational, but blind to transboundary rainfall and short on lead time</text>
+            <rect x="804" y="158" width="696" height="26" fill="var(--alert-soft)" stroke="var(--alert)" stroke-width="1.6"/>
+            <rect x="809" y="161.5" width="12" height="11.5" fill="var(--alert)"/>
+            <text x="815" y="170.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">E</text>
+            <text x="826" y="170.5" font-size="9.6" font-weight="700" fill="var(--ink)">Seismic path: associate impulsive arrivals to locate</text>
+            <text x="810" y="181.5" font-size="8" fill="var(--ink-2)">emergent mass-movement signals are discarded at association (nst = 0 here)</text>
+
+          <rect x="126" y="190" width="287.741935483871" height="26" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.6"/>
+            <rect x="131" y="193.5" width="12" height="11.5" fill="var(--c-detect)"/>
+            <text x="137" y="202.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">M</text>
+            <text x="148" y="202.5" font-size="9.6" font-weight="700" fill="var(--ink)">R  Rainfall-runoff forecasting, strengthened</text>
+            <text x="132" y="213.5" font-size="8" fill="var(--ink-2)">soil water index / snake curve</text>
+            <rect x="422.741935483871" y="190" width="253.21290322580649" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="427.741935483871" y="193.5" width="12" height="11.5" fill="var(--c-predict)"/>
+            <text x="433.741935483871" y="202.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">N</text>
+            <text x="444.741935483871" y="202.5" font-size="9.6" font-weight="700" fill="var(--ink)">D1  Single-force detection</text>
+            <text x="428.741935483871" y="213.5" font-size="8" fill="var(--ink-2)">mass movement. Alert in 60-120 s</text>
+            <rect x="684.9548387096775" y="190" width="258.9677419354839" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="689.9548387096775" y="193.5" width="12" height="11.5" fill="var(--c-predict)"/>
+            <text x="695.9548387096775" y="202.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">N</text>
+            <text x="706.9548387096775" y="202.5" font-size="9.6" font-weight="700" fill="var(--ink)">D2  Fluvial tremor detection</text>
+            <text x="690.9548387096775" y="213.5" font-size="8" fill="var(--ink-2)">1-10 Hz. Bedload impacts = flood</text>
+            <rect x="952.9225806451614" y="190" width="235.94838709677418" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="957.9225806451614" y="193.5" width="12" height="11.5" fill="var(--c-predict)"/>
+            <text x="963.9225806451614" y="202.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">N</text>
+            <text x="974.9225806451614" y="202.5" font-size="9.6" font-weight="700" fill="var(--ink)">D3  Loss-of-signal detection</text>
+            <text x="958.9225806451614" y="213.5" font-size="8" fill="var(--ink-2)">silence is evidence of damage</text>
+            <rect x="1197.8709677419356" y="190" width="302.12903225806457" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="1202.8709677419356" y="193.5" width="12" height="11.5" fill="var(--c-predict)"/>
+            <text x="1208.8709677419356" y="202.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">N</text>
+            <text x="1219.8709677419356" y="202.5" font-size="9.6" font-weight="700" fill="var(--ink)">Fusion, three confidence levels</text>
+            <text x="1203.8709677419356" y="213.5" font-size="8" fill="var(--ink-2)">accepts both rainfall and non-rainfall paths</text>
+
+          <rect x="126" y="222" width="1374" height="24" fill="var(--alert-soft)" stroke="var(--alert)" stroke-width="1.6"/>
+            <rect x="131" y="225.5" width="12" height="11.5" fill="var(--alert)"/>
+            <text x="137" y="234.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">N</text>
+            <text x="148" y="234.5" font-size="9.6" font-weight="700" fill="var(--alert)">A major earthquake is a state modifier, not a fifth trigger</text>
+            <text x="478" y="234.5" font-size="8.2" fill="var(--ink-2)">2015 Gorkha M7.8 set off some <tspan font-weight="700">25,000 coseismic landslides</tspan> and the Langtang rock-ice avalanche (350+ dead). On detection, lower the R / D1 / D2 thresholds, auto-task satellites, and assume river blockage</text>
+
+          <rect x="0" y="256" width="110" height="56" fill="var(--panel)" stroke="var(--line)"/>
+          <text x="9" y="270" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="9.4" font-weight="700" fill="var(--c-detect)">L4</text>
+          <text x="9" y="282" font-size="10" font-weight="700" fill="var(--ink)">Decision</text>
+
+          <rect x="126" y="259" width="668" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="131" y="262.5" width="12" height="11.5" fill="var(--c-predict)"/>
+            <text x="137" y="271.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">N</text>
+            <text x="148" y="271.5" font-size="9.6" font-weight="700" fill="var(--ink)">Upper 20 km: sensor to siren, no human in the loop</text>
+            <text x="132" y="282.5" font-size="8" fill="var(--ink-2)">a ten-minute margin leaves no room for procedure</text>
+            <rect x="804" y="259" width="696" height="26" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.6"/>
+            <rect x="809" y="262.5" width="12" height="11.5" fill="var(--c-detect)"/>
+            <text x="815" y="271.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">M</text>
+            <text x="826" y="271.5" font-size="9.6" font-weight="700" fill="var(--ink)">Downstream: feed arrival-time forecasting → per-village ETA</text>
+            <text x="810" y="282.5" font-size="8" fill="var(--ink-2)">one shared outlet for both the rainfall and non-rainfall paths</text>
+
+          <rect x="126" y="289" width="1374" height="20" fill="var(--alert-soft)" stroke="var(--alert)" stroke-width="1.6"/>
+            <rect x="131" y="292.5" width="12" height="11.5" fill="var(--alert)"/>
+            <text x="137" y="301.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">E</text>
+            <text x="148" y="301.5" font-size="9.2" font-weight="700" fill="var(--ink)">NDRRMA and DHM hold the authority to issue, but no body is mandated to carry a seismically detected mass movement into the flood alerting path</text>
+
+          <rect x="0" y="316" width="110" height="36" fill="var(--panel)" stroke="var(--line)"/>
+          <text x="9" y="330" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="9.4" font-weight="700" fill="var(--c-detect)">L5</text>
+          <text x="9" y="342" font-size="10" font-weight="700" fill="var(--ink)">Dissemination</text>
+
+          <rect x="126" y="319" width="221.5" height="26" fill="var(--sunk)" stroke="var(--line)" stroke-width="1"/>
+            <rect x="131" y="322.5" width="12" height="11.5" fill="var(--muted)"/>
+            <text x="137" y="331.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">E</text>
+            <text x="148" y="331.5" font-size="9.6" font-weight="700" fill="var(--ink)">CBFEWS, 8 river systems</text>
+            <text x="132" y="342.5" font-size="8" fill="var(--ink-2)">includes the Narayani</text>
+            <rect x="356.5" y="319" width="221.5" height="26" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.6"/>
+            <rect x="361.5" y="322.5" width="12" height="11.5" fill="var(--c-detect)"/>
+            <text x="367.5" y="331.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">M</text>
+            <text x="378.5" y="331.5" font-size="9.6" font-weight="700" fill="var(--ink)">SMS, radio, TV, telephone</text>
+            <text x="362.5" y="342.5" font-size="8" fill="var(--ink-2)">679,295 sent. Extend to the hazard reach</text>
+            <rect x="587" y="319" width="221.5" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="592" y="322.5" width="12" height="11.5" fill="var(--c-predict)"/>
+            <text x="598" y="331.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">N</text>
+            <text x="609" y="331.5" font-size="9.6" font-weight="700" fill="var(--ink)">Cell broadcast</text>
+            <text x="593" y="342.5" font-size="8" fill="var(--ink-2)">reaches roaming foreign SIMs</text>
+            <rect x="817.5" y="319" width="221.5" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="822.5" y="322.5" width="12" height="11.5" fill="var(--c-predict)"/>
+            <text x="828.5" y="331.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">N</text>
+            <text x="839.5" y="331.5" font-size="9.6" font-weight="700" fill="var(--ink)">Underground works alarm</text>
+            <text x="823.5" y="342.5" font-size="8" fill="var(--ink-2)">some 500 were left inside tunnels</text>
+            <rect x="1048" y="319" width="221.5" height="26" fill="var(--c-predict-bg)" stroke="var(--c-predict)" stroke-width="1.6"/>
+            <rect x="1053" y="322.5" width="12" height="11.5" fill="var(--c-predict)"/>
+            <text x="1059" y="331.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">N</text>
+            <text x="1070" y="331.5" font-size="9.6" font-weight="700" fill="var(--ink)">QZSS DC Report</text>
+            <text x="1054" y="342.5" font-size="8" fill="var(--ink-2)">mountains need field testing</text>
+            <rect x="1278.5" y="319" width="221.5" height="26" fill="var(--c-detect-bg)" stroke="var(--c-detect)" stroke-width="1.6"/>
+            <rect x="1283.5" y="322.5" width="12" height="11.5" fill="var(--c-detect)"/>
+            <text x="1289.5" y="331.3" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" font-weight="700" fill="var(--paper)">M</text>
+            <text x="1300.5" y="331.5" font-size="9.6" font-weight="700" fill="var(--ink)">Palika (local government)</text>
+            <text x="1284.5" y="342.5" font-size="8" fill="var(--ink-2)">only they know who has been hit</text>
+
+          <g stroke="var(--c-detect)" stroke-width="1.5" marker-end="url(#fl)" opacity=".7"><path d="M55 42v3"/><path d="M55 114v3"/><path d="M55 150v3"/><path d="M55 252v3"/><path d="M55 312v3"/></g>
+        </svg>
+        <figcaption>Colour encodes status. <b>Grey = existing, used as is</b> / <b>red outline = existing, but did not function here</b> / <b>teal = existing, to be modified</b> / <b>blue = newly added</b>. The only permanent new installations are the three L1 items and the satellite IoT in L2. <b>Integration lives in L3</b> &mdash; the four triggers stay separate, and only the L4 arrival-time prediction and the L5 dissemination paths are shared. No single detector is bet on; each track can raise an alert independently. <b>Confidence has three steps</b> (one detector = advisory / two detectors agreeing = prepare to evacuate / downstream measurement = evacuate). <b>L0 is the peacetime layer</b>, deciding where stations go and what the thresholds are &mdash; a static glacial-lake inventory is not enough: the 2025 supraglacial lake appeared within six months.</figcaption>
+      </figure>
+    </div>
+  </section>
+</div>
+
+<div class="row r3">
+  <section class="p">
+    <div class="ph"><span class="no">5</span><svg class="ico"><use href="#i-clock"/></svg><h2>Phasing &mdash; Phase 0 is the go / no-go</h2></div>
+    <div class="pb">
+      <div class="grow">
+        <div class="ph2"><em class="g">Phase 0</em><b>Retrospective analysis of existing archives</b><span>0&ndash;6 months &middot; &lt; USD 0.35 M &middot; no hardware</span></div>
+        <p class="pd">Go back through ~40 stations&rsquo; recorded waveforms and find the collapses that already happened. <b>Threshold values, and how often a false alarm would fire, come straight out of the data.</b></p>
+        <div class="ph2"><em>Phase 1</em><b>Trial running (no warnings issued)</b><span>6&ndash;18 months &middot; &lt; USD 0.7 M</span></div>
+        <p class="pd">Run the detection alongside the existing chain. Issue no warnings, and <b>measure only how often it would have fired in error.</b></p>
+        <div class="ph2"><em>Phase 2</em><b>Pilot deployment</b><span>18&ndash;30 months &middot; USD 1.4&ndash;2.8 M</span></div>
+        <p class="pd">Fill station gaps in the Bhote Koshi&ndash;Trishuli; add infrasound and riverbank tremor sites. Automatic sirens within 20 km upstream; arrival-time prediction downstream.</p>
+        <div class="ph2"><em>Phase 3</em><b>Roll out to other basins &middot; transboundary integration</b><span>USD 1.4&ndash;2.1 M per basin</span></div>
+      </div>
+      <p class="note"><b>If Phase 0 shows events cannot be caught with adequate margin, nothing further should be funded.</b> It costs almost nothing and governs a multi-million-dollar decision. Of 60 large Himalayan rock&ndash;ice avalanches, <b>about half cascaded, killing ~10&times; as many</b> (Zhong et al. 2025). The cascade is what this is for.</p>
+    </div>
+  </section>
+
+  <section class="p">
+    <div class="ph"><span class="no">6</span><svg class="ico" style="color:var(--c-gov)"><use href="#i-globe"/></svg><h2>Policy challenges</h2></div>
+    <div class="pb">
+      <dl class="kv">
+        <dt class="n">1</dt><dd><b>Assign the mandate</b><small>Widen DHM&rsquo;s flood-warning remit to accept non-hydrological triggers, or stand up a joint DMG&ndash;DHM&ndash;NDRRMA cell. <b>Without it, detection has no route to a warning.</b></small></dd>
+        <dt class="n">2</dt><dd><b>Agree the false-alarm budget before go-live</b><small>Settle a line with communities &mdash; &ldquo;three false alarms a year are acceptable if no river-threatening event is missed&rdquo; &mdash; and rehearse it. <b>A system whose first false alarm comes as a surprise is switched off within a year.</b> A political decision, not a technical one</small></dd>
+        <dt class="n">3</dt><dd><b>Transboundary</b><small>This source was <b>inside Nepal</b>, outside China&rsquo;s warning system: Nepal must detect it itself. Seismic waves also cross borders, so a Tibetan-side source is caught by stations in Nepal without waiting for a data-sharing agreement &mdash; the political strength of this design</small></dd>
+        <dt class="n">4</dt><dd><b>No footing to build on &mdash; the view from Nepal</b><small><b>Hazard and risk mapping has never been done nationwide.</b> Land-use law exists but is not enforced. Houses raised on fill from the Trishuli bed were swept away; those higher up survived. Bridges sit too low. <b>The L0 screening is also the work of filling that blank.</b></small></dd>
+      </dl>
+      <p class="note"><b>Reference design:</b> the Illgraben debris-flow warning system in Switzerland has run <b>fully automatically since 2007</b>, with no human between check-dam geophones and the alarm. &ldquo;Wire the sensor straight to the siren&rdquo; has worked in the field for nearly two decades.</p>
+    </div>
+  </section>
+
+  <section class="p">
+    <div class="ph"><span class="no">7</span><svg class="ico" style="color:var(--alert)"><use href="#i-no"/></svg><h2>Outside the scope</h2></div>
+    <div class="pb">
+      <div class="cx"><svg class="ico"><use href="#i-mtn"/></svg><div><h4>It does not predict. It begins once the mountain moves</h4>
+        <p>The 2.5-hour precursor at Chamoli in 2021, and the ground-temperature anomaly reported two days before this event, were both found afterwards. Important as research, but <b>not a design assumption.</b></p></div></div>
+      <div class="cx"><svg class="ico"><use href="#i-wave"/></svg><div><h4>The size of the shaking is not the discharge</h4>
+        <p>Shaking is a guide to how much sediment is moving, and it has to be tuned per site. A small GLOF can hide inside a monsoon rise; what tells them apart is <b>how fast it grows and the shape of the frequencies</b>.</p></div></div>
+      <div class="cx"><svg class="ico"><use href="#i-gap"/></svg><div><h4>Small events go unseen</h4>
+        <p>We do not yet know the smallest volume that can block a channel. Where to set the threshold is a judgement about how much risk to accept &mdash; Phase 0 turns it into a number.</p></div></div>
+      <div class="cx"><svg class="ico"><use href="#i-gauge"/></svg><div><h4>It is not a substitute for stage gauges</h4>
+        <p>Gauges give measured values; seismometers give survivability. <b>They complement each other</b>. Leaning on either alone repeats the same failure in another form.</p></div></div>
+    </div>
+  </section>
+</div>
+
+<div class="row r4">
+  <section class="p"><div class="pb" style="padding:7px 11px">
+    <div class="foot" style="grid-template-columns:1.25fr 1.5fr 1.25fr">
+      <div>
+        <div class="flab">Legend (colour coding of the architecture)</div>
+        <div class="lg">
+          <span class="lgi"><i style="background:var(--sunk);border-color:var(--line)"></i>E = existing, used as is</span>
+          <span class="lgi"><i style="background:var(--alert-soft);border-color:var(--alert)"></i>E = existing, did not function here</span>
+          <span class="lgi"><i style="background:var(--c-detect-bg);border-color:var(--c-detect)"></i>M = existing, to be modified</span>
+          <span class="lgi"><i style="background:var(--c-predict-bg);border-color:var(--c-predict)"></i>N = newly added</span>
+        </div>
+        <div style="font-size:8.2px;line-height:1.45;color:var(--ink-2);margin-top:4px">
+          New permanent hardware is limited to <b>the three L1 items and the L2 satellite IoT</b>. The rest is <b>software and institutions</b>. <b>Integration lives in L3</b> &mdash; triggers stay separate; only decision and dissemination are bound together.
+        </div>
+      </div>
+      <div>
+        <div class="flab">What Japan can bring</div>
+        <div class="gs" style="columns:2">
+          <div><b>NIED</b>: Hi-net / V-net; operational automatic lahar detection</div>
+          <div><b>Univ. of Tokyo &amp; JICA</b>: 8 stations already in Nepal &mdash; a base to extend</div>
+          <div><b>MLIT Hokkaido Bureau</b>: the Tokachidake sensor-to-siren direct-wiring model</div>
+          <div><b>PWRI / ICHARM</b>: turning detection into arrival times and evacuation lead time</div>
+          <div><b>JMA &amp; JAXA</b>: landslide warning information (snake curve); GSMaP upstream rainfall</div>
+          <div><b>JAXA &middot; Sentinel Asia &middot; ADRC</b>: satellite monitoring of the upstream across the border</div>
+        </div>
+      </div>
+      <div class="ms">
+        <svg class="ico"><use href="#i-seismo"/></svg>
+        <div>
+          <div class="a">Alert automatically when an event occurs.</div>
+          <div class="b">The system does not need to decide &ldquo;rock or ice&rdquo;. The only question is whether a large collapse has occurred upstream. <b>Issue the warning without waiting for the detailed analysis</b> &mdash; pinning down the cause takes days, and here too the reading moved.</div>
+        </div>
+      </div>
+    </div>
+  </div></section>
+</div>
+
+</div></div>
+
+<script>
+(function(){
+  var st=document.getElementById('stage'),b=document.getElementById('board');
+  function fit(){var s=Math.min(1,st.clientWidth/1587);b.style.transform='scale('+s+')';st.style.height=(1122*s)+'px';}
+  addEventListener('resize',fit);
+  if(document.fonts&&document.fonts.ready){document.fonts.ready.then(fit);}
+  fit();
+})();
+</script>

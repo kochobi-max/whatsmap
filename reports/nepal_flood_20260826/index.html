@@ -1,0 +1,1008 @@
+<title>逃げる時間はあった</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@500;700;900&family=BIZ+UDPGothic:wght@400;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#ECEDE8;
+  --panel:#F6F7F3;
+  --sunk:#E2E4DE;
+  --ink:#1A2124;
+  --ink-2:#3D4649;
+  --muted:#6E7673;
+  --line:#CFD2CB;
+  --line-soft:#DEE0DA;
+  --accent:#0F5A63;
+  --accent-soft:#D9E5E5;
+  --alert:#A93F1C;
+  --alert-soft:#EFDCD3;
+  --amber:#9A6C15;
+  --amber-soft:#EDE3CB;
+  --ice:#3E7E96;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#12181A;
+    --panel:#1A2225;
+    --sunk:#0D1315;
+    --ink:#E6E9E5;
+    --ink-2:#B9C0BD;
+    --muted:#8C9793;
+    --line:#2C3639;
+    --line-soft:#232C2F;
+    --accent:#5FB8C2;
+    --accent-soft:#17383D;
+    --alert:#E08256;
+    --alert-soft:#3A241B;
+    --amber:#D2A752;
+    --amber-soft:#332914;
+    --ice:#7FB3C8;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#12181A;
+  --panel:#1A2225;
+  --sunk:#0D1315;
+  --ink:#E6E9E5;
+  --ink-2:#B9C0BD;
+  --muted:#8C9793;
+  --line:#2C3639;
+  --line-soft:#232C2F;
+  --accent:#5FB8C2;
+  --accent-soft:#17383D;
+  --alert:#E08256;
+  --alert-soft:#3A241B;
+  --amber:#D2A752;
+  --amber-soft:#332914;
+  --ice:#7FB3C8;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"BIZ UDPGothic","Hiragino Kaku Gothic ProN","Yu Gothic",system-ui,sans-serif;
+  font-size:16px;
+  line-height:1.95;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px 120px}
+
+/* ---------- masthead ---------- */
+.masthead{
+  border-bottom:2px solid var(--ink);
+  padding:56px 0 26px;
+  display:flex;flex-direction:column;gap:22px;
+}
+.kicker{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--accent);font-weight:600;
+  display:flex;flex-wrap:wrap;gap:14px;align-items:center;
+}
+.kicker .sep{width:20px;height:1px;background:var(--line);display:inline-block}
+h1{
+  font-family:"Zen Old Mincho",serif;
+  font-weight:900;
+  font-size:clamp(38px,6.2vw,68px);
+  line-height:1.16;
+  letter-spacing:.01em;
+  margin:0;
+  text-wrap:balance;
+}
+h1 .sub{display:block;font-size:clamp(16px,2.1vw,23px);font-weight:500;color:var(--ink-2);margin-top:16px;line-height:1.65;letter-spacing:.02em}
+.byline{
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--muted);
+  display:flex;flex-wrap:wrap;gap:18px;letter-spacing:.04em;
+}
+
+/* ---------- thesis ---------- */
+.thesis{
+  margin:44px 0 0;padding:32px 34px;
+  background:var(--panel);
+  border-left:4px solid var(--accent);
+}
+.thesis p{margin:0 0 16px;font-size:17.5px;line-height:1.95;max-width:64ch}
+.thesis p:last-child{margin-bottom:0}
+.thesis strong{background:linear-gradient(transparent 62%,var(--accent-soft) 62%);font-weight:700}
+
+/* ---------- stat strip ---------- */
+.stats{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));
+  gap:1px;background:var(--line);border:1px solid var(--line);
+  margin:36px 0 0;
+}
+.stat{background:var(--panel);padding:18px 18px 16px}
+.stat .n{font-family:"IBM Plex Mono",monospace;font-size:27px;font-weight:600;line-height:1.1;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.stat .n.warn{color:var(--alert)}
+.stat .l{font-size:11.5px;line-height:1.6;color:var(--muted);margin-top:7px}
+
+/* ---------- sections ---------- */
+section{margin-top:78px;scroll-margin-top:20px}
+.sec-head{display:flex;gap:18px;align-items:baseline;border-bottom:1px solid var(--ink);padding-bottom:12px;margin-bottom:30px}
+.sec-num{
+  font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;
+  color:var(--accent);letter-spacing:.1em;flex:none;padding-top:6px;
+}
+h2{font-family:"Zen Old Mincho",serif;font-weight:700;font-size:clamp(24px,3.4vw,33px);line-height:1.4;margin:0;text-wrap:balance;letter-spacing:.01em}
+h3{
+  font-family:"BIZ UDPGothic",sans-serif;font-weight:700;font-size:18px;line-height:1.6;
+  margin:44px 0 14px;padding-left:13px;border-left:3px solid var(--accent);
+}
+h4{font-size:15px;font-weight:700;margin:26px 0 8px;color:var(--ink)}
+p{margin:0 0 17px;max-width:70ch}
+a{color:var(--accent)}
+ul,ol{margin:0 0 18px;padding-left:1.35em;max-width:70ch}
+li{margin-bottom:9px}
+.lede{font-size:17px;color:var(--ink-2);max-width:66ch}
+
+/* ---------- timeline ---------- */
+.tl{border-top:1px solid var(--line);margin:26px 0 10px}
+.tl-row{
+  display:grid;grid-template-columns:78px 1fr;gap:20px;
+  padding:13px 0;border-bottom:1px solid var(--line-soft);align-items:baseline;
+}
+.tl-time{
+  font-family:"IBM Plex Mono",monospace;font-size:14px;font-weight:600;
+  font-variant-numeric:tabular-nums;color:var(--accent);letter-spacing:-.01em;
+}
+.tl-body{font-size:14.5px;line-height:1.8}
+.tl-body b{font-weight:700}
+.tl-row.crit .tl-time{color:var(--alert)}
+.tl-row.crit .tl-body b{color:var(--alert)}
+.tag{
+  display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10px;
+  letter-spacing:.07em;padding:2px 7px;border:1px solid var(--line);
+  color:var(--muted);margin-left:8px;vertical-align:2px;white-space:nowrap;
+}
+
+/* ---------- the chart ---------- */
+.chart{
+  margin:30px 0 12px;border:1px solid var(--line);background:var(--panel);
+  overflow-x:auto;
+}
+.chart-head{
+  display:grid;grid-template-columns:126px 1fr 1fr;gap:0;
+  border-bottom:1px solid var(--line);
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.08em;
+  color:var(--muted);text-transform:uppercase;
+}
+.chart-head div{padding:11px 14px}
+.chart-head div+div{border-left:1px solid var(--line-soft)}
+.crow{
+  display:grid;grid-template-columns:126px 1fr 1fr;
+  border-bottom:1px solid var(--line-soft);align-items:center;min-width:600px;
+}
+.crow:last-child{border-bottom:none}
+.crow .place{
+  padding:10px 14px;font-size:13.5px;font-weight:700;line-height:1.45;
+}
+.crow .place small{display:block;font-weight:400;font-size:10.5px;color:var(--muted);font-family:"IBM Plex Mono",monospace;letter-spacing:.03em}
+.cell{padding:8px 14px;border-left:1px solid var(--line-soft);display:flex;align-items:center;gap:9px}
+.bar{height:15px;background:var(--ice);opacity:.85}
+.bar.est{background:repeating-linear-gradient(90deg,var(--ice) 0 5px,transparent 5px 9px)}
+.bar.death{background:var(--alert)}
+.val{font-family:"IBM Plex Mono",monospace;font-size:12px;font-variant-numeric:tabular-nums;color:var(--ink-2);white-space:nowrap;font-weight:500}
+.val.neg{color:var(--alert);font-weight:600}
+.cap{font-size:12.5px;color:var(--muted);line-height:1.75;margin:12px 0 0;max-width:74ch}
+
+/* ---------- gap cards ---------- */
+.gaps{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin:26px 0}
+.gap{background:var(--panel);padding:24px 26px}
+.gap-top{display:flex;gap:14px;align-items:baseline;margin-bottom:10px;flex-wrap:wrap}
+.gap-id{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;color:var(--alert);letter-spacing:.1em;flex:none}
+.gap h4{margin:0;font-size:17px;font-family:"Zen Old Mincho",serif;font-weight:700}
+.gap p{font-size:14.5px;margin:0 0 10px;max-width:74ch}
+.gap p:last-child{margin-bottom:0}
+.gap .num{font-family:"IBM Plex Mono",monospace;font-weight:600;font-variant-numeric:tabular-nums}
+
+/* ---------- measure table ---------- */
+.tbl-scroll{overflow-x:auto;margin:24px 0 8px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;min-width:720px;background:var(--panel);font-size:13.5px}
+th,td{padding:11px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line-soft);line-height:1.7}
+thead th{
+  background:var(--sunk);font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;
+  border-bottom:1px solid var(--line);white-space:nowrap;
+}
+tbody tr:last-child td{border-bottom:none}
+td.id{font-family:"IBM Plex Mono",monospace;font-weight:600;color:var(--accent);white-space:nowrap;font-size:12px}
+td.mono{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;font-size:12.5px;white-space:nowrap}
+.pill{
+  display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10px;
+  padding:2px 8px;letter-spacing:.06em;white-space:nowrap;font-weight:600;
+}
+.p-now{background:var(--alert-soft);color:var(--alert)}
+.p-mid{background:var(--amber-soft);color:var(--amber)}
+.p-long{background:var(--accent-soft);color:var(--accent)}
+
+/* ---------- measure blocks ---------- */
+.m{border-top:2px solid var(--line);padding-top:22px;margin-top:34px}
+.m-head{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:6px}
+.m-id{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;color:var(--accent);flex:none;letter-spacing:.06em}
+.m-head h4{margin:0;font-size:18px;font-family:"Zen Old Mincho",serif;font-weight:700;line-height:1.5}
+.m-meta{
+  display:flex;flex-wrap:wrap;gap:8px 20px;margin:10px 0 16px;
+  font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted);letter-spacing:.03em;
+}
+.m-meta span b{color:var(--ink-2);font-weight:600}
+.jp{
+  margin:16px 0 0;padding:15px 18px;background:var(--sunk);
+  border-left:3px solid var(--ice);font-size:13.5px;line-height:1.85;
+}
+.jp .lbl{
+  font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;
+  color:var(--ice);text-transform:uppercase;display:block;margin-bottom:5px;font-weight:600;
+}
+.caveat{
+  margin:16px 0 0;padding:15px 18px;background:var(--alert-soft);
+  font-size:13.5px;line-height:1.85;border-left:3px solid var(--alert);
+}
+.caveat .lbl{
+  font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;
+  color:var(--alert);text-transform:uppercase;display:block;margin-bottom:5px;font-weight:600;
+}
+.caveat p,.jp p{margin:0;max-width:none}
+
+/* ---------- sources ---------- */
+.src{font-size:12.5px;line-height:1.85;color:var(--muted)}
+.src ol{padding-left:1.5em;max-width:none}
+.src li{margin-bottom:7px}
+.src a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--line)}
+.src a:hover{border-bottom-color:var(--accent)}
+
+footer{margin-top:80px;padding-top:26px;border-top:2px solid var(--ink);font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted);line-height:2;letter-spacing:.03em}
+
+a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media (max-width:620px){
+  .wrap{padding:0 18px 80px}
+  .tl-row{grid-template-columns:64px 1fr;gap:14px}
+  .thesis{padding:24px 22px}
+  .gap{padding:20px 20px}
+}
+</style>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="kicker">
+    <span>2026年8月26日 ネパール・ボテコシ／トリスリ川洪水</span>
+    <span class="sep"></span>
+    <span>技術検討メモ</span>
+  </div>
+  <h1>逃げる時間はあった
+    <span class="sub">――ネパール氷河起因土石流災害に対して、日本の技術で何ができるか</span>
+  </h1>
+  <div class="byline">
+    <span>作成 2026-08-29 ／ 改訂 2026-08-30</span>
+    <span>対象流域 Bhotekoshi – Trishuli – Narayani</span>
+    <span>状況 進行中／数値は暫定</span>
+  </div>
+</header>
+
+<div class="thesis">
+  <p>この災害を「上流を監視できていれば防げた」と要約すると、対策を誤る。<strong>死者の大半は、警報が出たあと数時間の余裕があった下流域で発生している</strong>。源頭に最も近いラスワ郡の収容遺体は13名、170km下流のチトワン郡は246名だった。</p>
+  <p>つまり中心的な失敗は「危険を検知できなかったこと」ではなく、<strong>手に入れた時間を避難に変換できなかったこと</strong>にある。日本が支援すべき最優先の対象は、衛星でも堰堤でもなく、この変換装置である。</p>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="n warn">675</div><div class="l">死者（ネパール、8/29 18:30 NDRRMA）</div></div>
+  <div class="stat"><div class="n warn">2,418</div><div class="l">行方不明・連絡不通</div></div>
+  <div class="stat"><div class="n">933</div><div class="l">不明者のうち水力発電所の坑内労働者</div></div>
+  <div class="stat"><div class="n">589</div><div class="l">不明者のうち外国人</div></div>
+  <div class="stat"><div class="n">679,295</div><div class="l">09:15–09:16に送信されたSMS警報</div></div>
+  <div class="stat"><div class="n">14</div><div class="l">被災した水力発電事業（計約748MW）</div></div>
+</div>
+
+<section id="s1">
+  <div class="sec-head"><div class="sec-num">01</div><h2>10時間で168km──何が起きたか</h2></div>
+
+  <p class="lede">ランタン・リルンで氷河末端が基盤岩ごと崩壊した。標高約5,200mから幅約600mにわたって剥離し、約1,200m滑落してレンデ川へ突入、ほぼ直角に向きを変えて河床礫を巻き込みながら直接土石流化した。マグニチュード5.2相当の地震波は米国とドイツの地震計にまで記録されたが、<b>地震が崩壊を起こしたのではなく、崩壊が地震波を起こした</b>。</p>
+
+  <div class="tl">
+    <div class="tl-row crit"><div class="tl-time">08:37</div><div class="tl-body"><b>源頭で崩壊し、直接土石流化</b>。地震動として世界の観測網に記録される<span class="tag">検知は物理的に可能だった</span></div></div>
+    <div class="tl-row"><div class="tl-time">08:50</div><div class="tl-body">シャブルベシ（Syabrubesi）の水位観測局が<b>送信を停止</b>。崩壊から13分</div></div>
+    <div class="tl-row crit"><div class="tl-time">09:05</div><div class="tl-body">ネパール水文気象局（DHM）が洪水のボテコシ川流入を覚知。<b>国境通過から約16分後</b></div></div>
+    <div class="tl-row"><div class="tl-time">09:15–09:16</div><div class="tl-body">SMS一斉警報 <b>679,295件</b>。対象はラスワ・ヌワコット・ダディン・チトワンの4郡</div></div>
+    <div class="tl-row"><div class="tl-time">09:20</div><div class="tl-body">ベトラワティ（Betrawati）の観測局が送信停止</div></div>
+    <div class="tl-row crit"><div class="tl-time">約11:40</div><div class="tl-body">源頭で<b>2度目の地震動（M4.2相当）</b>。二次崩壊とみられる</div></div>
+    <div class="tl-row"><div class="tl-time">15:20</div><div class="tl-body">ナラヤニ川デブガット（Devghat）に到達。水位はなお上昇中</div></div>
+    <div class="tl-row"><div class="tl-time">16:00</div><div class="tl-body">デブガットで<b>ピーク水位 6.57m</b></div></div>
+    <div class="tl-row"><div class="tl-time">18:30</div><div class="tl-body">同地点で約4mまで低下。源頭の崩壊から<b>約10時間、約168km</b></div></div>
+  </div>
+
+  <div class="caveat">
+    <span class="lbl">源頭の再構成は4日で3度変わった ── これ自体が設計条件である</span>
+    <p>USGS初報（8/26）は08:37の斜面崩壊を起点とした。IRDRの Rapid Analysis Report（8/26）は衛星・降雨・流量の統合解析から<b>前日8/25 13時頃の崩壊と18〜19時間の湛水を経た決壊</b>と再構成した。その後GFZの地震学的解析と Copernicus / Planet / Landsat による解析は、<b>持続的な堰き止めを否定し、08:37の崩壊が直接土石流化した</b>とする。本メモは最後の読みを採るが、確定はしていない。</p>
+    <p>重要なのはどれが正しいかではなく、<b>源頭に計器が無いために、専門機関が遠隔データから推定し、日単位で結論が動くという事実</b>である。ここから2つの設計要件が導かれる。第一に、<b>警報系は機構の同定に依存してはならない</b>（後述B-1は「大規模な質量移動があった」だけで発報する）。第二に、河道閉塞の可能性は今回否定されつつあるが、<b>ゼロと確認されるまで備えは要る</b>（後述B-3）。</p>
+  </div>
+
+  <div class="caveat">
+    <span class="lbl">この災害は初めてではない</span>
+    <p>13か月前の2025年7月8日、ほぼ同じ回廊で氷河湖決壊洪水（GLOF）が発生し11名が死亡した。原因はチベット側プレプ氷河上の氷河上湖で、2024年12月に小さな水たまりとして形成され2025年6月に急拡大したものだった。<b>誰も存在を把握していなかった</b>。ポイク／ボテコシ・ギロン／トリスリ越境流域では、2025年の評価で28の氷河湖が高い決壊危険度と判定されている。</p>
+  </div>
+</section>
+
+<section id="s2">
+  <div class="sec-head"><div class="sec-num">02</div><h2>死者はリードタイムが最も長かった場所に集中した</h2></div>
+
+  <p>NDRRMAが8月29日に公表した郡別の収容遺体数を、洪水波の到達順（上流→下流）に並べると、この災害の性格が変わって見える。</p>
+
+  <div class="chart">
+    <div class="chart-head">
+      <div>郡（上流→下流）</div>
+      <div>SMS警報から洪水到達までの猶予</div>
+      <div>収容遺体数</div>
+    </div>
+
+    <div class="crow">
+      <div class="place">ラスワ<small>RASUWA · 源頭〜20km</small></div>
+      <div class="cell"><span class="val neg">−25分</span><span class="val" style="color:var(--muted)">到達後に警報</span></div>
+      <div class="cell"><div class="bar death" style="width:5%"></div><span class="val">13</span></div>
+    </div>
+    <div class="crow">
+      <div class="place">ヌワコット<small>NUWAKOT · 〜55km</small></div>
+      <div class="cell"><div class="bar" style="width:2%"></div><span class="val">+5分</span></div>
+      <div class="cell"><div class="bar death" style="width:21%"></div><span class="val">51</span></div>
+    </div>
+    <div class="crow">
+      <div class="place">ダディン<small>DHADING</small></div>
+      <div class="cell"><div class="bar est" style="width:18%"></div><span class="val">約1.5〜2時間</span></div>
+      <div class="cell"><div class="bar death" style="width:18%"></div><span class="val">45</span></div>
+    </div>
+    <div class="crow">
+      <div class="place">ゴルカ<small>GORKHA</small></div>
+      <div class="cell"><div class="bar est" style="width:34%"></div><span class="val">約3〜4時間</span></div>
+      <div class="cell"><div class="bar death" style="width:23%"></div><span class="val">57</span></div>
+    </div>
+    <div class="crow">
+      <div class="place">タナフン<small>TANAHUN</small></div>
+      <div class="cell"><div class="bar est" style="width:42%"></div><span class="val">約4〜5時間</span></div>
+      <div class="cell"><div class="bar death" style="width:14%"></div><span class="val">35</span></div>
+    </div>
+    <div class="crow">
+      <div class="place">チトワン<small>CHITWAN · デブガット合流点</small></div>
+      <div class="cell"><div class="bar" style="width:56%"></div><span class="val">6時間5分</span></div>
+      <div class="cell"><div class="bar death" style="width:100%"></div><span class="val">246</span></div>
+    </div>
+    <div class="crow">
+      <div class="place">ナワルパラシ東<small>NAWALPARASI E · 警報対象外</small></div>
+      <div class="cell"><div class="bar est" style="width:70%"></div><span class="val">約7〜8時間</span></div>
+      <div class="cell"><div class="bar death" style="width:67%"></div><span class="val">165</span></div>
+    </div>
+    <div class="crow">
+      <div class="place">ナワルパラシ西<small>NAWALPARASI W · 警報対象外</small></div>
+      <div class="cell"><div class="bar est" style="width:78%"></div><span class="val">約8〜9時間</span></div>
+      <div class="cell"><div class="bar death" style="width:26%"></div><span class="val">63</span></div>
+    </div>
+  </div>
+
+  <p class="cap">実線バー＝一次情報で時刻が確認できる地点（シャブルベシ08:50、ベトラワティ09:20、デブガット15:20）。破線バー＝両者からの内挿による推定。収容遺体数は2026年8月29日18:30時点のNDRRMA発表。</p>
+
+  <div class="caveat">
+    <span class="lbl">この図の読み方には決定的な留保がある</span>
+    <p>「収容遺体数」は<b>死亡地点ではなく遺体の発見地点</b>である。上流で流された遺体が下流で収容された分がどれだけ含まれるかによって、政策上の結論は正反対になりうる。<b>だからこそ、後述するとおり「どこで・何時に・どのような警報を受けて人が死んだのか」を確定させる検証調査が、あらゆる機材供与に先立つ最優先事項になる。</b>本メモの提案はこの検証を前提に組み立てている。</p>
+  </div>
+
+  <p>ただし、留保を最大限に置いてもなお動かない事実がいくつかある。ナワルパラシ東西・ゴルカ・タナフンの4郡で計320名（全体の約47%）の遺体が収容されているが、報道されている09:15のSMS配信対象はラスワ・ヌワコット・ダディン・チトワンの4郡である。<strong>警報の地理的範囲が、ハザードの地理的範囲より小さかった</strong>可能性が高い。ナラヤニ川はこの先インドへ流れ込む。</p>
+
+  <h3>4つの空白</h3>
+
+  <div class="gaps">
+    <div class="gap">
+      <div class="gap-top"><span class="gap-id">GAP 1</span><h4>源頭の13分──検知の空白</h4></div>
+      <p>崩壊は降雨を伴わなかった。ネパールの洪水予警報は降雨とモンスーン水文に立脚しており、<span class="num">構造的に</span>チベット側の氷岩なだれを見ることができない。国境を越えた瞬間から数えて覚知まで16分、SMSまで26分。上流20km圏には使える時間が残らなかった。</p>
+    </div>
+    <div class="gap">
+      <div class="gap-top"><span class="gap-id">GAP 2</span><h4>沈黙した観測局が警報にならなかった</h4></div>
+      <p>回廊に6局あった水位観測局のうち<span class="num">上流3局は、警戒水位（アンバー）に達する前に送信を停止した</span>。装置は洪水そのものに破壊されたのであり、沈黙は故障ではなく被災の証拠だった。しかし運用ロジックはそれを「欠測」として扱った。最も強い信号が、最も無視されやすい形で届いていた。</p>
+    </div>
+    <div class="gap">
+      <div class="gap-top"><span class="gap-id">GAP 3</span><h4>「洪水が発生しました」では人は動かない</h4></div>
+      <p>67万件のSMSは09:15に一斉配信された。しかしチトワンへの到達は15:20、6時間後である。受け手に必要だったのは発生の告知ではなく<span class="num">「あなたの集落に何時何分に到達するか」</span>という到達時刻と、その後の追跡更新だった。一度きりの一斉送信は、時間が経つほど信憑性を失う。</p>
+    </div>
+    <div class="gap">
+      <div class="gap-top"><span class="gap-id">GAP 4</span><h4>SMSが届かない人々に犠牲が集中した</h4></div>
+      <p>不明者のうち<span class="num">933名は水力発電所の坑内労働者</span>、<span class="num">589名は外国人</span>である。坑内には電波も状況認識も避難経路もない。トレッカーはネパール語のSMSを受け取らず、コミュニティ防災組織の外側にいる。両者とも既存の警報体系の設計対象に入っていなかった。</p>
+    </div>
+  </div>
+</section>
+
+<section id="s2b">
+  <div class="sec-head"><div class="sec-num">02b</div><h2>物理から詰める ── 地震計は何を記録し、水はどこから来たのか</h2></div>
+
+  <p class="lede">源頭の機構が割れている以上、報道の記述を追うのではなく、物理量で境界条件を絞るほうが早い。以下は公表値からの桁の見積もりであり、精密解ではない。前提を明示するので、数値が更新されれば結論も更新されるべきものとして読んでほしい。</p>
+
+  <h3>1. 地震計が記録したのは、ほぼ確実に「質量移動」であって「決壊」ではない</h3>
+  <p>ダムの決壊は地震波の発生源としては弱い。水が流出する過程は運動量変化率が小さく、大きな単一力を地面に与えないため、決壊はせいぜい微弱で継続時間の長い微動として現れる。<b>M5.2〜5.7相当のエネルギーを持つ信号を決壊で説明するのは難しい。</b></p>
+  <p>一方、大規模な岩氷なだれは特徴的な震源である。数十秒から数分にわたる長い継続時間、明瞭なP波・S波を欠く緩やかな立ち上がり、そして長周期帯（0.01〜0.1Hz）に集中したエネルギー。この長周期波形を逆解析すると、剪断破壊を表すダブルカップルではなく<b>単一力（滑動する質量が地球に及ぼす反力）</b>が得られ、そこから質量と滑動方向・継続時間が復元できる。2013年に確立した手法で、2021年のインド・チャモリ災害でも実際に適用された。GFZが「landslideと整合する」としているのはこの意味である。</p>
+  <p><b>ただし、これは「堰き止めが無かった」ことを意味しない。</b>08:37の信号が質量移動だったとしても、その質量移動が前日から溜まっていた水を解放した、という順序は排除されない。</p>
+
+  <h3>2. 水量の桁を並べる</h3>
+  <p>「100kmを流下する土石流」を成立させる水がどこから来たのかを、桁で確認する。</p>
+
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>供給源</th><th>前提</th><th>水量の桁</th></tr></thead>
+    <tbody>
+      <tr><td>氷の摩擦融解</td><td>落差1,200m＝11.8 kJ/kg。氷の融解潜熱334 kJ/kg。<b>位置エネルギーの全量を融解に充てても融けるのは氷質量の3.5%が上限</b>。実際は運動エネルギー・破砕・岩石への熱損失に大半が失われる</td><td class="mono">10⁵–10⁶ m³</td></tr>
+      <tr><td>18〜19時間の河道閉塞・湛水</td><td>レンデ川規模の流域がモンスーン期に流す量を19時間貯めた場合</td><td class="mono">10⁶ m³</td></tr>
+      <tr><td>デブガットを通過した<b>総量</b></td><td>15:20到達〜18:30減衰の約3.2時間に通過した水量。<b>モンスーン期の平常流量（数千m³/s）が大半を占める</b></td><td class="mono">10⁸ m³</td></tr>
+      <tr><td>うち平常流量を超える<b>超過分</b></td><td>水位上昇約2.6m、活動幅200〜500m、出水時流速3〜5m/s、三角波近似。<b>源頭を規定するのはこの量</b></td><td class="mono">10⁷ m³</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>ここから2つのことが言える。</p>
+  <p><b>第一に、摩擦融解では源頭の水量を説明できない。</b>桁が2〜3つ足りない。氷が融けて水になった、という素朴な説明は物理的に成立しない。源頭で流動化に要した水は、河道の水そのもの、飽和した堆積物、あるいは貯留されていた水に求めるほかない。</p>
+  <p><b>第二に、下流で見るべきは総量ではなく超過分である。</b>デブガットを3.2時間で通過した10⁸ m³オーダーの大半は、モンスーン期の平常流量そのものであって、この災害が運んだ水ではない。洪水波は水より速く進むため（波速はおよそ平均流速の1.5倍）、波の先頭の水は源頭から来た水ではなく現地の河川水である。したがって<b>総量から源頭の放出量を逆算することはできない</b>。</p>
+  <p>意味を持つのは、平常流量を超えた<b>超過分</b>のほうである。上記の仮定でおよそ<b>10⁷ m³</b>。そしてこの日ネパールに大雨は無く（DHM確認）支流は増水していないため、超過分は原理的に「源頭からの放出＋流下途中で取り込まれた分」に帰せられる。</p>
+  <p><b>ここに残る1桁の差が、この災害の中心的な物理問題である。</b>超過分10⁷ m³に対し、摩擦融解は10⁵〜10⁶、19時間の閉塞・湛水でも10⁶にとどまる。差を埋めうるのは、100kmにわたる流下で飽和した河床堆積物と渓岸を削り取り、そこに含まれる水ごと取り込んだ<b>バルキング（土石流の体積増加）</b>である。モンスーン末期で流域が飽和していた条件はこれを助ける。ただし数倍から10倍という増加率が必要で、それが妥当かは河床の侵食深と侵食幅を実測して確かめるほかない。<b>埋まらなければ、既存の水体（氷河上湖・氷河内水塊・モレーン湖）の関与を疑うべきである</b>──2025年7月の事例はまさにそれだった。</p>
+
+  <div class="caveat">
+    <span class="lbl">つまり、判定は源頭近傍でしか行えない</span>
+    <p>源頭の機構を決めるのは、下流の総量ではなく<b>源頭に最も近いラスワガディ観測所（Station Index 446.22）のピーク流量とハイドログラフの形状</b>である。ダムブレイク波は急峻な立ち上がりと特徴的な減衰を持ち、直接土石流化したサージとは波形が異なる。IRDR自身が「流量記録にいくつかの異常な特徴があり、さらなる検討を要する」と記していることは示唆的である。</p>
+  </div>
+
+  <h3>3. 両説と地震記録を同時に満たす仮説</h3>
+  <p>以上を組み合わせると、次の2段階の順序が最も整合的な候補になる。断定ではなく、検証すべき作業仮説として置く。</p>
+  <ul>
+    <li><b>8月25日13時頃</b> ── 第一の崩壊が発生し、レンデ川を閉塞。規模が小さいか、あるいは誰も地震記録を探していなかったため、震源としては注目されなかった。</li>
+    <li><b>8月26日08:37</b> ── より大規模な第二の崩壊。これがM5.2〜5.7相当の信号の正体であり（GFZと整合）、同時に閉塞部を破壊して<b>貯留水と新たな崩土を一挙に解放した</b>（IRDRと整合）。</li>
+    <li><b>約11:40</b> ── M4.2相当の第三のイベント。さらなる崩壊または残存部の解放。</li>
+  </ul>
+  <p>この仮説なら、「地震信号は質量移動である」「源頭には融解では足りない水が必要だった」「事後の衛星画像に湖が写らない（既に排水されたため）」の3つが同時に成立する。<b>事後画像で探すべきは湖ではなく、排水された湖の痕跡</b>──新鮮な汀線、堆積物のドレープ、トリムライン──である。これは反証可能な予測になっている。</p>
+
+  <h3>4. 2つの地震動をどう読むか</h3>
+
+  <p>カタログに載った2件は、単に「本震と余震」ではない。両者のメタデータを並べると読み取れることがある。</p>
+
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th></th><th>第1イベント</th><th>第2イベント</th></tr></thead>
+    <tbody>
+      <tr><td>USGS ID</td><td class="mono">us7000tbwb</td><td class="mono">us7000tc90</td></tr>
+      <tr><td>時刻（NPT）</td><td class="mono">08:37:10</td><td class="mono">11:45:35（3時間8分後）</td></tr>
+      <tr><td>規模</td><td class="mono">Ms 5.2</td><td class="mono">Ms 4.2（放射エネルギー 約1/32）</td></tr>
+      <tr><td>種別</td><td>landslide</td><td>landslide</td></tr>
+      <tr><td>位置</td><td class="mono">28.271, 85.515</td><td class="mono">28.270, 85.515（差 約110m）</td></tr>
+      <tr><td>体感報告</td><td class="mono">felt 2 / CDI 2</td><td class="mono">なし</td></tr>
+      <tr><td>状態</td><td>reviewed（人が確認）</td><td>reviewed（人が確認）</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>メタデータが語っていること、語っていないこと</h4>
+  <p><b>語っていること</b>──両方とも `magType` が <b>ms_vx</b>（鉛直成分の表面波マグニチュード）であり、種別が <b>landslide</b>、そして <b>status が reviewed</b> である。つまり自動処理の結果ではなく、<b>解析者が波形を見た上で「地震ではなく質量移動である」と判断している</b>。長周期の表面波が卓越し、明瞭なP波・S波を欠く波形でなければこの分類にはならない。</p>
+  <p><b>語っていないこと</b>──深さ0kmと位置は<b>独立した証拠ではない</b>。`nst`（震源決定に使った観測点数）が両方とも<b>0</b>である。観測点の到達時刻から震源を決めたのではなく、既知の崩壊源に割り当てた値だということである。位置が110mしか違わないことを「同一斜面の証拠」として使うことはできない。第1イベントの `rms` が11.91秒という異常な大きさなのも、緩やかに立ち上がる長時間の信号を地震用の震源決定アルゴリズムに当てはめた結果とみるのが自然である。</p>
+
+  <h4>第2イベントの正体──最も無理のない読み</h4>
+  <p>規模差1.0は放射地震エネルギーで約32倍、質量にしておよそ1桁の差にあたる。<b>大規模な剥離の直後、露出した滑落崖は支えを失って過急勾配になっており、数時間から数日以内に後退性の二次崩壊が起きるのはむしろ通例である</b>。同一斜面からの二次崩壊とみるのが最も無理がない。</p>
+  <p>これがダムの決壊だった可能性は低い。決壊は地震波源として弱く、landslideとして分類される波形にはなりにくい。ただし、<b>カタログに載らない規模で静かに決壊した可能性まで否定はできない</b>。この2件は堰き止め説を積極的に支持も否定もしない。</p>
+
+  <div class="jp">
+    <span class="lbl">第2イベントは大きな洪水波を出していない</span>
+    <p>第1イベントからの伝播実績（08:37発生 → 08:50シャブルベシ＝12分、→ 15:20デブガット到達＝6時間43分）をそのまま当てはめると、11:45の第2イベントが同等の流れを起こしていれば<b>シャブルベシ11:58、デブガット18:28</b>に到達していたはずである。しかし実測ではデブガットの水位は<b>18:30に約4mへ低下</b>しており、第2のピークは報告されていない。第2の崩土は斜面上部か谷内で停止したか、軽微な流出にとどまったと考えられる。水量問題への寄与は小さい。</p>
+  </div>
+
+  <div class="caveat">
+    <span class="lbl">ここが本メモにとって最も重要な含意である</span>
+    <p><b>谷は、最初の波が通過した後も安全ではなかった。</b>3時間8分後に第二の崩壊が起きている。これは捜索・救助の部隊が回廊へ入っていく時間帯にあたる。</p>
+    <p>そして<b>この第2イベントについて、誰にも警報は出ていない</b>。カタログ上の更新時刻は2026年8月27日23:22 UTC──発生から1日半後である。解析者が事後に波形を処理して初めて登録された。<b>リアルタイムで検知した主体は存在しない。</b></p>
+    <p>ここから、後述B-1（源頭の地震学的検知）の価値が一段上がる。従来これは「最初の波の前に時間を作る装置」として位置づけてきたが、実際にはそれ以上に<b>応急対応期に効く装置</b>である。流域内に広帯域地震計があれば、11:45の崩壊を60〜120秒で検知し、谷にいる部隊を退避させられた。しかも本項の設計は機構の同定を要さないため、源頭の再構成が割れている現状でも、そして次の災害の性質が今回と違っていても、そのまま機能する。</p>
+  </div>
+
+  <h3>5. 決着させるための4つの観測</h3>
+  <p>いずれも新規観測を要さず、既存データで実施できる。検証調査（A-0）の中核に置くべき項目である。</p>
+  <ol>
+    <li><b>08:37波形の単一力インバージョン</b> ── 長周期波形から質量・滑動方向・継続時間を復元する。ダブルカップルとの適合度を比較すれば、質量移動か否かが決まる。</li>
+    <li><b>8月25日13時前後の地震記録の探索</b> ── 最も安価で決定的な検定。<b>本メモ作成にあたりカタログ照会まで実施した（結果は下記）。</b>波形レベルの確認が残っている。</li>
+    <li><b>ラスワガディのピーク流量とハイドログラフ形状の再解析</b> ── 上記のとおり、源頭機構を判定できる唯一の水文学的指標。</li>
+    <li><b>8月25日夕〜26日朝のSAR・光学画像の探索</b> ── Sentinel-1は雲を透過し、湛水域は平滑な低後方散乱域として現れる。Planetの日次光学、必要ならICEYE等の緊急タスキング。併せて事後画像で排水痕跡を探す。</li>
+  </ol>
+
+  <div class="caveat">
+    <span class="lbl">実施結果 ── USGS地震カタログ照会（2026-08-30）</span>
+    <p>USGSのFDSNイベントカタログに対し、震源域（28.30°N, 85.52°E）から<b>半径300km・8月20日〜28日・M0以上</b>で照会したところ、該当は2件のみだった。</p>
+    <p style="font-family:'IBM Plex Mono',monospace;font-size:13px;background:var(--sunk);padding:10px 12px;line-height:1.9">
+      2026-08-26 02:52:10Z（NPT 08:37）　M5.2　ms_vx　深さ 0 km　<b>type = landslide</b><br>
+      2026-08-26 06:00:35Z（NPT 11:45）　M4.2　ms_vx　深さ 0 km　<b>type = landslide</b>
+    </p>
+    <p><b>8月25日には、半径300km以内に一件も存在しない。</b>また両イベントはUSGS自身が<b>地震ではなく landslide として分類し、深さ0km・表面波マグニチュード（鉛直成分）で扱っている</b>。これは「地震が崩壊を起こしたのではなく崩壊が地震波を起こした」というGFZの解釈と完全に整合する。</p>
+    <p><b>ただしこれは決定的証拠ではない。</b>カタログへの不在は波形中の不在を意味しない。地滑り信号は立ち上がりが緩やかでP波を欠くため、通常の自動検測では拾われない。8月26日の2件がカタログに載っているのは、災害後に解析者が<b>その時刻を狙って特別に処理した</b>結果とみるのが自然であり、誰も8月25日を見ていなければ、たとえ信号があっても載らない。前日の崩壊が河道を塞ぐだけの規模（本流の氾濫を起こす必要はない）であれば、M4.2を下回っていた可能性もある。</p>
+    <p><b>決定版の手順</b>：震源域から数百km以内の広帯域観測点（ネパールNSC網、中国側観測点、IC.LSA等）について、8月25日00:00〜8月26日12:00（UTC）の<b>連続波形</b>をFDSN dataselectで取得し、20〜100秒帯にバンドパスして長周期トランジェントを探索する。候補が出れば単一力インバージョンにかけ、質量と滑動方向を求める。本環境ではIRIS/GEOFONへの接続が遮断されており、ここまでは実施できていない。</p>
+  </div>
+
+  <div class="jp">
+    <span class="lbl">この節が支援設計に対して持つ意味</span>
+    <p>現時点で証拠は「8月26日08:37の崩壊が直接土石流化した」という読みに傾いている（地震カタログに前日の記録なし、衛星に湖の証拠なし、両イベントともlandslide分類）。残る問題は水量で、超過分10⁷ m³をバルキングで説明しきれるかである。争点の決着は、源頭側にいくら投資すべきかを決める。だが<b>決着を待たずに着手できる項目と、待つべき項目は分けられる</b>。B-1（地震学的検知）は機構の同定を要さないため、どちらの説を採っても価値が変わらない──本メモで唯一、この争点から独立した源頭側の投資である。A群（下流の到達時刻予測・警報範囲・特殊人口）も同様に独立している。一方でB-3（河道閉塞の緊急対応）への投資規模は、この検証の結果を見てから決めるのが合理的である。</p>
+  </div>
+</section>
+
+<section id="s2c">
+  <div class="sec-head"><div class="sec-num">02c</div><h2>地震計を使った統合EWSは成立するか</h2></div>
+
+  <p class="lede">「氷岩なだれは地震計で捉えられる」という観察から、実際に警報を出せる系まではまだ距離がある。ここでは3つの問いに順に答える。氷岩なだれをリアルタイムで判断し発報できるのか。GLOFも同じ方法で扱えるのか。そして統合系を組むために何が要るのか。</p>
+
+  <h3>1. 氷岩なだれ ── できる。3つのうち最も成熟している</h3>
+
+  <p>大規模な質量移動は<b>単一力震源</b>である。滑動する土塊が地球を押し、地球が押し返す。この反力が長周期帯（20〜150秒）に強く放射され、同時に破砕と衝突が1〜10Hzの高周波を生む。地震のような明瞭なP波の立ち上がりを持たず、数十秒から数分にわたって緩やかに続く。</p>
+  <p><b>既存の地震観測網がこれを取り逃がすのは、まさにこの性質のためである。</b>標準的な処理は「立ち上がりの鋭い到達波を各観測点で拾い、それらを結合して震源を決める」。立ち上がりが鋭くない信号は、結合の段階で捨てられる。今回のUSGSカタログで <span class="mono">nst = 0</span>（震源決定に使った観測点数がゼロ）となっているのは、この失敗が可視化されたものである。</p>
+
+  <h4>発報レイテンシの内訳</h4>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>要素</th><th>所要</th><th>根拠</th></tr></thead>
+    <tbody>
+      <tr><td>表面波の観測点到達</td><td class="mono">7〜17 秒</td><td>震源距離20〜50km、伝播速度約3km/s</td></tr>
+      <tr><td>判別に必要な信号長</td><td class="mono">20〜40 秒</td><td>継続時間と長周期／短周期比で地震と識別する</td></tr>
+      <tr><td>多点結合・処理</td><td class="mono">5〜10 秒</td><td>3〜4点での振幅ベース標定</td></tr>
+      <tr><td><b>合計</b></td><td class="mono"><b>60〜120 秒</b></td><td></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>今回に当てはめる。08:37:10の発生に対し、90秒後の<b>08:38:40に発報</b>できていたとすると──</p>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>地点</th><th>洪水到達</th><th>創出された猶予</th></tr></thead>
+    <tbody>
+      <tr><td>シャブルベシ</td><td class="mono">08:50</td><td class="mono"><b>11分</b></td></tr>
+      <tr><td>ベトラワティ</td><td class="mono">09:20</td><td class="mono"><b>41分</b></td></tr>
+      <tr><td>チトワン／デブガット</td><td class="mono">15:20</td><td class="mono"><b>6時間41分</b></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>これは机上の数字ではない。2021年インド・チャモリの岩氷なだれについて、事後解析から<b>13.0km地点で約10分、19.7km地点で約14分の警報が技術的に可能だった</b>と結論した研究がある。同じオーダーである。</p>
+
+  <div class="jp">
+    <span class="lbl">設計上の決定的な選択 ── 機構を分類せず、脅威を分類する</span>
+    <p>この系は「岩なだれか、氷なだれか、氷河崩壊か」を判定してはならない。答えるべき問いは1つだけである──<b>「上流域で大規模な質量移動が起きたか、否か」</b>。理由は3つある。第一に、その流域で起きる大規模な質量移動はいずれも河川回廊を脅かすので、機構が分かっても行動は変わらない。第二に、機構の同定には日数がかかる（本件がまさにその実例で、4日経っても専門機関の見解が割れている）。第三に、二値に落とすことで判断が速くなり、かつ<b>機構の推定を誤っても系が壊れない</b>。</p>
+  </div>
+
+  <h4>技術的に難しいのはどこか</h4>
+  <ul>
+    <li><b>地震との識別</b>──ネパールは地震活動が活発で、単純な振幅トリガでは本物の地震で誤発報する。識別子は、鋭い立ち上がりの欠如、継続時間、長周期／短周期エネルギー比、そして深さ（表層か否か）。手法は確立しているが、<b>地域データでの較正が要る</b>。</li>
+    <li><b>他の雑音との識別</b>──落石、雪崩、氷河の崩落、発破、河川雑音。ここが分類器の勝負どころで、地域の教師データが要る。</li>
+    <li><b>閾値の設定</b>──河川を脅かす規模を捕らえ、年に何百回もある小規模落石を捨てる線をどこに引くか。今回の2件（Ms 5.2 / 4.2）はどんな閾値でも十分上にある。だが<b>レンデ川を塞ぎうる最小規模がいくらなのかは分かっていない</b>。検証調査（A-0）の対象である。</li>
+    <li><b>標定</b>──位相の読み取りではなく、高周波エンベロープの振幅比から標定する。精度数km、どの支流域かが分かれば足りる。</li>
+  </ul>
+  <div class="caveat">
+    <span class="lbl">前兆検知は設計の前提にしてはならない</span>
+    <p>チャモリでは主崩壊の<b>2.5時間前から前兆的な信号が連続していた</b>ことが報告されている。魅力的だが、これは事後に遡って見つけたものである。前向きに使えば誤報が大量に出る。<b>研究トラックとして追うべきで、設計の前提に置いてはならない。</b>この系は予知しない。山が動いてから警報が始まる。</p>
+  </div>
+
+  <h3>2. GLOF ── できる。ただし全く別の原理で、しかも別の場所で</h3>
+
+  <p><b>GLOFには衝撃的な震源が無い。</b>モレーンダムの決壊も氷河内水路の排水も、数分から数時間かけて進む侵食過程であって、単一力のインパルスを生まない。したがって第1節の手法はそのままでは適用できない。</p>
+  <p>代わりに検知できるのは<b>洪水そのもの</b>である。流水は1〜10Hzの連続的な微動を出す。源は乱流の底面圧力変動と、<b>掃流砂の衝突</b>──河床を跳ねる巨礫である。後者が卓越し、土砂フラックスに応じて振幅が変わる。この分野は「河川地震学」として確立している。</p>
+
+  <div class="jp">
+    <span class="lbl">この流域には、すでに実証例がある</span>
+    <p>2016年7月5日、チベット側ポイク流域のGongbatongsha氷河湖が、湖上部の斜面崩壊を契機にモレーンダムを決壊させ、<b>まさにこのボテコシ流域</b>へ流下した。アルニコ道路とアッパー・ボテコシ水力発電所を損傷し、被害額は7,000万米ドルを超えた。このとき<b>地震観測網は2つの波を分離して捉えている</b>──先行する水の波が時速約30km（約8m/s）、遅れて土砂・岩屑の波。つまり本提案の中核技術は、この川で既に一度実証されている。</p>
+  </div>
+
+  <p>アイスランドの氷河湖決壊洪水（jökulhlaup）では、アレイ解析によって<b>洪水前線の位置を追跡し、河川系に入る前に規模と時刻を推定</b>できることが示されている。</p>
+
+  <div class="caveat">
+    <span class="lbl">そして、ここが今回の失敗に直結する</span>
+    <p>地震観測点は<b>谷壁の、河床から数十メートル上</b>に置かれる。つまり<b>自分が測っている洪水に破壊されない</b>。</p>
+    <p>思い出してほしい。今回、6局の水位観測局のうち上流3局は<b>警戒水位に達する前に沈黙した</b>。洪水が装置を壊したからであり、その沈黙は「欠測」として扱われた。<b>河岸の地震観測点は、流されない非接触の水位計である。</b>これは源頭機構の論争とは無関係に成立する、この回廊に地震計を置くべき最も強い理由かもしれない。</p>
+    <p>ただし水位計を置き換えるのではない。水位計は較正された水位を与え、地震計は生存性を与える。<b>両者は代替ではなく補完である。</b></p>
+  </div>
+
+  <h4>正直に述べる限界</h4>
+  <ul>
+    <li>微動の振幅は流量・土砂フラックスの<b>代理指標であって、較正された流量ではない</b>。較正は地点固有で、河床が変われば drift する。</li>
+    <li>小規模なGLOFはモンスーン期の増水と区別がつかない可能性がある。識別子は絶対値ではなく<b>変化率とスペクトル形状</b>である。</li>
+    <li>2025年7月のような氷河上湖の排水は、源頭では検知できないほど静かかもしれない。ただし<b>下流を流れる洪水波は検知できる</b>。</li>
+  </ul>
+
+  <h3>3. 統合EWSに何が要るか</h3>
+
+  <div class="jp">
+    <span class="lbl">降雨型を落としてはならない ── 既存の降雨系はここまで整備されている</span>
+    <p>累積で最も多くの人命を奪ってきたのはモンスーン期の洪水と土砂災害であり、ネパールはこれに対して<b>すでに一通りの系を持っている</b>。DHMの雨量・水位「ライブウォッチ」<b>280局</b>（2010年からWebテレメトリ）、<b>2018年に導入された降雨閾値による洪水・土砂災害警報</b>（272の危険地区を画定し、上流域の雨量が閾値を超えるとSMSを送る）、コミュニティ主体の洪水早期警報（CBFEWS）が<b>8河川系──そこにはナラヤニ川、つまり今回の回廊が含まれる</b>、2014年からの3日先降雨予報、そして3局計画のうち1局（2019年・西部）の気象レーダ。</p>
+    <p>したがって本件で警報が届かなかったのは、<b>系が無かったからではなく、その系が降雨を前提にしているから</b>である。280局も272地区の閾値も、降雨を伴わない質量移動には原理的に反応しようがない。<b>「統合」が意味するのは、この降雨系と地震系という2つの既存系を繋ぐことであって、新しい系を建てることではない。</b></p>
+    <p>降雨系にも固有の弱点があり、統合の設計に織り込む必要がある。<b>越境上流（チベット側）の雨は地上観測が無い</b>ため GSMaP／GPM で補う必要があること、レーダ整備が3分の1にとどまること、そしてリードタイムが短いこと。日本の土砂災害警戒情報（60分積算雨量と土壌雨量指数によるスネーク曲線判定）は、この最後の点に直接効く。</p>
+  </div>
+
+  <div class="jp">
+    <span class="lbl">前提が変わる ── 骨格はすでに存在する</span>
+    <p>ネパールは既に国家地震観測網を運用している。<b>広帯域地震計約40局と加速度計約36台</b>を、鉱山地質局の国家地震観測研究センター（NEMRC）が保有する。さらに<b>東京大学とJICAは既にネパールに8局の地震・強震観測点を設置している</b>──日本とネパールの地震観測協力は、新規に始めるのではなく既に存在する。中国地震局も北部を中心に10局を展開している。</p>
+    <p>したがって不足しているのは地震計ではない。<b>不足しているのは、その信号を質量移動と洪水として読む処理系と、それを警報に変える制度である。</b>これは本メモの他のどの施策よりも安く始められることを意味する。</p>
+  </div>
+
+  <h4>本当の欠落は4つ</h4>
+  <ol>
+    <li><b>処理系が地震用に最適化されている</b>──立ち上がりの鋭い到達波を結合する設計なので、質量移動と河川微動は設計上「雑音」として捨てられる。</li>
+    <li><b>観測点配置が国土均等である</b>──地震監視は全国一様な配置を望むが、質量移動検知は<b>特定の上流域に密に</b>置きたい。対象流域あたり3〜5局の補填が要る。</li>
+    
+    <li><b>所管が割れている</b>──地震データはDMG／NEMRC、洪水警報はDHM、災害対応はNDRRMA。<b>「地震系が検知した質量移動を降雨系の警報経路に入れる」ことを所掌する主体が存在しない。</b>これが最大の障害であり、技術ではなく制度の問題である。</li>
+  </ol>
+
+  <h4>棚卸し ── 何を、どの経路で拾うか</h4>
+  <p>「統合」を名乗る以上、この回廊で起こりうるハザードを一度並べて、拾える経路と拾えないものを明示しておく。</p>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>ハザード</th><th>拾う経路</th><th>状態</th></tr></thead>
+    <tbody>
+      <tr><td>モンスーン降雨の洪水・土砂災害<br><span style="color:var(--muted);font-size:12px">累積では最も多くの命を奪ってきた</span></td><td><b>R</b> 雨量閾値＋土壌雨量指数</td><td>既存・稼働中</td></tr>
+      <tr><td>氷岩なだれ・岩盤崩壊<br><span style="color:var(--muted);font-size:12px">2026年本件／2015年ランタン谷</span></td><td><b>D1</b> 単一力震源（発報 60〜120秒）</td><td>新規</td></tr>
+      <tr><td>GLOF・河道閉塞の決壊<br><span style="color:var(--muted);font-size:12px">2016年 Gongbatongsha／2025年 ラスワ</span></td><td><b>D2</b> 河川微動（1〜10Hz）</td><td>新規</td></tr>
+      <tr><td>観測装置の被災<br><span style="color:var(--muted);font-size:12px">今回、上流3局が警戒水位前に沈黙</span></td><td><b>D3</b> 欠測＝警報</td><td>新規</td></tr>
+      <tr><td><b>大地震による同時多発斜面崩壊</b><br><span style="color:var(--muted);font-size:12px">2015年 Gorkha M7.8 で25,000件</span></td><td><b>状態修飾子</b>（トリガではない）</td><td>新規</td></tr>
+      <tr><td>雪崩</td><td>検知は <b>D1</b> の小規模クラス。<b>予報は不可</b></td><td>部分的</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p><b>この系では拾えないものも明記しておく。</b>雪崩の「予報」は積雪観測が無いため不可能で、検知はできても予報はできない。地震そのものの直前警報は、ネパールに国家EEWが存在しない（実証段階にとどまる）。そして<b>エアブラスト</b>──2015年ランタンでも2021年チャモリでも発生しており、被害は流路の外にも及ぶ。これらは対応範囲外であることを明示したうえで、別途の課題として残す。</p>
+
+  <h4>大地震は5つ目のトリガではなく、「状態修飾子」である</h4>
+  <p>ここは設計上の分岐点なので、はっきり書いておく。大地震を単に5番目の並列トリガとして扱うのは誤りである。地震は<b>他のすべてのトリガの事前確率を同時に押し上げる</b>からだ。</p>
+  <p>2015年のゴルカ地震（M7.8）は<b>25,000件の同時多発斜面崩壊</b>を引き起こし、複数の河道閉塞を作り、そして<b>ランタン谷では岩氷なだれとエアブラストによって350名以上が犠牲になった</b>──2026年の崩壊と同じ谷である。同じ斜面系が11年のあいだに2度、大規模な岩氷なだれを起こしている。</p>
+  <p>したがって設計はこうなる。既存の地震観測網は地震そのものの検知には十分に機能しているので、<b>大地震を検知したら系全体を警戒状態に遷移させる</b>──R・D1・D2 の閾値を一段下げ、衛星タスキングを自動起動し、河道閉塞の発生を前提に置き、要員を事前配置する。日本が地震後に土砂災害警戒基準を引き下げる運用と同じ考え方である。地震はまた<b>EWS自身をも壊す</b>ので、L2の衛星IoTは地上系の全損を前提として設計する。</p>
+
+  <h4>L0 ── 平時のリスク評価層</h4>
+  <p>もうひとつの構造的な欠落が、<b>どこに観測点を置き、閾値をいくつにするかを決める平時の層</b>である。これが無いと、検知系は「勘で置いた場所」に依存する。</p>
+  <p>ICIMOD／UNDPは3流域で47の危険氷河湖を特定し、うちThulagi・Lower Barun・Lumding Tsho・Hongu 2 の4湖を緊急優先としている。ポイク／ギロン越境流域では28湖が高い決壊危険度と評価されている。<b>だが静的な目録では足りない。</b>2025年7月の災害を起こした氷河上湖は、2024年12月に小さな水たまりとして現れ半年で拡大したもので、どの目録にも載っていなかった。要求されるのは<b>SARによる「増えた水域」の機械的な定期検出</b>であり、一度きりの調査ではない。あわせてInSARによる不安定斜面の絞り込みと、曝露（集落・道路・発電所坑口・トレッキング路）の把握が要る。</p>
+
+  <h4>6層のアーキテクチャ</h4>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>層</th><th>構成</th><th>要点</th></tr></thead>
+    <tbody>
+      <tr><td class="id">L0<br>平時評価</td><td>氷河湖・不安定斜面の目録をSAR／InSARで継続更新／曝露の把握</td><td>どこに観測点を置き閾値をいくつにするかを決める。静的目録では2025年の氷河上湖を捕らえられない</td></tr>
+      <tr><td class="id">L1<br>センシング</td><td>既存NSC観測点の再処理／対象上流域に広帯域＋強震を3〜5局補填／<b>微気圧計（インフラサウンド）を併設</b>／河岸に微動観測点を回廊沿いに配置</td><td>岩盤上、想定洪水位より確実に上。<b>インフラサウンドは地震と質量移動をきれいに分ける</b>（地震は空振をほとんど出さない）。安価で効果が大きい</td></tr>
+      <tr><td class="id">L2<br>伝送</td><td>携帯／マイクロ波を主、<b>衛星IoTを従</b>の二重化</td><td>地上回線は谷筋を通るので同じ災害で切れる。警報経路に必要なのは波形でなくパラメータなので低帯域で足りる</td></tr>
+      <tr><td class="id">L3<br>処理</td><td><b>4つのトリガを並列に走らせる</b>。R＝既存の降雨閾値（強化）／D1＝長周期単一力による質量移動／D2＝1〜10Hz帯の河川微動／D3＝<b>欠測そのものを警報として扱う</b></td><td><b>ここが「統合」の実体</b>。トリガは4系統に分けたまま、L4の到達時刻予測とL5の伝達経路だけを共有する。いずれか1つで暫定発報、2つ一致で確度を上げる</td></tr>
+      <tr><td class="id">L4<br>判断</td><td>上流20km圏は<b>人を介さずセンサ→サイレン</b>。下流は検知を到達時刻予測（A-1）に接続し集落別ETAを生成</td><td>確度を3段階に分ける。L1可能性（単一検知器）／L2蓋然（2つ一致）／L3確認（下流で実測）。段階ごとに取る行動を変える</td></tr>
+      <tr><td class="id">L5<br>伝達</td><td>CAP準拠、セルブロードキャスト、サイレン、坑内・外国人プロトコル</td><td>既述のA-3／A-4</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>成否を決めるのは、以下の横断的な要件のほうである</h4>
+  <ol>
+    <li><b>ラベル付きイベントカタログ</b>──分類器は教師データ無しには作れない。ネパールには約40局分の連続波形アーカイブがある。<b>これを遡って掘り、過去の質量移動と洪水（2016年Gongbatongsha、2025年ラスワ、2026年本件を含む）に印を付ける作業が、単独で最も価値が高い</b>。教師データ・閾値・誤報率の3つが同時に得られる。そして<b>機材を1台も買わずに、今日から着手できる</b>。</li>
+    <li><b>誤報予算を先に決める</b>──これは技術判断ではなく政治判断である。上流の自動サイレンについて「河川を脅かす事象を1件も逃さないなら、年3回の空振りは許容する」といった線を、<b>運用開始前に住民と合意し、訓練で体験させておく</b>。最初の空振りが不意打ちになった系は、1年で電源を切られる。</li>
+    <li><b>越境</b>──震源はチベット側にあるが、<b>地震波は国境を越える</b>。ネパール領内の観測点で検知でき、データ共有協定の成立を待たずに機能する。これがこの設計の政治的な強みである。一方、共有できれば標定精度は上がる。中国地震局の観測点は既に北部を覆っている。</li>
+    <li><b>所管の設定</b>──DHMの洪水予警報の所掌を「非水文学的トリガも受け付ける」よう拡張するか、DMG・DHM・NDRRMA合同のセルを作るか。<b>これが無ければ、検知しても警報に至る経路が存在しない。</b></li>
+  </ol>
+
+  <h4>参照すべき実運用系</h4>
+  <p>スイス・イルグラーベン（Illgraben）流域の土石流警報系は<b>2007年から完全自動で運用</b>されている。砂防堰堤に設置したジオフォン、レーダ水位計、雨量計、監視カメラで構成され、検知から発報まで人が介在しない。2021年にはETHがAIによる判別を導入している。<b>「センサとサイレンを直結する」という思想が、20年近く現実に回っている</b>証拠であり、上流20km圏の設計はここを踏襲すべきである。</p>
+
+  <h4>段階計画と、判断の分岐点</h4>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>段階</th><th>やること</th><th>費用感</th></tr></thead>
+    <tbody>
+      <tr><td class="mono">Phase 0<br>0〜6か月</td><td><b>既存アーカイブの遡及解析</b>。過去事例のラベル付け、閾値と誤報率の算出、そして「2016／2025／2026を何秒で捕捉できたか」のオフライン実証</td><td class="mono">〜0.5億円<br>（機材ゼロ）</td></tr>
+      <tr><td class="mono">Phase 1<br>6〜18か月</td><td>リアルタイム検知器を<b>シャドーモードで併走</b>。警報は出さず、実運用の誤報率だけを測る</td><td class="mono">〜1億円</td></tr>
+      <tr><td class="mono">Phase 2<br>18〜30か月</td><td>試験流域（ボテコシ／トリスリ）に観測点を補填、インフラサウンド併設、河岸微動観測点。上流20km圏に自動サイレン。下流に到達時刻予測を接続</td><td class="mono">2〜4億円</td></tr>
+      <tr><td class="mono">Phase 3</td><td>他流域へ展開。越境統合</td><td class="mono">流域あたり2〜3億円</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p><b>Phase 0 が go / no-go の関門である。</b>ここで「既存データでは過去事例を十分な余裕をもって捕捉できない」と出れば、以降に投資すべきではない。逆に捕捉できると出れば、それは机上の推定ではなく実測に基づく根拠になる。<b>ほとんど費用がかからないのに、以降の数億円の判断を左右する。</b>本メモの全施策の中で、着手すべき順序が最も明確な項目である。</p>
+
+  <div class="jp">
+    <span class="lbl">日本が具体的に持ち込めるもの</span>
+    <p><b>防災科学技術研究所</b>──Hi-net／V-netは世界最密の観測網であり、火山泥流や深層崩壊を地震・空振で自動検知する<b>実運用経験</b>を持つ。研究段階ではなく、動いている系がある。<b>東京大学・JICA</b>──既にネパールに8局を設置済みで、拡張の足場がある。<b>国交省北海道開発局</b>──十勝岳の「センサ→サイレン直結、人を判断ループから外す」運用モデル。<b>土木研究所ICHARM</b>──検知を到達時刻に変換し、避難時間へ翻訳する部分。<b>インフラサウンド</b>──高知大学、防災科研に蓄積がある。</p>
+  </div>
+</section>
+
+<section id="s3">
+  <div class="sec-head"><div class="sec-num">03</div><h2>対策──日本の技術で実現可能なもの</h2></div>
+
+  <p class="lede">以下は「日本にある技術」ではなく「今回の死者を減らしえた技術」で並べている。優先順位は、創出できるリードタイムを費用で割った値に、ネパール側の維持管理能力を掛けて判断した。</p>
+
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>ID</th><th>施策</th><th>効果</th><th>概算費用</th><th>期間</th><th>優先</th></tr></thead>
+    <tbody>
+      <tr><td class="id">A-0</td><td>被災メカニズムと避難行動の検証調査</td><td>以降すべての設計根拠</td><td class="mono">〜0.5億円</td><td class="mono">3か月</td><td><span class="pill p-now">最優先</span></td></tr>
+      <tr><td class="id">A-1</td><td>洪水波到達時刻予測と集落別・時刻付き警報</td><td>下流に数時間の実効避難時間</td><td class="mono">1〜3億円</td><td class="mono">1年</td><td><span class="pill p-now">最優先</span></td></tr>
+      <tr><td class="id">A-2</td><td>危機管理型水位計の稠密配置＋欠測＝警報ロジック</td><td>波の追跡・警報の裏付け</td><td class="mono">3〜5億円</td><td class="mono">1年</td><td><span class="pill p-now">最優先</span></td></tr>
+      <tr><td class="id">A-3</td><td>警報範囲をナラヤニ川全川・越境まで拡張</td><td>今回の警報圏外320名に対応</td><td class="mono">〜0.5億円</td><td class="mono">6か月</td><td><span class="pill p-now">最優先</span></td></tr>
+      <tr><td class="id">A-4</td><td>坑内労働者・外国人向け警報プロトコル</td><td>不明者1,522名の類型に直接対応</td><td class="mono">1〜2億円</td><td class="mono">1年</td><td><span class="pill p-now">最優先</span></td></tr>
+      <tr><td class="id">B-1</td><td>源頭マスムーブメント即時検知（地震計＋インフラサウンド）</td><td>源頭から60〜120秒で発報</td><td class="mono">2〜4億円</td><td class="mono">2年</td><td><span class="pill p-mid">高</span></td></tr>
+      <tr><td class="id">B-2</td><td>人の判断を介さない自動サイレン（上流20km圏）</td><td>猶予10分の区間で唯一機能する</td><td class="mono">2〜3億円</td><td class="mono">2年</td><td><span class="pill p-mid">高</span></td></tr>
+      <tr><td class="id">B-3</td><td>河道閉塞（天然ダム）緊急対応ドクトリンの制度移転</td><td>二次災害の予防</td><td class="mono">1〜2億円</td><td class="mono">2年</td><td><span class="pill p-mid">高</span></td></tr>
+      <tr><td class="id">B-4</td><td>越境上流の衛星監視（ALOS-2/4＋商用SAR）</td><td>湖沼インベントリ・発災後即時把握</td><td class="mono">既存枠組で対応可</td><td class="mono">継続</td><td><span class="pill p-mid">高</span></td></tr>
+      <tr><td class="id">C-1</td><td>集落単位の高台避難場所と避難路</td><td>構造物対策で最も費用対効果が高い</td><td class="mono">5〜15億円</td><td class="mono">3〜5年</td><td><span class="pill p-long">中</span></td></tr>
+      <tr><td class="id">C-2</td><td>浸水痕跡に基づく土地利用規制と再建誘導</td><td>次の災害の被害総量を決める</td><td class="mono">制度中心</td><td class="mono">5〜10年</td><td><span class="pill p-long">中</span></td></tr>
+      <tr><td class="id">C-3</td><td>水力発電所のEWSノード化と監視義務の金融連動</td><td>維持管理の持続性を担保</td><td class="mono">金融条件で対応</td><td class="mono">3年</td><td><span class="pill p-long">中</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="cap">費用は日本側負担分の粗い桁数感であり、精査を経ていない。</p>
+
+  <h3>A. 即効群──手にした時間を避難に変える</h3>
+
+  <div class="m">
+    <div class="m-head"><span class="m-id">A-0</span><h4>まず、人がどこで死んだのかを確定させる</h4></div>
+    <div class="m-meta"><span>期間 <b>3か月</b></span><span>費用 <b>〜0.5億円</b></span><span>実施 <b>調査団派遣</b></span></div>
+    <p>収容遺体数の郡別分布は、そのままでは政策判断に使えない。必要なのは、死亡推定地点・推定時刻・受信した警報の有無・避難を試みたか否かを、聞き取りと遺体収容記録から突き合わせる悉皆的な検証である。この結果によって、投資先が「源頭の検知」なのか「下流の避難行動」なのかが決まる。逆に言えば、この調査なしに機材を供与すれば、外れる確率が高い。</p>
+    <div class="jp">
+      <span class="lbl">日本側の資源</span>
+      <p>土木学会・砂防学会・地盤工学会の合同緊急調査団は、この種の悉皆調査を災害のたびに実施してきた蓄積がある。東日本大震災の避難行動調査（内閣府）、平成30年7月豪雨の避難実態調査は、まさに「警報は出たのに逃げなかった」を分析した先行例であり、方法論をそのまま持ち込める。ADRCは調査団とネパールNDRRMAを接続する立場にある。</p>
+    </div>
+  </div>
+
+  <div class="m">
+    <div class="m-head"><span class="m-id">A-1</span><h4>洪水波到達時刻予測（Flood Wave ETA）</h4></div>
+    <div class="m-meta"><span>期間 <b>1年</b></span><span>費用 <b>1〜3億円</b></span><span>創出時間 <b>下流に数時間</b></span></div>
+    <p>今回の災害は、皮肉なことに<b>キャリブレーション用の実測データを残している</b>。08:37の発生、08:50シャブルベシ、09:20ベトラワティ、15:20デブガット到達、16:00にピーク6.57m。これだけあれば、ボテコシ〜トリスリ〜ナラヤニ168kmの一次元不定流モデルを較正できる。2025年7月の事例と併せれば2ケースになる。</p>
+    <p>目指すのは、上流のどこかで異常が検知された瞬間に、下流の各集落について<b>「到達予測時刻 ± 誤差」と「避難完了期限」を自動生成し、その集落だけに送る</b>仕組みである。「9時15分、洪水が発生しました」ではなく「11時40分頃に到達します。10時30分までに高台へ」に変える。さらに波が下るにつれて予測を更新し、再送信する。一度きりの警報は時間とともに信憑性を失うが、更新される警報は逆に信憑性を増す。</p>
+    <div class="jp">
+      <span class="lbl">日本側の資源</span>
+      <p>国土交通省の「水害リスクライン」は、河川を1kmメッシュに分割して危険度をリアルタイム更新する仕組みであり、思想がそのまま対応する。タイムライン防災（事前防災行動計画）は「誰が・いつ・何をするか」を到達時刻から逆算して定める手法で、これも直接移植できる。土木研究所（ICHARM）はユネスコ・カテゴリー2センターとして途上国河川への洪水予測技術移転を長年行っており、実施主体として最も自然である。</p>
+    </div>
+  </div>
+
+  <div class="m">
+    <div class="m-head"><span class="m-id">A-2</span><h4>危機管理型水位計の稠密配置と「欠測＝最大警報」ロジック</h4></div>
+    <div class="m-meta"><span>期間 <b>1年</b></span><span>費用 <b>3〜5億円</b></span><span>単価 <b>100万円/台以下</b></span></div>
+    <p>日本は2016年の台風10号で岩泉町の高齢者施設が被災し24名が亡くなった後、「観測所が足りない」という問題に対して、従来型の高機能テレメータ観測所ではなく<b>1台100万円以下・無給電で5年間メンテナンスフリー・橋梁に後付け可能</b>という割り切った規格の水位計を開発し、全国に数千台規模で展開した。これはネパールの制約条件にほぼ完全に合致する。</p>
+    <p>ただし機材以上に重要なのは運用ロジックの変更である。今回、上流3局は警戒水位に達する前に沈黙した。装置が破壊されたからである。設計上、次の2点を組み込む。</p>
+    <ul>
+      <li><b>欠測を最大警報として扱う</b>――複数局が短時間に連続して沈黙した場合、それは機器故障ではなく波の通過である。上流局の沈黙時刻から伝播速度を逆算し、下流の到達予測に直結させる。</li>
+      <li><b>絶対水位ではなく上昇率でトリガする</b>――閾値到達を待っていては間に合わない。10分あたりの上昇量で発報する。</li>
+    </ul>
+    <p>配置は6局から30局以上（概ね5km間隔）へ。稠密化そのものが冗長性になり、1局が失われても隣接局が波の通過を確定できる。</p>
+    <div class="jp">
+      <span class="lbl">日本側の資源</span>
+      <p>国交省「危機管理型水位計設置の手引き」に準拠した製品を、坂田電機、オサシ・テクノス等が量産している。日本防災プラットフォーム（JBP）加盟企業を通じた調達が現実的。東南アジア向けの海外展開検討も既に行われており、ネパールは自然な次の適用先である。</p>
+    </div>
+  </div>
+
+  <div class="m">
+    <div class="m-head"><span class="m-id">A-3</span><h4>警報の地理的範囲をハザードの範囲に一致させる</h4></div>
+    <div class="m-meta"><span>期間 <b>6か月</b></span><span>費用 <b>〜0.5億円</b></span><span>対象 <b>今回の圏外320名</b></span></div>
+    <p>費用がほとんどかからず、効果が大きい可能性が最も高い施策である。氷河起因の洪水は「山岳部の災害」として認識されがちだが、実際には168km先の平野部まで到達する。警報の配信範囲を、行政区分ではなく<b>洪水波が物理的に到達しうる河川回廊全体</b>で定義し直す。ナラヤニ川はインドのガンダク川へ続くため、越境通報の枠組みも同時に必要になる。</p>
+    <div class="jp">
+      <span class="lbl">日本側の資源</span>
+      <p>共通警報プロトコル（CAP）に準拠した配信基盤と、日本のL-Alert（災害情報共有システム）の設計思想――1つの発信を多様な媒体へ自動分配する――が対応する。ADRCはCAPの普及とアジア各国の防災情報共有において実務的な役割を担ってきており、この項目はADRC自身が主導しうる。</p>
+    </div>
+  </div>
+
+  <div class="m">
+    <div class="m-head"><span class="m-id">A-4</span><h4>坑内労働者と外国人──既存警報の設計対象外にいた人々</h4></div>
+    <div class="m-meta"><span>期間 <b>1年</b></span><span>費用 <b>1〜2億円</b></span><span>対象 <b>不明者1,522名の類型</b></span></div>
+    <p>不明者2,418名のうち933名が水力発電所の坑内労働者、589名が外国人である。合わせて63%。これは統計上の偶然ではなく、警報システムの設計から漏れていた集団である。</p>
+    <h4>水力発電所の坑内</h4>
+    <ul>
+      <li>取水口・坑口への水位計設置と、坑内一斉警報（有線・無線併用）の義務化</li>
+      <li>着工条件としての坑内避難計画――避難退避坑、上部への脱出経路、人員所在管理</li>
+      <li>河川水位と連動した坑口の自動閉鎖・入坑規制</li>
+    </ul>
+    <p>日本のトンネル施工では、坑内の通報設備・避難設備・人員把握が労働安全衛生規則と土木工事安全施工技術指針で規定されており、山岳トンネルの湧水・出水事故対応の蓄積がある。ネパールの水力開発は今後も拡大するため、基準の移植は将来の被害総量を大きく左右する。</p>
+    <h4>トレッカー・外国人</h4>
+    <ul>
+      <li>セルブロードキャスト（CB）による多言語一斉配信――加入者リストに依存せず、ローミング中の外国SIMにも届く</li>
+      <li>トレッキング許可（TIMS）とロッジ登録を通じた宿泊拠点への直接通報</li>
+      <li>ランタン国立公園内の主要ロッジへの受信端末とサイレンの配備</li>
+    </ul>
+    <div class="jp">
+      <span class="lbl">日本側の資源</span>
+      <p>日本の緊急速報メール（ETWS/CB）は、事業者を問わず該当エリアの全端末に強制配信する方式で、外国人観光客にも多言語で届く。この方式の設計・運用ノウハウは総務省・通信事業者側に蓄積がある。訪日外国人向けの多言語防災情報（Safety tips等）の知見も対応する。</p>
+    </div>
+  </div>
+
+  <h3>B. 中期群──日本に固有の強みがある領域</h3>
+
+  <div class="m">
+    <div class="m-head"><span class="m-id">B-1</span><h4>源頭マスムーブメントの即時検知</h4></div>
+    <div class="m-meta"><span>期間 <b>2年</b></span><span>費用 <b>2〜4億円</b></span><span>創出時間 <b>上流20km圏に約11分</b></span></div>
+    <p>この施策の根拠は今回の災害そのものにある。<b>崩壊はマグニチュード5.2相当の地震動として、米国とドイツの地震計にまで記録された</b>。つまり物理的には、発生の直後に検知可能だった。問題は、その信号を数十秒で警報に変換する仕組みが流域に存在しなかったことである。</p>
+    <p>上部トリスリ・ボテコシ流域に広帯域地震計3〜5点と微気圧計（インフラサウンド）を配置し、自動判定で<b>発生から60〜120秒以内に「上流で大規模な質量移動が発生」を発報する</b>。この設計には2つの利点がある。</p>
+    <ul>
+      <li><b>機構の同定が不要</b>――氷河崩壊か、岩盤崩壊か、地震か土石流かを判別する必要はない。「上流域で大規模な質量移動があった」だけで、河川回廊への警報として十分な意味を持つ。判別を諦めることで、判断が速くなる。</li>
+      <li><b>越境許可が要らない</b>――観測点をネパール領内に置いても、地震波は国境を越えて届く。中国側との合意形成を待たずに構築でき、これは政治的に決定的な利点である。</li>
+    </ul>
+    <p>今回に当てはめると、08:37の発生から2分以内の発報は、シャブルベシ到達の約11分前、ベトラワティの約41分前、デブガットの6時間41分前にあたる。衛星より速く、天候に左右されず、桁違いに安い。<b>そして機構の同定を要さないため、源頭の再構成が割れている現状でも設計できる</b>──これは本メモの施策の中で唯一、どの説を採っても価値が変わらない項目である。</p>
+    <div class="jp">
+      <span class="lbl">日本側の資源</span>
+      <p>防災科学技術研究所のHi-net／V-netは世界最密の地震観測網であり、微弱な地滑り・土石流signal の抽出技術が蓄積されている。火山分野では、噴火や融雪型火山泥流を地震・空振で自動検知する運用が十勝岳・浅間山等で実装済み。この「土砂移動を地震学的に捉える」技術系は日本が最も実運用経験を持つ領域であり、かつ機材が安価で保守も比較的容易である。<b>本メモの中で、費用対効果が最も高いと考えられる項目。</b></p>
+    </div>
+  </div>
+
+  <div class="m">
+    <div class="m-head"><span class="m-id">B-2</span><h4>人の判断を介さない自動サイレン</h4></div>
+    <div class="m-meta"><span>期間 <b>2年</b></span><span>費用 <b>2〜3億円</b></span><span>適用 <b>源頭〜20km圏</b></span></div>
+    <p>ラスワ郡上流部の猶予は10分強しかない。この時間帯には、センサの値を人が見て、判断し、発令するという手続きが物理的に入らない。日本が火山泥流対策で到達した結論は明快で、<b>センサとサイレンを直結し、人間を判断ループから外す</b>ことである。</p>
+    <p>十勝岳では1988年の噴火後、ワイヤーセンサ・振動センサ・監視カメラが設置され、ワイヤーの断線や規定以上の振動を検知した時点でスピーカーと回転灯が自動起動する。雲仙でも同様の運用が行われた。装置自体は数十万円から数百万円の枯れた技術である。</p>
+    <p>ただし技術より難しいのは<b>誤報を社会が許容する合意形成</b>である。自動発報は必然的に空振りを生む。空振りを非難しない文化を、訓練と説明によって事前に作っておかなければ、システムは1年で電源を切られる。ここは機材供与では解決せず、コミュニティ防災の地道な作業になる。</p>
+    <div class="jp">
+      <span class="lbl">日本側の資源</span>
+      <p>国交省北海道開発局の十勝岳火山砂防情報センターが実運用のモデル。ワイヤーセンサ・振動式土石流センサは坂田電機、拓和、オサシ・テクノス等が製造。「空振り3回、見逃し0回」を是とする発令文化の形成は、日本の自主防災組織・避難訓練の経験がそのまま参考になる。</p>
+    </div>
+  </div>
+
+  <div class="m">
+    <div class="m-head"><span class="m-id">B-3</span><h4>河道閉塞（天然ダム）緊急対応の制度移転</h4></div>
+    <div class="m-meta"><span>期間 <b>2年</b></span><span>費用 <b>1〜2億円</b></span><span>性格 <b>機材でなく制度</b></span></div>
+    <p>今回、河道閉塞が主因であったかは<b>現在も確定していない</b>（IRDRは18〜19時間の湛水と決壊を、その後の衛星解析は堰き止めを経ない直接の土石流化を支持する）。ただし約3時間後にM4.2相当の二次イベントが記録され、不安定な土塊が残る状態で救助活動が行われたことは共通する。そして2025年7月の事例では上流の水体が半年かけて成長していた。<b>ネパールには、いずれの状況にも対応する制度的枠組みが存在しない。</b>本項の価値は今回の機構の如何によらない。</p>
+    <p>日本は2008年岩手・宮城内陸地震と2011年紀伊半島大水害を経て、土砂災害防止法に基づく緊急調査の枠組みを整備した。大規模な河道閉塞が生じた場合、国が緊急調査を実施し、湛水量の推定、決壊シミュレーション、下流の浸水想定区域と到達時期を算出して「土砂災害緊急情報」として市町村に通知する。この一連の手続きが法定され、24〜48時間で回るよう訓練されている点が本質である。</p>
+    <ul>
+      <li>UAV・ヘリ搭載SARによる立入困難地の即時地形計測</li>
+      <li>ALOS-2/ALOS-4による堰止め湖の湛水面積・進行の把握</li>
+      <li>決壊流量の推定と下流到達時刻の算出（A-1のモデルと接続）</li>
+      <li><b>無人化施工</b>――遠隔操作の建設機械による緊急排水路掘削。雲仙普賢岳で実用化され、人が入れない場所で土工を行える日本固有の技術系</li>
+    </ul>
+    <div class="jp">
+      <span class="lbl">日本側の資源</span>
+      <p>国交省水管理・国土保全局砂防部、国土技術政策総合研究所、土木研究所。制度・手順書・訓練プログラムをパッケージとして移転する形が適切で、機材供与より安価かつ効果が持続する。</p>
+    </div>
+  </div>
+
+  <div class="m">
+    <div class="m-head"><span class="m-id">B-4</span><h4>越境上流の衛星監視――ただし期待値を正しく置く</h4></div>
+    <div class="m-meta"><span>期間 <b>継続</b></span><span>費用 <b>既存枠組で対応可</b></span><span>実施 <b>JAXA / Sentinel Asia</b></span></div>
+    <div class="caveat">
+      <span class="lbl">まず、できないことを明記する</span>
+      <p>衛星観測によって今回の氷岩なだれを<b>予知することはできなかった</b>。氷体の脆性破壊は前兆変位に乏しく、観測頻度をどれだけ上げても発生時刻の予測には至らない。「衛星で監視していれば防げた」という説明は誤りであり、そう説明して導入すれば次の災害で信頼を失う。</p>
+    </div>
+    <p>その上で、衛星が確実に貢献できる役割は3つある。</p>
+    <ol>
+      <li><b>湖沼インベントリの継続更新</b>――2025年7月の災害を起こしたプレプ氷河上の湖は、半年で形成・拡大したにもかかわらず誰も把握していなかった。ICIMOD/UNDPは3流域で47の危険氷河湖を特定しているが、氷河上湖のような短命・新規の水体は従来の目録から漏れる。定期的なSAR観測で「増えた水域」を機械的に検出し続けることには明確な価値がある。</li>
+      <li><b>発災後の即時把握</b>――残存する堰止め湖、不安定土塊、道路寸断状況。今回は国際災害チャーターとCopernicus EMSが発動している。ALOS-4は観測幅200kmの広域観測モードを持ち、雲に遮られない。</li>
+      <li><b>斜面の緩慢な変形の検出</b>――InSARによる年間数cm規模の移動検出。氷岩なだれ本体の予知には使えないが、崩壊源となりうる不安定斜面の絞り込みには有効。</li>
+    </ol>
+    <p>そしてこの項目には、技術以上に<b>政治的な固有価値</b>がある。ハザードの源はチベット側にあり、中国・ネパール間の観測データ共有は容易でない。日本が第三国として中立的に観測し、ICIMODやSentinel Asiaという地域枠組みを通じて配布することは、二国間交渉の成立を待たずに情報を流通させる現実的な迂回路になる。LバンドSARは積雪・氷河域で有利であり、この帯域を運用しているのは事実上日本だけである。</p>
+    <div class="jp">
+      <span class="lbl">日本側の資源</span>
+      <p>JAXA（ALOS-2／ALOS-4）、Sentinel Asia（JAXA・ADRC等が共同運営、ネパールは参加国）、国際災害チャーター。商用SARではSynspective、iQPS等の日本企業コンステレーションが観測頻度を補完しうる。<b>ADRCはSentinel Asiaの運営主体の一つであり、この項目における実務的な結節点にあたる。</b></p>
+    </div>
+  </div>
+
+  <h3>C. 構造物・土地利用──正直な線引き</h3>
+
+  <div class="m">
+    <div class="m-head"><span class="m-id">C-1</span><h4>砂防堰堤ではこの規模は止まらない</h4></div>
+    <div class="m-meta"><span>期間 <b>3〜5年</b></span><span>費用 <b>5〜15億円</b></span></div>
+    <p>日本の砂防技術は世界的な強みだが、今回の規模――氷岩なだれから発した、100km以上を流下する土石流と洪水――を構造物で捕捉することは現実的でない。この点を曖昧にしたまま堰堤建設を提案すれば、費用に見合わない結果になる。</p>
+    <p>構造物として費用対効果が高いのは、規模の大きい本川対策ではなく、次のものである。</p>
+    <ul>
+      <li><b>集落単位の高台避難場所と避難路</b>――2025年・2026年の浸水痕跡より確実に高い位置に、各集落1か所の避難場所と、そこへ至る階段・歩道を整備する。1か所あたり数百万円規模で、確実に機能する。</li>
+      <li>支渓の扇状地に立地する集落を守る導流堤・輪中堤</li>
+      <li>復旧する橋梁・道路・発電所取水口の耐流出設計</li>
+    </ul>
+    <div class="jp">
+      <span class="lbl">日本側の資源</span>
+      <p>砂防・地すべり技術センター、日本の斜面防災企業（プロテックエンジニアリング等はJICA中小企業支援でネパール展開の実績がある）。既にJICAは「道路防災に係る能力強化プロジェクト」（2024年7月〜）を実施中であり、この枠組みへの接続が最も速い。</p>
+    </div>
+  </div>
+
+  <div class="m">
+    <div class="m-head"><span class="m-id">C-2</span><h4>浸水痕跡に基づく再建の誘導</h4></div>
+    <div class="m-meta"><span>期間 <b>5〜10年</b></span><span>性格 <b>制度・合意形成</b></span></div>
+    <p>次の災害の被害総量は、今後1〜2年の再建がどこに行われるかでほぼ決まる。2025年と2026年の浸水範囲は衛星画像から確定できる。この範囲を地図化し、公共施設・学校・宿泊施設の再建をこの外側に誘導することが、長期的には最も効果の大きい対策になる。</p>
+    <p>ただし日本の高台移転の経験は、これが技術問題ではなく合意形成の問題であることを示している。生業の場から離れられない、事業期間が長期化して住民が戻らない、といった失敗も含めて共有することが、誠実な支援になる。</p>
+  </div>
+
+  <div class="m">
+    <div class="m-head"><span class="m-id">C-3</span><h4>水力発電所を早期警戒の常設ノードにする</h4></div>
+    <div class="m-meta"><span>期間 <b>3年</b></span><span>性格 <b>金融条件との連動</b></span></div>
+    <p>今回、14の水力発電事業（計約748MW）が被災し、稼働中9事業354MW、建設中5事業394MWが損傷した。事業者にとって、上流の異常検知は資産防護そのものであり、動機づけが自然に成立する。</p>
+    <p>そして実務上さらに重要なのは、<b>発電所には電源・通信・24時間の常駐人員が、河川沿いの適切な間隔で既に存在する</b>ことである。政府の観測網が数年で劣化する国において、これは維持管理の持続性を担保する最も現実的な構造になる。取水堰・調整池に水位計と地震計を置き、そのデータをDHMへ常時提供することを、事業許可と融資の条件に組み込む。</p>
+    <div class="jp">
+      <span class="lbl">日本側の資源</span>
+      <p>JICA海外投融資、JBIC、NEXI（貿易保険）。付保条件・融資条件に監視設備の設置とデータ提供を組み込む方式は、日本側が実効的な影響力を持ちうる数少ない手段である。</p>
+    </div>
+  </div>
+</section>
+
+<section id="s4">
+  <div class="sec-head"><div class="sec-num">04</div><h2>供与した機材が3年で死ぬ問題</h2></div>
+
+  <p>この分野の支援で最も語られず、最も結果を左右するのが維持管理である。今回、6局の水位観測局のうち3局が沈黙し、さらに1局が破壊された。破壊は不可抗力だが、平時の稼働率もまた検証されるべき論点である。</p>
+
+  <p>設計原則として、次を提案する。</p>
+  <ul>
+    <li><b>電源を要求しない</b>――太陽光パネルは盗難・積雪・落ち葉で落ちる。5年電池駆動を第一選択とする。</li>
+    <li><b>消耗品を使わない</b>――試薬・記録紙・特殊部品を要するものは、補給が途切れた時点で止まる。</li>
+    <li><b>通信を二重化する</b>――携帯網は災害時に真っ先に落ちる。衛星IoT（低軌道小型衛星のIoT回線）を併設する。</li>
+    <li><b>現地に部品在庫と修理者を置く</b>――日本から技術者が飛ぶ設計にしない。地場ベンダーの育成を事業に含める。</li>
+    <li><b>稼働率で支払う</b>――機材の納入ではなく「年間稼働率95%以上」を成果指標として保守契約を結ぶ。</li>
+  </ul>
+
+  <div class="jp">
+    <span class="lbl">補足：QZSS（みちびき）災危通報の位置づけ</span>
+    <p>通信が途絶しても衛星から直接警報を受信できる仕組みとして、みちびきの災害・危機管理通報サービス（DC Report／DCX）は魅力的であり、2025年度からアジア太平洋向けの海外災害情報配信が開始されている。インドネシア・フィジーでの実証実績もある。<b>ただしネパールはQZSSのサービス領域の西端付近にあり、深いヒマラヤの谷では衛星仰角が確保できない可能性がある。</b>まず受信可能性の実測（PoC）を行うべきであり、主経路ではなくバックアップとして位置づけるのが妥当である。専用受信機を要する点も普及上の制約になる。</p>
+  </div>
+</section>
+
+<section id="s5">
+  <div class="sec-head"><div class="sec-num">05</div><h2>降雨型の災害を忘れない</h2></div>
+
+  <p>本メモは氷河起因の急激な災害を扱ってきたが、支援設計上、明示しておくべき点がある。<b>今回の災害に降雨は関与しておらず、GSMaP等の降水観測プロダクトはこの事象に対して無力だった。</b>2025年7月の事例でも、発災前の7月4日から7日にかけて降雨は観測されていない。</p>
+
+  <p>一方で、ネパールで累積的に最も多くの人命を奪ってきたのはモンスーン期の斜面崩壊と土石流であり、こちらには降雨指標が有効に機能する。日本の土砂災害警戒情報（60分積算雨量と土壌雨量指数によるスネーク曲線判定）は、この領域で移転価値が高い。GPM/GSMaPは地上雨量計の薄い山岳部を補う。</p>
+
+  <p>要するに、<b>2つの異なる災害に対して2つの異なる仕組みが要る</b>。降雨型に最適化した既存のEWSを氷河型に流用しようとしたことが、今回の構造的な失敗の一因だった。両者を1つのシステムに統合するのではなく、独立した検知経路を持たせた上で、下流の警報配信部分だけを共有する設計が適切である。</p>
+</section>
+
+<section id="s6">
+  <div class="sec-head"><div class="sec-num">06</div><h2>実施の順序</h2></div>
+
+  <p class="lede">予算規模と政治的所要時間を考慮した、現実的な進め方。</p>
+
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>時期</th><th>やること</th><th>日本側の主体</th></tr></thead>
+    <tbody>
+      <tr><td class="mono">〜3か月</td><td>検証調査（A-0）の派遣。並行して衛星による残存堰止め湖・不安定斜面の監視継続（B-4）。既存JICA案件への接続点を確認</td><td>学会合同調査団／JAXA・Sentinel Asia／ADRC</td></tr>
+      <tr><td class="mono">〜1年</td><td>洪水波ETAモデルの構築（A-1）、警報範囲の見直し（A-3）、坑内・外国人プロトコル（A-4）。水位計は先行20局を設置（A-2）</td><td>ICHARM／JICA技術協力／総務省</td></tr>
+      <tr><td class="mono">1〜2年</td><td>源頭検知網の構築（B-1）と自動サイレン（B-2）。天然ダム対応ドクトリンの制度移転（B-3）。水位計を30局以上へ</td><td>防災科研／国交省砂防部／JICA</td></tr>
+      <tr><td class="mono">2〜5年</td><td>集落単位の避難場所・避難路（C-1）、土地利用誘導（C-2）、発電所ノード化と金融条件（C-3）</td><td>JICA／JBIC・NEXI／砂防関連企業</td></tr>
+      <tr><td class="mono">継続</td><td>越境データ共有の枠組み形成。日本＝中立的第三者としての観測提供を制度化</td><td>外務省／ICIMOD／ADRC</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>ADRCとして着手できること</h3>
+  <ul>
+    <li><b>Sentinel Asiaの緊急観測の継続要請と成果の橋渡し</b>――発災直後の観測は動いているが、残存堰止め湖の監視は数か月単位で継続する必要がある。ネパールNDRRMAへの成果配布の窓口機能。</li>
+    <li><b>検証調査（A-0）の橋渡し</b>――日本の学会調査団とネパール側実施機関を接続する。ADRCのカウンターパート網が最も活きる部分。</li>
+    <li><b>警報配信の制度面（A-3）の主導</b>――CAP準拠、配信範囲の再定義、越境通報。機材を伴わないため着手が速い。</li>
+    <li><b>2025年・2026年の連続事例の記録化</b>――GLIDE番号での整理と、両災害を対比した知見の共有。同型災害はブータン・パキスタン・インドでも起きており、地域全体への教訓になる。</li>
+    <li><b>研修</b>――JICA課題別研修に「越境・氷河起因ハザードの早期警戒」を新設する提案。</li>
+  </ul>
+</section>
+
+<section id="s7">
+  <div class="sec-head"><div class="sec-num">07</div><h2>日本にとっての意味</h2></div>
+
+  <p>この災害は日本にとって他人事ではない。氷河は無いが、<b>降雨によらない突発的な土砂移動</b>という点で同型の現象を日本も抱えている。融雪型火山泥流（十勝岳・岩手山）、深層崩壊とそれに伴う河道閉塞（紀伊半島大水害）、地震による大規模崩壊（岩手・宮城内陸地震の荒砥沢）。いずれも「降り始めてから避難する」枠組みが機能しない類型である。</p>
+
+  <p>そして今回の事例が突きつけたのは、より普遍的な問題である。<b>警報は発せられたのに、6時間の猶予がある場所で人が亡くなった</b>可能性が高い。これは日本の豪雨災害でも繰り返し起きてきたことで、避難情報の発令から実際の避難行動までの間にある溝は、日本自身がまだ解いていない課題である。ネパールでの取り組みは一方的な技術移転ではなく、双方向の検証機会になる。</p>
+
+  <p>仙台防災枠組のグローバル・ターゲットGは「マルチハザード早期警戒システムの利用可能性とアクセスの向上」を掲げている。国連の Early Warnings for All イニシアティブも同じ方向を向いている。今回の災害は、そのターゲットが<b>「警報を出せること」ではなく「警報が行動に変わること」で測られなければならない</b>ことを示した事例として、国際的な議論に持ち込む価値がある。日本が議長国として仙台枠組を主導した立場からも、この論点を提起する意義は大きい。</p>
+</section>
+
+<section id="s8">
+  <div class="sec-head"><div class="sec-num">08</div><h2>出典と留意事項</h2></div>
+
+  <div class="caveat">
+    <span class="lbl">数値の取り扱い</span>
+    <p>本メモ作成時点（2026年8月29日）で捜索は継続中であり、死者・不明者数は変動する。郡別の数値は<b>収容遺体数</b>であって死亡地点別の集計ではない。到達時刻のうち一次情報で確認できるのはシャブルベシ・ベトラワティ・デブガットの3地点であり、他は内挿による推定である。河川距離も概算。費用は日本側負担分の桁数感を示したもので精査を経ていない。<b>政策判断に用いる前に一次資料での再確認を要する。</b></p>
+  </div>
+
+  <div class="src">
+  <ol>
+    <li>USGS Landslide Hazards Program, <a href="https://www.usgs.gov/programs/landslide-hazards/science/2026-nepal-debris-avalanche-and-flash-flood">2026 Nepal Debris Avalanche and Flash Flood</a></li>
+    <li>IRDR, <a href="https://reliefweb.int/report/nepal/irdr-rapid-analysis-report-scientific-anatomy-26-august-2026-bhotekoshi-flash-flood">Rapid Analysis Report — Scientific Anatomy of the 26 August 2026 Bhotekoshi Flash Flood</a>（18〜19時間の湛水説）</li>
+    <li>GFZ Helmholtz Centre for Geosciences, <a href="https://www.gfz.de/en/press/news/details/extreme-sturzflut-in-china-und-nepal">Extreme flooding in China and Nepal</a>（地震学的解析、持続的な堰き止めを否定）</li>
+    <li>ANI, <a href="https://aninews.in/news/world/asia/675-dead-over-2400-missing-as-search-and-rescue-operations-continue-across-nepal-following-flash-floods20260829213520/">675 dead, over 2400 missing as search and rescue operations continue across Nepal</a>（郡別収容遺体数・NDRRMA発表、2026-08-29）</li>
+    <li>NBC News, <a href="https://www.nbcnews.com/world/asia/nepal-floods-death-toll-climbs-missing-rescue-efforts-rcna594990">Nepal floods death toll climbs to 626, with 2,400 still missing</a></li>
+    <li>The Daily Star, <a href="https://www.thedailystar.net/news/world/news/how-the-nepal-flood-unfolded-over-10-hours-4257701">How the Nepal flood unfolded over 10 hours</a>（時系列）</li>
+    <li>Kathmandu Post, <a href="https://kathmandupost.com/national/2026/08/29/hundreds-feared-trapped-in-hydropower-tunnels-after-bhotekoshi-flood">Hundreds feared trapped in hydropower tunnels after Bhotekoshi flood</a></li>
+    <li>Khabarhub, <a href="https://english.khabarhub.com/2026/26/564871/">Rasuwa floods damage six hydropower and transmission facilities</a></li>
+    <li>Al Jazeera, <a href="https://www.aljazeera.com/news/2026/8/27/more-than-1300-missing-in-nepal-and-china-after-deadly-himalayan-flood">More than 390 dead, 1,500 missing in Nepal and Tibet after Himalayan floods</a></li>
+    <li>Stimson Center, <a href="https://www.stimson.org/2025/investigating-an-emerging-climate-hazard-transboundary-glacial-floods-on-the-china-nepal-border/">Investigating an Emerging Climate Hazard: Transboundary Glacial Floods on the China-Nepal Border</a>（2025年事例・越境流域の氷河湖評価）</li>
+    <li>The Himalayan Times, <a href="https://thehimalayantimes.com/environment/glof-confirmed-as-the-reason-for-rasuwa-flood">GLOF confirmed as the reason for Rasuwa flood</a>（2025年7月8日事例）</li>
+    <li>国土交通省, <a href="https://www.mlit.go.jp/river/shishin_guideline/kasen/pdf/kikikanri_tebiki.pdf">危機管理型水位計設置の手引き（案）</a>／<a href="https://www.river.or.jp/riverwaterlevels/">危機管理型水位計ポータルサイト</a></li>
+    <li>国土交通省砂防部, <a href="https://www.mlit.go.jp/mizukokudo/sabo/kinkyuchousa.html">天然ダム等の緊急調査</a>／<a href="https://www.mlit.go.jp/mizukokudo/sabo/kadouheisoku.html">大規模な河道閉塞（天然ダム）の危機管理に関する検討委員会</a></li>
+    <li>北海道開発局, <a href="https://www.hkd.mlit.go.jp/as/tisui/ho928l0000000y23.html">十勝岳火山砂防情報センター</a>（ワイヤーセンサ・振動センサによる自動警報）</li>
+    <li>内閣府, <a href="https://qzss.go.jp/overview/services/sv08_dc-report.html">みちびき 災害・危機管理通報サービス「災危通報」</a>／<a href="https://qzss.go.jp/info/information/dcx_240401.html">災危通報（拡張）のサービス開始</a></li>
+    <li>JAXA, <a href="https://earth.jaxa.jp/en/application/disaster/sentinel-asia/index.html">Sentinel Asia</a>／<a href="https://earth.jaxa.jp/en/application/disaster/disasterscharter/index.html">International Charter Space and Major Disasters</a></li>
+    <li>UNDP, <a href="https://www.adaptation-undp.org/report-icimod-and-undp-identifies-potentially-dangerous-glacial-lakes-river-basins-nepal-tibet">ICIMOD/UNDP: potentially dangerous glacial lakes in Nepal, TAR and India</a>（47湖の特定）</li>
+    <li>JICA, <a href="https://www.jica.go.jp/oda/project/202110922/index.html">道路防災に係る能力強化プロジェクト</a>（2024年7月〜、実施中）</li>
+    <li>Copernicus EMS, <a href="https://eu-space.europa.eu/components/earth-observation-copernicus/image-of-the-day/copernicus-emergency-management-service-maps-flood-damages-northern-nepal">EMSR927 – 北部ネパール洪水被害マッピング</a></li>
+  </ol>
+  </div>
+</section>
+
+<footer>
+  ネパール・ボテコシ／トリスリ川洪水（2026年8月26日）技術検討メモ<br>
+  作成 2026-08-29 ／ 数値は暫定・進行中の事象<br>
+  本メモは公開情報に基づく検討であり、関係機関の公式見解ではない
+</footer>
+
+</div>
