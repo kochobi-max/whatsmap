@@ -19,14 +19,14 @@
     "title_ja": "2026年 ボテコシ川 土石流・鉄砲水（ネパール）",
     "subtitle_en": "Rasuwa, Nuwakot and Dhading Districts - 26 August 2026",
     "subtitle_ja": "ラスワ郡・ヌワコット郡・ダディン郡、2026年8月26日",
-    "edition_en": "12th report",
-    "edition_ja": "第12報",
+    "edition_en": "13th report",
+    "edition_ja": "第13報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
-    "stamp": "2026-09-07 09:20 JST",
-    "update_date": "06/09/2026",
-    "timeline_range_en": "25 August - 6 September 2026 (Nepal Standard Time, UTC+5:45)",
-    "timeline_range_ja": "2026年8月25日〜9月6日（ネパール標準時 UTC+5:45）",
+    "stamp": "2026-09-08 07:45 JST",
+    "update_date": "07/09/2026",
+    "timeline_range_en": "25 August - 7 September 2026 (Nepal Standard Time, UTC+5:45)",
+    "timeline_range_ja": "2026年8月25日〜9月7日（ネパール標準時 UTC+5:45）",
     "tz_note_en": "All times are Nepal Standard Time (NPT, UTC+5:45) unless stated.",
     "tz_note_ja": "時刻は特記なき限りネパール標準時（NPT、UTC+5:45）。",
     "optional_slides": [],
@@ -320,6 +320,36 @@
       "url": "https://reliefweb.int/report/nepal/nepal-floods-hit-vulnerable-communities-undp-estimates-22-million-tonnes-debris"
     },
     {
+      "item_en": "Missing tourists (Department of Tourism breakdown)",
+      "item_ja": "行方不明の観光客（観光局集計）",
+      "value_en": "The Department of Tourism reports 587 foreign tourists from 34 countries and 188 Nepali citizens (guides and support staff, and Nepalis on pilgrimage) missing since the 26 August flood - 775 people in total. Of the foreign nationals, 256 are men, 329 women and 2 of unspecified gender; the largest national group is India (184), followed by Malaysia (55), Ukraine (54), the United States (67), Latvia (33) and Australia (33), with smaller numbers from 28 other countries. Most of the missing had travelled for the Kailash Mansarovar pilgrimage or the Janai Purnima festival. 307 foreign tourists (254 men, 53 women) have been rescued to date, and 7 people earlier out of contact (2 men, 4 women, 1 other) have since been reached. This is a subset compiled by the Department of Tourism and has not been reconciled with NDRRMA's national missing count (4,996 as of the 6 Sep 11:00 cut).",
+      "value_ja": "観光局（Department of Tourism）は、8月26日の洪水以降、34か国の外国人観光客587人とネパール人188人（現地ガイド・同行スタッフ、および巡礼中のネパール人を含む）、計775人が行方不明としている。外国人の内訳は男性256人・女性329人・性別不明2人。国別ではインド184人が最多で、マレーシア55人、ウクライナ54人、米国67人、ラトビア33人、オーストラリア33人ほか28か国に分散する。行方不明者の多くはカイラス山巡礼またはジャナイ・プールニマ祭のため訪れていた。これまでに外国人観光客307人（男性254人・女性53人）が救助され、連絡不通だった7人（男性2人・女性4人・その他1人）はその後連絡が取れた。この集計は観光局独自のものであり、NDRRMAの全国行方不明者数（9月6日11:00締め4,996人）とは突合されていない。",
+      "source_en": "Department of Tourism via The Rising Nepal (RSS), 7 Sep 2026",
+      "source_ja": "観光局（The Rising Nepal〈RSS配信〉、9月7日報道）",
+      "tier": "official",
+      "url": "https://risingnepaldaily.com/news/86249"
+    },
+    {
+      "item_en": "Trapped in hydropower tunnels (estimate)",
+      "item_ja": "水力発電施設トンネル内の取り残し（推計）",
+      "value_en": "The Nepali Army estimates that as many as 121 people could remain trapped inside tunnels of hydropower projects damaged by the flood, and states that search and rescue operations inside the tunnels will continue until a breakthrough is achieved or the Government decides otherwise. Announced by Brigadier General Subash Jung Thapa at a press conference held at NDRRMA on 7 September. This estimate has not been reconciled with NDRRMA's national missing count.",
+      "value_ja": "ネパール陸軍は、洪水で被災した水力発電事業のトンネル内に最大121人が取り残されている可能性があると推計し、突破口が開くか政府が別の判断を下すまで坑内の捜索・救助を続けるとしている。9月7日、NDRRMAで開かれた記者会見でスバス・ジャン・タパ准将が発表した。この推計はNDRRMAの全国行方不明者数とは突合されていない。",
+      "source_en": "Nepali Army via NDRRMA press conference, reported by The Rising Nepal (RSS), 7 Sep 2026",
+      "source_ja": "ネパール陸軍（NDRRMA記者会見、The Rising Nepal〈RSS配信〉9月7日報道）",
+      "tier": "official",
+      "url": "https://risingnepaldaily.com/news/86243"
+    },
+    {
+      "item_en": "Access crisis - Aamachhodingmo Rural Municipality, Rasuwa",
+      "item_ja": "到達困難の継続 — ラスワ郡アマチョディンモ村",
+      "value_en": "At least 203 people from Aamachhodingmo Rural Municipality (population over 7,000), where the Upper Trishuli-1, Chilime and Langtang hydropower projects are located, remain on the missing list; local authorities estimate the number could rise further. The rural municipality has been completely cut off by road since the flood struck 11 days earlier (roads, suspension bridges and tuin cable crossings all destroyed) and is reachable only by helicopter. Residents report that food, salt and cooking oil have run out; the rural municipality chair warns of a possible famine-like situation if supplies are not delivered soon, and says NGOs have been unable to deliver aid because the area can only be reached by chartered helicopter.",
+      "value_ja": "アマチョディンモ村（人口7,000人超。アッパートリシュリ1、チリメ、ランタンの各水力発電事業が所在）では少なくとも203人がなお行方不明の名簿に残っており、地元当局はさらに増える可能性があるとしている。同村は発災から11日間、道路・吊り橋・タイン（ケーブル渡し）がすべて損壊して陸路が完全に途絶しており、到達手段はヘリコプターに限られる。住民は食料・塩・食用油が尽きたと訴えており、村長は物資が届かなければ飢饉に近い状況になりかねないと述べ、NGOはヘリのチャーター費用がかさむため支援物資を届けられずにいるとしている。",
+      "source_en": "The Kathmandu Post, 7 Sep 2026 (field reporting)",
+      "source_ja": "The Kathmandu Post（9月7日、現地取材）",
+      "tier": "media",
+      "url": "https://kathmandupost.com/province-no-3/2026/09/07/people-in-flood-hit-rasuwa-villages-call-for-help-after-supplies-run-out"
+    },
+    {
       "item_en": "China-side impact (Gyirong, Tibet Autonomous Region)",
       "item_ja": "中国側の影響（チベット自治区・ギロン）",
       "value_en": "A joint CBAS/IRDR China analysis of satellite imagery finds that floodwaters backed up about 4.9 km upstream along the Gyirong Zangbo River from Gyirong Port, with the water-covered area in the backflow zone increasing from about 0.27 sq km before the event (12 Aug) to about 0.62 sq km after it (12:48 Beijing time, 26 Aug) - 2.3 times the pre-event level. Downstream of the rock-ice avalanche source area, the river channel widened markedly along a 97.2 km stretch, with the river water area increasing from about 6.39 sq km (12 Aug) to about 30.99 sq km (26 Aug) - 4.85 times the pre-event level. This is the China-side counterpart to the Nepal-side UNOSAT mapping; the two have not been cross-referenced.",
@@ -537,16 +567,44 @@
     {
       "time": "6 Sep 11:00",
       "tier": "official",
-      "src": "NDRRMA（The Rising Nepal 報道）",
+      "src": "NDRRMA (The Rising Nepal, RSS)",
       "en": "NDRRMA update as of 11:00, reported by The Rising Nepal (RSS) on 6 September: 1,341 bodies recovered and 4,996 people on the missing list, including 589 foreigners and around 100 security personnel and employees. By district the recovered bodies are Rasuwa 163, Nuwakot 195, Dhading 67, Chitwan 362, Gorkha 74, Tanahu 38, Nawalparasi East 222 and Nawalparasi West 220. 98 bodies have been identified and handed over to families. 13,104 people have been rescued and 6,075 injured have been treated. 3,652 affected people are accommodated at 39 relief camps in Rasuwa, Nuwakot, Dhading and Kathmandu. 21,465 security personnel are mobilised (Nepal Police 7,975, Nepali Army 9,287, Armed Police Force 4,203). Relief has moved from Kathmandu in 83 truckloads, 38 jeeps and 9 helicopter flights, with the Armed Police Force dispatching aid to Rasuwa and Nuwakot in 173 flights.",
       "ja": "NDRRMAの11:00時点の集計（The Rising Nepal〈RSS配信〉9月6日報道）。遺体収容1,341人、行方不明の名簿に4,996人（外国人589人、治安要員・職員約100人を含む）。郡別の遺体収容はラスワ163、ヌワコット195、ダディン67、チトワン362、ゴルカ74、タナフン38、ナワルパラシ東222、同西220。98人の身元が確認され遺族に引き渡された。救助は13,104人、負傷者6,075人が手当てを受けた。ラスワ・ヌワコット・ダディン・カトマンズの救援キャンプ39か所に3,652人が滞在。動員した治安要員は21,465人（ネパール警察7,975、ネパール陸軍9,287、武装警察4,203）。カトマンズからトラック83台・ジープ38台・ヘリ9便で物資を輸送し、武装警察がラスワ・ヌワコットへ173便を飛ばした。"
     },
     {
       "time": "6 Sep",
       "tier": "official",
-      "src": "MoFA / NDRRMA（The Rising Nepal 報道）",
+      "src": "MoFA / NDRRMA (The Rising Nepal, RSS)",
       "en": "A preliminary Rapid Damage and Needs Assessment (RDNA), reported by the Ministry of Foreign Affairs on 5 September and carried by The Rising Nepal on 6 September, indicates about 32,933 people affected and about 7,570 houses damaged or affected. 55 km of roads, 37 motorable bridges and 68 suspension bridges were destroyed; the Department of Roads separately put damage to roads and motorable bridges alone at NPR 20 billion. About 1,806 hectares of agricultural land, 13 hydropower projects, one solar plant and two transmission lines were damaged, with 783 MW of hydropower capacity affected. The full RDNA report is not yet published; NDRRMA says an expert team is finalising it. A comprehensive Post Disaster Needs Assessment (PDNA) is being undertaken in parallel. A 15-member Disaster Assistance and Response Team (DART) from Australia arrived on Friday and an 11-member Special Malaysian Disaster Assistance and Rescue Team (SMART) arrived on Saturday morning.",
       "ja": "迅速被害・ニーズ評価（RDNA）の暫定結果。外務省が9月5日に示し、The Rising Nepal が9月6日に報じた。被災は約32,933人、住家は約7,570棟が損壊または被災。道路55km、車道橋37橋、吊り橋68橋が破壊された。道路局は別途、道路と車道橋だけで200億ネパールルピーの被害としている。農地約1,806ha、水力発電13事業、太陽光発電1か所、送電線2条が被害を受け、水力発電容量783MWが影響を受けた。RDNAの完全な報告は未公表で、NDRRMAは専門家チームが最終化中としている。並行して包括的な災害後ニーズ評価（PDNA）も実施されている。豪州の災害支援・対応チーム（DART）15人が金曜に、マレーシアの特別災害支援・救助チーム（SMART）11人が土曜朝に到着した。"
+    },
+    {
+      "time": "7 Sep",
+      "tier": "official",
+      "src": "Department of Tourism (via The Rising Nepal)",
+      "en": "The Department of Tourism reports 775 people missing since the 26 August flood in a tourist-specific count: 587 foreign nationals from 34 countries and 188 Nepalis (guides, support staff and pilgrims). 307 foreign tourists have been rescued and 7 previously out of contact have been reached.",
+      "ja": "観光局が、8月26日の洪水以降、観光客に限った集計として775人の行方不明を発表。内訳は34か国の外国人587人、ネパール人188人（ガイド・同行スタッフ・巡礼者）。外国人観光客307人が救助され、連絡不通だった7人はその後連絡が取れた。"
+    },
+    {
+      "time": "7 Sep",
+      "tier": "official",
+      "src": "Nepali Army (NDRRMA press conference)",
+      "en": "The Nepali Army estimates that as many as 121 people could be trapped inside tunnels of flood-damaged hydropower projects and says the search inside the tunnels will continue until a breakthrough is achieved.",
+      "ja": "ネパール陸軍は、洪水で被災した水力発電施設のトンネル内に最大121人が取り残されている可能性があると推計し、突破口が開くまで坑内の捜索を続けるとした。"
+    },
+    {
+      "time": "7 Sep",
+      "tier": "media",
+      "src": "The Kathmandu Post",
+      "en": "Field reporting from Aamachhodingmo Rural Municipality, Rasuwa (203 on the missing list) describes a rural municipality still completely cut off by road 11 days after the flood, reachable only by helicopter, with residents reporting food and salt supplies exhausted.",
+      "ja": "ラスワ郡アマチョディンモ村（行方不明203人）からの現地報道。発災から11日経ても陸路が完全に途絶し、ヘリコプターのみが到達手段。住民は食料・塩が尽きたと訴えている。"
+    },
+    {
+      "time": "7 Sep",
+      "tier": "official",
+      "src": "Government of Pakistan",
+      "en": "Pakistan hands over 100 tonnes of relief assistance to Nepal to support people affected by the floods and landslides.",
+      "ja": "パキスタンが、洪水・地滑りの被災者支援のため救援物資100トンをネパールへ引き渡した。"
     }
   ],
   "response_measures": [
@@ -614,6 +672,14 @@
       "en": "The Government of Japan decided on 3 September to dispatch a Japan Disaster Relief (JDR) expert team to support identification (of the deceased), in response to a request from the Government of Nepal.",
       "ja": "日本政府は9月3日、ネパール政府からの要請を受け、身元確認（遺体の識別）支援のため国際緊急援助隊（JDR）専門家チームの派遣を決定した。",
       "url": "https://reliefweb.int/report/nepal/dispatch-japan-disaster-relief-jdr-expert-team-response-flash-flood-nepal"
+    },
+    {
+      "org_en": "Pakistan",
+      "org_ja": "パキスタン",
+      "tier": "official",
+      "en": "Pakistan handed over 100 tonnes of relief assistance to Nepal to support people affected by the floods and landslides (7 September).",
+      "ja": "パキスタンは、洪水・地滑りの被災者支援のため、ネパールへ救援物資100トンを引き渡した（9月7日）。",
+      "url": "https://risingnepaldaily.com/news/86242"
     }
   ],
   "satellite": [
@@ -925,6 +991,42 @@
       "url": "https://risingnepaldaily.com/news/86159",
       "en": "Bhotekoshi torrent affects 32,933 people, 7,570 houses (The Rising Nepal, 6 Sep 2026)",
       "ja": "ボテコシ川の出水、被災32,933人・住家7,570棟（The Rising Nepal、2026年9月6日）"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/nepal-flood-emergency-situation-report-reporting-period-4-6-september-2026",
+      "en": "Tzu Chi Foundation - Nepal Flood Emergency Situation Report, 4-6 September 2026 (Dhading District school/bridge cleanup)",
+      "ja": "仏教慈済基金会「ネパール洪水緊急状況報告」（9月4〜6日、ダディン郡の学校・橋梁の復旧作業）",
+      "_note": "ダディン郡ガルチ村の1校の局所的な復旧状況。集計値・機構の変更なし。確認済み。"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/nepal-flash-floods-un-women-gender-alert-2",
+      "en": "UN Women - Nepal Flash Floods Gender Alert #2 (protection/GBV concerns in shelters)",
+      "ja": "UN Women「ネパール鉄砲水 ジェンダーアラート第2号」（避難所での保護・GBVの懸念）",
+      "_note": "定性的な保護課題の指摘。集計値の更新なし。確認済み。"
+    },
+    {
+      "url": "https://reliefweb.int/map/nepal/nepal-rasuwa-floods-26th-august-2026-reference-map-series-affected-area-06092026",
+      "en": "MapAction - Rasuwa Floods Reference Map Series of Affected Area (06/09/2026)",
+      "ja": "MapAction「ラスワ洪水 被災地域基図シリーズ」（9月6日版）",
+      "_note": "地図のみで新規の数値・機構情報なし。確認済み。"
+    },
+    {
+      "url": "https://reliefweb.int/map/nepal/nepal-flash-floods-26th-august-2026-affected-municipalities-settlements-06092026",
+      "en": "MapAction - Affected Municipalities with Settlements (06/09/2026)",
+      "ja": "MapAction「被災市町村・集落図」（9月6日版）",
+      "_note": "地図のみで新規の数値・機構情報なし。確認済み。"
+    },
+    {
+      "url": "https://reliefweb.int/map/nepal/nepal-flash-floods-26th-august-2026-affected-population-06092026",
+      "en": "MapAction - Affected Population (06/09/2026)",
+      "ja": "MapAction「被災人口図」（9月6日版）",
+      "_note": "地図のみで新規の数値・機構情報なし。確認済み。"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/marking-international-day-charity-stories-giving-through-qatar-charity-go-beyond-humanitarian-assistance",
+      "en": "Qatar Charity - International Day of Charity feature (multi-country; not specific to this flood)",
+      "ja": "カタール・チャリティ「国際慈善デー」特集記事（複数国対象。本災害に特化した内容ではない）",
+      "_note": "ネパールは「+4 more」の1国として言及されるのみ。本災害との関連なし。確認済み。"
     }
   ],
   "images": {

@@ -21,7 +21,7 @@
     "jma_name_en": "",
     "edition": "",
     "prepared_by": "Asian Disaster Reduction Center (ADRC)",
-    "stamp": "2026-09-04 09:35 JST",
+    "stamp": "2026-09-08 07:45 JST",
     "update_date": "04/09/2026",
     "timeline_range_en": "15-31 August 2026 (Western Indonesian Time, UTC+7)",
     "timeline_range_ja": "2026年8月15日〜31日（西部インドネシア時間 WIB、UTC+7）",
@@ -772,6 +772,27 @@
       "url": "https://reliefweb.int/report/indonesia/gender-alert-1-anticipating-impact-el-nino-2026-women-girls-and-vulnerable-groups-indonesia",
       "tier": "media",
       "_note": "エルニーニョ（干ばつ・食料不安等）に関する全国的なジェンダー分析。フローレス地震とは無関係。数値・機構の更新なし。"
+    },
+    {
+      "label_en": "Indonesia | Anak Krakatau volcanic eruption - DG ECHO Daily Map (07/09/2026)",
+      "label_ja": "インドネシア「アナククラカタウ火山噴火」DG ECHO日次地図（9月7日）",
+      "url": "https://reliefweb.int/map/indonesia/indonesia-anak-krakatau-volcanic-eruption-dg-echo-daily-map-07092026",
+      "tier": "media",
+      "_note": "スンダ海峡のアナククラカタウ火山噴火は、対象の東ヌサトゥンガラ地震（GLIDE EQ-2026-000150-IDN）とは別の災害・別の地域。関係なし。確認済み。"
+    },
+    {
+      "label_en": "Indonesia: Wildfire haze threatens children across SE Asia and closes schools (Save the Children)",
+      "label_ja": "インドネシア「森林火災の煙害が東南アジアの子どもを脅かし休校に」（セーブ・ザ・チルドレン）",
+      "url": "https://reliefweb.int/report/indonesia/indonesia-wildfire-haze-threatens-children-across-se-asia-and-closes-schools",
+      "tier": "media",
+      "_note": "森林火災による煙害（別災害）。対象の東ヌサトゥンガラ地震とは無関係。確認済み。"
+    },
+    {
+      "label_en": "Indonesia: Wildfire haze threatens children across SE Asia and closes schools (duplicate ReliefWeb listing)",
+      "label_ja": "インドネシア「森林火災の煙害」（同一資料のReliefWeb重複掲載）",
+      "url": "https://reliefweb.int/report/indonesia/indonesia-wildfire-haze-threatens-children-across-se-asia-and-closes-schools-save-children",
+      "tier": "media",
+      "_note": "上記と同一資料の重複掲載。関係なし。確認済み。"
     }
   ],
   "attribution_en": "Figures reported by BNPB and relayed by IFRC/PMI and humanitarian partners; source and cut-off shown per row. All provisional.",
