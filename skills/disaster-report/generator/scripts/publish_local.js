@@ -411,7 +411,7 @@ function registerTask() {
   if (process.platform !== "win32") { say("   Windows ではないので登録しません"); return; }
   const bat = path.join(__dirname, "daily_publish.bat");
   const q = taskExists();
-  if (q) { say("   登録済み — 毎日 " + TASK_TIME + " に走ります"); return; }
+  if (q) { say("   登録済み — 毎日 " + TASK_TIME + " に走ります"); relaxTaskPower(); return; }
   try {
     execFileSync("schtasks",
       ["/create", "/tn", TASKNAME, "/tr", '"' + bat + '"', "/sc", "daily", "/st", TASK_TIME, "/f"],
@@ -425,6 +425,53 @@ function registerTask() {
   say(taskExists()
     ? "   登録しました — 毎日 " + TASK_TIME + " に走ります"
     : "   WARN 登録したはずが見つかりません。手で確認してください。");
+  relaxTaskPower();
+}
+
+// `schtasks /create` の既定は、ノートPCにとって都合が悪い。
+//
+//   バッテリで開始しない          → 電源に繋いでいない朝は**そもそも走らない**
+//   バッテリ モードで停止          → 実行中に電源が抜けると止まる
+//
+// 2026-09-07、荒木田さんのPCで `schtasks /query /v` を見て分かった。
+// 「PCが動いていない」と報告していた日の一部は、電源が切れていたのではなく
+// バッテリ駆動だった可能性がある。荒木田さんの了解（2026-09-07）を得て、
+// バッテリ駆動でも走るように変える。処理はダウンロードとコピーだけで数分。
+//
+// あわせて「取りこぼしたら後で追いつく」を明示的に有効にする。
+// 2026-09-07、8:10 の回が 9:48 に遅れて走った。これは望ましい動きなので残す。
+//
+// **失敗しても止めない。** 設定を変えられなくても、公開そのものは済んでいる。
+function relaxTaskPower() {
+  if (process.platform !== "win32") return;
+  const ps = [
+    "$ErrorActionPreference='Stop'",
+    "$s = (Get-ScheduledTask -TaskName '" + TASKNAME + "').Settings",
+    "$s.DisallowStartIfOnBatteries = $false",
+    "$s.StopIfGoingOnBatteries = $false",
+    "$s.StartWhenAvailable = $true",
+    "Set-ScheduledTask -TaskName '" + TASKNAME + "' -Settings $s | Out-Null",
+    "$v = (Get-ScheduledTask -TaskName '" + TASKNAME + "').Settings",
+    "Write-Output ('battery-start=' + (-not $v.DisallowStartIfOnBatteries)"
+      + " + ' stop-on-battery=' + $v.StopIfGoingOnBatteries"
+      + " + ' catch-up=' + $v.StartWhenAvailable)",
+  ].join("; ");
+  try {
+    const out = execFileSync("powershell",
+      ["-NoProfile", "-NonInteractive", "-Command", ps],
+      { encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] }).trim();
+    // 期待は battery-start=True stop-on-battery=False catch-up=True
+    if (/battery-start=True/i.test(out) && /stop-on-battery=False/i.test(out)) {
+      say("   電源設定 — バッテリ駆動でも走ります（" + out + "）");
+    } else {
+      say("   WARN 電源設定が期待どおりになっていません: " + out);
+    }
+  } catch (err) {
+    say("   WARN 電源設定を変えられませんでした（公開そのものは済んでいます）");
+    say("   " + String(err.message || err).split("\n")[0].slice(0, 140));
+    say("   手で直す場合は、タスクスケジューラで当該タスクの「条件」タブを開き、");
+    say("   「コンピューターをAC電源で使用している場合のみ...」のチェックを外す。");
+  }
 }
 function taskExists(args) {
   args = args || ["/query", "/tn", TASKNAME];
