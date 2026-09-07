@@ -2,7 +2,7 @@ datetime_wib,event,quantity,unit,source,note
 2026-07-02,PVMBG raises Anak Krakatau to Level III (Siaga),3,alert level,PVMBG via Kompas 2026-09-05,">240 eruptions recorded between 2 Jul and 5 Sep 2026"
 2026-09-04 23:07,Continuous eruption (erupsi menerus) begins; lava fountaining,21600,seconds of eruption tremor,Badan Geologi/PVMBG via Kompas 2026-09-07,"Max amplitude 70 mm; highest intensity of 2026"
 2026-09-05 00:50,Ash column to 15 km asl (FL500) moving W ~74 km/h; second layer 5.5 km moving S,15000,m asl,Darwin VAAC via The Watchers 2026-09-04,"VAAC advisory 2026/171"
-2026-09-05,Lower plume ~6 km (20,000 ft) drifts NE over Banten/Jakarta/West Java,6000,m asl,BMKG / Al Jazeera 2026-09-06,
+2026-09-05,Lower plume ~6 km (20000 ft) drifts NE over Banten/Jakarta/West Java,6000,m asl,BMKG / Al Jazeera 2026-09-06,
 2026-09-05,Acoustic booms heard in Java and Sumatra,700,km max reported distance,Al Jazeera 2026-09-06,"Three provinces reported booms (ANTARA)"
 2026-09-06 00:04,Continuous eruption ends after ~25 h; activity remains elevated,25,hours,ESDM via Al Jazeera 2026-09-06,"Two further eruptions on 6 Sep"
 2026-09-06 01:30,CGK and HLP suspend operations (first NOTAM to 09:30); TKG to 10:00,3,airports,US Embassy Jakarta alert 2026-09-06; Nikkei/AFP,"AFP: 209 flights and >22,000 pax affected at CGK in first closure"
@@ -12,7 +12,7 @@ datetime_wib,event,quantity,unit,source,note
 2026-09-06,Lion Group cancellations (domestic+international),305,flights,Lion Air newsroom 2026-09-07,
 2026-09-06,Garuda cancels/reschedules all Jakarta-Bandung-Lampung flights through midday 7 Sep,,,CNBC 2026-09-07,
 2026-09-06,Kemenhub designates 5 alternate airports (Kertajati; Juanda; Ahmad Yani; Adi Soemarmo; YIA); later 10 airports on 24-h ops,10,airports,ANTARA 2026-09-06/07 (Minister Dudy Purwagandhi),"Free onward train/bus/Whoosh for diverted passengers; InJourney Airports coordinates"
-2026-09-07 06:30,SIGMET: ash to 15,000 ft moving W at 15 kt,4570,m asl,BMKG press release 2026-09-07,
+2026-09-07 06:30,SIGMET: ash to 15000 ft moving W at 15 kt,4570,m asl,BMKG press release 2026-09-07,
 2026-09-07,Four airports (incl. CGK) extend closure to 18:00 WIB; one South Sumatra airport reopens 09:00,4,airports,Angkasa Pura via Al Jazeera 2026-09-07,
 2026-09-07 06:30,CGK flights affected on 7 Sep morning,243,flights,Jakarta Globe 2026-09-07,"~30,000 passengers Monday morning (Al Jazeera)"
 2026-09-07,Cumulative impact (media/industry tally),2961,flights,Supply Chain Indonesia via Tempo 2026-09-07,"~341,000 passengers; higher than Kemenhub 6 Sep figure; Reuters: >270,000"
