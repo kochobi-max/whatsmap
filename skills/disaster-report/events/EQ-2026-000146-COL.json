@@ -19,16 +19,16 @@
     "title_ja": "2026年 チョコ地震（コロンビア）",
     "subtitle_en": "M7.4, San José del Palmar, Chocó Department - 10 August 2026",
     "subtitle_ja": "M7.4、チョコ県サンホセ・デル・パルマル、2026年8月10日",
-    "edition_en": "19th report",
-    "edition_ja": "第19報",
+    "edition_en": "20th report",
+    "edition_ja": "第20報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
     "as_of_en": "Figures as of the UNGRD balance with a 06:30 COT cut-off on 6 Sep 2026 (posted 11:48 COT), the first new balance since the 3 Sep 06:30 cut - no balance was posted on 4 or 5 Sep. 331 deaths (unchanged), 4,505 injured (down from 4,519), 111 missing (down from 122) and 364 rescued alive (unchanged), across 498 municipalities in 16 departments (unchanged); 296,725 families (466,644 people) affected, up from 293,743 families (466,606 people). Housing: 201,989 homes damaged (up from 201,010) and 36,326 destroyed (down from 36,336), plus 6,005 buildings damaged and 743 collapsed (both up from 5,889 and 709). UNGRD gives no explanation for the small decreases in injured, missing and destroyed housing; as with earlier revisions this report treats them as reconciliation of reports filed, resolved and de-duplicated during ongoing consolidation rather than new information about casualties or a corrected report. UNGRD again describes the figures as preliminary and still being consolidated by territorial entities and operational agencies. All figures are preliminary; quote the cut-off with the number.",
     "as_of_ja": "数値は2026年9月6日06:30（コロンビア時間）締めのUNGRD集計現在（投稿は11:48）。9月3日06:30締め以来はじめての新しい集計で、9月4日・5日は集計の投稿が無かった。16県・498市町村（横ばい）で死者331人（横ばい）、負傷4,505人（4,519人から減少）、行方不明111人（122人から減少）、生存救出364人（横ばい）。被災は296,725世帯・466,644人で、293,743世帯・466,606人から増加。住家は損壊201,989棟（201,010棟から増加）・全壊36,326棟（36,336棟から減少）、ほか建物損壊6,005棟・倒壊743棟（いずれも5,889棟・709棟から増加）。負傷・行方不明・住家全壊のわずかな減少についてUNGRDは理由を説明していないが、これまでの改定と同様、死傷者に関する新しい情報や訂正報ではなく、集計継続中の届出・解消・重複整理によるものとして扱う。UNGRDは引き続き、数値は速報値であり地方団体・実施機関による集計が継続中としている。すべて速報値。引用の際は集計時点を併記されたい。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-09-08 07:45 JST",
-    "update_date": "07/09/2026",
+    "stamp": "2026-09-08 23:15 JST",
+    "update_date": "08/09/2026",
     "optional_slides": [
       "prior_event",
       "historical",
@@ -719,8 +719,8 @@
       "item_en": "People affected",
       "item_ja": "被災者",
       "tier": "official",
-      "value_en": "296,738 families (466,709 people) affected (UNGRD, 06:30 cut on 7 Sep), up from 296,725 families (466,644 people) at the 6 Sep 06:30 cut. OCHA's Flash Update 011 corroborates the people-affected figure as of 2 Sep 17:00 (\"more than 466,600\"). OCHA's earlier Flash Update 010 separately reported more than 406,000 people (193,011 families) as of 27 Aug 20:00, concentrated in Risaralda, Valle del Cauca, Choco, Quindio and Caldas; the two organisations' bases are not confirmed to be identical, so both are shown with their dates.",
-      "value_ja": "296,725世帯・466,644人が被災（UNGRD、9月6日06:30締め）。9月3日06:30締めの293,743世帯・466,606人から増加。OCHAのFlash Update 011（9月2日17:00時点）も被災者数「466,600人超」として整合。OCHAの先のFlash Update 010は別途、406,000人超・193,011世帯（8月27日20:00時点、リサラルダ、バジェ・デル・カウカ、チョコ、キンディオ、カルダスに集中）としていた。両機関の集計基準が同一かは確認できていないため、いずれも日付を付して併記する。",
+      "value_en": "296,738 families (466,709 people) affected (UNGRD, 06:30 cut on 7 Sep), up from 296,725 families (466,644 people) at the 6 Sep 06:30 cut. OCHA's Flash Update 011 corroborates the people-affected figure as of 2 Sep 17:00 (\"more than 466,600\"). OCHA's earlier Flash Update 010 separately reported more than 406,000 people (193,011 families) as of 27 Aug 20:00, concentrated in Risaralda, Valle del Cauca, Choco, Quindio and Caldas; the two organisations' bases are not confirmed to be identical, so both are shown with their dates. Separately, WFP's Colombia Earthquake Emergency Situation Report (7 September) states \"authorities reported 759,311 people affected, 331 fatalities, 4,519 injured people and 136 missing people\" as of that date - a substantially larger affected-population figure than UNGRD's own 7 Sep balance (296,738 families/466,709 people), while the casualty figures WFP cites (4,519 injured, 136 missing) match UNGRD's earlier 1-2 Sep cuts rather than the 7 Sep cut (4,505 injured, 111 missing). The report does not explain what the 759,311 figure counts or which UNGRD cut it draws on; it is shown here with its date rather than merged with UNGRD's own count.",
+      "value_ja": "296,725世帯・466,644人が被災（UNGRD、9月6日06:30締め）。9月3日06:30締めの293,743世帯・466,606人から増加。OCHAのFlash Update 011（9月2日17:00時点）も被災者数「466,600人超」として整合。OCHAの先のFlash Update 010は別途、406,000人超・193,011世帯（8月27日20:00時点、リサラルダ、バジェ・デル・カウカ、チョコ、キンディオ、カルダスに集中）としていた。両機関の集計基準が同一かは確認できていないため、いずれも日付を付して併記する。 別途、WFPの「コロンビア地震緊急事態状況報告」（9月7日付）は、その時点で「当局は被災者759,311人、死者331人、負傷4,519人、行方不明136人と報告した」としている。これはUNGRD自身の9月7日集計（296,738世帯・466,709人）を大きく上回る被災者数であり、一方でWFPが引用する死傷者数値（負傷4,519人・行方不明136人）はUNGRDの9月7日締めではなく9月1〜2日締めの数値と一致する。同報告は759,311人が何を数えた値か、どのUNGRD集計に基づくかを説明していない。ここではUNGRDの集計と統合せず、日付を付して別掲する。",
       "source_en": "UNGRD, 7 Sep 06:30; OCHA Flash Update 011, 2 Sep 17:00",
       "source_ja": "UNGRD（9月6日06:30）",
       "url": "https://x.com/UNGRD/status/2096942356549275783"
@@ -1105,8 +1105,8 @@
     {
       "tier": "media",
       "source": "Cancillería de Colombia (listing); Japanese Red Cross; Nippon Foundation",
-      "en": "Japan: the Colombian government lists Japan among the countries that have announced assistance, but as of this cut-off neither MOFA nor JICA has published a Japan Disaster Relief dispatch, an emergency relief goods provision or emergency grant aid. On the Japanese side what is confirmed is non-governmental: the Japanese Red Cross Society is supporting the Colombian Red Cross response, and the Nippon Foundation opened a Colombia earthquake appeal running from 12 August to 30 September.",
-      "ja": "日本：コロンビア政府は支援を表明した国として日本を挙げているが、本レポートの集計時点で、外務省・JICAのいずれからも国際緊急援助隊の派遣、緊急援助物資の供与、緊急無償資金協力は公表されていない。日本側で確認できるのは政府以外の動きであり、日本赤十字社がコロンビア赤十字社の活動を支援しているほか、日本財団が8月12日から9月30日までのコロンビア地震緊急支援募金を開設している。"
+      "en": "Japan: the Colombian government lists Japan among the countries that have announced assistance, but as of this cut-off neither MOFA nor JICA has published a Japan Disaster Relief dispatch, an emergency relief goods provision or emergency grant aid. On the Japanese side what is confirmed is non-governmental: the Japanese Red Cross Society is supporting the Colombian Red Cross response, and the Nippon Foundation opened a Colombia earthquake appeal running from 12 August to 30 September; the NGO AMDA also dispatched a nurse (30 Aug) and, with AMDA Colombia and Fundación Salamandra, supported relief in Cali and Chocó until concluding its emergency-phase response on 4 September.",
+      "ja": "日本：コロンビア政府は支援を表明した国として日本を挙げているが、本レポートの集計時点で、外務省・JICAのいずれからも国際緊急援助隊の派遣、緊急援助物資の供与、緊急無償資金協力は公表されていない。日本側で確認できるのは政府以外の動きであり、日本赤十字社がコロンビア赤十字社の活動を支援しているほか、日本財団が8月12日から9月30日までのコロンビア地震緊急支援募金を開設しているほか、NGOのAMDA（アジア医師連絡協議会）も8月30日に看護師を派遣し、AMDAコロンビア・サラマンドラ財団とともにカリ市・チョコ県で救援活動を支援、9月4日に緊急対応フェーズを終了した。"
     },
     {
       "tier": "official",
@@ -2093,6 +2093,30 @@
       "url": "https://reliefweb.int/map/colombia/quibdo-colombia-barrios-afectados-terremoto-10-de-agosto-2026-03092026",
       "tier": "media",
       "_note": "コペルニクスの既存被害点データを地図化したもの。新規の数値・機構情報なし。確認済み。"
+    },
+    {
+      "label_en": "IOM Colombia Earthquake Situation Report #8 (3 Sep 2026)",
+      "label_ja": "IOM コロンビア地震状況報告 第8号（9月3日）",
+      "url": "https://reliefweb.int/report/colombia/iom-colombia-earthquake-situation-report-8-03-september-2026",
+      "tier": "official"
+    },
+    {
+      "label_en": "IOM Colombia Earthquake Situation Report #8 (Spanish)",
+      "label_ja": "IOM コロンビア地震状況報告 第8号（スペイン語版）",
+      "url": "https://reliefweb.int/report/colombia/oim-respuesta-al-terremoto-en-colombia-reporte-de-situacion-8-3-septiembre-2026",
+      "tier": "official"
+    },
+    {
+      "label_en": "WFP Colombia Earthquake Emergency Situation Report (7 Sep 2026)",
+      "label_ja": "WFP コロンビア地震緊急事態状況報告（9月7日）",
+      "url": "https://reliefweb.int/report/colombia/wfp-colombia-earthquake-response-7-september-2026",
+      "tier": "official"
+    },
+    {
+      "label_en": "AMDA Emergency Relief #4: Earthquake in Colombia (8 Sep 2026)",
+      "label_ja": "AMDA緊急救援活動報告 第4報（9月8日）",
+      "url": "https://reliefweb.int/report/colombia/amda-emergency-relief-4-earthquake-colombia-8-september-2026",
+      "tier": "media"
     }
   ],
   "source_policy_en": "Source hierarchy: official > media > TBC. Government and scientific-agency figures are used as primary; media reports are used only where official figures are not yet published and are labelled as such. Items still being verified are marked TBC. Preliminary figures are never replaced by larger unverified numbers.",
