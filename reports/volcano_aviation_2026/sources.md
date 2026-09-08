@@ -7,14 +7,20 @@
   キーワード：越境火山災害／レジーム／ガバナンス／エイヤフィヤトラヨークトル／認識共同体
   所属：阪本＝兵庫県立大学大学院減災復興政策研究科（責任著者）、中道＝京都大学防災研究所、髙橋＝宇都宮大学国際学部、荒島＝神戸学院大学グローバル・コミュニケーション学部、荒木田＝アジア防災センター
   https://www.jstage.jst.go.jp/article/jndsj/40/1/40_51/_article/-char/ja/
-- [A] 安田成夫・梶谷義雄・多々納裕一・小野寺三朗（2011）「アイスランドにおける火山噴火と航空関連の大混乱」『京都大学防災研究所年報』54A. https://www.dpri.kyoto-u.ac.jp/nenpo/no54/ronbunA/a54a0p07.pdf ★（頁未確認）
+- [A] **【原典確認済 2026-09-08】** 安田成夫・梶谷義雄・多々納裕・小野寺三朗（桜美林大学自然科学系）（2011）「アイスランドにおける火山噴火と航空関連の大混乱」『京都大学防災研究所年報』第54号A, pp.59-65, 平成23年6月. https://www.dpri.kyoto-u.ac.jp/nenpo/no54/ronbunA/a54a0p07.pdf
+  キーワード：航空路火山灰／民間航空／経済損失。示す数値：噴煙10,000m以上、欧州約30か国の空港が一時閉鎖、1週間で10万便運休、影響旅客120万人/日、IATA集計で航空会社の損失6日間17億ドル、4月17〜19日は1日4億ドル減収
+  ※著者名は「多々納裕」（「裕一」ではない）
 - [A] 竹林幹雄（2019）「航空輸送における火山灰災害と回避行動：巨大噴火の場合」土木学会. http://library.jsce.or.jp/jsce/open/00039/201912_no60/60-35-06.pdf
 - [P] **【原典確認済 2026-09-08】** 内閣府 中央防災会議 防災対策実行会議 大規模噴火時の広域降灰対策検討ワーキンググループ「大規模噴火時の広域降灰対策について―首都圏における降灰の影響と対策―～富士山噴火をモデルケースに～（報告）」令和2年4月（公表 令和2年4月7日）.
   概要版 https://www.bousai.go.jp/kazan/kouikikouhaiworking/pdf/kouhaigaiyou.pdf ／ 本文 https://www.bousai.go.jp/kazan/kouikikouhaiworking/pdf/syutohonbun.pdf （全36頁）
   主要数値：航空＝滑走路使用不可 0.04〜0.2cm以上／空域迂回・到着空港変更 微量；鉄道＝0.05cm以上（初回は微量で運行停止）；電力＝降雨時0.3cm以上；道路＝2輪駆動 降雨時3cm・降雨なし10cm、4輪駆動 降雨時10cm・降雨なし30cm；処理必要火山灰量 約4.9億m³（西南西風卓越ケース）；噴火継続15日間；避難基準 降灰厚30cm；日本の活火山111
-- [P] 同WG 交通分野資料（鹿児島空港の除灰閾値）. https://www.bousai.go.jp/kazan/kouikikouhaiworking/pdf/20181207siryo4.pdf ★
-- [P] 内閣府「首都圏における広域降灰対策ガイドライン」（2025年3月）. https://www.bousai.go.jp/kazan/shiryo/pdf/honbun.pdf ★
-- [P] 内閣府 災害教訓の継承に関する専門調査会「1707 富士山宝永噴火」（2004年推計 最大約2.5兆円）. https://www.bousai.go.jp/kyoiku/kyokun/kyoukunnokeishou/rep/1707_houei_fujisan_funka/index.html ★
+- [P] **【原典確認済 2026-09-08】** 内閣府 第2回大規模噴火時の広域降灰対策検討WG 資料4（平成30年12月7日、全15頁）. https://www.bousai.go.jp/kazan/kouikikouhaiworking/pdf/20181207siryo4.pdf
+  鹿児島空港：協議開始0.2〜0.4mm、除灰必要2mm以上。海外事例：ラバウル1994（50cm 使用廃止）、ピナツボ1991（15cm 閉鎖）、ピナツボ（0.4cm で100km 離れた空港使用不能・回復10日）、レベンタドール2002（0.1〜0.2cm で7日間閉鎖）
+- [P] **【原典確認済 2026-09-08】** 内閣府（防災担当）「首都圏における広域降灰対策ガイドライン」令和7年3月（全65頁）. https://www.bousai.go.jp/kazan/shiryo/pdf/honbun.pdf
+  ステージ1（微量〜3cm未満）／2・3（3cm以上、ライフライン被害の大小で区分）／4（30cm以上）。ステージ4は屋内退避→降灰状況と避難ルート確保を踏まえ域外へ原則避難の2段構え
+- [P] **【原典確認済 2026-09-08／出典を訂正】** 富士山ハザードマップ検討委員会報告書、平成16年6月. https://www.bousai.go.jp/kazan/fuji_map/pdf/report_200406.pdf
+  被害額（単位百万円、公共土木施設等を含まず）：降雨なし 1兆1,867億〜1兆5,722億円／平均的降雨 1兆8,372億〜2兆2,226億円／**梅雨期 2兆1,419億〜2兆5,274億円**。「約2.5兆円」は梅雨期の上限。航空欄は3表とも「**6空港、1日あたり515便**」
+  ※`bousai.go.jp/kyoiku/kyokun/.../1707_houei_fujisan_funka/` は2006年3月の歴史災害報告書であり被害想定額の出典ではない（当初の記載は誤り）
 - [A] "Large volcanic eruptions and their influence on air transport: The case of Japan," *J. Air Transport Management* (2021). https://www.sciencedirect.com/science/article/abs/pii/S0969699721001186 ★
 
 ## 2. 2026年アナク・クラカタウ噴火（暫定・報道中心）
