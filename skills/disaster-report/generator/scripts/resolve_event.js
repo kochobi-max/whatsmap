@@ -63,18 +63,41 @@ function parseArgs(argv) {
   return a;
 }
 
+// meta.check_cadence が weekly のイベントは、指定曜日（JST）以外は
+// 毎朝の定期スイープ（--event 省略時）から外す。荒木田さん指示（2026-09-08）：
+// コロンビアのように変動が軽微になった災害を、毎日確認・確認メールで煩わせない。
+// --event で名指しされた実行は素通しする（手動確認はいつでもできる）。
+function jstWeekday() {
+  const now = new Date();
+  const jst = new Date(now.getTime() + (now.getTimezoneOffset() + 540) * 60000);
+  return ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][jst.getDay()];
+}
+
+function isDueToday(m) {
+  const cc = m && m.check_cadence;
+  if (!cc || cc.frequency !== "weekly") return true; // 既定: 毎日
+  return jstWeekday() === (cc.weekday_jst || "Mon");
+}
+
 function resolveEventPath(ref) {
   if (!ref) {
     // 引数なし: active な全イベントを返す（定期タスク用）。
     // pending（データ未整備・別実装で運用中）と archived は対象外。
-    if (!fs.existsSync(EVENTS_DIR)) return [];
-    return fs.readdirSync(EVENTS_DIR)
-      .filter(f => f.endsWith(".json") && !f.startsWith("_"))
-      .map(f => path.join(EVENTS_DIR, f))
-      .filter(p => {
-        try { return JSON.parse(fs.readFileSync(p, "utf8")).meta?.status === "active"; }
-        catch { return false; }
-      });
+    if (!fs.existsSync(EVENTS_DIR)) return { files: [], cadenceSkipped: [] };
+    const files = [], cadenceSkipped = [];
+    for (const f of fs.readdirSync(EVENTS_DIR)) {
+      if (!f.endsWith(".json") || f.startsWith("_")) continue;
+      const p = path.join(EVENTS_DIR, f);
+      let d;
+      try { d = JSON.parse(fs.readFileSync(p, "utf8")); } catch { continue; }
+      if (d.meta?.status !== "active") continue;
+      if (isDueToday(d.meta)) {
+        files.push(p);
+      } else {
+        cadenceSkipped.push({ file: p, glide: d.meta.glide, cadence: d.meta.check_cadence });
+      }
+    }
+    return { files, cadenceSkipped };
   }
   const cands = [
     ref,
@@ -82,7 +105,7 @@ function resolveEventPath(ref) {
     path.join(EVENTS_DIR, ref.endsWith(".json") ? ref : ref + ".json"),
   ];
   const hit = cands.find(c => fs.existsSync(c) && fs.statSync(c).isFile());
-  return hit ? [hit] : [];
+  return { files: hit ? [hit] : [], cadenceSkipped: [] };
 }
 
 /** 文字列値を再帰的に走査してプレースホルダ残存を拾う */
@@ -220,15 +243,27 @@ function surgeGate(d) {
 
 function main() {
   const args = parseArgs(process.argv);
-  const files = resolveEventPath(args.event);
+  const { files, cadenceSkipped } = resolveEventPath(args.event);
 
-  if (!files.length) {
+  if (!files.length && !cadenceSkipped.length) {
     const msg = args.event
       ? `イベントJSONが見つかりません: ${args.event}`
       : `処理対象のイベントがありません（events/ に status: "active" のJSONが無い）`;
     if (args.json) console.log(JSON.stringify({ ok: false, code: "NOT_FOUND", message: msg }, null, 2));
     else console.error(`✗ ${msg}`);
     process.exit(4);
+  }
+
+  if (!files.length && cadenceSkipped.length) {
+    // 全イベントが週次頻度で今日は対象外。INVALID/HOLDではなく、正常終了として扱う。
+    if (args.json) {
+      console.log(JSON.stringify({ ok: true, results: [], cadenceSkipped }, null, 2));
+    } else {
+      cadenceSkipped.forEach(s => console.log(
+        `\n── ${path.basename(s.file)}\n   本日は対象外（週次チェック: ${s.cadence.weekday_jst || "Mon"}曜のみ）。これは失敗ではない。`));
+      console.log("");
+    }
+    process.exit(0);
   }
 
   const results = files.map(file => {
@@ -269,8 +304,10 @@ function main() {
   });
 
   if (args.json) {
-    console.log(JSON.stringify({ ok: true, results }, null, 2));
+    console.log(JSON.stringify({ ok: true, results, cadenceSkipped }, null, 2));
   } else {
+    cadenceSkipped.forEach(s => console.log(
+      `\n── ${path.basename(s.file)}\n   本日は対象外（週次チェック: ${s.cadence.weekday_jst || "Mon"}曜のみ）。これは失敗ではない。`));
     for (const r of results) {
       console.log(`\n── ${path.basename(r.file)}`);
       console.log(`   判定: ${r.verdict === "OK" ? "✓ OK（ビルド→送信可）"

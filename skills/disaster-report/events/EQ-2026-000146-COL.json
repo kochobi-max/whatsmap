@@ -50,6 +50,11 @@
     },
     "tz_note_en": "Times are local (COT, UTC-5); entries whose exact time is not published are placed at the end of that day.",
     "tz_note_ja": "時刻は現地時間（COT、UTC-5）。時刻が公表されていないものはその日の末尾に置いている。",
+    "check_cadence": {
+      "frequency": "weekly",
+      "weekday_jst": "Tue",
+      "note_ja": "2026-09-08 荒木田さんの指示。第19報の確認メール（負傷者・住家全壊のわずかな減少）に対し「送らなくていい、微修正だから」との返信とあわせて、チェック・送信の頻度を週1回（火曜）に変更するよう指示があった（対象はコロンビアのみ）。resolve_event.js の毎朝の定期スイープはこの曜日以外このイベントを対象外にする。node resolve_event.js --event で名指しした場合は曜日に関わらず処理する。"
+    },
     "event_date": "2026-08-10",
     "video_queries": [
       "Colombia terremoto Choco agosto 2026",
@@ -57,14 +62,14 @@
     ]
   },
   "_prev": {
-    "_comment": "2026-09-04 08:47 JST 送信済み（第16報）。UNGRD 9月3日06:30締めの値。行方不明の減少（136→122）は missing が非単調ゲート（monotonic: false）のため数値急変ゲートに抵触せず、resolve_event.js は OK と判定、確認メールを経ずに通常送信した。翌日の数値急変ゲートの基準。",
+    "_comment": "2026-09-08 更新。第19報の確認メール（負傷者4,519→4,505、住家全壊36,336→36,326の減少）に荒木田さんが「送らなくていい、微修正だから」と返信（研究部へは未送信）。この返信を今報の数値の確認とみなし、翌週以降の数値急変ゲートが同じ差分を再検知しないよう _prev をこの値に更新する。研究部への送信履歴ではない点に注意。あわせて check_cadence を週1回（火曜）に変更。",
     "deaths": 331,
-    "injured": 4519,
-    "missing": 122,
-    "houses_destroyed": 36336,
+    "injured": 4505,
+    "missing": 111,
+    "houses_destroyed": 36326,
     "evacuees": null,
     "tier": "official",
-    "as_of": "2026-09-03 06:30 COT (UNGRD)"
+    "as_of": "2026-09-07 06:30 COT (UNGRD)"
   },
   "event": {
     "origin_time_local": "10 Aug 2026, 07:34:28 COT (UTC-5)",
