@@ -1,10 +1,10 @@
 datetime_wib,event,quantity,unit,source,note
-2026-07-02,PVMBG raises Anak Krakatau to Level III (Siaga),3,alert level,PVMBG via Kompas 2026-09-05,">240 eruptions recorded between 2 Jul and 5 Sep 2026"
-2026-09-04 23:07,Continuous eruption (erupsi menerus) begins; lava fountaining,21600,seconds of eruption tremor,Badan Geologi/PVMBG via Kompas 2026-09-07,"Max amplitude 70 mm; highest intensity of 2026"
+2026-07-02,Badan Geologi raises Anak Krakatau to Level III (Siaga); eruption resumes after pause since 16 Dec 2023,3,alert level,Badan Geologi 1512.Lap/GL.03/BGL/2026 (verified),"Strombolian series until 5 Sep; >240 eruptions reported by Kompas"
+2026-09-04 23:07,Continuous eruption (erupsi menerus) begins with lava fountaining and rumbling,21600,seconds of eruption tremor,Badan Geologi 2026-09-07 evaluation (VERIFIED),"Start/end times officially confirmed; column height not observable from the ground; max amplitude 70 mm per Kompas"
 2026-09-05 00:50,Ash column to 15 km asl (FL500) moving W ~74 km/h; second layer 5.5 km moving S,15000,m asl,Darwin VAAC via The Watchers 2026-09-04,"VAAC advisory 2026/171"
 2026-09-05,Lower plume ~6 km (20000 ft) drifts NE over Banten/Jakarta/West Java,6000,m asl,BMKG / Al Jazeera 2026-09-06,
 2026-09-05,Acoustic booms heard in Java and Sumatra,700,km max reported distance,Al Jazeera 2026-09-06,"Three provinces reported booms (ANTARA)"
-2026-09-06 00:04,Continuous eruption ends after ~25 h; activity remains elevated,25,hours,ESDM via Al Jazeera 2026-09-06,"Two further eruptions on 6 Sep"
+2026-09-06 00:04,Continuous eruption ends after 25 h; 3 Strombolian eruptions follow,25,hours,Badan Geologi 2026-09-07 evaluation (VERIFIED),"Return to Strombolian provisionally read as end of the continuous phase; probability of further eruption still high"
 2026-09-06 01:30,CGK and HLP suspend operations (first NOTAM to 09:30); TKG to 10:00,3,airports,US Embassy Jakarta alert 2026-09-06; Nikkei/AFP,"AFP: 209 flights and >22,000 pax affected at CGK in first closure"
 2026-09-06,Total of 8 airports closed in Java and Sumatra,8,airports,BMKG press release 2026-09-07,"CGK, HLP, TKG Lampung, BDO Bandung, Budiarto Curug, Pondok Cabe, M. Taufiq Kiemas Pesisir Barat, Atungbusu (South Sumatra)"
 2026-09-06,Ministry of Transport cumulative impact,1558,flights,Kemenhub via CNN/Al Jazeera 2026-09-06,"~170,000 passengers; cancelled+delayed+diverted since 5 Sep"
@@ -20,4 +20,4 @@ datetime_wib,event,quantity,unit,source,note
 2026-09-07,INACA loss estimate for airlines,19,IDR billion per day,INACA via Sindonews/IDX Channel 2026-09-07,"Rp70-130 billion if disruption lasts a week; MoT says losses not yet calculated"
 2026-09-07,Supply Chain Indonesia trade-flow exposure at CGK,84.03,USD million per day gross trade flow,Tempo 2026-09-07,"Non-oil-gas exports via CGK US$20.77 bn in 2025; 8-h stoppage delays ~US$28 m"
 2026-09-07,INDEF macro assessment,-0.003,percent of GDP (headline),CNBC Indonesia 2026-09-07,"Transport & warehousing 6.16% of GDP (Q2 2026); accommodation & food 2.77%"
-2026-09-07,Badan Geologi: no potential for tsunamigenic collapse; edifice growth since 2018 limited; 3-km exclusion,3,km,ESDM via Saudi Gazette/Reuters 2026-09-07,
+2026-09-07,Badan Geologi keeps Level III; no potential for tsunamigenic collapse; public told not to believe tsunami rumours; 3-km exclusion,3,km,Badan Geologi 2026-09-07 evaluation (VERIFIED),"6-7 Sep seismicity: 3 eruption, 9 emission, 93 low-frequency, 98 hybrid, 4 tremor, 1 shallow volcanic"

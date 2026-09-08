@@ -3,10 +3,15 @@
 凡例：[P] 一次・公的資料 [A] 査読論文・学術書 [S] 報道・二次資料 ★ 本セッションで原典に到達できず、検索抽出＋二次資料で照合（引用前に原典確認要）
 
 ## 1. 阪本ほか論文と関連日本語文献
-- [A] 阪本真由美・中道治久・高橋若菜・荒島千鶴・荒木田勝（2021）「欧州の越境災害をめぐるガバナンスの萌芽―2010年アイスランド火山噴火を契機として―」『自然災害科学』40(1), 51–66. https://www.jstage.jst.go.jp/article/jndsj/40/1/40_51/_article/-char/ja/ ★（著者名の漢字は researchmap で確認要）
+- [A] **【原典確認済 2026-09-08】** 阪本真由美・中道治久・髙橋若菜・荒島千鶴・荒木田勝（2021）「欧州の越境火山災害をめぐるガバナンスの萌芽－2010年アイスランド火山噴火を契機として－」『自然災害科学』40巻1号, pp.51-66, 2021年. DOI: 10.24762/jndsj.40.1_51. 区分「報告」. 引用文献28件. 受付 2020/05/18、改訂 2020/10/22、J-STAGE公開 2021/11/01.
+  キーワード：越境火山災害／レジーム／ガバナンス／エイヤフィヤトラヨークトル／認識共同体
+  所属：阪本＝兵庫県立大学大学院減災復興政策研究科（責任著者）、中道＝京都大学防災研究所、髙橋＝宇都宮大学国際学部、荒島＝神戸学院大学グローバル・コミュニケーション学部、荒木田＝アジア防災センター
+  https://www.jstage.jst.go.jp/article/jndsj/40/1/40_51/_article/-char/ja/
 - [A] 安田成夫・梶谷義雄・多々納裕一・小野寺三朗（2011）「アイスランドにおける火山噴火と航空関連の大混乱」『京都大学防災研究所年報』54A. https://www.dpri.kyoto-u.ac.jp/nenpo/no54/ronbunA/a54a0p07.pdf ★（頁未確認）
 - [A] 竹林幹雄（2019）「航空輸送における火山灰災害と回避行動：巨大噴火の場合」土木学会. http://library.jsce.or.jp/jsce/open/00039/201912_no60/60-35-06.pdf
-- [P] 内閣府 中央防災会議 大規模噴火時の広域降灰対策検討ワーキンググループ「大規模噴火時の広域降灰対策について」（2020年4月）. https://www.bousai.go.jp/kazan/kouikikouhaiworking/index.html ★
+- [P] **【原典確認済 2026-09-08】** 内閣府 中央防災会議 防災対策実行会議 大規模噴火時の広域降灰対策検討ワーキンググループ「大規模噴火時の広域降灰対策について―首都圏における降灰の影響と対策―～富士山噴火をモデルケースに～（報告）」令和2年4月（公表 令和2年4月7日）.
+  概要版 https://www.bousai.go.jp/kazan/kouikikouhaiworking/pdf/kouhaigaiyou.pdf ／ 本文 https://www.bousai.go.jp/kazan/kouikikouhaiworking/pdf/syutohonbun.pdf （全36頁）
+  主要数値：航空＝滑走路使用不可 0.04〜0.2cm以上／空域迂回・到着空港変更 微量；鉄道＝0.05cm以上（初回は微量で運行停止）；電力＝降雨時0.3cm以上；道路＝2輪駆動 降雨時3cm・降雨なし10cm、4輪駆動 降雨時10cm・降雨なし30cm；処理必要火山灰量 約4.9億m³（西南西風卓越ケース）；噴火継続15日間；避難基準 降灰厚30cm；日本の活火山111
 - [P] 同WG 交通分野資料（鹿児島空港の除灰閾値）. https://www.bousai.go.jp/kazan/kouikikouhaiworking/pdf/20181207siryo4.pdf ★
 - [P] 内閣府「首都圏における広域降灰対策ガイドライン」（2025年3月）. https://www.bousai.go.jp/kazan/shiryo/pdf/honbun.pdf ★
 - [P] 内閣府 災害教訓の継承に関する専門調査会「1707 富士山宝永噴火」（2004年推計 最大約2.5兆円）. https://www.bousai.go.jp/kyoiku/kyokun/kyoukunnokeishou/rep/1707_houei_fujisan_funka/index.html ★
@@ -16,7 +21,10 @@
 - [P] BMKG プレスリリース（2026-09-07）8空港閉鎖、SIGMET. https://www.bmkg.go.id/siaran-pers/imbas-sebaran-abu-vulknaik-anak-krakatau-8-bandara-ditutup-sementara-bmkg-minta-waspada-dan-tenang
 - [P] BMKG プレスリリース 継続監視（SIGMET 59本）. https://www.bmkg.go.id/siaran-pers/bmkg-terus-pantau-dampak-erupsi-gunung-anak-krakatau
 - [P] BNPB 更新（4空港閉鎖）. https://bnpb.go.id/berita/update-aktivitas-gunung-anak-krakatau-berlanjut-empat-bandara-ditutup-sementara-akibat-sebaran-abu-vulkanik ★（403）
-- [P] Badan Geologi/ESDM「Fenomena Erupsi Menerus Gunungapi Anak Krakatau 5 September 2026」. https://geologi.esdm.go.id/media-center/fenomena-erupsi-menerus-gunungapi-anak-krakatau-tanggal-5-september-2026 ★
+- [P] **【原典確認済 2026-09-08】** Badan Geologi「PERKEMBANGAN ERUPSI GUNUNGAPI ANAK KRAKATAU TANGGAL 7 SEPTEMBER 2026」（7 Sep 2026 06:00 WIB 評価）. https://geologi.esdm.go.id/media-center/perkembangan-erupsi-gunungapi-anak-krakatau-tanggal-7-september-2026
+  ←**連続噴火の時刻はこちらを引用すること**（4 Sep 23:07 WIB 開始 → 6 Sep 00:04 WIB 終了、25時間）
+- [P] **【原典確認済／日付誤記あり】** Badan Geologi「FENOMENA ERUPSI MENERUS GUNUNGAPI ANAK KRAKATAU TANGGAL 5 SEPTEMBER 2026」文書番号 1512.Lap/GL.03/BGL/2026. https://geologi.esdm.go.id/media-center/fenomena-erupsi-menerus-gunungapi-anak-krakatau-tanggal-5-september-2026
+  ※連続噴火の開始を「5 September 23.07 WIB」と記すが同文書内で矛盾。開始日は9月4日が正。背景情報（2023年12月16日まで再成長、2026年7月2日噴火再開、観測所2箇所）はこの文書が出典
 - [P] Darwin VAAC advisory 2026/171（FL500）. via https://www.volcanodiscovery.com/krakatau/news/341700/vaac-advisory-2026-171.html ★
 - [P] 米国大使館ジャカルタ Natural Disaster Alert（2026-09-06）閉鎖時刻. https://id.usembassy.gov/natural-disaster-alert-mt-anak-krakatau-eruption-september-6-2026/ ★
 - [S] Al Jazeera 2026-09-06/07（1,558便、27万人、閉鎖延長、代替スマラン・スラバヤ）. https://www.aljazeera.com/news/2026/9/6/indonesias-main-airport-suspends-flights-due-to-anak-krakatoa-eruption
