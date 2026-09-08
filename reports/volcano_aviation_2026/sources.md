@@ -50,7 +50,9 @@
 - [S] Liputan6／Tempo（GA961・GA983 クルタジャティへダイバート）. https://www.liputan6.com/bisnis/read/8286067/ ; https://en.tempo.co/read/2119066/ ★
 - [S] Jakarta Globe 2026-09-07（CGK 243便、18:00まで閉鎖）. https://jakartaglobe.id/news/anak-krakatau-ash-soekarnohatta-airport-stays-shut-until-6-pm ★
 - [S] Saudi Gazette/Reuters 2026-09-07（津波を起こす崩壊の可能性なし）. https://saudigazette.com.sa/article/664315/ ★
-- [P] 民航総局規則 KP 153/2019（火山灰 CDM）. https://hubud.kemenhub.go.id/berita/4746 ★
+- [P] **【原典確認済 2026-09-08】** 民航総局長官決定 KP 153 Tahun 2019「火山灰の航空運航への影響対応のための Collaborative Decision Making (CDM) の方法と手順（I-WISH を用いる）」2019年6月20日制定. https://jdih.kemenhub.go.id/
+- [P] **【新規・原典確認済 2026-09-08】** 民航総局長官通達 **SE-DJPU 15 Tahun 2026「Penanganan Dampak Abu Vulkanik terhadap Operasi Penerbangan」2026年9月6日発効**（プレス第4888号、2026-09-08公表）. https://hubud.kemenhub.go.id/berita/4888
+  運航者へのSafety Risk Assessment義務づけ／機体保護とOEM指針に基づく洗浄／空港運営者・AirNavの監視責務／旅客対応（補償・迂回・払戻・再予約）／火山灰遭遇の報告・記録義務／長官 Lukman F. Laisa
 - [P] 運輸大臣規則 PM 89/2015（遅延・欠航時の旅客対応）. https://peraturan.bpk.go.id/Details/103484/permenhub-no-89-tahun-2015 ★
 - [P] PVMBG "Indonesia Volcano Monitoring"（127火山、69監視、74観測所）. https://wovodat.org/about/cov11Workshopppt/hilma_IndonesiaVolcanoMonitoring.pdf ★
 - [P] InJourney Airports（CGK 2024年 5,480万人）. https://soekarnohatta.injourneyairports.id/en/feature/news/82/ ★
