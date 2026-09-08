@@ -51,16 +51,19 @@
 - [P] OJK（保険浸透率 2.61%/2024）. via https://databoks.katadata.co.id/en/finance/statistics/68d4e7c2533dc/ ★
 
 ## 3. エイヤフィヤトラヨークトル2010・グリムスヴォトン2011
-- [P] EUROCONTROL, *Ash-cloud of April and May 2010: Impact on Air Traffic* (2010). https://www.eurocontrol.int/sites/default/files/article/attachments/201004-ash-impact-on-traffic.pdf ★
+- [P] **【原典確認済 2026-09-08】** EUROCONTROL/CND/STATFOR, *Ash-cloud of April and May 2010: Impact on Air Traffic*, STATFOR/Doc394 v1.0, 28/6/10, 45pp. https://www.eurocontrol.int/sites/default/files/article/attachments/201004-ash-impact-on-traffic.pdf
+  4/15-22の8日間で104,000便欠航＝想定の48%、4/18ピーク80%、旅客約1,000万人、5月に追加7,000便、LCCは61%、アイスランドは13日間
 - [P] IATA press release 2010-04-21（17億ドル）; IATA Economic Briefing May 2010. https://www.iata.org/pressroom/pr/pages/2010-04-21-01.aspx ; https://www.iata.org/en/iata-repository/publications/economic-reports/impact-of-ash-plume/ ★
 - [P] Oxford Economics (2010) *The Economic Impacts of Air Travel Restrictions Due to Volcanic Ash*. ★（47億＋3億ドル）
 - [P] European Commission MEMO/10/152 (2010-04-27); MEMO/11/235 (2011-04-12). ★
 - [P] Regulation (EU) No 677/2011, Arts 18–19（EACCC）. https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32011R0677
-- [P] UK CAA, "Managing ash in UK airspace". https://www.caa.co.uk/safety-initiatives/safety-projects/volcanic-ash/managing-ash-in-uk-airspace/
+- [P] UK CAA, "in focus" briefing (2010-10-26). https://www.caa.co.uk/publication/download/14009
+  **※低・中・高濃度ゾーンとTDAの定性的枠組みのみ。mg/m³ の数値も日付も記載なし。**「200 µg/m³ → 2 mg/m³ → 4 mg/m³」の3段階と日付は本セッションで原典確認できず ★★要アーカイブ資料
 - [P] ICAO Doc 9974 *Flight Safety and Volcanic Ash* (2012). https://www.icao.int/sites/default/files/2025-04/9974_en.pdf ★
 - [P] ICAO EUR Doc 019/NAT Doc 006 Part II *Volcanic Ash Contingency Plan* ed. 2.0 (2016). https://skybrary.aero/bookshelf/eur-doc-019-nat-doc-006-part-ii-volcanic-ash-contingency-plan-ed-20 ★
 - [P] EASA SIB 2010-17. https://ad.easa.europa.eu/blob/SIB_201017_R6_Flight_in_Volcanic_Ash.pdf/SIB_2010-17R6_1 ★
-- [P] CJEU C-12/11 *McDonagh v Ryanair* (2013-01-31). https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62011CJ0012 ★
+- [P] **【原典確認済 2026-09-08】** CJEU C-12/11 *McDonagh v Ryanair* (2013-01-31). https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62011CJ0012
+  主文：火山灰による空域閉鎖は「特別な事情」に当たるが第5条(1)(b)・第9条のケア提供義務を免除しない。「no limitation, whether temporal or monetary … is apparent from the wording」。「super extraordinary circumstances」の主張は却下（para.126）
 - [A] Budd, Griggs, Howarth & Ison (2011) *Mobilities* 6(1), 31–40. doi:10.1080/17450101.2011.532650
 - [A] Alexander, D. (2013) *Int. J. Disaster Risk Science* 4(1), 9–19. doi:10.1007/s13753-013-0003-0
 - [A] Mazzocchi, Hansstein & Ragona (2010) *CESifo Forum* 11(2), 92–100.
@@ -92,7 +95,8 @@
 - [A] Magill et al. (2013) *EPS*（新燃岳2011）. ★
 
 ## 5. 世界の噴火事例
-- [A] Casadevall, T.J. (1994) *JVGR* 62, 301–316（レドウト）. https://pubs.usgs.gov/publication/70017560 ★
+- [A] **【原典確認済 2026-09-08】** Casadevall, T.J., 1994, "The 1989-1990 eruption of Redoubt Volcano, Alaska: impacts on aircraft operations," *Journal of Volcanology and Geothermal Research*, v.62, no.1-4, p.301-316. doi:10.1016/0377-0273(94)90038-8
+  **8,000万ドルはKLM867の1機のみ**（エンジン・アビオニクス・機体構造）。損傷旅客機5機。アンカレッジ空港の逸失収入260万ドル
 - [P] Keith ed. (1995) USGS Bull. 2139（スパー1992）. https://avo.alaska.edu/pdfs/B2139.pdf ★
 - [A] Craig et al. (2016) *J. Applied Volcanology* 5:7（プジェウエ・アルゼンチン農業）. ★
 - [A] Hayes et al. (2019) *JVGR*（カルブコ）. https://pubs.usgs.gov/publication/70260153 ★
@@ -106,10 +110,12 @@
 - [S] ADN／Alaska Beacon 2025（スパー活動とANC準備）. ★
 
 ## 6. 総合文献・制度
-- [A] Mani, Tzachor & Cole (2021) "Global catastrophic risk from lower magnitude volcanic eruptions," *Nature Communications* 12:4756. doi:10.1038/s41467-021-25021-8 ★（pinch point 7地点の内訳は本文で確認要）
+- [A] **【原典確認済 2026-09-08】** Mani, L., Tzachor, A., & Cole, P. (2021) "Global catastrophic risk from lower magnitude volcanic eruptions," *Nature Communications* 12:4756, pp.1-5. doi:10.1038/s41467-021-25021-8. **※Comment（査読論文ではない）**
+  7つの pinch point：Taiwanese／Chinese–Korean／Luzon／Malay／Mediterranean／North Atlantic／Pacific Northwest。マラッカ海峡＝世界貿易の40%、KL–SIN線 年550万席超、ムラピVEI 6で5年間2.51兆ドル、エイヤ2010＝50億ドル、ピナツボ1991＝3.74億ドル、VEI-GCR asymmetry
 - [A] Loughlin, Sparks, Brown, Jenkins & Vye-Brown eds (2015) *Global Volcanic Hazards and Risk*, CUP. ★
-- [A] Brown et al. (2017) "Volcanic fatalities database," *J. Applied Volcanology* 6:15（278,368人）. ★
-- [P] Guffanti, Casadevall & Budding (2010) USGS Data Series 545. https://pubs.usgs.gov/ds/545/ ★（件数・重大度区分は原典確認要）
+- [A] Brown, S.K., Jenkins, S.F., Sparks, R.S.J., Odbert, H. & Auker, M.R. (2017) "Volcanic fatalities database," *J. Applied Volcanology* 6:15. ★★**死者総数（278,368人とされる）は原典未確認。Springer/BMC に到達できず。確認するまで数値を引用しないこと**
+- [P] **【原典確認済 2026-09-08】** Guffanti, Marianne, Casadevall, T.J., and Budding, Karin, 2010, *Encounters of aircraft with volcanic ash clouds; A compilation of known incidents, 1953–2009*: U.S. Geological Survey Data Series 545, ver. 1.0, 12 p., plus 4 appendixes. https://pubs.usgs.gov/ds/545/DS545.pdf
+  129インシデント／灰との遭遇確認94件／損傷79件／クラス3-4が26件／クラス4が9件（うち3件は全エンジン一時喪失）／クラス5は0件／1976年以降 年約2件／損傷遭遇の約半数がVEI 3
 - [A] Wilson et al. (2012) "Volcanic ash impacts on critical infrastructure," *Phys. Chem. Earth* 45–46, 5–23.
 - [A] Prata & Rose (2015) "Volcanic ash hazards to aviation," *Encyclopedia of Volcanoes* 2nd ed., 911–934.
 - [A] Lechner, Tupper, Guffanti, Loughlin & Casadevall (2018) in *Observing the Volcano World*, Springer. doi:10.1007/11157_2016_49
