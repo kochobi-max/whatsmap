@@ -111,6 +111,60 @@ id.wikipedia.org
 
 ---
 
+## 2026-09-08 追記：A・B適用後の到達性テスト結果
+
+A・Bを許可した状態で実測した結果（`curl` でCONNECTトンネルの成否とHTTPコードを確認）。
+
+**到達可能になったもの（許可が有効に働いた）**
+
+| ドメイン | 結果 |
+|---|---|
+| pubs.usgs.gov | 200 |
+| www.bousai.go.jp | 200 |
+| www.jstage.jst.go.jp | 200 |
+| researchmap.jp | 200 |
+| reliefweb.int | 200 |
+| www.eurocontrol.int | 200 |
+| www.nature.com / link.springer.com | 303（リダイレクト＝到達可） |
+| geologi.esdm.go.id | 200 |
+
+**プロキシは通すが、サイト側のボット対策で拒否されるもの（許可では解決しない）**
+
+| ドメイン | 結果 |
+|---|---|
+| volcano.si.edu | CONNECT 200 → Cloudflare が 403「Sorry, you have been blocked」 |
+| www.icao.int | CONNECT 200 → 同様に 403 |
+| www.reuters.com | CONNECT 200 → 401（ペイウォール） |
+
+ブラウザ相当のUser-Agentを付けても 403 のままだった。データセンターIPからのアクセスを
+遮断する設定のため、許可リストでは突破できない。これらは人手でのブラウザ取得か、
+別ミラー（USGS版、SKYbrary版など）に切り替える必要がある。
+
+**まだプロキシに遮断されているもの（Cを入れていないため）**
+
+`en.antaranews.com` … `CONNECT tunnel failed, response 403`（プロキシの拒否シグネチャ）
+
+**判別方法**：`curl -v` の出力で
+`CONNECT tunnel failed, response 403` はプロキシの拒否、
+`CONNECT tunnel established, response 200` の後のHTTPコードはサイト側の応答。
+
+## Cを入れない場合に検証できないもの
+
+Cの報道系を入れない判断は妥当だが、2026年クラカタウ噴火の**便数・旅客数**は
+運輸省が記者発表した数字を報道経由でしか取れないため、以下は原典照合ができない。
+
+- 1,558便／17万人（9/6 運輸省）と 2,961便／34.1万人（9/7 業界集計）の不整合
+- INACA の1日190億ルピア推計の算出根拠
+- 代替空港10空港の指定と無償輸送の実施規模
+
+火山活動そのもの（噴煙高度、警戒レベル、噴火継続時間、立入禁止半径）は
+BMKG と geologi.esdm.go.id が到達可能なので原典で確認できる。
+
+**最小限の追加候補**：報道系を全部入れるのが不適当なら、国営通信の
+`en.antaranews.com` の1件だけでも運輸省発表の一次に近い形で追える。
+
+---
+
 ## ドメイン許可では解決しない制約
 
 - **WebSearch の回数上限**：本セッションは 200/200 を使い切った。ドメイン許可とは別に
