@@ -53,7 +53,10 @@
 - [P] **【原典確認済 2026-09-08】** 民航総局長官決定 KP 153 Tahun 2019「火山灰の航空運航への影響対応のための Collaborative Decision Making (CDM) の方法と手順（I-WISH を用いる）」2019年6月20日制定. https://jdih.kemenhub.go.id/
 - [P] **【新規・原典確認済 2026-09-08】** 民航総局長官通達 **SE-DJPU 15 Tahun 2026「Penanganan Dampak Abu Vulkanik terhadap Operasi Penerbangan」2026年9月6日発効**（プレス第4888号、2026-09-08公表）. https://hubud.kemenhub.go.id/berita/4888
   運航者へのSafety Risk Assessment義務づけ／機体保護とOEM指針に基づく洗浄／空港運営者・AirNavの監視責務／旅客対応（補償・迂回・払戻・再予約）／火山灰遭遇の報告・記録義務／長官 Lukman F. Laisa
-- [P] 運輸大臣規則 PM 89/2015（遅延・欠航時の旅客対応）. https://peraturan.bpk.go.id/Details/103484/permenhub-no-89-tahun-2015 ★
+- [P] **【原典確認済 2026-09-09】** 運輸大臣規則 **PM 89 Tahun 2015** *Penanganan Keterlambatan Penerbangan (Delay Management) Pada Badan Usaha Angkutan Udara Niaga Berjadwal di Indonesia*、制定2015-05-08、施行2015-05-12、現行有効、BN 2015 (716) 12頁、PM 77/2011を改正。全文20頁PDF（2015pmkemenhub089.pdf）。
+  https://jdih.kemenhub.go.id/peraturan/index?PencarianPeraturanForm%5BnomorPeraturan%5D=89&PencarianPeraturanForm%5BtahunPeraturan%5D=2015 から詳細ページ経由で取得（peraturan.bpk.go.id は403のまま）
+  第2条：遅延・搭乗拒否・**欠航**を含む。第3条：カテゴリー1〜6（6＝欠航）。第5条(1)：原因4分類。第5条(3)a：**空港が運航に使用できない＝技術運航要因**（火山灰閉鎖はここ）。第5条(4)：気象要因は8項目の限定列挙で**火山灰を含まない**。第5条(6)(7)：技術運航は空港当局、気象はBMKGの公式証明が必要。第6条(2)：第5条(3)(4)(5)について**ganti kerugian の責任のみ免除**。**「force majeure」「keadaan memaksa」の語は全文に存在しない**。第9条(1)：a〜d 飲食（kompensasi）、e カテゴリー5に30万ルピア（ganti rugi）、**f 欠航は全額払戻または他便振替**、g カテゴリー2〜5も振替・払戻を選択可。第10条(3)：振替は追加費用なし・他社便可・下位クラスは差額返金。**第10条(4)：6時間超で宿泊必要なら宿泊提供義務**。第11条：総局長承認のSOP保有義務。第12条：カテゴリー5の30万ルピアは付保義務、支払は3×24時間以内。第13・14条：監督と翌月10日までの月次報告
+  **解釈上の未決点**：第6条(2)の免責が第9条(1)a〜d の飲食と第10条(4)の宿泊にまで及ぶかは条文から一義に定まらない ★（運用の実証が必要）
 - [P] PVMBG "Indonesia Volcano Monitoring"（127火山、69監視、74観測所）. https://wovodat.org/about/cov11Workshopppt/hilma_IndonesiaVolcanoMonitoring.pdf ★
 - [P] InJourney Airports（CGK 2024年 5,480万人）. https://soekarnohatta.injourneyairports.id/en/feature/news/82/ ★
 - [P] OJK（保険浸透率 2.61%/2024）. via https://databoks.katadata.co.id/en/finance/statistics/68d4e7c2533dc/ ★
