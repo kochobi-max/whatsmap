@@ -67,6 +67,7 @@
 ## 3. エイヤフィヤトラヨークトル2010・グリムスヴォトン2011
 - [P] **【原典確認済 2026-09-08】** EUROCONTROL/CND/STATFOR, *Ash-cloud of April and May 2010: Impact on Air Traffic*, STATFOR/Doc394 v1.0, 28/6/10, 45pp. https://www.eurocontrol.int/sites/default/files/article/attachments/201004-ash-impact-on-traffic.pdf
   4/15-22の8日間で104,000便欠航＝想定の48%、4/18ピーク80%、旅客約1,000万人、5月に追加7,000便、LCCは61%、アイスランドは13日間
+  **※2026-09-09 全文検索：mg/m³ の数値も「低・中・高」の3段階区分も一切現れない。**日次記述は一貫して「engine manufacturer tolerance levels を超えうる区域」「no-fly zone proposals」という定性表現。濃度基準の数値の出所としては使えない
 - [P] IATA press release 2010-04-21（17億ドル）; IATA Economic Briefing May 2010. https://www.iata.org/pressroom/pr/pages/2010-04-21-01.aspx ; https://www.iata.org/en/iata-repository/publications/economic-reports/impact-of-ash-plume/ ★
 - [P] Oxford Economics (2010) *The Economic Impacts of Air Travel Restrictions Due to Volcanic Ash*. ★（47億＋3億ドル）
 - [P] European Commission MEMO/10/152 (2010-04-27); MEMO/11/235 (2011-04-12). ★
