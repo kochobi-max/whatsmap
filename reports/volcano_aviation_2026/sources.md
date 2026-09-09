@@ -50,7 +50,10 @@
 - [S] Liputan6／Tempo（GA961・GA983 クルタジャティへダイバート）. https://www.liputan6.com/bisnis/read/8286067/ ; https://en.tempo.co/read/2119066/ ★
 - [S] Jakarta Globe 2026-09-07（CGK 243便、18:00まで閉鎖）. https://jakartaglobe.id/news/anak-krakatau-ash-soekarnohatta-airport-stays-shut-until-6-pm ★
 - [S] Saudi Gazette/Reuters 2026-09-07（津波を起こす崩壊の可能性なし）. https://saudigazette.com.sa/article/664315/ ★
-- [P] **【原典確認済 2026-09-08】** 民航総局長官決定 KP 153 Tahun 2019「火山灰の航空運航への影響対応のための Collaborative Decision Making (CDM) の方法と手順（I-WISH を用いる）」2019年6月20日制定. https://jdih.kemenhub.go.id/
+- [P] **【全文照合済 2026-09-09】** 民航総局長官規則 **KP 153 Tahun 2019** *Tata Cara dan Prosedur Collaborative Decision Making (CDM) Penanganan Dampak Abu Vulkanik terhadap Operasi Penerbangan Menggunakan Media Integrated Web Based Aeronautical Information System Handling (I-WISH)*、**制定・施行いずれも2019年5月22日**、現行有効。全文48頁（2019kpkemenhub153.pdf、スキャンPDFのためテキスト層なし。頁画像を判読）
+  jdih.kemenhub.go.id の詳細ページ経由。**PDF取得には detail ページで取得した Cookie が必要**（`curl -c/-b` でセッションを維持しないと /api/media が空応答を返す）
+  第2条：I-WISH の Volcano・CDM モジュールで情報と調整の機構を定める。第3条(2)b：CDM は「火山活動が正常と宣言され、かつ／または火山灰の拡散が空域でも空港でも **tidak terdeteksi（検知されない）**」まで継続＝**二値基準**。第3条(3)：**CDM のリーダーは空港当局事務所（KOBU）**、Super Administrator は航空航法総局。第7条：**VONA が Yellow/Orange/Red で CDM グループが自動起動、Green で自動終了**。第8条(1)：I-WISH に投入する情報12種＝VONA／SIGMET／ASHTAM／NOTAM／Air Report Special／METAR／SPECI／Aerodrome Warning／**(i) Modelled Ash Concentration Chart**／Volcanic Activity Reports／ATS Route Contingency／**(l) Paper Test**
+  **含意**：モデル濃度チャートは制度上存在するが、**判断閾値が定められていない**。「濃度情報がない」ではなく「閾値がない」が正しい批判である
 - [P] **【新規・原典確認済 2026-09-08】** 民航総局長官通達 **SE-DJPU 15 Tahun 2026「Penanganan Dampak Abu Vulkanik terhadap Operasi Penerbangan」2026年9月6日発効**（プレス第4888号、2026-09-08公表）. https://hubud.kemenhub.go.id/berita/4888
   運航者へのSafety Risk Assessment義務づけ／機体保護とOEM指針に基づく洗浄／空港運営者・AirNavの監視責務／旅客対応（補償・迂回・払戻・再予約）／火山灰遭遇の報告・記録義務／長官 Lukman F. Laisa
 - [P] **【原典確認済 2026-09-09】** 運輸大臣規則 **PM 89 Tahun 2015** *Penanganan Keterlambatan Penerbangan (Delay Management) Pada Badan Usaha Angkutan Udara Niaga Berjadwal di Indonesia*、制定2015-05-08、施行2015-05-12、現行有効、BN 2015 (716) 12頁、PM 77/2011を改正。全文20頁PDF（2015pmkemenhub089.pdf）。
