@@ -2117,6 +2117,34 @@
       "label_ja": "AMDA緊急救援活動報告 第4報（9月8日）",
       "url": "https://reliefweb.int/report/colombia/amda-emergency-relief-4-earthquake-colombia-8-september-2026",
       "tier": "media"
+    },
+    {
+      "label_en": "OCHA/EHP Colombia - HNRP 2026 5W System Response Report (Jan-Jul 2026)",
+      "label_ja": "OCHA／コロンビア人道チーム HNRP2026 5Wシステム対応報告（1〜7月）",
+      "url": "https://reliefweb.int/report/colombia/colombia-reporte-plan-de-respuesta-necesidades-humanitarias-hnrp-2026-en-el-sistema-5w-entre-enero-y-julio-de-2026",
+      "tier": "official",
+      "_note": "活動実績は7月までの集計で地震前を含む全国統計。被災者数466,606人は9月3日時点のUNGRD値と一致し、現行の9月6日時点（466,644人）より古い。地震固有の新しい数値なし。確認済み。"
+    },
+    {
+      "label_en": "Action Against Hunger - Situation and Response Analysis, Earthquake (4 Sep 2026)",
+      "label_ja": "Action Against Hunger 地震 状況・対応分析（9月4日付）",
+      "url": "https://reliefweb.int/report/colombia/analisis-de-situacion-y-respuesta-al-terremoto-4-de-septiembre-2026",
+      "tier": "media",
+      "_note": "被災者466,606人・399市町村・14県などUNGRDの9月3日時点集計を引用。現行値（9月6日時点）より古く、団体独自の新規数値なし。確認済み。"
+    },
+    {
+      "label_en": "Action Against Hunger - Situation and Response Analysis, Earthquake (16 Aug 2026)",
+      "label_ja": "Action Against Hunger 地震 状況・対応分析（8月16日付）",
+      "url": "https://reliefweb.int/report/colombia/analisis-de-situacion-y-respuesta-al-terremoto-16-agosto-2026",
+      "tier": "media",
+      "_note": "発災初期（8月16日11:00締め）のUNGRD集計を引用したもので、現行値より大幅に古い。新規情報なし。確認済み。"
+    },
+    {
+      "label_en": "Cali, Colombia: Affected Neighbourhoods Map (3iS, 8 Sep 2026)",
+      "label_ja": "カリ市 被災地区図（3iS作成、9月8日付）",
+      "url": "https://reliefweb.int/map/colombia/cali-colombia-barrios-afectados-terremoto-10-de-agosto-2026-08092026",
+      "tier": "official",
+      "_note": "地図のみで死者・住家等の数値記載なし。確認済み。"
     }
   ],
   "source_policy_en": "Source hierarchy: official > media > TBC. Government and scientific-agency figures are used as primary; media reports are used only where official figures are not yet published and are labelled as such. Items still being verified are marked TBC. Preliminary figures are never replaced by larger unverified numbers.",
