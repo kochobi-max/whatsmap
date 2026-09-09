@@ -65,8 +65,9 @@
 - [P] Oxford Economics (2010) *The Economic Impacts of Air Travel Restrictions Due to Volcanic Ash*. ★（47億＋3億ドル）
 - [P] European Commission MEMO/10/152 (2010-04-27); MEMO/11/235 (2011-04-12). ★
 - [P] Regulation (EU) No 677/2011, Arts 18–19（EACCC）. https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32011R0677
-- [P] UK CAA, "in focus" briefing (2010-10-26). https://www.caa.co.uk/publication/download/14009
-  **※低・中・高濃度ゾーンとTDAの定性的枠組みのみ。mg/m³ の数値も日付も記載なし。**「200 µg/m³ → 2 mg/m³ → 4 mg/m³」の3段階と日付は本セッションで原典確認できず ★★要アーカイブ資料
+- [P] **【原典確認済 2026-09-09】** UK CAA, *in focus: a briefing from the Civil Aviation Authority – 26 October 2010, Volcanic Ash: work undertaken and developments since May 2010*, 3pp. https://www.caa.co.uk/publication/download/14009
+  CAA が高濃度空域への飛行に関する運航者リスク評価の国際合意指針を起草し IVATF が審査中、運航者は「early in 2011」に利用可能となる予定と明記（Doc 9974 の前史）。運航者は "will retain the responsibility for determining whether their planned flights can be conducted safely"。高濃度空域は NOTAM により一時危険区域（TDA）として通知。中濃度空域の飛行はセーフティ・ケースを要件とし、英主要航空会社は既に策定済みと記載。アイスランドへの移動式レーダー設置、Met Office 拡散モデル改良、easyJet の機上灰検知装置開発にも言及。
+  **※低・中・高濃度ゾーンとTDAの定性的枠組みのみ。mg/m³ の数値も日付も記載なし。**「200 µg/m³ → 2 mg/m³ → 4 mg/m³」の3段階と日付は原典確認できず ★★要アーカイブ資料
 - [P] ICAO Doc 9974 *Flight Safety and Volcanic Ash* (2012). https://www.icao.int/sites/default/files/2025-04/9974_en.pdf ★
 - [P] ICAO EUR Doc 019/NAT Doc 006 Part II *Volcanic Ash Contingency Plan* ed. 2.0 (2016). https://skybrary.aero/bookshelf/eur-doc-019-nat-doc-006-part-ii-volcanic-ash-contingency-plan-ed-20 ★
 - [P] EASA SIB 2010-17. https://ad.easa.europa.eu/blob/SIB_201017_R6_Flight_in_Volcanic_Ash.pdf/SIB_2010-17R6_1 ★
