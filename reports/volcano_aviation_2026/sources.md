@@ -27,6 +27,8 @@
 - [P] BMKG プレスリリース（2026-09-07）8空港閉鎖、SIGMET. https://www.bmkg.go.id/siaran-pers/imbas-sebaran-abu-vulknaik-anak-krakatau-8-bandara-ditutup-sementara-bmkg-minta-waspada-dan-tenang
 - [P] BMKG プレスリリース 継続監視（SIGMET 59本）. https://www.bmkg.go.id/siaran-pers/bmkg-terus-pantau-dampak-erupsi-gunung-anak-krakatau
 - [P] BNPB 更新（4空港閉鎖）. https://bnpb.go.id/berita/update-aktivitas-gunung-anak-krakatau-berlanjut-empat-bandara-ditutup-sementara-akibat-sebaran-abu-vulkanik ★（403）
+- [P] **【原典確認済 2026-09-10】** Badan Geologi「PERKEMBANGAN ERUPSI GUNUNGAPI ANAK KRAKATAU TANGGAL 10 SEPTEMBER 2026」（10 Sep 2026 06:00 WIB 評価）. https://geologi.esdm.go.id/media-center/perkembangan-erupsi-gunungapi-anak-krakatau-tanggal-10-september-2026
+  連続噴火終了以降ストロンボリ式**累計13回**。火山性地震は低下傾向、RSAM 低エネルギー、傾斜計（Tanjung・Lava93）は水平＝定常。**レベルIII（Siaga）・半径3 km 立入禁止を維持**、噴火確率は依然高い。9〜10日の地震：噴火1・Hembusan 6・Low Frequency 3・Hybrid 5・連続微動・浅部火山性1・遠地地殻3。**「tinggi kolom erupsi tidak teramati」＝噴煙柱高度は再び観測できず（3文書連続）**
 - [P] **【原典確認済 2026-09-08】** Badan Geologi「PERKEMBANGAN ERUPSI GUNUNGAPI ANAK KRAKATAU TANGGAL 7 SEPTEMBER 2026」（7 Sep 2026 06:00 WIB 評価）. https://geologi.esdm.go.id/media-center/perkembangan-erupsi-gunungapi-anak-krakatau-tanggal-7-september-2026
   ←**連続噴火の時刻はこちらを引用すること**（4 Sep 23:07 WIB 開始 → 6 Sep 00:04 WIB 終了、25時間）
 - [P] **【原典確認済／日付誤記あり】** Badan Geologi「FENOMENA ERUPSI MENERUS GUNUNGAPI ANAK KRAKATAU TANGGAL 5 SEPTEMBER 2026」文書番号 1512.Lap/GL.03/BGL/2026. https://geologi.esdm.go.id/media-center/fenomena-erupsi-menerus-gunungapi-anak-krakatau-tanggal-5-september-2026
