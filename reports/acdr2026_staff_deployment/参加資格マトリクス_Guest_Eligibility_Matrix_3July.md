@@ -59,8 +59,10 @@
 
 ## 運用上の要点
 
+- **区分の見分け方**: ADRC から招待状（Letter of Invitation）を出した先は **Invited Guest**。招待状なしに公式サイトから自分で申し込んだ人が **General Participant**。公式サイトの登録フォームに表示される「一般登録」は登録の経路を表すラベルであって、本表の参加区分ではない。招待状を出した先が「一般登録」で登録してきても Invited Guest として扱う。
+  - 例: 日本防災プラットフォーム（JBP）は ADRC が招待状を送っているので **Invited Guest**。
+- **Invited Guest** は、大使公邸レセプション・合同開会式・ラウンドテーブル・テクニカルセッション・フィールドトリップ・パレード＆ディナー・SIDEX 展示会まで無償。ガラディナーと 10/30 の SIDEX/FiSAC 会議のみ自己負担。**SC と会期中のランチは対象外**。
 - **General Participant** は、ADRC のセッション（Roundtable、Technical Session）と SIDEX 展示会のみが無償。合同開会式・ガラディナー・10/30 の SIDEX/FiSAC 会議は自己負担。**大使公邸レセプション、フィールドトリップ、パレード＆ディナー、ランチは対象外**。
-- 招待状を送った先でも、区分が General Participant なら上記が適用される。ADRC が「一般参加者（General Participants）」向けに招待状を送付した先（2026年5〜7月のリスト作成分）はこの行に当たる。日本防災プラットフォーム（JBP）はこれに該当。
 - **Japanese Companies (Exhibitor)** は General Participant と似るが、合同開会式が対象外である一方、10/27 の大使公邸レセプションには ● が付く点が異なる。
 - **未解決**: `Resource 1` は「Speakers, a total of 5 pax」と定員 5 名だが、テクニカルセッションの登壇者は 6 名を想定。6 人目を無償枠に入れられるか COSEM（Sylvia 氏）へ照会中（2026/9/9 発信）。
 - **要確認**: 8/26 版アジェンダの記載では Gala Dinner が加盟国・アドバイザー国・リソースパーソン限定と読める箇所があり、本表が Invited Guest / General に「Fee apply」を認めている点と整合しない。どちらが優先かは未決着。
