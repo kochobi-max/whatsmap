@@ -2145,6 +2145,27 @@
       "url": "https://reliefweb.int/map/colombia/cali-colombia-barrios-afectados-terremoto-10-de-agosto-2026-08092026",
       "tier": "official",
       "_note": "地図のみで死者・住家等の数値記載なし。確認済み。"
+    },
+    {
+      "label_en": "OCHA/EHP Colombia - Flash Update 012, Update on the Impact of the Earthquake (10 Sep 2026)",
+      "label_ja": "OCHA／コロンビア人道チーム フラッシュアップデート第12号（9月10日付）",
+      "url": "https://reliefweb.int/report/colombia/colombia-flash-update-012-update-impact-earthquake-colombia-september-10-2026",
+      "tier": "official",
+      "_note": "発災1か月時点の人道状況更新。「16県で466,000人超が引き続き被災」「53優先市町村で135,000人超に多分野支援」とあるが、いずれもUNGRDの現行集計（9月7日06:30締め・466,644人）と整合し、新しい被害数値の更新なし。確認済み。"
+    },
+    {
+      "label_en": "Caritas - Earthquake in Colombia: Caritas moves from emergency response to recovery (FR, 10 Sep 2026)",
+      "label_ja": "Caritas コロンビア地震：緊急対応から復旧支援へ移行（仏語版、9月10日付）",
+      "url": "https://reliefweb.int/report/colombia/seisme-en-colombie-caritas-passe-de-laide-durgence-au-relevement",
+      "tier": "media",
+      "_note": "発災1か月の教会系支援団体による活動報告（「300人超死亡・5県で20万人超が被災」との概数記載のみ）。UNGRD公式値を上回る新規数値なし。ボゴタ大司教区の司祭80人派遣などの活動記録。確認済み。"
+    },
+    {
+      "label_en": "Caritas - Earthquake in Colombia: Caritas moves from emergency response to recovery (ES, 10 Sep 2026)",
+      "label_ja": "Caritas コロンビア地震：緊急対応から復旧支援へ移行（西語版、9月10日付）",
+      "url": "https://reliefweb.int/report/colombia/terremoto-en-colombia-caritas-pasa-de-la-respuesta-de-emergencia-la-recuperacion",
+      "tier": "media",
+      "_note": "上記フランス語版と同内容のスペイン語版。確認済み。"
     }
   ],
   "source_policy_en": "Source hierarchy: official > media > TBC. Government and scientific-agency figures are used as primary; media reports are used only where official figures are not yet published and are labelled as such. Items still being verified are marked TBC. Preliminary figures are never replaced by larger unverified numbers.",
