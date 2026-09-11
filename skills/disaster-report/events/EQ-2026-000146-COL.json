@@ -2166,6 +2166,27 @@
       "url": "https://reliefweb.int/report/colombia/terremoto-en-colombia-caritas-pasa-de-la-respuesta-de-emergencia-la-recuperacion",
       "tier": "media",
       "_note": "上記フランス語版と同内容のスペイン語版。確認済み。"
+    },
+    {
+      "label_en": "3iS - Buenaventura, Colombia: Affected Neighbourhoods Map (11 Sep 2026)",
+      "label_ja": "3iS ブエナベントゥーラ市 被災地区図（9月11日付）",
+      "url": "https://reliefweb.int/map/colombia/buenaventura-colombia-barrios-afectados-terremoto-10-de-agosto-2026-11092026",
+      "tier": "official",
+      "_note": "地図のみで死者・住家等の数値記載なし。確認済み。"
+    },
+    {
+      "label_en": "iMMAP/OCHA/UNICEF - Colombia WASH Situation One Month After the Earthquake: Response, Gaps and Priorities (11 Sep 2026)",
+      "label_ja": "iMMAP／OCHA／UNICEF コロンビア 水・衛生・衛生教育（WASH）分野 発災1か月時点の状況・対応・課題（9月11日付）",
+      "url": "https://reliefweb.int/report/colombia/colombia-situacion-agua-saneamiento-e-higiene-wash-un-mes-del-sismo-de-agosto-de-2026-respuesta-brechas-y-prioridades",
+      "tier": "official",
+      "_note": "WASH分野の対応実績（30市町村・19団体で52,192人に支援、うちバジェ・デル・カウカ県31,951人・チョコ県16,749人）とWASHニーズ人口247万人（PiN）。死者・住家等の主要指標に新規数値なし。分野別の対応進捗であり、UNGRD現行集計を上書きしない。確認済み。"
+    },
+    {
+      "label_en": "DRC - Colombia Protection Monitoring (January-March 2026)",
+      "label_ja": "DRC コロンビア 保護モニタリング（2026年1〜3月期）",
+      "url": "https://reliefweb.int/report/colombia/drc-colombia-monitoreo-de-proteccion-enero-marzo-2026",
+      "tier": "media",
+      "_note": "地震とは無関係。ラ・グアヒラ／ナリーニョ／ノルテ・デ・サンタンデル／ボリバル各県における紛争由来の避難民・移民保護モニタリング（1〜3月期）。本震災レポートには反映しない。確認済み。"
     }
   ],
   "source_policy_en": "Source hierarchy: official > media > TBC. Government and scientific-agency figures are used as primary; media reports are used only where official figures are not yet published and are labelled as such. Items still being verified are marked TBC. Preliminary figures are never replaced by larger unverified numbers.",

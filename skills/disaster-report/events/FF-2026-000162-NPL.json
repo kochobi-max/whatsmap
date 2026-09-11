@@ -586,6 +586,13 @@
       "ja": "迅速被害・ニーズ評価（RDNA）の暫定結果。外務省が9月5日に示し、The Rising Nepal が9月6日に報じた。被災は約32,933人、住家は約7,570棟が損壊または被災。道路55km、車道橋37橋、吊り橋68橋が破壊された。道路局は別途、道路と車道橋だけで200億ネパールルピーの被害としている。農地約1,806ha、水力発電13事業、太陽光発電1か所、送電線2条が被害を受け、水力発電容量783MWが影響を受けた。RDNAの完全な報告は未公表で、NDRRMAは専門家チームが最終化中としている。並行して包括的な災害後ニーズ評価（PDNA）も実施されている。豪州の災害支援・対応チーム（DART）15人が金曜に、マレーシアの特別災害支援・救助チーム（SMART）11人が土曜朝に到着した。"
     },
     {
+      "time": "6 Sep",
+      "tier": "media",
+      "src": "Direct Relief (NGO announcement)",
+      "en": "Direct Relief reported that 14 tonnes of requested medical aid (antibiotics, IV fluids, chronic-disease medication, water-purification supplies and PPE) arrived in Kathmandu over the weekend of 5-6 September, with additional supplies arriving on 6 September for distribution in coordination with the Ministry of Health and Population. Partner organisations (One Heart Worldwide, the Shanti Foundation, Mountain Heart Nepal, Dhulikhel Hospital) reported delivering medicines to Trishuli Hospital (Nuwakot) and Jibjibe Primary Hospital and moving oxygen concentrators to Rasuwa, citing more than 40 bridges washed away and the Rasuwa-Nuwakot road link severed.",
+      "ja": "Direct Reliefは、要請していた医療物資14トン（抗生物質、輸液、慢性疾患治療薬、浄水資材、個人防護具）が9月5〜6日の週末にカトマンズへ到着し、9月6日にも追加物資が到着、保健人口省と調整のうえ配布するとした。パートナー団体（One Heart Worldwide、Shanti Foundation、Mountain Heart Nepal、Dhulikhel Hospital）はトリシュリ病院（ヌワコット）およびジブジベ第一次病院への医薬品搬送や、ラスワへの酸素濃縮器の移送を報告し、橋40以上が流失しラスワ〜ヌワコット間の道路が寸断されている状況を挙げた。"
+    },
+    {
       "time": "7 Sep",
       "tier": "official",
       "src": "Department of Tourism (via The Rising Nepal)",
@@ -668,6 +675,13 @@
       "src": "ICRC",
       "en": "ICRC reported that, working with the Nepal Red Cross Society, it has supplied 700 body bags pre-positioned before the floods plus a further 3,500-plus that arrived subsequently, and has deployed Restoring Family Links, forensics and management specialists from its Delhi regional delegation to support family tracing and the dignified management of the dead, including joint site visits to Nuwakot and forensic support to hospitals in Kathmandu and Pokhara. Authorities cited in the same report put the toll at more than 1,000 bodies recovered, more than 5,000 still missing and about 12,000 rescued - rounder and, in the case of the rescued total, lower than the same-day NDRRMA figures, reflecting the lag typical of secondary compilations rather than a correction.",
       "ja": "ICRCは、ネパール赤十字社と協力し、発災前から備蓄していた遺体袋700枚に加え、その後到着した3,500枚超を提供したと発表。デリー地域代表部からRFL（家族再統合）・法医学・運営の専門家を派遣し、家族の追跡調査と遺体の尊厳ある取り扱いを支援しているとし、ヌワコットへの合同訪問やカトマンズ・ポカラの病院への法医学支援を挙げた。同報告が引用する当局発表は、収容遺体1,000体超、行方不明5,000人超、救出約12,000人としており、丸めた数値であること、また救出数については同日のNDRRMA発表より少ないことから、訂正ではなく二次的な集計の遅れによるものとみられる。"
+    },
+    {
+      "time": "11 Sep",
+      "tier": "official",
+      "src": "Emergency Telecommunications Cluster / Logistics Cluster / WFP",
+      "en": "The Logistics & Telecommunications Cluster (LTC) Telecoms Area issued Situation Report #2 (reporting period 5-11 Sep): a Telecoms Coordinator arrived in Kathmandu on 5 September for an initial two-week mission to help identify and prioritise telecommunications requirements at common humanitarian operational locations; the Government has requested sustainable backup-power solutions for telecommunications towers at inaccessible sites where disrupted fuel supply has made generator-dependent operations unsustainable; a two-month Telecoms response plan is being developed. No new casualty or damage figures.",
+      "ja": "ロジスティクス・電気通信クラスター（LTC）電気通信分野が状況報告第2号（対象期間9月5〜11日）を発出。テレコム・コーディネーターが9月5日にカトマンズ入りし、当初2週間の任務で人道支援拠点における通信ニーズの特定・優先順位付けを支援。政府は、燃料供給の途絶で発電機依存の運用が困難になっているアクセス困難な通信塔への持続可能な予備電源の導入支援を要請。2か月間のテレコム対応計画を策定中。新規の死傷者・被害数値なし。"
     }
   ],
   "response_measures": [
@@ -1231,6 +1245,48 @@
       "url": "https://ndrrma.gov.np/mediafiles/rasuwa/SitRep_ENG_09_09092026.pdf",
       "tier": "official",
       "_note": "NDRRMA API（/api/v1/publication/rasuwa-sitrep/）で9月10日時点の最新確認。数値は既存のtimeline「9 Sep 19:00 | NDRRMA Situation Report #19」と一致（死者1,369・行方不明5,132・避難者3,395等）。ドローン食料配送（アマチョディンモへ31便・1,591kg）とオーストラリアSARチームのトリシュリ3B地形調査を追記。API上、これより新しい報告は9月10日時点で未公表。確認済み。"
+    },
+    {
+      "label_en": "MapAction/UNCT Nepal - Rasuwa Floods: Affected Settlements (09/09/2026)",
+      "label_ja": "MapAction／UNCTネパール ラスワ洪水 被災集落図（9月9日付）",
+      "url": "https://reliefweb.int/map/nepal/nepal-rasuwa-floods-26th-august-2026-affected-settlements-09092026",
+      "tier": "official",
+      "_note": "地図のみで死者・住家等の数値記載なし。確認済み。"
+    },
+    {
+      "label_en": "MapAction/UNCT Nepal - Rasuwa Floods: Affected Wards in Nuwakot District (08/09/2026)",
+      "label_ja": "MapAction／UNCTネパール ラスワ洪水 ヌワコット郡 被災ワード図（9月8日付）",
+      "url": "https://reliefweb.int/map/nepal/nepal-rasuwa-floods-26th-august-2026-affected-wards-nuwakot-district-08092026",
+      "tier": "official",
+      "_note": "地図のみで死者・住家等の数値記載なし。確認済み。"
+    },
+    {
+      "label_en": "MapAction/UNCT Nepal - Rasuwa Floods: Affected Wards in Rasuwa District (08/09/2026)",
+      "label_ja": "MapAction／UNCTネパール ラスワ洪水 ラスワ郡 被災ワード図（9月8日付）",
+      "url": "https://reliefweb.int/map/nepal/nepal-rasuwa-floods-26th-august-2026-affected-wards-rasuwa-district-08092026",
+      "tier": "official",
+      "_note": "地図のみで死者・住家等の数値記載なし。確認済み。"
+    },
+    {
+      "label_en": "Direct Relief - Medicines Arrive in Nepal as Health Providers Work to Reach the Last Mile (8 Sep 2026)",
+      "label_ja": "Direct Relief 医療物資がネパールに到着、医療従事者は僻地到達に苦慮（9月8日付）",
+      "url": "https://reliefweb.int/report/nepal/medicines-arrive-nepal-health-providers-work-reach-last-mile",
+      "tier": "media",
+      "_note": "14トンの医療物資到着（9月5〜6日）と現地パートナー団体の活動を報告。死者・行方不明の概数（1,300人超・5,000人超）はNDRRMA第19号（死者1,369・行方不明5,132）と整合し新規数値ではない。timelineへ反映済み。確認済み。"
+    },
+    {
+      "label_en": "IFRC - Nepal, Asia-Pacific: Flash Flood Emergency Appeal (MDRNP022) (28 Aug 2026)",
+      "label_ja": "IFRC ネパール・アジア太平洋 鉄砲水緊急アピール（MDRNP022、8月28日付）",
+      "url": "https://reliefweb.int/report/nepal/nepal-asia-pacific-flash-flood-emergency-appeal-mdrnp022",
+      "tier": "official",
+      "_note": "発災3日後（8月27日時点）の初期スナップショット。死者165人・世帯被害18,000等はいずれも現行のNDRRMA第19号より大幅に古く、既存値を上回る新規情報なし。確認済み。"
+    },
+    {
+      "label_en": "ETC/Logistics Cluster/WFP - Nepal Flash Floods: LTC Situation Report (Telecoms Area) #2 (5-11 Sep 2026)",
+      "label_ja": "ETC／ロジスティクスクラスター／WFP ネパール鉄砲水 LTC状況報告（電気通信分野）第2号（9月5〜11日）",
+      "url": "https://reliefweb.int/report/nepal/nepal-flash-floods-ltc-situation-report-telecoms-area-2-reporting-period-05-11-september-2026",
+      "tier": "official",
+      "_note": "テレコム・コーディネーターの活動、通信塔向け予備電源支援要請等。死傷者・被害数値なし。timelineへ反映済み。確認済み。"
     }
   ],
   "images": {
