@@ -27,6 +27,10 @@
 - [P] BMKG プレスリリース（2026-09-07）8空港閉鎖、SIGMET. https://www.bmkg.go.id/siaran-pers/imbas-sebaran-abu-vulknaik-anak-krakatau-8-bandara-ditutup-sementara-bmkg-minta-waspada-dan-tenang
 - [P] BMKG プレスリリース 継続監視（SIGMET 59本）. https://www.bmkg.go.id/siaran-pers/bmkg-terus-pantau-dampak-erupsi-gunung-anak-krakatau
 - [P] BNPB 更新（4空港閉鎖）. https://bnpb.go.id/berita/update-aktivitas-gunung-anak-krakatau-berlanjut-empat-bandara-ditutup-sementara-akibat-sebaran-abu-vulkanik ★（403）
+- [P] **【原典確認済 2026-09-11】** Badan Geologi「PERKEMBANGAN ERUPSI GUNUNGAPI ANAK KRAKATAU TANGGAL 11 SEPTEMBER 2026」（11 Sep 2026 06:00 WIB 評価）. https://geologi.esdm.go.id/media-center/perkembangan-erupsi-gunungapi-anak-krakatau-tanggal-11-september-2026
+  ストロンボリ式**累計14回**。**評価が二層化**：浅部対応（Low Frequency・Hybrid）は低下傾向だが、**Vulkanik Dangkal 28回・Vulkanik Dalam 18回は増加傾向で「深部からのマグマ供給の指標」と明記**。10〜11日の地震：噴火1・Low Frequency 21・Hybrid 13・連続微動・Vulkanik Dangkal 28・Vulkanik Dalam 18（9〜10日は浅部火山性1・LF 3・Hybrid 5 だったので大幅増）。RSAM は9月5日上昇後6日以降低下、傾斜計は水平＝定常。**レベルIII（Siaga）・半径3 km 維持**、噴火確率は依然高い。噴煙柱高度は**4文書連続で観測できず**
+  **←噴火の収束を語る際はこの文書を必ず確認すること。9月10日付の「低下傾向」は11日付で浅部／深部に分解され、深部は増加に転じている**
+  **※用語注意**：本文は Low Frequency・Hybrid を「vulkanik dangkal に対応」、Vulkanik Dangkal・Vulkanik Dalam を「vulkanik dalam に対応」と記すが、Dangkal は字義上「浅い」であり文書内で不整合。引用時は地震型名をそのまま引き、解釈文を併記すること
 - [P] **【原典確認済 2026-09-10】** Badan Geologi「PERKEMBANGAN ERUPSI GUNUNGAPI ANAK KRAKATAU TANGGAL 10 SEPTEMBER 2026」（10 Sep 2026 06:00 WIB 評価）. https://geologi.esdm.go.id/media-center/perkembangan-erupsi-gunungapi-anak-krakatau-tanggal-10-september-2026
   連続噴火終了以降ストロンボリ式**累計13回**。火山性地震は低下傾向、RSAM 低エネルギー、傾斜計（Tanjung・Lava93）は水平＝定常。**レベルIII（Siaga）・半径3 km 立入禁止を維持**、噴火確率は依然高い。9〜10日の地震：噴火1・Hembusan 6・Low Frequency 3・Hybrid 5・連続微動・浅部火山性1・遠地地殻3。**「tinggi kolom erupsi tidak teramati」＝噴煙柱高度は再び観測できず（3文書連続）**
 - [P] **【原典確認済 2026-09-08】** Badan Geologi「PERKEMBANGAN ERUPSI GUNUNGAPI ANAK KRAKATAU TANGGAL 7 SEPTEMBER 2026」（7 Sep 2026 06:00 WIB 評価）. https://geologi.esdm.go.id/media-center/perkembangan-erupsi-gunungapi-anak-krakatau-tanggal-7-september-2026
