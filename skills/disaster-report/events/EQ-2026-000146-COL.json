@@ -572,6 +572,13 @@
       "src": "Government of Qatar / UNGRD",
       "en": "UNGRD received a 14.9-tonne field hospital donated by the State of Qatar, including 6 ICU beds, 44 standard patient beds, 50 blankets/sheets/pillows sets, 26 air-conditioning units and a diesel storage tank. The hospital can be relocated to whichever territory needs it to support the response to the earthquake and other emergencies. Coordinated via the Embassy of Qatar in Bogotá.",
       "ja": "UNGRDが、カタール国から寄贈された14.9トンの野戦病院を受領した。ICU用ベッド6床、一般病床44床、毛布・シーツ・枕各50組、エアコン26台、ディーゼル貯蔵タンク1基を含む。地震対応や他の緊急事態に応じて必要な地域へ移設できる。在ボゴタ・カタール大使館を通じて調整された。"
+    },
+    {
+      "time": "11-12 Sep",
+      "tier": "official",
+      "src": "UNGRD (official X)",
+      "en": "UNGRD began disbursing temporary housing economic support payments to earthquake-affected households: in Chocó from 11 September (more than COP 3,324 million for the first month, for households whose homes were destroyed or are uninhabitable), and in Cali from 12 September, both via SuperGiros payment points against original national ID, over a 15-calendar-day claim window. UNGRD states payments will subsequently extend to Valle del Cauca, Caldas, Quindio and Risaralda. No new casualty or damage balance was posted between 7 and 12 September.",
+      "ja": "UNGRDが、地震被災世帯向けの住宅一時経済支援金の支払いを開始した。チョコ県では9月11日から（住宅が全壊または居住不能となった世帯向けに初月分としてCOP 33億2,400万超）、カリ市では9月12日から、いずれもSuperGiros窓口で原本の身分証を提示して受け取る方式で、申請受付期間は15日間。UNGRDは今後バジェ・デル・カウカ県、カルダス県、キンディオ県、リサラルダ県へも支払いを拡大するとしている。9月7日から12日にかけて、新しい死傷者・被害の集計（balance）の投稿はなかった。"
     }
   ],
   "areas": [
@@ -2187,6 +2194,12 @@
       "url": "https://reliefweb.int/report/colombia/drc-colombia-monitoreo-de-proteccion-enero-marzo-2026",
       "tier": "media",
       "_note": "地震とは無関係。ラ・グアヒラ／ナリーニョ／ノルテ・デ・サンタンデル／ボリバル各県における紛争由来の避難民・移民保護モニタリング（1〜3月期）。本震災レポートには反映しない。確認済み。"
+    },
+    {
+      "label_en": "UNGRD (X/Twitter) - temporary housing economic support payments, Choco and Cali (11-12 Sep 2026)",
+      "label_ja": "UNGRD（X）住宅一時経済支援金の支払い開始、チョコ県・カリ市（2026年9月11-12日）",
+      "url": "https://x.com/UNGRD/status/2098758429951078754",
+      "tier": "official"
     }
   ],
   "source_policy_en": "Source hierarchy: official > media > TBC. Government and scientific-agency figures are used as primary; media reports are used only where official figures are not yet published and are labelled as such. Items still being verified are marked TBC. Preliminary figures are never replaced by larger unverified numbers.",
