@@ -1,0 +1,100 @@
+ADRC の大規模災害レポートについて、**active な全イベント**の更新メールを研究部へ送ってください。イベントを名指ししません。`meta.status: "active"` のものが対象です。1件ずつ判断し、送るものだけ送ります。
+
+## 0. 最初にこれをやる（省略不可）
+
+このセッションは main を clone して始まる。統一フォームのスキル一式は main には無い。
+
+```bash
+git fetch origin claude/workflow-automation-review-shyt35
+git checkout claude/workflow-automation-review-shyt35
+git pull origin claude/workflow-automation-review-shyt35
+test -f skills/disaster-report/SKILL.md || echo "MISSING_SKILL"
+```
+
+`MISSING_SKILL` が出たら中断して、その旨だけ報告する。推測でファイルを作り直さない。
+
+対象イベントの一覧はこれで出る。
+
+```bash
+node skills/disaster-report/generator/scripts/resolve_event.js
+```
+
+## 1. イベントごとに、公開されたことを確かめる（送信の前提・省略不可）
+
+```bash
+node skills/disaster-report/generator/scripts/verify_published.js <GLIDE>
+```
+
+- `STATUS: SEND-OK` → 次へ進む
+- `STATUS: NO-SEND ...` → **そのイベントは送らない。** 表示された理由を報告に書いて次へ
+
+この1コマンドで、公開記録の有無・当日かどうか・PCが見送っていないかを見る。
+
+**作り直して照合しないこと。PDFは絶対に一致しない。**
+PPTX は pptxgenjs が決定的に作るので何度作っても同じだが、**PDF は LibreOffice が
+変換のたびに違うバイト列を吐く**（作成日時などが埋まる）。定期タスクは毎回
+まっさらなセッションで走るので `_build/` が無く、必ず作り直す。つまり
+「作り直して OneDrive と突き合わせる」照合は**構造的に必ず落ちる。**
+
+2026-09-02、この照合のせいでコロンビア第14報とインドネシア第3報が OneDrive に
+入っているのに**メールが1通も出なかった。** タスクは SUCCEEDED で終わっていた。
+
+バイト数の照合は **PC側が済ませている**。`publish_local.js` が配布台帳
+（`manifest.txt`）の `BYTESn` と落としたファイルを突き合わせ、違えば
+`STATUS: FAIL size` で止まり、公開記録も書かれない。
+**記録があること自体が、照合が通った証拠である。**
+
+## 2. 数値急変ゲート
+
+```bash
+node skills/disaster-report/generator/scripts/resolve_event.js --event <GLIDE>
+```
+
+判定が `HOLD` のときは、**理由の行を読んで**次のとおり分ける。
+
+- 理由が **「as_of が前報と同一」** → **送らない。** 前回送ったのと同じ数値のメールを重ねて出さないため。
+  「一次情報に新しい報が出ていないため見送った」と記録して次へ。**これは失敗ではない**
+- 理由が **数値急変**（死者が前報比+50%以上、住家被害2倍以上、いずれかの数値の減少、ティア降格）
+  → **通常メールを送らず**、SKILL.md §2 の確認メールに切り替える。宛先は `ma-arakida@adrc.asia` のみ。
+  前報値・今報値・出典URL・出典日を並べる
+- 理由が **初版（前報なし）だけ** → 送信してよい（荒木田さんの2026年8月24日の指示による）
+
+判定が `OK` → 送信する。
+
+## 3. 送信
+
+`skills/disaster-report/SKILL.md` の §5-2 に**そのまま従う**。件名・本文の順序・免責・文体の禁止事項はすべてそこに書いてある。要点だけ再掲する。
+
+- 送信元は **`ma-arakida@adrc.asia`**（`ma.arakida@gmail.com` にエイリアス設定済み）
+- 宛先: `kenkyubu@adrc.asia`, `td-date@adrc.asia`
+- Superhuman の `create_or_update_draft`（`from` に `ma-arakida@adrc.asia`、`body` に完成HTML）→ `send_draft`
+- **送信後、`get_draft_send_status` が `closed / delivered` になるまで確認する。**「送信した」で終わらない
+- **`ma-arakida@adrc.asia` として送信できなければ、下書きのまま止める。** 別アカウントからは送らない。その場合は「下書きを用意した。ワンタップで送れる」と通知する
+- **署名ブロックは入れない。** 本文は「荒木田」の1行で終える
+- 「正念場」「予断を許さない」「懸念される」など、書き手の評価や情緒を足す語を使わない
+- **人命に関わる進行中の警告（上流の湖、余震、二次災害の注意喚起など）があれば、数値より先に本文の冒頭に置く**
+- 指標が変わったときは、その旨を「前報からの主な変化」に明記する。合算・平均化しない
+- **参考映像**（SKILL.md §5-2 の「参考映像」に従う）。`WebSearch` で候補URLを出し、
+  `node skills/disaster-report/generator/scripts/find_videos.js <GLIDE> <URL>...` に
+  かけて `OK` になったものだけを、本文の後半に貼る。`NG` は載せない。
+  1件も無い日はその段落ごと省く。無理に埋めない
+
+本文に載せる数値・ファイル名・ページ数は `_published/<GLIDE>.json` と `events/<GLIDE>.json` から取る。手で書かない。
+
+## 4. 送ったあと
+
+送信できたイベントだけ、`events/<GLIDE>.json` の `_prev` を**今送った版の headline** に更新する。
+全イベント分をまとめてコミットし、`claude/workflow-automation-review-shyt35` へプッシュする。
+これで翌日から数値急変ゲートが効く。
+
+プッシュが `fetch first` で弾かれたら、`git pull --rebase origin claude/workflow-automation-review-shyt35` してから押し直す。
+
+## 報告
+
+イベントごとに1行ずつ、次の形で書く。
+
+```
+<GLIDE>  送信（delivered）／見送り（理由）／下書きで停止（理由）
+```
+
+**1件も送らなかった日も、黙って終わらない。** 各イベントについてなぜ送らなかったかを書く。

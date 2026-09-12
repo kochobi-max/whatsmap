@@ -1,0 +1,1063 @@
+# generator — EVENT対応と残る汎用化作業
+
+## ⚠️ 権威あるバージョンについて
+
+`gen_deck.js` の**最新版は OneDrive の `_kumamoto_generator/gen_deck.js`** にある。
+
+セッション内の `~/.claude/skills/synced/kumamoto-eq-report/generator/scripts/gen_deck.js` は**古い**。
+確認済みの差分:
+
+| 項目 | 同期コピー（古い） | SKILL.md が規定する仕様（＝OneDrive版） |
+|------|------------------|--------------------------------|
+| 本文フォント | `FONT = "Calibri"` | `FONT = "Meiryo"` |
+| 言語レイヤ | `LANG_OUT` / `SPLIT_OVERRIDE` **なし**（0件） | あり（ja / en / bi の出し分け） |
+| レイアウト修正 | 未適用 | 適用済み |
+
+**同期コピーを土台に書き直してはならない。** 言語レイヤとレイアウト修正が消える。
+改修は必ず OneDrive 版に対して行うこと。
+
+---
+
+## EVENT対応パッチ
+
+`gen_deck.js` の本体（スライド定義・言語レイヤ・レイアウト）には触れず、
+冒頭のデータ読み込み3文だけを差し替える。
+
+```bash
+node scripts/apply_event_patch.js --file "<OneDrive>/_kumamoto_generator/gen_deck.js" --dry-run
+node scripts/apply_event_patch.js --file "<OneDrive>/_kumamoto_generator/gen_deck.js"
+```
+
+- 3文がそれぞれちょうど1回見つからなければ**何もせず中断**する（曖昧一致で書き換えない）
+- 適用後に構文チェックを行い、壊れていれば書き込まない
+- `.bak` を残す。2回目以降は「すでにパッチ済み」で何もしない（冪等）
+
+### 変更内容
+
+| 変更前 | 変更後 |
+|--------|--------|
+| `DATA` は `data/report_data.json` 固定 | `EVENT`（GLIDE番号 or パス）から `events/<GLIDE>.json` を解決。`DATA` 明示時はそちらを優先（後方互換） |
+| `OUT` の既定値が `Kumamoto_EQ_Report.pptx` | `meta.filebase` ＋ `LANG_OUT` から組み立て |
+
+### 適用後の呼び出し
+
+```bash
+for L in ja en; do
+  U=$(echo $L | tr a-z A-Z)
+  LANG_OUT=$L UPDATE_DATE="$(TZ=Asia/Tokyo date '+%d/%m/%Y')" \
+    EVENT=EQ-2026-000135-JPN \
+    OUT="$OUTDIR/ADRC_EQ_JPN_Kumamoto_20260728_$U.pptx" node scripts/gen_deck.js
+done
+```
+
+---
+
+## ビルド前の検証（依存なし・単体で動く）
+
+```bash
+node scripts/resolve_event.js --event EQ-2026-000135-JPN
+node scripts/resolve_event.js                # status:"active" の全イベント
+node scripts/resolve_event.js --event ... --json
+```
+
+| 終了コード | 意味 | 次の動作 |
+|-----------|------|---------|
+| `0` OK | 検証通過・数値急変なし | ビルド → OneDrive保存 → **メール送信** |
+| `2` HOLD | 数値急変ゲートに該当 | ビルド・保存はする。**メールは送らず**荒木田へ確認 |
+| `3` INVALID | スキーマ違反・プレースホルダ残存 | **ビルドしない** |
+| `4` NOT_FOUND | イベントJSONが無い | 何もしない |
+
+### 数値急変ゲートの判定
+
+`meta.headline`（今報）と `_prev`（前報）を比較する。
+
+| 項目 | しきい値 | 累積値か |
+|------|---------|---------|
+| 死者数 | +50% | ○ 減少もHOLD |
+| 負傷者数 | +100% | ○ 減少もHOLD |
+| 住家全壊 | +100% | ○ 減少もHOLD |
+| 行方不明者数 | +100% | × 救出・確認で減るのは正常 |
+| 避難者数 | +100% | × 復旧で減るのは正常 |
+
+加えて **ティア降格**（official → media）と **`as_of` の据置**（最新報が未公表の可能性）を検出する。
+初版（`_prev` が空）は必ず HOLD ── 全ページの目視が要るため。
+
+---
+
+## 旧データの移行
+
+```bash
+node scripts/migrate_event.js \
+  --in "<OneDrive>/_kumamoto_generator/report_data.json" \
+  --iso3 JPN \
+  --filebase ADRC_EQ_JPN_Kumamoto_20260728 \
+  --primary-source "消防庁 (FDMA)" \
+  --dry-run
+```
+
+既存の内容は書き換えず、運用フィールドを足すだけ。英日同居の構造はそのまま保持する。
+熊本の実データで検証済み（トップレベル22キーをそのまま引き継ぐことを確認）。
+
+移行後、`meta.headline` を手で埋めてから `resolve_event.js` で検証する。
+
+---
+
+## イベント固有スライドの出し分け
+
+```bash
+node scripts/apply_slide_gates.js --file scripts/gen_deck.js --dry-run
+node scripts/apply_slide_gates.js --file scripts/gen_deck.js
+```
+
+`apply_event_patch.js` の後に当てる。スライド本体の行は1行も書き換えず、外側に条件を1つ足すだけ。
+
+### ゲートが要るのは4種だけだった
+
+権威版を調べたところ、**大半のスライドはすでにデータの有無で自動的に消える**。
+それらにゲートを足すのは重複した機構になるので、触らない。
+
+| すでに自動で消えるスライド | 条件 |
+|--------------------------|------|
+| 震源断層 | `if (d.fault && (d.fault.rows \|\| []).length)` |
+| 庁舎の建替え | `if (d.cityhalls)` |
+| 災害関連死・車中泊 | `if (d.related_deaths)` |
+| 災害ボランティア | `if (d.volunteers)` |
+| 自衛隊災害派遣 | `if (d.jsdf)` |
+| TEC-FORCE | `if (d.tecforce)` |
+| 法適用 | `if (d.legal)` |
+| 情報プラットフォーム | `(d.platform_pages \|\| []).forEach(...)` |
+
+ゲートを足したのは「**データが無くても描画されてしまう**」次の5ブロック（キーは4種）。
+
+| キー | スライド | 形 | 理由 |
+|------|---------|----|------|
+| `prior_event` | Slide 2 過去災害と復興 | flat | 見出し `The 2016 Kumamoto Earthquake & Recovery` がハードコード |
+| `focus_incident` | Slide 8d / 8e 個別事案 | block | `d.aeon_focus` が無くても空スライドが2枚出る |
+| `civic_tech` | Slide 12b2 サグリ | block | 本文が全文ハードコード |
+| `spectee` | Slide 12c Spectee | flat | 本文と消防庁報番号が全文ハードコード |
+
+### 契約
+
+```json
+"meta": { "optional_slides": ["prior_event", "focus_incident", "civic_tech", "spectee"] }
+```
+
+- **未指定 → 全スライドを描画する（後方互換）。** 既存イベントの出力は変わらない
+- 配列あり → 含まれるキーのスライドだけ描画。新規災害は `[]` から始める
+
+### 検証済み（権威版 2,165行に対して実施）
+
+| 条件 | 結果 |
+|------|------|
+| パッチ2つを順に適用 → ビルド | ✓ 27ページ生成 |
+| `optional_slides` 全キー指定 | 27ページ |
+| `optional_slides` **未指定** | **27ページ（後方互換を確認）** |
+| `optional_slides: []` | **22ページ（5ブロックが落ちる）** |
+| `OUT` 省略 | `ADRC_EQ_JPN_Kumamoto_20260728_EN.pptx` を自動命名・`output/` を自動作成 |
+| 言語レイヤ | 英語版 かな/カナ **0字** ／ 日本語版 1,068字 |
+| フォント | `FONT = "Meiryo"` 保持 |
+| 二重適用 | 両パッチとも冪等 |
+
+---
+
+## 地理ロケータのデータ駆動化
+
+```bash
+node scripts/apply_locator_patch.js --file scripts/gen_deck.js --dry-run
+node scripts/apply_locator_patch.js --file scripts/gen_deck.js
+```
+
+Slide 1 の3面ロケータ（世界→国→震度分布）は、中心座標・ズーム・赤枠の緯度経度・ラベルが
+すべて熊本前提のリテラルだった。海外災害では**日本地図が出てしまう**ため、`d.locator` から読むようにする。
+
+置換するのは5箇所（`CITY_MAP` / `seq` / `WORLD_MAP`・`JAPAN_MAP` / `rw` / `rj`）。
+それぞれちょうど1回見つからなければ中断する。
+
+### データ形
+
+```json
+"locator": {
+  "city_map": { "cLat": 5.69, "cLon": -76.66, "zoom": 9 },
+  "steps": [
+    { "key": "google_world", "label_en": "World → Colombia", "label_ja": "世界→コロンビア",
+      "cap": "© Google", "map": { "cLat": 4.0, "cLon": -74.0, "zoom": 4 },
+      "box": { "n": 13.5, "s": -4.2, "w": -79.0, "e": -66.8 } },
+    { "key": "google_japan", "label_en": "Colombia → Chocó", "label_ja": "コロンビア→チョコ県",
+      "cap": "© Google", "map": { "cLat": 5.7, "cLon": -76.6, "zoom": 7 },
+      "box": { "n": 8.7, "s": 3.9, "w": -77.9, "e": -76.0 } },
+    { "key": "intensity_map", "label_en": "USGS ShakeMap", "label_ja": "USGS 震度分布", "cap": "© USGS" }
+  ]
+}
+```
+
+- 3段目に `box` は不要（それ以上ズームしない）
+- ラベルは従来と同じ `① World → Japan / 世界→日本` の書式で組まれる。
+  **単言語版の分離は既存の言語レイヤがこの書式を前提にしている**ので崩さないこと
+- `key` は画像スロット名。`google_japan` というキー名は海外災害でも据え置き
+  （画像ファイルを差し替えて使う。改名すると既存の画像解決が壊れる）
+- **`city_map` は画像 `google_cities` の中心・ズームと必ず一致させること。**
+  ずれると Slide 4 の市町村マーカーが実際の位置と合わなくなる
+
+### 検証済み
+
+| 条件 | 結果 |
+|------|------|
+| `d.locator` **なし** | スライド本文・図形座標とも**差分0**（熊本の出力は1ピクセルも変わらない） |
+| `d.locator` あり（コロンビア） | ラベルが `世界→日本` `→熊本` から `世界→コロンビア` `→チョコ県` に変化 |
+| 赤枠・リード線 | slide1 の図形座標 32点中 **6点が移動**（`geoRect` がデータを読んでいる） |
+
+---
+
+## まだ残っているイベント固有記述
+
+ゲートでもロケータでも落とせない、スライド内に埋まったリテラル。
+**いずれも日本国内の災害であればそのまま使える**（機関名が共通）ため、優先度は低い。
+
+| 箇所 | 内容 | 対応案 |
+|------|------|-------|
+| Slide 8 出典行 | `Figures from FDMA / NPA / Kumamoto Pref.` | `d.attribution_en/ja` へ外出し |
+| Slide 8b 画像 | `kumamoto_castle` を直接参照 | `d.images` のキー一覧から回す |
+| Slide 9 出典行 | `linkBy("MLIT"/"FDMA"/"Cabinet Office"/"Kumamoto")` | `d.links` のラベルから引く |
+
+## 画像について
+
+`google_world` / `google_japan` / `google_cities` / `intensity_map` は**熊本の画像**。
+海外災害では差し替えが要る。`generator/images/<GLIDE>/` に置き、
+イベントJSONの `images` から参照する。`locator.steps[].map` の中心・ズームと
+実際に取得した地図画像の中心・ズームを**必ず一致させること**（ずれると赤枠が合わない）。
+
+## パッチの適用順
+
+```
+1. apply_event_patch.js    ← EVENT 解決・OUT 自動命名
+2. apply_slide_gates.js    ← イベント固有スライドの出し分け
+3. apply_locator_patch.js  ← 地理ロケータのデータ駆動化
+```
+
+いずれも冪等。すべて適用後に `.bak` / `.gates.bak` / `.locator.bak` が残る。
+
+---
+
+## コロンビアの統合について（2026-08-17 調査結果）
+
+PR #1 をマージし、`reports/colombia_eq_20260810/` が main に入った。
+しかし**リポジトリを統合してもコードは統合されていない**。実測した差分は次のとおり。
+
+| | コロンビア | 統一版（熊本） |
+|---|---|---|
+| トップレベルキー | **57** | 23 |
+| 言語 | EN / JA / **ES**（`_es` が330箇所） | JA / EN |
+| gen_deck.js | 984行 | 2,165行 |
+| ページ数 | 36 | 27 |
+
+### 共通しているのは15キーだけ
+
+`aftershocks` `damage` `event` `historical` `images` `links` `meta` `prior_event`
+`response_measures` `satellite` `source_policy_en/ja` `support_domestic` `support_international` `timeline`
+
+### 統一版に受け皿が無いキーが42個
+
+`areas` `cali` `deaths_by_area` `drm_system` `emsr916` `exposure` `intensity_map`
+`mechanism_fig` `observations` `pager` `photos` `pre_event` `response_photos` `tectonics`
+ほか、`*_note_en/ja/es` 系の注記群。
+
+**いま統一版へ移すと、レポートの内容の大半を失う。** したがって
+`events/EQ-2026-000146-COL.json` は `status: "pending"` とし、
+定期タスクの対象から外してある。運用は当面 `reports/colombia_eq_20260810/` 側で続ける。
+
+### status の三態
+
+| status | 意味 | 定期タスク |
+|--------|------|-----------|
+| `active` | 統一版で日次運用中 | 対象 |
+| `pending` | 未移行（データ未整備、または別実装で運用中） | **対象外** |
+| `archived` | 更新終了 | 対象外 |
+
+`pending` のイベントを明示指定すると、未記入を欠陥として報告せず
+`PENDING` と `pending_reason` を返す（終了コード0）。
+
+### 移行の順序（コロンビアを active にするまで）
+
+1. **スペイン語を落とす。** 日英2言語で足りることは確認済み
+   （2026-08-12、伊達氏との往復で「英語版と日本語版があればいい」と決定）。`_es` 330箇所が消える
+2. **42キーのうち汎用性のあるものを統一版の受け皿スライドにする。**
+   既存の `if (d.tecforce)` と同じデータ駆動パターンで足す。汎用性が高い順に:
+   `deaths_by_area`（市町村別死者）→ `exposure`（曝露人口）→ `pager`（USGS PAGER）
+   → `tectonics`（テクトニクス）→ `emsr916`（Copernicus EMS）→ `drm_system`（相手国の防災体制）
+3. **イベント固有のもの（`cali` `pre_event` `response_photos` `observations`）は
+   `optional_slides` のゲート対象**にする
+4. `migrate_event.js` でJSONを移し、`meta.headline` を記入
+5. 出力を旧実装と並べて目視比較し、落ちたページが無いことを確認してから `status: "active"`
+
+**2が本体の作業**で、ここを飛ばして移行してはならない。
+
+---
+
+## 移行ステップ1・2の実施結果（2026-08-17）
+
+### ステップ1: スペイン語の削除 — 完了
+
+```bash
+node scripts/migrate_event.js --in <colombia>/report_data.json \
+  --iso3 COL --filebase ADRC_EQ_COL_Choco_20260810 \
+  --primary-source UNGRD --strip-lang es --out events/EQ-2026-000146-COL.json
+```
+
+`--strip-lang` は `*_es` キーと、en/ja と並ぶ `es` キーを再帰的に落とす。
+**en/ja の対が無い箇所は残す**（唯一の本文を消さないため）。残した場合は警告に出す。
+
+コロンビアの実績: **433箇所**を削除、181,618字 → 113,859字（**37.3%減**）、残存 `_es` は0。
+
+### ステップ2: 受け皿スライド6種 — 完了
+
+```bash
+node scripts/apply_receiver_slides.js --file scripts/gen_deck.js
+```
+
+| キー | 内容 | 挿入位置 |
+|------|------|---------|
+| `tectonics` | テクトニクス（本文＋ティア付き箇条書き） | Slide 6b の前 |
+| `pager` | USGS PAGER 影響評価 | Slide 8b の前 |
+| `deaths_by_area` | 地域別の死者数（表＋注記） | 同上 |
+| `exposure` | 揺れの階級別 曝露人口（表＋注記） | 同上 |
+| `emsr916` | Copernicus EMS（諸元表＋発動理由＋注記） | Slide 13 の前 |
+| `drm_system` | 相手国の防災体制（導入文＋箇条書き） | 同上 |
+
+すべてデータ駆動。**熊本は27ページのまま変化なし**。コロンビアでは6種すべて描画を確認
+（tectonics=9, pager=13, deaths_by_area=14, exposure=15, emsr916=23, drm_system=24 ページ目）。
+
+### 途中で見つけた欠陥2件 — 修正済み
+
+```bash
+node scripts/apply_data_guards.js --file scripts/gen_deck.js
+```
+
+1. **他国のデータでビルドが落ちる。** `d.cities` `d.timeline` `d.damage` `d.satellite` `d.links`
+   を「必ずある」前提で直接参照していた。コロンビア（`cities` を持たず `areas` を持つ）で
+   `TypeError: Cannot read properties of undefined` により停止。9箇所を `(d.x || [])` でガード
+2. **津波スライドも同様。** `d.tsunami` を24箇所で直接参照。震度も日本の 7 / 6強 / 6弱 前提
+   なので、セクションごと `if (d.tsunami || d.intensity...)` で条件化
+
+### ⚠️ ステップ3の前にやること — 日本固有リテラルの外出し
+
+コロンビアをビルドすると**9/30ページに熊本の記述が混入する**。ビルドは通るので
+機械検査では捕まらない。**この状態で公表してはならない。**
+
+| ページ | 混入内容 | 対応 |
+|--------|---------|------|
+| 6 | 出典「総務省統計局」 | `d.links` から引く |
+| 7・8 | 「気象庁 震度分布図」「震央分布図」＋ `jma.go.jp` | `d.links` から引く |
+| **10** | **「M7.1（気象庁）／M6.8（USGS）、深さ約16km」「布田川」「日奈久」** | `d.event.magnitude` / `mag_usgs` / `depth_display` から組む。断層名は `d.fault` へ |
+| 11・12 | 「消防庁・警察庁・熊本県等の集計に基づき」 | `d.attribution_en/ja` へ外出し |
+| 20・21 | 「国土地理院 だいち2号」「日奈久」「八代」 | `d.satellite` の行から組む |
+
+**10ページ目が最も危険**（M7.4・深さ110kmのコロンビアに熊本の諸元が出る）。
+
+> 2026-08-17 の初回調査で「残るリテラルは3箇所・日本国内なら影響なし」と記録したが、
+> **これは過小だった**。実際に他国データでビルドして初めて9ページ分が判明した。
+> 移行の検証は「ビルドが通ること」ではなく「他国データで中身が正しいこと」で行う。
+
+### パッチの適用順（5本）
+
+```
+1. apply_event_patch.js     EVENT 解決・OUT 自動命名
+2. apply_slide_gates.js     イベント固有スライドの出し分け
+3. apply_locator_patch.js   地理ロケータのデータ駆動化
+4. apply_receiver_slides.js 汎用キー6種の受け皿
+5. apply_data_guards.js     欠損データでの停止を防ぐ
+```
+
+権威版 2,165行に5本すべてを順に適用し、熊本27ページ・コロンビア30ページの生成を確認済み。
+
+---
+
+## ステップ2.5: 日本固有リテラルの外出し（2026-08-17）
+
+```bash
+node scripts/apply_attribution_patch.js --file scripts/gen_deck.js
+```
+
+**既定値は現在の熊本の記述のまま。** データがあるときだけ差し替わるので、
+熊本の出力は**27ページ・本文差分ゼロ**（機械比較で確認）。
+
+### 外出しした7箇所
+
+| 箇所 | データキー |
+|------|-----------|
+| 表紙の最大震度 | `d.event.max_intensity` が無ければ**区切りごと省く**（従来は `undefined` と表示） |
+| 表紙の震度発表機関 | `d.event.intensity_agency_en/ja`（既定: 気象庁） |
+| Slide 4 人口の出典 | `d.links` の "Population" を含むラベル |
+| Slide 5 震度分布図のキャプション | `d.image_captions.intensity_map` |
+| Slide 5 基本情報の出典 | `d.event.source_en/ja` |
+| Slide 6 震央分布図のキャプション | `d.image_captions.epicentre_distribution` |
+| Slide 6 震央分布の出典行 | `d.links` の "Hypocentre" / "Aftershock counts" |
+| Slide 6b 発震機構の箇条書き | `d.mechanism_points`（諸元・発震機構・震源断層） |
+| Slide 8 被害状況の出典注記 | `d.attribution_en/ja` |
+
+あわせて、`apply_slide_gates.js` に **`satellite_jp`** を追加した。衛星の 1/3・2/3 は
+国土地理院 InSAR・千葉大CEReS・QPS-SAR の解析結果を本文ごとハードコードしており、
+他国では中身が丸ごと誤りになるため。参加機関の一覧（3/3）は `d.satellite` 駆動なので対象外。
+
+### 混入は 9 → 0ページになった
+
+外出しを3回に分けて行い、そのつど他国データでビルドして数えた。
+
+| 回 | 対応 | 混入ページ |
+|----|------|-----------|
+| 1回目 | 出典行・図キャプション・発震機構の箇条書き・被害状況の注記 | 9 → 3 |
+| 2回目 | 表紙の最大震度／震度発表機関、基本情報の出典 | 3 → 1 |
+| 3回目 | 波形解析の情報源パネル、余震データ欠損時の案内文 | **1 → 0** |
+
+追加で外出ししたキー:
+
+| 箇所 | データキー |
+|------|-----------|
+| Slide 6b 波形解析の情報源パネル | `d.mechanism_sources`（`[{en, ja}]`） |
+| Slide 6b 波形解析の出典行 | `d.mechanism_source_links` |
+| Slide 6 余震データ欠損時の案内文 | `d.aftershock_pending_en/ja`、または `d.event.seismic_agency_en/ja` |
+
+**最終確認: コロンビア29ページに日本固有の記述は1つも無い。熊本は27ページ・本文差分ゼロ。**
+検査語は 熊本／消防庁／気象庁／国土地理院／総務省統計局／警察庁／M7.1／16km／jma.go.jp／
+gsi.go.jp／布田川／日奈久／八代／嘉島／千葉大／QPS／防災科研／NIED／K-NET／F-net／JMA。
+
+### 落とし穴: ゲートキーを増やすと既存イベントからページが落ちる
+
+`optional_slides` は**許可リスト**なので、`satellite_jp` を追加した時点で、
+それを列挙していない既存イベント（熊本のテスト用JSON）から**2ページが黙って落ちた**。
+27 → 25ページになって初めて気づいた。
+
+対策として `resolve_event.js` に `KNOWN_GATES` を持たせ、
+**`optional_slides` に未記載のゲートキーがあれば WARN を出す**ようにした。
+新しいゲートを足すときは `KNOWN_GATES` と `migrate_event.js` の
+`ALL_OPTIONAL_SLIDES` の両方を更新すること。
+
+### パッチの適用順（6本）
+
+```
+1. apply_event_patch.js       EVENT 解決・OUT 自動命名
+2. apply_slide_gates.js       イベント固有スライドの出し分け
+3. apply_locator_patch.js     地理ロケータのデータ駆動化
+4. apply_receiver_slides.js   汎用キー6種の受け皿
+5. apply_data_guards.js       欠損データでの停止を防ぐ
+6. apply_attribution_patch.js 出典・キャプション・発震機構の外出し
+```
+
+素の権威版（2,165行）に6本すべてを順に適用して検証済み。
+熊本27ページ（本文差分ゼロ）／コロンビア28ページ。
+
+---
+
+## パッチをまとめて当てる
+
+13本を1つずつ叩く必要はない。
+
+```bash
+# 1) まず確認（何も書き込まない）
+node scripts/apply_all.js --dry-run \
+  --file "C:\Users\arakida\OneDrive - adrc.asia\LargeScaleDisasters\_kumamoto_generator\gen_deck.js"
+
+# 2) 本適用
+node scripts/apply_all.js \
+  --file "C:\Users\arakida\OneDrive - adrc.asia\LargeScaleDisasters\_kumamoto_generator\gen_deck.js"
+```
+
+- 正しい順序で13本を当てる。**途中で1本でも失敗したらそこで止まる**
+- 各パッチは適用前に置換対象を数え、適用後に構文チェックし、`.bak` を残す
+- 二重に実行しても「すでに適用済み」で飛ばす（冪等）
+- 権威版2,165行に対して検証済み: **2,166 → 2,687行**
+- `--dry-run` は一時コピーに7本を実際に当てきってから捨てる。
+  各パッチに `--dry-run` を渡す方式だと、後段のパッチ（例: `apply_bilingual_fields.js` は
+  `apply_attribution_patch.js` が作る `intensitySeg()` を探す）が必ず空振りするため。
+  元ファイルは1バイトも書き換えない。
+
+適用後は必ず熊本でビルドし、**27ページで内容が従来どおり**であることを確認してから
+`_kumamoto_generator/` へ書き戻すこと。
+
+---
+
+## コロンビアを統一版で動かす（2026-08-18）
+
+方針は「**熊本は現状維持、海外は統一版**」。
+移行の可否を見るため、元の36ページ版（`reports/colombia_eq_20260810/`、専用ジェネレータ984行）と
+統一版の出力を突き合わせた。
+
+### 見つかったのは「落ちるページ」より「空になる列」だった
+
+ビルドは通り、ページ数も出る。**例外は一切出ない**。それでも中身が抜けていた。
+
+| 症状 | 規模 | 原因 |
+|---|---|---|
+| 被害状況の「数値」「出典」列が全行空 | 19行・2ページ | COLは `value_en`/`value_ja`、統一版は `value` を読む |
+| 有用リンクの「情報源」列が全行空 | 84行・7ページ | COLは `label_en`/`label_ja`、統一版は `label` を読む |
+| 震源・震度の「深さ」「発震機構」「有感範囲」が熊本の文言 | 3セル | ジェネレータにベタ書きが残っていた |
+| 同「発生時刻」「最大震度」が空 | 2セル | COLは `origin_time_local`、`max_intensity_en/ja` |
+| 被災市町村の表が見出しだけ | 1ページ | COLは `cities` ではなく `areas` |
+| 地震活動の余震表が空 | 1ページ | COLの `aftershocks` は配列ではなく `{rows:[...]}` |
+
+**空欄はエラーを出さない。** ビルドが通ったことは検証にならない、という前回の教訓がそのまま再現した。
+「他国データで中身が正しいこと」を、**表のセル単位で**見に行く必要がある。
+
+### apply_bilingual_fields.js（7本目）
+
+上の1・2・3・4を直す。3つのことをする。
+
+1. **読み込み直後に `d` を1回walkし、`X_en` と `X_ja` が両方あって `X` が無いものだけ
+   `LANG_OUT` に合わせて `X` を合成する。** 既存キーは絶対に上書きしない。
+   これ1箇所で `r.value` `r.source` `l.label` が全イベントで埋まる。
+   単一キーで書かれた熊本のデータは `X` を既に持つので素通りする。
+2. `LP(o, "base")` ヘルパを足し、震源・震度の「深さ」「発震機構」「有感範囲」を
+   **言語ペアを持つイベントではデータから読む**。単一キーしか持たない熊本は従来の記述に落ちる。
+3. `linkBy()` の照合を `label_en` にも通す（JAビルドで `label` が日本語だけになるため）。
+
+### 表紙の「（気象庁）」という落とし穴
+
+`max_intensity` が埋まった副作用で、表紙が
+`最大震度改正メルカリ震度 MMI VII（非常に強い）／USGS ShakeMap。SGCの…（気象庁）`
+になった。**キーを埋めた結果、埋まっていなかったときには出なかった混入が出た**。
+`intensitySeg()` も同じパッチで直した。
+
+- 表紙は1行なので `max_intensity_short_en/ja` があればそちらを優先する
+- 発表機関の既定「気象庁 / JMA」は `meta.iso3 === "JPN"` のときだけ。
+  他国で機関名が無ければ**括弧ごと省く**
+
+### 熊本への影響 — 2セルだけ変わる
+
+27ページ、他は全て同一。変わるのはここだけ。
+
+| 項目 | 変更前（ベタ書き） | 変更後（熊本自身のデータ） |
+|---|---|---|
+| 発震機構 | 横ずれ断層型（東北東－西南西） | 横ずれ断層型、圧力軸は東北東-西南西（気象庁・速報） |
+| 有感範囲 | 北陸〜九州で震度6強〜1 | 北陸〜九州で震度6強〜1を観測 |
+
+どちらも `event.mechanism_ja` / `event.felt_ja` に元から入っていた値で、
+ジェネレータ側のベタ書きがそれを握りつぶしていた。戻すなら該当2行の `LP(...) ||` を消すだけ。
+
+### 検証結果
+
+| | ページ | 日本固有語の混入 | 日本語の混入 |
+|---|---|---|---|
+| 熊本 JA | 27 | — | — |
+| 熊本 EN | 27 | — | 0 |
+| コロンビア JA | 30 | **0**（9語で検査） | — |
+| コロンビア EN | 31 | — | **0** |
+
+コロンビアが29→30ページになったのは、被害状況の数値が入って自動改ページが1枚増えたため。
+
+### まだ受け皿が無いキー — 元の36ページとの差
+
+`historical`(9) / `observations`(7) / `cali` / `pre_event` / `areas`(7) /
+`aftershocks.rows` / `missing_note` / `prior_event`（`optional_slides` が空でOFF）。
+元の36ページのうち以下が統一版に無い。
+
+- 1999年アルメニア地震と復興（`prior_event`／ゲートを入れれば出る）
+- カリ市の被害報告（`cali`）
+- 事前リスク評価: サンティアゴ・デ・カリ／GEM-TREQ都市プロファイル（`pre_event`）
+- コロンビアの主な被害地震（`historical`）
+- 所見・注視点（`observations`）
+- 行方不明者の2系統（`missing_note`）
+- 巻末のADRCページ
+
+これらは次の受け皿パッチで足す。**空の表を出すくらいなら、そのページは出さない**方が良いので、
+`areas` と `aftershocks.rows` は受け皿を足すまで空欄のままにしない
+（`optional_slides` で該当ページを落とすか、受け皿を足すか、どちらかに倒す）。
+
+### パッチの適用順（7本）
+
+```
+1. apply_event_patch.js        EVENT でイベント切り替え
+2. apply_slide_gates.js        optional_slides で出し分け
+3. apply_locator_patch.js      表紙3面ロケータのデータ駆動化
+4. apply_receiver_slides.js    汎用キー6種の受け皿
+5. apply_data_guards.js        欠損データでの停止を防ぐ
+6. apply_attribution_patch.js  出典・キャプション・発震機構の外出し
+7. apply_bilingual_fields.js   言語別キー（value_en/value_ja）を読む  ← 6の intensitySeg() に依存
+```
+
+---
+
+## apply_receiver_slides_2.js（8本目）— 元の36ページとの差を埋める
+
+`apply_bilingual_fields.js` で「空になる列」は直った。残っていたのは
+**元の専用ジェネレータにあって統一版に受け皿が無いページ**。
+そのうち、どの国の災害でも使える形のものを足した。
+
+| キー | ページ | ゲート |
+|---|---|---|
+| `areas` | 被災地域（県・市町村・震央距離・震度） | `cities` が空でこれがあるときだけ、被災市町村ページの**表を差し替える** |
+| `aftershocks.rows` | 主な余震 | `aftershocks` が配列ではなくオブジェクトのときだけ |
+| `historical` | 過去の主な被害地震 | `optional_slides` に `"historical"` |
+| `observations` | 所見・注視点 | データがあれば |
+| `extra_slides` | 自由記述スライド（複数可） | データがあれば |
+| `meta.disseminate_*` | 巻末ページ | `optional_slides` に `"closing"` |
+
+### 被災地域は「新しいページ」ではなく「表の差し替え」
+
+国によって地理の単位が違う。日本は市町村＋人口、コロンビアは県＋市＋震央距離＋震度。
+別ページにすると、市町村ページが見出しだけの空表として残ってしまう。
+そこで**同じスライドの表だけ**差し替え、見出しと凡例も切り替える。
+
+- `cities` があるイベント: 従来どおり「被災市町村と人口」＋番号付き地図
+- `cities` が無く `areas` があるイベント: 「被災地域」＋★震源のみの凡例
+
+### extra_slides — 一品物のページをジェネレータを触らずに足す
+
+コロンビアの `cali`（カリ市の被害報告）、`pre_event`（事前リスク評価・GEM-TREQ都市プロファイル）は、
+災害ごとに形の違う一品物だった。国ごとに受け皿を書き足すときりが無い。
+「見出し＋導入文＋表＋画像＋注記＋出典」という1つの形に寄せ、**イベントJSON側で組む**。
+
+```json
+"extra_slides": [{
+  "title_en": "Cali: municipal damage report",
+  "title_ja": "カリ市の被害報告",
+  "intro_en": "...", "intro_ja": "...",
+  "columns": [
+    { "key": "item",  "label_en": "Item",  "label_ja": "項目", "w": 3.0 },
+    { "key": "value", "label_en": "Value", "label_ja": "数値", "w": 2.0, "align": "right" },
+    { "key": "note",  "label_en": "Note",  "label_ja": "備考", "w": 7.5 }
+  ],
+  "rows": [{ "item_ja": "倒壊建物", "item_en": "Collapsed buildings", "value": "25-30", "note_ja": "…", "note_en": "…" }],
+  "image": "gem_treq_cali",
+  "caption_en": "...", "caption_ja": "...",
+  "source": { "label": "Alcaldía de Santiago de Cali", "url": "https://..." }
+}]
+```
+
+- 値は `key` そのまま、または `key_en` / `key_ja` の言語ペア
+- `columns` と `rows` が無ければ `note_en/ja` を本文として1枚に流す
+- `image` は `images` のキー。あれば右半分に置き、表は左半分に寄る
+
+### 検証結果
+
+| | ページ | 熊本との比較 |
+|---|---|---|
+| 熊本 JA | 27 | 8本目適用前と**差分ゼロ** |
+| 熊本 EN | 27 | 同上 |
+| コロンビア JA | 34 | 日本固有語の混入 **0**（10語で検査） |
+| コロンビア EN | 36 | 日本語の混入 **0**（元の専用版と同じ36ページ） |
+
+熊本が変わらないのは、`historical` と `closing` が `optional_slides` ゲートで、
+熊本の許可リスト（`prior_event` / `focus_incident` / `civic_tech` / `spectee` / `satellite_jp`）に
+入っていないため。他はデータ駆動で、熊本にキーが無い。
+
+`KNOWN_GATES`（resolve_event.js）に `historical` / `closing` を追加した。
+`ALL_OPTIONAL_SLIDES`（migrate_event.js）には**入れていない** —
+移行時の既定でページが勝手に増えるのを避けるため。
+
+### コロンビアで統一版に出ないもの（残り）
+
+`cali` と `pre_event` は `extra_slides` に組み替えれば出る。**データ側の作業**で、
+ジェネレータの改修は要らない。`missing_note`（行方不明者の2系統）は被害状況の行に畳んである。
+
+### パッチの適用順（8本）
+
+```
+1. apply_event_patch.js        EVENT でイベント切り替え
+2. apply_slide_gates.js        optional_slides で出し分け
+3. apply_locator_patch.js      表紙3面ロケータのデータ駆動化
+4. apply_receiver_slides.js    汎用キー6種の受け皿
+5. apply_data_guards.js        欠損データでの停止を防ぐ
+6. apply_attribution_patch.js  出典・キャプション・発震機構の外出し
+7. apply_bilingual_fields.js   言語別キーを読む            ← 6 の intensitySeg() に依存
+8. apply_receiver_slides_2.js  被災地域・余震・過去地震・所見・自由記述・巻末
+```
+
+素の権威版2,165行に `apply_all.js` で8本通し、個別適用の結果と**完全一致**を確認済み。
+2,166 → 2,584行。
+
+---
+
+## apply_event_images.js（9本目）— 画像がイベントを跨いでぶつかる
+
+統一版は画像を `generator/images/` の1階層から名前だけで引いていた。
+イベントを跨ぐと**キー名が同じ画像がぶつかる**。
+
+```
+熊本      locator.steps[].key = google_world / google_japan / intensity_map
+コロンビア                      google_world / google_japan / intensity_map   ← 同じ
+```
+
+しかも `<key>_manual.<ext>` は最優先で拾われる。
+熊本の `images/intensity_map_manual.png` が置いてある状態でコロンビアをビルドすると、
+**表紙と震源・震度ページに熊本の震度分布図が出る**。例外は出ないので気づけない。
+
+探索順を変えた。**イベント専用フォルダを3通りとも見てから**共通フォルダに落ちる。
+
+```
+1. images/<GLIDE>/<key>_manual.{png,jpg,jpeg}
+2. images/<GLIDE>/ + d.images[key]          （値の先頭の images/ は外して当てる）
+3. images/<GLIDE>/<key>.png
+4. images/<key>_manual.{png,jpg,jpeg}
+5. images/ + d.images[key]
+6. images/<key>.png
+```
+
+ディレクトリ単位で先に探しきるのが要点。`_manual` を全ディレクトリ横断で先に見ると、
+熊本の `intensity_map_manual.png` がコロンビアの `d.images["intensity_map"]` に勝ってしまう。
+
+`images/<GLIDE>/` が無いイベント（熊本）は 4〜6 だけになる。これは従来の順序そのもので、
+出力は1バイトも変わらない（JA/EN とも27ページ・本文差分ゼロを確認）。
+
+### イベントの画像を置く
+
+```bash
+mkdir -p images/EQ-2026-000146-COL
+cp reports/colombia_eq_20260810/images/*.png reports/colombia_eq_20260810/images/*.jpg \
+   images/EQ-2026-000146-COL/
+rm -f images/EQ-2026-000146-COL/*_es.png images/EQ-2026-000146-COL/*_ja.png \
+      images/EQ-2026-000146-COL/adrc_logo.png
+```
+
+- `_es` / `_ja` の言語別画像は統一版では使わない（図中の文字を差し替えた版）
+- `adrc_logo.png` は全イベント共通なので `images/` に置いたままにする
+- ファイル名を変える必要は無い。`d.images` の値がそのまま効く
+  （例: `"intensity_map": "images/sgc_shakemap_manual.jpg"`）
+
+---
+
+## コロンビアを active にした（2026-08-18）
+
+`events/EQ-2026-000146-COL.json` を `status: "active"` にし、統一版でビルドできる状態にした。
+
+### 何をしたか
+
+1. `migrate_event.js --strip-lang es` で `reports/colombia_eq_20260810/data/report_data.json`
+   から生成（スペイン語 433箇所を削除、46キーを引き継ぎ）
+2. `locator` / `image_captions` / `mechanism_*` / `attribution_*` を引き継ぎ
+3. `locator.steps[].key` を `google_world` / `google_japan` → `locator_world` / `locator_region`
+   に変更（実ファイル名に合わせる。`intensity_map` は SGC の ShakeMap を指す）
+4. `prior_event` のキー名を統一版に合わせる（`lessons_*` → `recovery_*`）。
+   内容は変えていない
+5. `cali` と `pre_event` を `extra_slides` 4枚に組み替え
+6. `event.source_*` / `event.seismic_agency_*` / `event.max_intensity_short_*` /
+   `event.intensity_agency_*` を追加（無いと熊本の既定値が出る）
+7. `meta.optional_slides` = `["prior_event", "historical", "closing"]`
+8. `meta.headline` を UNGRD 8/16 18:30 締めの値で記入
+9. `event.summary_en` を1,562→1,446字に詰めた（表紙の概要欄の上限1,450）。
+   落としたのは「All figures are preliminary…」の一文で、同じ趣旨が `meta.as_of` にある
+
+### 結果
+
+| | ページ | 元の専用版 |
+|---|---|---|
+| コロンビア JA | 38 | 36（スペイン語版含め3言語） |
+| コロンビア EN | 40 | 36 |
+
+日本固有語の混入 **0**（JA 20語・EN 9語で検査）、EN側の日本語混入 **0**。
+熊本は JA/EN とも27ページ・**本文差分ゼロ**。
+
+`resolve_event.js` の判定は **HOLD**（初版・前報なし）。仕様どおり、
+全ページを目視してから `_prev` を入れる。ビルドはできるがメールは送らない。
+
+### 途中で見つけた日本固有記述4件 — すべて修正済み
+
+前回「混入0ページ」と報告したのは、そのとき**描画されていたページ**についての話だった。
+ゲートを開けてページが増えたら、新しい混入が出た。
+
+| 出た場所 | 何が出たか | 直し方 |
+|---|---|---|
+| 表紙 | 最大震度の後ろに `（気象庁）` | 機関名の既定は `iso3 === "JPN"` のときだけ |
+| 過去の災害ページ | 見出し `2016年熊本地震と復興の途上`、表の見出し `2016 damage`、`復興の途上（約10年）` | `prior_event.heading_* / stats_header_* / recovery_title_*` で差し替え |
+| 出典行 | `気象庁 震央分布図` `総務省統計局` | `srcOr()` の既定リンクは日本のイベントに限り、他国では出典を1つ減らす |
+| 震源・震度／地震活動 | `出典 気象庁（第3報）`、`気象庁の余震回数データが…` | `event.source_*` / `event.seismic_agency_*` をデータに入れる |
+
+**ページを増やしたら混入検査をやり直す。** 検査は「そのビルドに出ているページ」しか見ていない。
+
+---
+
+## apply_image_report.js（10本目）— 画像が引けなかったことに気づけない
+
+`imageSlot()` は画像が無いとき、点線の枠とプレースホルダ文言を描いて静かに次へ進む。
+例外は出ないし、ページ数も変わらない。
+
+本番環境でこれが表面化した。`images/` に27枚が無い状態のまま149ページがビルドされ、
+**ADRCロゴが全ページから消えていた**ことに、ファイルを開くまで誰も気づけなかった。
+原因はパッチではなく、画像ファイルが最初からその環境に無かったこと。
+それでもビルドは「成功」と表示される。
+
+書き出しの直前に、キーごとの解決結果を一覧で出す。
+
+```
+── 画像  解決 19 / 未解決 4
+   ✓ adrc_logo               images/adrc_logo.png
+   ✓ intensity_map           images/intensity_map_manual.png
+   ✗ building_damage         （枠のみ）
+   ✗ title_bg                （枠のみ）
+   ...
+   ⚠ 4件が枠のみです。images/ を確認してください。
+     探した場所: images/EQ-2026-000135-JPN  →  images
+```
+
+`resolveImg()` を包んで記録するだけなので、**出力される pptx は1バイトも変わらない**
+（熊本 JA 27ページで本文差分ゼロを確認）。
+
+### ロゴだけ別経路だった
+
+`logoPath()` は `resolveImg()` を通らず `HERE/../images/adrc_logo.<ext>` を直接見ていた。
+そのため **(1)** イベント別フォルダが効かず、**(2)** 一覧にも出ない。
+今回まさに全ページから消えたのがこのロゴなので、同じ探索経路に寄せた。
+拡張子は png / jpg / jpeg / gif を見るので、`resolveImg()` より広いままにしてある。
+
+### 画像の復旧について（2026-08-19）
+
+熊本の `images/` から27枚が失われていたが、**過去に配布した pptx に全部埋め込まれていた**。
+pptx は zip なので `ppt/media/` から取り出せる。キー名は、スライド番号 → 画像 の対応を
+rels から取り、ジェネレータのセクション順と突き合わせて復元した。
+
+取り出すときの注意。
+
+- **ロゴは埋め込み版を使わない。** 表示サイズに縮小されたもの（92px）が入っているだけで、
+  PDFにすると粗い。別の場所にある原寸を使う
+- `sizing: { type: "cover" }` で描かれた画像は**切り抜き後の別ファイル**として埋まっている。
+  表紙の3枚目は震源・震度ページと同じキーだが、切り抜き版なので原本ではない
+- JPEGで取り出したものは `<key>_manual.jpg` にする。`d.images` が `null` のキーは
+  `<key>.png` しか見ないため、`.jpg` はこの名前でないと拾われない
+
+### パッチの適用順（10本）
+
+```
+1. apply_event_patch.js        EVENT でイベント切り替え
+2. apply_slide_gates.js        optional_slides で出し分け
+3. apply_locator_patch.js      表紙3面ロケータのデータ駆動化
+4. apply_receiver_slides.js    汎用キー6種の受け皿
+5. apply_data_guards.js        欠損データでの停止を防ぐ
+6. apply_attribution_patch.js  出典・キャプション・発震機構の外出し
+7. apply_bilingual_fields.js   言語別キーを読む              ← 6 の intensitySeg() に依存
+8. apply_receiver_slides_2.js  被災地域・余震・過去地震・所見・自由記述・巻末
+9. apply_event_images.js       画像を images/<GLIDE>/ で分ける
+10. apply_image_report.js      画像の解決結果を一覧表示      ← 9 の imgDirs() に依存
+```
+
+素の権威版2,165行に `apply_all.js` で10本通し、個別に当てた結果と**完全一致**（2,166 → 2,649行）。
+
+### 現場で分かったこと — レイアウトの前提
+
+`gen_deck.js` は `scripts/` の下に置かれ、`data/` `images/` `output/` がその1つ上にある
+前提で書かれている。本番フォルダではこれが平置きになっていて、`build.sh` も動かなかった。
+置き換えの際は**必ず `scripts/` の中に入れる**こと。
+
+また `npm install` は OneDrive の中でやらない。`node_modules` が数千ファイル同期される。
+ホーム直下（`C:\Users\<user>`）に入れれば、Node が親を辿って見つける。
+
+---
+
+## apply_highlight_layout.js（11本目）— 潰れた画像の上に文字が載っていた
+
+主な被害①のスライドは、1ページ目の右側に画像を2枚積んでいた。
+
+```
+nhk_yatsushiro   y=1.15  h=3.60
+kumamoto_castle  y=4.85  h=1.75   ← 画像に使えるのは 1.75 - 0.66 = 1.09 インチ
+```
+
+`imageSlot()` は下端 0.66 インチをキャプション用に確保する。日英併記のキャプションは
+英1行＋日1行＋URLで3行になるので、0.64 インチの枠に収まらない。
+**潰れた画像の上に文字が重なる。** さらに2ページ目以降は右半分が空のままだった。
+
+直し方。
+
+- ページが2枚以上あるなら **1ページに1枚ずつ**、高さ 5.45 インチで置く
+- **画像が無いページは本文を全幅（12.5インチ）で使う** — 溢れも減る
+- ページが1枚しか無いときだけ従来どおり2枚積む（画像を落とさないため）
+
+画像が見つからないときのプレースホルダは従来どおり出す。
+「公開前に画像を挿入」の枠が消えると、欠けていることに気づけなくなる。
+
+検証は `damage_highlights` の structure 項目を5→20件に複製して2ページに分け、
+1ページ目に八代・2ページ目に熊本城が1枚ずつ入ることを確認した。
+
+### この種の不具合は「見れば分かる」が「ビルドでは分からない」
+
+ページ数も出るし例外も出ない。画像の解決も成功する。それでも枠に対して中身が大きすぎる。
+`_kumamoto_generator/` に `qa_overflow_check.py` と `qa_image_overlap_check.py` があるが、
+`build.sh` はこれらを呼んでいない。**ビルドの最後に必ず通すべき。**
+
+### パッチの適用順（11本）
+
+```
+1.  apply_event_patch.js         EVENT でイベント切り替え
+2.  apply_slide_gates.js         optional_slides で出し分け
+3.  apply_locator_patch.js       表紙3面ロケータのデータ駆動化
+4.  apply_receiver_slides.js     汎用キー6種の受け皿
+5.  apply_data_guards.js         欠損データでの停止を防ぐ
+6.  apply_attribution_patch.js   出典・キャプション・発震機構の外出し
+7.  apply_bilingual_fields.js    言語別キーを読む            ← 6 の intensitySeg() に依存
+8.  apply_receiver_slides_2.js   被災地域・余震・過去地震・所見・自由記述・巻末
+9.  apply_event_images.js        画像を images/<GLIDE>/ で分ける
+10. apply_image_report.js        画像の解決結果を一覧表示    ← 9 の imgDirs() に依存
+11. apply_highlight_layout.js    主な被害①の画像を1ページ1枚に
+```
+
+素の権威版2,165行に `apply_all.js` で11本通し、個別適用と**完全一致**（2,166 → 2,665行）。
+
+---
+
+## qa_layout_check.py — 溢れと重なりを PDF から検出する
+
+ページ数が出ても、例外が出なくても、枠に対して中身が大きすぎることはある。
+主な被害①では高さ1.09インチに潰れた画像の上にキャプションが重なっていたが、
+ビルドは「成功」と表示していた。
+
+`_kumamoto_generator/` にある既存の2本は、どちらも本番環境で動かなかった。
+
+| スクリプト | 依存 | 症状 |
+|---|---|---|
+| `qa_overflow_check.py` | `pdftotext`（poppler） | Windows に無く `FileNotFoundError` |
+| `qa_image_overlap_check.py` | pdfplumber | 動くが **PDF 専用**。pptx を渡すと `No /Root object!` |
+
+`qa_layout_check.py` は **pdfplumber だけ**を使い、1本で3種類を見る。
+
+```bash
+python scripts/qa_layout_check.py output/ADRC_EQ_JPN_Kumamoto_20260728.pdf
+```
+
+| 検出 | 判定 |
+|---|---|
+| **はみ出し** | 文字がページ端から 0.12 インチの内側に収まっていない |
+| **画像と重なり** | 文字の面積の 35% 以上が画像と重なる。9.5pt 未満・3文字未満は除外 |
+| **文字が重なり** | 文字どうしが 50% 以上重なる。縦にずれている組だけ見る（同じ行の字詰めを拾わないため） |
+
+### 除外しているもの — これを入れないと本物が埋もれる
+
+熊本149ページで最初に流したとき **884件** 出た。ほとんどが誤検出だった。
+
+- **フッターの飾り**（`ADRC` / 日付 / `N / 149`）は意図的に下端に置かれている。
+  これだけで約740件。文字列を決め打ちせず、**下端0.5インチの帯に全ページの半数以上で
+  現れる文字列**を飾りと判定する。ページ番号は毎ページ違うので、
+  帯の中の数字と区切り記号は別途落とす
+- **地図上の番号マーカー**（★や `1` `2` `3`）は意図的に画像へ載せている。
+  画像との重なり判定は **3文字以上**の語だけを見る
+- **画像の隅のクレジット**（`© Google` 等）は 9.5pt 未満なので対象外
+
+除外を入れても、コロンビアEN版 p.6 の実在の溢れ（`Buenaventura is overwhelmed.`）は
+拾ったままである。**誤検出を消しても本物が消えないこと**を確認してから使うこと。
+
+終了コードは 0 = 指摘なし / 1 = 指摘あり / 2 = 実行できなかった。
+
+### 較正
+
+コロンビアの完成版で検証した。
+
+- JA 38ページ … 指摘 **0件**
+- EN 40ページ … **p.6 で3件**（`Buenaventura is overwhelmed.` が下端からはみ出し）＝ 実在の溢れ
+
+日本語版で0件、かつ英語版で実在の1箇所だけを拾うので、しきい値は妥当。
+文字どうしの重なりは両方で0件。誤検出は出ていない。
+
+### build.sh に組み込む
+
+PDF を作った直後に通す。`soffice` が無い環境では PDF が出ないので、その場合は飛ばす。
+
+```bash
+[ -f "../${NAME}.pdf" ] && python scripts/qa_layout_check.py "../${NAME}.pdf"
+```
+
+**「ビルドが通った」は検証にならない。** この一連の作業で出た不具合は、
+言語別キーの空欄・画像の欠落・潰れた画像への文字重なり、いずれも例外を出さなかった。
+
+---
+
+## apply_param_table_fit.js（12本目）— 7本目が持ち込んだ退行
+
+震源・震度の諸元表は `12.5pt` / 行高 `0.54` の決め打ちで、値が1行に収まる前提だった。
+`apply_bilingual_fields.js`（7本目）で「発震機構」をデータ優先にした結果、
+
+```
+横ずれ断層型（東北東－西南西）
+  → 横ずれ断層型、圧力軸は東北東-西南西（気象庁・速報）
+```
+
+と長くなり、折り返しが増えて表がページ下端を越えた。
+
+**これは7本目が持ち込んだ退行である。** 同じデータ・同じ環境で
+パッチ前後をビルドして確かめた。
+
+| ビルド | 指摘 | うち p.52 |
+|---|---|---|
+| パッチ前（素の2,165行） | 333件 | **0件** |
+| 7〜11本目まで適用 | 341件 | **8件** |
+| 12本目まで適用 | **333件** | **0件** |
+
+値の折り返し行数を見積もり、収まる文字サイズ（12.5→8pt）まで縮めてから描く。
+**行の高さは項目列と値列の高い方で決まる** ので、両方を数える。
+日英併記では「Origin time / 発生時刻」のような項目名も折り返すため、
+値だけを見ていた最初の実装では足りなかった（8件→6件までしか減らなかった）。
+
+12.5pt で収まるイベントでは 12.5pt のままなので、出力は変わらない。
+
+### この環境では残りの溢れを詰められない
+
+熊本149ページを実データで再現し、LibreOffice で PDF 化して測れるところまでは作った。
+しかし**この環境には Meiryo が無く、LibreOffice が別のフォントに置換する**。
+字幅が変わるので、見出しの「右はみ出し」が124件出るなど、荒木田さんの環境
+（117件/11ページ）とは数字が対応しない。
+
+p.52 だけは、同じ環境でパッチ前後を比べる形にしたので切り分けられた。
+**残りの溢れは、Meiryo のある環境で `qa_layout_check.py` を計器にして詰めるしかない。**
+安全率（`tierMetrics` の 0.98 → 0.90 / 0.84）を振ってみたが、この環境では
+置換フォント由来の指摘が支配的で、効果を測れなかった。
+
+### 再現の手順（データがあれば）
+
+```bash
+cp <report_data.json> data/report_data.json
+LANG_OUT=bi OUT=$PWD/out/KUM.pptx node scripts/gen_deck.js
+soffice --headless --norestore --convert-to pdf --outdir out out/KUM.pptx
+python scripts/qa_layout_check.py out/KUM.pdf
+```
+
+`libreoffice-core` だけでは pptx を読めない。`libreoffice-impress` が要る。
+
+---
+
+## apply_image_isolation.js（13本目）— 9本目では足りなかった
+
+`apply_event_images.js`（9本目）で探索順を `images/<GLIDE>/` → `images/` にした。
+イベント専用フォルダを先に見るので衝突は避けられる、と考えていた。**足りなかった。**
+
+専用フォルダに **無い** キーは共通フォルダに落ちる。共通フォルダには熊本の画像が
+全部入っているので、コロンビアをビルドすると次を拾った。
+
+```
+epicentre_distribution  images/epicentre_distribution.png   ← 熊本の震央分布図
+google_cities           images/google_cities.png            ← 熊本の市町村地図
+mechanism               images/mechanism_manual.png         ← 熊本の発震機構
+sentinel_asia           images/sentinel_asia.png            ← 熊本の発動ページ
+disaster_charter        images/disaster_charter.png         ← 同上
+```
+
+**例外は出ない。画像も入る。中身だけが別の災害のもの。**
+コロンビアの目視用ファイルを作る直前、10本目の一覧を読んで気づいた。
+一覧を出していなければ、そのまま渡していた。
+
+直し方。`images/<GLIDE>/` が存在するイベントでは、共通フォルダへ落ちてよいのは
+全イベント共通の画像（`adrc_logo` / `title_bg`）だけにする。それ以外は落とさず枠のままにする。
+**違う画像が出るくらいなら、枠の方がよい。** 欠けていることは10本目の一覧（`✗ 枠のみ`）で分かる。
+
+`images/<GLIDE>/` を持たないイベント（熊本）は従来どおり共通フォルダだけを見るので、
+出力は1バイトも変わらない。
+
+### 教訓
+
+「衝突を避ける」仕組みを入れたときは、**一致しなかった場合にどこへ落ちるか**まで見る。
+落ち先が他のイベントのフォルダなら、それは衝突を避けたことにならない。
+
+---
+
+## クラウドでビルドする
+
+```bash
+bash generator/scripts/build_event.sh EQ-2026-000146-COL [出力先]
+```
+
+素の権威版 `generator/gen_deck.base.js` を一時ディレクトリへコピーし、14本のパッチを
+当ててから JA/EN の PPTX と PDF を作る。**権威版そのものは書き換わらない。**
+
+`gen_deck.base.js` を直接編集しないこと。詳細は `gen_deck.base.README.md`。
+
+### `apply_all.js` は14本すべてを当てる
+
+2026年8月24日まで、`apply_all.js` は**13本しか当てていなかった**。
+14本目の `apply_activation_pages.js`（発動ページの出し分け）が一覧から漏れており、
+手元で `apply_all.js` を回しても発動ページのパッチだけ当たらない状態だった。
+
+パッチを増やしたら `apply_all.js` の一覧にも足す。片方だけ足しても誰も気づかない。

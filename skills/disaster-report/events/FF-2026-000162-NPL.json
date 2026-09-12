@@ -1,0 +1,1579 @@
+{
+  "meta": {
+    "status": "active",
+    "glide": "FF-2026-000162-NPL",
+    "iso3": "NPL",
+    "filebase": "ADRC_FL_NPL_Rasuwa_20260826",
+    "sources_profile": "references/sources/NPL.md",
+    "primary_official_source": "NDRRMA / Nepal Police",
+    "mail": {
+      "to": [
+        "kenkyubu@adrc.asia",
+        "td-date@adrc.asia"
+      ],
+      "from": "ma-arakida@adrc.asia",
+      "send_at": "07:00 JST のみ"
+    },
+    "onedrive_dir": "C:\\Users\\arakida\\OneDrive - adrc.asia\\LargeScaleDisasters",
+    "title_en": "2026 Bhote Koshi Debris Flow and Flash Flood (Nepal)",
+    "title_ja": "2026年 ボテコシ川 土石流・鉄砲水（ネパール）",
+    "subtitle_en": "Rasuwa, Nuwakot and Dhading Districts - 26 August 2026",
+    "subtitle_ja": "ラスワ郡・ヌワコット郡・ダディン郡、2026年8月26日",
+    "edition_en": "16th report",
+    "edition_ja": "第16報",
+    "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
+    "prepared_by_ja": "アジア防災センター（ADRC）",
+    "stamp": "2026-09-12 19:30 JST",
+    "update_date": "12/09/2026",
+    "timeline_range_en": "25 August - 12 September 2026 (Nepal Standard Time, UTC+5:45)",
+    "timeline_range_ja": "2026年8月25日〜9月12日（ネパール標準時 UTC+5:45）",
+    "tz_note_en": "All times are Nepal Standard Time (NPT, UTC+5:45) unless stated.",
+    "tz_note_ja": "時刻は特記なき限りネパール標準時（NPT、UTC+5:45）。",
+    "optional_slides": [],
+    "headline": {
+      "deaths": 1386,
+      "injured": 7474,
+      "missing": 5130,
+      "houses_destroyed": null,
+      "evacuees": null,
+      "tier": "official",
+      "as_of": "2026-09-12 19:00 NPT (NDRRMA Situation Report #22, direct NDRRMA PDF)"
+    },
+    "chronology_note_en": "Government and agency actions from the onset of the flood - all official sources.",
+    "chronology_note_ja": "発災からの政府・機関の主要な動き（すべて公的情報）。",
+    "activation_by_en": "requested by DHM, activated through ADRC",
+    "activation_by_ja": "要請：ネパール水文気象局／発動：ADRC経由",
+    "chronology_sources": [
+      {
+        "label": "NDRRMA / Nepal Police",
+        "url": "https://reliefweb.int/disaster/ff-2026-000162-npl"
+      },
+      {
+        "label": "UNOSAT / UNITAR",
+        "url": "https://disasterscharter.org/activations/flood-in-nepal-activation-1052-"
+      },
+      {
+        "label": "Sentinel Asia",
+        "url": "https://sentinel-asia.org/EO/2026/article20260826NP.html"
+      }
+    ],
+    "cover_sources": [
+      {
+        "label": "Google Maps © Google",
+        "url": "https://www.google.com/maps/@28.28,85.38,9z"
+      },
+      {
+        "label": "UNOSAT / UNITAR",
+        "url": "https://unosat.org/products/4259"
+      },
+      {
+        "label": "BIPAD Portal, Ministry of Home Affairs, Nepal",
+        "url": "https://bipadportal.gov.np/"
+      }
+    ],
+    "video_queries": [
+      "Rasuwa Bhote Koshi flash flood 26 August 2026",
+      "Nepal Bhote Koshi debris flow Rasuwa Nuwakot",
+      "नेपाल रसुवा भोटेकोशी बाढी"
+    ],
+    "video_handles": [
+      "NepalPoliceHQ",
+      "NDRRMA_Nepal"
+    ],
+    "event_date": "2026-08-26"
+  },
+  "_prev": {
+    "_comment": "2026-09-12 08:39 JST 送信済み（第15報）。NDRRMA状況報告第19号（9月9日19:00 NPT）。数値急変ゲートはOK判定（死者+0.8%、負傷+6.2%でいずれも閾値未満、行方不明は194人減だが monotonic:false のため非該当、ティア変化なし）だったため承認不要で送信。送信前に verify_published.js で STATUS: SEND-OK（published_date_jst=2026-09-12、PC側で配布台帳と照合済み）を確認済み。",
+    "deaths": 1369,
+    "injured": 7474,
+    "missing": 5132,
+    "houses_destroyed": null,
+    "evacuees": null,
+    "tier": "official",
+    "as_of": "2026-09-09 19:00 NPT (NDRRMA Situation Report #19, direct NDRRMA PDF)"
+  },
+  "event": {
+    "origin_time": "26 August 2026, approx. 09:00 NPT (UTC+5:45)",
+    "epicentre_en": "Source area around Deding in the Langtang region; the flood ran down the Bhote Koshi-Trishuli corridor",
+    "epicentre_ja": "発生源はランタン地域デディン付近。出水はボテコシ川〜トリシュリ川の回廊を流下した",
+    "epicentre_short_en": "Deding / Langtang - Bhote Koshi",
+    "epicentre_short_ja": "ランタン地域デディン付近／ボテコシ川",
+    "lat": 28.28,
+    "lon": 85.46,
+    "magnitude": "",
+    "depth_km": 0,
+    "depth_display": "",
+    "mechanism_en": "Not a glacial lake outburst and not a rainfall flood. The IRDR rapid analysis of 28 August 2026 finds that an ice, rock and soil mass failure around Deding in the Langtang region detached at about 5,000 m at around 13:00-14:00 on 25 August and descended to the river at about 3,000 m, fracturing and mixing with soil, rock and debris on the way. The mass blocked the river and formed a temporary natural dam, which held for about 18-19 hours while water accumulated behind it. Melting of the trapped ice is thought to have loosened the material and promoted internal erosion. The dam breached at about 08:30-08:37 on 26 August, releasing water, ice, rock, soil and sediment; an M4.4 seismic signal and a roar were recorded at about 08:37. Rainfall and discharge records show no rainfall capable of explaining the flood. Continued inflow from the Mala River and other tributaries maintained downstream flow and masked the blockage, which is why the developing dam was not recognised from downstream. The precise source mechanism, breach dynamics, peak discharge and any seismic contribution require further study.",
+    "mechanism_ja": "氷河湖の決壊ではなく、降雨による洪水でもない。 2026年8月28日のIRDR速報解析は、ランタン地域デディン付近で氷・岩・土砂の塊が8月25日13〜14時ごろに標高約5,000mで崩落し、標高約3,000mの河道まで一気に落下したとしている。落下の途中で氷は砕け、土砂・岩屑と混合した。この塊が川を堰き止めて一時的な天然ダムを作り、約18〜19時間にわたって水を貯めた。閉じ込められた氷が融けたことで材料が緩み、内部侵食が進んだと考えられている。ダムは8月26日08時30分〜08時37分ごろに決壊し、水・氷・岩・土砂を一気に流下させた。08時37分ごろにM4.4の地震動と轟音が記録されている。降水量と流量の記録には、この規模の出水を説明できる降雨は無い。西側のマラ川などの支流から流入が続いていたため下流の水位は保たれ、上流の閉塞が下流からは分からなかった。発生源の詳細な機構、決壊の力学、ピーク流量、地震動との関係は今後の調査を要する。",
+    "summary_en": "At about 08:30-08:37 NPT on 26 August 2026 a temporary natural dam on the Bhote Koshi, formed the previous afternoon by an ice, rock and soil mass failure around Deding in the Langtang region, breached and released a debris-laden flood down the Bhote Koshi-Trishuli corridor. The flood reached Rasuwagadhi at about 09:00, Timure at about 09:15 and Betrawati at about 09:20. The steep, narrow valley kept the flow concentrated and fast, and the heavy load of ice, rock and sediment made it far more destructive than its water volume alone. Rasuwa, Nuwakot, Dhading and Chitwan Districts were affected. More than 32 bridges were washed away along the 42 km Betrawati-Rasuwagadhi corridor, the Timure and Rasuwagadhi customs facilities and Nepal-China border trade were severely damaged, and about 748 MW of hydropower capacity was affected. ADRC activated Sentinel Asia and the International Charter on the day of the event at the request of the Department of Hydrology and Meteorology.",
+    "summary_ja": "2026年8月26日08時30分〜08時37分ごろ（NPT）、前日午後にランタン地域デディン付近の氷・岩・土砂の崩落によってボテコシ川に形成された一時的な天然ダムが決壊し、岩屑を大量に含んだ出水がボテコシ川〜トリシュリ川の回廊を流下した。出水はラスワガディに約09時00分、ティムレに約09時15分、ベトラワティに約09時20分に到達している。急勾配で狭い谷が流れを集中させて速度を保ち、氷・岩・土砂の重い荷重が破壊力を大きく高めた。ラスワ郡・ヌワコット郡・ダディン郡・チトワン郡が被災。ベトラワティ〜ラスワガディ間42kmで32を超える橋梁が流失し、ティムレとラスワガディの税関施設とネパール・中国国境の交易が大きな被害を受け、約748MWの水力発電設備が影響を受けた。ADRCは発災当日、ネパール水文気象局（DHM）の要請を受けてセンチネルアジアと国際災害チャーターを発動した。"
+  },
+  "damage": [
+    {
+      "item_en": "Deaths",
+      "item_ja": "死者",
+      "value_en": "1,050 deaths (NDRRMA Situation Report #11, 1 Sep 18:00 NPT), by district: Chitwan 321, Nawalparasi East 216, Nawalparasi West 170, Nuwakot 142, Gorkha 65, Dhading 57, Tanahu 38, Rasuwa 41. The toll rose through the day of 1 Sep: 987 at the 1 Sep 09:00 cut, 1,003 at the 1 Sep 13:00 cut (cited in OCHA's Rasuwa Flood Flash Update #5), and 1,050 at this 1 Sep 18:00 cut, including 3 deaths recorded during hospital treatment. Earlier: 903 (31 Aug 09:00), 734 (30 Aug), 616 (29 Aug, WFP citing government figures), 539 (NEOC, 28 Aug). The large downstream district counts (Chitwan, Nawalparasi) reflect the surge travelling far down the Trishuli-Narayani river system, not a second event. No NDRRMA PDF situation report beyond #11 has been published as of this update; the figures below for 3-4 Sep come from UN agency situation reports that attribute their numbers to government/authorities without citing a specific NDRRMA report number. IOM's Nepal Flood Response Situation Report #3 (as of 3 Sep) put the toll at 1,259; WFP's Nepal Situation Report on the Rasuwa Flood Response (4 Sep) states \"reported fatalities have risen to 1,259\", the same figure, suggesting both are citing the same underlying government count without it having moved between the two cut-offs. Neither report gives a district breakdown or exact cut-off time for this figure. OCHA's Rasuwa Flood Situation Report No. 6 (as of 5 Sep) is the first to attach a specific cut to this figure, attributing it to \"NDRRMA, 3 September, 19:00\"; still no NDRRMA PDF matching that cut has been found. NDRRMA's PDF series resumed being found from 8 Sep (SitRep #18, 19:00, corroborated by the same-day 18:00 flash update): 1,358 deaths - Rasuwa 170, Nuwakot 197, Dhading 70, Gorkha 75, Tanahu 38, Chitwan 363, Nawalparasi East 223, Nawalparasi West 222 - and 102 bodies handed over. NDRRMA had in fact kept publishing #12-#17 daily; they had simply not been re-checked. SitRep #19: 1,369 (+11). SitRep #22 (12 Sep): 1,386 (+17).",
+      "value_ja": "1,050人（NDRRMA状況報告第11号、9月1日18:00 NPT）。郡別内訳：チトワン321、ナワルパラシ東216、ナワルパラシ西170、ヌワコット142、ゴルカ65、ダディン57、タナフ38、ラスワ41。9月1日中に987人（同日09:00締め）→1,003人（同日13:00締め、OCHA「Rasuwa Flood Flash Update #5」引用）→1,050人（本18:00締め、うち治療中の死亡3人を含む）と推移した。それ以前は903人（8月31日09:00）、734人（8月30日）、616人（8月29日、WFPが政府集計を引用）、539人（NEOC、8月28日）。下流のチトワン・ナワルパラシで多数を占めるのは、トリシュリ川からナラヤニ川へと出水が遠く下流まで及んだためであり、別の災害ではない。本更新時点で、NDRRMAの第11号より後のPDF状況報告は公表されていない。以下9月3〜4日の数値は国連機関の状況報告によるもので、いずれも「政府・当局」を出典とするのみでNDRRMAの報番号は示していない。IOM「ネパール洪水対応状況報告第3号」（9月3日時点）は死者1,259人とし、WFP「ラスワ洪水対応状況報告」（9月4日）も「死者は1,259人に増加」と同じ数値を示している。両者が同じ政府集計を引用し、その間に数値が動いていない可能性がある。いずれの報告も郡別内訳や正確な締め時刻は示していない。OCHA「ラスワ洪水状況報告第6号」（9月5日時点）は、初めてこの数値に具体的な締め時刻を付し、「NDRRMA、9月3日19:00」としている。ただしこの締めに対応するNDRRMAのPDFはなお見つかっていない。 NDRRMAのPDFは9月8日から再確認できた（状況報告第18号19:00、同日18:00更新と整合）：死者1,358人（ラスワ170、ヌワコット197、ダディン70、ゴルカ75、タナフ38、チトワン363、ナワルパラシ東223、西222）、遺体引き渡し102体。NDRRMAは第12〜17号も毎日発行していたが再確認していなかっただけである。 第19号（9月9日19:00）は1,369人（8日から11人増）。今回は郡別内訳の記載なし。 第22号（9月12日19:00）は1,386人（+17）。身元確認済み104体、DNA検体1,779件採取。",
+      "source_en": "NDRRMA Situation Report #22, 12 Sep 19:00 NPT",
+      "source_ja": "NDRRMA 状況報告第22号（9月12日19:00 NPT）",
+      "tier": "official",
+      "url": "https://ndrrma.gov.np/mediafiles/rasuwa/SitRep_22_NEP_12092026.pdf"
+    },
+    {
+      "item_en": "Missing",
+      "item_ja": "行方不明",
+      "value_en": "3,916 people out of contact (approx.; NDRRMA Situation Report #11, 1 Sep 18:00 NPT), unchanged from the 1 Sep 09:00 and (per OCHA) 13:00 cuts the same day. Breakdown: security-agency personnel 2,423 (62%), government-agency personnel 663 (17%), foreign nationals 583 (15%), Nepalis travelling with foreign tourists 164 (4%), reports received from DEOC 63 (2%). NDRRMA gives no explanation for why this count has not moved while deaths have risen through the day; earlier this reported-missing series ran NEOC's 977 (28 Aug) to WFP's 2,448 (30 Aug) to 4,247 (31 Aug 09:00) to 3,916 (1 Sep). Separately, WFP's 29 Aug figure of 1,924 people missing or out of contact was described as a broader measure than NEOC's reported-to-authorities count; the two bases are not interchangeable. By 3 Sep, IOM's Situation Report #3 puts this figure at 5,053; WFP's 4 Sep report gives 5,083 (\"still missing\"). Neither UN report specifies whether this continues the same reported-missing series as NDRRMA's 3,916 or reflects a broader out-of-contact measure of the kind WFP has used before (see the 29 Aug note above); no NDRRMA PDF situation report beyond #11 confirms either figure. OCHA's Rasuwa Flood Situation Report No. 6 (as of 5 Sep) also gives 5,083, attributed to \"NDRRMA, 3 September, 19:00\", alongside 12,038 rescued - the same rescue figure IOM had reported on 3 Sep. NDRRMA's 8 Sep 18:00 flash update and Situation Report #18 (19:00) give about 5,326 missing (the 102 body handovers already deducted): about 2,860 missing from Rasuwa (1,393 district citizens, 1,286 citizens of other districts, 45 Nepal Army, 25 Nepal Police, 12 Armed Police Force, 73 government employees, 26 bank/financial-institution employees), about 1,981 Nepali citizens missing from Nuwakot (source: District Administration Office, Nuwakot) and about 587 foreign tourists. SitRep #19 (9 Sep): 5,132 missing (-194) - a Nuwakot-count reconciliation (651+1,136=1,787, was ~1,981), not new information.",
+      "value_ja": "約3,916人が連絡不通（NDRRMA状況報告第11号、9月1日18:00 NPT）。同日09:00締め、および（OCHA経由の）13:00締めから横ばい。内訳：治安機関要員2,423人（62%）、政府機関要員663人（17%）、外国人583人（15%）、外国人旅行者に同行していたネパール人164人（4%）、DEOC経由の届出63人（2%）。死者数が同日中に増え続けている一方でこの数値が動いていない理由をNDRRMAは説明していない。この「届出に基づく行方不明」の系列は、NEOC977人（8月28日）→WFP2,448人（8月30日）→4,247人（8月31日09:00）→3,916人（9月1日）と推移している。なお、WFPが8月29日に示した1,924人（行方不明または連絡が取れない者）は、NEOCの「当局への届出」に基づく集計より広い概念とされており、両者は互換的に使えない。9月3日時点でIOM状況報告第3号はこの数値を5,053人とし、WFPの9月4日報告は5,083人（「なお行方不明」）としている。いずれの国連機関報告も、これがNDRRMAの3,916人と同じ「届出ベース」の系列を継続するものか、WFPが8月29日に示したような広い「連絡不通」概念によるものかを明示していない。NDRRMAのPDF状況報告（第11号が最新）では、いずれの数値も確認できていない。OCHA「ラスワ洪水状況報告第6号」（9月5日時点）も同じ5,083人を「NDRRMA、9月3日19:00」の出典として示し、救助12,038人も併記している（この救助数値はIOMが9月3日時点で示していたものと同じ）。 NDRRMAの9月8日18:00フラッシュアップデートと状況報告第18号（19:00）は行方不明約5,326人とする（遺体引き渡し102体はすでに差し引き済み）。内訳はラスワからの行方不明約2,860人（同郡住民1,393人、他郡住民1,286人、ネパール陸軍45人、ネパール警察25人、武装警察12人、政府職員73人、銀行・金融機関職員26人）、ヌワコットからの行方不明ネパール人約1,981人（出典：ヌワコット郡行政事務所）、外国人観光客約587人。 第19号は5,132人（194人減）。ヌワコットの初回内訳分解（651+1,136＝1,787人、旧約1,981人）による整理で新情報ではない。",
+      "source_en": "WFP Nepal Situation Report on the Rasuwa Flood Response, 4 Sep 2026 (citing government figures); also IOM Nepal Flood Response Situation Report #3, 3 Sep 2026; OCHA Rasuwa Flood Situation Report No. 6, 5 Sep 2026 (attributing to NDRRMA, 3 Sep 19:00); NDRRMA Situation Report #19, 9 Sep 19:00 NPT",
+      "source_ja": "WFP「ラスワ洪水対応状況報告」（9月4日、政府集計を引用）／IOM「ネパール洪水対応状況報告第3号」（9月3日）／OCHA「ラスワ洪水状況報告第6号」（9月5日、NDRRMA・9月3日19:00と明記）／NDRRMA状況報告第19号（9月9日19:00 NPT）",
+      "tier": "official",
+      "url": "https://ndrrma.gov.np/mediafiles/rasuwa/SitRep_22_NEP_12092026.pdf"
+    },
+    {
+      "item_en": "Injured",
+      "item_ja": "負傷者",
+      "value_en": "292 people treated across 16 health facilities, of whom 182 have been discharged, 74 remain under treatment and 33 have been referred to other hospitals; 3 people have died during treatment, a subset already included in the death toll (NDRRMA Situation Report #11, 1 Sep 18:00 NPT). Up from 279 at the 1 Sep 09:00 cut and 267 at the 31 Aug 09:00 cut. NEOC's 28 Aug count was 73 (Rasuwa 43, Nuwakot 27, Dhading 3); WFP reported about 242 on 30 Aug. NDRRMA's 8 Sep 18:00 flash update and Situation Report #18 (19:00) put the number receiving or having received injury treatment at 7,037: 329 at (now) 10 hospitals - 252 discharged, 43 under treatment, 30 referred elsewhere, and 4 deaths recorded during treatment - plus 3,421 treated by the Nepali Army and 3,287 by the Armed Police Force. This is a much broader count than the hospital-only figure tracked since NDRRMA SitRep #11; the two are not the same series. SitRep #19 (9 Sep 19:00) puts the broad figure at 7,474: 333 at 19 hospitals (256 discharged, 42 under treatment, 31 referred, 4 deaths) plus 3,535 treated by the Army and 3,606 by the Armed Police Force. SitRep #22 (12 Sep): 339 at 19 hospitals (269 discharged, 34 treating, 32 referred, 4 deaths); separately 8,615 via security agencies, 3,732 via Army medics, not reconciled with the hospital figure. Headline kept at 7,474 (last reconciled total, #19).",
+      "value_ja": "16の医療施設で計292人を治療、うち182人が退院、74人が治療継続中、33人が他院へ転送。治療中に3人が死亡しており、この3人は死者数に既に含まれる（NDRRMA状況報告第11号、9月1日18:00 NPT）。9月1日09:00締めの279人、8月31日09:00締めの267人から増加。NEOCの8月28日集計では73人（ラスワ43、ヌワコット27、ダディン3）、WFPは8月30日時点で約242人としていた。 NDRRMAの9月8日18:00フラッシュアップデートと状況報告第18号（19:00）は、治療中・治療済みの負傷者を計7,037人とする（うち（現在）10病院で329人＝退院252人・治療中43人・他院転送30人、治療中の死亡4人を含む。ほかネパール陸軍による治療3,421人、武装警察による治療3,287人）。これは第11号以来追ってきた病院ベースの数値よりはるかに広い集計であり、両者は同一の系列ではない。 NDRRMA状況報告第19号（9月9日19:00）は同じ広い集計を7,474人とする（現在19の医療施設で333人＝退院256人・治療中42人・他院転送31人、治療中の死亡4人を含む。ほかネパール陸軍による治療3,535人、武装警察による治療3,606人）。 第22号（9月12日）は19病院で339人（退院269、治療中34、転送32、死亡4）。別途、治安機関経由8,615人・陸軍医療班3,732人と報告するが病院集計とは未突合。見出しは直近の合算値である第19号の7,474人のまま。",
+      "source_en": "NDRRMA Situation Report #19, 9 Sep 19:00 NPT; NDRRMA Situation Report #22, 12 Sep 19:00 NPT (hospital and security-agency figures not reconciled)",
+      "source_ja": "NDRRMA 状況報告第19号（9月9日19:00 NPT）／NDRRMA 状況報告第22号（9月12日19:00 NPT、病院集計と治安機関集計は未突合）",
+      "tier": "official",
+      "url": "https://ndrrma.gov.np/mediafiles/rasuwa/SitRep_ENG_09_09092026.pdf"
+    },
+    {
+      "item_en": "Search and rescue",
+      "item_ja": "捜索・救助",
+      "value_en": "11,993 people rescued to date (NDRRMA Situation Report #11, 1 Sep 18:00 NPT), including 4,364 airlifted by helicopter (273 foreign nationals, 4,091 Nepalis) across 610 total flights (84 that day, 29 by private-sector operators); up from 11,814 at the 1 Sep 13:00 cut (per OCHA) and 10,451 at the 31 Aug cut. The Government has mobilised 21,314 security personnel (Nepal Army 9,119, Nepal Police 7,912, Armed Police Force 4,203). A command post remains active and 15 thematic coordination teams cover health, communications, roads and electricity restoration; fuel stocks on hand are 35,000 L diesel, 15,000 L petrol and 9,000 L aviation fuel. IOM's Situation Report #3 (as of 3 Sep) gives a total of 12,038 rescued, including 583 foreign nationals, with more than 21,402 security personnel mobilised - both up slightly from the 1 Sep NDRRMA cut, though IOM does not itemise the helicopter/airlift breakdown NDRRMA reports. NDRRMA's 8 Sep 18:00 flash update and Situation Report #18 (19:00) put the cumulative rescued at 13,583, including 1,157 Nepali Army helicopter flights to 7 Sep plus 112 by the Nepali Army/private helicopters that day, 129 private-sector flights from Kathmandu and 210 Armed Police Force flights; security personnel mobilised is put at 21,146 (Nepal Police 7,912, Nepali Army 9,031, Armed Police Force 4,203) - fractionally down from the 21,314 (Nepali Army 9,119) reported on 1 Sep, not explained. SitRep #19 (9 Sep 19:00): cumulative rescued 13,646 (up 63); security personnel mobilised 21,185 (Nepali Army 9,007, Nepal Police 7,975, Armed Police Force 4,203). SitRep #22 (12 Sep): 13,728 rescued (+82); 1,482 total flights; SAR continues at six hydropower sites, one body recovered inside the Rasuwagadhi tunnel.",
+      "value_ja": "これまでに11,993人を救助（NDRRMA状況報告第11号、9月1日18:00 NPT）。うちヘリコプター空輸4,364人（外国人273人、ネパール人4,091人）、総飛行回数610回（当日84回、うち民間29回）。9月1日13:00締め（OCHA経由）の11,814人、8月31日締めの10,451人から増加。政府は治安要員21,314人を動員（ネパール軍9,119人、ネパール警察7,912人、武装警察隊4,203人）。指揮所は稼働を継続し、保健・通信・道路・電力復旧を担当する15の分野別調整チームが活動。燃料在庫はディーゼル35,000リットル、ガソリン15,000リットル、航空燃料9,000リットル。IOM状況報告第3号（9月3日時点）は救助累計12,038人（外国人583人を含む）、治安要員21,402人超を動員としており、NDRRMAの9月1日締めからわずかに増加しているが、IOMはNDRRMAが示すヘリコプター空輸の内訳までは示していない。 NDRRMAの9月8日18:00フラッシュアップデートと状況報告第18号（19:00）は、累計救出13,583人（ネパール陸軍ヘリの累計飛行1,157回〈9月7日まで〉に加え当日はネパール陸軍・民間ヘリで112回、カトマンズ発民間便129回、武装警察便210回を含む）、動員治安要員21,146人（ネパール警察7,912人、ネパール陸軍9,031人、武装警察4,203人）とする。9月1日時点の21,314人（ネパール陸軍9,119人）からわずかに減っており、理由は示されていない。 NDRRMA状況報告第19号（9月9日19:00）は累計救出13,646人（63人増）、当日のヘリコプター便84回・武装警察便258回とする。動員治安要員は21,185人（ネパール陸軍9,007人、ネパール警察7,975人、武装警察4,203人）。 第22号（9月12日）は累計救出13,728人（+82）、総飛行1,482回。水力発電6か所で捜索継続、ラスワガディのトンネル内で遺体1体発見。",
+      "source_en": "NDRRMA Situation Report #22, 12 Sep 19:00 NPT",
+      "source_ja": "NDRRMA 状況報告第22号（9月12日19:00 NPT）",
+      "tier": "official",
+      "url": "https://ndrrma.gov.np/mediafiles/rasuwa/SitRep_22_NEP_12092026.pdf"
+    },
+    {
+      "item_en": "Rapid Damage and Needs Assessment (RDNA) - preliminary",
+      "item_ja": "災害被害・ニーズ迅速評価（RDNA）— 暫定値",
+      "value_en": "NDRRMA's preliminary RDNA (Rapid Damage and Needs Assessment), published in SitRep #22 (12 Sep), puts total physical damage/loss at NPR 408.29 billion (USD 2,695.33 million) and reconstruction/recovery needs at NPR 723.32 billion (USD 4,774.99 million). By sector: Infrastructure - damage USD 1,254.58M, recovery need USD 3,126.30M (largest of any sector; energy alone: USD 997.13M damage, USD 2,578.71M recovery). Productive sector - damage USD 992.70M, recovery USD 335.19M. Social sector - damage USD 448.05M, recovery USD 683.59M. Cross-cutting - recovery USD 342.44M. A fuller PDNA is expected to follow.",
+      "value_ja": "NDRRMAのRDNA（災害被害・ニーズ迅速評価）暫定値が状況報告第22号（9月12日）で公表された。物的被害・損失総額NPR 4,082.9億（USD 26億9,533万）、復旧・復興必要額NPR 7,233.2億（USD 47億7,499万）。分野別：インフラ―被害USD 12億5,458万、復旧必要額USD 31億2,630万（最大。うちエネルギー分野だけで被害USD 9億9,713万、復旧USD 25億7,871万）。生産分野―被害USD 9億9,270万、復旧USD 3億3,519万。社会分野―被害USD 4億4,805万、復旧USD 6億8,359万。分野横断―復旧USD 3億4,244万。より詳細なPDNAが今後まとめられる見込み。",
+      "source_en": "NDRRMA Situation Report #22, 12 Sep 2026 (RDNA preliminary findings)",
+      "source_ja": "NDRRMA 状況報告第22号（2026年9月12日、RDNA暫定結果）",
+      "tier": "official",
+      "url": "https://ndrrma.gov.np/mediafiles/rasuwa/SitRep_22_NEP_12092026.pdf"
+    },
+    {
+      "item_en": "Affected population",
+      "item_ja": "被災者",
+      "value_en": "Thirteen municipalities across the four worst-hit districts - Rasuwa, Nuwakot, Dhading and Gorkha - are identified as most affected, and several are likely to be declared disaster crisis zones. Food security partners estimate at least 20,000 households across Rasuwa and Nuwakot may need immediate food assistance, with impacts also reported in Dhading, Gorkha, Chitwan and Tanahun. About 18,000 households, more than 50,000 people, need emergency water, sanitation and hygiene support. Nutrition partners estimate about 17,000 children, 1,500 pregnant and breastfeeding women and 9,000 adolescents need immediate nutrition support.",
+      "value_ja": "被害が最も大きい4郡（ラスワ、ヌワコット、ダディン、ゴルカ）の13市町村が最も影響を受けたと特定され、いくつかは災害危機区域に指定される見込み。食料安全保障の関係機関は、ラスワ・ヌワコット両郡で少なくとも20,000世帯が緊急の食料支援を要する可能性があるとしている（ダディン、ゴルカ、チトワン、タナフンでも影響が報告されている）。約18,000世帯・50,000人超が緊急の水・衛生支援を必要とする。栄養分野の関係機関は、子ども約17,000人、妊産婦・授乳婦1,500人、思春期の若者9,000人が緊急の栄養支援を要すると推計している。",
+      "source_en": "UN Flash Update #3, 28 Aug",
+      "source_ja": "国連 Flash Update #3（8月28日）",
+      "tier": "official",
+      "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-update-3"
+    },
+    {
+      "item_en": "Affected population (UNICEF, 5-district figure)",
+      "item_ja": "被災者数（UNICEF、5郡集計）",
+      "value_en": "An estimated 65,000 people affected, including 22,100 children, across Rasuwa, Nuwakot, Dhading, Gorkha and Tanahun districts (UNICEF Nepal Humanitarian Situation Report No.1, 31 Aug) - up from the 28 Aug figure above, which covered three districts and about 17,000 children. Six health facilities and at least 19 schools were reported destroyed or damaged. This is a UNICEF-specific compilation and has not been reconciled with NDRRMA's or OCHA's affected-population figures, which use different bases and dates.",
+      "value_ja": "推計65,000人が被災、うち子ども22,100人。ラスワ、ヌワコット、ダディン、ゴルカ、タナフンの5郡（UNICEFネパール人道状況報告第1号、8月31日）。上記8月28日時点の数値（3郡・子ども約17,000人）から拡大。医療施設6か所、学校少なくとも19校が損壊・全壊と報告された。これはUNICEF独自の集計であり、NDRRMAやOCHAの被災者数（基準・時点が異なる）とは突合されていない。",
+      "source_en": "UNICEF Nepal Humanitarian Situation Report No.1, 31 Aug 2026",
+      "source_ja": "UNICEFネパール人道状況報告第1号（2026年8月31日）",
+      "tier": "official",
+      "url": "https://reliefweb.int/report/nepal/unicef-nepal-humanitarian-situation-report-no1-rasuwa-flood-31-august-2026"
+    },
+    {
+      "item_en": "Displaced / in need",
+      "item_ja": "避難・要支援者",
+      "value_en": "Displacement figures remain preliminary; several unreconciled counts run in parallel. Holding-centre counts: 5 Nuwakot sites, >1,000 people (28 Aug); NDRRMA SitRep #11, 27 centres/3,453 people - Nuwakot 2,466, Rasuwa 398, Dhading 260, Kathmandu 329 (1 Sep 18:00). OCHA 'displacement site' counts: 3,458 people/27 sites, Nuwakot and Rasuwa, mostly schools (Flash Update #5, 1 Sep); 3,844 people/34 sites, Nuwakot/Rasuwa/Dhading/Kathmandu (SitRep No.6, 5 Sep). Access gaps as of 1 Sep: parts of Tarkeshwar (Nuwakot) unassisted, all of Aamachhodingmo (Rasuwa) road-inaccessible, four Dhading municipalities without safe water; 41 bridges destroyed. IOM DTM household counts: 4,288 households affected, 2,886 displaced (cumulative); 1,897 households, Nuwakot only (SitRep #3, 3 Sep). NDRRMA's 8 Sep 18:00 flash update counts 3,628 sheltering at 37 holding centres (Rasuwa 733, Nuwakot 2,699, Dhading 196); its 19:00 Situation Report #18 gives 3,328 at 34 centres (Rasuwa 634, Nuwakot 2,694, Dhading not itemised) - the two are not reconciled. IOM's DTM site survey (31 Aug-6 Sep, published 8 Sep) separately counts 1,237 households (3,888 people) at 37 sites in Kathmandu, Dhading, Nuwakot and Rasuwa - a site-level snapshot, not reconciled with the above. NDRRMA Situation Report #19 (9 Sep 19:00) counts 3,395 people at 34 holding centres (Rasuwa 775 at 9 centres, Nuwakot 2,620 at 25 centres; Dhading not itemised here either). Separately, a rapid assessment by the National Council for Rights of Children (NCRC) has identified 102 parentally-orphaned children across 30 holding centres, with tracing and reunification under way for a further 439 separated children; 692 children are currently at holding centres with their parents.",
+      "value_ja": "避難者数はなお暫定で、複数の未突合の集計が並存する。避難所（ホールディングセンター）系：ヌワコット5か所で1,000人超（8月28日）。NDRRMA第11号は27か所・3,453人（ヌワコット2,466、ラスワ398、ダディン260、カトマンズ329、9月1日18:00）。OCHA「避難拠点」系：27か所・3,458人、ヌワコット・ラスワ中心（Flash Update #5、9月1日）、34か所・3,844人、ヌワコット・ラスワ・ダディン・カトマンズ（状況報告第6号、9月5日）。9月1日時点のアクセス課題：タルケシュワル（ヌワコット）一部未支援、アマチョディンモ（ラスワ）全域道路不通、ダディン4村で安全な水が不足、橋41本流失。IOM DTM世帯系：被災4,288世帯、うち避難2,886世帯（累計）、ヌワコット限定1,897世帯（第3号、9月3日）。NDRRMAの9月8日18:00フラッシュアップデートは37か所のホールディングセンターに3,628人（ラスワ733人、ヌワコット2,699人、ダディン196人）、同19:00の状況報告第18号は34か所に3,328人（ラスワ634人、ヌワコット2,694人、ダディン内訳なし）とし、両者は未調整。IOMのDTM基礎サイトプロファイル調査（8月31日〜9月6日、公表9月8日）は別途、カトマンズ・ダディン・ヌワコット・ラスワの37サイトで1,237世帯（3,888人）の避難を確認しており、これは調査時点のサイト単位の人数で、上記各数値とは未調整。 NDRRMA状況報告第19号（9月9日19:00）は34か所のホールディングセンターに3,395人（ラスワ9か所・775人、ヌワコット25か所・2,620人。ダディンの内訳はここにもなし）とする。別途、児童権利国家評議会（NCRC）の緊急調査により、30か所のホールディングセンターで親を失った子ども102人を確認、離散した子ども439人の追跡・家族再統合の手続きが進行中、保護者と共に避難所にいる子どもは692人としている。",
+      "source_en": "UN Flash Update #3, 28 Aug; OCHA Rasuwa Flood Flash Update #5, as of 1 Sep; NDRRMA Situation Report #11, 1 Sep 18:00 NPT; OCHA Rasuwa Flood Situation Report No. 6, as of 5 Sep; NDRRMA Situation Report #19, 9 Sep 19:00 NPT",
+      "source_ja": "国連 Flash Update #3（8月28日）／OCHA「Rasuwa Flood Flash Update #5」（9月1日時点）／NDRRMA 状況報告第11号（9月1日18:00 NPT）／OCHA「ラスワ洪水状況報告第6号」（9月5日時点）／NDRRMA 状況報告第19号（9月9日19:00 NPT）",
+      "tier": "official",
+      "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-situation-report-no-6"
+    },
+    {
+      "item_en": "Humanitarian appeal (financial)",
+      "item_ja": "人道アピール（資金）",
+      "value_en": "The Humanitarian Country Team's Nepal: Rasuwa Flood Flash Appeal (OCHA/UN RC Nepal, 4 Sep) seeks US$49.6 million to assist 84,270 people (19,284 households) in 17 municipalities across six districts (Rasuwa, Nuwakot, Dhading, Chitwan, Gorkha and Tanahu) through the end of 2026. Requirements cover ten sectors, with roughly three quarters concentrated in five: food security (US$7.94 million), WASH (US$7.9 million), health (US$7.6 million), logistics and emergency telecommunications (US$7.33 million) and shelter (US$7.1 million). The appeal complements the Government's Official Disaster Relief Appeal of 27 August and is a time-bound humanitarian response, not a recovery plan; recovery needs will be addressed through the Post-Disaster Needs Assessment. Ahead of the appeal, the CERF allocation was recalibrated to US$2.5 million to sustain the immediate response in the worst-affected districts.",
+      "value_ja": "人道country teamによる「ネパール：ラスワ洪水 フラッシュアピール」（OCHA／国連ネパール常駐調整官事務所、9月4日）は、6郡（ラスワ、ヌワコット、ダディン、チトワン、ゴルカ、タナフ）17市町村の84,270人（19,284世帯）を対象に、2026年末までの支援として4,960万米ドルを要請している。10分野にわたる資金需要のうち約4分の3を占める上位5分野は、食料安全保障（794万ドル）、水・衛生（790万ドル）、保健（760万ドル）、ロジスティクス・緊急通信（733万ドル）、シェルター（710万ドル）。同アピールは政府の8月27日付「公式災害救援アピール」を補完するものであり、復旧計画ではなく期限を区切った人道対応で、復旧・復興のニーズは「災害後ニーズ評価（PDNA）」で扱われる。アピールに先立ち、被害の大きい郡での当面の対応を維持するためCERF拠出は250万米ドルへ再調整された。",
+      "source_en": "OCHA/UN RC Nepal - Nepal: Rasuwa Flood Flash Appeal, 4 Sep 2026; confirmed via Rasuwa Flood Situation Report No. 6, 5 Sep 2026",
+      "source_ja": "OCHA／国連ネパール常駐調整官事務所「ネパール：ラスワ洪水 フラッシュアピール」（9月4日）／「ラスワ洪水状況報告第6号」（9月5日）で確認",
+      "tier": "official",
+      "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-appeal-4-september-2026"
+    },
+    {
+      "item_en": "Hydropower",
+      "item_ja": "水力発電",
+      "value_en": "About 748 MW of hydropower capacity was affected - 354 MW from operational projects and 394 MW from projects under construction (Nepal Electricity Authority, preliminary). Rasuwagadhi, Chilime and Trishuli-3A were reported damaged. The 220 kV Trishuli 3B hub substation was completely destroyed and multiple transmission lines were disrupted, so the effects reach beyond the flooded corridor.",
+      "value_ja": "約748MWの水力発電設備が影響を受けた（内訳は稼働中354MW・建設中394MW。ネパール電力庁の暫定値）。ラスワガディ、チリメ、トリシュリ3Aが損壊と報告されている。220kVトリシュリ3Bハブ変電所は全壊し、複数の送電線も途絶したため、影響は浸水した回廊の外へ及んでいる。",
+      "source_en": "Nepal Electricity Authority via IRDR, 28 Aug",
+      "source_ja": "ネパール電力庁（IRDR 8月28日経由）",
+      "tier": "official",
+      "url": "https://reliefweb.int/report/nepal/irdr-rapid-analysis-report-scientific-anatomy-26-august-2026-bhotekoshi-flash-flood"
+    },
+    {
+      "item_en": "Banks and customs",
+      "item_ja": "金融機関・税関",
+      "value_en": "Nine commercial bank branches were swept away, with 26 staff unaccounted for. The Rasuwa customs office at Timure, on the border crossing to China, lost contact with 15 employees.",
+      "value_ja": "商業銀行9支店が流失し、職員26人の安否が不明。中国国境のティムレにあるラスワ税関では職員15人と連絡が取れていない。",
+      "source_en": "Rapid Situation Overview, 27 Aug",
+      "source_ja": "状況概観（8月27日）",
+      "tier": "official",
+      "url": "https://reliefweb.int/report/nepal/nepal-flash-floods-rapid-situation-overview-27-august-2026"
+    },
+    {
+      "item_en": "Lifelines",
+      "item_ja": "ライフライン",
+      "value_en": "Roads, bridges, water systems and telecommunications networks were badly damaged, leaving affected areas largely inaccessible and hampering the delivery of aid. At least four health facilities were severely damaged. Several phone towers were lost, so some of those unaccounted for may simply be out of communication.",
+      "value_ja": "道路・橋梁・水道・通信網が大きく損壊し、被災地の多くが到達困難となって支援の搬入を妨げている。医療施設少なくとも4か所が甚大な被害。通信鉄塔が失われており、安否不明者の一部は連絡が取れないだけの可能性がある。",
+      "source_en": "UNICEF, 27 Aug; Rapid Situation Overview",
+      "source_ja": "UNICEF（8月27日）／状況概観",
+      "tier": "official",
+      "url": "https://reliefweb.int/report/nepal/flash-floods-nepal-leave-more-17000-children-need-urgent-humanitarian-assistance-enar"
+    },
+    {
+      "item_en": "Satellite-detected extent",
+      "item_ja": "衛星で捉えた被災範囲",
+      "value_en": "Of 228 km2 analysed in Rasuwa District, 22 km2 was affected by floodwaters, mudflow or rockflow, and 1,920 of the 19,940 people living in the analysed area were exposed. By municipality: Gosaikunda 18 km2 and 1,160 people exposed, Uttargaya 3 km2 and 670, Kalika 1 km2 and 60, Aamachhodingmo 1 km2 and 30. The map also marks a potential ice-avalanche location on the Lende Khola inside the Tibet Autonomous Region, upstream of Rasuwa Gadhi. Preliminary; not yet validated in the field. A separate map covers Nuwakot District.",
+      "value_ja": "ラスワ郡では解析対象228km2のうち22km2が出水・土石流・岩屑流の影響を受け、解析域の居住人口19,940人のうち1,920人が被災域に曝露した。自治体別ではゴサインクンダ村18km2・1,160人、ウッタルガヤ村3km2・670人、カリカ村1km2・60人、アーマチョディンモ村1km2・30人。図には、チベット自治区内のレンデ川上流（ラスワガディの上流側）に「氷雪崩の推定発生地点」が示されている。暫定解析であり現地検証は未了。ヌワコット郡については別図がある。",
+      "source_en": "UNOSAT / UNITAR, published 27 Aug (Sentinel-2 27 Aug, PlanetScope 26 Aug)",
+      "source_ja": "UNOSAT・UNITAR（8月27日公表。Sentinel-2 8月27日／PlanetScope 8月26日）",
+      "tier": "official",
+      "url": "https://reliefweb.int/map/nepal/nepal-satellite-detected-mudflow-rockflow-extent-26-27-august-2026-rasuwa-district-bagmati-province-imagery-analysis-2627082026-published-27082026-v1"
+    },
+    {
+      "item_en": "Satellite-detected extent (UNOSAT)",
+      "item_ja": "衛星解析による被災範囲（UNOSAT）",
+      "value_en": "Analysed area about 350 km2, of which an estimated 37 km2 is affected by floodwaters. About 5,000 of the 46,600 buildings in the analysed area are exposed to or near the affected areas; about 120 km of roads are potentially affected. Highest concentration: Bidur Municipality, Nuwakot District (about 2,600 buildings), then Gosaikunda Municipality, Rasuwa District (about 1,030). Preliminary; not validated in the field.",
+      "value_ja": "解析対象面積 約350km2 のうち、約37km2 が出水の影響を受けたと推定。解析範囲内の建物 約46,600棟のうち約5,000棟が影響範囲内またはその近傍、道路 約120km が影響を受けた可能性。最も集中しているのはヌワコット郡ビドゥル市の約2,600棟、次いでラスワ郡ゴサインクンダ村の約1,030棟。暫定値であり現地検証は未実施。",
+      "source_en": "UNOSAT product 4259, imagery 26-27 Aug, published 28 Aug 2026",
+      "source_ja": "UNOSAT 製品4259（8月26-27日の画像、8月28日公開）",
+      "tier": "official",
+      "url": "https://unosat.org/products/4259"
+    },
+    {
+      "item_en": "Bridges and roads",
+      "item_ja": "橋梁・道路",
+      "value_en": "40 km of roads, more than 80 bridges and 14 energy infrastructure assets damaged, continuing to constrain access and response operations. Large sections of the Bhote Koshi and Trishuli river corridors have suffered extensive damage to settlements, transport infrastructure and energy assets, leaving some communities isolated and dependent on air support for access.",
+      "value_ja": "道路40km、橋梁80超、エネルギー関連施設14件が被災し、到達と対応の妨げとなっている。ボテコシ川・トリシュリ川の回廊の広い区間で集落・交通・エネルギー施設が大きな被害を受け、一部の集落は孤立して空路に頼る状態が続いている。",
+      "source_en": "WFP situation report, 29 Aug",
+      "source_ja": "WFP 状況報告（8月29日）",
+      "tier": "official",
+      "url": "https://reliefweb.int/report/nepal/wfp-nepal-external-situation-report-29-august-2026"
+    },
+    {
+      "item_en": "Border trade and customs",
+      "item_ja": "国境交易・税関",
+      "value_en": "Timure Bazaar, Timure Customs and Rasuwagadhi Customs, together with nearby security posts and commercial facilities, were destroyed or severely damaged, disrupting Nepal-China border trade and tourism.",
+      "value_ja": "ティムレ・バザール、ティムレ税関、ラスワガディ税関と、周辺の警備施設・商業施設が全壊または大きく損壊し、ネパール・中国間の国境交易と観光が止まった。",
+      "source_en": "IRDR rapid analysis, 28 Aug",
+      "source_ja": "IRDR速報解析（8月28日）",
+      "tier": "official",
+      "url": "https://reliefweb.int/report/nepal/irdr-rapid-analysis-report-scientific-anatomy-26-august-2026-bhotekoshi-flash-flood"
+    },
+    {
+      "item_en": "Affected districts",
+      "item_ja": "被災した郡",
+      "value_en": "Rasuwa, Nuwakot, Dhading and Gorkha are the four worst-hit districts, with 13 municipalities identified as most affected. Deaths have also been recorded in Chitwan, Kavrepalanchok and Tanahun further downstream.",
+      "value_ja": "被害が最も大きいのはラスワ、ヌワコット、ダディン、ゴルカの4郡で、13市町村が最も影響を受けたと特定されている。さらに下流のチトワン、カブレパランチョーク、タナフンでも死者が出ている。",
+      "source_en": "NEOC / UN Flash Update #3, 28 Aug",
+      "source_ja": "NEOC・国連 Flash Update #3（8月28日）",
+      "tier": "official",
+      "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-update-3"
+    },
+    {
+      "item_en": "Land and agriculture",
+      "item_ja": "土地・農地",
+      "value_en": "Early estimates point to more than 11,000 hectares of damaged land, including about 2,732 hectares of lost agricultural land, and around 45 km of damaged transport corridors. Damage is still being verified.",
+      "value_ja": "初期推計で11,000haを超える土地が被災し、うち約2,732haの農地が失われた。輸送路は約45kmが被災。被害はなお確認中である。",
+      "source_en": "UN Flash Update #3, 28 Aug",
+      "source_ja": "国連 Flash Update #3（8月28日）",
+      "tier": "official",
+      "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-update-3"
+    },
+    {
+      "item_en": "Agriculture and livestock (FAO)",
+      "item_ja": "農業・畜産（FAO）",
+      "value_en": "FAO's preliminary assessment finds about 1,800 hectares of crops damaged, mostly paddy, with production losses approaching 7,700 tonnes. Across 11 affected municipalities, more than 350,000 head of cattle, buffalo, sheep and goats and about 1.6 million poultry were present before the flood; FAO estimates 5-10% of the livestock and poultry population in these communities has been completely lost. Fishponds, food stocks and agricultural infrastructure were also affected. FAO is supporting the Government of Nepal's response, including emergency veterinary support, and stresses that restoring production ahead of the next planting season is critical to recovery.",
+      "value_ja": "FAOの暫定評価によると、約1,800haの農地（大半は水田）が被災し、生産損失は約7,700トンに上る。被災11市町村には洪水前、牛・水牛・羊・山羊が計35万頭超、家禽が約160万羽おり、FAOはこれら地域の家畜・家禽の5〜10%が完全に失われたと推計している。養魚池、食料備蓄、農業関連施設も被害を受けた。FAOはネパール政府の対応を、緊急獣医支援などを通じて支援しており、次の作付期までに生産を回復させることが復旧の鍵になるとしている。",
+      "source_en": "FAO, 10 Sep 2026 (Deputy Director-General Beth Bechdol interview)",
+      "source_ja": "FAO（2026年9月10日、ベス・ベクドル事務局次長インタビュー）",
+      "tier": "official",
+      "url": "https://reliefweb.int/report/nepal/nepal-floods-damage-1800-hectares-crops-and-kill-thousands-livestock"
+    },
+    {
+      "item_en": "Food security outlook (FEWS NET)",
+      "item_ja": "食料安全保障見通し（FEWS NET）",
+      "value_en": "FEWS NET's Food Security Outlook Update (10 Sep) projects Stressed! (IPC Phase 2!) outcomes in the worst flood-affected areas of Rasuwa District through at least January 2027, supported by ongoing food assistance; some households not receiving assistance are likely to face Crisis (IPC Phase 3) outcomes. Prolonged disruption to tourism, trade, transport and hydropower-related income, and continued damage to the main highway and China-border trade infrastructure, are expected to constrain food access in Rasuwa through the outlook period. Across most of Nepal, outcomes are expected to improve toward Minimal (IPC Phase 1) from late September/October as maize and rice harvests arrive, though elevated staple food prices and localised flood/landslide damage will continue to constrain access for some poor households nationally - a separate, pre-existing pattern not specific to this event.",
+      "value_ja": "FEWS NET「食料安全保障見通し更新」（9月10日）は、ラスワ郡の被害最大地域で、食料支援が継続することを前提に、少なくとも2027年1月まで「ストレス（IPC フェーズ2）」相当の状況が続くと予測し、支援を受けられない一部世帯は「危機（IPC フェーズ3）」相当に陥る可能性があるとしている。観光・交易・運輸・水力発電関連の収入への長期的な打撃、幹線道路や対中国国境交易インフラの被害継続により、ラスワ郡の食料アクセスは見通し期間を通じて制約されると見込む。ネパール全体では、9月末〜10月にトウモロコシ・コメの収穫が入り始めることで「最小限（IPCフェーズ1）」へ改善が進むと見込まれる一方、主食価格の高止まりや局地的な洪水・地滑り被害により、一部の貧困世帯では全国的に（本災害固有ではない、既存の傾向として）アクセス制約が続くとしている。",
+      "source_en": "FEWS NET, Nepal Food Security Outlook Update, 10 Sep 2026",
+      "source_ja": "FEWS NET「ネパール食料安全保障見通し更新」（2026年9月10日）",
+      "tier": "official",
+      "url": "https://reliefweb.int/report/nepal/nepal-food-security-outlook-update-stressed-ipc-phase-2-likely-rasuwa-district-following-historic-flooding-august-2026-january-2027"
+    },
+    {
+      "item_en": "Schools",
+      "item_ja": "学校",
+      "value_en": "Sixty-nine schools with almost 19,000 enrolled students sit within 500 m of the affected riverbanks; at least 23 will need to be rehabilitated.",
+      "value_ja": "被災した河岸から500m以内に69校・在籍児童生徒約19,000人の学校が所在し、少なくとも23校の復旧が必要となる。",
+      "source_en": "UN Flash Update #3, 28 Aug",
+      "source_ja": "国連 Flash Update #3（8月28日）",
+      "tier": "official",
+      "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-update-3"
+    },
+    {
+      "item_en": "Upstream lake - continuing flood risk",
+      "item_ja": "上流の湖 — 継続する洪水リスク",
+      "value_en": "NDRRMA has warned of a continuing flood risk following the formation of an estimated 0.11 sq km lake upstream, caused by the blockage of the Lhende Khola. Authorities are urging downstream communities and responders to remain on high alert. UNOSAT's product 4260 (CARTOSAT-3 imagery, 28 Aug) confirms two newly formed barrier lakes near the Nepal-China border: about 12 ha located roughly 11 km east of the Rasuwagadhi Friendship Bridge along the Chusumdo Tsangpo River (following the approximate mudflow/rockflow path), and about 19 ha located roughly 2 km west of the potential ice-rock avalanche source area. UNOSAT states this is preliminary and not yet field-validated; it has not been confirmed whether either lake corresponds to the 0.11 sq km lake NDRRMA reported on 29 Aug.",
+      "value_ja": "NDRRMAは、レンデ川の閉塞によって上流に推定0.11km2の湖が形成されたことを受け、洪水リスクが継続しているとして警告している。当局は下流の住民と対応要員に高度な警戒の維持を求めている。UNOSAT製品4260（CARTOSAT-3画像、8月28日）は、ネパール・中国国境付近に新たに形成された2つの堰止め湖を確認した。1つはラスワガディ友好橋の東約11km、チュスンド・ツァンポ川沿い（土石流/岩屑流の推定経路上）で約12ha、もう1つは氷・岩の雪崩の推定発生地点の西約2kmで約19ha。UNOSATはこれを暫定値であり現地検証は未実施としており、いずれかがNDRRMAが8月29日に報告した0.11km2の湖と対応するかは確認できていない。",
+      "source_en": "NDRRMA via WFP situation report, 29 Aug; UNOSAT product 4260, imagery 28 Aug, published 27 Aug 2026",
+      "source_ja": "NDRRMA（WFP 状況報告 8月29日経由）／UNOSAT 製品4260（8月28日の画像、8月27日公開）",
+      "tier": "official",
+      "url": "https://unosat.org/products/4260"
+    },
+    {
+      "item_en": "Telecommunications",
+      "item_ja": "通信",
+      "value_en": "Nepal Telecom reports that 80 of 120 affected sites have been returned to operation, and mobile services have been restored in several flood-affected areas of Rasuwa and Nuwakot (29 Aug). By 1 Sep 18:00, NDRRMA reported nearly all towers in the affected corridor back in service: Nepal Telecom's 110 damaged towers all restored; Ncell's 78 damaged towers, 75 restored.",
+      "value_ja": "ネパールテレコムは、被災した120か所のうち80か所が復旧し、ラスワ郡・ヌワコット郡の複数の被災地で携帯サービスが再開したとしている（8月29日）。9月1日18:00時点でNDRRMAは、被災回廊内のほぼ全ての基地局が復旧したと報告：ネパールテレコムは被害110基地局すべて復旧、エヌセルは被害78基地局中75基地局が復旧。",
+      "source_en": "Nepal Telecom via WFP, 29 Aug; NDRRMA Situation Report #11, 1 Sep 18:00 NPT",
+      "source_ja": "ネパールテレコム（WFP 8月29日経由）／NDRRMA 状況報告第11号（9月1日18:00 NPT）",
+      "tier": "official",
+      "url": "https://ndrrma.gov.np/mediafiles/rasuwa/SitRep_11_NEP_01092026.pdf"
+    },
+    {
+      "item_en": "Debris volume (UNDP RAPIDA preliminary estimate)",
+      "item_ja": "堆積物量（UNDP RAPIDA 暫定推計）",
+      "value_en": "At least 2.2 million tonnes of debris within the analysed areas along the Bhote Koshi-Trishuli river system, combining Copernicus EMS/SERTIT satellite-based building damage assessment with locally adapted engineering estimates; expected to rise as more damage is identified. An estimated 556,200 tonnes is building debris, based on satellite assessment covering 2,359 buildings. Separately, government figures cited in the same release show 84,270 people affected across 17 municipalities in six districts, about three in four of them in areas already facing greater difficulty with livelihoods, basic services and living conditions before the flood. 11 hydropower stations and one solar plant (431.1 MW total) stopped operating, plus 15 more hydropower projects under construction (470 MW planned) damaged. The same 84,270-person, 17-municipality, six-district total (again attributed to NDRRMA data) recurs in the Humanitarian Country Team's Nepal: Rasuwa Flood Flash Appeal (OCHA/UN RC Nepal, 4 Sep), which additionally estimates about 19,284 households affected and states all 84,270 affected people will be targeted for assistance; the appeal notes these are exposure-model estimates pending refinement through joint government/sector assessment, so they show where to look rather than confirmed need. IOM's Situation Report #3 (3 Sep) separately reports, for Nuwakot District alone, 1,897 households displaced, 1,267 houses completely damaged and 1,253 partially damaged (matching NDRRMA's 1 Sep figures for the same two damaged-house counts), plus about 5,384 displaced people at facilities health partners are assessing.",
+      "value_ja": "ボテコシ川〜トリシュリ川流域の解析対象地域内で、堆積物は少なくとも220万トン（UNDPのRAPIDA暫定推計。コペルニクスEMS／SERTITの衛星判読による建物被害評価と、現地に即した工学的推計を組み合わせたもの）。被害の把握が進むにつれ増加する見込み。うち建物由来の堆積物は約556,200トンで、衛星判読による建物2,359棟の被害評価に基づく。同発表が引用する政府集計では、6郡17市町村で84,270人が被災し、その約4人に3人は地震前から生活基盤・基礎サービス・生活条件で困難を抱えていた地域に住む。水力発電所11か所・太陽光発電所1か所（計431.1MW）が停止したほか、建設中の水力発電事業15件（計画470MW）も被害を受けた。同じ84,270人・17市町村・6郡という集計（同じくNDRRMAデータに基づくとされる）は、人道country team による「ネパール：ラスワ洪水 フラッシュアピール」（OCHA／国連ネパール常駐調整官事務所、9月4日）にも引用されており、これに加えて約19,284世帯が被災したと推計し、被災者84,270人全員を支援対象とするとしている。同アピールは、これらが曝露モデルによる推計であり、政府・分野別調査との突合を経て精緻化される途上にあること、つまり「どこを見るべきか」を示すもので確認済みの支援ニーズそのものではないことを明記している。IOM状況報告第3号（9月3日）は別途、ヌワコット郡のみで1,897世帯が避難、1,267棟が全壊、1,253棟が半壊としており（全壊・半壊の棟数はNDRRMAの9月1日時点の数値と一致）、保健関係機関が状況を確認中の避難施設に約5,384人が滞在しているとしている。",
+      "source_en": "UNDP, 1 Sep 2026 (RAPIDA preliminary assessment)",
+      "source_ja": "UNDP（2026年9月1日、RAPIDA暫定評価）",
+      "tier": "official",
+      "url": "https://reliefweb.int/report/nepal/nepal-floods-hit-vulnerable-communities-undp-estimates-22-million-tonnes-debris"
+    },
+    {
+      "item_en": "Missing tourists (Department of Tourism breakdown)",
+      "item_ja": "行方不明の観光客（観光局集計）",
+      "value_en": "The Department of Tourism reports 587 foreign tourists from 34 countries and 188 Nepali citizens (guides and support staff, and Nepalis on pilgrimage) missing since the 26 August flood - 775 people in total. Of the foreign nationals, 256 are men, 329 women and 2 of unspecified gender; the largest national group is India (184), followed by Malaysia (55), Ukraine (54), the United States (67), Latvia (33) and Australia (33), with smaller numbers from 28 other countries. Most of the missing had travelled for the Kailash Mansarovar pilgrimage or the Janai Purnima festival. 307 foreign tourists (254 men, 53 women) have been rescued to date, and 7 people earlier out of contact (2 men, 4 women, 1 other) have since been reached. This is a subset compiled by the Department of Tourism and has not been reconciled with NDRRMA's national missing count (4,996 as of the 6 Sep 11:00 cut).",
+      "value_ja": "観光局（Department of Tourism）は、8月26日の洪水以降、34か国の外国人観光客587人とネパール人188人（現地ガイド・同行スタッフ、および巡礼中のネパール人を含む）、計775人が行方不明としている。外国人の内訳は男性256人・女性329人・性別不明2人。国別ではインド184人が最多で、マレーシア55人、ウクライナ54人、米国67人、ラトビア33人、オーストラリア33人ほか28か国に分散する。行方不明者の多くはカイラス山巡礼またはジャナイ・プールニマ祭のため訪れていた。これまでに外国人観光客307人（男性254人・女性53人）が救助され、連絡不通だった7人（男性2人・女性4人・その他1人）はその後連絡が取れた。この集計は観光局独自のものであり、NDRRMAの全国行方不明者数（9月6日11:00締め4,996人）とは突合されていない。",
+      "source_en": "Department of Tourism via The Rising Nepal (RSS), 7 Sep 2026",
+      "source_ja": "観光局（The Rising Nepal〈RSS配信〉、9月7日報道）",
+      "tier": "official",
+      "url": "https://risingnepaldaily.com/news/86249"
+    },
+    {
+      "item_en": "Trapped in hydropower tunnels (estimate)",
+      "item_ja": "水力発電施設トンネル内の取り残し（推計）",
+      "value_en": "The Nepali Army estimates that as many as 121 people could remain trapped inside tunnels of hydropower projects damaged by the flood, and states that search and rescue operations inside the tunnels will continue until a breakthrough is achieved or the Government decides otherwise. Announced by Brigadier General Subash Jung Thapa at a press conference held at NDRRMA on 7 September. This estimate has not been reconciled with NDRRMA's national missing count. NDRRMA Situation Report #18 (8 Sep 19:00) reports continuing search at six hydropower sites along the Bhote Koshi-Trishuli corridor (Rasuwagadhi, Langtang, Chilime, Upper Trishuli-1 and Mailung Khola with the Korea Disaster Relief Team, and Trishuli 3A/3B), with nothing found so far at the sites searched; see timeline for detail.",
+      "value_ja": "ネパール陸軍は、洪水で被災した水力発電事業のトンネル内に最大121人が取り残されている可能性があると推計し、突破口が開くか政府が別の判断を下すまで坑内の捜索・救助を続けるとしている。9月7日、NDRRMAで開かれた記者会見でスバス・ジャン・タパ准将が発表した。この推計はNDRRMAの全国行方不明者数とは突合されていない。 NDRRMA状況報告第18号（9月8日19:00）は、ボテコシ・トリシュリ回廊沿いの6事業（ラスワガディ、ラングタン、チリメ、韓国災害救援隊と合同のアッパートリシュリ1・マイルンコーラ、トリシュリ3A/3B）で捜索が続くとし、これまで発見はないとしている。詳細は時系列を参照。",
+      "source_en": "Nepali Army via NDRRMA press conference, reported by The Rising Nepal (RSS), 7 Sep 2026",
+      "source_ja": "ネパール陸軍（NDRRMA記者会見、The Rising Nepal〈RSS配信〉9月7日報道）",
+      "tier": "official",
+      "url": "https://risingnepaldaily.com/news/86243"
+    },
+    {
+      "item_en": "Access crisis - Aamachhodingmo Rural Municipality, Rasuwa",
+      "item_ja": "到達困難の継続 — ラスワ郡アマチョディンモ村",
+      "value_en": "At least 203 people from Aamachhodingmo Rural Municipality (population over 7,000), where the Upper Trishuli-1, Chilime and Langtang hydropower projects are located, remain on the missing list; local authorities estimate the number could rise further. The rural municipality has been completely cut off by road since the flood struck 11 days earlier (roads, suspension bridges and tuin cable crossings all destroyed) and is reachable only by helicopter. Residents report that food, salt and cooking oil have run out; the rural municipality chair warns of a possible famine-like situation if supplies are not delivered soon, and says NGOs have been unable to deliver aid because the area can only be reached by chartered helicopter.",
+      "value_ja": "アマチョディンモ村（人口7,000人超。アッパートリシュリ1、チリメ、ランタンの各水力発電事業が所在）では少なくとも203人がなお行方不明の名簿に残っており、地元当局はさらに増える可能性があるとしている。同村は発災から11日間、道路・吊り橋・タイン（ケーブル渡し）がすべて損壊して陸路が完全に途絶しており、到達手段はヘリコプターに限られる。住民は食料・塩・食用油が尽きたと訴えており、村長は物資が届かなければ飢饉に近い状況になりかねないと述べ、NGOはヘリのチャーター費用がかさむため支援物資を届けられずにいるとしている。",
+      "source_en": "The Kathmandu Post, 7 Sep 2026 (field reporting)",
+      "source_ja": "The Kathmandu Post（9月7日、現地取材）",
+      "tier": "media",
+      "url": "https://kathmandupost.com/province-no-3/2026/09/07/people-in-flood-hit-rasuwa-villages-call-for-help-after-supplies-run-out"
+    },
+    {
+      "item_en": "China-side impact (Gyirong, Tibet Autonomous Region)",
+      "item_ja": "中国側の影響（チベット自治区・ギロン）",
+      "value_en": "A joint CBAS/IRDR China analysis of satellite imagery finds that floodwaters backed up about 4.9 km upstream along the Gyirong Zangbo River from Gyirong Port, with the water-covered area in the backflow zone increasing from about 0.27 sq km before the event (12 Aug) to about 0.62 sq km after it (12:48 Beijing time, 26 Aug) - 2.3 times the pre-event level. Downstream of the rock-ice avalanche source area, the river channel widened markedly along a 97.2 km stretch, with the river water area increasing from about 6.39 sq km (12 Aug) to about 30.99 sq km (26 Aug) - 4.85 times the pre-event level. This is the China-side counterpart to the Nepal-side UNOSAT mapping; the two have not been cross-referenced.",
+      "value_ja": "CBAS（国際大数据・持続可能な開発目標研究センター）とIRDR中国国家委員会の共同衛星画像解析によると、出水はギロン税関からギロン・ツァンポ川を約4.9km遡って逆流し、逆流域の湛水面積は発災前（8月12日）の約0.27km2から発災後（北京時間8月26日12:48）約0.62km2へと2.3倍に拡大した。氷・岩の雪崩の推定発生地点より下流では、河道が97.2kmの区間で著しく拡幅し、河川水面積は発災前の約6.39km2から発災後約30.99km2へと4.85倍に拡大した。これはネパール側のUNOSAT解析に対応する中国側の解析であり、両者の突合はまだ行われていない。",
+      "source_en": "CBAS / IRDR China National Committee, published 31 Aug 2026",
+      "source_ja": "CBAS／IRDR中国国家委員会（2026年8月31日公表）",
+      "tier": "official",
+      "url": "https://reliefweb.int/report/nepal/rapid-disaster-impact-report-satellite-remote-sensing-reveals-severe-mudslide-impacts-along-china-nepal-border"
+    }
+  ],
+  "timeline": [
+    {
+      "time": "25 Aug 13:00-14:00",
+      "tier": "official",
+      "src": "IRDR (28 Aug)",
+      "en": "An ice, rock and soil mass detaches at about 5,000 m around Deding in the Langtang region and descends to the river at about 3,000 m, fracturing and mixing with soil and debris on the way.",
+      "ja": "ランタン地域デディン付近の標高約5,000mで氷・岩・土砂の塊が崩落し、標高約3,000mの河道まで落下。落下の途中で氷は砕け、土砂・岩屑と混合した。"
+    },
+    {
+      "time": "25 Aug afternoon",
+      "tier": "official",
+      "src": "IRDR (28 Aug)",
+      "en": "The mass blocks the Bhote Koshi and forms a temporary natural dam. Water accumulates behind it for about 18-19 hours. Inflow from the Mala River and other tributaries keeps the downstream channel flowing, masking the blockage.",
+      "ja": "この塊がボテコシ川を堰き止め、一時的な天然ダムを形成。約18〜19時間にわたって水を貯める。西側のマラ川などの支流からの流入が下流の水位を保ち、上流の閉塞を分かりにくくした。"
+    },
+    {
+      "time": "26 Aug 08:30-08:37",
+      "tier": "official",
+      "src": "IRDR (28 Aug)",
+      "en": "The temporary dam breaches, releasing water, ice, rock, soil and sediment. An M4.4 seismic signal is recorded at about 08:37 and residents report a massive roar.",
+      "ja": "天然ダムが決壊し、水・氷・岩・土砂を一気に流下させる。08時37分ごろにM4.4の地震動が記録され、住民は轟音を聞いたと証言している。"
+    },
+    {
+      "time": "26 Aug 09:15",
+      "tier": "official",
+      "src": "IRDR (28 Aug)",
+      "en": "The flood reaches Timure at about 09:15 and Betrawati at about 09:20. The short travel times show exceptionally rapid movement through the narrow upper valley.",
+      "ja": "出水はティムレに約09時15分、ベトラワティに約09時20分に到達。到達時間の短さは、狭い上流部を極めて速く流下したことを示す。"
+    },
+    {
+      "time": "26 Aug 08:37",
+      "tier": "official",
+      "src": "USGS / IRDR",
+      "en": "USGS logs a magnitude 4.4 signal, later revised to 5.2. IRDR reads this as ground vibration from the sudden dam breach rather than a tectonic earthquake.",
+      "ja": "USGSがM4.4の信号を記録（のちM5.2に改訂）。IRDRはこれを構造性の地震ではなく、天然ダムの急激な決壊による地面の振動と解釈している。"
+    },
+    {
+      "time": "26 Aug 09:00",
+      "tier": "official",
+      "src": "DHM / NDRRMA",
+      "en": "A sudden surge of water enters the Bhote Koshi River from the Tibet Autonomous Region of China. Timure, Syabrubesi, the Rasuwagadhi customs and border crossing and roughly a dozen riverside settlements in northern Rasuwa take the earliest and heaviest impact.",
+      "ja": "中国チベット自治区側からボテコシ川に突発的な出水。ティムレ、シャブルベシ、ラスワガディ検問所・税関、ラスワ郡北部の川沿い十数集落が最初に、かつ最も強く被災した。"
+    },
+    {
+      "time": "26 Aug 11:00",
+      "tier": "official",
+      "src": "ADRC / Sentinel Asia",
+      "en": "Nepal's NDRRMA requests rapid satellite imagery. ADRC receives the request and activates Sentinel Asia (emergency observation request SA-00658, requester: Department of Hydrology and Meteorology).",
+      "ja": "ネパールNDRRMAが緊急の衛星画像提供を要請。ADRCがこれを受けてセンチネルアジアを発動した（緊急観測要請 SA-00658、要請元は水文気象局）。"
+    },
+    {
+      "time": "26 Aug 11:45",
+      "tier": "official",
+      "src": "USGS",
+      "en": "A second glacial-collapse signal, magnitude 4.2, is recorded at the same location (event us7000tc90).",
+      "ja": "同じ場所でM4.2の氷河崩落を再度観測（イベントus7000tc90）。"
+    },
+    {
+      "time": "26 Aug 12:30",
+      "tier": "official",
+      "src": "UNOCHA / JAXA",
+      "en": "UNOCHA's Bangkok office supplies two areas of interest for imagery tasking - the Syabrubesi area and the Timure area - which ADRC merges into the Sentinel Asia request.",
+      "ja": "UNOCHAバンコク事務所が観測対象範囲（AOI）2か所（シャブルベシ地区、ティムレ地区）を提供。ADRCがセンチネルアジア側の要請に統合した。"
+    },
+    {
+      "time": "26 Aug 18:43",
+      "tier": "official",
+      "src": "International Charter",
+      "en": "The International Charter Space and Major Disasters is activated as #1052, with ADRC recorded as the requestor on behalf of the Department of Hydrology and Meteorology (14:58 UTC+02:00). Project management is assigned to UNITAR.",
+      "ja": "国際災害チャーターが Activation #1052 として発動（14:58 UTC+02:00）。要請者は「水文気象局に代わってADRC」と記録されている。案件管理はUNITAR。"
+    },
+    {
+      "time": "26 Aug evening",
+      "tier": "official",
+      "src": "NDRRMA / PMO",
+      "en": "First official tolls diverge: 72 deaths (NDRRMA) and 95 (Prime Minister's Office). By late evening about 160 are reported, with 157 bodies recovered.",
+      "ja": "最初の公式発表は食い違い、NDRRMA 72人、首相府95人。同日深夜には約160人（遺体収容157体）となった。"
+    },
+    {
+      "time": "27 Aug 08:15",
+      "tier": "official",
+      "src": "Nepal Police",
+      "en": "A Nepal Police bulletin lists 826 people missing in Nepal alone: 579 travellers (466 foreign nationals, 113 Nepalis), 85 security personnel, 161 residents of Rasuwa and one of Nuwakot.",
+      "ja": "ネパール警察が、国内だけで行方不明826人と発表。旅行者579人（外国人466人・ネパール人113人）、治安要員85人、ラスワ郡住民161人、ヌワコット郡住民1人。"
+    },
+    {
+      "time": "27 Aug morning",
+      "tier": "official",
+      "src": "NDRRMA / Nepal Police",
+      "en": "The confirmed toll is put at 165 dead and 73 injured, superseding the previous evening's figures.",
+      "ja": "死者165人・負傷73人と発表。前夜の数値を更新した。"
+    },
+    {
+      "time": "27 Aug",
+      "tier": "official",
+      "src": "IFRC",
+      "en": "IFRC launches a CHF 25 million Emergency Appeal for 24 months, one day after releasing nearly CHF 1 million in emergency funding to the Nepal Red Cross Society. Around 93,000 people may have been affected.",
+      "ja": "IFRCが24か月・2,500万スイスフランの緊急アピールを開始。前日にはネパール赤十字社へ約100万スイスフランを緊急拠出していた。被災者は約93,000人の可能性。"
+    },
+    {
+      "time": "27 Aug",
+      "tier": "official",
+      "src": "UNICEF",
+      "en": "UNICEF appeals for US$17.2 million, reporting at least 17,000 children impacted across Rasuwa, Nuwakot and Dhading and at least four health facilities severely damaged.",
+      "ja": "UNICEFが1,720万米ドルの支援を要請。ラスワ・ヌワコット・ダディンの3郡で子ども17,000人以上が影響を受け、医療施設少なくとも4か所が甚大な被害と報告。"
+    },
+    {
+      "time": "27 Aug",
+      "tier": "official",
+      "src": "UNOSAT / Int'l Charter",
+      "en": "UNOSAT publishes satellite-detected mudflow/rockflow extent for Rasuwa and Nuwakot districts from Sentinel-2 (27 Aug) and PlanetScope (26 Aug) imagery.",
+      "ja": "UNOSATが、Sentinel-2（8月27日）とPlanetScope（8月26日）の画像から、ラスワ郡・ヌワコット郡の土石流・岩屑流の範囲図を公表。"
+    },
+    {
+      "time": "28 Aug",
+      "tier": "official",
+      "src": "JAXA / Sentinel Asia",
+      "en": "JAXA schedules an ALOS-2 emergency observation. Analyses using Landsat-9 (Rissho University) and a 3D damage map from optical satellites (University of Tokyo) are shared through Sentinel Asia.",
+      "ja": "JAXAがALOS-2の緊急観測を計画。立正大学によるLandsat-9解析、東京大学による光学衛星の3次元被害図が、センチネルアジアを通じて共有された。"
+    },
+    {
+      "time": "28 Aug",
+      "tier": "official",
+      "src": "NEOC / UN",
+      "en": "NEOC reports 539 confirmed dead, 977 missing and 73 injured. 3,742 people have been rescued; 12,249 security personnel and 15 helicopters are mobilised. The Cabinet lifts tax duties on incoming relief items and the One Door policy under which all relief had to be delivered by the government.",
+      "ja": "NEOCが死者539人・行方不明977人・負傷73人と発表。これまでに3,742人を救助し、治安要員12,249人とヘリ15機を動員。閣議は救援物資の輸入関税と、救援物資を政府一元で届ける One Door 方針を解除した。"
+    },
+    {
+      "time": "29 Aug",
+      "tier": "official",
+      "src": "WFP / NDRRMA",
+      "en": "WFP situation report: 616 deaths and 1,924 people missing or out of contact across Dhading, Nuwakot and Rasuwa. NDRRMA warns of a continuing flood risk from an estimated 0.11 sq km lake formed upstream by the blockage of the Lhende Khola. WFP dispatches 2.8 mt of BP-5 fortified biscuits for up to 5,000 people and receives AUD 2 million (USD 1.4 million) from the Australian Government.",
+      "ja": "WFP状況報告。ダディン・ヌワコット・ラスワで死者616人、行方不明または連絡が取れない者1,924人。NDRRMAは、レンデ川の閉塞により上流に推定0.11km2の湖が形成されたとして、洪水リスクの継続を警告。WFPはBP-5強化ビスケット2.8トン（最大5,000人分）を送り、豪州政府からAUD200万（USD140万）を受領。"
+    },
+    {
+      "time": "30 Aug",
+      "tier": "official",
+      "src": "WFP / NDRRMA",
+      "en": "WFP situation report: the death toll rises to approximately 734, with around 242 injured and 2,448 people still reported missing; more than 8,198 people have been rescued to date. Damage to infrastructure continues to hamper access, including approximately 40 km of roads, more than 80 bridges and at least 14 hydropower and energy facilities along the Bhote Koshi-Trishuli corridor. WFP has dispatched 31.8 mt of food assistance and secured approximately USD 5.4 million through Australia, CERF and the United States.",
+      "ja": "WFP状況報告。死者は約734人に増加し、負傷者約242人、行方不明者2,448人。これまでに8,198人以上が救助された。ボテコシ・トリスリ川沿いで道路約40km、橋梁80か所以上、水力発電・エネルギー施設少なくとも14か所が被災し、進入の妨げが続いている。WFPは食料31.8トンを送り、豪州・CERF・米国から約USD540万を確保した。"
+    },
+    {
+      "time": "31 Aug",
+      "tier": "official",
+      "src": "NDRRMA / OCHA-UN RC Nepal",
+      "en": "OCHA/UN RC Nepal Flash Update #4: NDRRMA's 09:00 bulletin puts the death toll at 903, with 267 injured (156 discharged) and 4,247 still reported missing. 10,451 people have been rescued to date, including 252 foreign nationals and 3,344 Nepalis airlifted by helicopter; 20,819 personnel are mobilised. The Government has allocated NPR 10 million each in emergency funds to Rasuwa and Nuwakot and NPR 0.5 million to Dhading. Joint Nepal-India-China rescue operations continue at the Trishuli 3A, Haku Besi, Trishuli 3B and Chilime hydropower sites. The Mugling-Malekhu section of the Prithvi Highway remains fully blocked by toe-cutting at Krishna Bhir and Parewa Bhir; power has been restored in Dhading and Nuwakot, with work continuing in Rasuwa.",
+      "ja": "OCHA/国連ネパール常駐調整官事務所 Flash Update #4。NDRRMAの09:00発表によると、死者903人、負傷267人（うち156人退院済み）、行方不明4,247人。これまでに10,451人を救助し、うち外国人252人、ヘリコプターで空輸されたネパール人3,344人を含む。要員20,819人を動員。政府はラスワ郡・ヌワコット郡に各NPR1,000万、ダディン郡にNPR50万の緊急資金を配分した。トリシュリ3A、ハクベシ、トリシュリ3B、チリメの各水力発電施設でネパール・インド・中国による合同救助活動が続いている。プリトビ・ハイウェイのムグリン〜マレクー区間は、クリシュナ・ビル、パレワ・ビルの法面崩壊により全面通行止めが続く。電力はダディン郡・ヌワコット郡で復旧し、ラスワ郡では復旧作業が続いている。"
+    },
+    {
+      "time": "1 Sep",
+      "tier": "official",
+      "src": "Government of the Republic of Korea",
+      "en": "The Republic of Korea decides to dispatch the Korea Disaster Relief Team (KDRT) following a request from the Government of Nepal for support to search and rescue operations. The team of 44 members from the Ministry of Foreign Affairs, KOICA and the National Fire Agency, headed by Lee Kyoo-ho, Director-General for Development Cooperation, departs on the night of 1 September aboard Korean military transport aircraft. Korea had earlier announced USD 1 million in humanitarian assistance through international organizations on 27 August.",
+      "ja": "韓国政府が、ネパール政府からの捜索・救助支援の要請を受けて、韓国災害救助隊（KDRT）の派遣を決定。外務省・KOICA・消防庁などからなる44人で、外務省開発協力局長の李圭虎氏が団長。9月1日夜、韓国軍の輸送機でネパールへ向かう。韓国は8月27日に、現地で活動する国際機関を通じた100万米ドルの人道支援も表明していた。"
+    },
+    {
+      "time": "1 Sep 09:00",
+      "tier": "official",
+      "src": "NDRRMA",
+      "en": "NDRRMA Situation Report #01: 987 deceased (including recovered human remains) and 3,916 people reported missing across 62 districts. 279 injured have been treated (168 discharged, 79 still under treatment, 29 referred); the Nepal Army has provided medical treatment to 2,740 people. 11,814 people have been rescued in total, of whom 3,702 by helicopter (253 foreign nationals and 3,449 Nepalis) over 573 air operations. 21,011 security personnel are deployed, including teams from Korea, China and India for joint search and rescue at the Trishuli 3A, Haku Besi, Trishuli 3B and Chilime hydropower sites. Five districts are affected - Rasuwa and Nuwakot severely, with approximately 1.6 million people impacted, and Dhading, Gorkha and Chitwan moderately. 41 motorable bridges have been washed away and 4 damaged.",
+      "ja": "NDRRMA 状況報告第1号。死者987人（収容した遺体の一部を含む）、行方不明3,916人（全国62郡から届出）。負傷279人が手当てを受け、168人が退院、79人が治療中、29人が転院。ネパール陸軍は2,740人に医療を提供。救助は累計11,814人で、うちヘリコプターによる救助が3,702人（外国人253人、ネパール人3,449人）、航空運用は573回。治安要員21,011人を動員し、韓国・中国・インドの部隊がトリシュリ3A、ハクベシ、トリシュリ3B、チリメの各水力発電所で合同の捜索・救助にあたっている。被災は5郡で、ラスワ郡・ヌワコット郡が甚大（影響を受けた人口は約160万人）、ダディン・ゴルカ・チトワンの3郡が中程度。車両通行可能な橋梁41橋が流失、4橋が損壊。"
+    },
+    {
+      "time": "1 Sep",
+      "tier": "official",
+      "src": "NDRRMA",
+      "en": "3,702 households (14,461 people: 7,453 male, 7,008 female, including 3,650 children and 1,204 older persons) remain isolated in Gosaikunda and Amachhodingmo Rural Municipalities in Rasuwa, with road, electricity and communication services disrupted for up to six days. 30 holding centres accommodate 3,930 people (Nuwakot 19 centres / 2,653 people; Rasuwa 11 centres / 1,277 people). In Nuwakot 1,267 houses are reported fully damaged and 1,253 partially damaged; satellite mapping identifies 4,689 buildings inside the flood-affected zone, which NDRRMA describes as estimated exposure and not verified damage.",
+      "ja": "ラスワ郡のゴサインクンダ、アマチョディンモの両村では3,702世帯・14,461人（男性7,453人、女性7,008人。うち子ども3,650人、高齢者1,204人）が孤立したままで、道路・電力・通信が最大6日間途絶している。避難所30か所に3,930人（ヌワコット19か所2,653人、ラスワ11か所1,277人）。ヌワコットでは住家1,267棟が全壊、1,253棟が半壊と報告された。衛星判読では浸水範囲内に4,689棟の建物が確認されているが、NDRRMAはこれを「推定される曝露であり、確認された被害ではない」としている。"
+    },
+    {
+      "time": "1 Sep 18:00",
+      "tier": "official",
+      "src": "NDRRMA",
+      "en": "NDRRMA Situation Report #11: 1,050 deaths (by district: Chitwan 321, Nawalparasi East 216, Nawalparasi West 170, Nuwakot 142, Gorkha 65, Dhading 57, Tanahu 38, Rasuwa 41), 3,916 out of contact (unchanged from the day's earlier cuts) and 292 treated for injuries across 16 health facilities (182 discharged, 74 under treatment, 33 referred, 3 died during treatment). 11,993 people rescued to date, including 4,364 by helicopter. 21,314 security personnel mobilised. The Prithvi Highway remains blocked at the Krishnabhir/Parewabhir section (Malekhu-Muglin) by continuing toe-cutting erosion of the road embankment; an alternative route is being sought. Nearly all cell towers in the affected corridor are back in service (Nepal Telecom: all 110 damaged towers restored; Ncell: 75 of 78). Power has been restored via a separate line from the Sanjen hydropower plant to most of Aamachhodingmo Rural Municipality, Rasuwa. Unidentified bodies are being held at 21 hospitals across districts pending identification.",
+      "ja": "NDRRMA状況報告第11号。死者1,050人（郡別：チトワン321、ナワルパラシ東216、ナワルパラシ西170、ヌワコット142、ゴルカ65、ダディン57、タナフ38、ラスワ41）、連絡不通3,916人（同日のこれまでの締めから横ばい）、16の医療施設で計292人を負傷治療（退院182、治療継続74、転送33、治療中死亡3）。これまでの救助者数は11,993人、うちヘリコプター救助4,364人。治安要員21,314人を動員。プリトビ・ハイウェイはムグリン〜マレクー間のクリシュナビール／パレワビール地区で、道路盛土の侵食（トー・カッティング）が継続し依然通行止め、迂回路を模索中。被災回廊内の携帯電話基地局はほぼ復旧（ネパール・テレコムは被害110基地局すべて復旧、エヌセルは78基地局中75基地局復旧）。ラスワ郡アマチョディンモ村の大部分で、サンジェン水力発電所からの別系統により電力が復旧。身元不明の遺体は各郡の病院21か所で保管され、身元確認を継続中。"
+    },
+    {
+      "time": "3 Sep",
+      "tier": "official",
+      "src": "Government of Japan",
+      "en": "The Government of Japan decided to dispatch a Japan Disaster Relief (JDR) expert team to support identification of the deceased, in response to a request from the Government of Nepal. No new NDRRMA situation report (beyond #11, 1 Sep 18:00) had been published as of this update; NDRRMA's official casualty figures are unchanged.",
+      "ja": "日本政府は、ネパール政府からの要請を受け、身元確認（遺体の識別）支援のため国際緊急援助隊（JDR）専門家チームの派遣を決定した。本更新時点でNDRRMAの新しい状況報告（第11号・9月1日18:00より後のもの）は公表されておらず、NDRRMAの公式な死傷者数は横ばいである。"
+    },
+    {
+      "time": "3 Sep",
+      "tier": "official",
+      "src": "IOM",
+      "en": "IOM Nepal Flood Response Situation Report #3 (as of 3 Sep): authorities reported 1,259 bodies recovered and 5,053 people missing; 12,038 people rescued in total, including 583 foreign nationals, with more than 21,402 security personnel mobilised. About 84,270 people are estimated affected across 17 municipalities in six districts. In Nuwakot District alone, 1,897 households have been displaced, 1,267 houses completely damaged and 1,253 partially damaged; an estimated 5,384 displaced people are at facilities health partners are assessing. This is the first agency figure to move the death toll and missing count beyond NDRRMA's 1 Sep Situation Report #11 (1,050 deaths, 3,916 missing); no NDRRMA PDF situation report matching this cut-off has been found.",
+      "ja": "IOM「ネパール洪水対応状況報告第3号」（9月3日時点）。当局発表として遺体収容1,259人、行方不明5,053人。これまでの救助累計12,038人（うち外国人583人）、動員した治安要員21,402人超。6郡17市町村で推計84,270人が被災。ヌワコット郡のみで1,897世帯が避難、住家1,267棟が全壊、1,253棟が半壊。保健関係機関が状況を確認中の避難施設に推計5,384人が滞在。この数値は、NDRRMA状況報告第11号（9月1日、死者1,050人・行方不明3,916人）を上回る、国連機関発の初めての更新である。この締め時点に対応するNDRRMAのPDF状況報告は見つかっていない。"
+    },
+    {
+      "time": "4 Sep",
+      "tier": "official",
+      "src": "WFP",
+      "en": "WFP Nepal Situation Report on the Rasuwa Flood Response (4 Sep): reported fatalities have risen to 1,259, with 5,083 people still missing (both figures again attributed to government/authorities, without a specific NDRRMA report number). WFP has dispatched 85.8 t of food rations for 15 days to Dhading, Nuwakot and Rasuwa, plus 2.8 t of BP-5 and 40 boxes (0.45 t) of fortified biscuits, and has facilitated 101 transport movements (57 supporting Government-led relief, 44 WFP dispatches). Three local governments across the Trishuli River in Rasuwa remain cut off by road. Separately, the Humanitarian Country Team's Nepal: Rasuwa Flood Flash Appeal (OCHA/UN RC Nepal, 4 Sep) reiterates the 84,270-person, 17-municipality, six-district affected estimate (NDRRMA-based) and adds about 19,284 households affected, with all 84,270 targeted for assistance; the appeal frames these as exposure-model estimates to be refined through joint assessment.",
+      "ja": "WFP「ラスワ洪水対応状況報告」（9月4日）。死者は1,259人に増加、行方不明はなお5,083人（いずれも「政府・当局」を出典とし、NDRRMAの報番号は示されていない）。WFPはダディン・ヌワコット・ラスワへ15日分の食料85.8トン、BP-5強化ビスケット2.8トンと強化ビスケット40箱（0.45トン）を配布し、輸送101回（政府主導の救援支援57回、WFP独自配送44回）を実施した。ラスワ郡のトリシュリ川対岸の3自治体は依然として道路が寸断され孤立している。別途、人道country teamによる「ネパール：ラスワ洪水 フラッシュアピール」（OCHA／国連ネパール常駐調整官事務所、9月4日）は、6郡17市町村・被災者84,270人という（NDRRMAに基づく）推計を踏襲し、新たに約19,284世帯が被災、84,270人全員を支援対象とするとしている。同アピールはこれらを、今後の合同調査で精緻化される曝露モデルの推計だとしている。"
+    },
+    {
+      "time": "4 Sep",
+      "tier": "official",
+      "src": "UNICEF (reported 11 Sep)",
+      "en": "An EU Humanitarian Aid-supported flight carrying 84 metric tonnes of relief supplies (AWD kits and diagnostic equipment, water tanks, hygiene kits, water treatment supplies, tents, winter clothing kits and learning materials) departed UNICEF's Copenhagen supply hub and landed in Kathmandu. Dozens of trucks subsequently moved the supplies to Rasuwa, Nuwakot and Dhading districts.",
+      "ja": "EU人道援助の支援を受けたUNICEFの物資輸送便（急性水様性下痢対応キット・診断機材、給水タンク、衛生キット、浄水資材、テント、乳幼児・子ども向け防寒着キット、学習用品など計84トン）がコペンハーゲンの物資拠点を出発し、カトマンズに到着。以降、多数のトラックでラスワ・ヌワコット・ダディン各郡へ物資を輸送した。"
+    },
+    {
+      "time": "5 Sep",
+      "tier": "official",
+      "src": "OCHA / UN RC Nepal",
+      "en": "OCHA/UN RC Nepal's Rasuwa Flood Situation Report No. 6 (as of 5 Sep) is the first UN report to attribute the 1,259 deaths / 5,083 out-of-contact / 12,038 rescued figures to a dated NDRRMA cut (3 September, 19:00), rather than an unspecified \"government/authorities\" source; no NDRRMA PDF for this cut has still been found. The report also gives an updated displacement count: 3,844 displaced people across 34 sites in Nuwakot, Rasuwa, Dhading and Kathmandu (up from OCHA's 1 Sep count of 3,458 across 27 sites in Nuwakot and Rasuwa only). IOM's Displacement Tracking Matrix estimates 4,288 households affected, of which 2,886 were displaced. The Humanitarian Country Team's Flash Appeal seeks US$49.6 million for 84,270 people (19,284 households) in 17 municipalities across six districts, with the largest sector requirements in food security (US$7.94m), WASH (US$7.9m), health (US$7.6m), logistics/emergency telecoms (US$7.33m) and shelter (US$7.1m); the CERF allocation has been recalibrated to US$2.5 million pending the appeal. A WFP-supported UN/partner coordination base is being established in Bidur, Nuwakot.",
+      "ja": "OCHA／国連ネパール常駐調整官事務所「ラスワ洪水状況報告第6号」（9月5日時点）は、死者1,259人・行方不明（連絡不通）5,083人・救助12,038人という数値を、初めて「NDRRMAの9月3日19:00締め」という具体的な出典に結びつけた国連報告である（従来は「政府・当局」としか示されていなかった）。ただしこの締め時刻に対応するNDRRMAのPDFはなお見つかっていない。同報告は避難者数も更新し、ヌワコット・ラスワ・ダディン・カトマンズの4郡34か所に3,844人が避難しているとした（9月1日時点のOCHA集計はヌワコット・ラスワ2郡27か所・3,458人）。IOMの避難民追跡調査（DTM）は、洪水で被災した世帯を4,288、うち避難した世帯を2,886と推計している。人道country teamのフラッシュアピールは、6郡17市町村の84,270人（19,284世帯）向けに4,960万米ドルを要請しており、分野別では食料安全保障（794万ドル）、水・衛生（790万ドル）、保健（760万ドル）、ロジスティクス・緊急通信（733万ドル）、シェルター（710万ドル）が大きい。CERF拠出はアピールに先立ち250万米ドルへ再調整された。WFPの支援によりヌワコット郡ビドゥルに国連・パートナー向けの調整拠点が設置されつつある。"
+    },
+    {
+      "time": "5-6 Sep",
+      "tier": "official",
+      "src": "WFP (Rasuwa Flood Response SitRep, 10 Sep)",
+      "en": "WFP made its first humanitarian cargo-drone (UAS) food-assistance delivery to Briddim, Rasuwa - a first for any Nepal emergency operation - complementing helicopter operations to communities cut off by the floods. WFP's own situation report of 10 September dates this to 6 September, while the UN Resident Coordinator's Office Flash Report No. 7 (covering 4-7 September) dates the same first drone flight to 5 September; both figures are kept as reported rather than reconciled to one date.",
+      "ja": "WFPが人道支援用の貨物ドローン（UAS）による初の食料支援を、ラスワ郡ブリディムへ実施した。ネパールの緊急対応でドローン配送が使われるのは初めて。道路が途絶した地域向けのヘリコプター輸送を補完するもの。WFP自身の9月10日付状況報告はこれを9月6日としているが、国連常駐調整官事務所のフラッシュレポート第7号（9月4〜7日を対象）は同じ初回飛行を9月5日としており、日付は一致させず両方のまま記録する。"
+    },
+    {
+      "time": "6 Sep 11:00",
+      "tier": "official",
+      "src": "NDRRMA (The Rising Nepal, RSS)",
+      "en": "NDRRMA update as of 11:00, reported by The Rising Nepal (RSS) on 6 September: 1,341 bodies recovered and 4,996 people on the missing list, including 589 foreigners and around 100 security personnel and employees. By district the recovered bodies are Rasuwa 163, Nuwakot 195, Dhading 67, Chitwan 362, Gorkha 74, Tanahu 38, Nawalparasi East 222 and Nawalparasi West 220. 98 bodies have been identified and handed over to families. 13,104 people have been rescued and 6,075 injured have been treated. 3,652 affected people are accommodated at 39 relief camps in Rasuwa, Nuwakot, Dhading and Kathmandu. 21,465 security personnel are mobilised (Nepal Police 7,975, Nepali Army 9,287, Armed Police Force 4,203). Relief has moved from Kathmandu in 83 truckloads, 38 jeeps and 9 helicopter flights, with the Armed Police Force dispatching aid to Rasuwa and Nuwakot in 173 flights.",
+      "ja": "NDRRMAの11:00時点の集計（The Rising Nepal〈RSS配信〉9月6日報道）。遺体収容1,341人、行方不明の名簿に4,996人（外国人589人、治安要員・職員約100人を含む）。郡別の遺体収容はラスワ163、ヌワコット195、ダディン67、チトワン362、ゴルカ74、タナフン38、ナワルパラシ東222、同西220。98人の身元が確認され遺族に引き渡された。救助は13,104人、負傷者6,075人が手当てを受けた。ラスワ・ヌワコット・ダディン・カトマンズの救援キャンプ39か所に3,652人が滞在。動員した治安要員は21,465人（ネパール警察7,975、ネパール陸軍9,287、武装警察4,203）。カトマンズからトラック83台・ジープ38台・ヘリ9便で物資を輸送し、武装警察がラスワ・ヌワコットへ173便を飛ばした。"
+    },
+    {
+      "time": "6 Sep",
+      "tier": "official",
+      "src": "MoFA / NDRRMA (The Rising Nepal, RSS)",
+      "en": "A preliminary Rapid Damage and Needs Assessment (RDNA), reported by the Ministry of Foreign Affairs on 5 September and carried by The Rising Nepal on 6 September, indicates about 32,933 people affected and about 7,570 houses damaged or affected. 55 km of roads, 37 motorable bridges and 68 suspension bridges were destroyed; the Department of Roads separately put damage to roads and motorable bridges alone at NPR 20 billion. About 1,806 hectares of agricultural land, 13 hydropower projects, one solar plant and two transmission lines were damaged, with 783 MW of hydropower capacity affected. The full RDNA report is not yet published; NDRRMA says an expert team is finalising it. A comprehensive Post Disaster Needs Assessment (PDNA) is being undertaken in parallel. A 15-member Disaster Assistance and Response Team (DART) from Australia arrived on Friday and an 11-member Special Malaysian Disaster Assistance and Rescue Team (SMART) arrived on Saturday morning.",
+      "ja": "迅速被害・ニーズ評価（RDNA）の暫定結果。外務省が9月5日に示し、The Rising Nepal が9月6日に報じた。被災は約32,933人、住家は約7,570棟が損壊または被災。道路55km、車道橋37橋、吊り橋68橋が破壊された。道路局は別途、道路と車道橋だけで200億ネパールルピーの被害としている。農地約1,806ha、水力発電13事業、太陽光発電1か所、送電線2条が被害を受け、水力発電容量783MWが影響を受けた。RDNAの完全な報告は未公表で、NDRRMAは専門家チームが最終化中としている。並行して包括的な災害後ニーズ評価（PDNA）も実施されている。豪州の災害支援・対応チーム（DART）15人が金曜に、マレーシアの特別災害支援・救助チーム（SMART）11人が土曜朝に到着した。"
+    },
+    {
+      "time": "6 Sep",
+      "tier": "media",
+      "src": "Direct Relief (NGO announcement)",
+      "en": "Direct Relief reported that 14 tonnes of requested medical aid (antibiotics, IV fluids, chronic-disease medication, water-purification supplies and PPE) arrived in Kathmandu over the weekend of 5-6 September, with additional supplies arriving on 6 September for distribution in coordination with the Ministry of Health and Population. Partner organisations (One Heart Worldwide, the Shanti Foundation, Mountain Heart Nepal, Dhulikhel Hospital) reported delivering medicines to Trishuli Hospital (Nuwakot) and Jibjibe Primary Hospital and moving oxygen concentrators to Rasuwa, citing more than 40 bridges washed away and the Rasuwa-Nuwakot road link severed.",
+      "ja": "Direct Reliefは、要請していた医療物資14トン（抗生物質、輸液、慢性疾患治療薬、浄水資材、個人防護具）が9月5〜6日の週末にカトマンズへ到着し、9月6日にも追加物資が到着、保健人口省と調整のうえ配布するとした。パートナー団体（One Heart Worldwide、Shanti Foundation、Mountain Heart Nepal、Dhulikhel Hospital）はトリシュリ病院（ヌワコット）およびジブジベ第一次病院への医薬品搬送や、ラスワへの酸素濃縮器の移送を報告し、橋40以上が流失しラスワ〜ヌワコット間の道路が寸断されている状況を挙げた。"
+    },
+    {
+      "time": "7 Sep",
+      "tier": "official",
+      "src": "Department of Tourism (via The Rising Nepal)",
+      "en": "The Department of Tourism reports 775 people missing since the 26 August flood in a tourist-specific count: 587 foreign nationals from 34 countries and 188 Nepalis (guides, support staff and pilgrims). 307 foreign tourists have been rescued and 7 previously out of contact have been reached.",
+      "ja": "観光局が、8月26日の洪水以降、観光客に限った集計として775人の行方不明を発表。内訳は34か国の外国人587人、ネパール人188人（ガイド・同行スタッフ・巡礼者）。外国人観光客307人が救助され、連絡不通だった7人はその後連絡が取れた。"
+    },
+    {
+      "time": "7 Sep",
+      "tier": "official",
+      "src": "Nepali Army (NDRRMA press conference)",
+      "en": "The Nepali Army estimates that as many as 121 people could be trapped inside tunnels of flood-damaged hydropower projects and says the search inside the tunnels will continue until a breakthrough is achieved.",
+      "ja": "ネパール陸軍は、洪水で被災した水力発電施設のトンネル内に最大121人が取り残されている可能性があると推計し、突破口が開くまで坑内の捜索を続けるとした。"
+    },
+    {
+      "time": "7 Sep",
+      "tier": "media",
+      "src": "The Kathmandu Post",
+      "en": "Field reporting from Aamachhodingmo Rural Municipality, Rasuwa (203 on the missing list) describes a rural municipality still completely cut off by road 11 days after the flood, reachable only by helicopter, with residents reporting food and salt supplies exhausted.",
+      "ja": "ラスワ郡アマチョディンモ村（行方不明203人）からの現地報道。発災から11日経ても陸路が完全に途絶し、ヘリコプターのみが到達手段。住民は食料・塩が尽きたと訴えている。"
+    },
+    {
+      "time": "7 Sep",
+      "tier": "official",
+      "src": "Government of Pakistan",
+      "en": "Pakistan hands over 100 tonnes of relief assistance to Nepal to support people affected by the floods and landslides.",
+      "ja": "パキスタンが、洪水・地滑りの被災者支援のため救援物資100トンをネパールへ引き渡した。"
+    },
+    {
+      "time": "9 Sep (arrived 5 Sep)",
+      "tier": "official",
+      "src": "Government of the Republic of Korea",
+      "en": "The Government of the Republic of Korea announced (9 September) that it had dispatched emergency relief supplies worth KRW 130 million - 36,000 emergency thermal blankets and 2,320 medium-thermal blankets - which arrived in Nepal by commercial flight on 5 September, in addition to the USD 1 million in humanitarian assistance announced on 27 August and the KDRT deployment on 1 September.",
+      "ja": "韓国政府は9月9日、緊急救援物資（緊急用防寒毛布36,000枚・中間用防寒毛布2,320枚、総額1億3,000万ウォン相当）を送付し、商業便で9月5日にネパールへ到着したと発表した。8月27日発表の100万米ドルの人道支援、9月1日のKDRT派遣に続く追加支援。"
+    },
+    {
+      "time": "8 Sep 18:00",
+      "tier": "official",
+      "src": "NDRRMA (Rasuwa Flood: Search, Rescue and Relief Update)",
+      "en": "NDRRMA flash update as of 18:00: 1,358 human casualties (bodies recovered) by district - Rasuwa 170, Nuwakot 197, Dhading 70, Gorkha 75, Tanahu 38, Chitwan 363, Nawalparasi East 223, Nawalparasi West 222; 102 bodies handed over to families for burial. Missing persons around 5,326, with the 102 handovers already deducted from the total: missing from Rasuwa 2,860 (district citizens 1,393, citizens of other districts 1,286, Nepal Army 45, Nepal Police 25, Armed Police Force 12, government employees 73, bank/financial-institution employees 26), missing from Nuwakot around 1,981 Nepali citizens (source: District Administration Office, Nuwakot), and around 587 foreign tourists. 7,037 people receiving or having received injury treatment (329 at 10 hospitals, of whom 252 discharged, 43 under treatment and 30 referred elsewhere, plus 4 deaths during treatment; 3,421 treated by the Nepali Army and 3,287 by the Armed Police Force). 13,583 rescued to date, including 1,157 Nepali Army helicopter flights to 7 Sep plus 112 by the Nepali Army and private helicopters that day, 129 private-sector flights from Kathmandu and 210 Armed Police Force flights. 21,146 security personnel mobilised (Nepal Police 7,912, Nepali Army 9,031, Armed Police Force 4,203). 3,628 people sheltering at 37 holding centres (Rasuwa 733, Nuwakot 2,699, Dhading 196). Fuel stock in the affected area: 45,000 L diesel, 16,000 L petrol, 16,000 L aviation fuel, 457 LP gas cylinders. This is the first NDRRMA PDF situation update found since the 1 Sep 18:00 SitRep #11; NDRRMA's own PDF series had continued daily throughout, but the correct API listing (/api/v1/publication/rasuwa-sitrep/) had not been re-checked since 1 September.",
+      "ja": "NDRRMAの18:00時点フラッシュアップデート。人的被害（収容遺体）は計1,358人、郡別ではラスワ170、ヌワコット197、ダディン70、ゴルカ75、タナフ38、チトワン363、ナワルパラシ東223、ナワルパラシ西222。遺族への遺体引き渡しは102体。行方不明は約5,326人で、この102体はすでに総数から差し引き済み。内訳はラスワからの行方不明2,860人（同郡住民1,393人、他郡住民1,286人、ネパール陸軍45人、ネパール警察25人、武装警察12人、政府職員73人、銀行・金融機関職員26人）、ヌワコットからの行方不明ネパール人約1,981人（出典：ヌワコット郡行政事務所）、外国人観光客約587人。治療中・治療済みの負傷者は計7,037人（うち10病院で329人、退院252人・治療中43人・他院転送30人、治療中の死亡4人を含む。ネパール陸軍による治療3,421人、武装警察による治療3,287人）。救出は累計13,583人で、ネパール陸軍ヘリの累計飛行1,157回（9月7日まで）に加え当日はネパール陸軍・民間ヘリで112回、カトマンズ発の民間セクター便129回、武装警察便210回。動員した治安要員は計21,146人（ネパール警察7,912人、ネパール陸軍9,031人、武装警察4,203人）。34ではなく37か所のホールディングセンターに3,628人が避難（ラスワ733人、ヌワコット2,699人、ダディン196人）。被災地の燃料在庫はディーゼル45,000リットル、ガソリン16,000リットル、航空燃料16,000リットル、LPガスボンベ457本。9月1日18:00の第11報以来はじめて確認できたNDRRMAのPDF状況報告である。NDRRMA自身のPDFシリーズは実際には毎日発行され続けていたが、正しいAPI一覧（/api/v1/publication/rasuwa-sitrep/）を9月1日以降確認し直していなかった。"
+    },
+    {
+      "time": "8 Sep 19:00",
+      "tier": "official",
+      "src": "NDRRMA Situation Report #18",
+      "en": "NDRRMA Situation Report #18 (Bhadau 23, 19:00 NPT), the first formal numbered NDRRMA PDF situation report found since #11 (1 Sep 18:00; report numbers #12-#17 were published daily on ndrrma.gov.np but had not previously been retrieved). Casualty and rescue figures corroborate the same day's 18:00 flash update (1,358 deaths, about 5,326 missing, 7,037 receiving treatment, 13,583 rescued, 21,146 security personnel), with one internal inconsistency: this report counts 34 holding centres and 3,328 people sheltering (Rasuwa 9 centres/634 people, Nuwakot 25 centres/2,694 people; Dhading not itemised here), against 37 centres/3,628 people including 196 in Dhading in the same day's 18:00 flash update - not reconciled. Search and rescue continues at six hydropower projects along the Bhote Koshi-Trishuli corridor: at Rasuwagadhi (120 MW) a Composite Quick Response Team reached the powerhouse, transformer room and control point (nothing found); at Langtang (20 MW) crews are clearing an estimated 10 m of soil and boulders blocking an escape route; at Chilime (22 MW) roads to the tunnel have been cleared of boulders with excavators and a winch; at Upper Trishuli-1 (216 MW) and Mailung Khola (5 MW) joint Nepali Army-Korea Disaster Relief Team drone searches of about 1 km around the tunnels found nothing; at Trishuli 3A (60 MW) a joint Nepali Army/Armed Police Force/Nepal Police/project team search of the tunnel and powerhouse found nothing, and four excavators have been brought to Trishuli 3B (37 MW) as needed. Bridge works: 15 of 19 bays of an Acrow bridge across the Tadi river on the Galchhi-Trishuli road, near Devighat, are installed, with the remaining four bays' hinges, roller positions, jacking and bolting underway; Nepali Army engineers have begun a roughly 250 m suspension bridge linking Dhunche (below the Buddha temple) to Trishuli Bazaar. Funding: 45 international NGOs have contributed relief worth about NPR 371.5 million (of which NPR 31.9 million in cash to the Prime Minister's Disaster Relief/Natural Disaster Rescue funds) and 24 national NGOs about NPR 121.1 million (of which NPR 7.3 million to the same funds); under a simplified approval process, 52 organisations' 65 new projects and 2 revisions worth a combined NPR 708.1 million were approved between 15 and 22 Bhadau (31 Aug-7 Sep) for disaster response coordination. 38 emergency medical teams (177 health workers) have treated more than 4,722 patients and provided psychosocial counselling to 4,111 people; DNA sample collection for unidentified remains has begun in Rasuwa. A stretch of the Prithvi Highway at Krishnabhir remains blocked by ongoing toe-cutting; a 250 m alternative track has been opened while widening work continues.",
+      "ja": "NDRRMA状況報告第18号（ネパール暦バドラ23日19:00）。第11号（9月1日18:00）以来はじめて確認できた、番号を付した正式なNDRRMA PDF状況報告である（第12〜17号はndrrma.gov.npで毎日公表されていたが、これまで取得できていなかった）。死傷者・救出関連の数値は同日18:00のフラッシュアップデートと整合（死者1,358人、行方不明約5,326人、治療中7,037人、救出13,583人、治安要員21,146人）。ただし1点、同日内で食い違いがある。本報告はホールディングセンター34か所・避難者3,328人（ラスワ9か所・634人、ヌワコット25か所・2,694人。ダディンの内訳なし）とする一方、同日18:00のフラッシュアップデートはダディン196人を含む37か所・3,628人としており、両者は未調整のままである。ボテコシ・トリシュリ回廊沿いの6つの水力発電事業で捜索救助が継続中。ラスワガディ（120MW）ではComposite Quick Response Teamが発電所・変圧器室・制御地点まで到達（発見なし）。ラングタン（20MW）では脱出路をふさぐ推定10メートルの土砂・巨石の撤去作業中。チリメ（22MW）ではトンネルへの道路の巨石を重機とウインチで除去済み。アッパートリシュリ1（216MW）とマイルン・コーラ（5MW）ではネパール陸軍と韓国災害救援隊（KDRT）の合同チームがトンネル周辺約1kmをドローンで捜索（発見なし）。トリシュリ3A（60MW）ではネパール陸軍・武装警察・警察・事業者合同チームがトンネルと発電所を捜索（発見なし）、トリシュリ3B（37MW）には必要な掘削機4台を搬入。橋梁復旧では、デヴィガート付近ガルチ・トリシュリ道路のタディ川に架けるアクロウ橋（Acrow Bridge）で全19ベイ中15ベイの設置が完了、残る4ベイのヒンジ・ローラー位置調整・ジャッキ・ボルト締めを急いでいる。また、ネパール陸軍工兵がドゥンチェ（仏塔下）とトリシュリ・バザールを結ぶ約250メートルの吊り橋建設に着手した。資金面では、国際NGO45団体が総額約3億7,149万ネパールルピー相当の支援（うち現金3,190万7,777ルピーを首相災害救援・首相自然災害救援基金へ拠出）、国内NGO24団体が約1億2,113万ルピー相当（うち727万2,427ルピーを同基金へ）を拠出。簡易承認手続きにより、バドラ15日から22日（8月31日〜9月7日）にかけて52団体・65新規事業と2件の変更事業、計7億810万6,800ルピー相当が承認された。緊急医療チーム38隊（保健従事者177人）が4,722人超を治療し、4,111人に心理社会的支援を提供。ラスワで身元不明遺体のDNA検体採取を開始。プリトビ・ハイウェイのクリシュナビール地点は法面崩落（toe cutting）により依然通行止めで、250メートルの迂回路を開設のうえ拡幅工事を急いでいる。"
+    },
+    {
+      "time": "8 Sep",
+      "tier": "official",
+      "src": "UNICEF Nepal Humanitarian Situation Report No.3, 8 Sep 2026",
+      "en": "UNICEF's third situation report puts affected population at 84,270 (32,021 children, 1,854 people with disabilities) across 17 municipalities in six districts; 3,630 displaced people in 37 holding centres across three districts (7 Sep). 46 water supply systems, 23 schools and seven health facilities are reported damaged. WASH supplies have reached 48,600 people and water systems serving 17,500 have been restored. Mental health and psychosocial support has reached 1,952 people (782 children) via community outreach and 2,893 (1,382 children/adolescents) via specialist services. 541 unaccompanied and separated children have been reported, of whom 18 have been reunited with families. Education supplies have been dispatched for more than 9,500 children, and emergency information has reached an estimated 1.67 million people via seven radio stations. UNICEF states USD 17.2 million is required to meet the immediate needs of affected children and families.",
+      "ja": "UNICEFの状況報告第3号は、被災者を6郡17市町村で84,270人（うち子ども32,021人、障害者1,854人）とし、9月7日時点で3郡37か所の避難所に3,630人が滞在しているとする。給水施設46か所、学校23校、医療施設7か所が損壊と報告。WASH支援が48,600人に到達し、17,500人分の給水施設が復旧。心理社会的支援はコミュニティ活動で1,952人（子ども782人）、専門的支援で2,893人（子ども・若者1,382人）に到達。保護者不明・離散した子どもは541人確認され、うち18人が家族と再会。教育用品は9,500人超の子ども向けに発送済み、緊急情報はラジオ7局を通じ推計167万人に到達。UNICEFは被災した子どもと家族の緊急ニーズに17.2百万米ドルが必要としている。"
+    },
+    {
+      "time": "9 Sep 19:00",
+      "tier": "official",
+      "src": "NDRRMA Situation Report #19",
+      "en": "NDRRMA Situation Report #19 (19:00 NPT): 1,369 deaths (up 11), 5,132 missing (down 194 from the 8 Sep cut - the Rasuwa and foreign-tourist breakdowns are unchanged; the decrease is entirely a downward revision of the Nuwakot count, now disaggregated as 651 district residents and 1,136 residents of other districts), 7,474 people receiving or having received injury treatment (333 at 19 hospitals plus 3,535 treated by the Nepali Army and 3,606 by the Armed Police Force), 13,646 rescued to date, 21,185 security personnel mobilised. 3,395 people sheltering at 34 holding centres (Rasuwa 775 at 9 centres, Nuwakot 2,620 at 25 centres). A National Council for Rights of Children rapid assessment identifies 102 parentally-orphaned children across 30 holding centres, with tracing/reunification under way for 439 separated children. One body was recovered about 1,200 m inside Audit 3 Tunnel of the Upper Trishuli-1 Hydropower Project at Hakubeshi; at Trishuli 3B, excavation to 11 m depth uncovered a beam/pillar and bricks, and work continues. One woman in critical obstetric condition and her newborn were air-rescued to Paropakar Maternity and Women's Hospital under a new arrangement for at-risk pregnant women, new mothers and newborns in areas cut off by road. At Trishuli 3B, a joint Nepali Army-Australian SAR Team conducted terrain mapping of the project area alongside the excavation. Relief drone flights to Amachhodingmo Rural Municipality (Rasuwa), disconnected from road transport, had delivered 1,591 kg of food across 31 flights to date.",
+      "ja": "NDRRMA状況報告第19号（19:00 NPT）。死者1,369人（11人増）、行方不明5,132人（9月8日締めから194人減。ラスワと外国人観光客の内訳は変わらず、減少はすべてヌワコットの数値の下方修正によるもので、同郡住民651人・他郡住民1,136人に新たに分解された）、治療中・治療済みの負傷者7,474人（19病院で333人、ほかネパール陸軍による治療3,535人、武装警察による治療3,606人）、累計救出13,646人、動員治安要員21,185人。34か所のホールディングセンターに3,395人が避難（ラスワ9か所・775人、ヌワコット25か所・2,620人）。児童権利国家評議会（NCRC）の緊急調査により、30か所のホールディングセンターで親を失った子ども102人を確認、離散した子ども439人の追跡・家族再統合の手続きが進行中。アッパートリシュリ1水力発電事業（ハクベシ）のオーディット3トンネル内、約1,200メートル地点で遺体1体を収容。トリシュリ3Bでは深さ11メートルまでの掘削で梁・柱状の構造物とレンガを発見し、作業を継続中。陸路が途絶した地域の危険な妊産婦・新生児を空輸する新たな仕組みのもと、産科的に重篤な状態の女性1人とその新生児がパロパカール母子病院へ空輸された。 トリシュリ3Bでは、ネパール陸軍とオーストラリアSARチームの合同チームが、掘削作業とあわせて事業区域の地形図作成を実施。道路が途絶しているラスワ郡アマチョディンモ地方自治体へは、これまでにドローン31便で食料1,591kgを配送済み。"
+    },
+    {
+      "time": "6 Sep",
+      "tier": "official",
+      "src": "Disaster Risk Reduction and Management Executive Committee (via UN RC Nepal Flash Report No.7)",
+      "en": "The Disaster Risk Reduction and Management Executive Committee amended emergency warehouse procedures, allowing NDRRMA-held stocks to be released directly to UN agencies, the Nepal Red Cross Society and community hospitals during disasters, subject to recipients coordinating distribution with district and local disaster committees and reporting to the authorities.",
+      "ja": "災害リスク削減管理執行委員会が緊急倉庫の運用手続きを改定し、NDRRMAが保有する備蓄物資を災害時に国連機関・ネパール赤十字社・地域病院へ直接放出できるようにした。受領団体は郡・地方の災害委員会と配布を調整し、当局へ報告することが条件。"
+    },
+    {
+      "time": "7 Sep",
+      "tier": "official",
+      "src": "UN Resident Coordinator Nepal (UN Member States briefing, Geneva)",
+      "en": "UN Resident Coordinator for Nepal Lila Pieters Yahia formally launched the Nepal Rasuwa Flood Flash Appeal at a UN Member States briefing in Geneva, seeking USD 49.6 million to assist 84,270 people across six districts through 31 December. She said a USD 2.5 million CERF allocation had funded the initial response but the bulk of the requirement remained unmet, and stressed the appeal covers targeted humanitarian action rather than longer-term recovery or reconstruction.",
+      "ja": "ネパール担当国連常駐調整官のリラ・ピータース・ヤヒア氏が、ジュネーブでの国連加盟国向けブリーフィングで「ネパール・ラスワ洪水フラッシュアピール」を正式に立ち上げた。6郡・84,270人を対象に12月31日までの支援として4,960万米ドルを要請。250万米ドルのCERF拠出が当初対応の資金となったが、必要額の大半は依然未充足であるとし、本アピールは中長期の復旧・復興ではなく的を絞った人道支援を対象とすると強調した。"
+    },
+    {
+      "time": "10 Sep",
+      "tier": "official",
+      "src": "WFP Nepal Situation Report on the Rasuwa Flood Response, 10 Sep 2026",
+      "en": "WFP reports it has dispatched 114.8 mt of food rations (a 15-day supply) to Dhading, Nuwakot and Rasuwa, including 13.3 mt by helicopter, and is using cargo drones as an additional delivery modality; the Logistics and Telecommunications Cluster has activated free common services for humanitarian partners. WFP states about 14,500 people in Gosaikunda and Amachhodingmo, upper Rasuwa, remain disconnected from road access, electricity and phone signal since the flood, and about 3,500 displaced people continue sheltering in government centres across Nuwakot, Rasuwa, Dhading and Kathmandu.",
+      "ja": "WFPは、ダディン・ヌワコット・ラスワの3郡へ食料114.8トン（15日分、うちヘリ空輸13.3トン）を配送済みとし、追加の輸送手段として貨物用ドローンも活用しているとする。ロジスティクス・電気通信クラスターは人道パートナー向けに無償の共通サービスを開始。WFPによれば、ラスワ郡上流のゴサインクンダ・アマチョディンモでは約14,500人が発災以来、道路・電力・電話回線から依然孤立しており、ヌワコット・ラスワ・ダディン・カトマンズの各政府避難所には引き続き約3,500人が滞在している。"
+    },
+    {
+      "time": "10 Sep",
+      "tier": "official",
+      "src": "Government of Canada",
+      "en": "Canada deployed two RCMP Disaster Victim Identification (DVI) experts to Kathmandu to work under Interpol DVI standards, joining Canadian officials already on the ground; the RCMP, via Interpol Ottawa, is coordinating DNA sample collection from families of missing Canadians. Canada states it is aware of 29 Canadians and permanent residents in Nepal and the Tibet Autonomous Region whose whereabouts remain unconfirmed, and has committed CAD 5 million in humanitarian funding plus more than 18,000 emergency relief items from its stockpiles, managed by the Canadian Red Cross.",
+      "ja": "カナダはRCMP（王立カナダ騎馬警察）の遺体身元確認（DVI）専門家2人をカトマンズへ派遣し、インターポールのDVI基準の下、既に現地入りしていたカナダ当局者と合流させた。RCMPはインターポール・オタワを通じ、行方不明のカナダ人家族からのDNA検体採取を調整している。カナダ政府は、所在が未確認のカナダ人・永住者がネパールおよびチベット自治区に29人いるとしており、人道支援として500万カナダドルを拠出、カナダ赤十字社が管理する緊急備蓄から救援物資18,000点超を提供している。"
+    },
+    {
+      "time": "10 Sep",
+      "tier": "official",
+      "src": "ICRC",
+      "en": "ICRC reported that, working with the Nepal Red Cross Society, it has supplied 700 body bags pre-positioned before the floods plus a further 3,500-plus that arrived subsequently, and has deployed Restoring Family Links, forensics and management specialists from its Delhi regional delegation to support family tracing and the dignified management of the dead, including joint site visits to Nuwakot and forensic support to hospitals in Kathmandu and Pokhara. Authorities cited in the same report put the toll at more than 1,000 bodies recovered, more than 5,000 still missing and about 12,000 rescued - rounder and, in the case of the rescued total, lower than the same-day NDRRMA figures, reflecting the lag typical of secondary compilations rather than a correction.",
+      "ja": "ICRCは、ネパール赤十字社と協力し、発災前から備蓄していた遺体袋700枚に加え、その後到着した3,500枚超を提供したと発表。デリー地域代表部からRFL（家族再統合）・法医学・運営の専門家を派遣し、家族の追跡調査と遺体の尊厳ある取り扱いを支援しているとし、ヌワコットへの合同訪問やカトマンズ・ポカラの病院への法医学支援を挙げた。同報告が引用する当局発表は、収容遺体1,000体超、行方不明5,000人超、救出約12,000人としており、丸めた数値であること、また救出数については同日のNDRRMA発表より少ないことから、訂正ではなく二次的な集計の遅れによるものとみられる。"
+    },
+    {
+      "time": "11 Sep",
+      "tier": "official",
+      "src": "Emergency Telecommunications Cluster / Logistics Cluster / WFP",
+      "en": "The Logistics & Telecommunications Cluster (LTC) Telecoms Area issued Situation Report #2 (reporting period 5-11 Sep): a Telecoms Coordinator arrived in Kathmandu on 5 September for an initial two-week mission to help identify and prioritise telecommunications requirements at common humanitarian operational locations; the Government has requested sustainable backup-power solutions for telecommunications towers at inaccessible sites where disrupted fuel supply has made generator-dependent operations unsustainable; a two-month Telecoms response plan is being developed. No new casualty or damage figures.",
+      "ja": "ロジスティクス・電気通信クラスター（LTC）電気通信分野が状況報告第2号（対象期間9月5〜11日）を発出。テレコム・コーディネーターが9月5日にカトマンズ入りし、当初2週間の任務で人道支援拠点における通信ニーズの特定・優先順位付けを支援。政府は、燃料供給の途絶で発電機依存の運用が困難になっているアクセス困難な通信塔への持続可能な予備電源の導入支援を要請。2か月間のテレコム対応計画を策定中。新規の死傷者・被害数値なし。"
+    },
+    {
+      "time": "12 Sep 19:00",
+      "tier": "official",
+      "src": "NDRRMA Situation Report #22",
+      "en": "NDRRMA Situation Report #22 (19:00 NPT): 1,386 deaths (up 17 from #19) - Chitwan 364, Nawalparasi East 229, Nawalparasi West 222, Nuwakot 199, Rasuwa 185, Gorkha 77, Dhading 70, Tanahu 38, Kathmandu 2; 5,130 missing (down 2, essentially unchanged); 13,728 rescued to date (up 82); 1,482 total helicopter flights. 339 people treated at 19 health facilities (269 discharged, 34 under treatment, 32 referred, 4 deaths during treatment); separately, 8,615 people are reported treated through various security agencies and 3,732 by the Nepali Army's own medical teams, neither reconciled with the hospital figure or each other. 104 recovered bodies have been identified to date; 1,779 DNA reference samples collected from relatives of the missing. NDRRMA's RDNA team released a preliminary Rapid Damage and Needs Assessment: total physical damage/loss of NPR 408.29 billion (USD 2,695.33 million) and reconstruction/recovery needs of NPR 723.32 billion (USD 4,774.99 million), with infrastructure (especially energy) the hardest-hit sector on both measures. Search and rescue continues at six hydropower sites along the Bhote Koshi-Trishuli corridor (Rasuwagadhi, Langtang, Chilime, Upper Trishuli-1, Mailung Khola, Trishuli 3A/3B); a body was recovered inside the Rasuwagadhi Hydropower tunnel, with nothing further found at the other sites.",
+      "ja": "NDRRMA状況報告第22号（19:00 NPT）。死者1,386人（第19号から17人増）— チトワン364、ナワルパラシ東229、ナワルパラシ西222、ヌワコット199、ラスワ185、ゴルカ77、ダディン70、タナフ38、カトマンズ2。行方不明5,130人（2人減、ほぼ横ばい）。累計救出13,728人（82人増）。ヘリコプター総飛行回数1,482回。19の医療施設で339人を治療（退院269人、治療中34人、他院転送32人、治療中の死亡4人）。別途、各種治安機関による治療8,615人、ネパール陸軍独自の治療実績3,732人と報告されているが、いずれも病院集計や相互とも未突合。収容遺体のうち身元確認済みは104体、行方不明者親族からのDNA参照検体1,779件を採取。NDRRMAのRDNAチームは暫定の災害被害・ニーズ迅速評価を公表：物的被害・損失総額NPR 4,082.9億（USD 26億9,533万）、復旧・復興必要額NPR 7,233.2億（USD 47億7,499万）で、インフラ（特にエネルギー分野）が被害・必要額とも最大。ボテコシ・トリシュリ回廊沿いの6水力発電事業（ラスワガディ、ランタン、チリメ、アッパートリシュリ1、マイルンコーラ、トリシュリ3A/3B）で捜索救助が継続中。ラスワガディ水力発電のトンネル内で遺体1体を発見、他の地点ではこれ以上の発見はない。"
+    }
+  ],
+  "response_measures": [
+    {
+      "tier": "official",
+      "en": "The Government mobilized the Nepali Army, the Armed Police Force and Nepal Police for search, rescue and relief, supported by military and private helicopters.",
+      "ja": "政府はネパール陸軍・武装警察・警察を捜索救助と救援に動員し、軍および民間のヘリコプターがこれを支援している。"
+    },
+    {
+      "tier": "official",
+      "en": "The Cabinet ordered free medical treatment for the injured, financial assistance to bereaved families, the reopening of roads, restoration of power and telecommunications, and food and shelter for those displaced.",
+      "ja": "閣議は、負傷者の医療費無償化、遺族への財政支援、道路の啓開、電力・通信の復旧、避難者への食料と住まいの提供を決定した。"
+    },
+    {
+      "tier": "official",
+      "en": "Nepal requested assistance from China and India.",
+      "ja": "ネパールは中国とインドに支援を要請した。"
+    }
+  ],
+  "support_domestic": [
+    {
+      "tier": "official",
+      "source": "Nepal Red Cross Society / IFRC, 26-27 Aug",
+      "en": "The Nepal Red Cross Society began distributing water, tarpaulins, blankets and first-aid supplies, though many of the worst-affected communities in Rasuwa remain hard to reach because roads and bridges are destroyed.",
+      "ja": "ネパール赤十字社が飲料水、ターポリン、毛布、応急手当用品の配布を開始した。ただし道路と橋の損壊により、ラスワ郡の被害の大きい集落の多くは依然として到達困難である。"
+    }
+  ],
+  "support_international": [
+    {
+      "tier": "official",
+      "source": "ADRC / Sentinel Asia / International Charter, 26 Aug",
+      "en": "ADRC received the NDRRMA's request for rapid satellite imagery and activated both Sentinel Asia and the International Charter on the day of the event. The Charter records the requestor as \"ADRC on behalf of the Department of Hydrology and Meteorology (DHM)\" — Activation #1052, 26 August. The Sentinel Asia emergency observation request is SA-00658, and its record notes escalation to the International Charter and carries GLIDE FF-2026-000162-NPL.",
+      "ja": "ADRCはNDRRMAからの緊急衛星画像要請を受け、発災当日にセンチネルアジアと国際災害チャーターの双方を発動した。チャーター側の記載では要請者は「水文気象局（DHM）に代わってADRC」で、Activation #1052、8月26日。センチネルアジアの緊急観測要請番号は SA-00658 で、その記録には国際災害チャーターへのエスカレーションと GLIDE番号 FF-2026-000162-NPL が明記されている。"
+    },
+    {
+      "tier": "official",
+      "source": "IFRC, 26-27 Aug",
+      "en": "IFRC released nearly CHF 1 million in emergency funding, then launched a 24-month Emergency Appeal for CHF 25 million covering shelter, cash assistance, health, household relief items, water, sanitation and hygiene, and mental health and psychosocial support. On 8 September, IFRC reported that access remains the main constraint: the journey from Nuwakot to Dhunche (Rasuwa), normally about three hours, can now take nine hours or more over damaged roads. With NRCS, IFRC has installed water tanks and a pump restoring safe drinking water for about 2,000 people in Nuwakot and deployed a mobile primary health care clinic there able to see up to 100 patients a day, while continuing water trucking and assessing longer-term repair of damaged water systems.",
+      "ja": "IFRCは約100万スイスフランを緊急拠出したのち、24か月・2,500万スイスフランの緊急アピールを開始した。住まい、現金給付、保健、生活物資、水・衛生、心理社会的支援を対象とする。 9月8日、IFRCはアクセスが依然として最大の制約であるとし、ヌワコットからラスワ・ドゥンチェまでの所要時間は通常約3時間のところ、道路被害により9時間以上かかることもあるとした。NRCSとともに、ヌワコットで貯水タンクとポンプを設置して約2,000人への安全な飲料水供給を回復させ、1日最大100人を診察できる移動式プライマリーヘルスケアクリニックを展開したほか、給水車による水の運搬と、被災した水道網の長期的な修復に向けた調査を継続しているとしている。"
+    },
+    {
+      "tier": "official",
+      "source": "UNICEF, 27 Aug",
+      "en": "UNICEF appealed for US$17.2 million for emergency response and early recovery, and moved pre-positioned hygiene kits from the Humanitarian Staging Area at Tribhuvan International Airport to Rasuwa, Nuwakot and Dhading.",
+      "ja": "UNICEFは緊急対応と早期復旧のため1,720万米ドルを要請し、トリブバン国際空港の人道支援集積拠点に備蓄していた衛生キットをラスワ・ヌワコット・ダディンへ搬送している。"
+    },
+    {
+      "tier": "official",
+      "source": "Government of China / Government of India, 26-27 Aug",
+      "en": "China pledged relief funding and India is sending humanitarian supplies. Indian authorities in Bihar opened the Valmikinagar Barrage on the Gandak River as a precaution and prepared to evacuate 10,000-12,000 people downstream.",
+      "ja": "中国は救援資金の拠出を表明し、インドは人道支援物資を送っている。インド・ビハール州当局は予防措置としてガンダック川のバルミキナガル堰を開放し、下流の10,000〜12,000人の避難に備えた。"
+    },
+    {
+      "org_en": "Republic of Korea",
+      "org_ja": "韓国",
+      "tier": "official",
+      "en": "Korea Disaster Relief Team (KDRT), 44 members from the Ministry of Foreign Affairs, KOICA and the National Fire Agency, departing 1 September by military transport aircraft for search and rescue support; USD 1 million in humanitarian assistance through international organizations announced on 27 August. On 9 September, the Government of Korea announced a further dispatch of emergency relief supplies worth KRW 130 million - 36,000 emergency thermal blankets and 2,320 medium-thermal blankets - which had arrived in Nepal by commercial flight on 5 September.",
+      "ja": "韓国災害救助隊（KDRT）44人（外務省・KOICA・消防庁ほか）を9月1日に軍輸送機で派遣し、捜索・救助を支援。8月27日には国際機関を通じた100万米ドルの人道支援を表明。 9月9日には、緊急用防寒毛布36,000枚・中間用防寒毛布2,320枚（総額1億3,000万ウォン相当）の追加救援物資派遣を発表。物資は9月5日に商業便で既に到着している。",
+      "url": "https://reliefweb.int/report/nepal/dispatch-korea-disaster-relief-team-kdrt-response-flood-damage-nepal"
+    },
+    {
+      "org_en": "Japan",
+      "org_ja": "日本",
+      "tier": "official",
+      "en": "The Government of Japan decided on 3 September to dispatch a Japan Disaster Relief (JDR) expert team to support identification (of the deceased), in response to a request from the Government of Nepal.",
+      "ja": "日本政府は9月3日、ネパール政府からの要請を受け、身元確認（遺体の識別）支援のため国際緊急援助隊（JDR）専門家チームの派遣を決定した。",
+      "url": "https://reliefweb.int/report/nepal/dispatch-japan-disaster-relief-jdr-expert-team-response-flash-flood-nepal"
+    },
+    {
+      "org_en": "Pakistan",
+      "org_ja": "パキスタン",
+      "tier": "official",
+      "en": "Pakistan handed over 100 tonnes of relief assistance to Nepal to support people affected by the floods and landslides (7 September).",
+      "ja": "パキスタンは、洪水・地滑りの被災者支援のため、ネパールへ救援物資100トンを引き渡した（9月7日）。",
+      "url": "https://risingnepaldaily.com/news/86242"
+    },
+    {
+      "org_en": "Canada",
+      "org_ja": "カナダ",
+      "tier": "official",
+      "en": "Canada has deployed officials including an RCMP liaison officer to Kathmandu and, on 10 September, sent two RCMP Disaster Victim Identification (DVI) experts to work under Interpol DVI standards; the RCMP is coordinating DNA sample collection from families of missing Canadians via Interpol Ottawa. Canada is providing CAD 5 million in humanitarian assistance funding and more than 18,000 emergency relief items from its stockpiles, managed by the Canadian Red Cross. Global Affairs Canada states it is aware of 29 Canadians and permanent residents in Nepal and the Tibet Autonomous Region whose whereabouts and well-being have not yet been confirmed.",
+      "ja": "カナダはRCMP連絡官を含む当局者をカトマンズへ派遣済みで、9月10日にはRCMPの遺体身元確認（DVI）専門家2人を追加派遣し、インターポールのDVI基準の下で活動させている。RCMPはインターポール・オタワを通じ、行方不明のカナダ人家族からのDNA検体採取を調整。人道支援として500万カナダドルを拠出し、カナダ赤十字社が管理する緊急備蓄から救援物資18,000点超を提供している。カナダ外務省は、所在・安否が未確認のカナダ人・永住者がネパールおよびチベット自治区に29人いるとしている。",
+      "url": "https://reliefweb.int/report/nepal/canada-deploys-victim-identification-experts-support-response-severe-flooding-along-nepal-china-border"
+    }
+  ],
+  "satellite": [
+    {
+      "org": "Sentinel Asia",
+      "status": "Activated (SA-00658)",
+      "tier": "official",
+      "url": "https://sentinel-asia.org/EO/2026/article20260826NP.html",
+      "en": "Emergency observation request 20260826-Nepal-Flood, requested by Nepal's Department of Hydrology and Meteorology and activated by ADRC on the day of the event. JAXA scheduled an ALOS-2 emergency observation. The Sentinel Asia record states escalation to the International Charter: Yes, and carries GLIDE FF-2026-000162-NPL.",
+      "ja": "緊急観測要請 20260826-Nepal-Flood。ネパール水文気象局の要請を受け、ADRCが発災当日に発動した。JAXAはALOS-2の緊急観測を計画している。センチネルアジアの記録には国際災害チャーターへのエスカレーション「あり」、GLIDE番号 FF-2026-000162-NPL が明記されている。"
+    },
+    {
+      "org": "International Charter",
+      "status": "Activated #1052 (26 Aug, 14:58 UTC+02:00)",
+      "tier": "official",
+      "url": "https://disasterscharter.org/activations/flood-in-nepal-activation-1052-",
+      "en": "Activation #1052. The Charter page records the requestor as \"ADRC on behalf of the Department of Hydrology and Meteorology (DHM), Ministry of Energy, Water Resources and Irrigation in Nepal\". Project management: Samir Belabbes (UNITAR). Value adding: NRSC, British Geological Survey, ISRO, SERTIT (iCube), Copernicus EMS, DHM, University of Ljubljana and the Cryospheric Society of Nepal. Three products had been published as of 28 August.",
+      "ja": "Activation #1052。チャーターの発動ページには要請者が「ネパール・エネルギー水資源灌漑省 水文気象局（DHM）に代わって ADRC」と記載されている。案件管理は Samir Belabbes（UNITAR）。付加価値解析は NRSC、英国地質調査所、ISRO、SERTIT（iCube）、コペルニクス緊急管理サービス、DHM、リュブリャナ大学、ネパール雪氷学会。8月28日時点で3件のプロダクトが公開されている。"
+    },
+    {
+      "org": "UNOSAT",
+      "status": "Maps published 27 Aug",
+      "tier": "official",
+      "url": "https://reliefweb.int/map/nepal/nepal-satellite-detected-mudflow-rockflow-extent-26-27-august-2026-rasuwa-district-bagmati-province-imagery-analysis-2627082026-published-27082026-v1",
+      "en": "Of 228 km2 analysed in Rasuwa, 22 km2 was affected and 1,920 of 19,940 residents were exposed. The map marks a potential ice-avalanche location on the Lende Khola inside the Tibet Autonomous Region, and includes before/after insets at Timure (WorldView-3, 19 Apr 2024 and Sentinel-2, 27 Aug 2026).",
+      "ja": "ラスワ郡の解析対象228km2のうち22km2が被災、解析域の居住人口19,940人のうち1,920人が曝露。図にはチベット自治区内のレンデ川上流の「氷雪崩の推定発生地点」が示され、ティムレの被災前後（WorldView-3 2024年4月19日／Sentinel-2 2026年8月27日）の拡大図が添えられている。"
+    },
+    {
+      "org": "Rissho University / University of Tokyo",
+      "status": "Shared via Sentinel Asia",
+      "tier": "official",
+      "url": "https://sentinel-asia.org/",
+      "en": "A Landsat-9 based analysis and a 3D damaged-area map derived from optical satellite data were contributed by Sentinel Asia member researchers.",
+      "ja": "センチネルアジア参加研究者から、Landsat-9による解析と、光学衛星データによる3次元被害図が提供された。"
+    },
+    {
+      "org": "TASA (Taiwan Space Agency)",
+      "status": "Uploaded 29 Aug",
+      "tier": "official",
+      "url": "https://sentinel-asia.org/",
+      "en": "Archive and observation data for 22 April 2026 and 28 August 2026, and a value-added product derived from a Sentinel-2 prior image and a FORMOSAT-5 post image (12 and 28 August 2026).",
+      "ja": "2026年4月22日および8月28日のアーカイブ・観測データ。あわせて、Sentinel-2の発災前画像とFORMOSAT-5の発災後画像から作成した付加価値プロダクト（8月12日・28日）。"
+    },
+    {
+      "org": "JAXA (via RESTEC)",
+      "status": "Uploaded 31 Aug",
+      "tier": "official",
+      "url": "https://sentinel-asia.org/",
+      "en": "ALOS-2 archive/observation imagery and RGB composite data uploaded, covering observations of 19 December 2025, 30 January 2026 and 28 August 2026.",
+      "ja": "ALOS-2のアーカイブ・観測画像とRGB合成画像が提供された。観測日は2025年12月19日、2026年1月30日、2026年8月28日。"
+    },
+    {
+      "org": "GIC-AIT",
+      "status": "Uploaded 31 Aug",
+      "tier": "official",
+      "url": "https://sentinel-asia.org/",
+      "en": "A value-added product produced using Sentinel-1 data acquired on 28 and 31 August 2026 and Sentinel-2 imagery acquired on 27 August 2026.",
+      "ja": "2026年8月28日・31日に取得されたSentinel-1データと、8月27日に取得されたSentinel-2画像を用いて作成した付加価値プロダクト。"
+    },
+    {
+      "org": "IWM (Institute of Water Modelling)",
+      "status": "Uploaded 28 Aug; extended 30 Aug",
+      "tier": "official",
+      "url": "https://sentinel-asia.org/",
+      "en": "A value-added product produced using available Planet satellite imagery (28 Aug); IWM uploaded a second, extended-extent VAP on 30 Aug generated from PlanetScope imagery up to 28 Aug.",
+      "ja": "入手可能なPlanet衛星画像を用いて作成した付加価値プロダクト（8月28日）。IWMは8月30日、8月28日までのPlanetScope画像を用いて対象範囲を拡張した2件目のVAPを提供した。"
+    },
+    {
+      "org": "ADRC",
+      "status": "AOI revised 27 Aug",
+      "tier": "official",
+      "url": "https://sentinel-asia.org/",
+      "en": "ADRC revised the wide-area area of interest on 27 August after the requester narrowed the source location. The Department of Hydrology and Meteorology gave the ice-avalanche coordinates as 28.295727N, 85.507802E, noting that the original AOI had been set before the origin was known.",
+      "ja": "8月27日、要請元が発生源の位置を絞り込んだことを受け、ADRCが広域の観測対象範囲（AOI）を見直した。ネパール水文気象局は氷雪崩の座標を北緯28.295727度・東経85.507802度としており、当初のAOIは発生源が分からない段階で設定したものだと説明している。"
+    }
+  ],
+  "links": [
+    {
+      "label_en": "ReliefWeb - Nepal: Flash Floods, Aug 2026 (GLIDE FF-2026-000162-NPL)",
+      "label_ja": "ReliefWeb 災害ページ（GLIDE FF-2026-000162-NPL）",
+      "url": "https://reliefweb.int/disaster/ff-2026-000162-npl",
+      "tier": "official"
+    },
+    {
+      "label_en": "Sentinel Asia - emergency observation request for this event",
+      "label_ja": "センチネルアジア 本災害の緊急観測要請",
+      "url": "https://sentinel-asia.org/EO/2026/article20260826NP.html",
+      "tier": "official"
+    },
+    {
+      "label_en": "International Charter - Flood in Nepal, Activation #1052",
+      "label_ja": "国際災害チャーター Activation #1052",
+      "url": "https://disasterscharter.org/activations/flood-in-nepal-activation-1052-",
+      "tier": "official"
+    },
+    {
+      "label_en": "USGS - M 5.2 landslide (glacial collapse), 55 km NW of Kodari, Nepal",
+      "label_ja": "USGS M5.2 氷河崩落（コダリ北西55km）",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tbwb",
+      "tier": "official"
+    },
+    {
+      "label_en": "UNOSAT / International Charter - satellite-detected extent, Rasuwa District",
+      "label_ja": "UNOSAT・国際災害チャーター 被災範囲図（ラスワ郡）",
+      "url": "https://reliefweb.int/map/nepal/nepal-satellite-detected-mudflow-rockflow-extent-26-27-august-2026-rasuwa-district-bagmati-province-imagery-analysis-2627082026-published-27082026-v1",
+      "tier": "official"
+    },
+    {
+      "label_en": "IFRC - CHF 25 million Emergency Appeal",
+      "label_ja": "IFRC 緊急アピール（2,500万スイスフラン）",
+      "url": "https://reliefweb.int/report/nepal/ifrc-launches-chf-25-million-emergency-appeal-response-devastating-nepal-flash-floods",
+      "tier": "official"
+    },
+    {
+      "label_en": "UNICEF - US$17.2 million appeal",
+      "label_ja": "UNICEF 支援要請（1,720万米ドル）",
+      "url": "https://reliefweb.int/report/nepal/flash-floods-nepal-leave-more-17000-children-need-urgent-humanitarian-assistance-enar",
+      "tier": "official"
+    },
+    {
+      "label_en": "WFP Nepal External Situation Report, 27 August 2026",
+      "label_ja": "WFP ネパール状況報告（8月27日）",
+      "url": "https://reliefweb.int/report/nepal/wfp-nepal-external-situation-report-27-august-2026",
+      "tier": "official"
+    },
+    {
+      "label_en": "BIPAD Portal (Ministry of Home Affairs) - national incident database",
+      "label_ja": "BIPADポータル（内務省）災害統計",
+      "url": "https://bipadportal.gov.np/",
+      "tier": "official"
+    },
+    {
+      "label_en": "UNOSAT product 4259 - Rasuwa and Nuwakot, mudflow/rockflow extent (28 Aug 2026)",
+      "label_ja": "UNOSAT 製品4259 — ラスワ郡・ヌワコット郡 土石流/岩屑流の範囲（8月28日）",
+      "url": "https://unosat.org/products/4259",
+      "tier": "official"
+    },
+    {
+      "label_en": "IRDR Rapid Analysis Report - Scientific Anatomy of the 26 August 2026 Bhotekoshi Flash Flood (28 Aug 2026)",
+      "label_ja": "IRDR 速報解析『2026年8月26日 ボテコシ鉄砲水の科学的解剖』（8月28日）",
+      "url": "https://reliefweb.int/report/nepal/irdr-rapid-analysis-report-scientific-anatomy-26-august-2026-bhotekoshi-flash-flood",
+      "tier": "official"
+    },
+    {
+      "label_en": "UN - Nepal: Rasuwa Flood Flash Update #3 (28 Aug 2026)",
+      "label_ja": "国連 ネパール・ラスワ洪水 Flash Update #3（8月28日）",
+      "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-update-3",
+      "tier": "official"
+    },
+    {
+      "label_en": "WFP Nepal - Situation Report on Flood Emergency, 29 August 2026",
+      "label_ja": "WFP ネパール 洪水緊急事態 状況報告（8月29日）",
+      "url": "https://reliefweb.int/report/nepal/wfp-nepal-external-situation-report-29-august-2026",
+      "tier": "official"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/wfp-nepal-external-situation-report-30-august-2026",
+      "en": "WFP Nepal External Situation Report, 30 August 2026",
+      "ja": "WFP ネパール状況報告（2026年8月30日）"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-update-4-31-august-2026",
+      "en": "OCHA/UN RC Nepal - Rasuwa Flood Flash Update #4, 31 August 2026",
+      "ja": "OCHA/国連ネパール常駐調整官事務所 Flash Update #4（2026年8月31日）"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/dispatch-korea-disaster-relief-team-kdrt-response-flood-damage-nepal",
+      "en": "Dispatch of Korea Disaster Relief Team (KDRT) in Response to Flood Damage in Nepal (Govt. of the Republic of Korea, 1 Sep 2026)",
+      "ja": "韓国災害救助隊（KDRT）の派遣（韓国政府、2026年9月1日）"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/nepal-flood-emergency-situation-report-reporting-period-30-31-august-2026",
+      "en": "Tzu Chi Nepal Flood Emergency Situation Report, 30-31 August 2026",
+      "ja": "慈済 ネパール洪水 緊急状況報告（2026年8月30〜31日）"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/water-mission-responds-devastating-flash-floods-nepal",
+      "en": "Water Mission responds to devastating flash floods in Nepal",
+      "ja": "Water Mission によるネパール鉄砲水への対応"
+    },
+    {
+      "url": "https://www.ndrrma.gov.np/",
+      "en": "NDRRMA - Rasuwa-Bhotekoshi Flood: Search, Rescue and Relief Response, Situation Report #01 (1 September 2026, 09:00)",
+      "ja": "NDRRMA「ラスワ・ボテコシ洪水 捜索・救助・救援対応」状況報告第1号（2026年9月1日09:00）"
+    },
+    {
+      "url": "https://ndrrma.gov.np/mediafiles/rasuwa/SitRep_11_NEP_01092026.pdf",
+      "en": "NDRRMA - Rasuwa-Bhotekoshi Debris-flow Flood, Situation Report #11 (1 September 2026, 18:00)",
+      "ja": "NDRRMA「ラスワ・ボテコシ土石流洪水」状況報告第11号（2026年9月1日18:00）"
+    },
+    {
+      "url": "https://reliefweb.int/map/nepal/mudflowrockflow-impact-assessment-nuwakot-district-bagmati-province-nepal-26-27-august-2026-imagery-analysis-2627082026-published-28082026-v1",
+      "en": "UNOSAT product 4259 (ReliefWeb map page) - Mudflow/rockflow impact assessment, Nuwakot District",
+      "ja": "UNOSAT 製品4259（ReliefWeb地図ページ）— ヌワコット郡 土石流/岩屑流の影響評価"
+    },
+    {
+      "url": "https://reliefweb.int/map/nepal/satellite-detected-newly-formed-barrier-lakes-following-ice-rock-avalanche-rasuwa-district-nepal-28-august-2026-imagery-analysis-2627082026-published-27082026-v1",
+      "en": "UNOSAT product 4260 - Newly formed barrier lakes, Rasuwa District (28 Aug 2026)",
+      "ja": "UNOSAT 製品4260 — ラスワ郡 新たに形成された堰止め湖（8月28日）"
+    },
+    {
+      "url": "https://reliefweb.int/map/nepal/nepal-china-eu-response-ice-rock-avalanche-and-flash-flood-event-dg-echo-daily-map-02092026",
+      "en": "Nepal, China - EU response to ice-rock avalanche and flash flood event, DG ECHO Daily Map (2 Sep 2026)",
+      "ja": "ネパール・中国 — 氷岩雪崩・鉄砲水への欧州対応、DG ECHO日報地図（9月2日）"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/rapid-disaster-impact-report-satellite-remote-sensing-reveals-severe-mudslide-impacts-along-china-nepal-border",
+      "en": "CBAS/IRDR China - Rapid Disaster Impact Report on mudslide impacts along the China-Nepal border (31 Aug 2026)",
+      "ja": "CBAS／IRDR中国「中国・ネパール国境の土石流被害に関する速報」（8月31日）"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/nepal-floods-hit-vulnerable-communities-undp-estimates-22-million-tonnes-debris",
+      "en": "UNDP - Nepal floods hit vulnerable communities, UNDP estimates 2.2 million tonnes of debris (1 Sep 2026)",
+      "ja": "UNDP「ネパール洪水、脆弱なコミュニティを直撃 — UNDPは堆積物220万トンと推計」（9月1日）"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/nepal-flash-floods-medical-teams-deploy-emergency-zone",
+      "en": "Direct Relief - Nepal Flash Floods: Medical Teams Deploy to Emergency Zone (27 Aug 2026)",
+      "ja": "Direct Relief「ネパール鉄砲水：医療チームが被災地域へ展開」（8月27日）"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-update-5-1-september-2026",
+      "en": "OCHA/UN RC Nepal - Rasuwa Flood Flash Update #5 (as of 1 September 2026)",
+      "ja": "OCHA／国連ネパール常駐調整官事務所「Rasuwa Flood Flash Update #5」（9月1日時点）"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/unicef-nepal-humanitarian-situation-report-no1-rasuwa-flood-31-august-2026",
+      "en": "UNICEF Nepal Humanitarian Situation Report No.1 (Rasuwa flood), 31 August 2026",
+      "ja": "UNICEFネパール人道状況報告第1号（ラスワ洪水）、8月31日"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/nepal-flood-2026-dref-operation-mdrnp022",
+      "en": "IFRC - Nepal Flood 2026, DREF Operation (MDRNP022), 1 September 2026",
+      "ja": "IFRC「ネパール洪水2026」DREFオペレーション（MDRNP022）、9月1日"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/dispatch-japan-disaster-relief-jdr-expert-team-response-flash-flood-nepal",
+      "en": "Government of Japan - Dispatch of the JDR Expert Team in Response to the Flash Flood in Nepal, 3 September 2026",
+      "ja": "日本政府「洪水被害に対応する国際緊急援助隊（JDR）専門家チームの派遣について」、9月3日"
+    },
+    {
+      "url": "https://reliefweb.int/map/nepal/nepal-flash-floods-26th-august-2026-flood-extent-affected-districts-dhading-nuwakot-and-rasuwa-03092026",
+      "en": "MapAction - Flood Extent in Affected Districts: Dhading, Nuwakot and Rasuwa (03/09/2026)",
+      "ja": "MapAction「被災郡（ダディン・ヌワコット・ラスワ）の浸水範囲」地図（9月3日版）",
+      "_note": "地図のみで新規の数値・機構情報なし。確認済み。"
+    },
+    {
+      "url": "https://reliefweb.int/map/nepal/nepal-flash-floods-26th-august-2026-reference-map-nuwakot-district-03092026",
+      "en": "MapAction - Reference Map of Nuwakot District (03/09/2026)",
+      "ja": "MapAction「ヌワコット郡基図」（9月3日版）",
+      "_note": "地図のみで新規の数値・機構情報なし。確認済み。"
+    },
+    {
+      "url": "https://reliefweb.int/map/nepal/nepal-flash-floods-26th-august-2026-reference-map-rasuwa-district-03092026",
+      "en": "MapAction - Reference Map of Rasuwa District (03/09/2026)",
+      "ja": "MapAction「ラスワ郡基図」（9月3日版）",
+      "_note": "地図のみで新規の数値・機構情報なし。確認済み。"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/iom-nepal-flood-response-situation-report-3-3-september-2026",
+      "en": "IOM Nepal Flood Response Situation Report #3 (as of 3 September 2026)",
+      "ja": "IOM「ネパール洪水対応状況報告第3号」（9月3日時点）"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/wfp-nepal-situation-report-rasuwa-flood-response-04-september-2026",
+      "en": "WFP Nepal Situation Report on the Rasuwa Flood Response, 4 September 2026",
+      "ja": "WFP「ラスワ洪水対応状況報告」（9月4日）"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-flash-appeal-4-september-2026",
+      "en": "Nepal: Rasuwa Flood - Flash Appeal (OCHA/UN RC Nepal, 4 September 2026)",
+      "ja": "「ネパール：ラスワ洪水 フラッシュアピール」（OCHA／国連ネパール常駐調整官事務所、9月4日）"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/nepal-flash-floods-displacement-snapshot-27-31-august-2026",
+      "en": "IOM - Nepal Flash Floods Displacement Snapshot (27-31 August 2026, infographic)",
+      "ja": "IOM「ネパール鉄砲水 避難民スナップショット」（8月27〜31日、インフォグラフィック）",
+      "_note": "PDFインフォグラフィックで、ページ本文に数値テキストなし。地域別避難者数の図表のみ。"
+    },
+    {
+      "url": "https://reliefweb.int/map/nepal/nepal-rasuwa-floods-26th-august-2026-reference-map-series-affected-area-sheet-01-04092026",
+      "en": "MapAction - Reference Map Series of Affected Area, Sheet 01 (04/09/2026)",
+      "ja": "MapAction「被災地域基図シリーズ シート01」（9月4日版）",
+      "_note": "地図のみで新規の数値・機構情報なし。確認済み。"
+    },
+    {
+      "url": "https://reliefweb.int/map/nepal/nepal-rasuwa-floods-26th-august-2026-reference-map-bidur-municipality-04092026",
+      "en": "MapAction - Reference Map of Bidur Municipality (04/09/2026)",
+      "ja": "MapAction「ビドゥル市基図」（9月4日版）",
+      "_note": "地図のみで新規の数値・機構情報なし。確認済み。"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-situation-report-no-6",
+      "en": "OCHA/UN RC Nepal - Rasuwa Flood Situation Report No. 6 (as of 5 September 2026)",
+      "ja": "OCHA／国連ネパール常駐調整官事務所「ラスワ洪水状況報告第6号」（9月5日時点）"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-situation-report-no-6-5-september-2026",
+      "en": "OCHA/UN RC Nepal - Nepal: Rasuwa Flood Situation Report No-6 (As of 5 September 2026) [ReliefWeb duplicate listing of the above]",
+      "ja": "OCHA／国連ネパール常駐調整官事務所「ラスワ洪水状況報告第6号」（9月5日時点、ReliefWeb上の同一資料の別掲載）",
+      "_note": "同一PDFの2つのReliefWeb掲載。本文の内容は一致。"
+    },
+    {
+      "url": "https://risingnepaldaily.com/news/86182",
+      "en": "NDRRMA records recovery of 1,341 bodies; 4,996 in missing list since Bhotekoshi floods (The Rising Nepal, 6 Sep 2026)",
+      "ja": "NDRRMA、遺体1,341人を収容・行方不明4,996人（The Rising Nepal、2026年9月6日）"
+    },
+    {
+      "url": "https://risingnepaldaily.com/news/86159",
+      "en": "Bhotekoshi torrent affects 32,933 people, 7,570 houses (The Rising Nepal, 6 Sep 2026)",
+      "ja": "ボテコシ川の出水、被災32,933人・住家7,570棟（The Rising Nepal、2026年9月6日）"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/nepal-flood-emergency-situation-report-reporting-period-4-6-september-2026",
+      "en": "Tzu Chi Foundation - Nepal Flood Emergency Situation Report, 4-6 September 2026 (Dhading District school/bridge cleanup)",
+      "ja": "仏教慈済基金会「ネパール洪水緊急状況報告」（9月4〜6日、ダディン郡の学校・橋梁の復旧作業）",
+      "_note": "ダディン郡ガルチ村の1校の局所的な復旧状況。集計値・機構の変更なし。確認済み。"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/nepal-flash-floods-un-women-gender-alert-2",
+      "en": "UN Women - Nepal Flash Floods Gender Alert #2 (protection/GBV concerns in shelters)",
+      "ja": "UN Women「ネパール鉄砲水 ジェンダーアラート第2号」（避難所での保護・GBVの懸念）",
+      "_note": "定性的な保護課題の指摘。集計値の更新なし。確認済み。"
+    },
+    {
+      "url": "https://reliefweb.int/map/nepal/nepal-rasuwa-floods-26th-august-2026-reference-map-series-affected-area-06092026",
+      "en": "MapAction - Rasuwa Floods Reference Map Series of Affected Area (06/09/2026)",
+      "ja": "MapAction「ラスワ洪水 被災地域基図シリーズ」（9月6日版）",
+      "_note": "地図のみで新規の数値・機構情報なし。確認済み。"
+    },
+    {
+      "url": "https://reliefweb.int/map/nepal/nepal-flash-floods-26th-august-2026-affected-municipalities-settlements-06092026",
+      "en": "MapAction - Affected Municipalities with Settlements (06/09/2026)",
+      "ja": "MapAction「被災市町村・集落図」（9月6日版）",
+      "_note": "地図のみで新規の数値・機構情報なし。確認済み。"
+    },
+    {
+      "url": "https://reliefweb.int/map/nepal/nepal-flash-floods-26th-august-2026-affected-population-06092026",
+      "en": "MapAction - Affected Population (06/09/2026)",
+      "ja": "MapAction「被災人口図」（9月6日版）",
+      "_note": "地図のみで新規の数値・機構情報なし。確認済み。"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/marking-international-day-charity-stories-giving-through-qatar-charity-go-beyond-humanitarian-assistance",
+      "en": "Qatar Charity - International Day of Charity feature (multi-country; not specific to this flood)",
+      "ja": "カタール・チャリティ「国際慈善デー」特集記事（複数国対象。本災害に特化した内容ではない）",
+      "_note": "ネパールは「+4 more」の1国として言及されるのみ。本災害との関連なし。確認済み。"
+    },
+    {
+      "label_en": "IOM - Nepal: Preliminary Findings, Baseline Site Profile Assessment (31 Aug-6 Sep 2026)",
+      "label_ja": "IOM ネパール DTM基礎サイトプロファイル調査 予備所見（8月31日〜9月6日）",
+      "url": "https://reliefweb.int/report/nepal/nepal-preliminary-findings-baseline-site-profile-assessment-31-august-06-september-2026",
+      "tier": "official"
+    },
+    {
+      "label_en": "IFRC - Nepal floods: IFRC delivers safe water and health care to affected communities (8 Sep 2026)",
+      "label_ja": "IFRC ネパール洪水：安全な水と保健医療の提供（9月8日）",
+      "url": "https://reliefweb.int/report/nepal/nepal-floods-ifrc-delivers-safe-water-and-health-care-affected-communities",
+      "tier": "official"
+    },
+    {
+      "label_en": "Logistics Cluster/WFP - Nepal LTC Logistics: Concept of Operations (6 Sep 2026)",
+      "label_ja": "ロジスティクス・クラスター／WFP ネパール物流拠点 運用構想図（9月6日）",
+      "url": "https://reliefweb.int/map/nepal/nepal-ltc-logistics-concept-operations-september-6-2026",
+      "tier": "official"
+    },
+    {
+      "label_en": "NDRRMA - Rasuwa Flood: Search, Rescue and Relief Update (8 Sep 2026, 18:00)",
+      "label_ja": "NDRRMA ラスワ洪水 捜索・救助・救援アップデート（9月8日18:00）",
+      "url": "https://ndrrma.gov.np/mediafiles/rasuwa/Situation_update_English_2026.9.08_6_PM.pdf",
+      "tier": "official"
+    },
+    {
+      "label_en": "NDRRMA Situation Report #18 (Nepali, 8 Sep 2026, 19:00)",
+      "label_ja": "NDRRMA 状況報告第18号（ネパール語、9月8日19:00）",
+      "url": "https://ndrrma.gov.np/mediafiles/rasuwa/SitRep_18_NEP_08092026.pdf",
+      "tier": "official"
+    },
+    {
+      "label_en": "Project HOPE - Nepal Landslides & Flash Floods Situation Report #4 (8 Sep 2026, posted 9 Sep)",
+      "label_ja": "Project HOPE ネパール地滑り・鉄砲水 状況報告第4号（9月8日付、投稿9月9日）",
+      "url": "https://reliefweb.int/report/nepal/nepal-landslides-flash-floods-situation-report-4-september-8-2026",
+      "tier": "media",
+      "_note": "本文中の死者1,331人・行方不明4,996人はNDRRMA由来とみられるが、現行のNDRRMA直接PDF第18号（9月8日19:00締め、死者1,358人・行方不明5,326人）より低い＝古い時点の値。数値の更新には使わない。確認済み。"
+    },
+    {
+      "label_en": "MapAction - Rasuwa Floods DTM Baseline Site Profile Assessment, Rasuwa/Nuwakot/Dhading Districts (31 Aug-5 Sep 2026, maps)",
+      "label_ja": "MapAction ラスワ洪水 DTM基礎サイトプロファイル調査（ラスワ・ヌワコット・ダディン郡、8月31日〜9月5日、地図3点）",
+      "url": "https://reliefweb.int/map/nepal/nepal-rasuwa-floods-26th-august-2026-dtm-baseline-site-profile-assessment-31-august-05-september-2026-rasuwa-district",
+      "tier": "official",
+      "_note": "既出のIOM DTM基礎調査（8月31日〜9月6日）と同一調査の郡別地図。地図のみで新規の数値・機構情報なし。確認済み。"
+    },
+    {
+      "label_en": "Direct Relief - Nepal Flash Floods: Five Days After the Floods, Secondary Health Risks Rise",
+      "label_ja": "Direct Relief「ネパール鉄砲水：発災5日後、二次的な健康リスクが高まる」",
+      "url": "https://reliefweb.int/report/nepal/nepal-flash-floods-five-days-after-floods-secondary-health-risks-rise",
+      "tier": "media",
+      "_note": "原文は2026年8月31日付（ReliefWeb掲載は9月9日）。記事中の死者950人・行方不明4,400人超は8月31日時点の古い値で、現行値（第18報 死者1,358人・行方不明5,326人）より低い。数値の更新には使わない。確認済み。"
+    },
+    {
+      "label_en": "NDRRMA Situation Report #19 (English, 9 Sep 2026, 19:00)",
+      "label_ja": "NDRRMA 状況報告第19号（英語版、9月9日19:00）",
+      "url": "https://ndrrma.gov.np/mediafiles/rasuwa/SitRep_ENG_09_09092026.pdf",
+      "tier": "official"
+    },
+    {
+      "label_en": "NDRRMA Situation Report #19 (Nepali, 9 Sep 2026)",
+      "label_ja": "NDRRMA 状況報告第19号（ネパール語版、9月9日）",
+      "url": "https://ndrrma.gov.np/mediafiles/rasuwa/SitRep_19_NEP_09092026.pdf",
+      "tier": "official"
+    },
+    {
+      "label_en": "WFP Nepal Situation Report on the Rasuwa Flood Response (10 Sep 2026)",
+      "label_ja": "WFPネパール ラスワ洪水対応 状況報告（9月10日付）",
+      "url": "https://reliefweb.int/report/nepal/wfp-nepal-external-situation-report-10-september-2026",
+      "tier": "official",
+      "_note": "死者1,369人・行方不明5,132人は既存のNDRRMA第19号と一致、新規数値なし。WFP応答オペレーション（114.8トン食料配送、貨物ドローン、USD 890万確保等）はtimelineへ反映済み。確認済み。"
+    },
+    {
+      "label_en": "Nepal: Rasuwa Floods - DTM Baseline Site Profile Assessment (31 Aug-5 Sep 2026): Nuwakot District (MapAction)",
+      "label_ja": "ネパール：ラスワ洪水 DTM基礎サイトプロファイル評価（8月31日〜9月5日）：ヌワコット郡（MapAction）",
+      "url": "https://reliefweb.int/map/nepal/nepal-rasuwa-floods-26th-august-2026-dtm-baseline-site-profile-assessment-31-august-05-september-2026-nuwakot-district",
+      "tier": "official",
+      "_note": "IOM DTMによる避難所別サイトプロファイル地図。件数・人数はUN RC Nepal Flash Report No.7の37か所・3,888人と整合。新規の被害数値なし。確認済み。"
+    },
+    {
+      "label_en": "Nepal: Rasuwa Floods - DTM Baseline Site Profile Assessment (31 Aug-5 Sep 2026): Dhading District (MapAction)",
+      "label_ja": "ネパール：ラスワ洪水 DTM基礎サイトプロファイル評価（8月31日〜9月5日）：ダディン郡（MapAction）",
+      "url": "https://reliefweb.int/map/nepal/nepal-rasuwa-floods-26th-august-2026-dtm-baseline-site-profile-assessment-31-august-05-september-2026-dhading-district",
+      "tier": "official",
+      "_note": "上記ヌワコット郡版のダディン郡版。同様に新規数値なし。確認済み。"
+    },
+    {
+      "label_en": "Nepal: Rasuwa Flood Situation Report No. 7 (UN Resident Coordinator's Office, 8 Sep 2026, covering 4-7 Sep)",
+      "label_ja": "ネパール：ラスワ洪水 状況報告第7号（国連常駐調整官事務所、9月8日付、対象期間9月4〜7日）",
+      "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-flood-situation-report-no-7-8-september-2026",
+      "tier": "official",
+      "_note": "死者1,356人・行方不明4,894人はNDRRMA9月7日19:00締めで、既存の9月9日19:00締め（第19号、死者1,369・行方不明5,132）より古い。避難所37か所・3,629人、フラッシュアピール正式発足（ジュネーブ）、DRRM執行委員会の緊急倉庫手続き改定、WASHクラスターの被害・対応数値はtimelineへ反映済み。確認済み。"
+    },
+    {
+      "label_en": "Government Decides to Provide Emergency Relief Supplies in Response to Flood Damage in Nepal (Government of the Republic of Korea, 9 Sep 2026)",
+      "label_ja": "ネパール洪水被害への緊急救援物資提供決定（韓国政府、9月9日付）",
+      "url": "https://reliefweb.int/report/nepal/government-decides-provide-emergency-relief-supplies-response-flood-damage-nepal",
+      "tier": "official",
+      "_note": "韓国政府による防寒毛布計38,320枚（1億3,000万ウォン相当）の追加支援。timelineへ反映済み。確認済み。"
+    },
+    {
+      "label_en": "Canada deploys victim identification experts to support response to severe flooding along the Nepal-China border (Government of Canada, 10 Sep 2026)",
+      "label_ja": "カナダ、ネパール・中国国境の洪水対応支援のため遺体身元確認専門家を派遣（カナダ政府、9月10日付）",
+      "url": "https://reliefweb.int/report/nepal/canada-deploys-victim-identification-experts-support-response-severe-flooding-along-nepal-china-border",
+      "tier": "official",
+      "_note": "RCMP DVI専門家派遣、カナダ人・永住者29人の所在未確認、500万カナダドル拠出、救援物資18,000点超。timelineへ反映済み。確認済み。"
+    },
+    {
+      "label_en": "Nepal: Operational update on humanitarian response after devastating floods (ICRC, 10 Sep 2026)",
+      "label_ja": "ネパール：壊滅的な洪水後の人道対応に関する活動状況（ICRC、9月10日付）",
+      "url": "https://reliefweb.int/report/nepal/nepal-operational-update-humanitarian-response-after-devastating-floods",
+      "tier": "media",
+      "_note": "ICRCの家族再統合（RFL）・法医学支援、遺体袋計4,200枚超の提供。「収容遺体1,000体超・行方不明5,000人超・救出約12,000人」は当局発表の丸めた引用で、既存のNDRRMA公式値（死者1,369・行方不明5,132・救出13,646）より少ないが、二次的な集計の遅れによるものとして扱い、公式値を上書きしない。timelineへ反映済み。確認済み。"
+    },
+    {
+      "label_en": "Nepal: Over 500 children separated from parents and hundreds still missing after floods (Save the Children, 9 Sep 2026)",
+      "label_ja": "ネパール：洪水で500人超の子どもが親と離散、数百人が依然行方不明（セーブ・ザ・チルドレン、9月9日付）",
+      "url": "https://reliefweb.int/report/nepal/nepal-over-500-children-separated-parents-and-hundreds-still-missing-after-floods",
+      "tier": "media",
+      "_note": "ホールディングセンターの子ども1,233人（うち非同伴102人・離散439人）は、既存のNDRRMA第19号の記載（親を失った子ども102人、離散439人の追跡中）と符合し新規数値ではない。ラスワ・ヌワコットで学校に連絡がつかない子ども約630人、ビドゥル郡での一部学校再開は新規情報として参考に留め、公式集計には未反映（学校再開等は被害数値ではないため）。確認済み。"
+    },
+    {
+      "label_en": "Nepal: Flash Floods - Affected Municipalities (09/09/2026) (MapAction)",
+      "label_ja": "ネパール：鉄砲水 被災自治体地図（9月9日時点、MapAction）",
+      "url": "https://reliefweb.int/map/nepal/nepal-flash-floods-26th-august-2026-affected-municipalities-09092026",
+      "tier": "official",
+      "_note": "被災自治体の範囲地図。本文データなし。確認済み。"
+    },
+    {
+      "label_en": "NDRRMA - Rasuwa-Bhotekoshi Flood Search, Rescue and Relief Response Situation Report #09 (English series; = Nepali SitRep #19), 9 Sep 2026 19:00",
+      "label_ja": "NDRRMA ラスワ・ボテコシ洪水 捜索救助・救援対応 状況報告 英語版第9号（ネパール語版第19号に相当）、9月9日19:00",
+      "url": "https://ndrrma.gov.np/mediafiles/rasuwa/SitRep_ENG_09_09092026.pdf",
+      "tier": "official",
+      "_note": "NDRRMA API（/api/v1/publication/rasuwa-sitrep/）で9月10日時点の最新確認。数値は既存のtimeline「9 Sep 19:00 | NDRRMA Situation Report #19」と一致（死者1,369・行方不明5,132・避難者3,395等）。ドローン食料配送（アマチョディンモへ31便・1,591kg）とオーストラリアSARチームのトリシュリ3B地形調査を追記。API上、これより新しい報告は9月10日時点で未公表。確認済み。"
+    },
+    {
+      "label_en": "MapAction/UNCT Nepal - Rasuwa Floods: Affected Settlements (09/09/2026)",
+      "label_ja": "MapAction／UNCTネパール ラスワ洪水 被災集落図（9月9日付）",
+      "url": "https://reliefweb.int/map/nepal/nepal-rasuwa-floods-26th-august-2026-affected-settlements-09092026",
+      "tier": "official",
+      "_note": "地図のみで死者・住家等の数値記載なし。確認済み。"
+    },
+    {
+      "label_en": "MapAction/UNCT Nepal - Rasuwa Floods: Affected Wards in Nuwakot District (08/09/2026)",
+      "label_ja": "MapAction／UNCTネパール ラスワ洪水 ヌワコット郡 被災ワード図（9月8日付）",
+      "url": "https://reliefweb.int/map/nepal/nepal-rasuwa-floods-26th-august-2026-affected-wards-nuwakot-district-08092026",
+      "tier": "official",
+      "_note": "地図のみで死者・住家等の数値記載なし。確認済み。"
+    },
+    {
+      "label_en": "MapAction/UNCT Nepal - Rasuwa Floods: Affected Wards in Rasuwa District (08/09/2026)",
+      "label_ja": "MapAction／UNCTネパール ラスワ洪水 ラスワ郡 被災ワード図（9月8日付）",
+      "url": "https://reliefweb.int/map/nepal/nepal-rasuwa-floods-26th-august-2026-affected-wards-rasuwa-district-08092026",
+      "tier": "official",
+      "_note": "地図のみで死者・住家等の数値記載なし。確認済み。"
+    },
+    {
+      "label_en": "Direct Relief - Medicines Arrive in Nepal as Health Providers Work to Reach the Last Mile (8 Sep 2026)",
+      "label_ja": "Direct Relief 医療物資がネパールに到着、医療従事者は僻地到達に苦慮（9月8日付）",
+      "url": "https://reliefweb.int/report/nepal/medicines-arrive-nepal-health-providers-work-reach-last-mile",
+      "tier": "media",
+      "_note": "14トンの医療物資到着（9月5〜6日）と現地パートナー団体の活動を報告。死者・行方不明の概数（1,300人超・5,000人超）はNDRRMA第19号（死者1,369・行方不明5,132）と整合し新規数値ではない。timelineへ反映済み。確認済み。"
+    },
+    {
+      "label_en": "IFRC - Nepal, Asia-Pacific: Flash Flood Emergency Appeal (MDRNP022) (28 Aug 2026)",
+      "label_ja": "IFRC ネパール・アジア太平洋 鉄砲水緊急アピール（MDRNP022、8月28日付）",
+      "url": "https://reliefweb.int/report/nepal/nepal-asia-pacific-flash-flood-emergency-appeal-mdrnp022",
+      "tier": "official",
+      "_note": "発災3日後（8月27日時点）の初期スナップショット。死者165人・世帯被害18,000等はいずれも現行のNDRRMA第19号より大幅に古く、既存値を上回る新規情報なし。確認済み。"
+    },
+    {
+      "label_en": "ETC/Logistics Cluster/WFP - Nepal Flash Floods: LTC Situation Report (Telecoms Area) #2 (5-11 Sep 2026)",
+      "label_ja": "ETC／ロジスティクスクラスター／WFP ネパール鉄砲水 LTC状況報告（電気通信分野）第2号（9月5〜11日）",
+      "url": "https://reliefweb.int/report/nepal/nepal-flash-floods-ltc-situation-report-telecoms-area-2-reporting-period-05-11-september-2026",
+      "tier": "official",
+      "_note": "テレコム・コーディネーターの活動、通信塔向け予備電源支援要請等。死傷者・被害数値なし。timelineへ反映済み。確認済み。"
+    },
+    {
+      "url": "https://ndrrma.gov.np/mediafiles/rasuwa/SitRep_22_NEP_12092026.pdf",
+      "label_en": "NDRRMA - Rasuwa-Bhotekoshi Flood Situation Report #22 (12 Sep 2026, 19:00 NPT)",
+      "label_ja": "NDRRMA ラスワ・ボテコシ洪水 状況報告第22号（2026年9月12日19:00 NPT）",
+      "tier": "official"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/nepal-floods-damage-1800-hectares-crops-and-kill-thousands-livestock",
+      "label_en": "FAO - Nepal floods damage 1,800 hectares of crops and kill thousands of livestock (10 Sep 2026)",
+      "label_ja": "FAO ネパール洪水、農地1,800ha被災・家畜多数死亡（2026年9月10日）",
+      "tier": "official"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/nepal-food-security-outlook-update-stressed-ipc-phase-2-likely-rasuwa-district-following-historic-flooding-august-2026-january-2027",
+      "label_en": "FEWS NET - Nepal Food Security Outlook Update (10 Sep 2026)",
+      "label_ja": "FEWS NET ネパール食料安全保障見通し更新（2026年9月10日）",
+      "tier": "official"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/flight-lands-kathmandu-carrying-vital-humanitarian-supplies-children-and-families-affected-nepal-floods-0",
+      "label_en": "UNICEF - Flight lands in Kathmandu carrying vital humanitarian supplies (4 Sep 2026)",
+      "label_ja": "UNICEF 人道支援物資輸送便がカトマンズに到着（2026年9月4日）",
+      "tier": "official"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/unicef-nepal-humanitarian-situation-report-no-3-8-september-2026",
+      "label_en": "UNICEF Nepal Humanitarian Situation Report No.3 (8 Sep 2026)",
+      "label_ja": "UNICEFネパール人道状況報告第3号（2026年9月8日）",
+      "tier": "official"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/wfp-nepal-situation-report-rasuwa-flood-response-10-september-2026",
+      "label_en": "WFP Nepal Situation Report on the Rasuwa Flood Response (10 Sep 2026)",
+      "label_ja": "WFP ラスワ洪水対応状況報告（2026年9月10日）",
+      "tier": "official"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/world-vision-international-nepal-rasuwa-nuwakot-flash-flood-emergency-response-situation-update-5-10-september-2026",
+      "label_en": "World Vision International Nepal - Rasuwa-Nuwakot Flash Flood Emergency Response, Situation Update 5 (10 Sep 2026)",
+      "label_ja": "World Vision International Nepal ラスワ・ヌワコット鉄砲水緊急対応 状況更新5（2026年9月10日）",
+      "tier": "official"
+    }
+  ],
+  "images": {
+    "unosat_rasuwa": "images/unosat_rasuwa.png",
+    "locator_world": "images/locator_world.png",
+    "locator_region": "images/locator_region.png",
+    "google_cities": "images/google_cities.png"
+  },
+  "damage_highlights": [],
+  "cities": [],
+  "historical": [],
+  "locator": {
+    "_comment": "3面図は荒木田さんのGoogleマップのスクリーンショット。**言語ごとに撮り分けてある。**images/<key>_manual_ja.jpg（日本語表示）と <key>_manual_en.jpg（英語表示）。Googleマップの表示言語はブラウザ側で決まるので、片方だけで両版をまかなうと英語版に日本語が入る。実際に一度そうなった（apply_language_figures.js）。自作の地図（<key>.png / <key>_en.png、generator/maps/npl_locator/）はスクリーンショットが無いときの落とし先として残してある。赤枠は出さない（box: false）。スクリーンショットがどの中心・縮尺で写っているかは正確には分からず、計算した枠は必ずずれる。Googleのピンとハザードのアイコンが既に写っているので枠を足す必要もない。",
+    "city_map": {
+      "cLat": 28.15,
+      "cLon": 85.35,
+      "zoom": 9
+    },
+    "steps": [
+      {
+        "key": "locator_world",
+        "label_en": "World → Nepal",
+        "label_ja": "世界→ネパール",
+        "box": false,
+        "cap": "© Google"
+      },
+      {
+        "key": "locator_region",
+        "label_en": "Nepal → Rasuwa District",
+        "label_ja": "ネパール→ラスワ郡",
+        "box": false,
+        "cap": "© Google"
+      },
+      {
+        "key": "google_cities",
+        "label_en": "Bhote Koshi valley (Timure)",
+        "label_ja": "ボテコシ川の谷（ティムレ）",
+        "cap": "© Google"
+      }
+    ]
+  },
+  "activation_pages": [
+    {
+      "key": "sentinel_asia",
+      "title_en": "Sentinel Asia - Flash Flood in Rasuwa District, Nepal (SA-00658, requested by DHM)",
+      "title_ja": "センチネルアジア 緊急観測 SA-00658（要請：ネパール水文気象局）",
+      "url": "https://sentinel-asia.org/EO/2026/article20260826NP.html"
+    },
+    {
+      "key": "disaster_charter",
+      "title_en": "International Charter - Flood in Nepal, Activation #1052",
+      "title_ja": "国際災害チャーター Flood in Nepal（Activation #1052）",
+      "url": "https://disasterscharter.org/activations/flood-in-nepal-activation-1052-"
+    }
+  ],
+  "attribution_en": "Figures from NDRRMA, Nepal Police and UN agencies; source and cut-off shown per row. All figures provisional.",
+  "attribution_ja": "NDRRMA・ネパール警察・国連機関等の集計。各行に出典と時点を示す。いずれも暫定値。",
+  "extra_slides": [
+    {
+      "title_en": "Mechanism - and How the Terminology Changed",
+      "title_ja": "発生機構と、呼び方が変わった経緯",
+      "intro_en": "This event was described as a suspected glacial lake outburst flood (GLOF) in the first days. The IRDR rapid analysis of 28 August identifies an ice, rock and soil mass failure that dammed the river and then breached - not the outburst of a glacial lake. Both wordings are recorded here with their dates. The earlier wording was the best reading available at the time, not an error to be hidden.",
+      "intro_ja": "本災害は発災直後、氷河湖決壊洪水（GLOF）の疑いとして扱われた。8月28日のIRDR速報解析は、氷・岩・土砂の崩落が川を堰き止め、それが決壊したものと特定している。氷河湖の決壊ではない。 ここでは両方の呼び方を日付とともに残す。当初の呼び方はその時点で得られていた最善の読みであり、隠すべき誤りではない。",
+      "columns": [
+        {
+          "key": "stage",
+          "label_en": "Stage",
+          "label_ja": "段階",
+          "w": 2.9
+        },
+        {
+          "key": "what",
+          "label_en": "What happened",
+          "label_ja": "内容",
+          "w": 7.3
+        },
+        {
+          "key": "when",
+          "label_en": "When",
+          "label_ja": "時刻",
+          "w": 2.3
+        }
+      ],
+      "rows": [
+        {
+          "stage_en": "Pre-event",
+          "stage_ja": "発災前",
+          "what_en": "Long-term environmental change in the northern Langtang region: water retreat, changing snow and ice conditions, increasing ice overburden.",
+          "what_ja": "ランタン地域北部の長期的な環境変化。水の後退、雪氷の状態の変化、氷の荷重の増加。",
+          "when_en": "-",
+          "when_ja": "—"
+        },
+        {
+          "stage_en": "Ice / rock avalanche",
+          "stage_ja": "氷・岩の崩落",
+          "what_en": "A massive volume of ice, rock and soil detaches at about 5,000 m around Deding and descends to about 3,000 m, fracturing and mixing during the descent.",
+          "what_ja": "デディン付近の標高約5,000mで氷・岩・土砂の大量の塊が崩落し、約3,000mまで落下。落下中に砕けて混合する。",
+          "when_en": "25 Aug, 13:00-14:00",
+          "when_ja": "8月25日 13〜14時"
+        },
+        {
+          "stage_en": "Temporary dam",
+          "stage_ja": "天然ダムの形成",
+          "what_en": "The collapsed ice-rock-debris mass blocks the channel and forms a natural impoundment dam.",
+          "what_ja": "崩落した氷・岩・岩屑の塊が河道を塞ぎ、天然のダムを作る。",
+          "when_en": "25 Aug, afternoon",
+          "when_ja": "8月25日 午後"
+        },
+        {
+          "stage_en": "Impoundment",
+          "stage_ja": "湛水",
+          "what_en": "Water accumulates for 18-19 hours from river flow and melting ice, raising lateral pressure on the dam. Inflow from the Mala River keeps the downstream channel flowing and masks the blockage.",
+          "what_ja": "河川流と氷の融解により18〜19時間にわたり湛水し、ダムへの側圧が高まる。マラ川からの流入が下流の流れを保ち、閉塞を覆い隠す。",
+          "when_en": "25-26 Aug",
+          "when_ja": "8月25〜26日"
+        },
+        {
+          "stage_en": "Sudden breach",
+          "stage_ja": "急激な決壊",
+          "what_en": "Rising pressure, together with ice melting within the debris and loosening and saturation of the soil, breaches the dam. Strong ground vibration is recorded as an M4.4 event and an explosion-like sound is heard.",
+          "what_ja": "側圧の上昇に加え、岩屑の中の氷の融解と土砂の緩み・飽和が重なってダムが決壊。強い地面の振動がM4.4として記録され、爆発音のような音が聞かれた。",
+          "when_en": "26 Aug, about 08:35",
+          "when_ja": "8月26日 08時35分ごろ"
+        },
+        {
+          "stage_en": "Downstream propagation",
+          "stage_ja": "下流への伝播",
+          "what_en": "Rasuwagadhi about 09:00, Timure about 09:15, Betrawati about 09:20. The steep, narrow corridor concentrated the flow; further downstream the valley widened, the flow slowed and less additional damage was reported.",
+          "what_ja": "ラスワガディ約09時00分、ティムレ約09時15分、ベトラワティ約09時20分。急勾配で狭い回廊が流れを集中させた。さらに下流では谷が広がって流速が落ち、追加の被害は限られた。",
+          "when_en": "26 Aug, 09:00-",
+          "when_ja": "8月26日 09時〜"
+        }
+      ],
+      "note_en": "IRDR states that the precise source mechanism, breach dynamics, peak discharge and any seismic contribution require further investigation. Earlier wording: DHM, NDRRMA, ADRC, Sentinel Asia, JAXA and WFP used 'GLOF' in the first days; UNOSAT described the deposits as mudflow / rockflow; DG ECHO used 'ice-rock avalanche and flash flood'. The GLIDE number FF-2026-000162-NPL (Flash Flood) is a registration category and is unaffected.",
+      "note_ja": "IRDRは、発生源の詳細な機構・決壊の力学・ピーク流量・地震動との関係は今後の調査を要すると明記している。当初の呼び方：DHM・NDRRMA・ADRC・センチネルアジア・JAXA・WFP は発災直後「GLOF」を用い、UNOSATは堆積物を mudflow / rockflow と記述、DG ECHO は ice-rock avalanche and flash flood としていた。GLIDE番号 FF-2026-000162-NPL（Flash Flood）は登録上の分類であり、この変更の影響を受けない。",
+      "source": {
+        "label": "IRDR Rapid Analysis Report, 28 Aug 2026",
+        "url": "https://reliefweb.int/report/nepal/irdr-rapid-analysis-report-scientific-anatomy-26-august-2026-bhotekoshi-flash-flood"
+      }
+    },
+    {
+      "title_en": "UNOSAT - Satellite-detected Mudflow / Rockflow Extent (Rasuwa and Nuwakot)",
+      "title_ja": "UNOSAT 衛星解析による土石流・岩屑流の範囲（ラスワ郡・ヌワコット郡）",
+      "intro_en": "Product 4259, imagery analysis 26 and 27 August 2026, published 28 August 2026 (v1). Sentinel-2 imagery of 27 August and PlanetScope imagery of 26 August. Within an analysed area of about 350 km2, an estimated 37 km2 appears to be affected by floodwaters. Approximately 5,000 of the 46,600 buildings in the analysed area are exposed to or located near the affected areas, and about 120 km of roads are potentially affected. The highest concentration is in Bidur Municipality, Nuwakot District (about 2,600 buildings), followed by Gosaikunda Municipality, Rasuwa District (about 1,030 buildings). The map also marks the possible triggering location of the ice-rock avalanche on the Tibetan side of the border.",
+      "intro_ja": "製品番号4259。2026年8月26日・27日の画像解析、8月28日公開（v1）。8月27日のSentinel-2と8月26日のPlanetScopeの画像による。解析対象面積 約350km2 のうち、約37km2 が出水の影響を受けたと推定される。解析範囲内の建物 約46,600棟のうち約5,000棟が影響範囲内またはその近傍にあり、道路 約120km が影響を受けた可能性がある。最も集中しているのはヌワコット郡ビドゥル市の約2,600棟で、次いでラスワ郡ゴサインクンダ村の約1,030棟。氷と岩の雪崩の発生地点と推定される位置（国境の中国側）も図示されている。",
+      "image": "unosat_rasuwa",
+      "caption_en": "UNOSAT product 4259 - Rasuwa and Nuwakot Districts, Bagmati Province",
+      "caption_ja": "UNOSAT 製品4259 — バグマティ州ラスワ郡・ヌワコット郡",
+      "note_en": "UNOSAT states this is a preliminary analysis that has not yet been validated in the field. UNOSAT describes the deposits as mudflow / rockflow; this is a description of what the imagery shows and does not contradict the GLOF attribution used by DHM, NDRRMA, ADRC, Sentinel Asia, JAXA and WFP.",
+      "note_ja": "UNOSATは、これは暫定的な解析であり現地での検証は行われていないと明記している。堆積物を mudflow / rockflow と記述しているが、これは図に写っているものの呼び方であり、DHM・NDRRMA・ADRC・センチネルアジア・JAXA・WFP が用いる GLOF という位置づけと矛盾しない。",
+      "source": {
+        "label": "UNOSAT / UNITAR product 4259",
+        "url": "https://unosat.org/products/4259"
+      },
+      "image_full": true
+    }
+  ],
+  "observations": [
+    {
+      "tier": "official",
+      "en": "The hazard is not over. An estimated 0.11 sq km lake has formed upstream behind the blockage of the Lhende Khola, and NDRRMA warns of a continuing flood risk. The same sequence - blockage, impoundment, sudden breach - produced the 26 August flood, and downstream communities and responders are being told to stay on high alert.",
+      "ja": "危険はまだ終わっていない。レンデ川の閉塞により上流に推定0.11km2の湖が形成され、NDRRMAは洪水リスクの継続を警告している。8月26日の出水を起こしたのと同じ経過（閉塞→湛水→急激な決壊）であり、下流の住民と対応要員には高度な警戒の維持が求められている。"
+    },
+    {
+      "tier": "official",
+      "en": "The 28 August UNOSAT analysis extends downstream into Nuwakot District. The largest concentration of affected buildings is not in Rasuwa, where the surge began, but in Bidur Municipality in Nuwakot - about 2,600 buildings against about 1,030 in Gosaikunda, Rasuwa. Reporting that stops at the district where the event started understates the footprint.",
+      "ja": "8月28日のUNOSATの解析は、下流のヌワコット郡まで範囲を広げている。影響を受けた建物が最も集中しているのは、出水が始まったラスワ郡ではなくヌワコット郡ビドゥル市である（約2,600棟に対し、ラスワ郡ゴサインクンダ村は約1,030棟）。発災地の郡だけを見ていると、被害の広がりを小さく見積もることになる。"
+    },
+    {
+      "tier": "official",
+      "en": "There was no rainfall capable of explaining this flood. Rainfall and discharge records show no heavy or sufficiently localised rain, which is what led IRDR to look upstream for a slope failure. Rainfall-threshold flood warning would not have caught this event.",
+      "ja": "この出水を説明できる降雨は無い。 降水量と流量の記録に、大雨も局地的な集中豪雨も見当たらないことが、IRDRが上流の斜面崩壊を疑う出発点になった。降雨のしきい値に頼る洪水警報では、この災害は捉えられない。"
+    },
+    {
+      "tier": "official",
+      "en": "The temporary dam was invisible from downstream. Inflow from the Mala River and other tributaries kept the downstream channel flowing normally for the 18-19 hours the blockage held, so nothing in the downstream record signalled what was building upstream.",
+      "ja": "天然ダムは下流からは見えなかった。 閉塞していた18〜19時間、西側のマラ川などからの流入が下流の水位を保っていたため、下流の記録には上流で何が起きているかを示すものが現れなかった。"
+    },
+    {
+      "tier": "official",
+      "en": "The damage was multi-sector and cascading. A single source-area disturbance propagated through a narrow, highly exposed mountain corridor and hit settlements, border trade, transport, energy, tourism, communications and the emergency response capacity itself at the same time.",
+      "ja": "被害は分野をまたいで連鎖した。 発生源での1つの崩壊が、狭く曝露の大きい山岳回廊を伝わり、集落・国境交易・交通・エネルギー・観光・通信、そして応急対応能力そのものを同時に直撃した。"
+    },
+    {
+      "tier": "official",
+      "en": "The requester gave a precise source location. On 27 August the Department of Hydrology and Meteorology reported the ice-avalanche coordinates as 28.295727N, 85.507802E, drawn from Planet imagery, and noted that the original area of interest had been set before the origin was known. ADRC revised the wide-area AOI the same day.",
+      "ja": "要請元が発生源の位置を特定した。8月27日、ネパール水文気象局はPlanetの画像から氷雪崩の座標を北緯28.295727度・東経85.507802度と報告し、当初の観測対象範囲は発生源が分からない段階で設定したものだと説明した。ADRCは同日、広域のAOIを見直している。"
+    }
+  ]
+}
