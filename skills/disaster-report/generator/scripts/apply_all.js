@@ -41,7 +41,6 @@ const ORDER = [
   ["apply_language_figures.js", "図を <key>_ja.png のように言語ごとに持てるようにする"],
   ["apply_sat_page_numbering.js", "出ていないページの番号を見出しに書かない（3/3 だけが残る）"],
   ["apply_table_fit.js", "表がページ番号・出典行に重ならないよう行送りと下端を直す"],
-  ["apply_damage_row_split.js", "被害状況の1行がページより高くなるとき複数行へ割る"],
   ["apply_fitrows_measured.js", "右側の表が折り返しで伸びて枠外へ出るのを止める"],
   ["apply_locator_no_box.js", "表紙の赤枠を box: false で出さないようにする"],
   ["apply_title_fit.js", "見出しが右上のADRCロゴに潜り込むのを止める（shrinkTextはLibreOfficeで効かない）"],

@@ -372,11 +372,7 @@ function srcLine(slide, items, opts) {
       runs.push({ text: shortName(it.label), options: { fontSize: 10.5, color: "0563C1", hyperlink: { url: it.url } } });
     });
   }
-  // 既定は1行分（h:0.24, 中央寄せ）。長い出典・URLが2行に折り返す呼び出し元は
-  // opts.h / opts.valign で下端基準にできる（例: valign:"bottom" で下端を固定し、
-  // 2行になっても 7.10in の帯へ食い込まないようにする）。指定が無い呼び出しは
-  // 従来どおり動く。
-  slide.addText(runs, { x: 0.4, y: (opts && opts.y) || 6.86, w: (opts && opts.w) || 12.5, h: (opts && opts.h) || 0.24, align: "left", fontFace: FONT, margin: 0, valign: (opts && opts.valign) || "middle" });
+  slide.addText(runs, { x: 0.4, y: (opts && opts.y) || 6.86, w: (opts && opts.w) || 12.5, h: 0.24, align: "left", fontFace: FONT, margin: 0, valign: "middle" });
 }
 function heading(slide, en, ja) {
   const runs = BI
