@@ -46,6 +46,8 @@ const ORDER = [
   ["apply_locator_no_box.js", "表紙の赤枠を box: false で出さないようにする"],
   ["apply_title_fit.js", "見出しが右上のADRCロゴに潜り込むのを止める（shrinkTextはLibreOfficeで効かない）"],
   ["apply_cover_line_fit.js", "表紙の規模・震源の行が右上のADRCロゴに潜り込むのを止める"],
+  ["apply_dmg_row_split.js", "被害状況の1行が1ページに収まらないときページ跨ぎで割る"],
+  ["apply_srcline_fit.js", "下部の出典行が2行に折り返してページ番号の帯に落ちるのを止める"],
 ];
 
 function main() {
