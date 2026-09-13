@@ -172,3 +172,51 @@ BMKG と geologi.esdm.go.id が到達可能なので原典で確認できる。
 - **有料論文**：`www.sciencedirect.com` や `www.nature.com` を許可しても本文はペイウォールの内側。
   機関購読（兵庫県立大学・ADRC）経由でのPDF入手か、`arxiv.org` / `researchgate.net` /
   各大学リポジトリの著者版で代替する必要がある。
+
+---
+
+## 2026-09-13 追記：★未確認3項目の到達性を打ち切る（探索の終了宣言）
+
+9月9日から13日まで、残る★項目（Brown et al. 2017の死者総数、Loughlin et al. 2015附録B、英CAAの濃度基準）について**約20ホストを実測した。すべて到達不能**である。以後の日次チェックでは**盲目的な再試行を行わない**。下表のいずれかが許可されたときに再開する。
+
+### Brown et al. (2017) / Loughlin et al. (2015) 用（学術）
+
+| ホスト | 結果 | 備考 |
+|---|---|---|
+| `appliedvolc.biomedcentral.com` | JSチャレンジ | オープンアクセス誌の正規URL |
+| `link.springer.com` | JSチャレンジ | 同上 |
+| `www.ebi.ac.uk`（Europe PMC API） | egress遮断 | **最有力。APIなのでJS不要** |
+| `api.crossref.org` | egress遮断 | 書誌のみだが確認に有用 |
+| `api.openalex.org` | egress遮断 | 同上 |
+| `doaj.org` | egress遮断 | オープンアクセス誌の索引 |
+| `figshare.com` | egress遮断 | Brown et al. の Additional file 1（データセット本体） |
+| `www.semanticscholar.org` | egress遮断 | PDF直リンクあり |
+| `research-information.bris.ac.uk` | egress遮断 | ブリストル大リポジトリ（著者所属） |
+| `www.cambridge.org` | egress遮断 | Loughlin et al. 2015 の版元（オープンアクセス書籍） |
+| `globalvolcanomodel.org` | egress遮断 | 同書の母体プロジェクト |
+| `zenodo.org` / `osf.io` / `www.ncbi.nlm.nih.gov` | egress遮断 | 汎用リポジトリ |
+| `www.preventionweb.net` / `www.undrr.org` / `openknowledge.worldbank.org` | egress遮断 | 防災系の二次配布元 |
+
+**推奨**：`www.ebi.ac.uk` の1ドメインで Europe PMC の REST API が使える。JS チャレンジを回避でき、オープンアクセス全文が取れる可能性が最も高い。
+
+### 英CAA の濃度基準（2/4 mg/m³）用
+
+| ホスト | 結果 | 備考 |
+|---|---|---|
+| `ad.easa.europa.eu` | リダイレクトループ | **EASA SIB 2010-17 の正規配布元。最重要** |
+| `www.easa.europa.eu` | egress遮断 | 同上 |
+| `www.iaa.ie` | egress遮断 | アイルランド当局による SIB 2010-17R2 のミラー |
+| `www.metoffice.gov.uk` | egress遮断 | London VAAC の QVA 解説 |
+| `skybrary.aero` | JSチャレンジ | ICAO EUR/NAT VACP の解説 |
+| `www.gov.uk` / `assets.publishing.service.gov.uk` | egress遮断 | 英政府文書 |
+| `publications.parliament.uk` / `hansard.parliament.uk` | egress遮断 | 議会記録（2010年の閾値引上げ経緯） |
+| `www.nats.aero` | egress遮断 | 英ANSP |
+| `web.archive.org` | egress遮断 | 削除された CAA 頁の回収 |
+| `www.icao.int` | Cloudflare 403 | **許可では解決しない** |
+| `volcano.si.edu` | Cloudflare 403 | **許可では解決しない** |
+
+**ただし §9.3 に記したとおり、照合できた2010年の一次資料2点（CAA ブリーフィング、EUROCONTROL Doc394）はいずれも数値を書いていない。** 数値は運用文書側にあると考えられるため、**`ad.easa.europa.eu` の許可が最も効く**。それでも取れなければ、この数値は論文で引用しない方針とする。
+
+### 到達できている有用なホスト（記録）
+
+`jdih.kemenhub.go.id`（インドネシア法令全文）、`hubud.kemenhub.go.id`、`geologi.esdm.go.id`、`www.caa.co.uk`、`www.eurocontrol.int`、`pubs.usgs.gov`、`volcanoes.usgs.gov`、`eur-lex.europa.eu`、`www.jstage.jst.go.jp`
