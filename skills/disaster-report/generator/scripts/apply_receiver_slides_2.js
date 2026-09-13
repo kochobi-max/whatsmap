@@ -242,7 +242,9 @@ const EXTRA = `
   }
   const note = ((cols.length && rows.length) || imgFull) ? TT(x.note_en || "", x.note_ja || "") : "";
   if (note) s.addText(note, { x: tx, y: 6.42, w: tw, h: 0.44, fontSize: 9.5, color: MUTED, fontFace: FONT, align: "left", valign: "top", margin: 3, shrinkText: true });
-  if (x.source && x.source.url) srcLine(s, [x.source]);
+  // 自由記述テーブルは表の行数がまちまちで、出典・URLが長いと2行に折り返すことがある。
+  // 下端基準（valign:"bottom"）にして、2行になっても7.10inの帯へ食い込まないようにする。
+  if (x.source && x.source.url) srcLine(s, [x.source], { y: 6.60, h: 0.42, valign: "bottom" });
   footer(s);
 });
 `;
