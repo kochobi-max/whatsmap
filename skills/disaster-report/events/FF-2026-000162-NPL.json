@@ -1421,6 +1421,13 @@
       "label_ja": "WFP（スペイン語版）ネパールでの対応拡大に関する記事（英語版と同一内容）",
       "tier": "official",
       "_note": "英語版と同一記事の西語版。新規数値なし。確認済み。"
+    },
+    {
+      "url": "https://reliefweb.int/report/nepal/nepal-anticipatory-action-framework-floods-2026",
+      "label_en": "OCHA - Nepal Anticipatory Action Framework for Floods (2026) (posted 14 Sep 2026)",
+      "label_ja": "OCHA「ネパール洪水事前行動枠組み（2026年）」（2026年9月14日掲載）",
+      "tier": "official",
+      "_note": "本文を開いて確認。今回の土石流・鉄砲水（ボテコシ川）に固有の被害数値は含まず、将来の洪水に備える一般的な事前行動枠組み文書。現行の数値・機構の記述には影響しない。確認済み。"
     }
   ],
   "images": {
