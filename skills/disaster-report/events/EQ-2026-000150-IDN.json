@@ -21,10 +21,10 @@
     "jma_name_en": "",
     "edition": "",
     "prepared_by": "Asian Disaster Reduction Center (ADRC)",
-    "stamp": "2026-09-14 07:50 JST",
-    "update_date": "14/09/2026",
-    "timeline_range_en": "15 August - 11 September 2026 (Western Indonesian Time, UTC+7)",
-    "timeline_range_ja": "2026年8月15日〜9月11日（西部インドネシア時間 WIB、UTC+7）",
+    "stamp": "2026-09-16 07:50 JST",
+    "update_date": "15/09/2026",
+    "timeline_range_en": "15 August - 15 September 2026 (Western Indonesian Time, UTC+7)",
+    "timeline_range_ja": "2026年8月15日〜9月15日（西部インドネシア時間 WIB、UTC+7）",
     "disseminate_en": "",
     "disseminate_ja": "",
     "optional_slides": [],
@@ -34,14 +34,14 @@
       "injured": 1658,
       "missing": null,
       "houses_destroyed": 81436,
-      "evacuees": 188673,
+      "evacuees": 46461,
       "tier": "official",
-      "as_of": "2026-08-31 09:00 WIB (BNPB, via AHA Centre ASEAN Weekly Disaster Update Week 35)"
+      "as_of": "2026-09-15 (BNPB press conference, via ANTARA)"
     },
     "subtitle_en": "M7.7, offshore Nagekeo Regency, Flores Island, East Nusa Tenggara - 15 August 2026",
     "subtitle_ja": "M7.7、東ヌサトゥンガラ州フローレス島 ナゲケオ県沖、2026年8月15日",
-    "edition_en": "4th report",
-    "edition_ja": "第4報",
+    "edition_en": "5th report",
+    "edition_ja": "第5報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
     "tz_note_en": "Times follow BNPB's own reporting in WIB (UTC+7) unless stated.",
@@ -137,8 +137,8 @@
     "depth_display": "10 km (USGS) / 15 km (BMKG)",
     "mechanism_en": "BMKG placed the epicentre 30 km northeast of Mbay, Nagekeo Regency, at 15 km depth; USGS reported Mww 7.7 at 10 km. The USGS moment tensor solution gives Mww 7.8 at 23.5 km. Maximum estimated shaking is MMI VIII, with 51 felt reports. The source is the Flores Back-Arc Thrust.",
     "mechanism_ja": "BMKGは震央をナゲケオ県ンバイの北東30km、深さ15kmとし、USGSは Mww7.7・深さ10kmとした。USGSのモーメントテンソル解は Mww7.8・深さ23.5km。推定最大震度はMMI VIII、体感報告51件。発生源はフローレス背弧断層。",
-    "summary_en": "A magnitude 7.7 earthquake struck offshore Nagekeo Regency, East Nusa Tenggara, at 04:58 WIB on 15 August 2026, about 30 km northeast of Mbay on Flores Island. BMKG issued a tsunami warning for several coastal areas and lifted it at 07:31 WIB. Seven regencies were affected: West Manggarai, Manggarai, East Manggarai, Ngada, Nagekeo, Ende and Sikka. BNPB reported 105 deaths, 1,678 injured or ill, 179,037 displaced and 81,436 houses affected as of 26 August; the AHA Centre's ASEAN Weekly Disaster Update subsequently cited BNPB figures of 120 deaths, 1,658 injured and about 188,673 displaced as of 09:00 WIB on 31 August. The toll rose steadily as access improved: 47 deaths on 16 August, 69 on 18 August, 100 on 24 August, 105 on 26 August and 120 on 31 August. ADRC requested both Sentinel Asia and the International Charter on the day of the earthquake on behalf of BRIN. No official figure has been found superseding the 31 August toll as of this edition (14 Sep); through early September the response shifted into recovery, with roads and bridges fully restored, 1,931 schools resuming classes, additional health personnel deployed for psychosocial care, and Rp200 billion in central contingency funds released to NTT, while aftershocks (about 13,000 by 5 September) continued to decline gradually.",
-    "summary_ja": "2026年8月15日4時58分（WIB）、東ヌサトゥンガラ州ナゲケオ県沖でM7.7の地震が発生した。震央はフローレス島ンバイの北東約30km。BMKGは沿岸の一部に津波警報を出し、7時31分に解除した。被災は西マンガライ、マンガライ、東マンガライ、ンガダ、ナゲケオ、エンデ、シッカの7県に及ぶ。BNPBは8月26日時点で死者105人、負傷・疾病1,678人、避難者179,037人、住家被害（影響）81,436棟と発表しており、その後AHA CentreのASEAN週報が8月31日09:00 WIB時点のBNPB値として死者120人、負傷1,658人、避難者約188,673人を引用している。到達が進むにつれ数値は増え続けており、死者は8月16日47人、18日69人、24日100人、26日105人、31日120人と推移した。ADRCは発災当日、BRINに代わってセンチネルアジアと国際災害チャーターの双方を要請した。9月上旬にかけて対応は復興段階に移行し、道路・橋梁は全面復旧、中央政府予備費2,000億ルピアがNTT州へ拠出された。余震（9月5日時点で約13,000回）は緩やかに減少しており、8月31日の値を上回る公式死者数は確認されていない。",
+    "summary_en": "A magnitude 7.7 earthquake struck offshore Nagekeo Regency, East Nusa Tenggara, at 04:58 WIB on 15 August 2026, about 30 km northeast of Mbay on Flores Island. BMKG issued a tsunami warning for several coastal areas and lifted it at 07:31 WIB. Seven regencies were affected: West Manggarai, Manggarai, East Manggarai, Ngada, Nagekeo, Ende and Sikka. BNPB reported 105 deaths, 1,678 injured or ill, 179,037 displaced and 81,436 houses affected as of 26 August; the AHA Centre's ASEAN Weekly Disaster Update subsequently cited BNPB figures of 120 deaths, 1,658 injured and about 188,673 displaced as of 09:00 WIB on 31 August. The toll rose steadily as access improved: 47 deaths on 16 August, 69 on 18 August, 100 on 24 August, 105 on 26 August and 120 on 31 August. ADRC requested both Sentinel Asia and the International Charter on the day of the earthquake on behalf of BRIN. No official death toll has been found superseding the 31 August count of 120 as of this edition (15 Sep); the response has shifted into recovery, with roads and bridges fully restored, 1,931 schools resuming classes, and Rp200 billion in central contingency funds released to NTT. On 15 September BNPB reported displacement down sharply to 46,461 (from over 150,000) and said 103,427 damaged houses were being re-verified in the field; BMKG recorded 15,722 aftershocks over the 30 days since the mainshock, in a steadily declining weekly pattern.",
+    "summary_ja": "2026年8月15日4時58分（WIB）、東ヌサトゥンガラ州ナゲケオ県沖でM7.7の地震が発生した。震央はフローレス島ンバイの北東約30km。BMKGは沿岸の一部に津波警報を出し、7時31分に解除した。被災は西マンガライ、マンガライ、東マンガライ、ンガダ、ナゲケオ、エンデ、シッカの7県に及ぶ。BNPBは8月31日09:00 WIB時点で死者120人、負傷1,658人、避難者約188,673人と発表し、以降この死者数を上回る公式値は確認されていない。ADRCは発災当日、BRINに代わりセンチネルアジアと国際災害チャーターを要請した。道路・橋梁は全面復旧、中央政府予備費2,000億ルピアがNTT州へ拠出済み。BNPBは9月15日、避難者数が15万人超から46,461人へ急減したと発表し、損壊住宅103,427棟を現地で再検証中とした。BMKGは本震から30日間の余震を計15,722回とし、週ごとに減少傾向にある。",
     "tectonic_en": "The earthquake was generated by the Flores Back-Arc Thrust.",
     "tectonic_ja": "フローレス背弧断層（Flores Back-Arc Thrust）による地震。"
   },
@@ -166,12 +166,12 @@
     {
       "item_en": "Displaced",
       "item_ja": "避難者",
-      "value_en": "Approximately 188,673 (BNPB, via AHA Centre, as of 09:00 WIB 31 Aug), up from 179,037 at the 26 Aug report. The figure moved about 2,000 (15 Aug) to 9,290 (16 Aug) to 46,252 (18 Aug) to 59,647 (19 Aug) to 180,327 (24 Aug) to 179,037 (26 Aug) to 188,161 (30 Aug 07:00 WIB, BNPB press conference via ANTARA - down 4,142 from the prior count as aftershocks began to ease; Manggarai and Nagekeo the largest caseloads at 50,556 and 50,574) to approximately 188,673 (31 Aug). BNPB attributes the very large caseload substantially to fear of continuing aftershocks and to circulating hoaxes predicting a larger earthquake and tsunami, not to housing loss alone. No BNPB or media figure found after 31 Aug supersedes this; a 9 Sep ANTARA report on Sikka District alone (925 families still registered, and falling) is consistent with a continuing gradual decline but is not a province-wide count.",
-      "value_ja": "約188,673人（BNPB、AHA Centre経由、8月31日09:00 WIB時点）。8月26日報の179,037人から増加。約2,000人（8月15日）→9,290人（16日）→46,252人（18日）→59,647人（19日）→180,327人（24日）→179,037人（26日）→188,161人（30日07:00 WIB、BNPB記者会見、ANTARA経由。余震の沈静化に伴い前回集計より4,142人減。マンガライ県50,556人・ナゲケオ県50,574人が最多）→約188,673人（31日）と推移した。BNPBは避難者数が極めて多い要因を、住家の喪失だけでなく、継続する余震への恐怖と、より大きな地震・津波を予告するデマの流布に帰している。8月31日以降、これを更新するBNPB・報道の数値は見当たらない。9月9日のANTARA報道（シッカ県のみ、925世帯が登録中で漸減傾向）はゆるやかな減少傾向と整合するが、州全体の集計ではない。",
-      "source_en": "BNPB, via AHA Centre ASEAN Weekly Disaster Update Week 35, 31 Aug 09:00 WIB",
-      "source_ja": "BNPB（AHA Centre「ASEAN Weekly Disaster Update Week 35」経由、8月31日09:00 WIB時点）",
+      "value_en": "Approximately 188,673 (BNPB, via AHA Centre, as of 09:00 WIB 31 Aug), up from 179,037 at the 26 Aug report. The figure moved about 2,000 (15 Aug) to 9,290 (16 Aug) to 46,252 (18 Aug) to 59,647 (19 Aug) to 180,327 (24 Aug) to 179,037 (26 Aug) to 188,161 (30 Aug 07:00 WIB, BNPB press conference via ANTARA - down 4,142 from the prior count as aftershocks began to ease; Manggarai and Nagekeo the largest caseloads at 50,556 and 50,574) to approximately 188,673 (31 Aug). BNPB attributes the very large caseload substantially to fear of continuing aftershocks and to circulating hoaxes predicting a larger earthquake and tsunami, not to housing loss alone. No BNPB or media figure found after 31 Aug supersedes this; a 9 Sep ANTARA report on Sikka District alone (925 families still registered, and falling) is consistent with a continuing gradual decline but is not a province-wide count. On 15 Sep, at an online press conference, BNPB's Acting Head for Disaster Data, Information and Communication, Berton SP Panjaitan, reported a sharp decline \"from over 150,000 people to 46,461\". No BNPB or media figure was found for the period between 31 Aug (approximately 188,673) and this 15 Sep report describing the intermediate peak of \"over 150,000\"; the two ends of the decline are shown as reported, without an intermediate series.",
+      "value_ja": "約188,673人（BNPB、AHA Centre経由、8月31日09:00 WIB時点）。8月26日報の179,037人から増加。約2,000人（8月15日）→9,290人（16日）→46,252人（18日）→59,647人（19日）→180,327人（24日）→179,037人（26日）→188,161人（30日07:00 WIB、BNPB記者会見、ANTARA経由。余震の沈静化に伴い前回集計より4,142人減。マンガライ県50,556人・ナゲケオ県50,574人が最多）→約188,673人（31日）と推移した。BNPBは避難者数が極めて多い要因を、住家の喪失だけでなく、継続する余震への恐怖と、より大きな地震・津波を予告するデマの流布に帰している。8月31日以降、これを更新するBNPB・報道の数値は見当たらない。9月9日のANTARA報道（シッカ県のみ、925世帯が登録中で漸減傾向）はゆるやかな減少傾向と整合するが、州全体の集計ではない。 9月15日のオンライン記者会見で、BNPB防災データ・情報・広報担当代理のベルトン・SP・パンジャイタン氏は、避難者数が「15万人超から46,461人へ」大きく減少したと発表した。8月31日（約188,673人）と今回の9月15日報の間の期間について「15万人超」という中間のピークを示すBNPB・報道の数値は見当たらず、減少の両端のみが報告されている中間の推移は示されていない。",
+      "source_en": "BNPB press conference (Berton SP Panjaitan), 15 Sep, via ANTARA",
+      "source_ja": "BNPB記者会見（ベルトン・SP・パンジャイタン氏）、9月15日、ANTARA経由",
       "tier": "official",
-      "url": "https://reliefweb.int/report/indonesia/asean-weekly-disaster-update-week-35-24-30-august-2026"
+      "url": "https://en.antaranews.com/news/431465/number-of-ntt-quake-evacuees-decline-significantly-to-46461-bnpb"
     },
     {
       "item_en": "Houses affected",
@@ -202,6 +202,16 @@
       "source_ja": "BNPB記者会見（Berton SP Panjaitan氏）、8月30日07:00 WIB、ANTARA経由",
       "tier": "official",
       "url": "https://en.antaranews.com/news/429081/bnpb-reports-ntt-quake-evacuees-decline-as-aftershocks-begin-to-ease"
+    },
+    {
+      "item_en": "Houses damaged (15 Sep re-verification, BNPB)",
+      "item_ja": "住家被害（9月15日再検証中、BNPB）",
+      "value_en": "103,427 damaged housing units (severe, moderate and minor combined) currently being re-verified in the field, per Berton SP Panjaitan (BNPB) at the 15 Sep press conference. This is a fourth house-damage total alongside the 77,912 (24 Aug data lock), 81,436 (26 Aug, 'affected') and 95,567 (30 Aug press conference) figures above; BNPB describes this round explicitly as a re-verification exercise (joint field teams, with Dukcapil and BPS, to prevent duplicate entitlement claims), not a closed data lock, and has not published a reconciliation across the four figures.",
+      "value_ja": "住家被害103,427棟（全壊・半壊・一部損壊を合算）、9月15日記者会見でのベルトン・SP・パンジャイタン氏（BNPB）の発言によれば現在、現地で再検証中。上記の77,912棟（8月24日データ確定）・81,436棟（8月26日「影響」）・95,567棟（8月30日記者会見）に続く4つ目の住家被害の総数である。BNPBはこの集計を、住民登録庁（Dukcapil）・統計庁（BPS）と連携した合同現地チームによる、重複給付を防ぐための再検証作業と明示しており、確定集計（データロック）ではない。4者間の関係は公表されていない。",
+      "source_en": "BNPB press conference (Berton SP Panjaitan), 15 Sep, via ANTARA",
+      "source_ja": "BNPB記者会見（ベルトン・SP・パンジャイタン氏）、9月15日、ANTARA経由",
+      "tier": "official",
+      "url": "https://en.antaranews.com/news/431465/number-of-ntt-quake-evacuees-decline-significantly-to-46461-bnpb"
     },
     {
       "item_en": "Public facilities (26 Aug)",
@@ -336,10 +346,10 @@
     {
       "item_en": "Aftershocks",
       "item_ja": "余震",
-      "value_en": "BMKG recorded 341 aftershocks of magnitude 2.5 to 6.2 by 17 August, including M6.1 and M5.9 events. USGS separately located an M6.1 at 22:28 UTC on 14 August, 30 minutes after the main shock. Thousands of aftershocks have continued, discouraging families from returning to damaged homes. The cumulative count later reached 9,765 (M1.0-6.2, 155 felt) as of 30 Aug and around 13,000 (177 felt) as of 5 Sep, per BNPB/BMKG cited by ANTARA. On 9 Sep the NTT Governor, citing BMKG, described the trend as declining but still fluctuating, with aftershocks possibly continuing another 3-4 weeks from the mainshock.",
-      "value_ja": "BMKGは8月17日までにM2.5〜6.2の余震341回を記録し、M6.1・M5.9を含む。USGSは本震の30分後、8月14日22時28分（UTC）にM6.1を別途決定している。その後も余震が続き、住民が損壊した住居へ戻ることをためらう要因となっている。累計は8月30日時点で9,765回（M1.0〜6.2、有感155回）、9月5日時点で約13,000回（有感177回）に達した（BNPB・BMKG、ANTARA経由）。9月9日、NTT州知事はBMKGを引用し、傾向は減少しつつも変動しており、本震から3〜4週間ほど余震が続く可能性があると述べた。",
-      "source_en": "BMKG, 17 Aug / USGS; BNPB via ANTARA, 30 Aug and 9 Sep",
-      "source_ja": "BMKG（8月17日）／USGS；BNPB、ANTARA経由（8月30日・9月9日）",
+      "value_en": "BMKG recorded 341 aftershocks of magnitude 2.5 to 6.2 by 17 August, including M6.1 and M5.9 events. USGS separately located an M6.1 at 22:28 UTC on 14 August, 30 minutes after the main shock. Thousands of aftershocks have continued, discouraging families from returning to damaged homes. The cumulative count later reached 9,765 (M1.0-6.2, 155 felt) as of 30 Aug and around 13,000 (177 felt) as of 5 Sep, per BNPB/BMKG cited by ANTARA. On 9 Sep the NTT Governor, citing BMKG, described the trend as declining but still fluctuating, with aftershocks possibly continuing another 3-4 weeks from the mainshock. BMKG's fuller breakdown, reported 15 Sep, records 15,722 aftershocks (M0.9-6.2) over the 30 days following the 15 August M7.7 mainshock, in a declining, decaying pattern: 5,011 in week 1, 4,267 in week 2, 3,158 in week 3, 2,421 in week 4, and 864 from week 5 through 15 Sep.",
+      "value_ja": "BMKGは8月17日までにM2.5〜6.2の余震341回を記録し、M6.1・M5.9を含む。USGSは本震の30分後、8月14日22時28分（UTC）にM6.1を別途決定している。その後も余震が続き、住民が損壊した住居へ戻ることをためらう要因となっている。累計は8月30日時点で9,765回（M1.0〜6.2、有感155回）、9月5日時点で約13,000回（有感177回）に達した（BNPB・BMKG、ANTARA経由）。9月9日、NTT州知事はBMKGを引用し、傾向は減少しつつも変動しており、本震から3〜4週間ほど余震が続く可能性があると述べた。 9月15日に報じられたBMKGのより詳細な内訳によれば、8月15日のM7.7本震から30日間の余震は計15,722回（M0.9〜6.2）で、減衰しつつ減少する傾向にある：第1週5,011回、第2週4,267回、第3週3,158回、第4週2,421回、第5週〜9月15日864回。",
+      "source_en": "BMKG, 17 Aug / USGS; BNPB via ANTARA, 30 Aug and 9 Sep; BNPB/BMKG via ANTARA, 15 Sep",
+      "source_ja": "BMKG（8月17日）／USGS；BNPB、ANTARA経由（8月30日・9月9日）／BNPB・BMKG、ANTARA経由（9月15日）",
       "tier": "official",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkt2"
     },
@@ -601,6 +611,13 @@
       "src": "NTT Governor (Melki Laka Lena), citing BMKG, via ANTARA",
       "en": "The NTT Governor reports aftershocks declining but still fluctuating (about 13,000 cumulative, 177 felt, as of 5 September; BMKG expects activity may continue 3-4 more weeks). In Sikka District, 925 families remain registered as evacuees, a continuing decline; province-wide house-damage re-verification continues (3,042 houses confirmed damaged, 1,252 being entered, about 2,808 still in data collection).",
       "ja": "NTT州知事が、余震は減少傾向にあるが依然として変動している（9月5日時点で累計約13,000回、有感177回。BMKGはあと3〜4週間程度続く可能性を示唆）と報告。シッカ県では避難登録世帯が925世帯まで漸減。州全体の住家被害再検証は継続中（確認済み損壊3,042棟、入力中1,252棟、データ収集段階約2,808棟）。"
+    },
+    {
+      "time": "15 Sep",
+      "tier": "official",
+      "src": "BNPB (press conference, via ANTARA)",
+      "en": "At an online press conference, BNPB's Acting Head for Disaster Data, Information and Communication, Berton SP Panjaitan, reported that the number of displaced persons has declined sharply, \"from over 150,000 people to 46,461\", which he attributed to the emergency response and post-disaster recovery efforts. Joint field teams, working with Dukcapil (population registration) and BPS (statistics), are re-verifying data on 103,427 damaged housing units (severe, moderate and minor combined) to prevent duplicate claims in housing repair assistance. Separately, BMKG reported 15,722 aftershocks (M0.9-6.2) over the 30 days since the 15 August M7.7 mainshock, in a declining weekly pattern (5,011 / 4,267 / 3,158 / 2,421 / 864).",
+      "ja": "BNPBのオンライン記者会見で、防災データ・情報・広報担当代理のベルトン・SP・パンジャイタン氏は、避難者数が「15万人超から46,461人へ」大きく減少したと発表し、緊急対応・復旧支援の成果によるものと説明した。合同現地チームが、住民登録庁（Dukcapil）・統計庁（BPS）と連携し、住宅修繕支援の重複給付を防ぐため、損壊住宅103,427棟（全壊・半壊・一部損壊合算）のデータを再検証中である。別途BMKGは、8月15日のM7.7本震から30日間の余震が計15,722回（M0.9〜6.2）で、週ごとに減少傾向（5,011／4,267／3,158／2,421／864）にあると報告した。"
     }
   ],
   "intensity": {},
@@ -980,6 +997,12 @@
       "label_ja": "ANTARA英語版：フローレスの余震は減少傾向も引き続き警戒を（9月9日）",
       "url": "https://en.antaranews.com/news/430597/flores-aftershocks-decline-residents-urged-to-remain-vigilant",
       "tier": "official"
+    },
+    {
+      "label_en": "UNHCR Indonesia: 2026 Funding Update (as of 31 Aug 2026) - reviewed, not relevant (Myanmar refugee situation funding, unrelated to the NTT earthquake)",
+      "label_ja": "UNHCR インドネシア2026年資金拠出アップデート（8月31日時点）－ 確認済み、無関係（ミャンマー難民支援の資金動向で、NTT地震とは無関係）",
+      "url": "https://reliefweb.int/report/indonesia/unhcr-indonesia-2026-funding-update-31-august-2026",
+      "tier": "n/a"
     }
   ],
   "attribution_en": "Figures reported by BNPB and relayed by IFRC/PMI and humanitarian partners; source and cut-off shown per row. All provisional.",
