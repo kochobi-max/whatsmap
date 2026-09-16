@@ -21,7 +21,7 @@
     "jma_name_en": "",
     "edition": "",
     "prepared_by": "Asian Disaster Reduction Center (ADRC)",
-    "stamp": "2026-09-16 07:50 JST",
+    "stamp": "2026-09-17 08:00 JST",
     "update_date": "15/09/2026",
     "timeline_range_en": "15 August - 15 September 2026 (Western Indonesian Time, UTC+7)",
     "timeline_range_ja": "2026年8月15日〜9月15日（西部インドネシア時間 WIB、UTC+7）",
@@ -40,8 +40,8 @@
     },
     "subtitle_en": "M7.7, offshore Nagekeo Regency, Flores Island, East Nusa Tenggara - 15 August 2026",
     "subtitle_ja": "M7.7、東ヌサトゥンガラ州フローレス島 ナゲケオ県沖、2026年8月15日",
-    "edition_en": "5th report",
-    "edition_ja": "第5報",
+    "edition_en": "6th report",
+    "edition_ja": "第6報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
     "tz_note_en": "Times follow BNPB's own reporting in WIB (UTC+7) unless stated.",
@@ -613,6 +613,13 @@
       "ja": "NTT州知事が、余震は減少傾向にあるが依然として変動している（9月5日時点で累計約13,000回、有感177回。BMKGはあと3〜4週間程度続く可能性を示唆）と報告。シッカ県では避難登録世帯が925世帯まで漸減。州全体の住家被害再検証は継続中（確認済み損壊3,042棟、入力中1,252棟、データ収集段階約2,808棟）。"
     },
     {
+      "time": "14 Sep",
+      "tier": "official",
+      "src": "Indonesian Humanitarian Coordination Platform (IHCP), Situation Report No. 9",
+      "en": "The Indonesian Humanitarian Coordination Platform's Situation Report No. 9 summarises a Joint Needs Assessment (JNA) conducted 19 August-4 September (primary data collection 24-26 August at 143 survey locations across 35 sub-districts in seven affected districts), led by Humanitarian Forum Indonesia and coordinated by World Vision Indonesia with 20 national and local organisations. Key findings: most locations reported shelter-in-place using tents/tarpaulins near damaged homes rather than displacement to central sites; 86.01% of locations had no private space in shelters and nearly half reported basic facilities hard to access for at-risk groups; acute respiratory infections were reported at 62.24% of locations, skin diseases at 47.55% and gastrointestinal infections at 41.26%; 42 locations had not yet received food assistance; and markets remain functional but constrained by pressure on staple-food and fuel prices and household purchasing power, particularly in Sikka and Manggarai districts for water access.",
+      "ja": "インドネシア人道調整プラットフォーム（IHCP）の状況報告第9号は、8月19日〜9月4日に実施された合同ニーズアセスメント（JNA、主データ収集は8月24〜26日、被災7県35小地区143調査地点）の結果を要約している。調査はHumanitarian Forum Indonesiaが主導し、World Vision Indonesiaの調整のもと国内外20団体が参加した。主な結果：多くの地点で、中央の避難所への移動ではなく損壊した自宅付近でテント・タープを用いた「その場での避難」が報告された。86.01％の地点で避難場所に私的空間がなく、半数近くで要支援者にとって基本設備へのアクセスが困難と報告された。急性呼吸器感染症が62.24％の地点、皮膚疾患が47.55％、消化器感染症が41.26％の地点で報告された。42地点はまだ食料支援を受けていない。市場は機能しているが、主食・燃料価格への圧力と家計の購買力低下により制約を受けており、特にシッカ県・マンガライ県では水アクセスが課題。"
+    },
+    {
       "time": "15 Sep",
       "tier": "official",
       "src": "BNPB (press conference, via ANTARA)",
@@ -1003,6 +1010,12 @@
       "label_ja": "UNHCR インドネシア2026年資金拠出アップデート（8月31日時点）－ 確認済み、無関係（ミャンマー難民支援の資金動向で、NTT地震とは無関係）",
       "url": "https://reliefweb.int/report/indonesia/unhcr-indonesia-2026-funding-update-31-august-2026",
       "tier": "n/a"
+    },
+    {
+      "url": "https://reliefweb.int/report/indonesia/indonesian-humanitarian-coordination-platform-situation-report-no-9-earthquake-and-tsunami-flores-and-surrounding-areas-14-september-2026",
+      "label_en": "IHCP Situation Report No. 9 - Earthquake and Tsunami in Flores and Surrounding Areas (14 Sep 2026)",
+      "label_ja": "IHCP状況報告第9号（フローレス地震・津波、2026年9月14日）",
+      "tier": "official"
     }
   ],
   "attribution_en": "Figures reported by BNPB and relayed by IFRC/PMI and humanitarian partners; source and cut-off shown per row. All provisional.",
