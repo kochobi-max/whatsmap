@@ -78,7 +78,71 @@ Badan Riset dan Inovasi Nasional（国家研究革新庁）
 
 - ReliefWeb（UNOCHA / IFRC / PMI＝インドネシア赤十字）→ `_global.md`
 - AHA Centre（ASEAN）Flash Update / Situation Update — **加盟国案件なので必ず確認**
-- 報道: Kompas, Antara, Detik（ティア: media）
+
+## 5-1. 現地語（インドネシア語）の国内報道 — 省略不可
+
+**ここにしか出ない発表がある。** 2026-09-15、BNPB はオンライン記者会見で死者を
+120 → 142人（直接死48＋避難所での間接死94）へ修正し、負傷を1,658 → 1,603人へ
+修正した。保健省との合同検証によるもの。
+
+このとき統一版は同じ会見から**避難者数（46,461人）と余震回数（15,722回）だけ**を
+取り込み、**死者数を取り落とした。**ReliefWeb にも AHA Centre にも英語報道にも、
+この時点では出ていない。インドネシア語の国内報道にだけ出ていた。
+
+**「英語の国際情報源に出ていない」は「発表が無い」ではない。**
+
+### 当たる媒体
+
+| 媒体 | ドメイン | 位置づけ |
+|---|---|---|
+| Kompas | `www.kompas.com` / `nasional.kompas.com` | 全国紙。記者会見の逐語に近い |
+| Tirto | `tirto.id` | 検証記事に強い。数値の内訳を書く |
+| Republika | `news.republika.co.id` | 全国紙 |
+| ANTARA（インドネシア語版） | `www.antaranews.com` | 国営通信。英語版より早く、詳しい |
+| Detik | `news.detik.com` | 速報が早い |
+| NU Online | `www.nu.or.id` | 支援・避難所の現場 |
+| Okezone | `news.okezone.com` | 速報 |
+
+**地方紙（NTT州）** — 県別の内訳や BPBD の値は中央集計より先にここへ出る。
+
+`florespos.net` / `www.rakyatntt.id` / `floresa.co` / `kupang.tribunnews.com`
+
+### 検索語
+
+| ID | 意味 |
+|---|---|
+| `korban meninggal` | 死者 |
+| `korban jiwa` | 犠牲者 |
+| `korban luka` | 負傷者 |
+| `pengungsi` | 避難者 |
+| `rumah rusak` | 住家被害 |
+| `gempa NTT` / `gempa Flores` | NTT地震／フローレス地震 |
+| `konferensi pers BNPB` | BNPB記者会見 |
+| `masa tanggap darurat` | 緊急対応期間 |
+| `kematian tidak langsung` | 間接死 |
+
+### 取り込み方
+
+- **記者会見をひとつ拾ったら、その会見で出た数値を全項目ぶん拾う。**
+  避難者だけ・余震だけ、という取り方をしない。取り落としはここで起きた
+- ティアは**発表機関**に従う。BNPB発表を Kompas が報じた → `official`。
+  経路（どの媒体で読んだか）は `src` に書く。ティアを下げると数値急変ゲートが毎日掛かる
+- 数値が修正で**下がった**ときは「減少した」と書かない。**「修正された」**と書く
+  （負傷1,658→1,603は遡及検証による修正であって、負傷者が減ったのではない）
+
+### 2026-09-17 時点で読めない（ネットワークポリシーの許可リスト未登録）
+
+上記のうち次は `curl: (56) CONNECT tunnel failed, response 403` で拒否される。
+**サイト側の障害ではなく、こちら側のポリシー拒否である。**
+
+```
+tirto.id  news.republika.co.id  www.antaranews.com  www.nu.or.id
+news.okezone.com  florespos.net  www.rakyatntt.id  floresa.co
+kupang.tribunnews.com
+```
+
+許可リストへの追加を依頼してある。**追加されるまでは「変化なし」と報告しない。**
+「現地語報道に到達できていない」と書く。
 
 ---
 

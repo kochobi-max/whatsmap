@@ -21,7 +21,7 @@
     "jma_name_en": "",
     "edition": "",
     "prepared_by": "Asian Disaster Reduction Center (ADRC)",
-    "stamp": "2026-09-18 08:00 JST",
+    "stamp": "2026-09-18 08:30 JST",
     "update_date": "15/09/2026",
     "timeline_range_en": "15 August - 15 September 2026 (Western Indonesian Time, UTC+7)",
     "timeline_range_ja": "2026年8月15日〜9月15日（西部インドネシア時間 WIB、UTC+7）",
@@ -30,18 +30,18 @@
     "optional_slides": [],
     "_optional_slides_comment": "日本固有スライドは該当データを持たせないことで自動的に落ちる。衛星観測（Sentinel Asia / 国際災害チャーター）のスライドは satellite[] にデータを入れれば描画される。",
     "headline": {
-      "deaths": 120,
-      "injured": 1658,
-      "missing": null,
-      "houses_destroyed": 81436,
+      "deaths": 142,
+      "injured": 1603,
+      "missing": 0,
+      "houses_destroyed": 103427,
       "evacuees": 46461,
       "tier": "official",
-      "as_of": "2026-09-15 (BNPB press conference, via ANTARA)"
+      "as_of": "2026-09-15 (BNPB 記者会見。死者142＝直接死48＋避難所での間接死94。インドネシア語国内報道経由)"
     },
     "subtitle_en": "M7.7, offshore Nagekeo Regency, Flores Island, East Nusa Tenggara - 15 August 2026",
     "subtitle_ja": "M7.7、東ヌサトゥンガラ州フローレス島 ナゲケオ県沖、2026年8月15日",
-    "edition_en": "6th report",
-    "edition_ja": "第6報",
+    "edition_en": "7th report",
+    "edition_ja": "第7報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
     "tz_note_en": "Times follow BNPB's own reporting in WIB (UTC+7) unless stated.",
@@ -137,31 +137,31 @@
     "depth_display": "10 km (USGS) / 15 km (BMKG)",
     "mechanism_en": "BMKG placed the epicentre 30 km northeast of Mbay, Nagekeo Regency, at 15 km depth; USGS reported Mww 7.7 at 10 km. The USGS moment tensor solution gives Mww 7.8 at 23.5 km. Maximum estimated shaking is MMI VIII, with 51 felt reports. The source is the Flores Back-Arc Thrust.",
     "mechanism_ja": "BMKGは震央をナゲケオ県ンバイの北東30km、深さ15kmとし、USGSは Mww7.7・深さ10kmとした。USGSのモーメントテンソル解は Mww7.8・深さ23.5km。推定最大震度はMMI VIII、体感報告51件。発生源はフローレス背弧断層。",
-    "summary_en": "A magnitude 7.7 earthquake struck offshore Nagekeo Regency, East Nusa Tenggara, at 04:58 WIB on 15 August 2026, about 30 km northeast of Mbay on Flores Island. BMKG issued a tsunami warning for several coastal areas and lifted it at 07:31 WIB. Seven regencies were affected: West Manggarai, Manggarai, East Manggarai, Ngada, Nagekeo, Ende and Sikka. BNPB reported 105 deaths, 1,678 injured or ill, 179,037 displaced and 81,436 houses affected as of 26 August; the AHA Centre's ASEAN Weekly Disaster Update subsequently cited BNPB figures of 120 deaths, 1,658 injured and about 188,673 displaced as of 09:00 WIB on 31 August. The toll rose steadily as access improved: 47 deaths on 16 August, 69 on 18 August, 100 on 24 August, 105 on 26 August and 120 on 31 August. ADRC requested both Sentinel Asia and the International Charter on the day of the earthquake on behalf of BRIN. No official death toll has been found superseding the 31 August count of 120 as of this edition (15 Sep); the response has shifted into recovery, with roads and bridges fully restored, 1,931 schools resuming classes, and Rp200 billion in central contingency funds released to NTT. On 15 September BNPB reported displacement down sharply to 46,461 (from over 150,000) and said 103,427 damaged houses were being re-verified in the field; BMKG recorded 15,722 aftershocks over the 30 days since the mainshock, in a steadily declining weekly pattern.",
-    "summary_ja": "2026年8月15日4時58分（WIB）、東ヌサトゥンガラ州ナゲケオ県沖でM7.7の地震が発生した。震央はフローレス島ンバイの北東約30km。BMKGは沿岸の一部に津波警報を出し、7時31分に解除した。被災は西マンガライ、マンガライ、東マンガライ、ンガダ、ナゲケオ、エンデ、シッカの7県に及ぶ。BNPBは8月31日09:00 WIB時点で死者120人、負傷1,658人、避難者約188,673人と発表し、以降この死者数を上回る公式値は確認されていない。ADRCは発災当日、BRINに代わりセンチネルアジアと国際災害チャーターを要請した。道路・橋梁は全面復旧、中央政府予備費2,000億ルピアがNTT州へ拠出済み。BNPBは9月15日、避難者数が15万人超から46,461人へ急減したと発表し、損壊住宅103,427棟を現地で再検証中とした。BMKGは本震から30日間の余震を計15,722回とし、週ごとに減少傾向にある。",
+    "summary_en": "A magnitude 7.7 earthquake struck offshore Nagekeo Regency, East Nusa Tenggara, at 04:58 WIB on 15 August 2026, about 30 km northeast of Mbay on Flores Island. BMKG issued a tsunami warning for several coastal areas and lifted it at 07:31 WIB. Seven regencies were affected: West Manggarai, Manggarai, East Manggarai, Ngada, Nagekeo, Ende and Sikka. The toll rose as access improved, reaching 120 deaths, 1,658 injured and about 188,673 displaced as of 09:00 WIB on 31 August (BNPB, via the AHA Centre). On 15 September BNPB announced a revised toll of 142 deaths - 48 direct and 94 indirect deaths at evacuation sites - following a joint verification with the Ministry of Health, and revised the injured figure to 1,603. BNPB attributed the indirect deaths mainly to elderly evacuees with chronic conditions and rejected readings that they had died for want of treatment; it apologised for the delay in disclosure, and the DPR has called for an audit. ADRC requested both Sentinel Asia and the International Charter on the day of the earthquake on behalf of BRIN. The response has otherwise shifted into recovery: roads and bridges are fully restored, 1,931 schools have resumed classes, and Rp200 billion in central contingency funds has been released to NTT. Displacement is down sharply to 46,461 and 103,427 damaged houses are being re-verified in the field; BMKG recorded 15,722 aftershocks in the 30 days since the mainshock, declining weekly.",
+    "summary_ja": "2026年8月15日4時58分（WIB）、東ヌサトゥンガラ州ナゲケオ県沖でM7.7の地震が発生した。震央はフローレス島ンバイの北東約30km。BMKGは沿岸の一部に津波警報を出し、7時31分に解除した。被災は西マンガライ、マンガライ、東マンガライ、ンガダ、ナゲケオ、エンデ、シッカの7県に及ぶ。BNPBは8月31日09:00 WIB時点で死者120人、負傷1,658人、避難者約188,673人と発表した。その後9月15日、保健省との合同検証を経て、死者を142人（直接死48人＋避難所での間接死94人）、負傷を1,603人へ修正した。間接死の多くは持病のある高齢避難者で、BNPBは「治療を受けられずに死亡した」との解釈を否定しつつ、公表の遅れを謝罪した。国会（DPR）は監査を求めている。ADRCは発災当日、BRINに代わりセンチネルアジアと国際災害チャーターを要請した。道路・橋梁は全面復旧、中央政府予備費2,000億ルピアがNTT州へ拠出済み。避難者は46,461人へ急減し、損壊住宅103,427棟を現地で再検証中。余震は本震から30日間で計15,722回。",
     "tectonic_en": "The earthquake was generated by the Flores Back-Arc Thrust.",
     "tectonic_ja": "フローレス背弧断層（Flores Back-Arc Thrust）による地震。"
   },
   "damage": [
     {
-      "item_en": "Deaths",
-      "item_ja": "死者",
-      "value_en": "120 (BNPB, via AHA Centre, as of 09:00 WIB 31 Aug), up from 105 at the 26 Aug report. BNPB distinguishes 48 deaths caused directly by the earthquake from 57 recorded afterwards through Basarnas SAR operations and health-facility reports, including patients who died in treatment and vulnerable people affected by trauma (26 Aug breakdown). The count rose as access improved: 2 and then 47 on 15 Aug, 68 on 17 Aug, 71 on 19 Aug, 100 on 24 Aug, 105 on 26 Aug, 111 on 30 Aug (BNPB press conference, via ANTARA), 120 on 31 Aug. The AHA Centre's ASEAN Weekly Disaster Update is the source for the 31 Aug figure; BNPB has not published its own bulletin with this cut-off. As of this edition (14 Sep), no BNPB or media report found since 31 Aug supersedes 120; ANTARA's English edition, searched through 11 Sep, has no dedicated death-toll update after the 31 Aug figure.",
-      "value_ja": "120人（BNPB、AHA Centre経由、8月31日09:00 WIB時点）。8月26日報の105人から増加。BNPBは地震の直接被害による48人と、その後Basarnasの捜索救助活動および医療機関の報告を通じて計上された57人を区別している（8月26日時点の内訳）。後者には治療中に亡くなった患者や、精神的打撃を受けた要配慮者が含まれる。到達が進むにつれ増加し、8月15日2人→47人、17日68人、19日71人、24日100人、26日105人、30日111人（BNPB記者会見、ANTARA経由）、31日120人と推移した。8月31日時点の値はAHA CentreのASEAN週報が出典で、BNPB自身によるこの締切のBulletin は未確認。本報（9月14日）時点で、8月31日の120人を上回る新しいBNPB・報道の数値は見当たらない。ANTARA英語版を9月11日まで確認したが、8月31日以降の死者数専門の続報は無い。",
-      "source_en": "BNPB, via AHA Centre ASEAN Weekly Disaster Update Week 35, 31 Aug 09:00 WIB",
-      "source_ja": "BNPB（AHA Centre「ASEAN Weekly Disaster Update Week 35」経由、8月31日09:00 WIB時点）",
+      "item_en": "Deaths (direct / indirect)",
+      "item_ja": "死者（直接死／間接死）",
+      "value_en": "142 (BNPB, 15 Sep 2026 press conference): 48 direct deaths and 94 indirect deaths at evacuation sites. BNPB and the Ministry of Health (Kemenkes) carried out a joint verification and validation across the seven affected regencies and concluded that the 94 were not caused by physical trauma or building collapse. Medical-team data show most were older people (lansia) who died of complications of pre-existing chronic conditions such as stroke and diabetes. BNPB explicitly rejected the reading that they died for want of treatment at the sites, and apologised for the earlier confusion (17 Sep). The Deputy Chair of Commission IX of the House of Representatives (DPR) has called for a large-scale audit of health and medical services at evacuation sites (17 Sep). The provincial BPBD NTT \"Inatana\" figure for the same date is 120; no authority has published an explanation of the divergence. Earlier BNPB figures: 136 (10 Sep), 127 (2 Sep), 111 (29 Aug), 120 (31 Aug, via AHA Centre).",
+      "value_ja": "142人（BNPB、9月15日記者会見）。内訳は**直接死48人と、避難所での間接死94人**。BNPBと保健省（Kemenkes）が被災7県で合同の検証・妥当性確認を行い、94人は地震による物理的外傷や建物倒壊が死因ではないと結論した。医療チームのデータでは大半が高齢者で、脳卒中・糖尿病など既往の慢性疾患の合併症による死亡である。BNPBは「避難所で手当てを受けられずに死亡した」という解釈を明確に否定し、先行する情報の混乱について謝罪を表明した（9月17日）。国会（DPR）第IX委員会副委員長は、避難所の健康・医療サービスについて大規模な監査を要求している（9月17日）。同じ9月15日時点で州のBPBD NTT「Inatana」は120人としており、乖離の理由を当局が説明した発言は確認できていない。これまでのBNPB値は136人（9月10日）、127人（9月2日）、111人（8月29日）、120人（8月31日、AHA Centre経由）。",
+      "source_en": "BNPB (press conference, 15 Sep 2026, Plt. Kapusdatinkom Berton SP Panjaitan; via Indonesian-language domestic media - Tirto / Republika / NU Online)",
+      "source_ja": "BNPB（9月15日記者会見、Plt. Kapusdatinkom Berton SP Panjaitan。インドネシア語国内報道 Tirto／Republika／NU Online 経由）",
       "tier": "official",
-      "url": "https://reliefweb.int/report/indonesia/asean-weekly-disaster-update-week-35-24-30-august-2026"
+      "url": "https://tirto.id/sebulan-usai-gempa-ntt-94-orang-tewas-di-pengungsian-hCXo"
     },
     {
       "item_en": "Injured / ill",
       "item_ja": "負傷・疾病",
-      "value_en": "1,658 (BNPB, via AHA Centre, as of 09:00 WIB 31 Aug), down slightly from 1,678 at the 26 Aug report. Neither BNPB nor the AHA Centre explains the decrease; it may reflect reclassification between the 26 Aug BNPB bulletin and the AHA Centre's own citation rather than a correction to an earlier over-count, but this has not been confirmed. The figure moved 13 (15 Aug) to 213 (17 Aug) to 1,199 (18 Aug, of which 115 serious and 1,084 minor) to 1,603 (24 Aug) to 1,678 (26 Aug) to 1,631 (30 Aug, BNPB press conference via ANTARA: 223 severe, 1,408 minor) to 1,658 (31 Aug). The figure has moved up and down within a narrow band since 24 Aug without an official explanation; ADRC has not smoothed this into a single trend.",
-      "value_ja": "1,658人（BNPB、AHA Centre経由、8月31日09:00 WIB時点）。8月26日報の1,678人からわずかに減少。BNPB・AHA Centreとも減少の理由を説明していない。8月26日のBNPB報とAHA Centreによる引用の間の再分類による可能性はあるが、それ以前の集計の訂正であるかは確認できていない。13人（8月15日）→213人（17日）→1,199人（18日、うち重傷115人・軽傷1,084人）→1,603人（24日）→1,678人（26日）→1,631人（30日、BNPB記者会見、ANTARA経由。重傷223人・軽傷1,408人）→1,658人（31日）と推移した。8月24日以降、公式な説明のないまま狭い範囲で増減しており、ADRCは単一の傾向として平準化していない。",
-      "source_en": "BNPB, via AHA Centre ASEAN Weekly Disaster Update Week 35, 31 Aug 09:00 WIB",
-      "source_ja": "BNPB（AHA Centre「ASEAN Weekly Disaster Update Week 35」経由、8月31日09:00 WIB時点）",
+      "value_en": "1,603 (BNPB, 15 Sep 2026). Revised down from 1,658 (31 Aug, via AHA Centre) and 1,678 (29 Aug). This appears to be a retroactive correction from verification, but no official explanation has been published - it should be read as \"revised\", not \"decreased\". A separate line (Kompas.tv, 13 Sep) reports 1,776. The provincial Inatana figure for 15 Sep is 1,191.",
+      "value_ja": "1,603人（BNPB、9月15日）。8月31日の1,658人（AHA Centre経由）、8月29日の1,678人から下方修正された。検証による遡及修正とみられるが公式の説明は無く、「減少した」ではなく「修正された」と読むべきである。別系統としてKompas.tv（9月13日）が1,776人としている。同じ9月15日時点の州Inatana値は1,191人。",
+      "source_en": "BNPB (press conference, 15 Sep 2026, Plt. Kapusdatinkom Berton SP Panjaitan; via Indonesian-language domestic media - Tirto / Republika / NU Online)",
+      "source_ja": "BNPB（9月15日記者会見、Plt. Kapusdatinkom Berton SP Panjaitan。インドネシア語国内報道 Tirto／Republika／NU Online 経由）",
       "tier": "official",
-      "url": "https://reliefweb.int/report/indonesia/asean-weekly-disaster-update-week-35-24-30-august-2026"
+      "url": "https://tirto.id/sebulan-usai-gempa-ntt-94-orang-tewas-di-pengungsian-hCXo"
     },
     {
       "item_en": "Displaced",
@@ -412,6 +412,33 @@
       "source_ja": "UN Women／UNFPA「Gender Alert #1」（2026年9月2日）",
       "tier": "media",
       "url": "https://reliefweb.int/report/indonesia/gender-alert-1-critical-protection-needs-women-and-girls-following-flores-earthquake-indonesia"
+    },
+    {
+      "item_en": "Divergence between national (BNPB) and provincial (BPBD NTT \"Inatana\") tallies",
+      "item_ja": "国（BNPB）と州（BPBD NTT「Inatana」）の集計の乖離",
+      "tier": "official",
+      "source_en": "BNPB / BPBD NTT (Inatana), both as of 15 Sep 2026",
+      "source_ja": "BNPB／BPBD NTT（Inatana）、いずれも2026年9月15日時点",
+      "value_en": "For the same date of 15 September the two official tallies differ widely: deaths 142 vs 120, injured 1,603 vs 1,191, displaced 46,461 vs 136,642, houses damaged 103,427 vs 86,018+, health facilities 157 vs 573, education facilities 712 vs 2,240. No authority has published an explanation. Bapperida NTT states only that reports from the regencies keep being updated and that the Inatana data still require verification. The Governor has instructed that data validity must be identical from regency to province to centre, and a uji publik (public verification) is under way. **ADRC uses the BNPB figures and shows the provincial tally alongside; the two must not be mixed.**",
+      "value_ja": "同じ9月15日時点で、国と州の公式集計が大きく食い違っている。死者142対120、負傷1,603対1,191、避難者46,461対136,642、住家損壊103,427対86,018以上、保健施設157対573、教育施設712対2,240。乖離の理由を当局が説明した発言は確認できていない。Bapperida NTTは「各地域からの報告が更新され続けているため、Inatanaのデータはなお検証を要する」と述べるにとどまる。州知事は県・州・中央でデータの妥当性が同一でなければならないと指示し、uji publik（公開検証）が進められている。**ADRCはBNPB値を採用し、州値を併記する。両者を混ぜて使わない。**"
+    },
+    {
+      "item_en": "Emergency response period and SAR closure",
+      "item_ja": "緊急対応期間とSAR活動の終了",
+      "tier": "official",
+      "source_en": "NTT Province / Basarnas / regency governments, Sep 2026",
+      "source_ja": "NTT州／Basarnas／各県、2026年9月",
+      "value_en": "The NTT provincial extension ran 29 Aug to 12 Sep and has ended. Basarnas formally closed SAR operations at 18:00 WITA on 12 September, citing declining aftershock activity and the move to a recovery transition; operations can resume if needed. **End dates differ by regency** - Ende to 12 Sep (ended, in transition), West Manggarai to 11 Sep (ended), Ngada in transition with a public verification of housing data, Nagekeo extended 14 days to 27 Sep, Manggarai re-extended 15-28 Sep (the last two from secondary sources only). The length of the transition period is not settled: both a 30-day and a 60-day (13 Sep - 13 Nov) reading circulate and neither is confirmed from a primary document. A separate ANTARA item of 17 Sep refers to an extension to 26 September without naming the scope, the deciding body or the date of decision.",
+      "value_ja": "NTT州の延長期間は8月29日〜9月12日で終了した。Basarnasは9月12日18:00 WITAに捜索救助活動を正式に終了した。余震活動の低下と復旧への移行段階入りが理由で、必要時は再開する。**終了日は県ごとに異なる。** エンデ県は9月12日まで（終了、移行期間入り）、西マンガライ県は9月11日まで（終了）、ンガダ県は移行期間入りで住家被害データの公開検証を実施、ナゲケオ県は14日間延長で9月27日まで、マンガライ県は9月15日〜28日で再延長（後二者は二次情報のみ）。移行期間の日数は確定していない。「30日間」説と「60日間（9月13日〜11月13日）」説が並立し、いずれも一次資料で裏付けが取れていない。ANTARA9月17日には「9月26日まで延長」という記述があるが、対象範囲・決定機関・決定日の記載がない。"
+    },
+    {
+      "item_en": "Recovery planning (Jitupasna / R3P)",
+      "item_ja": "復旧・復興計画（Jitupasna／R3P）",
+      "tier": "official",
+      "source_en": "NTT Province / BNPB, Sep 2026",
+      "source_ja": "NTT州／BNPB、2026年9月",
+      "value_en": "R3P (Rencana Rehabilitasi dan Rekonstruksi Pascabencana) is a three-year recovery framework for the seven affected regencies (West Manggarai, Manggarai, East Manggarai, Ngada, Nagekeo, Ende, Sikka), built on Jitupasna (post-disaster needs assessment). Target completion is mid-November 2026, set against the 90 days from the emergency declaration. A damage-data verification workshop was held in Kupang on 17 September using geospatial techniques, drone imagery and phone geotags to detect anomalies such as wrong coordinates for public facilities; standardised data are returned to the regencies and technical agencies for verification, then put through a uji publik involving TNI, Polri, the prosecution service, BNPB and BPBD. The government is to discuss the required budget with the DPR from 20 September. The guiding principle is build back better. The estimated rehabilitation and reconstruction need is about IDR 2.59 trillion, but the primary source (the BPBD NTT site) is unreachable and this figure is not confirmed.",
+      "value_ja": "R3P（Rencana Rehabilitasi dan Rekonstruksi Pascabencana）は、被災7県（西マンガライ、マンガライ、東マンガライ、ンガダ、ナゲケオ、エンデ、シッカ）を対象とする3年間の復興指針で、Jitupasna（被災後ニーズ調査）に立脚する。完成目標は2026年11月中旬で、緊急事態宣言から90日という期限に合わせている。9月17日にクパンで被害データ検証ワークショップを開催し、地理空間技術・ドローン空撮・スマートフォンのジオタグを用いて公共施設の座標の誤りなどの異常値を検出した。標準化後のデータは県・技術官庁に差し戻して検証し、その後TNI・Polri・検察・BNPB・BPBDを巻き込んだuji publik（公開検証）にかける。政府は9月20日以降、必要予算をDPRと協議する予定である。原則は build back better。リハビリ・復興の必要額は約2兆5,900億ルピアと見積もられているが、一次情報源（BPBD NTT公式サイト）に到達できず未確認である。"
     }
   ],
   "damage_highlights": [],
@@ -441,8 +468,8 @@
       "time": "15 Aug 07:31",
       "tier": "official",
       "src": "BMKG",
-      "en": "BMKG lifts the tsunami warning at 07:31 WIB. Tide gauges around the Flores Sea recorded maximum wave heights between 0.30 m and 1.61 m, with arrival times of 10 to 60 minutes.",
-      "ja": "BMKGが7時31分（WIB）に津波警報を解除。フローレス海周辺の検潮所は最大波高0.30〜1.61mを記録し、到達時間は10〜60分だった。"
+      "en": "BMKG lifts the tsunami warning at 07:31 WIB. Seven BMKG tide gauges recorded maximum wave heights of 0.14-0.94 m (Maurole, Ende the highest at 0.94 m), with arrival times of 10 to 60 minutes.",
+      "ja": "BMKGが7時31分（WIB）に津波警報を解除。BMKG検潮所7地点の最大波高は0.14〜0.94m（最大はエンデ県マウロレの0.94m）、到達時間は10〜60分だった。"
     },
     {
       "time": "15 Aug 08:00",
@@ -1016,6 +1043,21 @@
       "label_en": "IHCP Situation Report No. 9 - Earthquake and Tsunami in Flores and Surrounding Areas (14 Sep 2026)",
       "label_ja": "IHCP状況報告第9号（フローレス地震・津波、2026年9月14日）",
       "tier": "official"
+    },
+    {
+      "url": "https://tirto.id/sebulan-usai-gempa-ntt-94-orang-tewas-di-pengungsian-hCXo",
+      "en": "Sebulan usai gempa NTT: 94 orang tewas di pengungsian (Tirto, 15 Sep 2026)",
+      "ja": "NTT地震から1か月：94人が避難所で死亡（Tirto、2026年9月15日）"
+    },
+    {
+      "url": "https://news.republika.co.id/berita/tlicbu409/bnpb-klarifikasi-data-94-korban-gempa-flores-ntt-meninggal-di-pengungsian",
+      "en": "BNPB klarifikasi data 94 korban gempa Flores NTT meninggal di pengungsian (Republika, 17 Sep 2026)",
+      "ja": "BNPBが避難所での94人死亡についてクラリフィケーション（Republika、2026年9月17日）"
+    },
+    {
+      "url": "https://nasional.kompas.com/read/2026/09/17/14301031/94-orang-meninggal-di-pengungsian-gempa-ntt-anggota-dpr-dorong-audit",
+      "en": "94 orang meninggal di pengungsian gempa NTT, anggota DPR dorong audit (Kompas, 17 Sep 2026)",
+      "ja": "避難所で94人死亡、DPR議員が監査を要求（Kompas、2026年9月17日）"
     }
   ],
   "attribution_en": "Figures reported by BNPB and relayed by IFRC/PMI and humanitarian partners; source and cut-off shown per row. All provisional.",
