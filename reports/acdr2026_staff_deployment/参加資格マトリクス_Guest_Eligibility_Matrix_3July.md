@@ -437,7 +437,9 @@ Sylvia 氏より WhatsApp で連絡。
 > Lieutenant Colonel Chen Yong Kai
 > Deputy Commander, 3rd SCDF Division
 
-**姓は Chen。** 短縮形は「LTC Chen」であり「LTC Yong Kai」ではない。以後の文書は正式表記 "Lieutenant Colonel Chen Yong Kai, Deputy Commander, 3rd SCDF Division" を用いる。
+プログラム・アジェンダ・Web サイトなど**正式な表記が要る場所では "Lieutenant Colonel Chen Yong Kai, Deputy Commander, 3rd SCDF Division" を用いる。**
+
+**やり取りの中での呼称は「LTC Yong Kai」のままでよい。** これはシンガポール側が自ら使っている呼び方であり、こちらから表記を正すことはしない。
 
 配置換えの可能性があるため Sylvia 氏が確認中だった件は、これで解決。予備の LTC Adrian はプログラム・SJ60 レセプションには含めず、オンラインブリーフィングにのみ参加する（9/17 確認済み）。
 
