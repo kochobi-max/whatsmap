@@ -146,10 +146,10 @@
     {
       "item_en": "Deaths (direct / indirect)",
       "item_ja": "死者（直接死／間接死）",
-      "value_en": "142 (BNPB, 15 Sep 2026 press conference): 48 direct deaths and 94 indirect deaths at evacuation sites. BNPB and the Ministry of Health (Kemenkes) carried out a joint verification and validation across the seven affected regencies and concluded that the 94 were not caused by physical trauma or building collapse. Medical-team data show most were older people (lansia) who died of complications of pre-existing chronic conditions such as stroke and diabetes. BNPB explicitly rejected the reading that they died for want of treatment at the sites, and apologised for the earlier confusion (17 Sep). The Deputy Chair of Commission IX of the House of Representatives (DPR) has called for a large-scale audit of health and medical services at evacuation sites (17 Sep). The provincial BPBD NTT \"Inatana\" figure for the same date is 120; no authority has published an explanation of the divergence. Earlier BNPB figures: 136 (10 Sep), 127 (2 Sep), 111 (29 Aug), 120 (31 Aug, via AHA Centre).",
-      "value_ja": "142人（BNPB、9月15日記者会見）。内訳は**直接死48人と、避難所での間接死94人**。BNPBと保健省（Kemenkes）が被災7県で合同の検証・妥当性確認を行い、94人は地震による物理的外傷や建物倒壊が死因ではないと結論した。医療チームのデータでは大半が高齢者で、脳卒中・糖尿病など既往の慢性疾患の合併症による死亡である。BNPBは「避難所で手当てを受けられずに死亡した」という解釈を明確に否定し、先行する情報の混乱について謝罪を表明した（9月17日）。国会（DPR）第IX委員会副委員長は、避難所の健康・医療サービスについて大規模な監査を要求している（9月17日）。同じ9月15日時点で州のBPBD NTT「Inatana」は120人としており、乖離の理由を当局が説明した発言は確認できていない。これまでのBNPB値は136人（9月10日）、127人（9月2日）、111人（8月29日）、120人（8月31日、AHA Centre経由）。",
-      "source_en": "BNPB (press conference, 15 Sep 2026, Plt. Kapusdatinkom Berton SP Panjaitan; via Indonesian-language domestic media - Tirto / Republika / NU Online)",
-      "source_ja": "BNPB（9月15日記者会見、Plt. Kapusdatinkom Berton SP Panjaitan。インドネシア語国内報道 Tirto／Republika／NU Online 経由）",
+      "value_en": "142 (BNPB, 15 Sep 2026 press conference): 48 direct deaths and 94 indirect deaths at evacuation sites. BNPB and the Ministry of Health (Kemenkes) carried out a joint verification and validation across the seven affected regencies and concluded that the 94 were not caused by physical trauma or building collapse. Medical-team data show most were older people (lansia) who died of complications of pre-existing chronic conditions such as stroke and diabetes. BNPB explicitly rejected the reading that they died for want of treatment at the sites, and apologised for the earlier confusion (17 Sep). The Deputy Chair of Commission IX of the House of Representatives (DPR) has called for a large-scale audit of health and medical services at evacuation sites (17 Sep). The provincial BPBD NTT \"Inatana\" figure for the same date is 120; no authority has published an explanation of the divergence. Earlier BNPB figures: 136 (10 Sep), 127 (2 Sep), 120 (31 Aug, via AHA Centre), 111 (29 Aug). At the 10 September press conference BNPB gave 136 of which 88 were indirect, so the direct count has stood at 48 throughout and it is the indirect count that has risen: 57 (26 Aug), 72 (31 Aug), 88 (10 Sep), 94 (15 Sep). ANTARA still reported 94 indirect deaths as the current BNPB figure on 17 September.",
+      "value_ja": "142人（BNPB、9月15日記者会見）。内訳は**直接死48人と、避難所での間接死94人**。BNPBと保健省（Kemenkes）が被災7県で合同の検証・妥当性確認を行い、94人は地震による物理的外傷や建物倒壊が死因ではないと結論した。医療チームのデータでは大半が高齢者で、脳卒中・糖尿病など既往の慢性疾患の合併症による死亡である。BNPBは「避難所で手当てを受けられずに死亡した」という解釈を明確に否定し、先行する情報の混乱について謝罪を表明した（9月17日）。国会（DPR）第IX委員会副委員長は、避難所の健康・医療サービスについて大規模な監査を要求している（9月17日）。同じ9月15日時点で州のBPBD NTT「Inatana」は120人としており、乖離の理由を当局が説明した発言は確認できていない。これまでのBNPB値は136人（9月10日）、127人（9月2日）、120人（8月31日、AHA Centre経由）、111人（8月29日）。9月10日の記者会見でBNPBは136人のうち88人を間接死としており、**直接死は一貫して48人で動いておらず、増えているのは間接死である**（57人＝8月26日→72人＝8月31日→88人＝9月10日→94人＝9月15日）。ANTARAは9月17日時点でも間接死94人を現時点のBNPB値として報じている。",
+      "source_en": "BNPB (press conference, 15 Sep 2026, Plt. Kapusdatinkom Berton SP Panjaitan; via Indonesian-language domestic media - ANTARA / Tirto / Republika / NU Online)",
+      "source_ja": "BNPB（9月15日記者会見、Plt. Kapusdatinkom Berton SP Panjaitan。インドネシア語国内報道 ANTARA／Tirto／Republika／NU Online 経由）",
       "tier": "official",
       "url": "https://tirto.id/sebulan-usai-gempa-ntt-94-orang-tewas-di-pengungsian-hCXo"
     },
@@ -652,6 +652,20 @@
       "src": "BNPB (press conference, via ANTARA)",
       "en": "At an online press conference, BNPB's Acting Head for Disaster Data, Information and Communication, Berton SP Panjaitan, reported that the number of displaced persons has declined sharply, \"from over 150,000 people to 46,461\", which he attributed to the emergency response and post-disaster recovery efforts. Joint field teams, working with Dukcapil (population registration) and BPS (statistics), are re-verifying data on 103,427 damaged housing units (severe, moderate and minor combined) to prevent duplicate claims in housing repair assistance. Separately, BMKG reported 15,722 aftershocks (M0.9-6.2) over the 30 days since the 15 August M7.7 mainshock, in a declining weekly pattern (5,011 / 4,267 / 3,158 / 2,421 / 864).",
       "ja": "BNPBのオンライン記者会見で、防災データ・情報・広報担当代理のベルトン・SP・パンジャイタン氏は、避難者数が「15万人超から46,461人へ」大きく減少したと発表し、緊急対応・復旧支援の成果によるものと説明した。合同現地チームが、住民登録庁（Dukcapil）・統計庁（BPS）と連携し、住宅修繕支援の重複給付を防ぐため、損壊住宅103,427棟（全壊・半壊・一部損壊合算）のデータを再検証中である。別途BMKGは、8月15日のM7.7本震から30日間の余震が計15,722回（M0.9〜6.2）で、週ごとに減少傾向（5,011／4,267／3,158／2,421／864）にあると報告した。"
+    },
+    {
+      "time": "10 Sep",
+      "tier": "official",
+      "src": "BNPB (ANTARA)",
+      "en": "BNPB press conference: cumulative deaths 136, of which 88 indirect; 102,384 houses affected, field verification of damage about 70 per cent complete.",
+      "ja": "BNPBが記者会見。累計死者136人（うち間接死88人）、住家被害102,384棟、損壊程度の現地検証は約70％完了。"
+    },
+    {
+      "time": "15 Sep",
+      "tier": "official",
+      "src": "BNPB (ANTARA)",
+      "en": "BNPB press conference: 48 direct deaths and 94 indirect deaths at evacuation sites (142 total); displacement down to 46,461 from over 150,000; 103,427 damaged houses being re-verified.",
+      "ja": "BNPBが記者会見。直接死48人・避難所での間接死94人（計142人）。避難者は15万人超から46,461人へ減少、損壊住宅103,427棟を再検証中。"
     }
   ],
   "intensity": {},
@@ -1058,6 +1072,21 @@
       "url": "https://nasional.kompas.com/read/2026/09/17/14301031/94-orang-meninggal-di-pengungsian-gempa-ntt-anggota-dpr-dorong-audit",
       "en": "94 orang meninggal di pengungsian gempa NTT, anggota DPR dorong audit (Kompas, 17 Sep 2026)",
       "ja": "避難所で94人死亡、DPR議員が監査を要求（Kompas、2026年9月17日）"
+    },
+    {
+      "url": "https://www.antaranews.com/berita/5742093/jumlah-pengungsi-gempa-ntt-menurun-signifikan-kini-46461-jiwa",
+      "en": "Jumlah pengungsi gempa NTT menurun signifikan, kini 46.461 jiwa (ANTARA, 15 Sep 2026) - BNPB press conference: 48 direct and 94 indirect deaths",
+      "ja": "NTT地震の避難者が大幅減、現在46,461人（ANTARA、2026年9月15日）— BNPB記者会見。直接死48人・間接死94人"
+    },
+    {
+      "url": "https://www.antaranews.com/berita/5735263/bnpb-korban-gempa-ntt-capai-136-jiwa-70-persen-rumah-terverifikasi",
+      "en": "BNPB: Korban gempa NTT capai 136 jiwa-70 persen rumah terverifikasi (ANTARA, 10 Sep 2026)",
+      "ja": "BNPB：NTT地震の死者136人、住家の70％を検証済み（ANTARA、2026年9月10日）"
+    },
+    {
+      "url": "https://www.antaranews.com/berita/5745161/pascagempa-ntt-pemerintah-kolaborasi-benahi-sanitasi-cegah-stunting",
+      "en": "Pascagempa NTT, pemerintah kolaborasi benahi sanitasi cegah stunting (ANTARA, 17 Sep 2026) - 94 indirect deaths still the current BNPB figure",
+      "ja": "NTT地震後、政府が衛生改善・発育阻害予防で連携（ANTARA、2026年9月17日）— 間接死94人が現時点のBNPB値"
     }
   ],
   "attribution_en": "Figures reported by BNPB and relayed by IFRC/PMI and humanitarian partners; source and cut-off shown per row. All provisional.",

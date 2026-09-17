@@ -130,19 +130,33 @@ Badan Riset dan Inovasi Nasional（国家研究革新庁）
 - 数値が修正で**下がった**ときは「減少した」と書かない。**「修正された」**と書く
   （負傷1,658→1,603は遡及検証による修正であって、負傷者が減ったのではない）
 
-### 2026-09-17 時点で読めない（ネットワークポリシーの許可リスト未登録）
+### 到達可否（2026-09-18 実測。許可リスト追加後）
 
-上記のうち次は `curl: (56) CONNECT tunnel failed, response 403` で拒否される。
-**サイト側の障害ではなく、こちら側のポリシー拒否である。**
+| ドメイン | 結果 | 意味 |
+|---|---|---|
+| `www.antaranews.com` | **200** | 読める。検索ページも本文も取れる。**当面の主経路** |
+| `news.republika.co.id` | 200（検索ページは空） | 記事URLを持っていれば読める。サイト内検索は使えない |
+| `news.detik.com` | 200 | 読める。`www.detik.com` の検索は別扱いで 403 |
+| `www.nu.or.id` / `news.okezone.com` | 200 | 読める（`search.okezone.com` は 403） |
+| `florespos.net` / `www.rakyatntt.id` / `floresa.co` | 200 | 読める。NTT州の地方紙 |
+| `tirto.id` | サイト側 403 | **トンネルは通る。**サイトのbot対策。ポリシー拒否ではない |
+| `kupang.tribunnews.com` | サイト側 403 | 同上 |
+| `www.kompas.com` | **CONNECT 403** | **ポリシー拒否のまま。**許可リスト追加が要る |
 
-```
-tirto.id  news.republika.co.id  www.antaranews.com  www.nu.or.id
-news.okezone.com  florespos.net  www.rakyatntt.id  floresa.co
-kupang.tribunnews.com
-```
+**2つの403を混同しない。**
+`curl: (56) CONNECT tunnel failed, response 403` はこちら側のポリシー拒否。
+`HTTP/1.1 403` が本文として返るのはサイト側のbot対策で、許可リストでは直らない。
 
-許可リストへの追加を依頼してある。**追加されるまでは「変化なし」と報告しない。**
-「現地語報道に到達できていない」と書く。
+### ANTARA の利用条件（守ること）
+
+ANTARA の記事末尾には次の趣旨の表示がある。
+
+> 書面による許可なく、当サイトのコンテンツの取得・クローリング・AIのための
+> 自動インデックス化を行うことを固く禁ずる。
+
+**一覧ページから機械的に全記事を巡回しない。**必要な記事を特定して個別に読み、
+数値と出典を控えるところまでにとどめる。日次タスクにANTARAの全面巡回を組まないこと。
+`www.kompas.com` が許可リストに入れば、そちらを主経路にできる。
 
 ---
 
