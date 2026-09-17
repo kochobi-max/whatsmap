@@ -352,3 +352,28 @@ LTC Adrian 氏はあくまで予備であり、LTC Yong Kai 氏が体調不良�
 | 先端技術・国際戦略 | JAXA |
 
 構成上の欠落はない。残る課題は個々の枠の人選確定（ウズベキスタン、JAXA、日本／内閣府枠）であって、テーマ配分ではない。
+
+### コンセプトノート更新案（9/17 作成）
+
+`ACDR2026_TechnicalSession_ConceptNote_rev_20260917.docx`。9/17 に池田・Mizan へ Invitation Letter 案と併せて参考送付。変更点は4つ。
+
+1. 第6項 Session Overview を 09:30-11:30（120分）に修正。Format（15分×6＋質疑30分）、Language、Zoom 配信、対象者、主催を追記。
+2. 第4項を "Expected Composition and Speakers"（Moderator + Panelists 1-5）から "Session Composition"（Moderator=SCDF／Co-Chair=ADRC／Speakers 1-6）に改訂。**個人名・所属名は記載しない。** 未確定の枠があり、対外配布と Web 掲載を前提とするため、確定まで役割とテーマのみで記述する。
+3. 第1項の背景に大規模群島国の離島についての段落を追加。現行の背景は島嶼国の例を SIDS のトンガ・バヌアツに置いているが、実際の登壇者 BRIN はインドネシアで SIDS ではなく、背景記述が登壇者を説明できていないため補った。**荒木田の判断による追加であり、不要なら削除可。**
+4. 表題下に改訂日を記載。
+
+第2項 Objectives、第3項 Key Themes、第5項 Expected Outcomes は無変更。
+
+### 6枠の由来（2026年8月28日 児玉リストからの変遷）
+
+| 枠 | 当初（8/28） | 現在（9/17） |
+|---|---|---|
+| モデレーター | Said Faisal 氏 | LTC Yong Kai（SCDF）／Co-Chair は Mizan |
+| 1 | Dr. Shiro Kawakita（JAXA）confirmed | JAXA。人選中（川喜田氏または上田氏） |
+| 2 | Prof. Emma Hill（EOS-NTU） | 辞退確定（Mizan 9/7）→ BRIN（Dr. Yenni Vetrita） |
+| 3 | Mr. Teresito C. Bacolcol（DOST, Philippines） | 無反応 → ネパール（Pradip Khatiwada, Youth Innovation Lab） |
+| 4 | Mr. Avi Salsberg（Google） | Google（Sirada Boonkongchuen 氏）確定 |
+| 5 | ウズベキスタン | 未定。代替候補なし |
+| 6 | 日本 | 内閣府枠。8/31 以降動きなし |
+
+**6枠目（内閣府）は 8月31日に「to be arranged with CAO」と記録して以降、進捗の記録がない。** 9月25日 15:30 の内閣府打合せが最も近い機会。
