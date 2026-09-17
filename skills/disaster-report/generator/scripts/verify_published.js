@@ -97,6 +97,37 @@ if (r.published_date_jst !== today) {
   process.exit(1);
 }
 
+// 当日であっても、**PCが出したのが今のビルドとは限らない。**
+//
+// 2026-09-18、PCは 08:10 に第6報を公開した（dist ビルド 08:07）。そのあと
+// クラウドが死者数を直して 08:39 に第7報を配布した。この時点で
+//   dist   = 第7報（新しい）
+//   OneDrive = 第6報（古い）
+// になっているが、公開記録は「今日」なのでここは SEND-OK を返していた。
+// **古いほうを添付して送るところだった。**
+//
+// 公開記録には PC が出した版の `edition` と `stamp` が入っている。
+// イベントJSONの今の値と突き合わせれば、作り直しに PC が追いついているか分かる。
+// 作り直して比べるのとは違う。**記録どうしの照合なので PDF の非再現性は関係ない。**
+const ev = path.join(SKILL, "events", glide + ".json");
+if (fs.existsSync(ev)) {
+  const meta = JSON.parse(fs.readFileSync(ev, "utf8")).meta || {};
+  const drift = [];
+  if (meta.edition_ja && r.edition && meta.edition_ja !== r.edition)
+    drift.push("版: 公開 " + r.edition + " / 手元 " + meta.edition_ja);
+  if (meta.stamp && r.stamp && meta.stamp !== r.stamp)
+    drift.push("stamp: 公開 " + r.stamp + " / 手元 " + meta.stamp);
+  if (drift.length) {
+    console.log("   **PCが出したのは今のビルドではない。**");
+    for (const d of drift) console.log("     " + d);
+    console.log("   公開のあとにクラウド側で作り直している。OneDrive は古い版のまま。");
+    console.log("STATUS: NO-SEND stale-onedrive");
+    console.log("  対処: PCで C:\\Users\\arakida\\ADRC_setup_and_publish.bat をもう一度実行する。");
+    console.log("  （dist には新しい版が出ている。PCが取りに来ていないだけ）");
+    process.exit(1);
+  }
+}
+
 // 配布台帳との照合は publish_local.js が済ませている。その事実を確かめるだけ。
 if (r.verified === "manifest") {
   console.log("   配布台帳と照合済み（PC側）。dist ビルド " + (r.dist_built_at_jst || "不明"));
