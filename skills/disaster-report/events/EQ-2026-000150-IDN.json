@@ -21,7 +21,7 @@
     "jma_name_en": "",
     "edition": "",
     "prepared_by": "Asian Disaster Reduction Center (ADRC)",
-    "stamp": "2026-09-17 08:00 JST",
+    "stamp": "2026-09-18 08:00 JST",
     "update_date": "15/09/2026",
     "timeline_range_en": "15 August - 15 September 2026 (Western Indonesian Time, UTC+7)",
     "timeline_range_ja": "2026年8月15日〜9月15日（西部インドネシア時間 WIB、UTC+7）",
@@ -1386,6 +1386,11 @@
       "tier": "tbc",
       "en": "Rupture length, slip distribution and a finite-fault model had not been published in accessible sources at the time of writing. Figures remain provisional; BNPB collects data in stages from hamlet level upward and the by-name-by-address survey is still running.",
       "ja": "破壊長・すべり分布・有限断層モデルは、本資料作成時点でアクセス可能なソースに未公表。数値はいずれも暫定であり、BNPBは集落レベルから段階的に収集を継続、氏名・住所単位の調査も進行中である。"
+    },
+    {
+      "tier": "official",
+      "en": "IHCP Situation Report No. 9 (14 Sep, posted 15 Sep) reports the Joint Needs Assessment (JNA, conducted 19 Aug-4 Sep, primary data collection 24-26 Aug at 143 locations across 35 sub-districts, led by Humanitarian Forum Indonesia/WVI with 20 organisations) found that \"a secondary health emergency may emerge from living conditions rather than the earthquake itself\": acute respiratory infections were reported at 62.24% of surveyed locations, skin diseases at 47.55%, and gastrointestinal infections at 41.26%, with outreach services and access to medicines still limited. 86.01% of locations had no private space in displacement settings. This is consistent with Indonesian media reporting in mid-September of a rising share of deaths recorded in evacuation/displacement settings rather than directly from the earthquake, which this report has not been able to verify against a primary source: the specific domains carrying that reporting (e.g. okezone.com, suara.com, kompas.com, idntimes.com, detik.com, antaranews.com and its regional subdomains) return a network-policy block (CONNECT tunnel failed, HTTP 403) rather than site content, while en.antaranews.com (reachable) and bnpb.go.id (reachable but blocked by the site's own Cloudflare challenge) do not carry an equivalent report as of this update. The BNPB-sourced headline toll (120 deaths, as of 31 Aug) has accordingly not been revised.",
+      "ja": "IHCP状況報告第9号（9月14日付、9月15日公表）は、Joint Needs Assessment（JNA、8月19日〜9月4日実施、主データ収集は8月24〜26日、35郡143地点、Humanitarian Forum Indonesia／WVI主導、20団体参加）の結果として「地震そのものよりも避難生活の環境から二次的な健康危機が生じ得る」と指摘している。調査地点の62.24％で急性呼吸器感染症、47.55％で皮膚疾患、41.26％で消化器感染症が報告され、アウトリーチ診療・医薬品アクセスは依然限定的。避難先で私的空間が全く無い地点が86.01％に上る。これは、9月中旬のインドネシア報道が伝える「地震による直接死ではなく避難生活中の死亡が死者数に占める割合が増えている」という趣旨と整合するが、本レポートはこの報道内容を一次情報で確認できていない。当該報道が掲載されているドメイン（okezone.com、suara.com、kompas.com、idntimes.com、detik.com、antaranews.com本体および地方版）はネットワークポリシーにより到達不能（CONNECT tunnel failed、HTTP 403）であり、到達可能な en.antaranews.com、および到達はするがサイト自体のCloudflare認証で本文を取得できない bnpb.go.id には、本更新時点で同趣旨の記事が見当たらない。このためBNPB発表に基づく見出しの死者数（120人、8月31日時点）は改定していない。"
     }
   ]
 }
