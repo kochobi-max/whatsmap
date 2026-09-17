@@ -512,10 +512,42 @@ Mobile Phone Number の Country Code 欄に「+65」と入力するとエラー�
 |---|---|---|
 | ネパール（Youth Innovation Lab, Khatiwada 氏） | **不要**（30日間の査証免除） | Assessment Level I / II のいずれにも非該当 |
 | インドネシア（BRIN, Dr. Vetrita） | **不要**（30日間、ASEAN） | 同上 |
-| ウズベキスタン | **必要**（e-Visa の事前取得） | CIS 諸国は Assessment Level I。外交旅券は免除。旅券は残存6か月以上・白紙2ページ以上 |
+| ウズベキスタン | **必要** | ICA の一覧に記載。**免除は外交旅券のみ**（公用・業務旅券は免除されない） |
 | Google（Sirada 氏、シンガポール在住） | 不要 | 現地在住 |
 | JAXA（日本）／内閣府（日本） | 不要 | 日本は査証免除 |
 
 **6枠のうち唯一氏名が未定のウズベキスタンが、唯一ビザを要する枠。** 田中のビザ対象リスト（インド3・パキスタン2・アゼルバイジャン・アルメニア）にウズベキスタンが入っていないのは、登録者がまだいないため。氏名が決まり次第、Form 14A と証明写真の回収、COSEM 経由の申請が発生する。申請受付は9月26日から、発行まで3営業日。**人選・受諾・ビザ・発券が直列に並ぶ点に注意。**
 
-判定は国籍による。確定者が別国籍の旅券を持つ場合は再確認が必要。出典は Wikipedia "Visa policy of Singapore"、ICA のウズベキスタン個別ページ等の二次情報。**最終確認は COSEM 経由で ICA に当てること**（ICA の一覧ページは本セッションのネットワークから直接参照できず）。
+判定は国籍（旅券の発行国）による。確定者が別国籍の旅券を持つ場合は再確認が必要。
+
+### シンガポール入国ビザ 一次情報（ICA、2026年6月25日最終更新）
+
+出典: https://www.ica.gov.sg/enter-transit-depart/entering-singapore/visa_requirements
+
+**ICA は現在 Assessment Level I / II の区分ではなく一本の一覧で公表している。** 以下の34か国・地域の発行する渡航文書の保持者はビザが必要。
+
+Afghanistan, Algeria, **Armenia**, **Azerbaijan**, **Bangladesh**, Belarus, Democratic People's Republic of Korea, Egypt, Georgia, **India**, Iran, Iraq, Jordan, **Kazakhstan**, Kosovo, **Kyrgyzstan**, Lebanon, Libya, Mali, Moldova, Morocco, Nigeria, **Pakistan**, **Russia**, Somalia, South Sudan, Sudan, Syria, **Tajikistan**, Tunisia, Turkmenistan, Ukraine, **Uzbekistan**, **Yemen**
+
+加えて、難民旅行証明書、無国籍者旅券、パレスチナ自治政府旅券、UAE 発行の臨時旅券、香港 Document of Identity、マカオ Travel Permit、PRC Travel Document の保持者。
+
+**太字は ADRC のメンバー国・アドバイザー国に該当するもの（11か国）。** 田中のビザ対象リストが押さえているのはインド・パキスタン・アゼルバイジャン・アルメニアの4か国。**バングラデシュ、カザフスタン、キルギス、ロシア、タジキスタン、ウズベキスタン、イエメンからの登録者の有無を名簿で確認すること。**
+
+**中国とミャンマーは現行の一覧に入っていない。** 旧 Assessment Level I には入っていたため、古い資料を基にビザ書類を求めないよう注意。ネパール、ブータン、スリランカ、モルディブ、モンゴル、カンボジア、ラオス、ベトナム、フィリピン、タイ、ブルネイ、マレーシア、韓国、インドネシア、PNG、東ティモールも一覧にない。
+
+**ICA が求める書類（国別ページ共通）**
+
+1. 署名済み **Form 14A**
+2. 3か月以内の証明写真（Photo Guidelines 準拠）
+3. **パスポート顔写真ページの写し。入国日から6か月以上の残存有効期間があること。**
+4. 追加書類。**Form V39A（Letter of Introduction）は "may be required on a case-by-case basis"** であり、常時必須ではない。
+
+申請時期は「到着日の30日前以内」。3 は ICA の必須書類であり、田中の依頼文面に未記載のため追加が必要（9/18 の荒木田の返信で指摘済み。これで裏付けが取れた）。
+
+**外交・公用旅券の免除は国ごとに異なる。横展開できない。**
+
+| 国 | 免除される旅券 |
+|---|---|
+| インド | diplomatic, official **and service** |
+| ウズベキスタン | **diplomatic のみ** |
+
+インドの「Official なら不要」という田中の整理は正しい。一方、ウズベキスタンの政府職員が公用旅券で来る場合はビザが必要。
