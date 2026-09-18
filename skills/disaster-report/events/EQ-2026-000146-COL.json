@@ -2259,6 +2259,12 @@
       "label_en": "OCHA - Colombia Flash Update 013 (17 Sep 2026)",
       "label_ja": "OCHA「コロンビア・フラッシュアップデート第13号」（2026年9月17日）",
       "tier": "official"
+    },
+    {
+      "url": "https://reliefweb.int/report/colombia/colombia-flash-update-013-update-impact-earthquake-colombia-september-18-2026",
+      "label_en": "OCHA - Colombia Flash Update 013, English (posted 18 Sep 2026)",
+      "label_ja": "OCHA「コロンビア・フラッシュアップデート第13号」英語版（2026年9月18日掲載）",
+      "tier": "official"
     }
   ],
   "source_policy_en": "Source hierarchy: official > media > TBC. Government and scientific-agency figures are used as primary; media reports are used only where official figures are not yet published and are labelled as such. Items still being verified are marked TBC. Preliminary figures are never replaced by larger unverified numbers.",
