@@ -134,18 +134,35 @@ Badan Riset dan Inovasi Nasional（国家研究革新庁）
 
 | ドメイン | 結果 | 意味 |
 |---|---|---|
-| `www.antaranews.com` | **200** | 読める。検索ページも本文も取れる。**当面の主経路** |
+| `www.kompas.com` / `nasional.kompas.com` | **200** | 読める。**主経路。**記者会見の逐語に近く、関連記事が「Baca juga」で辿れる |
+| `www.antaranews.com` | 200 | 読める。検索ページも本文も取れる。ただし利用条件に注意（下記） |
 | `news.republika.co.id` | 200（検索ページは空） | 記事URLを持っていれば読める。サイト内検索は使えない |
 | `news.detik.com` | 200 | 読める。`www.detik.com` の検索は別扱いで 403 |
 | `www.nu.or.id` / `news.okezone.com` | 200 | 読める（`search.okezone.com` は 403） |
 | `florespos.net` / `www.rakyatntt.id` / `floresa.co` | 200 | 読める。NTT州の地方紙 |
-| `tirto.id` | サイト側 403 | **トンネルは通る。**サイトのbot対策。ポリシー拒否ではない |
+| `tirto.id` | サイト側 403 | **トンネルは通る。**サイトのbot対策。許可リストでは直らない |
 | `kupang.tribunnews.com` | サイト側 403 | 同上 |
-| `www.kompas.com` | **CONNECT 403** | **ポリシー拒否のまま。**許可リスト追加が要る |
+| `search.kompas.com` | CONNECT 403 | サイト内検索は使えない。記事ページから「Baca juga」で辿る |
 
 **2つの403を混同しない。**
 `curl: (56) CONNECT tunnel failed, response 403` はこちら側のポリシー拒否。
 `HTTP/1.1 403` が本文として返るのはサイト側のbot対策で、許可リストでは直らない。
+
+### 記事の辿り方（検索ページが使えないため）
+
+Kompas も Okezone も検索サブドメインが 403 で、サイト内検索が使えない。
+**記事ページ本文の「Baca juga」リンクを辿る。**同じ話題の前後の記事がここに並ぶ。
+
+```bash
+curl -sS -A 'Mozilla/5.0' <記事URL> -o a.html
+grep -oE 'https://[a-z]+\.kompas\.com/read/2026/09/[0-9]{2}/[0-9]+/[a-z0-9-]+' a.html | sort -u
+```
+
+2026-09-18、9月17日のDPR監査要求の記事からこの方法で辿って、
+**アムネスティ・インターナショナルの独立調査要求（同日）**と
+**BNPBの9月17日の動画声明**に到達した。どちらも検索では出てこなかった。
+
+ANTARA は検索ページが使える（`https://www.antaranews.com/search?q=...`）。
 
 ### ANTARA の利用条件（守ること）
 
@@ -156,7 +173,7 @@ ANTARA の記事末尾には次の趣旨の表示がある。
 
 **一覧ページから機械的に全記事を巡回しない。**必要な記事を特定して個別に読み、
 数値と出典を控えるところまでにとどめる。日次タスクにANTARAの全面巡回を組まないこと。
-`www.kompas.com` が許可リストに入れば、そちらを主経路にできる。
+**`www.kompas.com` が2026-09-18に許可リストへ入ったので、そちらを主経路にする。**
 
 ---
 
