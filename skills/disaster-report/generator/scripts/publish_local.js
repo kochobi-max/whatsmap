@@ -31,7 +31,7 @@ const RAW_BASE = "https://raw.githubusercontent.com/kochobi-max/whatsmap";
 const DIST_BRANCH = "dist";
 const BRANCH = "claude/workflow-automation-review-shyt35";
 const TASKNAME = "ADRC disaster report daily";
-const TASK_TIME = "08:10";
+const TASK_TIME = "08:30";
 
 // 作らなくなった版。出力先に残っていると、更新されないまま
 // 新しいものの隣に並び続ける。名前を挙げたものだけ消す。
@@ -411,7 +411,7 @@ function registerTask() {
   if (process.platform !== "win32") { say("   Windows ではないので登録しません"); return; }
   const bat = path.join(__dirname, "daily_publish.bat");
   const q = taskExists();
-  if (q) { say("   登録済み — 毎日 " + TASK_TIME + " に走ります"); relaxTaskPower(); return; }
+  if (q) { say("   登録済み"); retimeTask(); relaxTaskPower(); return; }
   try {
     execFileSync("schtasks",
       ["/create", "/tn", TASKNAME, "/tr", '"' + bat + '"', "/sc", "daily", "/st", TASK_TIME, "/f"],
@@ -426,6 +426,40 @@ function registerTask() {
     ? "   登録しました — 毎日 " + TASK_TIME + " に走ります"
     : "   WARN 登録したはずが見つかりません。手で確認してください。");
   relaxTaskPower();
+}
+
+// **登録済みでも、時刻が今の TASK_TIME とは限らない。**
+//
+// 2026-09-18、PCの定期実行は 08:10 に登録されていた。その朝、クラウドの配布は
+// 08:07〜08:13 に散り、PC が COL・NPL の配布より先に走った。3件とも OneDrive が
+// 前日の版のままになり、送信の前で止まった（verify_published.js の stale-onedrive）。
+//
+// 荒木田さんの判断で 08:30 へ移す。ただし `schtasks /create` は
+// **既に登録されている場合そもそも呼ばれない**ので、定数を書き換えるだけでは
+// 相手のPCのタスクは 08:10 のまま動き続ける。**登録済みの側も直す。**
+//
+// `schtasks /change /st` は同じ時刻を入れても害がないので、毎回当てる。
+function retimeTask() {
+  let before = "";
+  try {
+    const v = execFileSync("schtasks", ["/query", "/tn", TASKNAME, "/v", "/fo", "LIST"],
+      { encoding: "utf8", stdio: "pipe" });
+    const m = /^(?:Start Time|開始時刻):\s*(.+)$/mi.exec(v);
+    if (m) before = m[1].trim();
+  } catch (_) { /* 読めなくても直しに行く */ }
+
+  try {
+    execFileSync("schtasks", ["/change", "/tn", TASKNAME, "/st", TASK_TIME],
+      { encoding: "utf8", stdio: "pipe" });
+    say(before
+      ? "   実行時刻 " + before + " → 毎日 " + TASK_TIME + " に設定しました"
+      : "   実行時刻を毎日 " + TASK_TIME + " に設定しました");
+  } catch (err) {
+    say("   WARN 実行時刻を " + TASK_TIME + " に変えられませんでした（公開そのものは済んでいます）");
+    say("   " + String(err.message || err).split("\n")[0].slice(0, 140));
+    say('   手で直す場合は、コマンドプロンプトで1行:');
+    say('   schtasks /change /tn "' + TASKNAME + '" /st ' + TASK_TIME);
+  }
 }
 
 // `schtasks /create` の既定は、ノートPCにとって都合が悪い。

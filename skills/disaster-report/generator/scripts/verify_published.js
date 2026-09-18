@@ -90,7 +90,7 @@ if (r.published_date_jst !== today) {
   } else {
     console.log("   今日の見送り記録も無い。**PCがそもそも動いていない。**");
     console.log("   電源が入っていないか、ネットワークに繋がっていないか、");
-    console.log("   タスクスケジューラの定期実行（08:10 JST）が走っていない。");
+    console.log("   タスクスケジューラの定期実行（08:30 JST）が走っていない。");
     console.log("   対処: PCで C:\\Users\\arakida\\ADRC_setup_and_publish.bat を実行する。");
     console.log("STATUS: NO-SEND old-record " + r.published_date_jst + " (pc-not-run)");
   }

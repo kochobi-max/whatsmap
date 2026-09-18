@@ -5,7 +5,7 @@
 | タスク | 貼る本文 | 時刻 |
 |---|---|---|
 | 災害レポート 全イベント データ更新＋ビルド＋配布 | `daily-build-routine-prompt.txt` | 07:30・17:30 JST |
-| 災害レポート 全イベント 更新メール送信 | `daily-mail-routine-prompt.txt` | 08:30 JST |
+| 災害レポート 全イベント 更新メール送信 | `daily-mail-routine-prompt.txt` | 08:50 JST |
 
 **どちらもコネクタが要る。**
 送信タスクは Superhuman でメールを送るため。
@@ -61,8 +61,8 @@ update_trigger: this routine was created via "http_api", not by an agent.
 
 | 項目 | 値 |
 |---|---|
-| 名前 | 災害レポート 全イベント 更新メール送信（08:30 JST） |
-| スケジュール | 毎日 08:30 JST |
+| 名前 | 災害レポート 全イベント 更新メール送信（08:50 JST） |
+| スケジュール | 毎日 08:50 JST |
 | プロンプト | `daily-mail-routine-prompt.txt` の全文 |
 | コネクタ | **Superhuman Mail を必ず残す。既定で付いているものを外さない** |
 | 新しいセッションで実行 | はい |
@@ -78,8 +78,8 @@ update_trigger: this routine was created via "http_api", not by an agent.
 
 ```
 クラウド 07:30 JST  全イベント: 新資料の洗い出し → データ更新 → ビルド → dist へ配布
-PC       08:10 JST  全イベント: dist から取得 → LargeScaleDisasters へコピー → 公開記録をプッシュ
-クラウド 08:30 JST  全イベント: 公開記録を確認 → 照合 → ゲート → 送信 → _prev 更新
+PC       08:30 JST  全イベント: dist から取得 → LargeScaleDisasters へコピー → 公開記録をプッシュ
+クラウド 08:50 JST  全イベント: 公開記録を確認 → 照合 → ゲート → 送信 → _prev 更新
 クラウド 17:30 JST  全イベント: データ更新 → ビルド → 配布（送信なし）
 ```
 

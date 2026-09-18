@@ -146,11 +146,11 @@ StartWhenAvailable         = $true
 
 ## 6. タスクスケジューラ（自動で登録されます）
 
-`ADRC_setup_and_publish.bat` が最後に自分で登録する。毎日 08:10 JST。
+`ADRC_setup_and_publish.bat` が最後に自分で登録する。毎日 08:30 JST。
 管理者権限は要らない（実行するのは本人のタスクなので）。
 
 ```
-OK  registered - runs every day at 08:10
+OK  registered - runs every day at 08:30
 ```
 
 すでに登録済みなら `already registered` と出て何もしない。
