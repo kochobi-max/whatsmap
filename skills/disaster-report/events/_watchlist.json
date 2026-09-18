@@ -1,0 +1,73 @@
+{
+  "_comment": [
+    "レポート化を検討したうえで、現時点では対象にしないと判断した災害の記録。",
+    "判断基準は skills/ldi-cms-report/SKILL.md Step 5.5「昇格判定」をそのまま使う。",
+    "ここに載っている要請番号は、毎朝の定期タスクで繰り返し報告しない。",
+    "ただし reconsider_if のいずれかを満たしたら、再提案する（watchlist.js が判定する）。",
+    "自分でここから events/ へ昇格させないこと。昇格の判断は人がする。"
+  ],
+  "entries": [
+    {
+      "id": "SA-00659",
+      "country_ja": "フィリピン",
+      "country_en": "Philippines",
+      "iso3": "PHL",
+      "adrc_member": true,
+      "criteria_set": "ADRC加盟国",
+      "hazard_ja": "洪水・地滑り・暴風",
+      "hazard_en": "Flood / Landslide / Severe wind",
+      "requested": "2026-08-28",
+      "decision": "not-covered",
+      "decided_on": "2026-08-30",
+      "decided_by": "荒木田",
+      "decision_ja": "現段階では非対応とする。今後被害拡大の場合は追加の可能性もある。",
+      "why_not_ja": "センチネルアジアのEO要請は出ているが、国際災害チャーターの発動が無く、死者数も加盟国基準（100人以上）に達していない。",
+      "reconsider_if": {
+        "deaths_at_least": 100,
+        "magnitude_at_least": 7.0,
+        "charter_activated": true,
+        "adrc_is_requester": true,
+        "jdr_dispatched": true
+      },
+      "observed": {
+        "deaths": null,
+        "as_of": null,
+        "note_ja": "判断時点で公式の死者数を確認していない。次に数値が分かった時点で埋めること。"
+      },
+      "sources": [
+        "https://sentinel-asia.org/"
+      ]
+    },
+    {
+      "id": "SA-00657",
+      "country_ja": "ベトナム",
+      "country_en": "Viet Nam",
+      "iso3": "VNM",
+      "adrc_member": true,
+      "criteria_set": "ADRC加盟国",
+      "hazard_ja": "（センチネルアジア要請。種別は通知メールで確認すること）",
+      "hazard_en": "(see Sentinel Asia notification)",
+      "requested": "2026-08-22",
+      "decision": "not-covered",
+      "decided_on": "2026-08-30",
+      "decided_by": "荒木田",
+      "decision_ja": "現段階では非対応とする。今後被害拡大の場合は追加の可能性もある。",
+      "why_not_ja": "センチネルアジアのEO要請は出ているが、国際災害チャーターの発動が無く、死者数も加盟国基準（100人以上）に達していない。",
+      "reconsider_if": {
+        "deaths_at_least": 100,
+        "magnitude_at_least": 7.0,
+        "charter_activated": true,
+        "adrc_is_requester": true,
+        "jdr_dispatched": true
+      },
+      "observed": {
+        "deaths": null,
+        "as_of": null,
+        "note_ja": "判断時点で公式の死者数を確認していない。次に数値が分かった時点で埋めること。"
+      },
+      "sources": [
+        "https://sentinel-asia.org/"
+      ]
+    }
+  ]
+}
