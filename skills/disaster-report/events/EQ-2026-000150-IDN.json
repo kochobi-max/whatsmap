@@ -21,7 +21,7 @@
     "jma_name_en": "",
     "edition": "",
     "prepared_by": "Asian Disaster Reduction Center (ADRC)",
-    "stamp": "2026-09-18 09:30 JST",
+    "stamp": "2026-09-19 22:50 JST",
     "update_date": "15/09/2026",
     "timeline_range_en": "15 August - 15 September 2026 (Western Indonesian Time, UTC+7)",
     "timeline_range_ja": "2026年8月15日〜9月15日（西部インドネシア時間 WIB、UTC+7）",
@@ -1119,6 +1119,12 @@
       "url": "https://nasional.kompas.com/read/2026/09/15/16512731/bnpb-ungkap-94-korban-gempa-ntt-meninggal-di-pengungsian",
       "en": "BNPB ungkap 94 korban gempa NTT meninggal di pengungsian (Kompas, 15 Sep 2026) - injured 1,603, public-facility breakdown",
       "ja": "BNPB、NTT地震の94人が避難所で死亡と公表（Kompas、2026年9月15日）— 負傷1,603人、公共施設の内訳"
+    },
+    {
+      "label_en": "ANTARA - NTT provincial govt consolidates single dataset for Flores quake recovery (17 Sep 2026)",
+      "label_ja": "ANTARA NTT州政府、フローレス地震復旧に向け統一データを整備（2026年9月17日）",
+      "url": "https://www.antaranews.com/berita/5746076/pemprov-ntt-konsolidasikan-satu-data-percepat-pemulihan-gempa-flores",
+      "tier": "media"
     }
   ],
   "attribution_en": "Figures reported by BNPB and relayed by IFRC/PMI and humanitarian partners; source and cut-off shown per row. All provisional.",

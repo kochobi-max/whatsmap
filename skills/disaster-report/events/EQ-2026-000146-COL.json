@@ -27,7 +27,7 @@
     "as_of_ja": "数値は被災者・住家について2026年9月15日06:30（コロンビア時間）締めのUNGRD「被災者統一登録（RUD）」集計現在（投稿は10:01）、これが入手できている最新の集計である。死者・負傷者・行方不明・生存救出の集計は9月7日06:30締め（投稿07:43）以来更新されていない。16県・498市町村（9月7日締め時点で横ばい）で死者331人（9月6日から横ばい）、負傷4,505人（横ばい）、行方不明111人（横ばい）、生存救出364人（横ばい）。RUDによる被災登録は303,934世帯・486,917人で、9月7日締めの296,738世帯・466,709人から増加。住家は損壊206,931棟（202,002棟から増加）・全壊36,478棟（36,326棟から増加）、ほか建物損壊6,005棟・倒壊743棟（いずれも9月7日締め時点で横ばい。9月15日のRUD集計では再掲されていない）。別途、発災1か月にあたる9月10日付のUNGRDサイト記事は、捜索救助の終了（救出356人・遺体収容259体）とEDANPRI（復旧のための被害評価・ニーズ分析）プロセスの始動を報じるとともに「本日時点」として近い数値を再掲しているが、被災者数・市町村数・住家損壊・医療施設のいずれも9月7日締め集計をわずかに下回っており、理由は示されていない。これまでの小幅な増減の扱いと同様、この記事の数値は集計の訂正としては用いず、タイムラインに別掲するにとどめる。UNGRDは引き続き、数値は速報値であり地方団体・実施機関による集計が継続中としている。すべて速報値。引用の際は集計時点を併記されたい。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-09-18 07:30 JST",
+    "stamp": "2026-09-19 22:50 JST",
     "update_date": "17/09/2026",
     "optional_slides": [
       "prior_event",
@@ -756,10 +756,10 @@
     {
       "item_en": "Homes damaged or destroyed",
       "item_ja": "住宅被害（合計）",
-      "value_en": "243,409: 36,478 destroyed and 206,931 damaged (UNGRD RUD balance, 06:30 cut on 15 Sep 2026), against 238,328 (36,326 destroyed and 202,002 damaged) at the 7 Sep 06:30 cut. OCHA's Flash Update 011 (2 Sep 17:00) separately cites more than 36,000 homes destroyed, consistent with the UNGRD figure. In El Cairo, a coffee town in the mountains of Valle del Cauca, 80% of the houses were damaged (as of 16 Aug). CESVI's Colombia Emergency Response Situation Report #2 (11 Sep, covering 18 Aug-10 Sep) separately cites 101,416 \"uninhabitable homes\" as of 9 September - a different metric from UNGRD's destroyed/damaged breakdown above and not reconciled with it.",
-      "value_ja": "243,409棟。全壊36,478棟、損壊206,931棟（UNGRD RUD集計、9月15日06:30締め）。9月7日06:30締めの238,328棟（全壊36,326棟・損壊202,002棟）から増加。OCHAのFlash Update 011（9月2日17:00時点）も別途「住家全壊36,000棟超」とし、UNGRDの値と整合する。バジェ・デル・カウカ県山間部のコーヒー産地エル・カイロでは住宅の80％が被害を受けた（8月16日時点）。 CESVIの「コロンビア緊急対応状況報告第2号」（9月11日、8月18日〜9月10日を対象）は別途、9月9日時点で「居住不能な住宅」101,416棟としている。これはUNGRDの全壊・損壊の内訳とは異なる指標であり、突合されていない。",
-      "source_en": "UNGRD (RUD), 15 Sep 06:30; OCHA Flash Update 011, 2 Sep 17:00; CESVI, 11 Sep 2026",
-      "source_ja": "UNGRD（RUD、9月15日06:30）／OCHA Flash Update 011（9月2日17:00時点）／CESVI（9月11日）",
+      "value_en": "243,409: 36,478 destroyed and 206,931 damaged (UNGRD RUD balance, 06:30 cut on 15 Sep 2026), against 238,328 (36,326 destroyed and 202,002 damaged) at the 7 Sep 06:30 cut. OCHA's Flash Update 011 (2 Sep 17:00) separately cites more than 36,000 homes destroyed, consistent with the UNGRD figure. In El Cairo, a coffee town in the mountains of Valle del Cauca, 80% of the houses were damaged (as of 16 Aug). CESVI's Colombia Emergency Response Situation Report #2 (11 Sep, covering 18 Aug-10 Sep) separately cites 101,416 \"uninhabitable homes\" as of 9 September - a different metric from UNGRD's destroyed/damaged breakdown above and not reconciled with it. Separately, on 19 September UNGRD posted a municipality-level RUD breakdown for San José del Palmar (Chocó), the epicentral municipality, as of the same date: 364,670 families and 778,279 people registered, 119,752 homes damaged (averiadas) and 19,143 homes destroyed (destruidas). These figures are for that one municipality only - they are smaller than, and not comparable to, the national RUD totals above (243,409 homes/36,478 destroyed as of 15 Sep); they are not summed with the national figures here.",
+      "value_ja": "243,409棟。全壊36,478棟、損壊206,931棟（UNGRD RUD集計、9月15日06:30締め）。9月7日06:30締めの238,328棟（全壊36,326棟・損壊202,002棟）から増加。OCHAのFlash Update 011（9月2日17:00時点）も別途「住家全壊36,000棟超」とし、UNGRDの値と整合する。バジェ・デル・カウカ県山間部のコーヒー産地エル・カイロでは住宅の80％が被害を受けた（8月16日時点）。 CESVIの「コロンビア緊急対応状況報告第2号」（9月11日、8月18日〜9月10日を対象）は別途、9月9日時点で「居住不能な住宅」101,416棟としている。これはUNGRDの全壊・損壊の内訳とは異なる指標であり、突合されていない。別途、9月19日にUNGRDは震央のあるサンホセ・デル・パルマル市（チョコ県）単独の、同日付RUD市町村別内訳を投稿した：登録家族364,670、登録者778,279人、住家一部損壊（averiadas）119,752棟、住家全壊（destruidas）19,143棟。この数値は同市単独のものであり、上記の全国RUD集計（9月15日時点、住家243,409棟・うち全壊36,478棟）より小さく、比較可能なものではない。全国値への合算は行わない。",
+      "source_en": "UNGRD (RUD), 15 Sep 06:30; OCHA Flash Update 011, 2 Sep 17:00; CESVI, 11 Sep 2026; UNGRD (X/Twitter), San José del Palmar municipal RUD, 19 Sep 2026",
+      "source_ja": "UNGRD（RUD、9月15日06:30）／OCHA Flash Update 011（9月2日17:00時点）／CESVI（9月11日）；UNGRD（X/Twitter）サンホセ・デル・パルマル市別RUD、2026年9月19日",
       "tier": "official",
       "url": "https://x.com/UNGRD/status/2099876327843086337"
     },
