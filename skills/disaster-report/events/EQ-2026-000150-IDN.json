@@ -21,10 +21,10 @@
     "jma_name_en": "",
     "edition": "",
     "prepared_by": "Asian Disaster Reduction Center (ADRC)",
-    "stamp": "2026-09-19 22:50 JST",
-    "update_date": "15/09/2026",
-    "timeline_range_en": "15 August - 15 September 2026 (Western Indonesian Time, UTC+7)",
-    "timeline_range_ja": "2026年8月15日〜9月15日（西部インドネシア時間 WIB、UTC+7）",
+    "stamp": "2026-09-22 07:44 JST",
+    "update_date": "21/09/2026",
+    "timeline_range_en": "15 August - 21 September 2026 (Western Indonesian Time, UTC+7)",
+    "timeline_range_ja": "2026年8月15日〜9月21日（西部インドネシア時間 WIB、UTC+7）",
     "disseminate_en": "",
     "disseminate_ja": "",
     "optional_slides": [],
@@ -40,8 +40,8 @@
     },
     "subtitle_en": "M7.7, offshore Nagekeo Regency, Flores Island, East Nusa Tenggara - 15 August 2026",
     "subtitle_ja": "M7.7、東ヌサトゥンガラ州フローレス島 ナゲケオ県沖、2026年8月15日",
-    "edition_en": "7th report",
-    "edition_ja": "第7報",
+    "edition_en": "8th report",
+    "edition_ja": "第8報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
     "tz_note_en": "Times follow BNPB's own reporting in WIB (UTC+7) unless stated.",
@@ -137,8 +137,8 @@
     "depth_display": "10 km (USGS) / 15 km (BMKG)",
     "mechanism_en": "BMKG placed the epicentre 30 km northeast of Mbay, Nagekeo Regency, at 15 km depth; USGS reported Mww 7.7 at 10 km. The USGS moment tensor solution gives Mww 7.8 at 23.5 km. Maximum estimated shaking is MMI VIII, with 51 felt reports. The source is the Flores Back-Arc Thrust.",
     "mechanism_ja": "BMKGは震央をナゲケオ県ンバイの北東30km、深さ15kmとし、USGSは Mww7.7・深さ10kmとした。USGSのモーメントテンソル解は Mww7.8・深さ23.5km。推定最大震度はMMI VIII、体感報告51件。発生源はフローレス背弧断層。",
-    "summary_en": "A magnitude 7.7 earthquake struck offshore Nagekeo Regency, East Nusa Tenggara, at 04:58 WIB on 15 August 2026, about 30 km northeast of Mbay, Flores. BMKG issued a tsunami warning for several coastal areas and lifted it at 07:31 WIB. Seven regencies were affected, from West Manggarai east to Sikka. The toll rose as access improved, reaching 120 deaths and about 188,673 displaced as of 31 August (BNPB, via the AHA Centre). On 15 September BNPB announced a revised toll of 142 deaths - 48 direct and 94 indirect deaths at evacuation sites - after a joint verification with the Ministry of Health, and revised the injured figure to 1,603. BNPB attributed the indirect deaths mainly to elderly evacuees with chronic conditions, and rejected readings that they had died for want of treatment; it apologised if its earlier statement had caused public concern. The DPR's Commission IX has called for an audit of health services at the sites, and Amnesty International Indonesia for an independent investigation. ADRC requested Sentinel Asia and the International Charter on the day of the earthquake on behalf of BRIN. The response has otherwise shifted into recovery: roads and bridges are restored, 1,931 schools have resumed classes, and Rp200 billion in central contingency funds has gone to NTT. Displacement is down to 46,461 and 103,427 damaged houses are being re-verified; BMKG recorded 15,722 aftershocks in the 30 days since the mainshock.",
-    "summary_ja": "2026年8月15日4時58分（WIB）、東ヌサトゥンガラ州ナゲケオ県沖でM7.7の地震が発生した。震央はフローレス島ンバイの北東約30km。BMKGは沿岸の一部に津波警報を出し、7時31分に解除した。被災は西マンガライ、マンガライ、東マンガライ、ンガダ、ナゲケオ、エンデ、シッカの7県に及ぶ。BNPBは8月31日09:00 WIB時点で死者120人、負傷1,658人、避難者約188,673人と発表した。その後9月15日、保健省との合同検証を経て、死者を142人（直接死48人＋避難所での間接死94人）、負傷を1,603人へ修正した。間接死の多くは持病のある高齢避難者で、BNPBは「治療を受けられずに死亡した」との解釈を否定し、先行する情報が社会に不安と憶測を招いたことについて陳謝した。国会（DPR）は監査を求めている。ADRCは発災当日、BRINに代わりセンチネルアジアと国際災害チャーターを要請した。道路・橋梁は全面復旧、中央政府予備費2,000億ルピアがNTT州へ拠出済み。避難者は46,461人へ急減し、損壊住宅103,427棟を現地で再検証中。余震は本震から30日間で計15,722回。",
+    "summary_en": "A magnitude 7.7 earthquake struck offshore Nagekeo Regency, East Nusa Tenggara, at 04:58 WIB on 15 August 2026, about 30 km northeast of Mbay, Flores. BMKG issued a tsunami warning for several coastal areas and lifted it at 07:31 WIB. Seven regencies were affected, from West Manggarai east to Sikka. The toll rose as access improved, reaching 120 deaths and about 188,673 displaced as of 31 August (BNPB, via the AHA Centre). On 15 September BNPB announced a revised toll of 142 deaths - 48 direct and 94 indirect deaths at evacuation sites - after a joint verification with the Ministry of Health, and revised the injured figure to 1,603. BNPB attributed the indirect deaths mainly to elderly evacuees with chronic conditions, and rejected readings that they had died for want of treatment. DPR's Commission IX and Amnesty International Indonesia have called for an audit and independent investigation, respectively. ADRC requested Sentinel Asia and the International Charter on the day of the earthquake on behalf of BRIN. The response has otherwise shifted into recovery: roads and bridges are restored, 1,931 schools have resumed classes, and Rp200 billion in contingency funds has gone to NTT. Displacement is down to 46,461 and 103,427 damaged houses are being re-verified. BMKG recorded 17,073 aftershocks by 21 Sep; a felt M5.1 that day in Manggarai Timur, linked to the Flores Back-arc Thrust, collapsed a partly built shelter.",
+    "summary_ja": "2026年8月15日4時58分（WIB）、東ヌサトゥンガラ州ナゲケオ県沖でM7.7の地震が発生した。震央はフローレス島ンバイの北東約30km。BMKGは沿岸の一部に津波警報を出し、7時31分に解除した。被災は西マンガライ、マンガライ、東マンガライ、ンガダ、ナゲケオ、エンデ、シッカの7県に及ぶ。BNPBは8月31日09:00 WIB時点で死者120人、負傷1,658人、避難者約188,673人と発表した。その後9月15日、保健省との合同検証を経て、死者を142人（直接死48人＋避難所での間接死94人）、負傷を1,603人へ修正した。間接死の多くは持病のある高齢避難者で、BNPBは「治療を受けられずに死亡した」との解釈を否定した。DPRは監査を要求。ADRCは発災当日、BRINに代わりセンチネルアジアと国際災害チャーターを要請した。道路・橋梁は全面復旧、中央予備費2,000億ルピアをNTT州へ拠出済み。避難者は46,461人へ急減し、損壊住宅103,427棟を現地で再検証中。余震は9月21日までに計17,073回。同日マンガライ・ティムールで有感M5.1が発生し、同じフローレス背弧衝上断層による活動とBMKGが説明。建設中の仮設住宅1棟が倒壊した。",
     "tectonic_en": "The earthquake was generated by the Flores Back-Arc Thrust.",
     "tectonic_ja": "フローレス背弧断層（Flores Back-Arc Thrust）による地震。"
   },
@@ -683,6 +683,20 @@
       "src": "BNPB / DPR / Amnesty (Kompas)",
       "en": "BNPB issues a video statement restating that the 94 indirect deaths were not caused by direct physical trauma or building collapse, and apologising if its earlier statement caused public concern. A deputy chair of the DPR's Commission IX calls for an audit of health services at evacuation sites; Amnesty International Indonesia demands an independent investigation.",
       "ja": "BNPBが動画声明で、間接死94人は地震による直接の外傷や建物倒壊が死因ではないと改めて説明し、先行する情報が不安を招いたことを陳謝。国会（DPR）第IX委員会副委員長が避難所の保健医療サービスの監査を要求し、アムネスティ・インターナショナル・インドネシアが独立した調査を要求した。"
+    },
+    {
+      "time": "18 Sep",
+      "tier": "official",
+      "src": "Minister of Home Affairs Tito Karnavian (Kompas)",
+      "en": "Minister of Home Affairs Tito Karnavian said President Prabowo Subianto's contingency allocation to NTT had been increased by a further Rp20 billion, and separately criticised slow disbursement of an earlier Rp20 billion tranche to Sikka Regency.",
+      "ja": "内務大臣ティト・カルナビアン氏は、プラボウォ大統領によるNTT州への予備費追加配分がさらにルピア200億増額されたと発表する一方、シッカ県への従前のルピア200億の配分執行が遅いと指摘。"
+    },
+    {
+      "time": "21 Sep",
+      "tier": "official",
+      "src": "Sikka Regency acting secretary (Kompas)",
+      "en": "Responding to the Home Affairs Minister's criticism, Sikka Regency's acting secretary said not all of its Rp20 billion presidential aid needed to be spent during the emergency-response phase; part is earmarked for the recovery-transition phase (house repairs), with about Rp17 billion remaining unspent as of 21 Sep.",
+      "ja": "内務大臣の指摘を受け、シッカ県副地方書記官は、ルピア200億の大統領支援金は緊急対応期間中に全額執行する必要はなく、一部は復旧移行期（住宅修繕）向けに留保しているとし、9月21日時点の未執行残額は約ルピア170億と説明。"
     }
   ],
   "intensity": {},
@@ -724,6 +738,12 @@
       "mag": "~13,000",
       "place_en": "Cumulative events, 177 felt (BMKG, cited by NTT Governor via ANTARA, 9 Sep)",
       "place_ja": "積算回数（約）、うち有感177回（BMKG、NTT州知事引用、ANTARA経由、9月9日）"
+    },
+    {
+      "time": "21 Sep",
+      "mag": "17,073",
+      "place_en": "Cumulative events, 198 felt (BMKG via Kompas); includes a felt M5.1 (initially reported M5.3) at Lamba Leda, Manggarai Timur, 08:41 WIB, depth 10km, BMKG-attributed to the Flores Back-arc Thrust and part of the M7.7 aftershock sequence",
+      "place_ja": "積算回数、うち有感198回（BMKG、Kompas経由）。同日08:41 WIB、東マンガライ県ランバレダで有感M5.1（速報M5.3）が発生、深さ10km。BMKGはフローレス背弧衝上断層の活動によるM7.7本震の余震系列の一部と説明"
     }
   ],
   "aftershock_stats": {
@@ -1125,6 +1145,63 @@
       "label_ja": "ANTARA NTT州政府、フローレス地震復旧に向け統一データを整備（2026年9月17日）",
       "url": "https://www.antaranews.com/berita/5746076/pemprov-ntt-konsolidasikan-satu-data-percepat-pemulihan-gempa-flores",
       "tier": "media"
+    },
+    {
+      "url": "https://regional.kompas.com/read/2026/09/21/140540378/gempa-susulan-flores-m77-capai-17073-kali-198-kali-dirasakan-warga"
+    },
+    {
+      "url": "https://regional.kompas.com/read/2026/09/21/120040378/gempa-m-51-guncang-manggarai-timur-terasa-di-sejumlah-daerah"
+    },
+    {
+      "url": "https://regional.kompas.com/read/2026/09/21/090000378/gempa-m-53-guncang-manggarai-bmkg-tidak-berpotensi-tsunami"
+    },
+    {
+      "url": "https://regional.kompas.com/read/2026/09/21/174624178/baru-3-hari-dibangun-huntara-korban-gempa-di-manggarai-timur-roboh"
+    },
+    {
+      "url": "https://regional.kompas.com/read/2026/09/21/151815278/disorot-mendagri-soal-dana-gempa-rp-20-miliar-pemda-sikka-tersisa-rp-17"
+    },
+    {
+      "url": "https://regional.kompas.com/read/2026/09/21/164050278/227-anak-terdampak-gempa-flores-ikuti-trauma-healing-di-manggarai"
+    },
+    {
+      "url": "https://regional.kompas.com/read/2026/09/18/06192401/tito-presiden-prabowo-tambah-alokasi-belanja-tidak-terduga-di-ntt-rp-20"
+    },
+    {
+      "url": "https://reliefweb.int/report/indonesia/asean-weekly-disaster-update-week-32-3-9-august-2026"
+    },
+    {
+      "url": "https://reliefweb.int/report/indonesia/care-responding-indonesia-earthquake"
+    },
+    {
+      "url": "https://reliefweb.int/report/indonesia/flores-earthquake-512-schools-affected-plan-indonesia-urges-education-recovery-be-prioritized"
+    },
+    {
+      "url": "https://reliefweb.int/report/indonesia/flores-earthquake-children-face-serious-health-and-safety-risks-amid-prolonged-displacement"
+    },
+    {
+      "url": "https://reliefweb.int/report/indonesia/idn-earthquake-08-2026-field-report-update-2-m77-east-nusa-tenggara-earthquake-3-2026-08-18"
+    },
+    {
+      "url": "https://reliefweb.int/report/indonesia/indonesia-77-earthquake-strikes-flores-plan-indonesia-warns-grave-risks-children-and-girls"
+    },
+    {
+      "url": "https://reliefweb.int/report/indonesia/indonesia-earthquake-situation-overview-18-august-2026"
+    },
+    {
+      "url": "https://reliefweb.int/report/indonesia/indonesia-over-8000-children-face-disruptions-education-following-deadly-earthquake-save-children"
+    },
+    {
+      "url": "https://reliefweb.int/report/indonesia/indonesian-humanitarian-coordination-platform-situation-report-no-3-earthquake-and-tsunami-flores-and-surrounding-areas-19-august-2026"
+    },
+    {
+      "url": "https://reliefweb.int/report/indonesia/world-vision-launches-emergency-response-death-toll-rises-following-powerful-indonesia-earthquake"
+    },
+    {
+      "url": "https://reliefweb.int/report/indonesia/indonesia-flores-earthquake-response-dref-operation-mdrid029"
+    },
+    {
+      "url": "https://reliefweb.int/report/indonesia/indonesian-humanitarian-coordination-platform-situation-report-no-8-earthquake-and-tsunami-flores-and-surrounding-areas-september-1-2026"
     }
   ],
   "attribution_en": "Figures reported by BNPB and relayed by IFRC/PMI and humanitarian partners; source and cut-off shown per row. All provisional.",

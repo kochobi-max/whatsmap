@@ -600,6 +600,20 @@
       "src": "OCHA Flash Update 013",
       "en": "OCHA's Flash Update 013 (14:00 COT cut) restates the 15 Sep UNGRD RUD balance unchanged (486,917 people / 303,934 families affected; 36,478 homes destroyed) and reports more than 137,000 people assisted, up from 135,000 in Flash Update 012 (10 Sep). No new UNGRD deaths/injured/missing/rescued balance has been posted since the 7 Sep 06:30 cut; UNGRD's own public communications in the intervening period have focused on the recovery-phase Plan de Accion Especifico para la Recuperacion (PAE) and sector working groups with UNDP and ECLAC, rather than a further daily casualty bulletin.",
       "ja": "OCHAのFlash Update 013（コロンビア時間14:00締め）は9月15日のUNGRD RUD集計を変更なしとして再掲（被災486,917人・303,934世帯、住家全壊36,478棟）し、支援提供者数13万7,000人超（Flash Update 012〈9月10日〉時点の13万5,000人から増加）と報告。UNGRDによる死者・負傷者・行方不明・生存救出の集計は9月7日06:30締め以来更新されていない。この間のUNGRD自身の広報は、UNDP・CEPALと連携した復旧特定行動計画（PAE）や分野別作業部会など復旧段階の内容が中心で、日次の死傷者速報の更新は見られない。"
+    },
+    {
+      "time": "18 Sep",
+      "tier": "official",
+      "src": "ICRC (portal article, published 21 Sep)",
+      "en": "ICRC announced a community-infrastructure recovery response, run jointly with the Colombian Red Cross and IFRC, focused on conflict-affected rural areas of Choco and Valle del Cauca hit by the earthquake. The six-to-nine month response has two phases: Phase 1, basic repair materials for seven community spaces; Phase 2, medium-complexity rehabilitation of roofs, kitchens, school dining halls and other community and educational infrastructure. ICRC noted the earthquake compounded pre-existing humanitarian needs from armed conflict (displacement, confinement, explosive ordnance) in these areas.",
+      "ja": "ICRC（赤十字国際委員会）は、コロンビア赤十字・IFRCと共同で、地震の被害を受けたチョコ県・バジェデルカウカ県の武力紛争影響地域を対象に、コミュニティインフラの復旧支援を発表（記事掲載9月21日）。6〜9か月の支援で、フェーズ1は7か所のコミュニティ施設への基礎補修資材の提供、フェーズ2は屋根・炊事場・学校食堂等の中規模改修を行う。ICRCは、これらの地域では地震前から武力紛争（避難・移動制限・不発弾等）による人道ニーズが存在しており、地震がそれを悪化させたと指摘。"
+    },
+    {
+      "time": "19 Sep",
+      "tier": "official",
+      "src": "UNGRD (portal article)",
+      "en": "UNGRD hosted UNDRR special representative Kamal Kishore in Cali to review recovery challenges. The article states a Cali-specific balance (distinct from the national RUD balance reported elsewhere in this report): 154 deaths, 1,504 injured and 88 rescued alive in Cali, with more than 12,000 buildings affected; authorities have carried out 1,216 technical building inspections, and damage/needs assessments (EDAN) cover 35,280 families in the city. Figures are scoped to Cali only and are not additive to the national UNGRD RUD totals shown in this report's headline.",
+      "ja": "UNGRDは国連防災機関（UNDRR）特別代表カマル・キショール氏をカリに迎え、復旧の課題を協議。記事は本報の全国RUD集計とは別枠の**カリ市限定**の集計を示す：死者154人、負傷1,504人、生存救出88人、被害建物12,000棟超。技術検査1,216件、被害・ニーズ評価（EDAN）は35,280世帯を対象。この数値はカリ市に限定されたものであり、本報冒頭の全国UNGRD RUD集計には合算していない。"
     }
   ],
   "areas": [
@@ -2265,6 +2279,33 @@
       "label_en": "OCHA - Colombia Flash Update 013, English (posted 18 Sep 2026)",
       "label_ja": "OCHA「コロンビア・フラッシュアップデート第13号」英語版（2026年9月18日掲載）",
       "tier": "official"
+    },
+    {
+      "url": "https://portal.gestiondelriesgo.gov.co/Paginas/Noticias/2026/UNGRD-y-Naciones-Unidas-analizan-en-Cali-los-retos-de-la-recuperacion-tras-el-terremoto.aspx"
+    },
+    {
+      "url": "https://reliefweb.int/report/colombia/analisis-de-situacion-y-respuesta-al-terremoto-10-de-septiembre-2026"
+    },
+    {
+      "url": "https://reliefweb.int/report/colombia/colombia-earthquake-response-situation-report-10-14-september-2026"
+    },
+    {
+      "url": "https://reliefweb.int/report/colombia/colombia-evaluacion-rapida-conjunta-de-mercados-jram-panorama-de-la-situacion-agosto-2026"
+    },
+    {
+      "url": "https://reliefweb.int/report/colombia/colombia-grupo-de-trabajo-de-logistica-gtl-un-mes-de-operacion-de-emergencia-10-de-septiembre-de-2026"
+    },
+    {
+      "url": "https://reliefweb.int/report/colombia/respuesta-al-terremoto-en-colombia-reporte-de-situacion-10-14-septiembre-2026"
+    },
+    {
+      "url": "https://reliefweb.int/report/colombia/terremoto-en-colombia-el-cicr-apoya-la-recuperacion-de-infraestructura-comunitaria-esencial-en-zonas-afectadas-por-los-conflictos-armados"
+    },
+    {
+      "url": "https://reliefweb.int/report/colombia/un-mes-despues-del-terremoto-en-colombia-avanzar-con-la-reconstruccion-en-medio-de-una-compleja-situacion-humanitaria"
+    },
+    {
+      "url": "https://reliefweb.int/report/colombia/unhcr-colombia-2026-funding-update-31-august-2026"
     }
   ],
   "source_policy_en": "Source hierarchy: official > media > TBC. Government and scientific-agency figures are used as primary; media reports are used only where official figures are not yet published and are labelled as such. Items still being verified are marked TBC. Preliminary figures are never replaced by larger unverified numbers.",
