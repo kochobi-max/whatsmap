@@ -1191,6 +1191,12 @@
       "source": "UNGRD via official social media, 4 Sep",
       "en": "UNGRD director David Santiago Tamayo Roldan and deputy director for disaster management Hernan Dario Diaz Diaz met with Nils Grede, WFP Colombia's representative and country director, to coordinate food-assistance actions for families affected by the 10 August earthquake.",
       "ja": "UNGRD長官デビッド・サンティアゴ・タマヨ・ロルダン氏と災害対応担当副長官エルナン・ダリオ・ディアス・ディアス氏は、WFPコロンビア代表兼カントリーディレクターのニルス・グレデ氏と会談し、8月10日の地震で被災した世帯への食料支援策を協議した。"
+    },
+    {
+      "tier": "official",
+      "source": "ICRC, originally published 18 Sep, posted 22 Sep",
+      "en": "One month on, the ICRC reports its response (with the Colombian Red Cross) in rural Chocó and Valle del Cauca, focused on communities also affected by armed conflict: more than 2,000 families supported for safe water storage/access and construction materials; materials to repair educational facilities in 10 communities serving 755 students; 15 health clinics in Chocó received rapid-response kits; 7,495 people (1,759 families) received food assistance; 7,037 hygiene items and 1,127 shelter kits distributed; cash assistance reached 400 people for food, 40 for livelihoods and 168 for temporary housing costs. The response is expected to continue 6-9 months.",
+      "ja": "発災1か月時点で、ICRCはコロンビア赤十字社と共同でチョコ・バジェデルカウカ両県の農村部（武力紛争の影響も受けている地域）での対応状況を報告した：安全な水の貯蔵・確保および建設資材の支援を受けた世帯2,000超、10コミュニティの教育施設補修用資材（在籍児童755人）、チョコ県の医療施設15か所への緊急対応キット配布、食料支援を受けた7,495人（1,759世帯）、衛生用品7,037点・シェルターキット1,127点の配布、現金給付は食料400人・生計再建40人・仮住まい費用168人。対応は今後6〜9か月継続する見込み。"
     }
   ],
   "satellite": [
@@ -2306,6 +2312,36 @@
     },
     {
       "url": "https://reliefweb.int/report/colombia/unhcr-colombia-2026-funding-update-31-august-2026"
+    },
+    {
+      "label_en": "ICRC: Earthquake in Colombia - rehabilitation of essential community infrastructure (18 Sep 2026)",
+      "label_ja": "ICRC: コロンビア地震 — 地域インフラの復旧支援（2026年9月18日）",
+      "url": "https://reliefweb.int/report/colombia/earthquake-colombia-icrc-supports-rehabilitation-essential-community-infrastructure",
+      "tier": "official"
+    },
+    {
+      "label_en": "IOM Colombia: territorial severity and vulnerability assessment after the earthquake (27 Aug 2026, Spanish)",
+      "label_ja": "IOM コロンビア: 地震後の地域別深刻度・脆弱性評価（2026年8月27日、スペイン語）",
+      "url": "https://reliefweb.int/report/colombia/oim-colombia-severidad-y-vulnerabilidad-territorial-tras-el-terremoto-27-agosto-2026",
+      "tier": "official"
+    },
+    {
+      "label_en": "IOM Colombia Earthquake Response - Situation Report #9, 10 Sep 2026 (Spanish edition)",
+      "label_ja": "IOM コロンビア地震対応 — 状況報告第9号、2026年9月10日（スペイン語版）",
+      "url": "https://reliefweb.int/report/colombia/oim-respuesta-al-terremoto-en-colombia-reporte-de-situacion-9-10-septiembre-2026",
+      "tier": "official"
+    },
+    {
+      "label_en": "PAHO/WHO: One month after the Colombia earthquake - response and stabilization (as of 4 Sep 2026)",
+      "label_ja": "PAHO/WHO: コロンビア地震から1か月 — 対応と安定化（2026年9月4日時点）",
+      "url": "https://reliefweb.int/report/colombia/one-month-after-colombia-earthquake-pahowho-continues-support-response-and-stabilization",
+      "tier": "official"
+    },
+    {
+      "label_en": "Colombia Population Movement - Imminent DREF Final Report (MDRCO034) - unrelated migration programme, not this earthquake",
+      "label_ja": "コロンビア人口移動対応 DREF最終報告（MDRCO034）— 本地震とは無関係の移住支援プログラム",
+      "url": "https://reliefweb.int/report/colombia/colombia-population-movement-imminent-dref-final-report-mdrco034",
+      "tier": "media"
     }
   ],
   "source_policy_en": "Source hierarchy: official > media > TBC. Government and scientific-agency figures are used as primary; media reports are used only where official figures are not yet published and are labelled as such. Items still being verified are marked TBC. Preliminary figures are never replaced by larger unverified numbers.",
