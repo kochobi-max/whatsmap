@@ -641,3 +641,14 @@ Sylvia 氏は Expo に寸法を照会中（9/18 08:02）。
 
 ### 下書きの重複
 Sylvia 宛の会場スレッドに3本の下書きが並存: 9/18 版（機材リスト）、9/24 08:03 版（9/22 回答への短い返答）、**9/24 08:07 版（両者の統合版）**。統合版を送り、他2本は削除する。
+
+### コンセプトノート rev 1.1（9/24 作成、池田の rev 1.0 ベース）
+
+`ACDR2026_TS_Concept_Note_EN_0924_rev1.1_internal.docx`（氏名入り所内版）と `..._public.docx`（組織名のみの対外版）。rev 1.0 の本文と進行表は変えず、次を追記。
+
+1. 冒頭に Language（English, no interpretation）、Format（on site + Zoom）、Version の3行
+2. 第1項 LLDC の例を「Bhutan, Nepal and Central Asia countries」に戻す
+3. SIDS 段落の後に大規模群島国（インドネシア・フィリピン）の一文
+4. 第4項: Moderator = LTC Chen Yong Kai（予備 LTC Adrian はブリーフィングのみ）、Co-chair = Mizan。**対外版は SCDF／ADRC の組織名のみ、登壇者も組織名のみ**（9/18 週次の方針）。ウズベキスタンは「Uzbekistan (ADRC member country)」とし省庁名は書かない（登壇者未定のため）。
+
+池田宛の下書き（9/24）に招待状 v2 と併せて添付する形で送付予定。Mizan の肩書は未記入。
