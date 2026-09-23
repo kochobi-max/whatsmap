@@ -23,8 +23,8 @@
     "edition_ja": "第24報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
-    "stamp": "2026-09-22 07:44 JST",
-    "update_date": "21/09/2026",
+    "stamp": "2026-09-23 07:50 JST",
+    "update_date": "23/09/2026",
     "timeline_range_en": "25 August - 21 September 2026 (Nepal Standard Time, UTC+5:45)",
     "timeline_range_ja": "2026年8月25日〜9月21日（ネパール標準時 UTC+5:45）",
     "tz_note_en": "All times are Nepal Standard Time (NPT, UTC+5:45) unless stated.",
@@ -896,6 +896,14 @@
       "en": "Canada has deployed officials including an RCMP liaison officer to Kathmandu and, on 10 September, sent two RCMP Disaster Victim Identification (DVI) experts to work under Interpol DVI standards; the RCMP is coordinating DNA sample collection from families of missing Canadians via Interpol Ottawa. Canada is providing CAD 5 million in humanitarian assistance funding and more than 18,000 emergency relief items from its stockpiles, managed by the Canadian Red Cross. Global Affairs Canada states it is aware of 29 Canadians and permanent residents in Nepal and the Tibet Autonomous Region whose whereabouts and well-being have not yet been confirmed.",
       "ja": "カナダはRCMP連絡官を含む当局者をカトマンズへ派遣済みで、9月10日にはRCMPの遺体身元確認（DVI）専門家2人を追加派遣し、インターポールのDVI基準の下で活動させている。RCMPはインターポール・オタワを通じ、行方不明のカナダ人家族からのDNA検体採取を調整。人道支援として500万カナダドルを拠出し、カナダ赤十字社が管理する緊急備蓄から救援物資18,000点超を提供している。カナダ外務省は、所在・安否が未確認のカナダ人・永住者がネパールおよびチベット自治区に29人いるとしている。",
       "url": "https://reliefweb.int/report/nepal/canada-deploys-victim-identification-experts-support-response-severe-flooding-along-nepal-china-border"
+    },
+    {
+      "org_en": "Japan",
+      "org_ja": "日本",
+      "tier": "official",
+      "en": "The Government of Japan contributed an emergency grant of USD 1 million to the World Food Programme (WFP) to support emergency food assistance for flood-affected communities in Rasuwa, Nuwakot and Dhading, and to continue WFP logistics support to the government-led response (announced 23 Sep). WFP states that, with support from donors including Japan, it has already provided emergency ready-to-eat rations followed by a two-week in-kind supply (fortified rice, lentils, vegetable oil, iodized salt) to more than 15,000 people, and is supporting government logistics via the Kathmandu Humanitarian Staging Area and a newly established Nuwakot Common Humanitarian Office and storage facility in Bidur. This is separate from Japan's earlier JDR expert-team and DNA-equipment support recorded above.",
+      "ja": "日本政府は、ラスワ・ヌワコット・ダディンの洪水被災者への緊急食料支援と、政府主導の対応へのWFPの物流支援継続を目的として、世界食糧計画（WFP）へ緊急無償資金100万米ドルを拠出した（9月23日発表）。WFPによれば、日本を含む donor の支援により、即席の緊急食料に続き、2週間分の現物支援（強化米、レンズ豆、食用油、ヨウ素添加塩）を15,000人超に提供済みで、カトマンズ人道物資中継拠点および新設のヌワコット人道共同事務所・ビドゥール保管施設を通じ政府の物流を支援している。これは上記の日本のJDR専門家チーム派遣・DNA鑑定機材供与とは別の支援である。",
+      "url": "https://reliefweb.int/report/nepal/japan-contributes-usd-1-million-support-wfps-emergency-flood-response-nepal-world-food-programme"
     }
   ],
   "satellite": [
@@ -1686,6 +1694,12 @@
       "label_ja": "ネパール — 危険物の航空輸送に関する指針、2026年9月（事務的内容、対応実績データではない）",
       "url": "https://reliefweb.int/report/nepal/nepal-guidance-air-transportation-dangerous-goods-september-2026",
       "tier": "media"
+    },
+    {
+      "label_en": "WFP: Japan contributes USD 1 million to support WFP emergency flood response in Nepal (23 Sep 2026)",
+      "label_ja": "WFP: 日本、WFPのネパール洪水緊急対応支援へ100万米ドルを拠出（2026年9月23日）",
+      "url": "https://reliefweb.int/report/nepal/japan-contributes-usd-1-million-support-wfps-emergency-flood-response-nepal-world-food-programme",
+      "tier": "official"
     }
   ],
   "images": {
