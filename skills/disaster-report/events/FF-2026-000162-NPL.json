@@ -83,14 +83,14 @@
     "event_date": "2026-08-26"
   },
   "_prev": {
-    "_comment": "2026-09-18 09:11 JST 送信済み（第20報）。NDRRMA状況報告第16号（9月17日19:00 NPT）。行方不明の5,179→6,145（+966）はNDRRMAが理由を説明しておらず、集計上の整理として扱い、メール本文にその旨を明記して送信した。翌日の数値急変ゲートの基準。",
-    "deaths": 1410,
+    "_comment": "2026-09-24 08:56 JST 送信済み（第24報）。NDRRMA状況報告第31号（ネパール語版、9月21日19:00 NPT）。死者は第30号から横ばい、行方不明は非monotonicフィールドのため減少（-41）でもゲートに掛からずOK判定で送信。",
+    "deaths": 1451,
     "injured": 7474,
-    "missing": 6145,
+    "missing": 5745,
     "houses_destroyed": null,
     "evacuees": null,
     "tier": "official",
-    "as_of": "2026-09-17 19:00 NPT (NDRRMA Situation Report #16, direct NDRRMA PDF)"
+    "as_of": "2026-09-21 19:00 NPT (NDRRMA Situation Report #31, Nepali original PDF; no English edition has been published since #18); deaths unchanged at 1,451 from Situation Report #30; missing down 41 from #30 (5,786 to 5,745), continuing the unexplained reconciliation pattern (the chart footnote now cites a 112 identified-bodies deduction for Rasuwa, up from 110 in #30); rescued unchanged at 13,784."
   },
   "event": {
     "origin_time": "26 August 2026, approx. 09:00 NPT (UTC+5:45)",
