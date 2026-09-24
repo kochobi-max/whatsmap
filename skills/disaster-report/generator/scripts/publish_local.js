@@ -439,14 +439,32 @@ function registerTask() {
 // 相手のPCのタスクは 08:10 のまま動き続ける。**登録済みの側も直す。**
 //
 // `schtasks /change /st` は同じ時刻を入れても害がないので、毎回当てる。
+// 開始時刻の表記は環境で揺れる（"8:10:00 AM" / "08:10:00" / 日本語ロケール）。
+// **読めたときだけ**比較に使い、読めなければ黙って直しに行く。
+// `schtasks /change` は同じ値を入れても害がないので、迷ったら当てる。
+function startTimeHHMM(text) {
+  const m = /^(?:Start Time|開始時刻)\s*[:：]\s*(.+)$/mi.exec(text || "");
+  if (!m) return null;
+  const raw = m[1].trim();
+  const t = /(\d{1,2}):(\d{2})/.exec(raw);
+  if (!t) return null;
+  let h = parseInt(t[1], 10);
+  const min = t[2];
+  if (/PM|午後/i.test(raw) && h < 12) h += 12;
+  if (/AM|午前/i.test(raw) && h === 12) h = 0;
+  return String(h).padStart(2, "0") + ":" + min;
+}
+
 function retimeTask() {
   let before = "";
   try {
     const v = execFileSync("schtasks", ["/query", "/tn", TASKNAME, "/v", "/fo", "LIST"],
       { encoding: "utf8", stdio: "pipe" });
-    const m = /^(?:Start Time|開始時刻):\s*(.+)$/mi.exec(v);
-    if (m) before = m[1].trim();
+    before = startTimeHHMM(v) || "";
   } catch (_) { /* 読めなくても直しに行く */ }
+
+  // 既に正しいなら触らない。毎朝の実行から呼ばれるので、黙っていられるようにする。
+  if (before === TASK_TIME) { say("   実行時刻は 毎日 " + TASK_TIME + " です"); return; }
 
   try {
     execFileSync("schtasks", ["/change", "/tn", TASKNAME, "/st", TASK_TIME],
@@ -517,7 +535,23 @@ function taskExists(args) {
 let rc = 0;
 try {
   rc = CHECK ? check() : main();
-  if (SETUP && !CHECK) registerTask();
+  if (SETUP && !CHECK) {
+    registerTask();
+  } else if (!CHECK && process.platform === "win32" && taskExists()) {
+    // **毎朝の実行からも時刻を直す。**
+    //
+    // 2026-09-18 に実行時刻を 08:10 → 08:30 へ移したが、2026-09-24 になっても
+    // PC は 08:10 のまま走っていた。定期タスクが呼ぶのは daily_publish.bat で、
+    // こちらは `--setup` を付けない。つまり `registerTask()` に入らず、
+    // **時刻を直す経路が定期実行側に無かった。**
+    // 人が ADRC_setup_and_publish.bat を踏まない限り、いつまでも移らない。
+    //
+    // 定数を書き換えて「次から移ります」と言うだけでは移らない。
+    // 毎朝ここを通るようにして、ずれていれば直す。合っていれば1行出して終わる。
+    say("");
+    say("STEP: daily task time");
+    retimeTask();
+  }
 } catch (err) {
   say("STATUS: FAIL unexpected");
   say(String(err && err.stack || err));
