@@ -1857,6 +1857,19 @@
       "image_full": true
     }
   ],
+  "active_warnings": [
+    {
+      "id": "npl-lhende-lake",
+      "active": true,
+      "tier": "official",
+      "src": "NDRRMA（WFP 状況報告 8月29日経由）／UNOSAT 製品4260",
+      "as_of": "2026-08-29（NDRRMAの警告。UNOSAT製品4260は8月28日の画像）",
+      "url": "https://unosat.org/products/4260",
+      "en": "The hazard is not over. An estimated 0.11 sq km lake has formed upstream behind the blockage of the Lhende Khola, and NDRRMA warns of a continuing flood risk. The same sequence - blockage, impoundment, sudden breach - produced the 26 August flood, and downstream communities and responders are being told to stay on high alert.",
+      "ja": "危険はまだ終わっていない。レンデ川の閉塞により上流に推定0.11km2の湖が形成され、NDRRMAは洪水リスクの継続を警告している。8月26日の出水を起こしたのと同じ経過（閉塞→湛水→急激な決壊）であり、下流の住民と対応要員には高度な警戒の維持が求められている。",
+      "_comment": "2026-09-24 に第24報の本文冒頭で送信済み。以後は内容（as_of / 本文）が変わったときだけ再送される。湖が拡大した・決壊した・解除された場合は as_of と本文を更新すること。解除されたら active を false にする。"
+    }
+  ],
   "observations": [
     {
       "tier": "official",
@@ -1888,5 +1901,8 @@
       "en": "The requester gave a precise source location. On 27 August the Department of Hydrology and Meteorology reported the ice-avalanche coordinates as 28.295727N, 85.507802E, drawn from Planet imagery, and noted that the original area of interest had been set before the origin was known. ADRC revised the wide-area AOI the same day.",
       "ja": "要請元が発生源の位置を特定した。8月27日、ネパール水文気象局はPlanetの画像から氷雪崩の座標を北緯28.295727度・東経85.507802度と報告し、当初の観測対象範囲は発生源が分からない段階で設定したものだと説明した。ADRCは同日、広域のAOIを見直している。"
     }
-  ]
+  ],
+  "_warned": {
+    "npl-lhende-lake": "f15f4ced46d5ab83"
+  }
 }

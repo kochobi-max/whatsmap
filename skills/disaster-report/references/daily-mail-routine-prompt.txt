@@ -44,6 +44,60 @@ PPTX は pptxgenjs が決定的に作るので何度作っても同じだが、*
 `STATUS: FAIL size` で止まり、公開記録も書かれない。
 **記録があること自体が、照合が通った証拠である。**
 
+## 1-2. 送れない日にやること（省略不可・2026-09-24 追加）
+
+**§1 で「送らない」と決めたイベントがあっても、ここで終わりにしない。**
+
+2026-09-19〜09-23 の5日間、PCが動かず（休日）、メールが1通も出なかった。
+その間に溜まっていたネパールの更新には、**レンデ川の閉塞で上流に湖が形成され、
+NDRRMAが洪水リスクの継続を警告している**という内容が含まれていた。
+09-24 にようやく出た。**人命に関わる警告がPCの電源に依存していた。**
+
+荒木田さんの判断で、次の2つを切り離した。
+
+### (a) 進行中の警告は、OneDrive保存を待たずに本文だけ先に送る
+
+**§1 で送らないと決めたイベントについてだけ**実行する（送れるイベントは
+通常メールの冒頭に警告が入るので、こちらは不要）。
+
+```bash
+node skills/disaster-report/generator/scripts/warning_gate.js <GLIDE>
+```
+
+- `STATUS: NO-WARNING` / `WARNING-ALREADY-SENT` → 何もしない
+- `STATUS: WARNING-SEND` → **本文HTMLと件名がそのまま出ているので、書き換えずに送る**
+
+宛先 `kenkyubu@adrc.asia`, `td-date@adrc.asia`、差出人 `ma-arakida@adrc.asia`。
+
+> **本文を自分で書き直さないこと。** この経路のメールは
+> **「OneDriveに保存しました」と書いてはいけない。** 保存されていない。
+> そこを間違えると、通常メールで積み上げた信頼がまとめて崩れる。
+> だからスクリプトが本文を組み立てている。
+
+送信できたら**必ず**記録する。しないと翌朝も同じ警告が出る。
+
+```bash
+node skills/disaster-report/generator/scripts/warning_gate.js <GLIDE> --record
+```
+
+`✗ 項目が足りない` と出たら、その警告は送れない。**黙って飛ばさず、報告に書く。**
+
+### (b) PCが2日以上動いていなければ、荒木田さんに知らせる
+
+```bash
+node skills/disaster-report/generator/scripts/check_pc_health.js
+```
+
+- `STATUS: PC-OK` / `PC-ALREADY-NOTIFIED` / `PC-UNKNOWN` → 何もしない
+- `STATUS: PC-NOTIFY` → **本文HTMLがそのまま出ているので、書き換えずに送る**
+
+**宛先は `ma-arakida@adrc.asia` のみ。研究部には送らない。**
+これは荒木田さん個人への連絡であって、災害情報ではない。
+
+送信できたら `node ... check_pc_health.js --record`。
+2日目に1回、そのあとは空きが3日増えるごとに知らせる（2日目・5日目・8日目…）。
+**毎朝は出さない。** 休暇と分かって止めている人に同じ通知を繰り返さない。
+
 ## 2. 数値急変ゲート
 
 ```bash
@@ -85,6 +139,11 @@ node skills/disaster-report/generator/scripts/resolve_event.js --event <GLIDE>
 
 送信できたイベントだけ、`events/<GLIDE>.json` の `_prev` を**今送った版の headline** に更新する。
 全イベント分をまとめてコミットし、`claude/workflow-automation-review-shyt35` へプッシュする。
+
+**`skills/disaster-report/_state/` も必ずコミットする。** ここに PC 稼働の通知履歴が入る。
+定期タスクは毎回まっさらなセッションで clone して始まるので、
+**押し忘れると翌朝また同じ通知が出る。**（警告の送信履歴は `events/<GLIDE>.json` の
+`_warned` に入るので、イベントJSONと一緒に載る）
 これで翌日から数値急変ゲートが効く。
 
 プッシュが `fetch first` で弾かれたら、`git pull --rebase origin claude/workflow-automation-review-shyt35` してから押し直す。
