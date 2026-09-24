@@ -697,6 +697,13 @@
       "src": "Sikka Regency acting secretary (Kompas)",
       "en": "Responding to the Home Affairs Minister's criticism, Sikka Regency's acting secretary said not all of its Rp20 billion presidential aid needed to be spent during the emergency-response phase; part is earmarked for the recovery-transition phase (house repairs), with about Rp17 billion remaining unspent as of 21 Sep.",
       "ja": "内務大臣の指摘を受け、シッカ県副地方書記官は、ルピア200億の大統領支援金は緊急対応期間中に全額執行する必要はなく、一部は復旧移行期（住宅修繕）向けに留保しているとし、9月21日時点の未執行残額は約ルピア170億と説明。"
+    },
+    {
+      "time": "21 Sep",
+      "tier": "official",
+      "src": "BNPB (via ANTARA, 23 Sep)",
+      "en": "BNPB confirmed that seven temporary-housing (huntara) units it built in Desa Gurung Liwut, Lamba Leda, Manggarai Timur, withstood the day's felt M5.1 aftershock (initially reported M5.3; see Aftershocks) without damage; the units had been formally handed over to beneficiaries the same day. BNPB separately addressed a video circulating on social media showing a lightweight steel frame collapsing, clarifying it depicted a different site still under construction (frame not yet fully fixed, foundation not yet cast), not a completed, occupied unit.",
+      "ja": "BNPBは、東マンガライ県ランバレダ郡グルンリウット村に建設した仮設住宅（フンタラ）7棟が、同日発生した有感M5.1の余震（速報M5.3。上記「余震」欄参照）でも損傷なく建っていることを確認したと発表した。同7棟は同日中に受益者への引き渡しも完了していた。BNPBはあわせて、軽量鉄骨が倒れる様子を映したSNS上の拡散動画について、これは別の施工中現場（骨組み未固定・基礎未打設の段階）を撮影したものであり、完成・入居済みの住宅ではないと説明した。"
     }
   ],
   "intensity": {},
@@ -1202,6 +1209,20 @@
     },
     {
       "url": "https://reliefweb.int/report/indonesia/indonesian-humanitarian-coordination-platform-situation-report-no-8-earthquake-and-tsunami-flores-and-surrounding-areas-september-1-2026"
+    },
+    {
+      "label_en": "ANTARA: BNPB confirms temporary housing in Manggarai Timur is sturdy and earthquake-resistant (23 Sep 2026)",
+      "label_ja": "ANTARA「BNPB、東マンガライ県の仮設住宅は堅牢で耐震性ありと表明」（2026年9月23日）",
+      "url": "https://www.antaranews.com/berita/5754315/bnpb-tegaskan-huntara-di-manggarai-timur-kokoh-dan-tahan-gempa",
+      "tier": "official",
+      "_note": "BNPB発表。ラムバレダの仮設住宅7棟が9月21日の有感余震（M5.1/速報M5.3、本報アフターショック欄に既載）でも損傷なしと確認。別途拡散した「倒壊」動画は施工途中（未固定の軽量鉄骨・基礎未打設）の別現場と説明。タイムラインに反映済み。確認済み。"
+    },
+    {
+      "label_en": "ANTARA: House of Representatives Commission X urges accelerated recovery of schools affected by the NTT earthquake (19 Sep 2026)",
+      "label_ja": "ANTARA「国会第10委員会、NTT地震で被災した学校の復旧加速を要請」（2026年9月19日）",
+      "url": "https://www.antaranews.com/berita/5749213/komisi-x-dpr-desak-percepatan-pemulihan-sekolah-terdampak-gempa-ntt",
+      "tier": "official",
+      "_note": "国会議員による復旧加速の要請。新規の被害集計値なし。確認済み。"
     }
   ],
   "attribution_en": "Figures reported by BNPB and relayed by IFRC/PMI and humanitarian partners; source and cut-off shown per row. All provisional.",

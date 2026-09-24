@@ -621,6 +621,13 @@
       "src": "IFRC (Operation Update #1, MDRCO036)",
       "en": "IFRC published Earthquake Operation Update #1 (MDRCO036). It restates search-and-rescue as concluded (356 people rescued alive, 259 bodies recovered, over 288 hours by 54 groups/1,849 rescuers - matching the 10 Sep UNGRD figures already recorded above) and, citing a UNDP (2026) estimate, gives the first economic-damage figure recorded in this report: COP 42.1 trillion (USD 13.2 billion) in direct physical damage, about 2.3% of GDP (see the new Economic damage entry above). It also cites the Ministry of Housing, City and Territory on water/sanitation service disruption in 137 municipalities, 93 not yet restored (see the Lifelines entry above), and states 286 Colombian Red Cross Society volunteers were themselves directly affected by the earthquake. For national people-affected and family counts, the update's cited \"UNGRD report of 10 September\" figures (778,281 people / 364,672 families) match UNGRD's 19 September San Jose del Palmar municipality-only figures almost exactly rather than any previously published national total (see the People affected entry above); this is shown there as an unreconciled, separately dated figure rather than merged into the headline. The update does not revise UNGRD's own headline deaths/injured/missing/housing balances, which remain as last posted (7/15 Sep cuts).",
       "ja": "IFRCが「地震オペレーション・アップデート第1号」（MDRCO036）を公表した。捜索救助については終了済みとして再掲（288時間超・54隊・1,849人が生存者356人を救出、遺体259体を収容 — 上記9月10日のUNGRD数値と一致）。UNDP（2026年）の推計を引用し、本レポートで初めてとなる経済被害額（COP 42.1兆〈約132億米ドル〉、GDPの約2.3%相当）を示した（上記「経済被害（推計）」の項）。また住宅・都市・国土省の発表として、上水道・下水道・廃棄物管理サービスに支障が生じた市町村137、うち93市町村で未復旧としている（上記「ライフライン」の項）。さらに、コロンビア赤十字社のボランティア286人自身が地震の被害を受けたとしている。全国の被災者・世帯数については、同アップデートが「9月10日付UNGRD報告」として引用する数値（778,281人・364,672世帯）が、これまで公表されたどの全国集計とも一致せず、UNGRDが9月19日に発表したサンホセデルパルマル1市限定の数値（778,279人・364,670世帯）とほぼ一致することが判明した（上記「被災者」の項）。ここでは冒頭の集計に統合せず、日付付きの別掲値として示す。同アップデートはUNGRD自身の死者・負傷者・行方不明・住宅被害の集計（9月7日・15日締め）を改定するものではなく、これらは既報のまま変更ない。"
+    },
+    {
+      "time": "23 Sep",
+      "tier": "official",
+      "src": "OCHA/EHP Colombia (Flash Update 014, 18:30 cut)",
+      "en": "OCHA/EHP Colombia published Flash Update 014. It gives an approximate national toll of 487,000 people affected across 500 municipalities in 16 departments - consistent with (not a revision of) UNGRD's 15 Sep RUD balance of 486,917 people / 498 municipalities already shown in this report's headline. It records humanitarian response reach as 31 organisations having supported more than 137,000 people across 53 prioritised municipalities, and states the response plan is 52% short of the USD 619 million required through the end of 2026. It flags a potential severe El Nino event as a risk to further strain recovery needs. UNGRD's own deaths/injured/missing/housing balances are not restated and remain unchanged (7/15 Sep cuts).",
+      "ja": "OCHA／コロンビア人道チームがフラッシュアップデート第14号（18:30締め）を公表した。全国の概数として「16県500市町村で約487,000人が被災」とし、これは本報冒頭で示すUNGRD RUD 9月15日締め集計（486,917人・498市町村）とおおむね一致する概数であり、その改定ではない。人道対応の実績として、31団体が53優先市町村で137,000人超を支援したとし、対応計画は2026年末までに必要な6.19億米ドルに対し52%の資金不足があるとした。強いエルニーニョ現象の発生可能性が復旧ニーズをさらに圧迫するリスクとして指摘されている。UNGRD自身の死者・負傷者・行方不明・住宅被害の集計（9月7日・15日締め）は再掲されておらず、変更なし。"
     }
   ],
   "areas": [
@@ -2365,6 +2372,20 @@
       "label_ja": "IFRC コロンビア地震 — オペレーション・アップデート第1号（MDRCO036）、2026年9月22日",
       "url": "https://reliefweb.int/report/colombia/colombia-earthquake-operation-update-1-mdrco036",
       "tier": "official"
+    },
+    {
+      "label_en": "OCHA/EHP Colombia - Flash Update 014, Update on the Impact of the Earthquake (23 Sep 2026, 18:30 cut)",
+      "label_ja": "OCHA／コロンビア人道チーム フラッシュアップデート第14号（9月23日18:30締め）",
+      "url": "https://reliefweb.int/report/colombia/colombia-flash-update-014-update-impact-earthquake-colombia-september-23-2026",
+      "tier": "official",
+      "_note": "発災1か月超時点の人道状況更新。「16県500市町村で約487,000人が引き続き被災」「31団体が53優先市町村で137,000人超を支援」「人道対応の資金充足率48%（必要額6.19億米ドルに対し52%の不足）」。約487,000人・500市町村はUNGRD RUD 9月15日06:30締め（303,934世帯・486,917人、498市町村）とほぼ一致する概数であり、UNGRD自身の集計更新ではないため headline は据え置き。確認済み。"
+    },
+    {
+      "label_en": "OCHA/EHP Colombia - Flash Update 014 (Spanish edition), 23 Sep 2026",
+      "label_ja": "OCHA／コロンビア人道チーム フラッシュアップデート第14号（スペイン語版）、2026年9月23日",
+      "url": "https://reliefweb.int/report/colombia/colombia-flash-update-014-actualizacion-afectaciones-por-terremoto-en-colombia-23-de-septiembre-de-2026",
+      "tier": "official",
+      "_note": "上記英語版と同内容のスペイン語版。確認済み。"
     }
   ],
   "source_policy_en": "Source hierarchy: official > media > TBC. Government and scientific-agency figures are used as primary; media reports are used only where official figures are not yet published and are labelled as such. Items still being verified are marked TBC. Preliminary figures are never replaced by larger unverified numbers.",
