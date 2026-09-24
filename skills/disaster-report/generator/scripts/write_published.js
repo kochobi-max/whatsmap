@@ -24,7 +24,7 @@ module.exports = { writePublished };
 // 手順を持っていたため、**PDF が必ず不一致になり、メールが1通も出なくなった。**
 // PPTX は pptxgenjs が決定的に作るので一致するが、PDF は LibreOffice が変換のたびに
 // 違うバイト列を吐く（作成日時などが埋まる）。**PDF は再現ビルドで照合できない。**
-function writePublished(GLIDE, DEST, man) {
+function writePublished(GLIDE, DEST, man, task) {
 const SKILL = path.resolve(__dirname, "..", "..");
 const eventJson = path.join(SKILL, "events", GLIDE + ".json");
 const ev = JSON.parse(fs.readFileSync(eventJson, "utf8"));
@@ -64,6 +64,11 @@ const rec = {
   verified: man ? "manifest" : null,
   dist_built_at_jst: (man && man.BUILT_AT_JST) || null,
   dist_built_date_jst: (man && man.BUILT_DATE_JST) || null,
+  // 定期タスクの実行時刻。**クラウドから見えるようにするためだけに載せている。**
+  // 2026-09-24、時刻を 08:10 → 08:30 へ移したが、直ったかどうかが
+  // 相手のPCのログの中にしか無く、画面を見てもらう以外に確かめる術が無かった。
+  // ここに載っていれば、翌朝の記録を見るだけで分かる。
+  task: task || null,
 };
 
 const dir = path.join(SKILL, "_published");

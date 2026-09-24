@@ -136,5 +136,18 @@ if (r.verified === "manifest") {
   console.log("      ファイルは出ている。**作り直して比べないこと。PDFは必ず不一致になる。**");
 }
 
+// 定期タスクの実行時刻。**止めない。**ここは送信の可否とは関係がない。
+// ただし黙っていると、時刻がずれていることに誰も気づけない。
+// 2026-09-24、08:10 → 08:30 へ移したはずが6日間移っていなかったのに、
+// クラウド側からは見えなかった。見えるようにしておく。
+if (r.task && r.task.registered === false) {
+  console.log("   ! PC側の定期タスクが登録されていない（手動実行のみで回っている）");
+} else if (r.task && r.task.start_time && r.task.matches === false) {
+  console.log("   ! PC側の定期タスクの実行時刻が " + r.task.start_time
+    + "（想定 " + r.task.expected + "）。次の実行で直るが、直らなければ報告すること");
+} else if (r.task && r.task.matches === true) {
+  console.log("   PC側の定期タスク 毎日 " + r.task.start_time);
+}
+
 console.log("STATUS: SEND-OK");
 process.exit(0);

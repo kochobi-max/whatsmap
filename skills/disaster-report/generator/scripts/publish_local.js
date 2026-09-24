@@ -142,6 +142,25 @@ function main() {
     }
   }
 
+  // ---- 定期タスクの実行時刻 ----
+  //
+  // **ここで見て、ここで直す。**
+  //
+  // 2026-09-24、荒木田さんに「バッチを動かしたが画面を見ていない」と言われた。
+  // 時刻が直ったかどうかが、**相手のPCのログの中にしか無かった。**
+  // それを読んで伝えてもらうのは、このリポジトリで繰り返しやめると決めてきた形である。
+  // 公開記録に載せてクラウドから見えるようにする。画面を見てもらう必要をなくす。
+  //
+  // 処理の前に置くのは、記録に「直したあとの値」を書くため。
+  // `--setup` のときは最後に registerTask() も通るが、そちらは
+  // 「未登録なら作る」が仕事で、時刻はここで既に合っている。
+  if (process.platform === "win32" && taskExists()) {
+    say("");
+    say("STEP: daily task time");
+    retimeTask();
+  }
+  TASK_STATE = readTaskState();
+
   // ---- どのイベントを出すか ----
   const evDir = path.join(SKILL, "events");
   let glides;
@@ -300,7 +319,7 @@ function publishOne(glide, markers) {
   const { writePublished } = require("./write_published.js");
   let rec;
   try {
-    rec = writePublished(glide, dest, man);
+    rec = writePublished(glide, dest, man, TASK_STATE);
   } catch (err) {
     say("WARN: marker-not-written");
     say("   " + err.message);
@@ -455,6 +474,20 @@ function startTimeHHMM(text) {
   return String(h).padStart(2, "0") + ":" + min;
 }
 
+// 定期タスクのいまの状態。公開記録に載せてクラウドから見えるようにする。
+// **見えないものは直ったことにしない。**
+let TASK_STATE = null;
+function readTaskState() {
+  if (process.platform !== "win32") return null;
+  if (!taskExists()) return { registered: false, expected: TASK_TIME };
+  let start = null;
+  try {
+    start = startTimeHHMM(execFileSync("schtasks", ["/query", "/tn", TASKNAME, "/v", "/fo", "LIST"],
+      { encoding: "utf8", stdio: "pipe" }));
+  } catch (_) {}
+  return { registered: true, start_time: start, expected: TASK_TIME, matches: start === TASK_TIME };
+}
+
 function retimeTask() {
   let before = "";
   try {
@@ -537,20 +570,6 @@ try {
   rc = CHECK ? check() : main();
   if (SETUP && !CHECK) {
     registerTask();
-  } else if (!CHECK && process.platform === "win32" && taskExists()) {
-    // **毎朝の実行からも時刻を直す。**
-    //
-    // 2026-09-18 に実行時刻を 08:10 → 08:30 へ移したが、2026-09-24 になっても
-    // PC は 08:10 のまま走っていた。定期タスクが呼ぶのは daily_publish.bat で、
-    // こちらは `--setup` を付けない。つまり `registerTask()` に入らず、
-    // **時刻を直す経路が定期実行側に無かった。**
-    // 人が ADRC_setup_and_publish.bat を踏まない限り、いつまでも移らない。
-    //
-    // 定数を書き換えて「次から移ります」と言うだけでは移らない。
-    // 毎朝ここを通るようにして、ずれていれば直す。合っていれば1行出して終わる。
-    say("");
-    say("STEP: daily task time");
-    retimeTask();
   }
 } catch (err) {
   say("STATUS: FAIL unexpected");
