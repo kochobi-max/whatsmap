@@ -21,8 +21,8 @@
     "jma_name_en": "",
     "edition": "",
     "prepared_by": "Asian Disaster Reduction Center (ADRC)",
-    "stamp": "2026-09-22 07:44 JST",
-    "update_date": "21/09/2026",
+    "stamp": "2026-09-26 07:50 JST",
+    "update_date": "26/09/2026",
     "timeline_range_en": "15 August - 21 September 2026 (Western Indonesian Time, UTC+7)",
     "timeline_range_ja": "2026年8月15日〜9月21日（西部インドネシア時間 WIB、UTC+7）",
     "disseminate_en": "",
@@ -40,8 +40,8 @@
     },
     "subtitle_en": "M7.7, offshore Nagekeo Regency, Flores Island, East Nusa Tenggara - 15 August 2026",
     "subtitle_ja": "M7.7、東ヌサトゥンガラ州フローレス島 ナゲケオ県沖、2026年8月15日",
-    "edition_en": "8th report",
-    "edition_ja": "第8報",
+    "edition_en": "9th report",
+    "edition_ja": "第9報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
     "tz_note_en": "Times follow BNPB's own reporting in WIB (UTC+7) unless stated.",
@@ -704,6 +704,13 @@
       "src": "BNPB (via ANTARA, 23 Sep)",
       "en": "BNPB confirmed that seven temporary-housing (huntara) units it built in Desa Gurung Liwut, Lamba Leda, Manggarai Timur, withstood the day's felt M5.1 aftershock (initially reported M5.3; see Aftershocks) without damage; the units had been formally handed over to beneficiaries the same day. BNPB separately addressed a video circulating on social media showing a lightweight steel frame collapsing, clarifying it depicted a different site still under construction (frame not yet fully fixed, foundation not yet cast), not a completed, occupied unit.",
       "ja": "BNPBは、東マンガライ県ランバレダ郡グルンリウット村に建設した仮設住宅（フンタラ）7棟が、同日発生した有感M5.1の余震（速報M5.3。上記「余震」欄参照）でも損傷なく建っていることを確認したと発表した。同7棟は同日中に受益者への引き渡しも完了していた。BNPBはあわせて、軽量鉄骨が倒れる様子を映したSNS上の拡散動画について、これは別の施工中現場（骨組み未固定・基礎未打設の段階）を撮影したものであり、完成・入居済みの住宅ではないと説明した。"
+    },
+    {
+      "time": "25 Sep",
+      "tier": "official",
+      "src": "BPBD Manggarai Barat (Kompas)",
+      "en": "Manggarai Barat Regency BPBD reported 6,657 houses verified damaged by the earthquake within the regency (488 severely, 1,589 moderately, 4,580 lightly damaged), a regency-level verification tally distinct from BNPB's national figures. Owners of severely damaged houses are offered a choice of temporary-housing (huntara) construction or a housing-wait allowance (DTH) of Rp 600,000/month; 248 families have opted for the DTH, citing lack of land for huntara construction.",
+      "ja": "マンガライ・バラット県BPBDが、県内で6,657棟の住家被害を検証済みと発表（全壊488棟・中破1,589棟・半壊4,580棟）。BNPBの全国集計とは別の県レベルの検証値。全壊世帯には仮設住宅（フンタラ）建設か、住宅待機手当（DTH、月額60万ルピア）のいずれかを選択できるとし、248世帯がフンタラ用地を持たないことを理由にDTHを選んでいる。"
     }
   ],
   "intensity": {},
@@ -1223,6 +1230,13 @@
       "url": "https://www.antaranews.com/berita/5749213/komisi-x-dpr-desak-percepatan-pemulihan-sekolah-terdampak-gempa-ntt",
       "tier": "official",
       "_note": "国会議員による復旧加速の要請。新規の被害集計値なし。確認済み。"
+    },
+    {
+      "label_en": "Kompas: Manggarai Barat earthquake victims to receive Rp 600,000/month housing-wait allowance (25 Sep 2026)",
+      "label_ja": "Kompas「マンガライ・バラット県の地震被災者に月額60万ルピアの住宅待機手当」（2026年9月25日）",
+      "url": "https://regional.kompas.com/read/2026/09/25/165607778/korban-gempa-flores-di-manggarai-barat-dapat-dana-tunggu-hunian-rp-600000",
+      "tier": "official",
+      "_note": "県BPBD発表の県内住家被害検証値（6,657棟）とDTH運用。全国集計とは別指標である旨を本文に明記。確認済み。"
     }
   ],
   "attribution_en": "Figures reported by BNPB and relayed by IFRC/PMI and humanitarian partners; source and cut-off shown per row. All provisional.",

@@ -19,16 +19,16 @@
     "title_ja": "2026年 チョコ地震（コロンビア）",
     "subtitle_en": "M7.4, San José del Palmar, Chocó Department - 10 August 2026",
     "subtitle_ja": "M7.4、チョコ県サンホセ・デル・パルマル、2026年8月10日",
-    "edition_en": "24th report",
-    "edition_ja": "第24報",
+    "edition_en": "25th report",
+    "edition_ja": "第25報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
-    "as_of_en": "Figures as of the UNGRD Registro Unico de Damnificados (RUD) balance with a 06:30 COT cut-off on 15 Sep 2026 (posted 10:01 COT) for affected people and housing, the most recent balance available; no update to the deaths/injured/missing/rescued balance has been posted since the 7 Sep 06:30 cut (posted 07:43 COT); OCHA's Flash Update 013 (17 Sep, 14:00 COT cut) separately confirms the same 15 Sep affected/housing totals unchanged. 331 deaths (unchanged since 6 Sep), 4,505 injured (unchanged), 111 missing (unchanged) and 364 rescued alive (unchanged), across 498 municipalities in 16 departments (unchanged as of the 7 Sep cut); 303,934 families (486,917 people) registered as affected via the RUD, up from 296,738 families (466,709 people) at the 7 Sep cut. Housing: 206,931 homes damaged (up from 202,002) and 36,478 destroyed (up from 36,326), plus 6,005 buildings damaged and 743 collapsed (both unchanged as of the 7 Sep cut - not restated in the 15 Sep RUD balance). A separate UNGRD portal article dated 10 Sep, marking one month since the earthquake and reporting the conclusion of search-and-rescue (356 rescued, 259 bodies recovered) and the launch of the EDANPRI recovery-needs process, restates similar figures 'as of today' but with affected people, municipalities, homes damaged and health facilities each marginally lower than the 7 Sep balance, with no explanation given; consistent with this report's treatment of earlier small back-and-forth movements, it is shown in the timeline rather than used to revise this balance. UNGRD again describes the figures as preliminary and still being consolidated by territorial entities and operational agencies. All figures are preliminary; quote the cut-off with the number.",
-    "as_of_ja": "数値は被災者・住家について2026年9月15日06:30（コロンビア時間）締めのUNGRD「被災者統一登録（RUD）」集計現在（投稿は10:01）、これが入手できている最新の集計である。死者・負傷者・行方不明・生存救出の集計は9月7日06:30締め（投稿07:43）以来更新されていない。16県・498市町村（9月7日締め時点で横ばい）で死者331人（9月6日から横ばい）、負傷4,505人（横ばい）、行方不明111人（横ばい）、生存救出364人（横ばい）。RUDによる被災登録は303,934世帯・486,917人で、9月7日締めの296,738世帯・466,709人から増加。住家は損壊206,931棟（202,002棟から増加）・全壊36,478棟（36,326棟から増加）、ほか建物損壊6,005棟・倒壊743棟（いずれも9月7日締め時点で横ばい。9月15日のRUD集計では再掲されていない）。別途、発災1か月にあたる9月10日付のUNGRDサイト記事は、捜索救助の終了（救出356人・遺体収容259体）とEDANPRI（復旧のための被害評価・ニーズ分析）プロセスの始動を報じるとともに「本日時点」として近い数値を再掲しているが、被災者数・市町村数・住家損壊・医療施設のいずれも9月7日締め集計をわずかに下回っており、理由は示されていない。これまでの小幅な増減の扱いと同様、この記事の数値は集計の訂正としては用いず、タイムラインに別掲するにとどめる。UNGRDは引き続き、数値は速報値であり地方団体・実施機関による集計が継続中としている。すべて速報値。引用の際は集計時点を併記されたい。",
+    "as_of_en": "Figures as of UNGRD's 16 Sep 06:30 COT balance (posted via IOM Situation Report #11, 25 Sep 2026): 335 deaths, 105 missing, 364 rescued, 4,516 injured, across 500 municipalities in 16 departments (up from 498); 486,917 people affected and 243,409 homes damaged/destroyed (206,931 damaged, 36,478 destroyed) both unchanged from the 15 Sep RUD cut. A separate 19 September PMU consolidation by UNGRD reports 364,670 families / 778,279 people registered and a differently-classified housing tally (84,855 habitable, 104,037 uninhabitable, 19,143 destroyed, 119,752 damaged); this has not been reconciled with the RUD balance above and is shown separately, not combined.",
+    "as_of_ja": "UNGRDの9月16日06:30 COT集計（IOM状況報告第11号経由、2026年9月25日投稿）：死者335人、行方不明105人、救出364人、負傷4,516人、16県500市町村（498から増加）。被災者486,917人・住家被害243,409棟（損壊206,931棟・全壊36,478棟）はいずれも9月15日RUD締めから横ばい。別途、9月19日のPMU統合（UNGRD）ではRUD登録364,670世帯・778,279人、および区分の異なる住家集計（居住可能84,855棟・居住不能104,037棟・全壊19,143棟・損壊119,752棟）を報告。上記RUD残高とは未照合のため別掲とし、合算しない。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-09-23 07:50 JST",
-    "update_date": "23/09/2026",
+    "stamp": "2026-09-26 07:50 JST",
+    "update_date": "26/09/2026",
     "optional_slides": [
       "prior_event",
       "historical",
@@ -40,13 +40,13 @@
       "affected_municipalities"
     ],
     "headline": {
-      "deaths": 331,
-      "injured": 4505,
-      "missing": 111,
+      "deaths": 335,
+      "injured": 4516,
+      "missing": 105,
       "houses_destroyed": 36478,
       "evacuees": null,
       "tier": "official",
-      "as_of": "15 Sep 06:30 COT (UNGRD RUD, housing/affected); deaths/injured/missing 7 Sep 06:30 COT (UNGRD)"
+      "as_of": "16 Sep 2026 06:30 COT cut (UNGRD, via IOM Colombia Earthquake Response Situation Report #11, posted 25 Sep 2026); housing/affected/municipalities unchanged from the 15 Sep RUD cut"
     },
     "tz_note_en": "Times are local (COT, UTC-5); entries whose exact time is not published are placed at the end of that day.",
     "tz_note_ja": "時刻は現地時間（COT、UTC-5）。時刻が公表されていないものはその日の末尾に置いている。",
@@ -628,6 +628,13 @@
       "src": "OCHA/EHP Colombia (Flash Update 014, 18:30 cut)",
       "en": "OCHA/EHP Colombia published Flash Update 014. It gives an approximate national toll of 487,000 people affected across 500 municipalities in 16 departments - consistent with (not a revision of) UNGRD's 15 Sep RUD balance of 486,917 people / 498 municipalities already shown in this report's headline. It records humanitarian response reach as 31 organisations having supported more than 137,000 people across 53 prioritised municipalities, and states the response plan is 52% short of the USD 619 million required through the end of 2026. It flags a potential severe El Nino event as a risk to further strain recovery needs. UNGRD's own deaths/injured/missing/housing balances are not restated and remain unchanged (7/15 Sep cuts).",
       "ja": "OCHA／コロンビア人道チームがフラッシュアップデート第14号（18:30締め）を公表した。全国の概数として「16県500市町村で約487,000人が被災」とし、これは本報冒頭で示すUNGRD RUD 9月15日締め集計（486,917人・498市町村）とおおむね一致する概数であり、その改定ではない。人道対応の実績として、31団体が53優先市町村で137,000人超を支援したとし、対応計画は2026年末までに必要な6.19億米ドルに対し52%の資金不足があるとした。強いエルニーニョ現象の発生可能性が復旧ニーズをさらに圧迫するリスクとして指摘されている。UNGRD自身の死者・負傷者・行方不明・住宅被害の集計（9月7日・15日締め）は再掲されておらず、変更なし。"
+    },
+    {
+      "time": "16 Sep (posted 25 Sep)",
+      "tier": "official",
+      "src": "UNGRD, via IOM Colombia Earthquake Response Situation Report #11 (25 Sep 2026)",
+      "en": "IOM's Situation Report #11 cites UNGRD's 16 Sep 06:30 COT balance: 335 deaths, 105 missing, 364 rescued, 4,516 injured, 486,917 people affected (unchanged from the 15 Sep RUD cut), 206,931 homes damaged and 36,478 destroyed (also unchanged), across 500 municipalities in 16 departments (up from 498). Separately, at the 19 September National Unified Command Post (PMU), UNGRD consolidated territorial information from different sectors and reported 364,670 families / 778,279 people registered via the RUD, and a differently-classified housing tally (84,855 habitable, 104,037 uninhabitable, 19,143 destroyed, 119,752 damaged). This PMU consolidation has not been reconciled with the RUD balance above; both figures are shown with their dates and not combined.",
+      "ja": "IOM「状況報告第11号」がUNGRDの9月16日06:30 COT時点の集計を引用：死者335人、行方不明105人、救出364人、負傷4,516人、被災者486,917人（9月15日RUD締めから横ばい）、住家損壊206,931棟・全壊36,478棟（同じく横ばい）、16県500市町村（498市町村から増加）。別途、9月19日の全国統合指揮所（PMU）でUNGRDが各セクターの地域別情報を統合し、RUD登録364,670世帯・778,279人、および区分の異なる住家集計（居住可能84,855棟・居住不能104,037棟・全壊19,143棟・損壊119,752棟）を報告。このPMU統合値は上記RUD残高とまだ突き合わせられておらず、両者とも日付を付して併記し合算しない。"
     }
   ],
   "areas": [
@@ -706,8 +713,8 @@
     {
       "item_en": "Deaths",
       "item_ja": "死者",
-      "value_en": "331 (UNGRD, 06:30 cut on 7 Sep, posted 07:43), unchanged from the 6 Sep 06:30 cut. The series has run 273, 281, 285, 287, 288, 294, 289, 287, 329, 331, 331, 331, 331, 331 and now 331 again; UNGRD attributes earlier movement to verification and consolidation of figures reported from the territories.",
-      "value_ja": "331人（UNGRD、9月7日06:30締め、投稿は07:43）。9月6日06:30締めから横ばい。推移は273→281→285→287→288→294→289→287→329→331→331→331→331→331→331。UNGRDは以前の変動について、地方から報告された数値の検証・集計整理によるものとしている。",
+      "value_en": "335 (UNGRD (06:30 COT cut on 16 Sep 2026, per IOM Colombia Earthquake Response Situation Report #11, posted 25 Sep 2026)), unchanged from the 15 Sep report cycle (486,917 affected total unchanged - see People affected). The series has run 273, 281, 285, 287, 288, 294, 289, 287, 329, 331, 335.",
+      "value_ja": "335人（UNGRD（9月16日06:30 COT締め、IOM「コロンビア地震対応状況報告第11号」経由、2026年9月25日投稿））。推移: 273→281→285→287→288→294→289→287→329→331→335。",
       "source_en": "UNGRD, 7 Sep 07:43",
       "source_ja": "UNGRD（9月6日06:30）",
       "tier": "official",
@@ -716,8 +723,8 @@
     {
       "item_en": "Injured",
       "item_ja": "負傷者",
-      "value_en": "4,505 (UNGRD, 06:30 cut on 7 Sep), unchanged from the 6 Sep 06:30 cut.",
-      "value_ja": "4,505人（UNGRD、9月7日06:30締め）。9月6日06:30締めから横ばい。",
+      "value_en": "4,516 (UNGRD (06:30 COT cut on 16 Sep 2026, per IOM Colombia Earthquake Response Situation Report #11, posted 25 Sep 2026)), up from 4,505 at the 7 Sep 06:30 cut.",
+      "value_ja": "4,516人（UNGRD（9月16日06:30 COT締め、IOM「コロンビア地震対応状況報告第11号」経由、2026年9月25日投稿））。9月7日06:30締めの4,505人から増加。",
       "source_en": "UNGRD, 7 Sep 07:43",
       "source_ja": "UNGRD（9月6日06:30）",
       "tier": "official",
@@ -726,8 +733,8 @@
     {
       "item_en": "Missing (reported to the authorities)",
       "item_ja": "行方不明（当局への届出）",
-      "value_en": "111 (UNGRD, 06:30 cut on 7 Sep), unchanged from the 6 Sep 06:30 cut. The series has run 496, 377, 378, 202, 320, 143, 194, 151, 136, 136, 136, 122, 111 and now 111 again: reports are filed, resolved and de-duplicated at the same time, so this count moves in both directions.",
-      "value_ja": "111人（UNGRD、9月7日06:30締め）。9月6日06:30締めから横ばい。推移は496→377→378→202→320→143→194→151→136→136→136→122→111→111。届出・解消・重複整理が同時に進むため、この数値は増減する。",
+      "value_en": "105 (UNGRD (06:30 COT cut on 16 Sep 2026, per IOM Colombia Earthquake Response Situation Report #11, posted 25 Sep 2026)), down from 111 at the 7 Sep 06:30 cut. UNGRD gives no explanation for the change; treated as reconciliation (identification/rescue) rather than a data error, consistent with the missing count being a non-cumulative, currently-outstanding figure.",
+      "value_ja": "105人（UNGRD（9月16日06:30 COT締め、IOM「コロンビア地震対応状況報告第11号」経由、2026年9月25日投稿））。9月7日06:30締めの111人から減少。UNGRDは変化の説明を示していないが、行方不明者数は累積値ではなく現在値であるため、身元確認・救出による減少（集計の整理）として扱う。",
       "source_en": "UNGRD, 7 Sep 07:43",
       "source_ja": "UNGRD（9月6日06:30）",
       "tier": "official",
@@ -736,7 +743,7 @@
     {
       "item_en": "Rescued alive (national balance)",
       "item_ja": "生存救出（全国集計）",
-      "value_en": "364 (UNGRD, 06:30 cut on 7 Sep), unchanged from 6 Sep, plus 3,003 animals rescued and 3,277 affected (both unchanged from 6 Sep). This is the national balance figure carried alongside the casualty count; see the separate 16 Aug entry below for named rescue cases.",
+      "value_en": "364 (UNGRD (06:30 COT cut on 16 Sep 2026, per IOM Colombia Earthquake Response Situation Report #11, posted 25 Sep 2026)), unchanged from the 7 Sep 06:30 cut, plus 3,003 animals rescued and 3,277 affected (both unchanged from 6 Sep). This is the national balance figure carried alongside the casualty count; see the separate 16 Aug entry below for named rescue cases.",
       "value_ja": "364人（UNGRD、9月7日06:30締め）。9月6日から横ばい。動物救助3,003頭・被災3,277頭（いずれも9月6日から横ばい）。これは死傷者数と併記される全国集計値。個別の救助事例は下記8月16日の項を参照。",
       "source_en": "UNGRD, 7 Sep 07:43",
       "source_ja": "UNGRD（9月6日06:30）",
@@ -764,8 +771,8 @@
     {
       "item_en": "Municipalities affected",
       "item_ja": "被災市町村",
-      "value_en": "498 municipalities in 16 departments (UNGRD, 06:30 cut on 7 Sep), unchanged from the 6 Sep 06:30 cut.",
-      "value_ja": "16県・498市町村（UNGRD、9月7日06:30締め）。9月6日06:30締めから横ばい。",
+      "value_en": "500 municipalities in 16 departments (UNGRD (06:30 COT cut on 16 Sep 2026, per IOM Colombia Earthquake Response Situation Report #11, posted 25 Sep 2026)), up from 498 at the 7 Sep 06:30 cut.",
+      "value_ja": "16県500市町村（UNGRD（9月16日06:30 COT締め、IOM「コロンビア地震対応状況報告第11号」経由、2026年9月25日投稿））。9月7日06:30締めの498市町村から増加。",
       "source_en": "UNGRD, 7 Sep 07:43",
       "source_ja": "UNGRD（9月6日06:30）",
       "tier": "official",
@@ -775,8 +782,8 @@
       "item_en": "People affected",
       "item_ja": "被災者",
       "tier": "official",
-      "value_en": "303,934 families (486,917 people) registered as affected via UNGRD's Registro Unico de Damnificados (RUD) balance, 06:30 COT cut-off on 15 Sep 2026, up from 296,738 families (466,709 people) at the 7 Sep 06:30 cut. UNGRD describes the RUD as the tool through which municipalities, with support from SNGRD entities, register and upload information on affected people and reported damage; this report treats it as continuing the same affected-population series reported in earlier balances. OCHA's Flash Update 011 corroborates the people-affected figure as of 2 Sep 17:00 (\"more than 466,600\"). OCHA's earlier Flash Update 010 separately reported more than 406,000 people (193,011 families) as of 27 Aug 20:00, concentrated in Risaralda, Valle del Cauca, Choco, Quindio and Caldas; the two organisations' bases are not confirmed to be identical, so both are shown with their dates. Separately, WFP's Colombia Earthquake Emergency Situation Report (7 September) states \"authorities reported 759,311 people affected, 331 fatalities, 4,519 injured people and 136 missing people\" as of that date - a substantially larger affected-population figure than UNGRD's own balances, while the casualty figures WFP cites (4,519 injured, 136 missing) match UNGRD's earlier 1-2 Sep cuts rather than the later cuts. The report does not explain what the 759,311 figure counts or which UNGRD cut it draws on; it is shown here with its date rather than merged with UNGRD's own count. Separately, IFRC (10 Sep, one-month statement) cites more than 661,000 people formally registered as disaster-affected as of 4 September - a third, substantially larger figure that does not match UNGRD's RUD series, OCHA's Flash Update figures, or WFP's 759,311; the four are shown separately with their own dates rather than merged, as none has been confirmed to share the same registration basis. Separately again, IFRC's Earthquake Operation Update #1 (MDRCO036, posted 22 Sep) states that, per \"the UNGRD report of 10 September\", 778,281 people (364,672 families) were affected nationally. These two figures are almost identical to the San Jose del Palmar municipality-only RUD figures UNGRD posted on 19 September - 778,279 people / 364,670 families for that one epicentral municipality (see the Homes damaged or destroyed entry below) - which suggests Operation Update #1 may have applied a single-municipality RUD figure to the national total rather than reporting an independent national count; it is shown here with its date rather than merged, pending clarification.",
-      "value_ja": "UNGRDの「被災者統一登録（RUD）」集計、2026年9月15日06:30（コロンビア時間）締めで、303,934世帯・486,917人が被災登録された。9月7日06:30締めの296,738世帯・466,709人から増加。UNGRDはRUDについて、市町村がSNGRD関係機関の支援を受けて被災者・被害情報を登録・アップロードするツールと説明しており、本レポートはこれをこれまでの被災者集計の続きとして扱う。OCHAのFlash Update 011（9月2日17:00時点）も被災者数「466,600人超」として整合。OCHAの先のFlash Update 010は別途、406,000人超・193,011世帯（8月27日20:00時点、リサラルダ、バジェ・デル・カウカ、チョコ、キンディオ、カルダスに集中）としていた。両機関の集計基準が同一かは確認できていないため、いずれも日付を付して併記する。別途、WFPの「コロンビア地震緊急事態状況報告」（9月7日付）は、その時点で「当局は被災者759,311人、死者331人、負傷4,519人、行方不明136人と報告した」としている。これはUNGRD自身の集計を大きく上回る被災者数であり、一方でWFPが引用する死傷者数値（負傷4,519人・行方不明136人）はUNGRDのより早い9月1〜2日締めの数値と一致する。同報告は759,311人が何を数えた値か、どのUNGRD集計に基づくかを説明していない。ここではUNGRDの集計と統合せず、日付を付して別掲する。 別途、IFRC（9月10日、発災1か月の声明）は、9月4日時点で661,000人超が正式に被災者として登録されているとしている。これはUNGRDのRUD系列、OCHAのFlash Update系列、WFPの759,311人のいずれとも一致しない第4の、かつ大幅に大きい数値であり、いずれも登録基準が同一と確認できないため、統合せず各々の日付を付して別掲する。さらに別途、IFRCの「地震オペレーション・アップデート第1号」（MDRCO036、9月22日投稿）は、「9月10日付UNGRD報告」によるとして全国値778,281人（364,672世帯）が被災したとしている。この数値は、UNGRDが9月19日に発表した震央自治体サンホセデルパルマル1市限定のRUD数値（778,279人・364,670世帯。下記「住宅被害（合計）」の項を参照）とほぼ一致しており、同アップデートが1自治体限定の数値を全国値として扱った可能性を示唆する。ここではUNGRDの集計と統合せず、日付を付して別掲し、確認待ちとする。",
+      "value_en": "303,934 families (486,917 people) registered as affected via UNGRD's Registro Unico de Damnificados (RUD) balance, 06:30 COT cut-off on 15 Sep 2026, up from 296,738 families (466,709 people) at the 7 Sep 06:30 cut. UNGRD describes the RUD as the tool through which municipalities, with support from SNGRD entities, register and upload information on affected people and reported damage; this report treats it as continuing the same affected-population series reported in earlier balances. OCHA's Flash Update 011 corroborates the people-affected figure as of 2 Sep 17:00 (\"more than 466,600\"). OCHA's earlier Flash Update 010 separately reported more than 406,000 people (193,011 families) as of 27 Aug 20:00, concentrated in Risaralda, Valle del Cauca, Choco, Quindio and Caldas; the two organisations' bases are not confirmed to be identical, so both are shown with their dates. Separately, WFP's Colombia Earthquake Emergency Situation Report (7 September) states \"authorities reported 759,311 people affected, 331 fatalities, 4,519 injured people and 136 missing people\" as of that date - a substantially larger affected-population figure than UNGRD's own balances, while the casualty figures WFP cites (4,519 injured, 136 missing) match UNGRD's earlier 1-2 Sep cuts rather than the later cuts. The report does not explain what the 759,311 figure counts or which UNGRD cut it draws on; it is shown here with its date rather than merged with UNGRD's own count. Separately, IFRC (10 Sep, one-month statement) cites more than 661,000 people formally registered as disaster-affected as of 4 September - a third, substantially larger figure that does not match UNGRD's RUD series, OCHA's Flash Update figures, or WFP's 759,311; the four are shown separately with their own dates rather than merged, as none has been confirmed to share the same registration basis. Separately again, IFRC's Earthquake Operation Update #1 (MDRCO036, posted 22 Sep) states that, per \"the UNGRD report of 10 September\", 778,281 people (364,672 families) were affected nationally. These two figures are almost identical to the San Jose del Palmar municipality-only RUD figures UNGRD posted on 19 September - 778,279 people / 364,670 families for that one epicentral municipality (see the Homes damaged or destroyed entry below) - which suggests Operation Update #1 may have applied a single-municipality RUD figure to the national total rather than reporting an independent national count; it is shown here with its date rather than merged, pending clarification. A separate, larger tally was reported from the 19 September National Unified Command Post (PMU), where UNGRD consolidated territorial information from different sectors: 364,670 families and 778,279 people registered as of 19 Sep 2026. This PMU consolidation figure has not been reconciled with the RUD balance above and is not used to replace it; both are shown with their dates (UNGRD, PMU consolidation reported 19 Sep 2026, per IOM SitRep #11). The same PMU consolidation also reported a differently-classified housing tally: 84,855 habitable homes, 104,037 uninhabitable homes, 19,143 destroyed and 119,752 damaged (as of 19 Sep 2026). This uses different categories from the RUD \"damaged/destroyed\" balance in the Homes damaged or destroyed entry below and must not be combined with it.",
+      "value_ja": "UNGRDの「被災者統一登録（RUD）」集計、2026年9月15日06:30（コロンビア時間）締めで、303,934世帯・486,917人が被災登録された。9月7日06:30締めの296,738世帯・466,709人から増加。UNGRDはRUDについて、市町村がSNGRD関係機関の支援を受けて被災者・被害情報を登録・アップロードするツールと説明しており、本レポートはこれをこれまでの被災者集計の続きとして扱う。OCHAのFlash Update 011（9月2日17:00時点）も被災者数「466,600人超」として整合。OCHAの先のFlash Update 010は別途、406,000人超・193,011世帯（8月27日20:00時点、リサラルダ、バジェ・デル・カウカ、チョコ、キンディオ、カルダスに集中）としていた。両機関の集計基準が同一かは確認できていないため、いずれも日付を付して併記する。別途、WFPの「コロンビア地震緊急事態状況報告」（9月7日付）は、その時点で「当局は被災者759,311人、死者331人、負傷4,519人、行方不明136人と報告した」としている。これはUNGRD自身の集計を大きく上回る被災者数であり、一方でWFPが引用する死傷者数値（負傷4,519人・行方不明136人）はUNGRDのより早い9月1〜2日締めの数値と一致する。同報告は759,311人が何を数えた値か、どのUNGRD集計に基づくかを説明していない。ここではUNGRDの集計と統合せず、日付を付して別掲する。 別途、IFRC（9月10日、発災1か月の声明）は、9月4日時点で661,000人超が正式に被災者として登録されているとしている。これはUNGRDのRUD系列、OCHAのFlash Update系列、WFPの759,311人のいずれとも一致しない第4の、かつ大幅に大きい数値であり、いずれも登録基準が同一と確認できないため、統合せず各々の日付を付して別掲する。さらに別途、IFRCの「地震オペレーション・アップデート第1号」（MDRCO036、9月22日投稿）は、「9月10日付UNGRD報告」によるとして全国値778,281人（364,672世帯）が被災したとしている。この数値は、UNGRDが9月19日に発表した震央自治体サンホセデルパルマル1市限定のRUD数値（778,279人・364,670世帯。下記「住宅被害（合計）」の項を参照）とほぼ一致しており、同アップデートが1自治体限定の数値を全国値として扱った可能性を示唆する。ここではUNGRDの集計と統合せず、日付を付して別掲し、確認待ちとする。 別途、9月19日の全国統合指揮所（PMU）では、UNGRDが各セクターから提供された地域別情報を統合し、364,670世帯・778,279人が登録されたとしている（2026年9月19日時点）。このPMU統合値は上記RUD残高とは突き合わせが行われておらず、上記の値を置き換えるものではない。両者とも日付を付して併記する（UNGRD、PMU統合、2026年9月19日報告、IOM状況報告第11号経由）。 同じPMU統合では、区分の異なる住家集計（居住可能84,855棟・居住不能104,037棟・全壊19,143棟・損壊119,752棟、2026年9月19日時点）も示されている。これは下記「住家被害」のRUD「損壊／全壊」区分とは異なる分類であり、合算しないこと。",
       "source_en": "UNGRD (RUD), 15 Sep 06:30; OCHA Flash Update 011, 2 Sep 17:00; IFRC, 10 Sep 2026 (one-month statement); IFRC Operation Update #1 (MDRCO036), 22 Sep 2026",
       "source_ja": "UNGRD（RUD、9月15日06:30）／OCHA Flash Update 011（9月2日17:00時点）／IFRC（9月10日、発災1か月の声明）／IFRC オペレーション・アップデート第1号（MDRCO036、9月22日）",
       "url": "https://x.com/UNGRD/status/2099876327843086337"
@@ -784,8 +791,8 @@
     {
       "item_en": "Homes damaged or destroyed",
       "item_ja": "住宅被害（合計）",
-      "value_en": "243,409: 36,478 destroyed and 206,931 damaged (UNGRD RUD balance, 06:30 cut on 15 Sep 2026), against 238,328 (36,326 destroyed and 202,002 damaged) at the 7 Sep 06:30 cut. OCHA's Flash Update 011 (2 Sep 17:00) separately cites more than 36,000 homes destroyed, consistent with the UNGRD figure. In El Cairo, a coffee town in the mountains of Valle del Cauca, 80% of the houses were damaged (as of 16 Aug). CESVI's Colombia Emergency Response Situation Report #2 (11 Sep, covering 18 Aug-10 Sep) separately cites 101,416 \"uninhabitable homes\" as of 9 September - a different metric from UNGRD's destroyed/damaged breakdown above and not reconciled with it. Separately, on 19 September UNGRD posted a municipality-level RUD breakdown for San José del Palmar (Chocó), the epicentral municipality, as of the same date: 364,670 families and 778,279 people registered, 119,752 homes damaged (averiadas) and 19,143 homes destroyed (destruidas). These figures are for that one municipality only - they are smaller than, and not comparable to, the national RUD totals above (243,409 homes/36,478 destroyed as of 15 Sep); they are not summed with the national figures here.",
-      "value_ja": "243,409棟。全壊36,478棟、損壊206,931棟（UNGRD RUD集計、9月15日06:30締め）。9月7日06:30締めの238,328棟（全壊36,326棟・損壊202,002棟）から増加。OCHAのFlash Update 011（9月2日17:00時点）も別途「住家全壊36,000棟超」とし、UNGRDの値と整合する。バジェ・デル・カウカ県山間部のコーヒー産地エル・カイロでは住宅の80％が被害を受けた（8月16日時点）。 CESVIの「コロンビア緊急対応状況報告第2号」（9月11日、8月18日〜9月10日を対象）は別途、9月9日時点で「居住不能な住宅」101,416棟としている。これはUNGRDの全壊・損壊の内訳とは異なる指標であり、突合されていない。別途、9月19日にUNGRDは震央のあるサンホセ・デル・パルマル市（チョコ県）単独の、同日付RUD市町村別内訳を投稿した：登録家族364,670、登録者778,279人、住家一部損壊（averiadas）119,752棟、住家全壊（destruidas）19,143棟。この数値は同市単独のものであり、上記の全国RUD集計（9月15日時点、住家243,409棟・うち全壊36,478棟）より小さく、比較可能なものではない。全国値への合算は行わない。",
+      "value_en": "243,409: 36,478 destroyed and 206,931 damaged (UNGRD (06:30 COT cut on 16 Sep 2026, per IOM Colombia Earthquake Response Situation Report #11, posted 25 Sep 2026)), unchanged from the 15 Sep 06:30 cut, against 238,328 (36,326 destroyed and 202,002 damaged) at the 7 Sep cut.",
+      "value_ja": "243,409棟：全壊36,478棟・損壊206,931棟（UNGRD（9月16日06:30 COT締め、IOM「コロンビア地震対応状況報告第11号」経由、2026年9月25日投稿））。9月15日06:30締めから横ばい（9月7日締めは238,328棟＝全壊36,326棟・損壊202,002棟）。",
       "source_en": "UNGRD (RUD), 15 Sep 06:30; OCHA Flash Update 011, 2 Sep 17:00; CESVI, 11 Sep 2026; UNGRD (X/Twitter), San José del Palmar municipal RUD, 19 Sep 2026",
       "source_ja": "UNGRD（RUD、9月15日06:30）／OCHA Flash Update 011（9月2日17:00時点）／CESVI（9月11日）；UNGRD（X/Twitter）サンホセ・デル・パルマル市別RUD、2026年9月19日",
       "tier": "official",
@@ -794,7 +801,7 @@
     {
       "item_en": "of which seriously damaged",
       "item_ja": "うち重大な損壊",
-      "value_en": "206,931 (UNGRD RUD balance, 06:30 cut on 15 Sep 2026), up from 202,002 at the 7 Sep 06:30 cut.",
+      "value_en": "206,931 (UNGRD (06:30 COT cut on 16 Sep 2026, per IOM Colombia Earthquake Response Situation Report #11, posted 25 Sep 2026)), unchanged from the 15 Sep 06:30 cut.",
       "value_ja": "206,931（UNGRD RUD集計、9月15日06:30締め）。9月7日06:30締めの202,002から増加。",
       "source_en": "UNGRD (RUD), 15 Sep 06:30",
       "source_ja": "UNGRD（RUD、9月15日06:30）",
@@ -804,7 +811,7 @@
     {
       "item_en": "of which destroyed",
       "item_ja": "うち全壊",
-      "value_en": "36,478 (UNGRD RUD balance, 06:30 cut on 15 Sep 2026), up from 36,326 at the 7 Sep 06:30 cut.",
+      "value_en": "36,478 (UNGRD (06:30 COT cut on 16 Sep 2026, per IOM Colombia Earthquake Response Situation Report #11, posted 25 Sep 2026)), unchanged from the 15 Sep 06:30 cut.",
       "value_ja": "36,478（UNGRD RUD集計、9月15日06:30締め）。9月7日06:30締めの36,326から増加。",
       "source_en": "UNGRD (RUD), 15 Sep 06:30",
       "source_ja": "UNGRD（RUD、9月15日06:30）",
@@ -824,7 +831,7 @@
     {
       "item_en": "Health facilities",
       "item_ja": "医療施設",
-      "value_en": "400 damaged (UNGRD, 06:30 cut on 6 Sep), unchanged from the 3 Sep 06:30 cut (406 at the 31 Aug 06:30 cut, 304 at the 18:30 cut on 16 Aug, 240 that morning and 18 on 10 Aug); 7 health institutions closed as of 16 Aug. About 30% of the University Hospital in Cali collapsed, including three floors (paediatrics, internal medicine, part of the neonatal unit). The Interior Minister said on 14 Aug that the hospital network in Buenaventura is overwhelmed.",
+      "value_en": "402 damaged (UNGRD (06:30 COT cut on 16 Sep 2026, per IOM Colombia Earthquake Response Situation Report #11, posted 25 Sep 2026)), up from 400 at the 6 Sep 06:30 cut (406 at the 31 Aug 06:30 cut, 304 at the 18:30 cut on 16 Aug, 240 that morning).",
       "value_ja": "400か所が被害（UNGRD、9月6日06:30締め）。9月3日06:30締めから横ばい（8月31日06:30締め406か所、8月16日18:30締め304か所、同日朝240か所、8月10日18か所）。医療機関7か所が閉鎖（8月16日時点）。カリの大学病院は約30％が崩壊し、小児科・内科・新生児科の一部を含む3フロアが失われた。内務大臣は8月14日、ブエナベントゥーラの病院網が対応能力を超えていると述べた。",
       "source_en": "UNGRD, 6 Sep 06:30; Ministry of the Interior (14 Aug); Valle del Cauca government",
       "source_ja": "UNGRD（9月6日06:30）",
@@ -834,7 +841,7 @@
     {
       "item_en": "Educational facilities",
       "item_ja": "教育施設",
-      "value_en": "4,313 affected (UNGRD, 06:30 cut on 7 Sep), up from 4,288 at the 6 Sep 06:30 cut; UNGRD gives no explanation, treated as reconciliation rather than a correction (4,292 at 3 Sep, 4,287 at 2 Sep, 4,290 at 1 Sep, 4,268 at 31 Aug, 3,207 at the 18:30 cut on 16 Aug, 2,205 that morning and 52 on 10 Aug).",
+      "value_en": "4,431 affected (UNGRD (06:30 COT cut on 16 Sep 2026, per IOM Colombia Earthquake Response Situation Report #11, posted 25 Sep 2026)), up from 4,313 at the 7 Sep 06:30 cut.",
       "value_ja": "4,313か所が被害（UNGRD、9月7日06:30締め）。9月6日06:30締めの4,288か所から増加。UNGRDは理由を示しておらず、訂正ではなく集計上の整理として扱う（9月3日4,292か所、9月2日4,287か所、9月1日4,290か所、8月31日4,268か所、8月16日18:30締め3,207か所、同日朝2,205か所、8月10日52か所）。",
       "source_en": "UNGRD, 7 Sep 06:30",
       "source_ja": "UNGRD、9月7日06:30",
@@ -844,7 +851,7 @@
     {
       "item_en": "Community facilities",
       "item_ja": "コミュニティ施設",
-      "value_en": "6,033 damaged (UNGRD, 06:30 cut on 7 Sep), down from 6,035 at the 6 Sep 06:30 cut; UNGRD gives no explanation, treated as reconciliation rather than a correction (5,600 at 3 Sep, 5,698 at 1 Sep, 5,524 at 31 Aug, 4,059 at the 18:30 cut on 16 Aug, 1,208 that morning).",
+      "value_en": "6,094 damaged (UNGRD (06:30 COT cut on 16 Sep 2026, per IOM Colombia Earthquake Response Situation Report #11, posted 25 Sep 2026)), up from 6,033 at the 7 Sep 06:30 cut.",
       "value_ja": "6,033か所が被害（UNGRD、9月7日06:30締め）。9月6日06:30締めの6,035か所から減少。UNGRDは理由を示しておらず、訂正ではなく集計上の整理として扱う（9月3日5,600か所、9月1日5,698か所、8月31日5,524か所、8月16日18:30締め4,059か所、同日朝1,208か所）。",
       "source_en": "UNGRD, 7 Sep 06:30",
       "source_ja": "UNGRD、9月7日06:30",
@@ -2386,6 +2393,27 @@
       "url": "https://reliefweb.int/report/colombia/colombia-flash-update-014-actualizacion-afectaciones-por-terremoto-en-colombia-23-de-septiembre-de-2026",
       "tier": "official",
       "_note": "上記英語版と同内容のスペイン語版。確認済み。"
+    },
+    {
+      "label_en": "ReliefWeb: Colombia Earthquake Response Situation Report #11 (IOM, 21/25 Sep 2026)",
+      "label_ja": "ReliefWeb「コロンビア地震対応状況報告第11号」（IOM、2026年9月21/25日）",
+      "url": "https://reliefweb.int/report/colombia/colombia-earthquake-response-situation-report-11-21-september-2026",
+      "tier": "official",
+      "_note": "UNGRD 9月16日締めの主要指標と、9月19日PMU統合値（別指標）をタイムライン・damageへ反映済み。確認済み。"
+    },
+    {
+      "label_en": "ReliefWeb: Colombia displacement/confinement monitoring, Jan-Mar 2026 (UNHCR)",
+      "label_ja": "ReliefWeb「コロンビア 人道緊急事態モニタリング：大量避難・行動制限」（UNHCR、2026年1-3月）",
+      "url": "https://reliefweb.int/report/colombia/colombia-monitoreo-de-emergencias-humanitarias-desplazamiento-masivo-y-confinamiento-enero-marzo-2026",
+      "tier": "media",
+      "_note": "対象期間が地震（8月10日）より前。地震と無関係の武力紛争由来の避難モニタリング。確認済み、反映不要。"
+    },
+    {
+      "label_en": "ReliefWeb: Colombia displacement/confinement monitoring, 2025 (UNHCR)",
+      "label_ja": "ReliefWeb「コロンビア 人道緊急事態モニタリング：大量避難・行動制限」（UNHCR、2025年）",
+      "url": "https://reliefweb.int/report/colombia/colombia-monitoreo-de-emergencias-humanitarias-desplazamiento-masivo-y-confinamiento-2025",
+      "tier": "media",
+      "_note": "2025年分。地震と無関係。確認済み、反映不要。"
     }
   ],
   "source_policy_en": "Source hierarchy: official > media > TBC. Government and scientific-agency figures are used as primary; media reports are used only where official figures are not yet published and are labelled as such. Items still being verified are marked TBC. Preliminary figures are never replaced by larger unverified numbers.",

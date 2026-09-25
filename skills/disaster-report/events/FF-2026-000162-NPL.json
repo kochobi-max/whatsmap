@@ -19,12 +19,12 @@
     "title_ja": "2026年 ボテコシ川 土石流・鉄砲水（ネパール）",
     "subtitle_en": "Rasuwa, Nuwakot and Dhading Districts - 26 August 2026",
     "subtitle_ja": "ラスワ郡・ヌワコット郡・ダディン郡、2026年8月26日",
-    "edition_en": "25th report",
-    "edition_ja": "第25報",
+    "edition_en": "26th report",
+    "edition_ja": "第26報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
-    "stamp": "2026-09-25 07:50 JST",
-    "update_date": "25/09/2026",
+    "stamp": "2026-09-26 07:50 JST",
+    "update_date": "26/09/2026",
     "timeline_range_en": "25 August - 24 September 2026 (Nepal Standard Time, UTC+5:45)",
     "timeline_range_ja": "2026年8月25日〜9月24日（ネパール標準時 UTC+5:45）",
     "tz_note_en": "All times are Nepal Standard Time (NPT, UTC+5:45) unless stated.",
@@ -841,6 +841,13 @@
       "src": "IFRC (Nepal flash floods 2026: how the Red Cross is responding)",
       "en": "IFRC published a feature on the Nepal Red Cross Society's (NRCS) response in Bidur, Nuwakot, where the flood destroyed the bridge linking the town to its public hospital. NRCS volunteers have been operating a rope crossing across the Trishuli River to ferry patients and families to the hospital, alongside a field clinic providing vital-signs and nutrition checks, oxygen support and medication. The report notes several of the worst-hit areas remain reachable only by helicopter or a single narrow, barely-passable road into Rasuwa.",
       "ja": "IFRCが、ヌワコット郡ビドゥルにおけるネパール赤十字社（NRCS）の対応を紹介する記事を公表した。同地では洪水により町と公立病院を結ぶ橋が流失。NRCSボランティアはトリスリ川に張ったロープを使って患者・家族を病院側へ渡す活動を継続しており、あわせてバイタルサイン・栄養チェック、酸素投与、投薬を行う野外診療所も運営している。記事は、最も被害の大きい一部地域が依然ヘリコプターか、ラスワへの狭く通行困難な1本の道路でしか到達できないと伝えている。"
+    },
+    {
+      "time": "22 Sep",
+      "tier": "official",
+      "src": "UNICEF (Nepal Humanitarian Situation Report No. 5, 22 Sep 2026)",
+      "en": "UNICEF's fifth situation report states the floods affected 84,270 people including 32,021 children and 1,854 people with disabilities, and that 64 water systems, 10,000 toilets, 7 health facilities and 23 schools were destroyed or damaged. To date, mental health and psychosocial support has reached 9,711 people; 66,950 people were vaccinated against cholera in Nuwakot and Rasuwa; 1,702 children were screened for acute malnutrition (39 receiving treatment); 48 temporary learning centres with WASH facilities serve over 1,400 children; and 24 children have been reunified with their families, with 29 in temporary protection centres and 238 undergoing profiling/verification. UNICEF states it needs US$17.2 million, of which US$9.7 million (including a US$2.5 million loan) is available, leaving a US$10 million funding gap.",
+      "ja": "UNICEFの第5次状況報告（9月22日付）は、洪水による被災者84,270人（うち子ども32,021人、障害者1,854人）、給水施設64か所・トイレ1万基・保健施設7か所・学校23校が損壊・破壊されたとしている。これまでに心理社会的支援が9,711人に到達。ヌワコット・ラスワ両郡でコレラワクチン接種66,950人。子ども1,702人の急性栄養不良スクリーニング（うち39人が治療中）。WASH設備を備えた仮設学習センター48か所が1,400人超の子どもに対応。家族再統合24人、一時保護施設29人、身元確認・照合中238人。UNICEFは必要額1,720万米ドルに対し970万米ドル（250万米ドルの融資を含む）を確保済みとし、資金ギャップ1,000万米ドルを残すとしている。"
     }
   ],
   "response_measures": [
@@ -1770,6 +1777,41 @@
       "url": "https://reliefweb.int/report/nepal/logistics-telecommunication-cluster-nepal-coordination-meeting-minutes-22-september-2026",
       "tier": "official",
       "_note": "クラスター運営上の議事録（PDF添付、本文は物流調整の記録）。新規の死者・行方不明等の集計値なし。確認済み。"
+    },
+    {
+      "label_en": "ReliefWeb: UNICEF Nepal Humanitarian Situation Report No. 5, 22 September 2026",
+      "label_ja": "ReliefWeb「UNICEFネパール人道状況報告第5号」（2026年9月22日）",
+      "url": "https://reliefweb.int/report/nepal/unicef-nepal-humanitarian-situation-report-no-5-22-september-2026",
+      "tier": "official",
+      "_note": "WASH・教育・保護分野の集計をタイムラインに反映済み。確認済み。"
+    },
+    {
+      "label_en": "ReliefWeb: WFP Rapid Market Functionality and Price Monitoring Assessment (Rasuwa, Nuwakot, Dhading), September 2026",
+      "label_ja": "ReliefWeb「WFP市場機能・価格モニタリング迅速評価（ラスワ・ヌワコット・ダディン）」（2026年9月）",
+      "url": "https://reliefweb.int/report/nepal/rapid-market-functionality-and-price-monitoring-assessment-flood-affected-areas-rasuwa-nuwakot-and-dhading-september-2026",
+      "tier": "official",
+      "_note": "内容は22-23 Sepのタイムライン記述に反映済み（117業者中64件が完全稼働、供給路寸断114件など）。確認済み。"
+    },
+    {
+      "label_en": "ReliefWeb: The Illusion of Food Security — WFP Household Survey (Rasuwa, Nuwakot, Dhading), September 2026",
+      "label_ja": "ReliefWeb「食料安全保障の見かけ — WFP世帯調査」（2026年9月）",
+      "url": "https://reliefweb.int/report/nepal/illusion-food-security-food-security-protected-emergency-assistance-wfps-household-survey-flood-affected-areas-rasuwa-nuwakot-and-dhading-september-2026",
+      "tier": "official",
+      "_note": "被災世帯の91.6%が「許容できる食料消費」だが90.9%が支援に依存という所見。数値急変ゲート対象外（被害集計値ではない）。参考として確認済み、本文へは未反映。"
+    },
+    {
+      "label_en": "ReliefWeb: Nepal Logistics and Telecommunications Cluster SOPs, 24 Sep 2026",
+      "label_ja": "ReliefWeb「ネパール・ロジスティクス／通信クラスター標準業務手順書」（2026年9月24日）",
+      "url": "https://reliefweb.int/report/nepal/nepal-logistics-and-telecommunications-cluster-standard-operating-procedures-sops-common-logistics-services-september-24-2026",
+      "tier": "official",
+      "_note": "手続き文書。被害・対応集計値なし。確認済み、反映不要。"
+    },
+    {
+      "label_en": "ReliefWeb: Islamic Relief — one month since Nepal floods, 25 Sep 2026",
+      "label_ja": "ReliefWeb「ネパール洪水から1か月、Islamic Relief」（2026年9月25日）",
+      "url": "https://reliefweb.int/report/nepal/one-month-nepal-floods-homeless-survivors-still-need-aid-hunger-spreads-0",
+      "tier": "media",
+      "_note": "NGOによる1か月回顧。死者1,450・行方不明5,000超はNDRRMA値の概数引用で本文既載の精緻な値と同水準。新規性なし。確認済み、反映不要。"
     }
   ],
   "images": {
