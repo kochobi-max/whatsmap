@@ -1,0 +1,7 @@
+# Windows でも改行を保つ。CRLF のままだとパッチの照合が外れる（2026-08-27）
+* text=auto eol=lf
+*.bat text eol=crlf
+*.png binary
+*.jpg binary
+*.pptx binary
+*.pdf binary
