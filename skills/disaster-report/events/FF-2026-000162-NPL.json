@@ -19,12 +19,12 @@
     "title_ja": "2026年 ボテコシ川 土石流・鉄砲水（ネパール）",
     "subtitle_en": "Rasuwa, Nuwakot and Dhading Districts - 26 August 2026",
     "subtitle_ja": "ラスワ郡・ヌワコット郡・ダディン郡、2026年8月26日",
-    "edition_en": "26th report",
-    "edition_ja": "第26報",
+    "edition_en": "27th report",
+    "edition_ja": "第27報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
-    "stamp": "2026-09-26 07:50 JST",
-    "update_date": "26/09/2026",
+    "stamp": "2026-09-27 07:41 JST",
+    "update_date": "27/09/2026",
     "timeline_range_en": "25 August - 24 September 2026 (Nepal Standard Time, UTC+5:45)",
     "timeline_range_ja": "2026年8月25日〜9月24日（ネパール標準時 UTC+5:45）",
     "tz_note_en": "All times are Nepal Standard Time (NPT, UTC+5:45) unless stated.",
@@ -939,6 +939,14 @@
       "en": "The Government of Japan contributed an emergency grant of USD 1 million to the World Food Programme (WFP) to support emergency food assistance for flood-affected communities in Rasuwa, Nuwakot and Dhading, and to continue WFP logistics support to the government-led response (announced 23 Sep). WFP states that, with support from donors including Japan, it has already provided emergency ready-to-eat rations followed by a two-week in-kind supply (fortified rice, lentils, vegetable oil, iodized salt) to more than 15,000 people, and is supporting government logistics via the Kathmandu Humanitarian Staging Area and a newly established Nuwakot Common Humanitarian Office and storage facility in Bidur. This is separate from Japan's earlier JDR expert-team and DNA-equipment support recorded above.",
       "ja": "日本政府は、ラスワ・ヌワコット・ダディンの洪水被災者への緊急食料支援と、政府主導の対応へのWFPの物流支援継続を目的として、世界食糧計画（WFP）へ緊急無償資金100万米ドルを拠出した（9月23日発表）。WFPによれば、日本を含む donor の支援により、即席の緊急食料に続き、2週間分の現物支援（強化米、レンズ豆、食用油、ヨウ素添加塩）を15,000人超に提供済みで、カトマンズ人道物資中継拠点および新設のヌワコット人道共同事務所・ビドゥール保管施設を通じ政府の物流を支援している。これは上記の日本のJDR専門家チーム派遣・DNA鑑定機材供与とは別の支援である。",
       "url": "https://reliefweb.int/report/nepal/japan-contributes-usd-1-million-support-wfps-emergency-flood-response-nepal-world-food-programme"
+    },
+    {
+      "org_en": "Save the Children",
+      "org_ja": "セーブ・ザ・チルドレン",
+      "tier": "official",
+      "en": "Save the Children said protection measures for girls need to be intensified across flood-affected areas one month after the floods, citing growing risks of trafficking, violence, exploitation and child marriage linked to prolonged uncertainty over housing and livelihoods; girls in communal holding centres and roadside tent camps reported safety and privacy concerns. The organisation is strengthening monitoring at displacement sites and supporting police checkpoints to identify trafficking and exploitation, and says it has reached more than 7,500 people, including about 2,300 children, with emergency assistance (published 26 Sep, reporting conditions as of 24 Sep).",
+      "ja": "セーブ・ザ・チルドレンは、発災から1か月が経過し住まいと生計の見通しが立たない状況が続く中で、人身取引・暴力・搾取・児童婚のリスクが高まっているとして、洪水被災地域における女児の保護対策の強化を訴えた。共同避難所や道端のテント集落の女児からは、安全・プライバシーへの懸念が寄せられているという。同団体は避難先での見守り強化や、人身取引・搾取の発見に向けた警察検問所への支援を行っており、緊急支援は子ども約2,300人を含む7,500人超に到達しているとしている（9月26日発表、9月24日時点の状況を報告）。",
+      "url": "https://reliefweb.int/report/nepal/nepal-protection-girls-must-be-stepped-trafficking-and-violence-risks-rise-one-month-after-devastating-floods"
     }
   ],
   "satellite": [
@@ -1812,6 +1820,13 @@
       "url": "https://reliefweb.int/report/nepal/one-month-nepal-floods-homeless-survivors-still-need-aid-hunger-spreads-0",
       "tier": "media",
       "_note": "NGOによる1か月回顧。死者1,450・行方不明5,000超はNDRRMA値の概数引用で本文既載の精緻な値と同水準。新規性なし。確認済み、反映不要。"
+    },
+    {
+      "label_en": "ReliefWeb: Save the Children — protection for girls one month after the floods, 26 Sep 2026",
+      "label_ja": "ReliefWeb「セーブ・ザ・チルドレン：発災1か月、女児の保護対策」（2026年9月26日）",
+      "url": "https://reliefweb.int/report/nepal/nepal-protection-girls-must-be-stepped-trafficking-and-violence-risks-rise-one-month-after-devastating-floods",
+      "tier": "official",
+      "_note": "新規性あり。人身取引・GBV・児童婚リスクの上昇という新しい観点。support_international[] に追加して反映済み。"
     }
   ],
   "images": {

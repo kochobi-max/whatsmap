@@ -19,16 +19,16 @@
     "title_ja": "2026年 チョコ地震（コロンビア）",
     "subtitle_en": "M7.4, San José del Palmar, Chocó Department - 10 August 2026",
     "subtitle_ja": "M7.4、チョコ県サンホセ・デル・パルマル、2026年8月10日",
-    "edition_en": "25th report",
-    "edition_ja": "第25報",
+    "edition_en": "26th report",
+    "edition_ja": "第26報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
     "as_of_en": "Figures as of UNGRD's 16 Sep 06:30 COT balance (posted via IOM Situation Report #11, 25 Sep 2026): 335 deaths, 105 missing, 364 rescued, 4,516 injured, across 500 municipalities in 16 departments (up from 498); 486,917 people affected and 243,409 homes damaged/destroyed (206,931 damaged, 36,478 destroyed) both unchanged from the 15 Sep RUD cut. A separate 19 September PMU consolidation by UNGRD reports 364,670 families / 778,279 people registered and a differently-classified housing tally (84,855 habitable, 104,037 uninhabitable, 19,143 destroyed, 119,752 damaged); this has not been reconciled with the RUD balance above and is shown separately, not combined.",
     "as_of_ja": "UNGRDの9月16日06:30 COT集計（IOM状況報告第11号経由、2026年9月25日投稿）：死者335人、行方不明105人、救出364人、負傷4,516人、16県500市町村（498から増加）。被災者486,917人・住家被害243,409棟（損壊206,931棟・全壊36,478棟）はいずれも9月15日RUD締めから横ばい。別途、9月19日のPMU統合（UNGRD）ではRUD登録364,670世帯・778,279人、および区分の異なる住家集計（居住可能84,855棟・居住不能104,037棟・全壊19,143棟・損壊119,752棟）を報告。上記RUD残高とは未照合のため別掲とし、合算しない。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-09-26 07:50 JST",
-    "update_date": "26/09/2026",
+    "stamp": "2026-09-27 07:41 JST",
+    "update_date": "27/09/2026",
     "optional_slides": [
       "prior_event",
       "historical",
@@ -635,6 +635,14 @@
       "src": "UNGRD, via IOM Colombia Earthquake Response Situation Report #11 (25 Sep 2026)",
       "en": "IOM's Situation Report #11 cites UNGRD's 16 Sep 06:30 COT balance: 335 deaths, 105 missing, 364 rescued, 4,516 injured, 486,917 people affected (unchanged from the 15 Sep RUD cut), 206,931 homes damaged and 36,478 destroyed (also unchanged), across 500 municipalities in 16 departments (up from 498). Separately, at the 19 September National Unified Command Post (PMU), UNGRD consolidated territorial information from different sectors and reported 364,670 families / 778,279 people registered via the RUD, and a differently-classified housing tally (84,855 habitable, 104,037 uninhabitable, 19,143 destroyed, 119,752 damaged). This PMU consolidation has not been reconciled with the RUD balance above; both figures are shown with their dates and not combined.",
       "ja": "IOM「状況報告第11号」がUNGRDの9月16日06:30 COT時点の集計を引用：死者335人、行方不明105人、救出364人、負傷4,516人、被災者486,917人（9月15日RUD締めから横ばい）、住家損壊206,931棟・全壊36,478棟（同じく横ばい）、16県500市町村（498市町村から増加）。別途、9月19日の全国統合指揮所（PMU）でUNGRDが各セクターの地域別情報を統合し、RUD登録364,670世帯・778,279人、および区分の異なる住家集計（居住可能84,855棟・居住不能104,037棟・全壊19,143棟・損壊119,752棟）を報告。このPMU統合値は上記RUD残高とまだ突き合わせられておらず、両者とも日付を付して併記し合算しない。"
+    },
+    {
+      "time": "25 Sep",
+      "tier": "official",
+      "src": "UNGRD (official X/Twitter account, @UNGRD)",
+      "en": "UNGRD disbursed the first month of temporary-housing economic support to earthquake-affected families in Quimbaya, Quindio (COP 1,185 million), verified via the RUD and paid through SuperGiros points at the Coliseo El Cacique and Colegio Santa Teresita (El Rocio neighbourhood). This extends the housing-support payments already under way in Choco (from 11 Sep) and Cali (from 12 Sep) into Quindio department, as UNGRD had said would follow. No new casualty or damage balance was posted with this announcement.",
+      "ja": "UNGRDはキンディオ県キンバヤの地震被災家族に対し、住宅一時支援の初月分（1,185百万コロンビアペソ）を支給した。RUDで確認済みの世帯を対象に、コリセオ・エル・カシケおよびコレヒオ・サンタ・テレシタ（エル・ロシオ地区）のスーペルヒロス窓口を通じて支払われた。これはチョコ県（9月11日開始）・カリ市（9月12日開始）で先行していた住宅支援の支払いが、UNGRDが予告していたとおりキンディオ県にも広がったもの。この発表に伴う新規の死傷者・被害集計の更新はない。",
+      "url": "https://x.com/UNGRD/status/2103643503653777408"
     }
   ],
   "areas": [

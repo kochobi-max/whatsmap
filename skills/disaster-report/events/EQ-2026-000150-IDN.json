@@ -21,8 +21,8 @@
     "jma_name_en": "",
     "edition": "",
     "prepared_by": "Asian Disaster Reduction Center (ADRC)",
-    "stamp": "2026-09-26 07:50 JST",
-    "update_date": "26/09/2026",
+    "stamp": "2026-09-27 07:41 JST",
+    "update_date": "27/09/2026",
     "timeline_range_en": "15 August - 21 September 2026 (Western Indonesian Time, UTC+7)",
     "timeline_range_ja": "2026年8月15日〜9月21日（西部インドネシア時間 WIB、UTC+7）",
     "disseminate_en": "",
@@ -40,8 +40,8 @@
     },
     "subtitle_en": "M7.7, offshore Nagekeo Regency, Flores Island, East Nusa Tenggara - 15 August 2026",
     "subtitle_ja": "M7.7、東ヌサトゥンガラ州フローレス島 ナゲケオ県沖、2026年8月15日",
-    "edition_en": "9th report",
-    "edition_ja": "第9報",
+    "edition_en": "10th report",
+    "edition_ja": "第10報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
     "tz_note_en": "Times follow BNPB's own reporting in WIB (UTC+7) unless stated.",
@@ -706,6 +706,14 @@
       "ja": "BNPBは、東マンガライ県ランバレダ郡グルンリウット村に建設した仮設住宅（フンタラ）7棟が、同日発生した有感M5.1の余震（速報M5.3。上記「余震」欄参照）でも損傷なく建っていることを確認したと発表した。同7棟は同日中に受益者への引き渡しも完了していた。BNPBはあわせて、軽量鉄骨が倒れる様子を映したSNS上の拡散動画について、これは別の施工中現場（骨組み未固定・基礎未打設の段階）を撮影したものであり、完成・入居済みの住宅ではないと説明した。"
     },
     {
+      "time": "21 Sep",
+      "tier": "official",
+      "src": "Ministry of Primary and Secondary Education (Mendikdasmen), via ANTARA",
+      "en": "The Minister of Primary and Secondary Education told the House of Representatives' Commission X that the ministry is committed to revitalising 1,487 education units in NTT damaged by the earthquake, backed by a separately-announced Rp 1.2 trillion budget allocation for the province; reconstruction can begin once the second-tranche supplementary budget (ABT) is disbursed. The ministry states it has already disbursed Rp 860 million for initial handling of dozens of quake-affected schools.",
+      "ja": "初等中等教育大臣は国会第10委員会に対し、地震で被災したNTT州内の教育施設1,487か所の復旧に取り組むとし、同州向けに別途1.2兆ルピアの予算を計上済みであると説明した。復旧工事は第2次補正予算（ABT）の予算配分後に着手できるとしている。同省はすでに、地震被害を受けた学校数十校への当座対応として8億6,000万ルピアを支出済みとしている。",
+      "url": "https://www.antaranews.com/berita/5751641/mendikdasmen-berkomitmen-revitalisasi-1487-sekolah-untuk-pulihkan-ntt"
+    },
+    {
       "time": "25 Sep",
       "tier": "official",
       "src": "BPBD Manggarai Barat (Kompas)",
@@ -1237,6 +1245,41 @@
       "url": "https://regional.kompas.com/read/2026/09/25/165607778/korban-gempa-flores-di-manggarai-barat-dapat-dana-tunggu-hunian-rp-600000",
       "tier": "official",
       "_note": "県BPBD発表の県内住家被害検証値（6,657棟）とDTH運用。全国集計とは別指標である旨を本文に明記。確認済み。"
+    },
+    {
+      "label_en": "ReliefWeb: Caritas Indonesia hands over housing to flood-affected residents in Central Tapanuli",
+      "label_ja": "ReliefWeb「カリタス・インドネシア、中部タパヌリの洪水被災者へ住宅を引き渡し」",
+      "url": "https://reliefweb.int/report/indonesia/caritas-indonesia-hands-over-housing-flood-affected-residents-central-tapanuli",
+      "tier": "media",
+      "_note": "2025年11月の北スマトラ洪水・地滑りの被災者向け住宅引き渡し。対象の東ヌサトゥンガラ地震（フローレス、GLIDE EQ-2026-000150-IDN）とは別災害・別地域。関係なし。確認済み。"
+    },
+    {
+      "label_en": "ReliefWeb: Psychosocial impacts on Afghan refugee youth in Indonesia (APRRN)",
+      "label_ja": "ReliefWeb「アフガン難民青年の心理社会的影響」（APRRN）",
+      "url": "https://reliefweb.int/report/indonesia/psychosocial-impacts-prolonged-uncertainty-mental-well-being-resilience-and-community-engagement-afghan-refugee-youth-indonesia",
+      "tier": "media",
+      "_note": "難民保護に関する質的調査。地震とは無関係。確認済み。"
+    },
+    {
+      "label_en": "ReliefWeb: DKI Jakarta earthquake shake map, 11 Sep 2026 (WFP)",
+      "label_ja": "ReliefWeb「DKIジャカルタ地震シェイクマップ」2026年9月11日（WFP）",
+      "url": "https://reliefweb.int/map/indonesia/dki-jakarta-indonesia-earthquake-shake-map-11-september-2026",
+      "tier": "official",
+      "_note": "9月11日にジャカルタで発生した別の地震（対象の8月15日フローレス地震とは別事象）のシェイクマップ。関係なし。確認済み。"
+    },
+    {
+      "label_en": "ReliefWeb: ADAM earthquake, DKI Jakarta, 11 Sep 2026 21:48:37 GMT (WFP)",
+      "label_ja": "ReliefWeb「ADAM地震解析、DKIジャカルタ」2026年9月11日21:48:37 GMT（WFP）",
+      "url": "https://reliefweb.int/map/indonesia/adam-earthquake-dki-jakarta-indonesia-11-september-2026-214837-gmt",
+      "tier": "official",
+      "_note": "上記と同一の9月11日ジャカルタ地震（別事象）の自動解析。関係なし。確認済み。"
+    },
+    {
+      "label_en": "ANTARA: Mendikdasmen commits to revitalising 1,487 education units in NTT (21 Sep 2026)",
+      "label_ja": "ANTARA「初等中等教育大臣、NTT州の教育施設1,487か所の復旧を約束」（2026年9月21日）",
+      "url": "https://www.antaranews.com/berita/5751641/mendikdasmen-berkomitmen-revitalisasi-1487-sekolah-untuk-pulihkan-ntt",
+      "tier": "official",
+      "_note": "新規性あり。教育省の1.2兆ルピア予算配分と学校復旧棟数。タイムラインに追加して反映済み。"
     }
   ],
   "attribution_en": "Figures reported by BNPB and relayed by IFRC/PMI and humanitarian partners; source and cut-off shown per row. All provisional.",
