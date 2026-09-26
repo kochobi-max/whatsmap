@@ -565,6 +565,43 @@ cd skills/disaster-report/generator && npm install pptxgenjs
 （`soffice --convert-to pdf` を空ファイルに試す／`require.resolve('pptxgenjs')`）を
 足して、`SOURCES-FAIL` と同じ扱いで早期に止める方が今回のような手戻りを防げる。
 
+## `STATUS: FAIL footer-overlap` が、実は重なりではなく `pdfplumber` のクラッシュだったことがある（2026-09-27）
+
+COL・IDN の2件が `1ページの詰めを 1 → 0.9 → 0.82 → 0.75 まで下げても重なりが消えない` で
+落ちた。実際にビルドされた PDF を目視すると**どこにも重なりは無かった**。
+
+原因は `check_footer_overlap.py` の `import pdfplumber` がクラッシュしていたこと。
+
+```
+ModuleNotFoundError: No module named '_cffi_backend'
+pyo3_runtime.PanicException: Python API call failed
+```
+
+このコンテナの既定 `python3` は 3.11 だが、apt の `python3-cffi-backend` は
+**3.12 用の `.so` しか持っていない**（`/usr/lib/python3/dist-packages/_cffi_backend.cpython-312-*.so`）。
+そのため 3.11 側の `cryptography`（pdfminer が使う）が `_cffi_backend` を読めずに
+Rust拡張がパニックする。`build_event.js` はこの例外による非ゼロ終了を
+「重なりが検出された」と同じ扱いにしているため、**中身を見ずに footer-overlap 失敗と誤認する。**
+
+区別のしかた: `check_footer_overlap.py <PDF>` を単体で実行し、出力が
+Pythonのトレースバック（`pyo3_runtime.PanicException` 等）なら環境の問題。
+実際の重なりが検出された場合は `y=...` のような座標つきの指摘行が出る。
+
+対処（このセッションで実施。次回また消えている前提で書く）：
+
+```bash
+python3.11 -m pip install --no-binary cffi cffi --break-system-packages --force-reinstall --ignore-installed
+```
+
+（`--ignore-installed` が要る。apt 版の `pycparser` と衝突して `Cannot uninstall` で
+素の `pip install` は止まる。）ソースからビルドするので `python3.11-dev` / `libffi-dev` / `gcc`
+が要るが、いずれもこのイメージには最初から入っていた。直った後は
+`python3 -c "import pdfplumber"` が例外を出さないことで確認できる。
+
+**`pdfplumber` を使う他のQAスクリプト（`qa_layout_check.py` 等）も同じ理由で無言のまま
+誤った結果を出しうる。** 「検査を通った」を鵜呑みにする前に、単体実行で
+トレースバックが出ていないか確認すること。
+
 ## PDF変換は荒木田さんのPCではやらない（2026-08-28）
 
 **このPCに LibreOffice は入っていない。** ここは4回、判断を間違えた場所。
