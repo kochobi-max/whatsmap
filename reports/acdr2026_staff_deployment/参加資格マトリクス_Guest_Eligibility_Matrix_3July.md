@@ -792,3 +792,17 @@ Sylvia 宛の会場スレッドに3本の下書きが並存: 9/18 版（機材�
 11. LibreOffice 描画では ADRC ロゴが三浦署名欄に重なる（浮動画像・wrapNone）。Word での表示を確認。
 
 YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth Innovation Lab (YI-Lab), Nepal）・テーマとも Mizan 9/17 の情報と一致。GI の割当: Resource1（負担あり）= BRIN・YI-Lab、Resource2（なし）= Google・JAXA。
+
+## 配席表（児玉 9/26 作成）の U 字部分の更新（9/28）
+
+入力: 児玉の `ACDR2026_配席表.pptx`（9/26、内閣府依頼）と 9/25 名簿（9/28 に再送されたものは 9/25 版と同一）。出力: `ACDR2026_配席表_0928_荒木田修正.pptx`。
+
+児玉案の構造: 内側 2 列＋底 3 卓＝U 字 28 席（脚 12＋底 4＋脚 12）、外側 2 列＝側面列（各 12 席）、その下に教室型 1 行（member/partner）とリソース 4 席。
+
+変更点
+- U 字上端を主催 3 者に: 左上 ADRC×2（三浦会長・北本理事長）、右上 Singapore×2（Comr・Alan Chow）＋Japan（内閣府）。以降は時計回りに国名アルファベット順（児玉案は Armenia が左上に飛んでいた）。右脚: Singapore, Singapore, Japan, Armenia, Azerbaijan, Bangladesh, Bhutan, Brunei, Cambodia, Fiji, India, Lao PDR。底: Malaysia, Maldives, Mongolia, Myanmar。左脚（下→上）: Pakistan, PNG, ROK, Sri Lanka, Thailand, Turkiye, Uzbekistan, Viet Nam, AUS, NZ, ADRC, ADRC。
+- 2 列目右: Japan×3（仙台市）を Japan の後ろへ（内閣府 9/25「仙台副市長は日本の後ろ」）。Singapore×2, Azerbaijan, Brunei, India×2 は各国の後ろ。空き 3。
+- 2 列目左: 左上 4 卓（8 席）を ADRC 事務局ブロック（9/25 決定）に。残り 8 席に NZ×2, Viet Nam×2, Uzbekistan, Turkiye×2, ROK。ROK 3・4 人目は教室型へ。ADRC の 2 列目 2 席はブロックに吸収。
+- スライド下部に注記（変更点と要確認）を追加。
+
+児玉の質問（9/26）への回答方針: 壇・スクリーン視認・演台数・机移動の担当・AV 席の左右（現行スケッチは前方左）・後方卓構成（9/24 Sylvia 宛は 8 人掛け×1×4 列＝32）は 9/29 JM6 で COSEM に確認。既知: 演壇は EXPO 備品でマイクなし、クリッカー 1 本無償、タイマーなし、切替は AV オペレータ。観察者・国際機関（AHA, ADPC, ADB）は名札ルールに従い 2 列目右の空き 3 席へ。リソース前方席は TS のみの組替え。
