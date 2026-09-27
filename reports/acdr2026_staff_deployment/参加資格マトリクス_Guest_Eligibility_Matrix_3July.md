@@ -769,3 +769,26 @@ Sylvia 宛の会場スレッドに3本の下書きが並存: 9/18 版（機材�
 - SC: シナリオ・活動報告に加え、11/1 の体制強化（北本 ED、宮木 DG）を報告。2 週間後に資料提示。
 - 次回連絡会: 10/12 の週。10/7（水）夕方に北本・宮木が林室長へ挨拶（調整中）。
 - アジェンダ Word 版を 0927 に更新（Day 1 の展示見学セルを「日本パビリオンと SIDEX 展示の見学（ADRC が誘導、出展企業が歓迎）」に）。
+
+## リソースパーソン向け招待状（COSEM 書式版）の確認結果（9/27 夜）
+
+対象: 藤本 9/25 18:18 転送の 4 件（[SIDEX-ACDR 2026] Invitation Letter - BRIN / - YiLab、General_Information_ACDR2026_Resource1（費用負担あり）/ Resource2（なし）Draft 0924）。池田は 9/26「追加コメントなし」。荒木田の確認待ち。
+
+要修正（実害あり）
+1. **BRIN 宛の本文が宛名と噛み合っていない。** 宛名は Prof. Rokhis Komarudin（Mizan 9/17 の指示どおり）だが、本文は "invite you to serve as a speaker" "if you could deliver a presentation" "welcoming you in Singapore" と宛名本人が登壇する文面。Mizan 9/17: Komarudin 氏は同週 ESCAP で Bangkok、登壇者は Dr. Yenni Vetrita（cc）。9/25 の ADRC 案の事務局メモには「Komarudin 宛、Vetrita cc、登壇者は Vetrita」とあったが本文に反映されていない。第1・4・9 項を「BRIN から Dr. Yenni Vetrita 氏を登壇者として派遣いただきたい」旨に書き換え、宛名下に cc: Dr. Yenni Vetrita, Researcher, BRIN を入れる。
+2. **費用負担の条項が招待状本文にない。** 旧案では第6項が費用条項（登壇者ごとに差替え）だったが、田中版では第6項が発表内容の説明（第4項と重複）に置き換わり、費用は GI にしか書かれていない。BRIN・YI-Lab は ADRC 負担（航空券・Dorsett・日当 USD30）。ウズベキスタン同様、官庁の出張承認には本文明記が必要になり得る。第6項を費用条項に戻す（GI を参照する一文で可）。
+3. **GI の食事条項が流用のまま。** Resource1「Lunch ... to member country participants」、Resource2「... to advisor country participants」→ resource persons に。
+4. 宛名の綴り: "Researh" → Research（BRIN 宛ヘッダー、ADRC 案からの引継ぎ）。姓の綴りは Mizan 記載 "Komarudin" だが、BRIN 側メールアドレス・署名は "Khomarudin"（m.rokhis.khomarudin@brin.go.id、Sentinel Asia の杉浦スレッド）。Mizan に確認。
+
+要確認
+5. 提出期限: (a) 2 Oct（表題・要旨・略歴・写真）、(b) 20 Oct（スライド）は荒木田が 9/17 に設定した日付。ただし発出は決裁→三浦署名→COSEM 署名→池田発送で 9/30 以降になる見込みで、2 Oct は実質 2 日。発出日で日付を打ち直し、(a) を 10/6（火）にするか、署名前ドラフトを Mizan 経由で先行送付する。登録期限 10 Oct は 10/9 全確定の翌日。
+6. シンガポール側署名者: Alan Chow, Director, Planning & Organisation Dept, SCDF。メンバー国レターと同一かは Sylvia に確認（藤本メールでは「COSEM へサイン依頼」）。
+7. GI の日程が現行アジェンダ（0927）とずれる: Field Trip 13:30–17:00 (TBC)（アジェンダ 13:00–16:15）、Parade "TBA"（18:00–20:05）、Gala 19:00–21:00 (TBC)。添付アジェンダは 0927 版（27–30 October、RT 分割）を使う。「Roundtable Information」は TS 登壇者には不要。
+8. 連絡先: 本文第8項 sidex-acdr2026@adrc.asia、GI は acdr2026sgp@adrc.asia。前者は 9/8 UNDP 宛レターでも使用済みの ADRC 側アドレスだが、受信できることを確認。
+
+軽微
+9. 第4項と第6項の重複（どちらも発表テーマ）。第6項を費用条項に戻せば解消。
+10. GI 文法: "Flight tickets purchased by the participant is not acceptable" → are; "in case you are required visa" → in case you require a visa。
+11. LibreOffice 描画では ADRC ロゴが三浦署名欄に重なる（浮動画像・wrapNone）。Word での表示を確認。
+
+YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth Innovation Lab (YI-Lab), Nepal）・テーマとも Mizan 9/17 の情報と一致。GI の割当: Resource1（負担あり）= BRIN・YI-Lab、Resource2（なし）= Google・JAXA。
