@@ -838,3 +838,4 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
 - 経緯: 9/15 時点の BRIN 登壇候補は Widodo 氏または Khomarudin 氏。9/17 Mizan: 両氏は ACDR 週に ESCAP（バンコク）のため登壇者は Dr. Yenni Vetrita、招待状は Khomarudin 氏（Research Center for Geoinformatics 長）宛、Vetrita 氏 cc と指示。9/25 版までは Khomarudin 宛のまま本文が「あなたが登壇」で、9/28 最終版で「BRIN の代表として Vetrita 氏」に修正済み。
 - 9/28 荒木田: 本人宛の招待状でなかったため BRIN 側で通らなかった、との報告。上司宛にしたのは Mizan の指示によるもので、登壇者交代の未反映（9/25 版の欠陥）とは別の問題。BRIN の出張手続きには本人名義の招待状が要ると推定。
 - 対応: 2 通立てにする。(1) Khomarudin 氏宛の機関向け招待状（代表として Vetrita 氏を指名、BRIN 正式名称 National Research and Innovation Agency と肩書 Head of the Research Center for Geoinformatics に修正）、(2) Vetrita 氏本人宛の招待状（YI-Lab 宛と同型、Khomarudin 氏 cc）。`resource_letter_final_0928/` に 0928r2 として保存。どちらが BRIN の手続きに要るかは Mizan 経由で Vetrita 氏に確認してから署名へ。
+- 訂正（9/28 夕、荒木田）: 「通らなかった」のは BRIN 側ではなく ADRC 内部の決裁。招聘して旅費を支給する本人宛でない招待状は決裁に載らない。対応: Vetrita 氏本人宛（Khomarudin 氏 cc）を正とし決裁対象に、所長宛は BRIN 側が別途要求する場合の予備。Mizan 経由で BRIN の要否を確認。
