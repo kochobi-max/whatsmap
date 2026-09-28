@@ -140,11 +140,20 @@ if (r.verified === "manifest") {
 // ただし黙っていると、時刻がずれていることに誰も気づけない。
 // 2026-09-24、08:10 → 08:30 へ移したはずが6日間移っていなかったのに、
 // クラウド側からは見えなかった。見えるようにしておく。
+//
+// **「読めなかった」を黙って通さない。** 2026-09-28、記録に
+// `start_time: null, matches: false` が並んだが、ここは1行も出さなかった。
+// 一番見たかった場合が、一番静かだった。分岐を read/ずれ/一致で分け直す。
 if (r.task && r.task.registered === false) {
   console.log("   ! PC側の定期タスクが登録されていない（手動実行のみで回っている）");
-} else if (r.task && r.task.start_time && r.task.matches === false) {
+} else if (r.task && r.task.start_time == null) {
+  console.log("   ! PC側の定期タスクの実行時刻が**読めていない**（想定 " + (r.task.expected || "?") + "）。");
+  console.log("     時刻がずれているかどうかも分からない状態。報告に書くこと");
+  if (r.task.last_change) console.log("     直前の是正: " + JSON.stringify(r.task.last_change));
+} else if (r.task && r.task.matches === false) {
   console.log("   ! PC側の定期タスクの実行時刻が " + r.task.start_time
     + "（想定 " + r.task.expected + "）。次の実行で直るが、直らなければ報告すること");
+  if (r.task.last_change) console.log("     直前の是正: " + JSON.stringify(r.task.last_change));
 } else if (r.task && r.task.matches === true) {
   console.log("   PC側の定期タスク 毎日 " + r.task.start_time);
 }

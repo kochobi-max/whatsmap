@@ -458,56 +458,86 @@ function registerTask() {
 // 相手のPCのタスクは 08:10 のまま動き続ける。**登録済みの側も直す。**
 //
 // `schtasks /change /st` は同じ時刻を入れても害がないので、毎回当てる。
-// 開始時刻の表記は環境で揺れる（"8:10:00 AM" / "08:10:00" / 日本語ロケール）。
-// **読めたときだけ**比較に使い、読めなければ黙って直しに行く。
-// `schtasks /change` は同じ値を入れても害がないので、迷ったら当てる。
-function startTimeHHMM(text) {
-  const m = /^(?:Start Time|開始時刻)\s*[:：]\s*(.+)$/mi.exec(text || "");
-  if (!m) return null;
-  const raw = m[1].trim();
-  const t = /(\d{1,2}):(\d{2})/.exec(raw);
-  if (!t) return null;
-  let h = parseInt(t[1], 10);
-  const min = t[2];
-  if (/PM|午後/i.test(raw) && h < 12) h += 12;
-  if (/AM|午前/i.test(raw) && h === 12) h = 0;
-  return String(h).padStart(2, "0") + ":" + min;
-}
 
 // 定期タスクのいまの状態。公開記録に載せてクラウドから見えるようにする。
 // **見えないものは直ったことにしない。**
 let TASK_STATE = null;
+let LAST_CHANGE = null;
+// 実行時刻は **PowerShell から読む。** `schtasks /query /v` は使わない。
+//
+// 2026-09-28、公開記録に `start_time: null` が並んだ。`schtasks /query /v /fo LIST` の
+// 出力を `encoding: "utf8"` で読んでいたが、**このPCのコンソールは cp932 である。**
+// 日本語の項目名（「開始時刻」）が化けるので、正規表現が当たらない。
+// 英語ロケールなら通るため、こちらでは再現しない類の不具合である（→ environment.md）。
+//
+// `Get-ScheduledTask` の `StartBoundary` は `2026-09-18T08:10:00` の形で、
+// **ASCII のみ・ロケールに依らない。** 化けようがないものを読む。
+function taskStartTime() {
+  const ps = "$ErrorActionPreference='Stop'; "
+    + "$t = (Get-ScheduledTask -TaskName '" + TASKNAME + "').Triggers; "
+    + "if ($t) { $t[0].StartBoundary }";
+  try {
+    const out = execFileSync("powershell", ["-NoProfile", "-NonInteractive", "-Command", ps],
+      { encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] }).trim();
+    const m = /T(\d{2}):(\d{2})/.exec(out);
+    return m ? m[1] + ":" + m[2] : null;
+  } catch (_) { return null; }
+}
+
 function readTaskState() {
   if (process.platform !== "win32") return null;
   if (!taskExists()) return { registered: false, expected: TASK_TIME };
-  let start = null;
-  try {
-    start = startTimeHHMM(execFileSync("schtasks", ["/query", "/tn", TASKNAME, "/v", "/fo", "LIST"],
-      { encoding: "utf8", stdio: "pipe" }));
-  } catch (_) {}
-  return { registered: true, start_time: start, expected: TASK_TIME, matches: start === TASK_TIME };
+  const start = taskStartTime();
+  return {
+    registered: true,
+    start_time: start,                 // 読めなければ null
+    expected: TASK_TIME,
+    matches: start === null ? null : start === TASK_TIME,   // **読めないことを「不一致」と言わない**
+    last_change: LAST_CHANGE           // 直前の是正の結果（試した／通った／通らなかった）
+  };
 }
 
 function retimeTask() {
-  let before = "";
-  try {
-    const v = execFileSync("schtasks", ["/query", "/tn", TASKNAME, "/v", "/fo", "LIST"],
-      { encoding: "utf8", stdio: "pipe" });
-    before = startTimeHHMM(v) || "";
-  } catch (_) { /* 読めなくても直しに行く */ }
+  const before = taskStartTime();
+  if (before === TASK_TIME) {
+    say("   実行時刻は 毎日 " + TASK_TIME + " です");
+    LAST_CHANGE = { tried: false, before: before, after: before, ok: true };
+    return;
+  }
+  say("   実行時刻 " + (before || "読めない") + " → 毎日 " + TASK_TIME + " に変えます");
 
-  // 既に正しいなら触らない。毎朝の実行から呼ばれるので、黙っていられるようにする。
-  if (before === TASK_TIME) { say("   実行時刻は 毎日 " + TASK_TIME + " です"); return; }
-
+  // まず PowerShell。`Set-ScheduledTask` は `schtasks /change` より素性が分かる
+  // （失敗理由が英語で返り、cp932 で化けない）。通らなければ schtasks に落ちる。
+  const ps = "$ErrorActionPreference='Stop'; "
+    + "Set-ScheduledTask -TaskName '" + TASKNAME + "' "
+    + "-Trigger (New-ScheduledTaskTrigger -Daily -At '" + TASK_TIME + "') | Out-Null";
+  let ok = false, method = null, err = null;
   try {
-    execFileSync("schtasks", ["/change", "/tn", TASKNAME, "/st", TASK_TIME],
-      { encoding: "utf8", stdio: "pipe" });
-    say(before
-      ? "   実行時刻 " + before + " → 毎日 " + TASK_TIME + " に設定しました"
-      : "   実行時刻を毎日 " + TASK_TIME + " に設定しました");
-  } catch (err) {
-    say("   WARN 実行時刻を " + TASK_TIME + " に変えられませんでした（公開そのものは済んでいます）");
-    say("   " + String(err.message || err).split("\n")[0].slice(0, 140));
+    execFileSync("powershell", ["-NoProfile", "-NonInteractive", "-Command", ps],
+      { encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] });
+    ok = true; method = "powershell";
+  } catch (e1) {
+    err = String((e1.stderr || e1.message || e1)).split("\n").filter(Boolean)[0] || "";
+    try {
+      execFileSync("schtasks", ["/change", "/tn", TASKNAME, "/st", TASK_TIME],
+        { encoding: "latin1", stdio: ["ignore", "pipe", "pipe"] });
+      ok = true; method = "schtasks";
+    } catch (e2) {
+      method = "failed";
+    }
+  }
+
+  // **通ったと言う前に読み直す。** 「成功した」と出ているのに何も起きていないことがある。
+  const after = taskStartTime();
+  LAST_CHANGE = { tried: true, before: before, after: after, method: method,
+                  ok: after === TASK_TIME, error: err ? err.slice(0, 200) : null };
+
+  if (after === TASK_TIME) {
+    say("   実行時刻を 毎日 " + TASK_TIME + " にしました（" + method + "）");
+  } else {
+    say("   WARN 実行時刻を変えられませんでした（公開そのものは済んでいます）");
+    if (after) say("   いまの値: " + after);
+    if (err) say("   " + err.slice(0, 140));
     say('   手で直す場合は、コマンドプロンプトで1行:');
     say('   schtasks /change /tn "' + TASKNAME + '" /st ' + TASK_TIME);
   }
