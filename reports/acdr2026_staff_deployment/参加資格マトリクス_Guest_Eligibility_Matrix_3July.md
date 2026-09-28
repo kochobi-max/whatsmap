@@ -820,3 +820,7 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
 - 残る修正: (1) 宛名と "Dear" が Komarudin のまま（h 抜け、Mizan 自身が Khomarudin と確認済み）、(2) cc 行なし、(3) 第 4 項後半 "you could share your insights" が宛名（Khomarudin 氏）に向いたまま → she/her、(4) BRIN の添付一覧に Roundtable Information が残存、(5) 第 6 項末尾のピリオド欠落、(6) 要旨期限 9 Oct は 10/9 全確定と同日で編集時間がない → 6 Oct を提案。
 - 田中 GI 0928: Field Trip 13:00–16:15、Parade 18:00–20:05、Lunch → resource persons に修正済み。登録期限は 10 October のままでレターの 9 October と不一致。文法 2 点は未修正。田中から「現行 Agenda」の共有依頼 → 0927 版を送付。
 - 返信下書き（Mizan 宛、全員 cc、9/28）作成。
+
+### リソース招待状・GI 最終版（9/28、荒木田修正）
+- `resource_letter_final_0928/` に 4 ファイル。Mizan clean 版に対し: BRIN 宛の宛名・冒頭を Khomarudin に、cc 行追加、第 4 項後半 she/her、添付一覧から Roundtable Information 削除、両レター第 5 項(a) を Tuesday, 6 Oct 2026、第 6 項末尾ピリオド。GI は登録期限 9 October、文法 2 点修正。
+- レター日付は 25 September のまま（署名日に打ち直し）。藤本宛の送付下書き（全員 cc、添付は手動）を作成。Mizan 宛の修正依頼下書きは取り下げ。
