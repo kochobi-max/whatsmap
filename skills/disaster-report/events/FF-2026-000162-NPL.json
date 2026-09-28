@@ -1827,6 +1827,34 @@
       "url": "https://reliefweb.int/report/nepal/nepal-protection-girls-must-be-stepped-trafficking-and-violence-risks-rise-one-month-after-devastating-floods",
       "tier": "official",
       "_note": "新規性あり。人身取引・GBV・児童婚リスクの上昇という新しい観点。support_international[] に追加して反映済み。"
+    },
+    {
+      "label_en": "ReliefWeb: World Vision Nepal Situation update 7, 23 Sep 2026",
+      "label_ja": "ReliefWeb「World Vision ネパール状況更新7」（2026年9月23日）",
+      "url": "https://reliefweb.int/report/nepal/world-vision-international-nepal-rasuwa-nuwakot-flash-flood-emergency-response-situation-update-7-23-september-2026",
+      "tier": "media",
+      "_note": "確認済み。死者1,415／不明5,786はNGO側の値で古い。headline不変。"
+    },
+    {
+      "label_en": "ReliefWeb: IFRC DREF Operation Update #01 (MDRNP022), 25 Sep 2026",
+      "label_ja": "ReliefWeb「IFRC DREF運用更新#01」（2026年9月25日）",
+      "url": "https://reliefweb.int/report/nepal/nepal-flood-2026-dref-operation-update-01-mdrnp022",
+      "tier": "official",
+      "_note": "確認済み。NDRRMA 9/21値（死者1,411／不明5,875／救助13,784）を引用、既存の#31と整合。"
+    },
+    {
+      "label_en": "ReliefWeb: World Vision — one month on, 26 Sep 2026",
+      "label_ja": "ReliefWeb「World Vision 発災1か月」（2026年9月26日）",
+      "url": "https://reliefweb.int/report/nepal/one-month-nepals-flood-affected-children-still-carry-weight-loss",
+      "tier": "media",
+      "_note": "確認済み。死者1,451／不明5,786（#31の値）。学校32校・児童9,800人。headline不変。"
+    },
+    {
+      "label_en": "ReliefWeb: Save the Children — Western Nepal floods, 28 Sep 2026",
+      "label_ja": "ReliefWeb「Save the Children 西部ネパールの洪水」（2026年9月28日）",
+      "url": "https://reliefweb.int/report/nepal/news-quote-floods-drive-hundreds-families-western-nepal-their-homes",
+      "tier": "media",
+      "_note": "確認済み。別の洪水（西部、死者20人超・約750世帯避難）。本件の集計には含めない。"
     }
   ],
   "images": {

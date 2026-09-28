@@ -2422,6 +2422,20 @@
       "url": "https://reliefweb.int/report/colombia/colombia-monitoreo-de-emergencias-humanitarias-desplazamiento-masivo-y-confinamiento-2025",
       "tier": "media",
       "_note": "2025年分。地震と無関係。確認済み、反映不要。"
+    },
+    {
+      "label_en": "ReliefWeb: ACAPS Thematic Report — expected humanitarian impacts, 25 Sep 2026",
+      "label_ja": "ReliefWeb「ACAPS テーマ別報告：予想される人道影響」（2026年9月25日）",
+      "url": "https://reliefweb.int/report/colombia/acaps-thematic-report-colombia-earthquakes-expected-humanitarian-impacts-25-september-2026",
+      "tier": "media",
+      "_note": "確認済み（2026-09-28）。16県498市町村・要支援810万人（新規120万）等。分析文書。headline数値は不変。"
+    },
+    {
+      "label_en": "ReliefWeb: ACAPS 専題報告（スペイン語版）",
+      "label_ja": "ReliefWeb「ACAPS テーマ別報告」スペイン語版（2026年9月25日）",
+      "url": "https://reliefweb.int/report/colombia/colombia-impactos-humanitarios-previstos-del-terremoto-acaps-reporte-tematico-25-de-septiembre-2026",
+      "tier": "media",
+      "_note": "英語版の同一文書。反映不要。"
     }
   ],
   "source_policy_en": "Source hierarchy: official > media > TBC. Government and scientific-agency figures are used as primary; media reports are used only where official figures are not yet published and are labelled as such. Items still being verified are marked TBC. Preliminary figures are never replaced by larger unverified numbers.",

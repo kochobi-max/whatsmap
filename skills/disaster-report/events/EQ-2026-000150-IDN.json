@@ -1280,6 +1280,20 @@
       "url": "https://www.antaranews.com/berita/5751641/mendikdasmen-berkomitmen-revitalisasi-1487-sekolah-untuk-pulihkan-ntt",
       "tier": "official",
       "_note": "新規性あり。教育省の1.2兆ルピア予算配分と学校復旧棟数。タイムラインに追加して反映済み。"
+    },
+    {
+      "label_en": "ReliefWeb: ASEAN Weekly Disaster Update Week 39, 21-27 Sep 2026",
+      "label_ja": "ReliefWeb「ASEAN週間災害情報 第39週」（2026年9月28日）",
+      "url": "https://reliefweb.int/report/indonesia/asean-weekly-disaster-update-week-39-21-27-september-2026",
+      "tier": "official",
+      "_note": "確認済み（2026-09-28）。本件の被害集計値なし。反映不要。"
+    },
+    {
+      "label_en": "ReliefWeb: Caritas Indonesia housing, Tapanuli Tengah floods",
+      "label_ja": "ReliefWeb「Caritas Indonesia タパヌリ・トゥンガ洪水住宅支援」",
+      "url": "https://reliefweb.int/report/indonesia/caritas-indonesia-entrega-viviendas-los-residentes-afectados-por-las-inundaciones-en-tapanuli-central",
+      "tier": "media",
+      "_note": "別災害（スマトラの洪水）。関係なし。"
     }
   ],
   "attribution_en": "Figures reported by BNPB and relayed by IFRC/PMI and humanitarian partners; source and cut-off shown per row. All provisional.",
