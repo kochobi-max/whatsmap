@@ -806,3 +806,11 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
 - スライド下部に注記（変更点と要確認）を追加。
 
 児玉の質問（9/26）への回答方針: 壇・スクリーン視認・演台数・机移動の担当・AV 席の左右（現行スケッチは前方左）・後方卓構成（9/24 Sylvia 宛は 8 人掛け×1×4 列＝32）は 9/29 JM6 で COSEM に確認。既知: 演壇は EXPO 備品でマイクなし、クリッカー 1 本無償、タイマーなし、切替は AV オペレータ。観察者・国際機関（AHA, ADPC, ADB）は名札ルールに従い 2 列目右の空き 3 席へ。リソース前方席は TS のみの組替え。
+
+### 9/28 荒木田指示による改訂（上記案を差し替え）
+- Armenia と Azerbaijan は係争の経緯から離す（児玉案どおり Armenia は左脚上部、Azerbaijan は右脚上部）。
+- Japan は U 字の底（Pakistan, Myanmar, Japan, Mongolia）。仙台市を目立つ後方中央に置くため。Maldives は右脚末尾へ。上端の主催 3 者案は取り下げ。
+- RT で発言する Google（Sirada 氏）と仙台市（副市長）に卓上マイク: 教室型 1 列目の 3 卓目・4 卓目に各 1 本（計 2 本）。
+- 後方教室型は 2 人掛け×5 卓×4 列＝40 席に変更（9/24 案の 8 人掛け×1×4＝32 席から）。スケッチ `ACDR2026_Peridot201-203_U28_classroom_sketch_0928.png` を再作成（draw3.py）。Expo ピッチで 5 卓＝約 10.8 m、側面クリアランス除きの幅約 11.4 m に収まる計算だが、Expo に縮尺図での確認が必要。
+- 教室型 1 列目: PNG・Pakistan（2 人目）、AHA Centre・ADPC、Google*・ADB、仙台副市長*・仙台、仙台・仙台。2 列目: ROK×2。他は general（自由席）。前方登壇者席（resource×4 の placeholder）は TS のみ。
+- 出力: `ACDR2026_配席表_0928_荒木田修正.pptx`（スケッチ画像も 0928 版に差替え）。動態表の「会場レイアウト」画像は未差替え。
