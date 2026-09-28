@@ -41,7 +41,7 @@ t=d.tables[0]; r=t.rows[2]
 def setcell(c,text):
     ps=c.paragraphs; setp(ps[0],text)
     for p in ps[1:]: p._p.getparent().remove(p._p)
-setcell(r.cells[0],'10/　(　)\n　：00'); setcell(r.cells[3],'理事長　北本　　')
+setcell(r.cells[0],'10/　(　)\n　：00'); setcell(r.cells[3],'理事長　小川　雄二郎')
 setp(P[3],'「アジア防災会議2026」の開催について')
 setp(P[7],'今回、シンガポール民間防衛庁（SCDF）の協力の下、シンガポール国際防災・危機管理エキスポ（SIDEX）と合同で「SIDEX-ACDR2026」として、シンガポールEXPOにてアジア防災会議2026（ACDR2026）が開催され、10月28日（水）の開会式には、内閣府から〇〇が出席（予定）します。')
 setp(P[8],'なお、ACDR2026ウェビナー（URLは確定後に記載）より、どなたでも会議を御覧いただけます。')
