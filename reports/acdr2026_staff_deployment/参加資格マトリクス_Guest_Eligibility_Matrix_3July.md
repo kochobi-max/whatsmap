@@ -814,3 +814,9 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
 - 後方教室型は 2 人掛け×5 卓×4 列＝40 席に変更（9/24 案の 8 人掛け×1×4＝32 席から）。スケッチ `ACDR2026_Peridot201-203_U28_classroom_sketch_0928.png` を再作成（draw3.py）。Expo ピッチで 5 卓＝約 10.8 m、側面クリアランス除きの幅約 11.4 m に収まる計算だが、Expo に縮尺図での確認が必要。
 - 教室型 1 列目: PNG・Pakistan（2 人目）、AHA Centre・ADPC、Google*・ADB、仙台副市長*・仙台、仙台・仙台。2 列目: ROK×2。他は general（自由席）。前方登壇者席（resource×4 の placeholder）は TS のみ。
 - 出力: `ACDR2026_配席表_0928_荒木田修正.pptx`（スケッチ画像も 0928 版に差替え）。動態表の「会場レイアウト」画像は未差替え。
+
+### リソース招待状: Mizan 修正版（9/28 10:40）と田中 GI 修正版（9/28 10:21）の確認
+- Mizan 版（BRIN・YI-Lab、tracked と clean）: 第 1 項で BRIN の代表として Dr. Yenni Vetrita を指名、第 4 項前半・第 9 項も Vetrita 氏に、表題を "INVITATION FOR BRIN's REPRESENTATIVE TO SPEAK"、"Research" 修正、宛名に ", Government of Indonesia" 追加、第 6 項に費用条項、YI-Lab の添付一覧から Roundtable Information を削除。提出期限は 9 Oct（要旨等）/20 Oct（スライド）、登録期限 9 Oct に変更。
+- 残る修正: (1) 宛名と "Dear" が Komarudin のまま（h 抜け、Mizan 自身が Khomarudin と確認済み）、(2) cc 行なし、(3) 第 4 項後半 "you could share your insights" が宛名（Khomarudin 氏）に向いたまま → she/her、(4) BRIN の添付一覧に Roundtable Information が残存、(5) 第 6 項末尾のピリオド欠落、(6) 要旨期限 9 Oct は 10/9 全確定と同日で編集時間がない → 6 Oct を提案。
+- 田中 GI 0928: Field Trip 13:00–16:15、Parade 18:00–20:05、Lunch → resource persons に修正済み。登録期限は 10 October のままでレターの 9 October と不一致。文法 2 点は未修正。田中から「現行 Agenda」の共有依頼 → 0927 版を送付。
+- 返信下書き（Mizan 宛、全員 cc、9/28）作成。
