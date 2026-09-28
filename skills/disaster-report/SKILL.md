@@ -327,6 +327,9 @@ node generator/scripts/build_all.js
   数値急変ゲートに掛かり続け、毎朝の確認メールが無意味に出る。
   **信頼度を落としたいのではなく、経路を明示したいのである。** 経路は `src` で示す
 - **本文を curl で取ってから数値を書く。** `WebSearch` の要約から数値を取らない。
+  取得は `generator/scripts/fetch_url.js`（curl）を使う。
+  **`WebSearch` は egress プロキシを通らないので、遮断中でも結果が返る。**
+  つまり「WebSearch で読めた」は「到達できた」の証拠にならない。
   届かなければ許可リストへの追加を頼む。**「新しい数値が無い」と結論しない**
 - 媒体によって数値が食い違うときは**合算・平均化しない。** 媒体名と日付を付けて併記する
 - **後日、公的機関の PDF が出たらそちらへ差し替える。** 履歴は消さず、
@@ -704,6 +707,10 @@ node skills/disaster-report/generator/scripts/check_pc_health.js
 - **宛先**: `kenkyubu@adrc.asia`, `td-date@adrc.asia`
 - Superhuman の `create_or_update_draft`（`body` に完成HTMLを渡す）→ `send_draft`。
   **HTML本文はCDATAで囲まない。** 送信はユーザー承認済み
+- **送信後、`get_draft_send_status` が `closed`（配信済み）になるまで確認する。**
+  「`send_draft` が success を返した」で終わらない。`pending` は取り消し待ちの状態で、
+  まだ出ていない。**出たことを確かめてから `_prev` を更新する**
+  （2026-09-28 に手順を縮めたとき、この行が一度落ちた。動いているものに届く場所はここである）
 
 #### 件名
 
