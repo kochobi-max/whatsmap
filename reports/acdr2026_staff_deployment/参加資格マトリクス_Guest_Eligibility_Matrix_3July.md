@@ -833,3 +833,8 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
 ### リソースの日当（藤本 9/28 12:52 の照会）
 - 内規⑪「ACDR における旅費・謝金の基準」（2025/11/1 以降の会議に適用）: 加盟国参加者は日当 3,600 円（USD30）、謝金なし。外部講師（海外参加者・海外開催）は旅費を職員旅費規程で支給、謝金は原則なし。昨年もリソースは職員旅費規程で支給。
 - 判断（下書き）: リソース（BRIN・YI-Lab）は内規⑪ 2(2)① により職員旅費規程で支給、USD30 に揃えない。決裁書に根拠を記載。GI 負担あり版の Daily Allowance 段落を「in accordance with ADRC's travel regulations」に差し替え（`Resource1_final 0928r2`）。金額明記の要否は藤本に確認。Google・JAXA は自己負担、ウズベキスタン登壇者は加盟国枠（USD30）、内閣府枠の企業は内閣府手配。
+
+### BRIN 宛招待状の宛先問題（9/28 夕）
+- 経緯: 9/15 時点の BRIN 登壇候補は Widodo 氏または Khomarudin 氏。9/17 Mizan: 両氏は ACDR 週に ESCAP（バンコク）のため登壇者は Dr. Yenni Vetrita、招待状は Khomarudin 氏（Research Center for Geoinformatics 長）宛、Vetrita 氏 cc と指示。9/25 版までは Khomarudin 宛のまま本文が「あなたが登壇」で、9/28 最終版で「BRIN の代表として Vetrita 氏」に修正済み。
+- 9/28 荒木田: 本人宛の招待状でなかったため BRIN 側で通らなかった、との報告。上司宛にしたのは Mizan の指示によるもので、登壇者交代の未反映（9/25 版の欠陥）とは別の問題。BRIN の出張手続きには本人名義の招待状が要ると推定。
+- 対応: 2 通立てにする。(1) Khomarudin 氏宛の機関向け招待状（代表として Vetrita 氏を指名、BRIN 正式名称 National Research and Innovation Agency と肩書 Head of the Research Center for Geoinformatics に修正）、(2) Vetrita 氏本人宛の招待状（YI-Lab 宛と同型、Khomarudin 氏 cc）。`resource_letter_final_0928/` に 0928r2 として保存。どちらが BRIN の手続きに要るかは Mizan 経由で Vetrita 氏に確認してから署名へ。
