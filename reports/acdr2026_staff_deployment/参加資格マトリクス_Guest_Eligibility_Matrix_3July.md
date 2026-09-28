@@ -860,3 +860,8 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
 - WhatsApp: 3・4 人目の扱いは Sylvia が 9/29 に COSEM へ対面確認（個人的には枠の振替に問題なしとの見方）。JM6 は 9/29 09:00 SGT に変更。Dorsett はちょうど 37 室、Azerbaijan 2 室は 2 名利用（Zamanov 単独、Kamran＋Salmanova、Zamanova は Zamanov と同室で田中訂正）、Dorsett 記載 23 名以外は未確定、COSEM が確定期限を 2 日延長。ホテルはチェックインにパスポート番号が必要。Hotel Mi は 10 室のまま（追加不要）。フィールドトリップは CDA が 25 名×2＝50 名に増枠、他区分も空きがあれば参加可。SIDEX Day 1 最新プログラム受領（9/28 18:26）。ROK＝Republic of Korea と荒木田回答。名札約 50 の問いには約 70 と回答予定。
 - 9/29 荒木田指示で下書き改訂: 消防安全は「後方が空いているので全体を後ろへ下げる」を第一案、足りなければ事務局ブロックを左側面列の下 4 席へ。名札の対象はメンバー国、アドバイザー国、ADPC、RT・TS で発言する組織、ADRC のみ（AHA Centre・ADB・一般参加者は名札なし）。概数約 60: U28、側面列のメンバー国・アドバイザー国 14、教室型のメンバー国 2 人目以降・ADPC・RT 発言者約 9、TS 前方 8、予備。名簿は 10/13 までに送付。
 - 9/29 追記: AHA Centre と ADB は RT で発言の可能性大 → 名札対象に含める。教室型の名札約 11（PNG・Pakistan 2 人目、ROK 3・4 人目、ADPC 2、Google、仙台市、AHA Centre、ADB）、総数約 65。配席上は AHA・ADB は教室型 1 列目（RT 発言用の卓上マイク 2 本は仙台市・Google 用のまま。AHA・ADB が発言する場合はスタンドマイクかハンドマイク）。
+
+### 9/29 追記: 名札枚数 WhatsApp 回答（Sylvia宛）
+
+- 荒木田より WhatsApp で回答済み: "Around 60–65 incl. spares. Will send the list by 13 Oct." 相当（実数57＝U字28＋2列目18＋教室列約11、予備込み約65）。
+- メール返信下書き（r-6134277740932700381、About 65）と整合。名札一覧の送付期限は 10/13。
