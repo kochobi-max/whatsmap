@@ -934,3 +934,4 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
 - 9/29 訂正（荒木田）: 10月時点の肩書は 所長＝宮木氏＝Executive Director（北本氏の ED 就任は 11/1）。Closing Remarks は宮木所長が Executive Director として登壇。Summary（6分）に続けて演台に留まり閉会挨拶（3分）を行う構成に変更（MC は再紹介のみ）。閉会挨拶案を `ACDR2026_Closing_Remarks_MIYAKI_案0929.docx` に改名・改稿（「所長（Executive Director）として」、「ただいまサマリーで申し上げたとおり」）。北本版は削除。シナリオ 11:45 行の肩書も Executive Director に修正、Read me に肩書の注記を追加。
 - 9/29 再訂正（荒木田）: Closing Remarks＝三浦センター長（Chairman）、Summary＝宮木所長（Executive Director）。閉会挨拶案を `ACDR2026_Closing_Remarks_MIURA_案0929.docx` に戻し（「宮木所長から報告があったとおり」「As Executive Director Miyaki has just summarised」）、宮木版は削除。シナリオ 11:51 行・Read me・PPT 20/22・Opening 案の参照行を更新。
 - 9/29 荒木田: 次回 ACDR は仙台開催。閉会挨拶案（三浦）に「次回は仙台市で開催予定【時期: 要確認】、仙台市の皆さまとともにお迎えする」を追加（日英）。シナリオ 11:51 行と Read me を更新。開催時期は未記載。
+- 9/29 荒木田: 次回 ACDR（仙台）は APMCDRR と back-to-back 開催。閉会挨拶案（日英）とシナリオ注記に反映。
