@@ -936,3 +936,4 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
 - 9/29 荒木田: 次回 ACDR は仙台開催。閉会挨拶案（三浦）に「次回は仙台市で開催予定【時期: 要確認】、仙台市の皆さまとともにお迎えする」を追加（日英）。シナリオ 11:51 行と Read me を更新。開催時期は未記載。
 - 9/29 荒木田: 次回 ACDR（仙台）は APMCDRR と back-to-back 開催。閉会挨拶案（日英）とシナリオ注記に反映。
 - 9/29 荒木田: 次回 ACDR（仙台、APMCDRR と back-to-back）は 2027年10月。閉会挨拶案とシナリオ注記の「時期要確認」を解消。
+- 9/29 荒木田: 評価フォームは ADRC が用意（PPT 24 に URL/QR）。林副大臣の使用言語・通訳方式は内閣府に確認。シナリオの該当注記と Read me（未確定事項の確認先: 内閣府／ADRC／Sylvia）を更新。
