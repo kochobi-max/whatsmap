@@ -918,3 +918,12 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
 2. 名札用の国旗ロゴ等素材をSCDF担当へ。
 3. Dorsett名簿（フライト情報・パスポート番号）の提出を事務局と調整。
 4. 土曜ツアーの日程確定。
+
+### 9/29 進行シナリオ・開会挨拶案の作成（10/8 全体ブリーフィング用）
+
+- 参考資料: ACDR2021 Day1 シナリオ（Day1_Scenario_1213_rev1.xlsx、オンライン版）、ACDR2023 Screen image pptx 2版（待機画面・登壇者・Instruction for Presenters〈4分ベル〉・評価QR・Thank you）、ACDR2025 三浦開会挨拶（日英）。
+- 成果物（`進行シナリオ_0929/`）:
+  - `ACDR2026_進行シナリオ_Opening_RT_TS_CS_案0929.xlsx`: Read me／Day1（Opening 12:45-13:00、RT Part 1 13:00-15:00）／Day2（RT Part 2 09:00-09:30、TS 09:30-11:30、Summary & Closing 11:45-12:00）／Screen images（PPT 01-26 一覧）。列は 2021 形式（Time・Agenda・Screen image・Scenario・View・MC・PPT・Mic/AV・Zoom・Note JP/EN・写真・神戸）。担当は動態表 v2.8 の Day1/Day2 割当に合わせた。
+  - `ACDR2026_Opening_Remarks_MIURA_案0929.docx`: 日英（英語433語＝約3.5分）。SJ60、東日本大震災15年、SFDRR 残り4年、テーマ、RT/TS/視察/パレード/30日会議、センチネルアジア・GLIDE。2026年の災害段落は【要更新】、加盟国数33は【要確認】。閉会挨拶の骨子を末尾に付記。
+- 仮定: 開会挨拶 各4分（3名で15分に収める）。RT ステートメントは各国4分（2023方式・ベル）、日本・仙台市5分、国際機関3分。発言順は Singapore→Japan→仙台市→メンバー国アルファベット順→ADPC/AHA/ADB/NZ/Google/オンライン。Part 2 は Sri Lanka〜Viet Nam の5か国＋まとめ。TS は rev1.0 配分（紹介5＋15分×6＋質疑15＋まとめ10）、登壇順は仮で内閣府枠を最後。Closing は Summary（Gerry）＋三浦センター長＋SCDF 代表【TBC】。
+- 要確認事項: Commissioner の出席、林副大臣の通訳方式、RT の Q&A 方式（用紙かフォーム）、Co-Moderator の有無、Closing の SCDF 登壇者、次回開催地発表、評価フォーム URL、フィールドトリップ集合場所。
