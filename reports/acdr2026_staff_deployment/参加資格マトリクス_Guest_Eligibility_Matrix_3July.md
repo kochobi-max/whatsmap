@@ -1053,3 +1053,12 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
 5. 動態表 v2.94: 27 日の役員・職員の移動区分、28〜30 日朝の移動、フィールドトリップ集合場所、Sylvia の各時刻を反映（輸送計画が確定してから）。
 6. 名刺発注（10/6 まで、藤本へ）。
 7. Sylvia 未回答のまま: ACDR Opening 登壇順、Commissioner 出席、Closing の SCDF 登壇者、カメラ業者、ステージ・バナー方式、会場図面、Day 1 午前の動線（FiSAC）、VIP 名簿、07:30 入室。10/8 ブリーフィングまでに順次。
+
+### 10/1 三浦センター長挨拶: 児玉修正案（案1001）への対応
+
+- 児玉案は変更履歴（著者 ADRC_Kodama）で英文のみ全面書き換え、日本語版は削除。受け入れ後の英文は 568 語で元の rev2（545 語）より長い（「短くするため」という説明と逆）。荒木田が送付した 13:26 版は rev2（4 分版）であり、3 分の rev3 は未送付だった。
+- 事実誤り: 「On Friday, the SIDEX-ACDR 2026 Conference will take place, followed by the final summary session and the closing ceremony」→ ACDR のサマリー・閉会は 29 日 11:45-12:00（TS 直後）。児玉自身もメールで「閉会式は TS の後か、サマリーの後か」と確認しており、原稿はその確認前の記述。
+- 対応: 変更履歴を受け入れたうえで修正した 案1001r を作成（`進行シナリオ_0929/ACDR2026_Opening_Remarks_MIURA_案1001r.docx`、英語 539 語＝約 4 分）。修正点: 閉会の記述、冒頭 Excellencies、condolences/sympathy の使い分け、two member countries → Japan and Singapore、展示会の文の短縮、stark reminder 段落を 1 文に、utilised、the target year。原稿末尾に荒木田メモ（修正点と 3 分版の削除候補）。
+- 閉会挨拶 rev2（`ACDR2026_Closing_Remarks_MIURA_案1001_rev2.docx`、JP+EN、英語 280 語＝2 分強）: RT・TS の内容要約 2 段落を削除し「宮木所長が要約したので繰り返さない」の 1 文に置換。謝辞に在シンガポール日本国大使館を追加、次回仙台開催の発表・午後のプログラム案内・SJ60 謝辞は維持。
+- シナリオ（案0929＝0930 rev2）: 12:47 行の原稿参照を案1001r（約 4 分）に、11:51 行を閉会 rev2 に、Read me の持ち時間を「三浦 3〜4 分」に更新。
+- 児玉宛返信下書き r8800179640663525541（未送信、案1001r と閉会 rev2 を手作業で添付）: 修正点 5 項目、長さ（児玉案 568 語→約 540 語・約 4 分、3 分版の削除候補）、閉会式の位置（29 日 11:45 サマリー宮木→11:51 三浦→11:54 SCDF→11:57 連絡）。
