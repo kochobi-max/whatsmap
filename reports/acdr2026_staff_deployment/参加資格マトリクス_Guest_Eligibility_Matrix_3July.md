@@ -989,3 +989,24 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
 - 9/30 児玉メール（Fwd: FW: ACDR&SIDEXへの参加について、16:14）: 内閣府の依頼で (1) アジェンダの「Government of Japan」→「Cabinet Office of Japan (COJ)」、他資料も同様に、(2) Joint Opening の順序変更、(3) TS 時間配分の連絡、内閣府枠は内閣府＋Spectee＋WOTA（根来氏・郷坪氏の見込み、確認中）。→ `ACDR2026_Draft_Agenda_EN_0930.docx` 作成（0927 ベース: 日付、COJ 2か所、Joint Opening を GOH〈Ms Sim Ann, Second Minister for Foreign Affairs and Second Minister for Home Affairs, tbc〉→COJ→NFEC、RT の Co-Moderator 行を削除〈Gerry・吉田 9/30 合意〉。ACDR Opening の順は未変更）。「Government of Japan」は他に TS コンセプトノート rev1.1 public（池田）に1か所、PreRead JM5（内部・旧）に4か所。シナリオは COJ 表記に修正、内閣府枠を Spectee＋WOTA に。児玉宛返信下書き r-2381417605617450303（アジェンダ添付は手動、TS 配分を記載、林副大臣の言語・通訳と原稿共有の確認依頼）。
 - 9/30 RT メール: Gerry 14:23「昨年は喜多参事官単独で問題なし、Co-Moderator 不要では」→ 吉田 15:01 同意、「ADB・AHA Centre・UNDP/WMO の発言意向を教えてほしい」。→ 吉田宛返信下書き r979913958495887608（cc Gerry・児玉、日英）: Co-Moderator 削除済み、3者の現状（ADB 未定、AHA 可能性大だが未確認、UNDP/WMO 未登録）、RT 担当から直接確認を依頼、NZ/AUS は荒木田が Sylvia 経由で確認、残る回答は 10/3 まで。
 - 9/30 WhatsApp（午後）: 児玉→Sylvia「Commissioner は5分で、Chairman は短めにする」→ ACDR Opening は三浦 3分・Commissioner 5分・林 4〜5分・MC 2分に変更。三浦開会挨拶を rev3（英語約330語、3分）に短縮（災害は名称のみ、数値なし。4分版が必要なら rev2 の段落を戻す）。長官夕食会（10/26）: Home Team NS Khatib, Orchid Live Seafood, 18:30。GOH 代表団（VIP ツアー）: 林副大臣＋通訳＋随行1名の3名、ADRC は三浦センター長＋北本理事（児玉が組織序列を説明）、宮木所長は他グループ、Joint Opening では三浦・北本と同席し退場後に移動。通訳の同席要否は児玉が内閣府へ確認。内閣府代表団5名（1〜3男性、4〜5女性、4・5は 10/26 23:25 着）、月の誤りを訂正し起塚氏が Jillian へ再送。Day 1 動線: 児玉が「FiSAC 基調講演後に退室して自由見学」の流れを Sylvia に確認（ADRC の回答は未定、荒木田は協定外として不同意）。Dorsett の 10% リリースは初回トランシェ起算／日割りか、藤中・Sylvia が契約書を確認中。**Sylvia が荒木田宛にバナーデザインを送付（@MASARU ARAKIDA pls see the banner design below、画像未受領）→ 荒木田の確認が必要。**
+
+### 9/30（夕）Opening 持ち時間の反映、バナー案・Dorsett アトリション・内閣府名簿の評価
+
+- 進行シナリオ（案0929＝0930 rev2 同内容）に未適用だった修正を反映: Opening 持ち時間＝三浦 約3分（12:47）・Commissioner 5分（12:50）・林副大臣 4〜5分（12:55）・MC 計2分。Read me に登壇順（三浦→Commissioner→林、暫定）と持ち時間の前提を追記。Joint Opening 参考行に GOH 随行（林副大臣＋通訳＋随行1、三浦センター長、北本理事、宮木所長は別グループで Joint Opening 同席）を追記。旧記述「挨拶3名×4分」「各4分＋MC 3分」を置換。
+- 動態表 v2.93 COSEM協議事項に J57〜J60 を追加（Opening 持ち時間・登壇順、10/26 長官夕食会、Dorsett アトリション、バナー案）。COUNTIF 範囲を I5:I64 に更新。
+- 児玉宛の返信下書きを作り直し（r-9001468911912945540、未送信、アジェンダ添付は手作業）。内閣府への確認事項に3点追加: 林副大臣の英文肩書（起塚名簿は「Deputy Minister for Disaster Management, Cabinet Office」）、バナーへの内閣府ロゴ掲載要否、林副大臣の帰国便（28日 22:20）と Gala 出席。
+
+**バナーデザイン案（Sylvia 9/30、画像確認）**
+- 構成: 上段 SG 国旗・SCDF 紋章＋ロゴ・COSEM・ADRC ロゴ・日本国旗。下段「SIDEX-ACDR 2026 / in conjunction with FiSAC」ロゴ、「ASIAN CONFERENCE ON DISASTER REDUCTION 2026」「27-30 October 2026 | Singapore Expo」。
+- 判定: 会期 27-30 Oct はアジェンダ表紙・内閣府記者発表（全体 27–30）と一致し許容。FiSAC 併記は協定第8条どおり。ADRC ロゴは公式データ（高解像度）を送る。内閣府のロゴ・名称がない点は内閣府に確認（記者発表では主催: 内閣府・ADRC）。ADRC 側から差し替えを求める要素は現時点でなし。
+- 返答案（WhatsApp、荒木田→Sylvia）: "Thank you, the design looks good to us. Two small points: (1) I will send the official ADRC logo file (high-resolution) so it can be replaced if needed; (2) Kodama-san is checking with the Cabinet Office whether they would like their logo added, as they are a co-organiser of ACDR. Everything else (title, dates, FiSAC line) is fine."
+
+**Dorsett 10% リリース（Jillian 9/30 メール、契約書画像、藤中の WhatsApp）**
+- 契約（COSEM⇔Dorsett、支払は COSEM 前払い）: 保証ブロック 10/27〜30 各60室、S$250++（S）/275++（D）、朝食・Wi-Fi 込。アトリション 1st review 8/28（60日前）30%、2nd review 9/27（30日前）10%「release of any unsold room」。「On each cut-off date, the percentage of guestrooms, rounded up to the nearest whole number, under review shall either be guaranteed by the Client or released back to the Hotel」。追加室は「room availability と別料金」。
+- Jillian の計算: 10/26 30→24室（6室リリース、10%＝3室、3室ペナルティ）、10/30 37→27室（10室リリース、10%＝4室、6室ペナルティ）。ホテルと交渉可だが ADRC への先行連絡が必要。
+- 評価: (1) 総室泊の10%という ADRC 側の読みは「契約に明記なし」の範囲で主張可能だが、ブロックが「各日60室」で定義され「on each cut-off date … guestrooms under review」とあるため、日別適用の方がむしろ自然。強く押せる論点ではない。(2) より強い論点は 10/26 がブロック外（27〜30日のみ）であること。26日分に10%規定を当てる根拠は契約書上なく、別途の確認条件がないか Jillian に確認する価値がある。(3) 2nd review 期限は 9/27 で、ADRC の減室連絡は 9/29（COSEM が2日延長）。厳密には期限後で、10%適用自体が COSEM の配慮。(4) ペナルティ対象 9 室泊（約 S$2,250++、税サ込 約 S$2,700）は空室で払うより利用に充てる方が得: Hotel Mi 泊の職員、自己負担で別ホテルの3人目以降、内閣府（10/26 着の2名）などを Dorsett に移せないか。(5) 契約当事者は COSEM。ADRC の負担は COSEM との取決め次第（協定第15項の宿泊負担区分を確認）。
+- 対応者: 藤中（Sylvia/Jillian と交渉中）。荒木田からの追加発言は不要。藤中に伝える要点は上記 (2)(4)。
+
+**内閣府名簿（起塚 9/30 再送、訂正版）**
+- 林 副大臣「Deputy Minister for Disaster Management, Cabinet Office」10/27 15:00 着・10/28 22:20 発。御手洗 Senior Director 10/27 着・10/29 22:20 発。中根 Director 10/27 着・10/30 22:20 発。青木 Director・起塚 Manager 10/26 23:25 着・10/30 22:20 発。
+- 影響: 林副大臣は 28 日夜に帰国のため Gala は途中退席か欠席（内閣府に確認、児玉宛下書きに記載）。御手洗参事官は 29 日 Closing まで出席可、30 日会議は中根・青木・起塚のみ。アジェンダ・シナリオの肩書「Deputy Minister, Cabinet Office of Japan (COJ)」は内閣府確認後に「Deputy Minister for Disaster Management, …」へ揃える。動態表の到着・出発シートは未更新（藤中の名簿反映を待つ）。
