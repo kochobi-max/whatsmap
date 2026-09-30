@@ -1010,3 +1010,12 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
 **内閣府名簿（起塚 9/30 再送、訂正版）**
 - 林 副大臣「Deputy Minister for Disaster Management, Cabinet Office」10/27 15:00 着・10/28 22:20 発。御手洗 Senior Director 10/27 着・10/29 22:20 発。中根 Director 10/27 着・10/30 22:20 発。青木 Director・起塚 Manager 10/26 23:25 着・10/30 22:20 発。
 - 影響: 林副大臣は 28 日夜に帰国のため Gala は途中退席か欠席（内閣府に確認、児玉宛下書きに記載）。御手洗参事官は 29 日 Closing まで出席可、30 日会議は中根・青木・起塚のみ。アジェンダ・シナリオの肩書「Deputy Minister, Cabinet Office of Japan (COJ)」は内閣府確認後に「Deputy Minister for Disaster Management, …」へ揃える。動態表の到着・出発シートは未更新（藤中の名簿反映を待つ）。
+
+### 9/30 17:08 児玉宛返信（アジェンダ 0930 添付）送信 → 17:19 児玉回答（内閣府確認済み事項）
+
+- 荒木田→児玉（17:08、作り直した下書きをそのまま送信）: アジェンダ修正点、TS 時間配分、内閣府への確認 4 点。
+- 児玉→荒木田（17:19）: (1) 林副大臣は ACDR Opening を英語で挨拶。(2) 英文肩書は Deputy Minister for Disaster Management, Cabinet Office of Japan。(3) 副大臣は Gala 欠席（日本企業との懇親会へ）、Gala は御手洗参事官が短時間顔を出す程度（星取表は共有済み）。(4) バナーは先日の打合せで確認し大使館にも確認済み、内閣府ロゴは不要。
+- 反映: アジェンダ `ACDR2026_Draft_Agenda_EN_0930_rev2.docx`（Joint Opening・ACDR Opening の 2 か所を「Deputy Minister for Disaster Management, Cabinet Office of Japan (COJ)」に。0930 版は 17:08 に送付済みのためファイルを分けた。次回の版で送付し、単独では再送しない）。進行シナリオ（案0929＝0930 rev2）: MC 呼び込みと PPT 03 の肩書、12:55 行の通訳記載を削除（演台マイクのみ）、Gala 欠席・28 日 22:20 帰国を注記、Read me の確認先から内閣府分を「確定」に。動態表 v2.93: J57 に内閣府確認、J60 バナーを「合意」、Day1 A21 に Gala 欠席と肩書。
+- 児玉宛の短い了解返信を下書き（r-4957170579005352615、未送信）。
+- Sylvia へのバナー返答（WhatsApp、荒木田）は内閣府ロゴの件を落として確定: "Thank you, the banner design looks good to us. Title, dates and the FiSAC line are all fine. I will send the official ADRC logo file (high-resolution) in case it is needed." ADRC ロゴのデータは荒木田が手作業で添付。
+- 残る内閣府関連の未確定: なし（Spectee・WOTA の発表者確認は児玉が継続）。
