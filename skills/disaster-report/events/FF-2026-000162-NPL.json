@@ -1855,6 +1855,48 @@
       "url": "https://reliefweb.int/report/nepal/news-quote-floods-drive-hundreds-families-western-nepal-their-homes",
       "tier": "media",
       "_note": "確認済み。別の洪水（西部、死者20人超・約750世帯避難）。本件の集計には含めない。"
+    },
+    {
+      "label_en": "ReliefWeb: IOM DTM Baseline Site Profiles Round 2 (15-22 Sep), 30 Sep 2026",
+      "label_ja": "ReliefWeb: IOM DTM Baseline Site Profiles Round 2 (15-22 Sep), 30 Sep 2026",
+      "url": "https://reliefweb.int/report/nepal/nepal-preliminary-findings-baseline-site-profiles-assessment-round-2-15-22-september-2026",
+      "tier": "media",
+      "_note": "確認済み。48か所中28か所が開所中。headline不変。"
+    },
+    {
+      "label_en": "ReliefWeb: IFRC one month on (FR), 25 Sep 2026",
+      "label_ja": "ReliefWeb: IFRC one month on (FR), 25 Sep 2026",
+      "url": "https://reliefweb.int/report/nepal/inondations-au-nepal-un-mois-apres-la-croix-rouge-renforce-son-soutien-face-la-persistance-des-fortes-pluies-ifrc",
+      "tier": "media",
+      "_note": "確認済み。数値の更新なし（心理社会的支援1,300人超、給水9,600人超）。headline不変。"
+    },
+    {
+      "label_en": "ReliefWeb: Logistics Cluster meeting minutes, 29 Sep 2026",
+      "label_ja": "ReliefWeb: Logistics Cluster meeting minutes, 29 Sep 2026",
+      "url": "https://reliefweb.int/report/nepal/nepal-meeting-minutes-29-september-2026",
+      "tier": "media",
+      "_note": "確認済み（調整会議、被害数値なし）。"
+    },
+    {
+      "label_en": "ReliefWeb: Coordination meeting slides, 29 Sep 2026",
+      "label_ja": "ReliefWeb: Coordination meeting slides, 29 Sep 2026",
+      "url": "https://reliefweb.int/report/nepal/nepal-coordination-meeting-slides-29-september-2026",
+      "tier": "media",
+      "_note": "調整会議資料。数値の更新なし。"
+    },
+    {
+      "label_en": "ReliefWeb: DG ECHO Daily Map 29 Sep 2026",
+      "label_ja": "ReliefWeb: DG ECHO Daily Map 29 Sep 2026",
+      "url": "https://reliefweb.int/report/nepal/nepal-china-eu-response-ice-rock-avalanche-and-flood-event-dg-echo-daily-map-29092026",
+      "tier": "media",
+      "_note": "地図。headline不変。"
+    },
+    {
+      "label_en": "ReliefWeb: Transport and recovery commentary",
+      "label_ja": "ReliefWeb: Transport and recovery commentary",
+      "url": "https://reliefweb.int/report/nepal/when-disaster-hits-transport-decides-how-fast-country-recovers",
+      "tier": "media",
+      "_note": "解説記事。数値更新なし。"
     }
   ],
   "images": {

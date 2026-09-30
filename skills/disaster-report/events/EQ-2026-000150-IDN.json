@@ -1294,6 +1294,20 @@
       "url": "https://reliefweb.int/report/indonesia/caritas-indonesia-entrega-viviendas-los-residentes-afectados-por-las-inundaciones-en-tapanuli-central",
       "tier": "media",
       "_note": "別災害（スマトラの洪水）。関係なし。"
+    },
+    {
+      "label_en": "ReliefWeb: JDR SDF unit conclusion (Kalimantan wildfire), 29 Sep 2026",
+      "label_ja": "ReliefWeb: JDR SDF unit conclusion (Kalimantan wildfire), 29 Sep 2026",
+      "url": "https://reliefweb.int/report/indonesia/conclusion-activities-japan-disaster-relief-self-defense-forces-unit-response-damage-caused-forest-and-land-fires-republic-indonesia",
+      "tier": "media",
+      "_note": "関係なし。カリマンタン森林火災への派遣終了。NTT地震とは別事象。"
+    },
+    {
+      "label_en": "ReliefWeb: Indonesia Drought DREF MDRID030",
+      "label_ja": "ReliefWeb: Indonesia Drought DREF MDRID030",
+      "url": "https://reliefweb.int/report/indonesia/indonesia-drought-2026-dref-operation-mdrid030",
+      "tier": "media",
+      "_note": "関係なし。干ばつ。"
     }
   ],
   "attribution_en": "Figures reported by BNPB and relayed by IFRC/PMI and humanitarian partners; source and cut-off shown per row. All provisional.",
