@@ -1179,3 +1179,10 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
 - 10/2 朝（JST）荒木田の指示（恒久）: Sylvia の呼び方は、日本語メール＝「シルビア様」、英語メール＝「Dear Sylvia san,」、WhatsApp＝「Sylvia san,」。（10/1 15:58 送信の V4 返信は「Dear Sylvia,」のまま。以後の下書き・文案はこの形式。）
 
 - 10/2 06:50 JST 荒木田指摘: セッションの時刻は UTC で、日本時間では日付が 1 日進んでいることがある。10/2 早朝（JST）に作ったファイルを改名（アジェンダ 1001→1002、動態表 as_of_1_Oct→as_of_2_Oct v2.94、シナリオ 案1001→案1002）、アジェンダの「Draft as of」も 2 October に。以後、記録の日付とファイル名は JST 基準で付ける。
+
+### 10/2 朝（JST）三浦センター長挨拶案の現状
+- 経緯: 荒木田 9/30 初稿 → 児玉 9/30 修正（案1001）→ 荒木田 10/1 07:30 案1001r（児玉の変更履歴を残して重ね書き、閉会 rev2）→ **児玉 10/1 12:23 返信: Opening draft1001_rev4・Closing draft1001_rev3**。児玉: 金曜の記述は荒木田案を採用、フィリピン・インドネシアは越境災害ではないので災害後の一文を修正、閉会は SJ60 を外し「また会いましょう」の表現を変更、三浦センター長には挨拶案を間もなく送ると伝達済み。「問題なければ修正履歴を取って三浦センター長に確認を」と依頼。荒木田の返信は未了だった。
+- 確認（10/2）: rev4 は児玉の変更 ins 3／del 1 のみ、受入後 551 語（約 4 分、ヘッダー 12:56-13:00）。rev3 は受入後 358 語（約 2.5〜3 分、ヘッダー 11:51-11:53）。内容は案1001r の方針どおり（Excellencies、condolences/sympathy、Japan and Singapore、金曜は SIDEX-ACDR 会議のみ、閉会はサマリーを繰り返さず次回 ACDR 仙台 2027 年 10 月を発表）。
+- 成果物: `進行シナリオ_0929/ACDR2026_Opening_Remarks_MIURA_draft1002_clean.docx`・`ACDR2026_Closing_Remarks_MIURA_draft1002_clean.docx`（変更履歴受入済み、三浦送付用）、児玉版 rev4／rev3 も保存。
+- 三浦センター長宛下書き（r-7293072311799159353、to miura@yamaguchi-u.ac.jp、cc 児玉・Gerry、未送信、添付は手作業）: 両挨拶の概要と語数・時間、登壇順は調整中、確認事項 2 点（次回 ACDR 仙台の発表の可否、メンバー国数「33」の最新値）、10/8 ブリーフィングまでに確定し SCDF にも共有。
+- 要確認: 「33 member countries」は荒木田初稿で [to be confirmed] だった数字。ADRC 公式の最新数に合わせる（Web 確認は証明書エラーで未了）。
