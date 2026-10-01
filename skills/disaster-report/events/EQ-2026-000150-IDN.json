@@ -21,27 +21,27 @@
     "jma_name_en": "",
     "edition": "",
     "prepared_by": "Asian Disaster Reduction Center (ADRC)",
-    "stamp": "2026-09-27 07:41 JST",
-    "update_date": "27/09/2026",
-    "timeline_range_en": "15 August - 21 September 2026 (Western Indonesian Time, UTC+7)",
-    "timeline_range_ja": "2026年8月15日〜9月21日（西部インドネシア時間 WIB、UTC+7）",
+    "stamp": "2026-10-01 08:00 JST",
+    "update_date": "01/10/2026",
+    "timeline_range_en": "15 August - 30 September 2026 (Western Indonesian Time, UTC+7)",
+    "timeline_range_ja": "2026年8月15日〜9月30日（西インドネシア時間 UTC+7）",
     "disseminate_en": "",
     "disseminate_ja": "",
     "optional_slides": [],
     "_optional_slides_comment": "日本固有スライドは該当データを持たせないことで自動的に落ちる。衛星観測（Sentinel Asia / 国際災害チャーター）のスライドは satellite[] にデータを入れれば描画される。",
     "headline": {
-      "deaths": 142,
+      "deaths": 156,
       "injured": 1603,
       "missing": 0,
       "houses_destroyed": 103427,
       "evacuees": 46461,
       "tier": "official",
-      "as_of": "2026-09-15 (BNPB 記者会見。死者142＝直接死48＋避難所での間接死94。インドネシア語国内報道経由)"
+      "as_of": "2026-09-30 (ANTARA, 30 Sep: BNPB-recorded indirect deaths at evacuation sites and posts reached 108, up from 94 on 15 Sep; Manggarai 44, East Manggarai 33, Nagekeo 20. Direct deaths 48 per BNPB 15 Sep, no later figure found. 156 = 48 + 108 is an ADRC sum, not a figure published by BNPB. インドネシア語国内報道経由)"
     },
     "subtitle_en": "M7.7, offshore Nagekeo Regency, Flores Island, East Nusa Tenggara - 15 August 2026",
     "subtitle_ja": "M7.7、東ヌサトゥンガラ州フローレス島 ナゲケオ県沖、2026年8月15日",
-    "edition_en": "10th report",
-    "edition_ja": "第10報",
+    "edition_en": "11th report",
+    "edition_ja": "第11報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
     "tz_note_en": "Times follow BNPB's own reporting in WIB (UTC+7) unless stated.",
@@ -146,8 +146,8 @@
     {
       "item_en": "Deaths (direct / indirect)",
       "item_ja": "死者（直接死／間接死）",
-      "value_en": "142 (BNPB, 15 Sep 2026 press conference): 48 direct deaths and 94 indirect deaths at evacuation sites. BNPB and the Ministry of Health (Kemenkes) carried out a joint verification and validation across the seven affected regencies and concluded that the 94 were not caused by physical trauma or building collapse. Medical-team data show most were older people (lansia) who died of complications of pre-existing chronic conditions such as stroke and diabetes. In a video statement on 17 September BNPB restated that the 94 did not die of direct physical trauma or building collapse, said medical teams had provided maximum care through health facilities and integrated health posts, and noted that logistics support posts at Labuan Bajo and Maumere had been active from the first day. It apologised if its earlier statement had caused public concern and speculation - this was not an apology for a delay in disclosure. The same day, Charles Honoris, a deputy chair of the DPR's Commission IX, called for an audit of conditions and health services at evacuation sites, noting that more people died at the sites than died directly in the earthquake, and asked that the Ministry of Health, Ministry of Home Affairs, BNPB and local governments take part. Also on 17 September, Amnesty International Indonesia (media manager Haeril Halim) demanded an immediate, independent, impartial and thorough investigation, arguing that deaths from chronic illness should have been avoidable with adequate health care and that an independent inquiry is needed to establish whether there was state negligence. The provincial BPBD NTT \"Inatana\" figure for the same date is 120; no authority has published an explanation of the divergence. Earlier BNPB figures: 136 (10 Sep), 127 (2 Sep), 120 (31 Aug, via AHA Centre), 111 (29 Aug). At the 10 September press conference BNPB gave 136 of which 88 were indirect, so the direct count has stood at 48 throughout and it is the indirect count that has risen: 57 (26 Aug), 72 (31 Aug), 88 (10 Sep), 94 (15 Sep). ANTARA still reported 94 indirect deaths as the current BNPB figure on 17 September.",
-      "value_ja": "142人（BNPB、9月15日記者会見）。内訳は**直接死48人と、避難所での間接死94人**。BNPBと保健省（Kemenkes）が被災7県で合同の検証・妥当性確認を行い、94人は地震による物理的外傷や建物倒壊が死因ではないと結論した。医療チームのデータでは大半が高齢者で、脳卒中・糖尿病など既往の慢性疾患の合併症による死亡である。BNPBは9月17日の動画声明で、94人は「地震による直接の物理的外傷や建物の倒壊で死亡したのではない」と改めて説明（原語 meluruskan＝データの訂正・明確化）したうえで、医療チームは各種医療施設・統合保健ポストを通じて最大限の対応を行っており、発災初日から Labuan Bajo と Maumere に兵站支援ポストを立ち上げていたとした。あわせて、先行する情報が社会に不安と憶測を招いたのであれば申し訳ないとして陳謝した。**「公表が遅れたこと」への謝罪ではない。** 国会（DPR）第IX委員会のチャールズ・ホノリス副委員長は同日、避難所の状況と保健医療サービスの監査を政府に求めた。「避難所で亡くなった人のほうが、地震で直接亡くなった人より多い」ことを理由に挙げ、保健省・内務省・BNPB・地方政府が関与する評価を求めている。同日、アムネスティ・インターナショナル・インドネシア（ハエリル・ハリム メディア・マネージャー）は、慢性疾患による死は適切な保健医療が受けられていれば避けられたはずだとし、**即時・独立・公平かつ包括的な調査**を要求した。国家に過失があったかを明らかにするために不可欠だとしている。同じ9月15日時点で州のBPBD NTT「Inatana」は120人としており、乖離の理由を当局が説明した発言は確認できていない。これまでのBNPB値は136人（9月10日）、127人（9月2日）、120人（8月31日、AHA Centre経由）、111人（8月29日）。9月10日の記者会見でBNPBは136人のうち88人を間接死としており、**直接死は一貫して48人で動いておらず、増えているのは間接死である**（57人＝8月26日→72人＝8月31日→88人＝9月10日→94人＝9月15日）。ANTARAは9月17日時点でも間接死94人を現時点のBNPB値として報じている。",
+      "value_en": "142 (BNPB, 15 Sep 2026 press conference): 48 direct deaths and 94 indirect deaths at evacuation sites. BNPB and the Ministry of Health (Kemenkes) carried out a joint verification and validation across the seven affected regencies and concluded that the 94 were not caused by physical trauma or building collapse. Medical-team data show most were older people (lansia) who died of complications of pre-existing chronic conditions such as stroke and diabetes. In a video statement on 17 September BNPB restated that the 94 did not die of direct physical trauma or building collapse, said medical teams had provided maximum care through health facilities and integrated health posts, and noted that logistics support posts at Labuan Bajo and Maumere had been active from the first day. It apologised if its earlier statement had caused public concern and speculation - this was not an apology for a delay in disclosure. The same day, Charles Honoris, a deputy chair of the DPR's Commission IX, called for an audit of conditions and health services at evacuation sites, noting that more people died at the sites than died directly in the earthquake, and asked that the Ministry of Health, Ministry of Home Affairs, BNPB and local governments take part. Also on 17 September, Amnesty International Indonesia (media manager Haeril Halim) demanded an immediate, independent, impartial and thorough investigation, arguing that deaths from chronic illness should have been avoidable with adequate health care and that an independent inquiry is needed to establish whether there was state negligence. The provincial BPBD NTT \"Inatana\" figure for the same date is 120; no authority has published an explanation of the divergence. Earlier BNPB figures: 136 (10 Sep), 127 (2 Sep), 120 (31 Aug, via AHA Centre), 111 (29 Aug). At the 10 September press conference BNPB gave 136 of which 88 were indirect, so the direct count has stood at 48 throughout and it is the indirect count that has risen: 57 (26 Aug), 72 (31 Aug), 88 (10 Sep), 94 (15 Sep). ANTARA still reported 94 indirect deaths as the current BNPB figure on 17 September. Update (1 Oct): ANTARA (30 Sep) reports that 108 evacuees have died of indirect causes at evacuation sites and posts as of end-September (up from 94 on 15 Sep): Manggarai 44, East Manggarai 33, Nagekeo 20. Most were older people and children with respiratory disease (pneumonia) and diarrhoea, per local governments. No later direct-death figure has been published; the 48 direct deaths of 15 Sep are retained. The total of 156 (48 + 108) is an ADRC sum, not a BNPB-published figure. The Minister of Home Affairs said on 30 Sep he would cross-check these deaths with the NTT provincial government.",
+      "value_ja": "142人（BNPB、9月15日記者会見）。内訳は**直接死48人と、避難所での間接死94人**。BNPBと保健省（Kemenkes）が被災7県で合同の検証・妥当性確認を行い、94人は地震による物理的外傷や建物倒壊が死因ではないと結論した。医療チームのデータでは大半が高齢者で、脳卒中・糖尿病など既往の慢性疾患の合併症による死亡である。BNPBは9月17日の動画声明で、94人は「地震による直接の物理的外傷や建物の倒壊で死亡したのではない」と改めて説明（原語 meluruskan＝データの訂正・明確化）したうえで、医療チームは各種医療施設・統合保健ポストを通じて最大限の対応を行っており、発災初日から Labuan Bajo と Maumere に兵站支援ポストを立ち上げていたとした。あわせて、先行する情報が社会に不安と憶測を招いたのであれば申し訳ないとして陳謝した。**「公表が遅れたこと」への謝罪ではない。** 国会（DPR）第IX委員会のチャールズ・ホノリス副委員長は同日、避難所の状況と保健医療サービスの監査を政府に求めた。「避難所で亡くなった人のほうが、地震で直接亡くなった人より多い」ことを理由に挙げ、保健省・内務省・BNPB・地方政府が関与する評価を求めている。同日、アムネスティ・インターナショナル・インドネシア（ハエリル・ハリム メディア・マネージャー）は、慢性疾患による死は適切な保健医療が受けられていれば避けられたはずだとし、**即時・独立・公平かつ包括的な調査**を要求した。国家に過失があったかを明らかにするために不可欠だとしている。同じ9月15日時点で州のBPBD NTT「Inatana」は120人としており、乖離の理由を当局が説明した発言は確認できていない。これまでのBNPB値は136人（9月10日）、127人（9月2日）、120人（8月31日、AHA Centre経由）、111人（8月29日）。9月10日の記者会見でBNPBは136人のうち88人を間接死としており、**直接死は一貫して48人で動いておらず、増えているのは間接死である**（57人＝8月26日→72人＝8月31日→88人＝9月10日→94人＝9月15日）。ANTARAは9月17日時点でも間接死94人を現時点のBNPB値として報じている。 更新（10月1日）：ANTARA（9月30日）によると、9月末時点で避難所・posko内の間接死は108人（9月15日の94人から増加）：マンガライ44、東マンガライ33、ナゲケオ20。地元自治体の説明では、高齢者と子どもが多く、肺炎などの呼吸器疾患と下痢が原因。直接死の新しい数値は出ておらず、9月15日の48人を維持。合計156人（48＋108）はADRCによる合算で、BNPBの公表値ではない。内務大臣は9月30日、NTT州政府に確認すると述べた。",
       "source_en": "BNPB (press conference, 15 Sep 2026, Plt. Kapusdatinkom Berton SP Panjaitan; via Indonesian-language domestic media - ANTARA / Kompas / Tirto / Republika / NU Online)",
       "source_ja": "BNPB（9月15日記者会見、Plt. Kapusdatinkom Berton SP Panjaitan。インドネシア語国内報道 ANTARA／Kompas／Tirto／Republika／NU Online 経由）",
       "tier": "official",
@@ -719,6 +719,22 @@
       "src": "BPBD Manggarai Barat (Kompas)",
       "en": "Manggarai Barat Regency BPBD reported 6,657 houses verified damaged by the earthquake within the regency (488 severely, 1,589 moderately, 4,580 lightly damaged), a regency-level verification tally distinct from BNPB's national figures. Owners of severely damaged houses are offered a choice of temporary-housing (huntara) construction or a housing-wait allowance (DTH) of Rp 600,000/month; 248 families have opted for the DTH, citing lack of land for huntara construction.",
       "ja": "マンガライ・バラット県BPBDが、県内で6,657棟の住家被害を検証済みと発表（全壊488棟・中破1,589棟・半壊4,580棟）。BNPBの全国集計とは別の県レベルの検証値。全壊世帯には仮設住宅（フンタラ）建設か、住宅待機手当（DTH、月額60万ルピア）のいずれかを選択できるとし、248世帯がフンタラ用地を持たないことを理由にDTHを選んでいる。"
+    },
+    {
+      "time": "28 Sep",
+      "tier": "official",
+      "src": "BNPB, via ANTARA (5762701)",
+      "en": "BNPB's 28 Sep update on temporary housing (huntara): Manggarai 4 units complete, 50 above 50% progress and 60 below 50%, of 1,494 verified heavily-damaged houses; East Manggarai 6 complete and 561 under construction (first-phase target 1,305); Ngada 11 complete and 272 in progress; Nagekeo 9 complete and 173 in progress of 314 verified; Sikka 2 complete and 25 in progress; Ende 7 complete and 7 in progress.",
+      "ja": "BNPBの9月28日時点の仮設住宅（huntara）進捗：マンガライは完成4・進捗50%超50・50%未満60（重度損壊1,494棟の検証済み）、東マンガライは完成6・建設中561（第1期目標1,305）、ンガダは完成11・建設中272、ナゲケオは完成9・建設中173（検証済み314）、シッカは完成2・建設中25、エンデは完成7・建設中7。",
+      "url": "https://www.antaranews.com/berita/5762701/bnpb-hunian-sementara-penyintas-gempa-ntt-dibangun-bertahap"
+    },
+    {
+      "time": "30 Sep",
+      "tier": "official",
+      "src": "BNPB / Ministry of Home Affairs, via ANTARA (5764619)",
+      "en": "ANTARA reports 108 indirect deaths among evacuees as of end-September (Manggarai 44, East Manggarai 33, Nagekeo 20), mostly older people and children with pneumonia and diarrhoea. The Minister of Home Affairs said he would confirm the causes with the NTT provincial government and noted an additional Rp 20 billion contingency fund for each of the seven affected regencies/cities and Rp 40 billion for NTT Province.",
+      "ja": "ANTARAは、9月末時点で避難者の間接死が108人（マンガライ44、東マンガライ33、ナゲケオ20）で、肺炎・下痢の高齢者と子どもが多いと報じた。内務大臣は原因をNTT州政府に確認するとし、影響を受けた7県・市に各200億ルピア、NTT州に400億ルピアの予備費を追加配分済みと述べた。",
+      "url": "https://www.antaranews.com/berita/5764619/mendagri-tindaklajuti-korban-gempa-ntt-meninggal-di-pengungsian"
     }
   ],
   "intensity": {},
@@ -1308,6 +1324,20 @@
       "url": "https://reliefweb.int/report/indonesia/indonesia-drought-2026-dref-operation-mdrid030",
       "tier": "media",
       "_note": "関係なし。干ばつ。"
+    },
+    {
+      "label_en": "ANTARA: Mendagri follow-up on evacuee deaths (30 Sep 2026)",
+      "label_ja": "ANTARA: 内務大臣、避難中の死亡に対応（2026年9月30日）",
+      "url": "https://www.antaranews.com/berita/5764619/mendagri-tindaklajuti-korban-gempa-ntt-meninggal-di-pengungsian",
+      "tier": "media",
+      "_note": "現地語報道（2026-10-01）。間接死108人。"
+    },
+    {
+      "label_en": "ANTARA: BNPB temporary housing built in stages (28 Sep data)",
+      "label_ja": "ANTARA: BNPB 仮設住宅は段階的に整備（9月28日データ）",
+      "url": "https://www.antaranews.com/berita/5762701/bnpb-hunian-sementara-penyintas-gempa-ntt-dibangun-bertahap",
+      "tier": "media",
+      "_note": "現地語報道（2026-10-01）。huntara進捗。"
     }
   ],
   "attribution_en": "Figures reported by BNPB and relayed by IFRC/PMI and humanitarian partners; source and cut-off shown per row. All provisional.",
