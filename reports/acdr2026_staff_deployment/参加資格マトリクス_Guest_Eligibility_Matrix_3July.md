@@ -1148,3 +1148,8 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
 - リソース招待状（田中 14:41 → 藤本 14:48）: COSEM 裏書き済みのリソース用 Invitation Letter（BRIN・YI-Lab）が到着、藤本が Mizan へ転送し本人送付とフライト確認を依頼（藤本 12:08・12:09、cc 荒木田・池田）。荒木田の対応は不要。
 - 10/1 荒木田「1・2 は不要」: 3 人目以降の費用は児玉が Leow 氏スレッドで対応し、荒木田は論点メールを送らず、宮木判断の取り付けも行わない。児玉宛下書き r-1211835353045534999 は削除。上記の評価（昼食は 15.f＋GI で主張可、Gala・会議は 7/3 資格表どおり有償が既定）は記録として残す。荒木田の残り: Zoom 修正 3 点を画面で確認して藤本宛（r613978216481644476）を送る、配席の児玉宛（r-5270253639149476789）→ 回答後に Sylvia 宛（r-8001404404890725085）。
 - 訂正: 配席の児玉宛メール「ACDR2026 配席表：児玉案と荒木田案の見比べのお願い」は 10/1 14:52 JST に荒木田が送信済み（添付あり、メッセージ 1a0f6050ff8887c6）。「未送信」の記載は誤り。待ち: 児玉の回答 → Sylvia 宛（r-8001404404890725085）の主催席・事務局の文を確定して送付。
+
+### 10/1 配席 所内合意版（児玉 v3）と Sylvia 宛返信の確定
+- 児玉返信添付 `ACDR2026_配席表_最終案1001_v3_児玉.pptx`（荒木田最終案を児玉が修正）: U 字 28 は荒木田案のまま（左脚上端 Singapore×2 → NZ・AUS → Azerbaijan…India、底 Japan…Myanmar、右脚 Pakistan…Armenia、ADRC 北本・三浦上端）。事務局席は AV 脇 2 卓（既存＋1）＝4、右側面列の上端 1 卓と下端 1 卓＝4、計 8。右側面列の参加者は中 4 卓 8 席（ADRC 宮木、Viet Nam×2、Uzbekistan、Turkiye、ROK、PNG、Pakistan）。左側面列 12 席は Singapore×2、NZ×2、Azerbaijan、Brunei、Fiji?、India×2、ADPC×2、AHA Centre（partner 卓）。教室型 1 列目 Japan×2｜仙台副市長*・仙台｜JAXA・BRIN｜Google*・Nepal｜ADB・Turkiye、2 列目 Japan×2｜仙台×2｜仙台・JAXA｜Tohoku U・JICA｜ROK×2、3 列目左端 ADRC Sec.（予備）。仙台市 5 名（通訳 KITAHAMA 含む）、トルコ 2 人目を教室型に。注記は削除。
+- 英語タイトル版 `ACDR2026_SeatingPlan_1Oct_draft.pptx/.pdf`（タイトルのみ "ACDR2026 Seating Plan (draft, 1 Oct) - Peridot 204-206" に変更、他は v3 と同一）を Sylvia 宛添付用に作成。添付は荒木田が手作業。
+- Sylvia 宛下書きを v3 に合わせて作り直し（update_draft で返信スレッドから外れたため削除→再作成、1a0f5aaec1455263 への返信）。変更点: 添付の配席案に言及、3. 事務局 8 席＝AV 脇 2 卓（既存＋1）＋右側面列の上端・下端各 1 卓、右側面列の参加者 4 卓 8 席、左 12 席。教室型の名札席を「約 20 席」に。他の節（演台、ステージ卓、カメラ、小項目）は前回どおり。
