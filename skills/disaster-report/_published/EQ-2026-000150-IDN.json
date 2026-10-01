@@ -1,0 +1,46 @@
+{
+  "glide": "EQ-2026-000150-IDN",
+  "published_at_jst": "2026-10-02 08:30",
+  "published_date_jst": "2026-10-02",
+  "destination": "C:\\Users\\arakida\\OneDrive - adrc.asia\\LargeScaleDisasters",
+  "edition": "第11報",
+  "update_date": "01/10/2026",
+  "stamp": "2026-10-01 08:00 JST",
+  "files": [
+    {
+      "name": "ADRC_EQ_IDN_NTT_20260815_JA.pptx",
+      "bytes": 4621767,
+      "mtime": "2026-10-01T23:30:13.932Z"
+    },
+    {
+      "name": "ADRC_EQ_IDN_NTT_20260815_JA.pdf",
+      "bytes": 1426575,
+      "mtime": "2026-10-01T23:30:14.321Z"
+    },
+    {
+      "name": "ADRC_EQ_IDN_NTT_20260815_EN.pptx",
+      "bytes": 4810441,
+      "mtime": "2026-10-01T23:30:15.923Z"
+    },
+    {
+      "name": "ADRC_EQ_IDN_NTT_20260815_EN.pdf",
+      "bytes": 1231089,
+      "mtime": "2026-10-01T23:30:16.313Z"
+    }
+  ],
+  "verified": "manifest",
+  "dist_built_at_jst": "2026-10-02 07:40",
+  "dist_built_date_jst": "2026-10-02",
+  "task": {
+    "registered": true,
+    "start_time": "08:30",
+    "expected": "08:30",
+    "matches": true,
+    "last_change": {
+      "tried": false,
+      "before": "08:30",
+      "after": "08:30",
+      "ok": true
+    }
+  }
+}

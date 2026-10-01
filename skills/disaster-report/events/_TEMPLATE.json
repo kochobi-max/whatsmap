@@ -1,0 +1,94 @@
+{
+  "_comment": "新規イベント作成時の雛形。既存の report_data.json（熊本）と同じ構造に、運用用の meta フィールドを足したもの。英日は同居のまま持ち、gen_deck.js が実行時に分離する。英日を分離した構造に作り替えてはいけない。",
+
+  "meta": {
+    "status": "active",
+    "glide": "XX-YYYY-NNNNNN-XXX",
+    "iso3": "XXX",
+    "filebase": "ADRC_EQ_XXX_PlaceName_YYYYMMDD",
+    "sources_profile": "references/sources/XXX.md",
+    "primary_official_source": "その国の主たる公式情報源（日本なら消防庁）",
+    "mail": {
+      "to": ["kenkyubu@adrc.asia", "td-date@adrc.asia"],
+      "from": "ma-arakida@adrc.asia",
+      "send_at": "07:00 JST のみ"
+    },
+    "onedrive_dir": "C:\\Users\\arakida\\OneDrive - adrc.asia\\LargeScaleDisasters",
+
+    "title_en": "",
+    "title_ja": "",
+    "jma_name_en": "",
+    "edition": "1st edition",
+    "prepared_by": "Asian Disaster Reduction Center (ADRC)",
+    "stamp": "",
+    "update_date": "",
+    "timeline_range_en": "",
+    "timeline_range_ja": "",
+    "disseminate_en": "",
+    "disseminate_ja": "",
+
+    "optional_slides": [],
+    "_optional_slides_comment": "空配列＝イベント固有スライドを全部オフ（新規災害の既定）。指定できるキー: prior_event / focus_incident / civic_tech / spectee。フィールド自体を消すと全スライドが描画される（後方互換）。",
+
+    "headline": {
+      "_comment": "数値急変ゲート用の代表値。damage[] を更新するたびにここも揃える。tier は official / media / tbc。as_of は主たる公式情報源の報の時点。",
+      "deaths": null,
+      "injured": null,
+      "missing": null,
+      "houses_destroyed": null,
+      "evacuees": null,
+      "tier": "official",
+      "as_of": ""
+    }
+  },
+
+  "_prev": {
+    "_comment": "前報の meta.headline のコピー。damage を更新する前に、直前の meta.headline をここへ丸ごと退避する。resolve_event.js がこれと meta.headline を比較して数値急変ゲートを判定する。",
+    "deaths": null,
+    "injured": null,
+    "missing": null,
+    "houses_destroyed": null,
+    "evacuees": null,
+    "tier": null,
+    "as_of": ""
+  },
+
+  "event": {
+    "origin_time": "",
+    "epicentre_en": "",
+    "epicentre_ja": "",
+    "lat": 0.0,
+    "lon": 0.0,
+    "magnitude": "",
+    "mag_usgs": "",
+    "usgs_name": "",
+    "depth_km": 0,
+    "depth_display": "",
+    "mechanism_en": "",
+    "mechanism_ja": "",
+    "felt_en": "",
+    "felt_ja": "",
+    "max_intensity": "",
+    "summary_en": "EN 1,450字以内。表紙の黒帯に収める。",
+    "summary_ja": "JA 530字以内。表紙の黒帯に収める。",
+    "tectonic_en": "",
+    "tectonic_ja": ""
+  },
+
+  "damage": [],
+  "damage_highlights": [],
+  "timeline": [],
+  "intensity": {},
+  "tsunami": {},
+  "cities": [],
+  "aftershocks": [],
+  "aftershock_stats": {},
+  "response_measures": [],
+  "support_domestic": [],
+  "support_international": [],
+  "satellite": [],
+  "historical": [],
+  "prior_event": {},
+  "images": {},
+  "links": []
+}
