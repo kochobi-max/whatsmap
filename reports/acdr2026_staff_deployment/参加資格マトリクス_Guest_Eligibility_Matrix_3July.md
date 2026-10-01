@@ -1185,4 +1185,4 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
 - 確認（10/2）: rev4 は児玉の変更 ins 3／del 1 のみ、受入後 551 語（約 4 分、ヘッダー 12:56-13:00）。rev3 は受入後 358 語（約 2.5〜3 分、ヘッダー 11:51-11:53）。内容は案1001r の方針どおり（Excellencies、condolences/sympathy、Japan and Singapore、金曜は SIDEX-ACDR 会議のみ、閉会はサマリーを繰り返さず次回 ACDR 仙台 2027 年 10 月を発表）。
 - 成果物: `進行シナリオ_0929/ACDR2026_Opening_Remarks_MIURA_draft1002_clean.docx`・`ACDR2026_Closing_Remarks_MIURA_draft1002_clean.docx`（変更履歴受入済み、三浦送付用）、児玉版 rev4／rev3 も保存。
 - 三浦センター長宛下書き（r-7293072311799159353、to miura@yamaguchi-u.ac.jp、cc 児玉・Gerry、未送信、添付は手作業）: 両挨拶の概要と語数・時間、登壇順は調整中、確認事項 2 点（次回 ACDR 仙台の発表の可否、メンバー国数「33」の最新値）、10/8 ブリーフィングまでに確定し SCDF にも共有。
-- 要確認: 「33 member countries」は荒木田初稿で [to be confirmed] だった数字。ADRC 公式の最新数に合わせる（Web 確認は証明書エラーで未了）。
+- メンバー国数「33」: 本セッションで 9 月に作成した Google 向け資料（33 か国＋アドバイザー国 5 か国、ブルネイが 2024 年 5 月に加盟）と一致。ADRC サイトは 503 で未確認だが、所内資料と整合するため三浦宛下書きでは「33 か国（2024 年 5 月のブルネイ加盟後）」と明記し、確認事項からは外した。
