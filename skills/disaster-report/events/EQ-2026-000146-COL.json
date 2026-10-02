@@ -27,7 +27,7 @@
     "as_of_ja": "UNGRDの9月28日集計（IOM状況報告第12号、9月29日付、10月1日掲載）：死者335人、行方不明105人、救出364人、負傷4,516人、被災者486,917人、住家損壊206,931棟・全壊36,478棟、保健施設402・教育施設4,431・コミュニティ施設6,094が被災、16県500市町村。いずれも9月16日締めから横ばい。RUD（9月26日時点）は364,668世帯・778,274人、住家は居住可能84,855棟・居住不能104,038棟・全壊19,142棟・損壊119,752棟で、9月19日のPMU統合値と1〜5の差がある。RUD残高486,917人とは別掲し合算しない。OCHAフラッシュアップデート015（9月30日18:00、週次の最終号）：35以上の人道支援団体が90市町村で23万9千人を支援。政府は復旧段階（PAE）へ移行中。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-10-01 08:00 JST",
+    "stamp": "2026-10-02 JST",
     "update_date": "01/10/2026",
     "optional_slides": [
       "prior_event",
@@ -2480,6 +2480,13 @@
       "url": "https://reliefweb.int/report/colombia/colombia-flash-update-015-actualizacion-afectaciones-por-terremoto-en-colombia-30-de-septiembre-de-2026",
       "tier": "official",
       "_note": "スペイン語版。取り込み済み。"
+    },
+    {
+      "label_en": "ReliefWeb: DRC Rapid Protection Assessment, Buenaventura (Sep 2026)",
+      "label_ja": "ReliefWeb: DRC 迅速保護アセスメント（ブエナベントゥラ）",
+      "url": "https://reliefweb.int/report/colombia/rapid-protection-assessment-earthquake-response-buenaventura-valle-del-cauca-september-2026",
+      "_note": "開いた（2026-10-02）。保護リスク分析。被害数値なし。headline不変。",
+      "tier": "media"
     }
   ],
   "source_policy_en": "Source hierarchy: official > media > TBC. Government and scientific-agency figures are used as primary; media reports are used only where official figures are not yet published and are labelled as such. Items still being verified are marked TBC. Preliminary figures are never replaced by larger unverified numbers.",

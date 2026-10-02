@@ -23,7 +23,7 @@
     "edition_ja": "第28報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
-    "stamp": "2026-10-01 08:00 JST",
+    "stamp": "2026-10-02 JST",
     "update_date": "01/10/2026",
     "timeline_range_en": "25 August - 1 October 2026 (Nepal Standard Time, UTC+5:45)",
     "timeline_range_ja": "2026年8月25日〜10月1日（ネパール標準時 UTC+5:45）",
@@ -1941,6 +1941,20 @@
       "url": "https://reliefweb.int/report/nepal/nepal-rasuwa-nuwakot-flash-flood-emergency-response-situation-update-8-world-vision-1-october-2026",
       "tier": "media",
       "_note": "一覧確認のみ。headline不変。"
+    },
+    {
+      "label_en": "ReliefWeb: Plan International Nepal Flash Flood Situation Report 6 (1 Oct 2026)",
+      "label_ja": "ReliefWeb: プラン・インターナショナル ネパール洪水状況報告6（10月1日）",
+      "url": "https://reliefweb.int/report/nepal/nepal-flash-flood-2026-situation-report-6-1-october-2026",
+      "_note": "開いた（2026-10-02）。本文は概要のみ、数値なし。headline不変。",
+      "tier": "media"
+    },
+    {
+      "label_en": "ReliefWeb: WFP Nepal External Situation Report, 1 Oct 2026 (alt URL)",
+      "label_ja": "ReliefWeb: WFPネパール外部状況報告（10月1日・別URL）",
+      "url": "https://reliefweb.int/report/nepal/wfp-nepal-external-situation-report-1-october-2026",
+      "_note": "開いた（2026-10-02）。死者1,453・行方不明5,285は既載と同じ。救助13,784（既載13,795、OCHA経由）。headline不変。",
+      "tier": "media"
     }
   ],
   "images": {
