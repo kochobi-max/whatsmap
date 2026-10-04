@@ -1229,3 +1229,35 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
 - 残る荒木田の対応（メール以外）: Sylviaさん宛WhatsApp（U字の底3卓の可否、Opening登壇順。27日のバス2台目は宮木所長の判断後）、ウズベキスタンのJICA帰国研修員へのWhatsApp、持参物分担一覧を藤本さんへ共有、三浦センター長の10/7来所時に挨拶案を対面確認。待ち: 宮木所長の判断2点、Sylviaさんの回答（レイアウト・事務局席・底3卓・登壇順・AV見積）、児玉さん経由の安達氏回答、Dorsett 10%の回答。
 - 10/2 荒木田: 荒木田は羽田発なので神戸の機材は持てない → 持参物一覧を修正。荒木田は日本酒3本（羽田の免税店で購入）、ウイスキー2本は児玉さん・藤中さんが各1本。カメラ本体は塩見さん、三脚は森川部長（TG便）、Zoomホスト用PCとSentio用機器は藤本さん、演台用PCは池田さん、RTベルはGerryさん。同じ理由で、10/7の三浦センター長来所時の対面確認は荒木田にはできない（残件から削除）。
 - 10/2 荒木田: Sentioの使い方を訂正。神戸のオフィス（中村さん）がホストとしてZoomの音声を入力して運用し、参加者はQRを読んで自分の携帯やPCで翻訳言語を選んで読む。会場スクリーンに字幕は出さない。QRは神戸が共有を開始した時点で発行されるので、共有開始直後に神戸から現地へ送り、藤本さんがPPT 08に貼り、田中さんが卓上カードを印刷する。90分ごとの再開も神戸。→ 荒木田のrev1をベースに持参物一覧rev2（項目7は現地持参機器なし、項目4・6の備考、藤本さんの便の備考）を作成。進行シナリオ案1002（Read me、Day1 12:30、RT Part 1、TS、Closing の注記）も同じ運用に修正。
+
+### 10/4（日）WhatsApp 10/2〜10/4 の整理、Sylvia の AV 機材リスト確認、BNPB の登録照会
+**WhatsApp（Coordination Team）10/2〜10/4**
+- 10/2 08:01 Sylvia: ACDR Opening の登壇順はアジェンダどおり（Commissioner→林副大臣→三浦センター長が開会宣言）で可「We are ok with the order!」。→ 登壇順は確定。進行シナリオを 案1004 に更新（Read me B2・B8、Day1 F10・G11、12:47 Commissioner／12:52 林副大臣／12:56 三浦センター長の行を入替、PPT 03〜06 の割当、13:00 の RT 引継ぎ文、Screen images PPT 03）。三浦原稿 draft1002_clean は末尾に開会宣言があり、最後の登壇で成立する（修正不要）。動態表 v2.95（J57／D61: 登壇順確定、I61）。
+- 10/2 08:02 Sylvia: SJ60 レセプションでの Commissioner の持ち時間と挨拶順を照会（2分で起案済み）。児玉 10:44: 手元の進行表（draft0810）には Commissioner の挨拶枠がない、MHA と大使館で調整中で GOH が Commissioner になる見込み、確定したら連絡。→ 児玉の担当。
+- 10/2 16:42〜10/3 11:38: SIDEX 合同開会式スライドの林副大臣の肩書（「Deputy Minister, Cabinet Office of Japan」）を Sylvia が照会 → 児玉が「Deputy Minister for Disaster Management, Cabinet Office of Japan」に修正依頼、Sylvia 了解。
+- 10/2 18:12〜18:28: 10/26 長官夕食会（Home Team NS Khatib, Orchid Live Seafood, 18:30）は北本理事が到着遅延の懸念で辞退（児玉→Sylvia、Sylvia が先方へ伝達）。出席は三浦センター長・宮木所長・児玉の3名。北本理事の到着は SQ637 16:30 で変更なし、COSEM が空港で出迎え、遅延時は Sylvia へ連絡。動態表 v2.95（動態表(日別) G2、J58／D62）に反映。
+- 10/3 21:39 Sylvia: SJ60 の Japan fair がオーチャードの高島屋で開催中（情報のみ）。
+- 10/4 19:17 Sylvia→田中: BNPB（インドネシア）が事務総長宛招待への返信として、期限後の登録可否と資料（GI・アジェンダ・TS コンセプトノート・RT 案内）の再送を依頼（10/4 17:35 sidex-acdr2026 宛メール、SCDF 担当にも同文）。→ 登録と資料送付は田中。配席上の論点: インドネシアはメンバー国なので BNPB が参加すれば U 字に席が必要だが、U 字 28 席（v3）は満席。(1) 底 3 卓（Sylvia に確認中）で 30 席にして Indonesia を底に入れる、(2) 28 席のままなら NZ か AUS を左側面列へ、の 2 案。→ 児玉宛所内メール下書き（r9177312414746708768、cc 田中・藤中、署名なし、未送信）。BNPB の参加確定時に決める。10/9 の Final までに Sylvia の回答がなければ (2)。
+**大使館レセプション進行表（Sylvia 所持の `ACDR2026_WelcomeReception_draft0810.pdf`、`ACDR2026_WelcomeReception_draft0810_大使館.pdf` として保存）**
+- 10/27（火）19:00-21:00、大使公邸。目的は SIDEX-ACDR2026 と SJ60 の記念、日本企業の防災技術の紹介、ネットワーキング。来場 100〜120 名（シンガポール政府 MHA・SCDF、内閣府・東京消防庁、ADRC メンバー国 1〜2 名ずつと在シンガポール大使館、日本企業〈建設・コンサル・SIDEX 出展社〉、SCDF 推薦のシンガポール企業、メディア）。GOH は MHA 大臣（tbc、SCDF／COSEM と調整）。
+- 進行（暫定）: 18:30 受付・カクテル／18:50 大使到着、続いて GOH・内閣府大臣／19:00 開会／19:03 大使挨拶／19:07 GOH 挨拶／19:10 内閣府大臣の乾杯／19:13 歓談（冒頭に大使・GOH・内閣府大臣の写真撮影）／20:30 閉会案内。ドレスコード Smart Casual。文化プログラム・展示・映像は TBC。
+- 留意: 進行表は 8/10 版で「内閣府大臣」の表記のまま（実際は林副大臣）。Commissioner の挨拶枠はなく、GOH が Commissioner になれば 19:07 の 3 分枠が Commissioner の挨拶になる（Sylvia の 2 分案はこの枠に収まる）。大使館との確認は児玉（安達氏の窓口）。動態表 Day0 の受付・MC・バス誘導の想定（19:00 開始）と整合。
+**Sylvia の AV 機材リスト（10/2 18:53、荒木田に確認依頼。教室型は「卓上マイクが要るか、2 人に 1 本で可か」）**
+- Sylvia のリスト: 1) U 字 28 名＝conference mic 28 本、2) モデレーター／登壇者 8 本、3) サイド卓 24 名＝24 本、4) 通路のスタンドマイク 4、5) ハンド 2、6) 演台 gooseneck 1、7) ライブ配信（双方向）は ADRC 持込・ADRC 職員が運用、8) ミキサー 1、9) HDMI ケーブル 1。
+- ADRC の計画（9/24 Sylvia 合意、9/29 下書き、10/1 教室型修正版）との差: 卓上マイクは U 字 14（2 席 1 本）＋ステージ 8＋教室型 1 列目 2（仙台副市長・Google、* 印）＝24 本。サイド列と教室型の他の卓は卓上マイクなし（スタンド・ハンドを使う）。Sylvia の 60 本は過大で、AV 費用を ADRC 負担とする COSEM 提案が出ている中では本数を抑える回答が必要。配信は ADRC のカメラ（HDMI、三脚）と Zoom 用 PC を持込。業者には、ミキサーのライン出力（Zoom PC へ）、Zoom 音声の PA 戻し、AV 卓脇の三脚位置と電源、カメラをスイッチャーに入れる場合の HDMI 1 本、AV 卓の有線 LAN を依頼（9/29・10/1 の Sylvia 宛メールと同じ内容）。
+- WhatsApp 返信文案（荒木田→Sylvia、未送信）:
+  Sylvia san, thank you for the list. Our comments:
+  1. U-shape: 14 conference mics are enough (1 mic per 2 seats, as we agreed in September).
+  2. Moderator/speakers on stage: 8 is fine (Day 1 uses 2 of them, Day 2 all 8).
+  3. Side tables: no conference mics. Participants there use the standing or handheld mics.
+  4-6. 4 standing, 2 handheld, 1 gooseneck at the rostrum: fine.
+  Classroom block: only the two tables marked * (Sendai Vice Mayor and Google) need a conference mic, 1 each, because they speak in the Roundtable. The other classroom tables need none. 2 pax to 1 mic is fine everywhere.
+  So the total is 24 conference mics (14 + 8 + 2), not 60. This should also help with the cost.
+  7. Live streaming: we bring the camera (HDMI out, on a tripod) and the Zoom laptop. From the vendor we need a line-out from the mixer to our Zoom laptop, the Zoom audio returned into the PA, and a tripod position with power next to the AV desk. If the camera can go into the vendor's switcher by HDMI, even better.
+  8. Mixer: fine.
+  9. HDMI: 1 cable for the presentation PC is fine. One more if the camera goes into the switcher. We also need the wired LAN line at the AV desk, as before.
+**荒木田の対応**
+- Sylvia へ WhatsApp（上記 AV 返信。U 字の底 3 卓の可否は未回答なので再度触れる）。
+- 児玉宛下書き（BNPB と U 字の席）を確認して送信。
+- 進行シナリオ 案1004 を 10/8 ブリーフィング用の版として所内共有（三浦原稿は三浦センター長の確認待ち）。
+- 待ち: 宮木所長の判断 2 点（27 日の 2 台目バス、AV 費用）、Sylvia の回答（事務局席・底 3 卓・AV 見積）、児玉経由の安達氏回答、Dorsett 10%、ウズベキスタンへの WhatsApp。
