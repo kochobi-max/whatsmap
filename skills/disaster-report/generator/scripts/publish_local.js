@@ -63,6 +63,20 @@ const WAIT_MIN = Math.max(0, parseInt(takeFlag("--wait") || "0", 10) || 0);
 // 汚してはいけない。押し通すときだけ --allow-push と書く。
 const PUSH = !NO_PUSH && (!DEST_ARG || ALLOW_PUSH);
 
+// **押さないなら、記録も本番の場所に書かない。**
+//
+// 2026-10-05、`--dest` を付けた試験で `--wait` の挙動を確かめたところ、
+// `--dest` はプッシュを止めるだけで、**記録の書き込みは止めていなかった。**
+// `_published/EQ-2026-000146-COL.skipped.json` に試験用の日付（翌日）が入り、
+// それを `git add -A` でコミットしてしまった。翌朝の送信タスクは
+// 「今日の見送り記録がある」と読んで、**コロンビアのメールを止めるところだった。**
+//
+// 「試験が本番の判断材料を汚してはいけない」とは既にこのファイルに書いてあった。
+// 止めていたのはプッシュだけで、書き込みは素通りだった。**両方止める。**
+const MARKER_DIR = PUSH
+  ? null                                   // 本番: _published/ に書く
+  : fs.mkdtempSync(path.join(os.tmpdir(), "adrc-markers-"));
+
 // ---------------------------------------------------------------- ログ
 const LOGPATH = path.join(os.tmpdir(), "adrc_daily_publish.txt");
 const lines = [];
@@ -279,7 +293,7 @@ function publishOne(glide, markers) {
     // 2026-08-29、コロンビアが08:10の実行で飛ばされていたことに、
     // 荒木田さんに「メールは出さないの？」と聞かれるまで気づけなかった。
     try {
-      const dir = path.join(REPO, "skills", "disaster-report", "_published");
+      const dir = MARKER_DIR || path.join(REPO, "skills", "disaster-report", "_published");
       fs.mkdirSync(dir, { recursive: true });
       const rel = "skills/disaster-report/_published/" + glide + ".skipped.json";
       fs.writeFileSync(path.join(dir, glide + ".skipped.json"),
@@ -354,7 +368,7 @@ function publishOne(glide, markers) {
   const { writePublished } = require("./write_published.js");
   let rec;
   try {
-    rec = writePublished(glide, dest, man, TASK_STATE);
+    rec = writePublished(glide, dest, man, TASK_STATE, MARKER_DIR);
   } catch (err) {
     say("WARN: marker-not-written");
     say("   " + err.message);

@@ -24,7 +24,7 @@ module.exports = { writePublished };
 // 手順を持っていたため、**PDF が必ず不一致になり、メールが1通も出なくなった。**
 // PPTX は pptxgenjs が決定的に作るので一致するが、PDF は LibreOffice が変換のたびに
 // 違うバイト列を吐く（作成日時などが埋まる）。**PDF は再現ビルドで照合できない。**
-function writePublished(GLIDE, DEST, man, task) {
+function writePublished(GLIDE, DEST, man, task, outDir) {
 const SKILL = path.resolve(__dirname, "..", "..");
 const eventJson = path.join(SKILL, "events", GLIDE + ".json");
 const ev = JSON.parse(fs.readFileSync(eventJson, "utf8"));
@@ -71,7 +71,9 @@ const rec = {
   task: task || null,
 };
 
-const dir = path.join(SKILL, "_published");
+// outDir は試験用の退避先。publish_local.js が「押さない実行」のときに渡す。
+// **渡されたら本番の _published/ には触らない。**
+const dir = outDir || path.join(SKILL, "_published");
 fs.mkdirSync(dir, { recursive: true });
 fs.writeFileSync(path.join(dir, GLIDE + ".json"), JSON.stringify(rec, null, 2) + "\n", "utf8");
 return rec;
