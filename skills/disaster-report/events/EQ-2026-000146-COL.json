@@ -19,16 +19,16 @@
     "title_ja": "2026年 チョコ地震（コロンビア）",
     "subtitle_en": "M7.4, San José del Palmar, Chocó Department - 10 August 2026",
     "subtitle_ja": "M7.4、チョコ県サンホセ・デル・パルマル、2026年8月10日",
-    "edition_en": "27th report",
-    "edition_ja": "第27報",
+    "edition_en": "28th report",
+    "edition_ja": "第28報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
-    "as_of_en": "Figures as of UNGRD's 28 Sep balance (IOM Situation Report #12, 29 Sep, posted 1 Oct 2026): 335 deaths, 105 missing, 364 rescued, 4,516 injured, 486,917 people affected, 206,931 homes damaged and 36,478 destroyed, 402 health facilities, 4,431 educational institutions and 6,094 community centres affected, across 500 municipalities in 16 departments - all unchanged from the 16 Sep cut. RUD as of 26 Sep: 364,668 families / 778,274 people registered and a housing tally of 84,855 habitable, 104,038 uninhabitable, 19,142 destroyed, 119,752 damaged (differs by 1-5 units from the 19 Sep PMU consolidation; shown separately, not combined with the RUD balance of 486,917). OCHA Flash Update 015 (30 Sep 18:00, final weekly edition): at least 35 humanitarian organisations have assisted 239,000 people in 90 municipalities; Government moving into recovery phase (PAE).",
-    "as_of_ja": "UNGRDの9月28日集計（IOM状況報告第12号、9月29日付、10月1日掲載）：死者335人、行方不明105人、救出364人、負傷4,516人、被災者486,917人、住家損壊206,931棟・全壊36,478棟、保健施設402・教育施設4,431・コミュニティ施設6,094が被災、16県500市町村。いずれも9月16日締めから横ばい。RUD（9月26日時点）は364,668世帯・778,274人、住家は居住可能84,855棟・居住不能104,038棟・全壊19,142棟・損壊119,752棟で、9月19日のPMU統合値と1〜5の差がある。RUD残高486,917人とは別掲し合算しない。OCHAフラッシュアップデート015（9月30日18:00、週次の最終号）：35以上の人道支援団体が90市町村で23万9千人を支援。政府は復旧段階（PAE）へ移行中。",
+    "as_of_en": "Figures as of UNGRD's 28 Sep balance (IOM Situation Report #12, 29 Sep, posted 1 Oct 2026): 335 deaths, 105 missing, 364 rescued, 4,516 injured, 486,917 people affected, 206,931 homes damaged and 36,478 destroyed, 402 health facilities, 4,431 educational institutions and 6,094 community centres affected, across 500 municipalities in 16 departments - all unchanged from the 16 Sep cut. RUD as of 2 Oct (UNGRD on X, 2 Oct 15:09 COT): 364,664 families / 778,285 people registered and a housing tally of 84,857 habitable, 104,049 uninhabitable, 19,148 destroyed, 119,748 damaged (differs by 1-5 units from the 19 Sep PMU consolidation; shown separately, not combined with the RUD balance of 486,917). OCHA Flash Update 015 (30 Sep 18:00, final weekly edition): at least 35 humanitarian organisations have assisted 239,000 people in 90 municipalities; Government moving into recovery phase (PAE).",
+    "as_of_ja": "UNGRDの9月28日集計（IOM状況報告第12号、9月29日付、10月1日掲載）：死者335人、行方不明105人、救出364人、負傷4,516人、被災者486,917人、住家損壊206,931棟・全壊36,478棟、保健施設402・教育施設4,431・コミュニティ施設6,094が被災、16県500市町村。いずれも9月16日締めから横ばい。RUD（10月2日時点、UNGRDのX 10月2日15:09 COT）は364,664世帯・778,285人、住家は居住可能84,857棟・居住不能104,049棟・全壊19,148棟・損壊119,748棟で、9月19日のPMU統合値と1〜5の差がある。RUD残高486,917人とは別掲し合算しない。OCHAフラッシュアップデート015（9月30日18:00、週次の最終号）：35以上の人道支援団体が90市町村で23万9千人を支援。政府は復旧段階（PAE）へ移行中。",
     "disseminate_en": "Bilingual (EN/JA) report for domestic and international dissemination. Public-agency sources take priority; gaps are filled with clearly-labelled media reports.",
     "disseminate_ja": "国内外発信用の日英レポート。公的機関の情報を優先し、不足分は出典を明示したうえで報道で補完する。",
-    "stamp": "2026-10-02 JST",
-    "update_date": "01/10/2026",
+    "stamp": "2026-10-04 JST",
+    "update_date": "04/10/2026",
     "optional_slides": [
       "prior_event",
       "historical",
@@ -46,7 +46,7 @@
       "houses_destroyed": 36478,
       "evacuees": null,
       "tier": "official",
-      "as_of": "28 Sep 2026 (UNGRD, via IOM Colombia Earthquake Response Situation Report #12, 29 Sep, posted 1 Oct): 335 deaths, 105 missing, 364 rescued, 4,516 injured, 486,917 affected, 206,931 homes damaged and 36,478 destroyed, 500 municipalities in 16 departments - all unchanged from the 16 Sep cut. RUD as of 26 Sep: 364,668 families / 778,274 people."
+      "as_of": "28 Sep 2026 (UNGRD, via IOM Colombia Earthquake Response Situation Report #12, 29 Sep, posted 1 Oct): 335 deaths, 105 missing, 364 rescued, 4,516 injured, 486,917 affected, 206,931 homes damaged and 36,478 destroyed, 500 municipalities in 16 departments - all unchanged from the 16 Sep cut. RUD as of 2 Oct (UNGRD on X, 2 Oct 15:09 COT): 364,664 families / 778,285 people."
     },
     "tz_note_en": "Times are local (COT, UTC-5); entries whose exact time is not published are placed at the end of that day.",
     "tz_note_ja": "時刻は現地時間（COT、UTC-5）。時刻が公表されていないものはその日の末尾に置いている。",
@@ -659,6 +659,14 @@
       "en": "OCHA Flash Update 015 (as of 30 Sep 18:00), the final weekly edition: Government is moving into the recovery phase through the Specific Action Plan for Recovery (PAE); at least 35 humanitarian organisations have assisted 239,000 people across 90 municipalities. Gaps persist in identifying affected people, damage assessment and access to services, especially for rural, ethnic, refugee and migrant communities.",
       "ja": "OCHAフラッシュアップデート015（9月30日18:00時点、週次の最終号）：政府は「復旧特別行動計画（PAE）」により復旧段階へ移行中。35以上の人道支援団体が90市町村で23万9千人を支援。被災者の把握、被害調査、サービスへのアクセスに課題が残り、農村・民族・難民・移民コミュニティで特に顕著。",
       "url": "https://reliefweb.int/report/colombia/colombia-flash-update-015-update-impact-earthquake-colombia-september-30-2026"
+    },
+    {
+      "time": "2 Oct",
+      "tier": "official",
+      "src": "UNGRD (X, @UNGRD, 2 Oct 15:09 COT)",
+      "en": "UNGRD publishes an update of the Registro Unico de Damnificados (RUD) balance, data cut 2 Oct 2026: 364,664 families and 778,285 people registered; housing 84,857 habitable, 104,049 uninhabitable, 19,148 destroyed and 119,748 damaged. Families registered are 4 fewer than the 26 Sep cut (364,668), people 11 more (778,274); UNGRD gives no explanation. The same day UNGRD presented recovery progress, including the Plan de Accion Especifico (PAE), to the Procuraduria General de la Nacion. The national balance (335 deaths, 105 missing, 486,917 affected) is not restated.",
+      "ja": "UNGRDが被災者統一登録（RUD）の集計を更新（データ締め10月2日）：登録世帯364,664・登録者778,285人、住家は居住可能84,857棟・居住不能104,049棟・全壊19,148棟・損壊119,748棟。登録世帯数は9月26日締め（364,668）より4世帯減、人数は11人増（778,274）で、UNGRDによる説明はない。同日UNGRDは、特別行動計画（PAE）を含む復旧の進捗を検察庁（Procuraduria）に報告した。全国集計（死者335人・行方不明105人・被災者486,917人）は再掲されていない。",
+      "url": "https://x.com/UNGRD/status/2106114379964133376"
     }
   ],
   "areas": [

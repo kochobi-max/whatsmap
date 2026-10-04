@@ -21,10 +21,10 @@
     "jma_name_en": "",
     "edition": "",
     "prepared_by": "Asian Disaster Reduction Center (ADRC)",
-    "stamp": "2026-10-01 08:00 JST",
-    "update_date": "01/10/2026",
-    "timeline_range_en": "15 August - 30 September 2026 (Western Indonesian Time, UTC+7)",
-    "timeline_range_ja": "2026年8月15日〜9月30日（西インドネシア時間 UTC+7）",
+    "stamp": "2026-10-04 JST",
+    "update_date": "04/10/2026",
+    "timeline_range_en": "15 August - 4 October 2026 (Western Indonesian Time, UTC+7)",
+    "timeline_range_ja": "2026年8月15日〜10月4日（西インドネシア時間 UTC+7）",
     "disseminate_en": "",
     "disseminate_ja": "",
     "optional_slides": [],
@@ -34,14 +34,14 @@
       "injured": 1603,
       "missing": 0,
       "houses_destroyed": 103427,
-      "evacuees": 46461,
+      "evacuees": 22383,
       "tier": "official",
-      "as_of": "2026-09-30 (ANTARA, 30 Sep: BNPB-recorded indirect deaths at evacuation sites and posts reached 108, up from 94 on 15 Sep; Manggarai 44, East Manggarai 33, Nagekeo 20. Direct deaths 48 per BNPB 15 Sep, no later figure found. 156 = 48 + 108 is an ADRC sum, not a figure published by BNPB. インドネシア語国内報道経由)"
+      "as_of": "2026-09-30 (ANTARA, 30 Sep: BNPB-recorded indirect deaths at evacuation sites and posts reached 108, up from 94 on 15 Sep; Manggarai 44, East Manggarai 33, Nagekeo 20. Direct deaths 48 per BNPB 15 Sep, no later figure found. 156 = 48 + 108 is an ADRC sum, not a figure published by BNPB. Evacuees 22,383 = people remaining in emergency tents as of 30 Sep per BNPB (ANTARA, 1 Oct), down 87% from 179,037; the 46,461 of 15 Sep was the prior count. インドネシア語国内報道経由)"
     },
     "subtitle_en": "M7.7, offshore Nagekeo Regency, Flores Island, East Nusa Tenggara - 15 August 2026",
     "subtitle_ja": "M7.7、東ヌサトゥンガラ州フローレス島 ナゲケオ県沖、2026年8月15日",
-    "edition_en": "11th report",
-    "edition_ja": "第11報",
+    "edition_en": "12th report",
+    "edition_ja": "第12報",
     "prepared_by_en": "Asian Disaster Reduction Center (ADRC)",
     "prepared_by_ja": "アジア防災センター（ADRC）",
     "tz_note_en": "Times follow BNPB's own reporting in WIB (UTC+7) unless stated.",
@@ -137,8 +137,8 @@
     "depth_display": "10 km (USGS) / 15 km (BMKG)",
     "mechanism_en": "BMKG placed the epicentre 30 km northeast of Mbay, Nagekeo Regency, at 15 km depth; USGS reported Mww 7.7 at 10 km. The USGS moment tensor solution gives Mww 7.8 at 23.5 km. Maximum estimated shaking is MMI VIII, with 51 felt reports. The source is the Flores Back-Arc Thrust.",
     "mechanism_ja": "BMKGは震央をナゲケオ県ンバイの北東30km、深さ15kmとし、USGSは Mww7.7・深さ10kmとした。USGSのモーメントテンソル解は Mww7.8・深さ23.5km。推定最大震度はMMI VIII、体感報告51件。発生源はフローレス背弧断層。",
-    "summary_en": "A magnitude 7.7 earthquake struck offshore Nagekeo Regency, East Nusa Tenggara, at 04:58 WIB on 15 August 2026, about 30 km northeast of Mbay, Flores. BMKG issued a tsunami warning for several coastal areas and lifted it at 07:31 WIB. Seven regencies were affected, from West Manggarai east to Sikka. The toll rose as access improved, reaching 120 deaths and about 188,673 displaced as of 31 August (BNPB, via the AHA Centre). On 15 September BNPB announced a revised toll of 142 deaths - 48 direct and 94 indirect deaths at evacuation sites - after a joint verification with the Ministry of Health, and revised the injured figure to 1,603. BNPB attributed the indirect deaths mainly to elderly evacuees with chronic conditions, and rejected readings that they had died for want of treatment. DPR's Commission IX and Amnesty International Indonesia have called for an audit and independent investigation, respectively. ADRC requested Sentinel Asia and the International Charter on the day of the earthquake on behalf of BRIN. The response has otherwise shifted into recovery: roads and bridges are restored, 1,931 schools have resumed classes, and Rp200 billion in contingency funds has gone to NTT. Displacement is down to 46,461 and 103,427 damaged houses are being re-verified. BMKG recorded 17,073 aftershocks by 21 Sep; a felt M5.1 that day in Manggarai Timur, linked to the Flores Back-arc Thrust, collapsed a partly built shelter.",
-    "summary_ja": "2026年8月15日4時58分（WIB）、東ヌサトゥンガラ州ナゲケオ県沖でM7.7の地震が発生した。震央はフローレス島ンバイの北東約30km。BMKGは沿岸の一部に津波警報を出し、7時31分に解除した。被災は西マンガライ、マンガライ、東マンガライ、ンガダ、ナゲケオ、エンデ、シッカの7県に及ぶ。BNPBは8月31日09:00 WIB時点で死者120人、負傷1,658人、避難者約188,673人と発表した。その後9月15日、保健省との合同検証を経て、死者を142人（直接死48人＋避難所での間接死94人）、負傷を1,603人へ修正した。間接死の多くは持病のある高齢避難者で、BNPBは「治療を受けられずに死亡した」との解釈を否定した。DPRは監査を要求。ADRCは発災当日、BRINに代わりセンチネルアジアと国際災害チャーターを要請した。道路・橋梁は全面復旧、中央予備費2,000億ルピアをNTT州へ拠出済み。避難者は46,461人へ急減し、損壊住宅103,427棟を現地で再検証中。余震は9月21日までに計17,073回。同日マンガライ・ティムールで有感M5.1が発生し、同じフローレス背弧衝上断層による活動とBMKGが説明。建設中の仮設住宅1棟が倒壊した。",
+    "summary_en": "A magnitude 7.7 earthquake struck offshore Nagekeo Regency, East Nusa Tenggara, at 04:58 WIB on 15 August 2026, about 30 km northeast of Mbay, Flores. BMKG issued a tsunami warning for several coastal areas and lifted it at 07:31 WIB. Seven regencies were affected, from West Manggarai east to Sikka. The toll rose as access improved, reaching 120 deaths and about 188,673 displaced as of 31 August (BNPB, via the AHA Centre). On 15 September BNPB announced a revised toll of 142 deaths - 48 direct and 94 indirect deaths at evacuation sites - after a joint verification with the Ministry of Health, and revised the injured figure to 1,603. BNPB attributed the indirect deaths mainly to elderly evacuees with chronic conditions, and rejected readings that they had died for want of treatment. DPR's Commission IX and Amnesty International Indonesia have called for an audit and independent investigation, respectively. ADRC requested Sentinel Asia and the International Charter on the day of the earthquake on behalf of BRIN. The response has shifted into recovery: roads and bridges are restored, 1,931 schools have resumed classes, and Rp200 billion in contingency funds has gone to NTT. Tent displacement is 22,383 (30 Sep) and 103,427 damaged houses are being re-verified. BMKG recorded 17,073 aftershocks by 21 Sep; a felt M5.1 that day in Manggarai Timur, linked to the Flores Back-arc Thrust, collapsed a partly built shelter.",
+    "summary_ja": "2026年8月15日4時58分（WIB）、東ヌサトゥンガラ州ナゲケオ県沖でM7.7の地震が発生した。震央はフローレス島ンバイの北東約30km。BMKGは沿岸の一部に津波警報を出し、7時31分に解除した。被災は西マンガライ、マンガライ、東マンガライ、ンガダ、ナゲケオ、エンデ、シッカの7県に及ぶ。BNPBは8月31日09:00 WIB時点で死者120人、負傷1,658人、避難者約188,673人と発表した。その後9月15日、保健省との合同検証を経て、死者を142人（直接死48人＋避難所での間接死94人）、負傷を1,603人へ修正した。間接死の多くは持病のある高齢避難者で、BNPBは「治療を受けられずに死亡した」との解釈を否定した。DPRは監査を要求。ADRCは発災当日、BRINに代わりセンチネルアジアと国際災害チャーターを要請した。道路・橋梁は復旧、中央予備費2,000億ルピアをNTT州へ拠出済み。テント避難者は22,383人（9月30日）へ急減し、損壊住宅103,427棟を現地で再検証中。余震は9月21日までに計17,073回。同日の有感M5.1で建設中の仮設住宅1棟が倒壊した。",
     "tectonic_en": "The earthquake was generated by the Flores Back-Arc Thrust.",
     "tectonic_ja": "フローレス背弧断層（Flores Back-Arc Thrust）による地震。"
   },
@@ -166,8 +166,8 @@
     {
       "item_en": "Displaced",
       "item_ja": "避難者",
-      "value_en": "Approximately 188,673 (BNPB, via AHA Centre, as of 09:00 WIB 31 Aug), up from 179,037 at the 26 Aug report. The figure moved about 2,000 (15 Aug) to 9,290 (16 Aug) to 46,252 (18 Aug) to 59,647 (19 Aug) to 180,327 (24 Aug) to 179,037 (26 Aug) to 188,161 (30 Aug 07:00 WIB, BNPB press conference via ANTARA - down 4,142 from the prior count as aftershocks began to ease; Manggarai and Nagekeo the largest caseloads at 50,556 and 50,574) to approximately 188,673 (31 Aug). BNPB attributes the very large caseload substantially to fear of continuing aftershocks and to circulating hoaxes predicting a larger earthquake and tsunami, not to housing loss alone. No BNPB or media figure found after 31 Aug supersedes this; a 9 Sep ANTARA report on Sikka District alone (925 families still registered, and falling) is consistent with a continuing gradual decline but is not a province-wide count. On 15 Sep, at an online press conference, BNPB's Acting Head for Disaster Data, Information and Communication, Berton SP Panjaitan, reported a sharp decline \"from over 150,000 people to 46,461\". No BNPB or media figure was found for the period between 31 Aug (approximately 188,673) and this 15 Sep report describing the intermediate peak of \"over 150,000\"; the two ends of the decline are shown as reported, without an intermediate series.",
-      "value_ja": "約188,673人（BNPB、AHA Centre経由、8月31日09:00 WIB時点）。8月26日報の179,037人から増加。約2,000人（8月15日）→9,290人（16日）→46,252人（18日）→59,647人（19日）→180,327人（24日）→179,037人（26日）→188,161人（30日07:00 WIB、BNPB記者会見、ANTARA経由。余震の沈静化に伴い前回集計より4,142人減。マンガライ県50,556人・ナゲケオ県50,574人が最多）→約188,673人（31日）と推移した。BNPBは避難者数が極めて多い要因を、住家の喪失だけでなく、継続する余震への恐怖と、より大きな地震・津波を予告するデマの流布に帰している。8月31日以降、これを更新するBNPB・報道の数値は見当たらない。9月9日のANTARA報道（シッカ県のみ、925世帯が登録中で漸減傾向）はゆるやかな減少傾向と整合するが、州全体の集計ではない。 9月15日のオンライン記者会見で、BNPB防災データ・情報・広報担当代理のベルトン・SP・パンジャイタン氏は、避難者数が「15万人超から46,461人へ」大きく減少したと発表した。8月31日（約188,673人）と今回の9月15日報の間の期間について「15万人超」という中間のピークを示すBNPB・報道の数値は見当たらず、減少の両端のみが報告されている中間の推移は示されていない。",
+      "value_en": "Approximately 188,673 (BNPB, via AHA Centre, as of 09:00 WIB 31 Aug), up from 179,037 at the 26 Aug report. The figure moved about 2,000 (15 Aug) to 9,290 (16 Aug) to 46,252 (18 Aug) to 59,647 (19 Aug) to 180,327 (24 Aug) to 179,037 (26 Aug) to 188,161 (30 Aug 07:00 WIB, BNPB press conference via ANTARA - down 4,142 from the prior count as aftershocks began to ease; Manggarai and Nagekeo the largest caseloads at 50,556 and 50,574) to approximately 188,673 (31 Aug). BNPB attributes the very large caseload substantially to fear of continuing aftershocks and to circulating hoaxes predicting a larger earthquake and tsunami, not to housing loss alone. No BNPB or media figure found after 31 Aug supersedes this; a 9 Sep ANTARA report on Sikka District alone (925 families still registered, and falling) is consistent with a continuing gradual decline but is not a province-wide count. On 15 Sep, at an online press conference, BNPB's Acting Head for Disaster Data, Information and Communication, Berton SP Panjaitan, reported a sharp decline \"from over 150,000 people to 46,461\". No BNPB or media figure was found for the period between 31 Aug (approximately 188,673) and this 15 Sep report describing the intermediate peak of \"over 150,000\"; the two ends of the decline are shown as reported, without an intermediate series. Update (1 Oct): BNPB (Acting Head of Disaster Data, Information and Communication Berton SP Panjaitan, via ANTARA, 1 Oct) says accelerated construction of temporary housing (huntara) in the seven affected regencies has cut the number of people in emergency tents by 87%, from 179,037 to 22,383 as of 30 September 2026. BNPB also stressed that huntara construction is fully government-funded after reports of residents in Manggarai paying extra costs; residents of severely damaged houses who do not take a physical huntara can receive the housing-wait allowance (DTH).",
+      "value_ja": "約188,673人（BNPB、AHA Centre経由、8月31日09:00 WIB時点）。8月26日報の179,037人から増加。約2,000人（8月15日）→9,290人（16日）→46,252人（18日）→59,647人（19日）→180,327人（24日）→179,037人（26日）→188,161人（30日07:00 WIB、BNPB記者会見、ANTARA経由。余震の沈静化に伴い前回集計より4,142人減。マンガライ県50,556人・ナゲケオ県50,574人が最多）→約188,673人（31日）と推移した。BNPBは避難者数が極めて多い要因を、住家の喪失だけでなく、継続する余震への恐怖と、より大きな地震・津波を予告するデマの流布に帰している。8月31日以降、これを更新するBNPB・報道の数値は見当たらない。9月9日のANTARA報道（シッカ県のみ、925世帯が登録中で漸減傾向）はゆるやかな減少傾向と整合するが、州全体の集計ではない。 9月15日のオンライン記者会見で、BNPB防災データ・情報・広報担当代理のベルトン・SP・パンジャイタン氏は、避難者数が「15万人超から46,461人へ」大きく減少したと発表した。8月31日（約188,673人）と今回の9月15日報の間の期間について「15万人超」という中間のピークを示すBNPB・報道の数値は見当たらず、減少の両端のみが報告されている中間の推移は示されていない。 更新（10月1日）：BNPB（防災データ・情報・広報担当代理ベルトン・SP・パンジャイタン氏、ANTARA 10月1日報）は、被災7県での仮設住宅（フンタラ）整備の加速により、緊急テント内の避難者が179,037人から22,383人（9月30日時点）へ87%減少したと発表した。あわせて、マンガライ県で住民が追加費用を負担したとの報告を受け、フンタラ建設は全額公費で賄われると強調した。重度損壊でフンタラを選ばない世帯には住宅待機手当（DTH）が支給される。",
       "source_en": "BNPB press conference (Berton SP Panjaitan), 15 Sep, via ANTARA",
       "source_ja": "BNPB記者会見（ベルトン・SP・パンジャイタン氏）、9月15日、ANTARA経由",
       "tier": "official",
@@ -735,6 +735,22 @@
       "en": "ANTARA reports 108 indirect deaths among evacuees as of end-September (Manggarai 44, East Manggarai 33, Nagekeo 20), mostly older people and children with pneumonia and diarrhoea. The Minister of Home Affairs said he would confirm the causes with the NTT provincial government and noted an additional Rp 20 billion contingency fund for each of the seven affected regencies/cities and Rp 40 billion for NTT Province.",
       "ja": "ANTARAは、9月末時点で避難者の間接死が108人（マンガライ44、東マンガライ33、ナゲケオ20）で、肺炎・下痢の高齢者と子どもが多いと報じた。内務大臣は原因をNTT州政府に確認するとし、影響を受けた7県・市に各200億ルピア、NTT州に400億ルピアの予備費を追加配分済みと述べた。",
       "url": "https://www.antaranews.com/berita/5764619/mendagri-tindaklajuti-korban-gempa-ntt-meninggal-di-pengungsian"
+    },
+    {
+      "time": "1 Oct",
+      "tier": "official",
+      "src": "BNPB, via ANTARA (5767224)",
+      "en": "BNPB states that all temporary-housing (huntara) construction for survivors of the M7.7 earthquake is free of charge, responding to reports of Manggarai residents paying extra costs. It says accelerated huntara construction in the seven affected regencies has cut people in emergency tents by 87%, from 179,037 to 22,383 as of 30 September.",
+      "ja": "BNPBは、M7.7地震の被災者向け仮設住宅（フンタラ）の建設はすべて無償で、公費で賄われると明言した（マンガライ県で住民が追加費用を負担したとの報告への対応）。被災7県でのフンタラ整備の加速により、緊急テントの避難者は179,037人から22,383人（9月30日時点）へ87%減ったとしている。",
+      "url": "https://www.antaranews.com/berita/5767224/bnpb-tegaskan-pembangunan-huntara-ntt-gratis"
+    },
+    {
+      "time": "4 Oct",
+      "tier": "media",
+      "src": "BNPB / Kodi Utara police (ANTARA 5770664)",
+      "en": "A separate M6.1 earthquake struck offshore Sumba Barat Daya Regency at 06:55 WITA (UTC+8) on 4 Oct, 14 km southwest of Kodi, depth 10 km (9.70S 118.92E), no tsunami potential per BNPB. It was felt strongly for about one minute in Sumba Barat Daya, Sumba Barat and Manggarai Barat. The Kodi Utara police report one death, a 73-year-old who collapsed from shock, and many houses and one school severely damaged; BPBD is still compiling data. BMKG links the quake to Indo-Australian plate activity. This is not counted in the 15 August Flores earthquake figures; a relation to the Flores sequence has not been stated by any authority.",
+      "ja": "10月4日06:55（WITA、UTC+8）、スンバ・バラット・ダヤ県沖で別のM6.1地震が発生。震源はコディの南西14km、深さ10km（南緯9.70度・東経118.92度）、BNPBによると津波の可能性なし。スンバ・バラット・ダヤ、スンバ・バラット、マンガライ・バラットの各県で約1分間の強い揺れを観測。コディ・ウタラ署は、揺れに驚いて倒れた73歳の高齢者1人の死亡と、多数の住家・学校1棟の大きな損壊を報告し、BPBDが被害を集計中。BMKGはインド・オーストラリアプレートの活動によるとしている。8月15日のフローレス地震の集計には含めない。フローレスの一連の活動との関係を述べた機関はない。",
+      "url": "https://www.antaranews.com/berita/5770664/seorang-warga-di-sumba-barat-daya-meninggal-dunia-akibat-gempa"
     }
   ],
   "intensity": {},
@@ -1338,6 +1354,13 @@
       "url": "https://www.antaranews.com/berita/5762701/bnpb-hunian-sementara-penyintas-gempa-ntt-dibangun-bertahap",
       "tier": "media",
       "_note": "現地語報道（2026-10-01）。huntara進捗。"
+    },
+    {
+      "label_en": "ANTARA: BNPB says huntara construction is free; tent evacuees down to 22,383 (1 Oct 2026)",
+      "label_ja": "ANTARA: BNPB、仮設住宅は無償と明言。テント避難者22,383人に（2026年10月1日）",
+      "url": "https://www.antaranews.com/berita/5767224/bnpb-tegaskan-pembangunan-huntara-ntt-gratis",
+      "tier": "media",
+      "_note": "現地語報道（2026-10-04）。"
     }
   ],
   "attribution_en": "Figures reported by BNPB and relayed by IFRC/PMI and humanitarian partners; source and cut-off shown per row. All provisional.",
