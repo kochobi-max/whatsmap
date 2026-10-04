@@ -73,10 +73,33 @@ function jstWeekday() {
   return ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][jst.getDay()];
 }
 
-function isDueToday(m) {
+// 曜日は1つでも複数でも書ける。
+//   "weekday_jst": "Tue"                 1日だけ
+//   "weekdays_jst": ["Mon", "Thu"]       週2回
+function cadenceDays(cc) {
+  if (Array.isArray(cc.weekdays_jst) && cc.weekdays_jst.length) return cc.weekdays_jst;
+  return [cc.weekday_jst || "Mon"];
+}
+
+// **進行中の警告があるイベントは、頻度の設定に関わらず毎日見る。**
+//
+// 2026-10-05、費用を下げるためにネパールへ週2回の設定を入れた。
+// ネパールにはレンデ川の湖（決壊のおそれ）という進行中の警告がある。
+// 頻度を落とすと、**決壊した日が「見ない日」に当たれば、次の該当曜日まで気づけない。**
+// 2026-09-19〜23 に警告が5日遅れたのと同じことが、今度は設定によって起きる。
+//
+// 警告が解除されたら（`active: false`）自動的に頻度の設定が効きはじめる。
+// 人が覚えておく必要がないように、機械の側に置く。
+function hasActiveWarning(d) {
+  const w = d && d.active_warnings;
+  return Array.isArray(w) && w.some(x => x && x.active !== false);
+}
+
+function isDueToday(m, d) {
+  if (hasActiveWarning(d)) return true;               // 警告中は毎日
   const cc = m && m.check_cadence;
-  if (!cc || cc.frequency !== "weekly") return true; // 既定: 毎日
-  return jstWeekday() === (cc.weekday_jst || "Mon");
+  if (!cc || cc.frequency !== "weekly") return true;  // 既定: 毎日
+  return cadenceDays(cc).includes(jstWeekday());
 }
 
 function resolveEventPath(ref) {
@@ -91,7 +114,7 @@ function resolveEventPath(ref) {
       let d;
       try { d = JSON.parse(fs.readFileSync(p, "utf8")); } catch { continue; }
       if (d.meta?.status !== "active") continue;
-      if (isDueToday(d.meta)) {
+      if (isDueToday(d.meta, d)) {
         files.push(p);
       } else {
         cadenceSkipped.push({ file: p, glide: d.meta.glide, cadence: d.meta.check_cadence });
@@ -260,7 +283,7 @@ function main() {
       console.log(JSON.stringify({ ok: true, results: [], cadenceSkipped }, null, 2));
     } else {
       cadenceSkipped.forEach(s => console.log(
-        `\n── ${path.basename(s.file)}\n   本日は対象外（週次チェック: ${s.cadence.weekday_jst || "Mon"}曜のみ）。これは失敗ではない。`));
+        `\n── ${path.basename(s.file)}\n   本日は対象外（週次チェック: ${cadenceDays(s.cadence).join("・")}曜のみ）。これは失敗ではない。`));
       console.log("");
     }
     process.exit(0);
@@ -307,7 +330,7 @@ function main() {
     console.log(JSON.stringify({ ok: true, results, cadenceSkipped }, null, 2));
   } else {
     cadenceSkipped.forEach(s => console.log(
-      `\n── ${path.basename(s.file)}\n   本日は対象外（週次チェック: ${s.cadence.weekday_jst || "Mon"}曜のみ）。これは失敗ではない。`));
+      `\n── ${path.basename(s.file)}\n   本日は対象外（週次チェック: ${cadenceDays(s.cadence).join("・")}曜のみ）。これは失敗ではない。`));
     for (const r of results) {
       console.log(`\n── ${path.basename(r.file)}`);
       console.log(`   判定: ${r.verdict === "OK" ? "✓ OK（ビルド→送信可）"
