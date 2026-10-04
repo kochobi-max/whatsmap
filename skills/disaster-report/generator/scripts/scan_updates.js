@@ -58,6 +58,10 @@ function activeEvents(arg) {
     let d;
     try { d = JSON.parse(fs.readFileSync(path.join(EVENTS, f), "utf8")); } catch (_) { continue; }
     if (arg ? d.meta.glide !== arg : d.meta.status !== "active") continue;
+    // 名指しでない定期スイープでは、resolve_event.js と同じ頻度の判定に従う。
+    // **ここを揃えないと、resolve_event が飛ばしたイベントの ReliefWeb を
+    // 毎日取りに行き続ける。**費用を下げる目的が半分しか達せられない。
+    if (!arg && !isDueToday(d.meta, d)) { cadenceSkipped.push(d.meta.glide); continue; }
     out.push(d);
   }
   return out;
@@ -114,6 +118,25 @@ function listing(iso3) {
   return rows;
 }
 
+// 頻度の判定は resolve_event.js と同じ規則を使う（SKILL.md §2-1）。
+// **2か所に書くことになるが、どちらも1ファイルで動く方針を崩さない。**
+// 規則を変えるときは両方直すこと（ここと resolve_event.js の isDueToday）。
+function jstWeekday() {
+  const now = new Date();
+  const jst = new Date(now.getTime() + (now.getTimezoneOffset() + 540) * 60000);
+  return ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][jst.getDay()];
+}
+function isDueToday(m, d) {
+  const w = d && d.active_warnings;
+  if (Array.isArray(w) && w.some(x => x && x.active !== false)) return true;
+  const cc = m && m.check_cadence;
+  if (!cc || cc.frequency !== "weekly") return true;
+  const days = Array.isArray(cc.weekdays_jst) && cc.weekdays_jst.length
+    ? cc.weekdays_jst : [cc.weekday_jst || "Mon"];
+  return days.includes(jstWeekday());
+}
+const cadenceSkipped = [];
+
 function main() {
   const arg = process.argv[2] && !process.argv[2].startsWith("-") ? process.argv[2] : null;
   const events = activeEvents(arg);
@@ -163,6 +186,15 @@ function main() {
       console.log("   ▽ そのほか");
       for (const it of rest) console.log("     " + it.title + "\n       " + it.url);
     }
+  }
+
+  // **飛ばしたことを黙っていない。** 「今日は資料が無い」と「今日は見ていない」は別である。
+  if (cadenceSkipped.length) {
+    console.log("");
+    console.log("── 今日は確認しないイベント（meta.check_cadence）");
+    for (const g of cadenceSkipped) console.log("   ・" + g);
+    console.log("   **「新しい資料が無い」ではない。今日は見ていない。**");
+    console.log("   名指しすればいつでも見られる: node scan_updates.js <GLIDE>");
   }
 
   printWatchlist();
