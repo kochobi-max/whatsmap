@@ -52,6 +52,9 @@ hasFlag("--pause"); // 受け取って捨てる。古い登録を壊さないた
 const DEST_ARG = takeFlag("--dest");
 const GLIDE_ARG = takeFlag("--glide");
 const TODAY_ARG = takeFlag("--today"); // 当日判定を試験するためだけの指定
+// --wait <分> : 配布が当日ぶんになるまで待つ。**人が手で動かす経路だけで使う。**
+// 定期タスクは待たない（待つと、ぶら下がったタスクになる）。
+const WAIT_MIN = Math.max(0, parseInt(takeFlag("--wait") || "0", 10) || 0);
 
 // --dest を指定するのは試すときだけ。**既定でプッシュしない。**
 // 2026-08-28、手元で通しの試験をしたら、テスト用フォルダを出力先として
@@ -218,26 +221,58 @@ function publishOne(glide, markers) {
   // ---- 台帳 ----
   say("STEP: manifest");
   const base = RAW_BASE + "/" + DIST_BRANCH + "/" + glide;
-  const r = curl(base + "/manifest.txt");
+  const today = todayLocal();
+
+  // **人が手で動かすときは、当日ぶんが出るまで待つ。**
+  //
+  // 2026-10-05、荒木田さんが 06:57 にバッチを動かした。クラウドの配布は 07:39 だった。
+  // 06:57 の時点で `dist` は前日のものなので、仕様どおり `SKIP stale-dist` で
+  // 1ファイルもコピーせずに終わった。**正しい動作だが、画面を見ない人には
+  // 「動かしたのに何も起きない」としか映らない。**
+  //
+  // クラウド側のビルドは 07:30 に始まり、3件そろうのは 07:40 前後。
+  // 人が何時に踏むかはこちらで決められない。**こちらが待てばよい。**
+  // 定期タスク（08:30）は `--wait` を付けないので、従来どおり待たずに飛ばす。
+  let man = null, r = null;
+  const deadline = Date.now() + WAIT_MIN * 60000;
+  for (let n = 0; ; n++) {
+    r = curl(base + "/manifest.txt");
+    man = {};
+    if (r.ok) {
+      for (const line of r.body.split(/\r?\n/)) {
+        const i = line.indexOf("=");
+        if (i > 0) man[line.slice(0, i)] = line.slice(i + 1);
+      }
+    }
+    const fresh = r.ok && man.BUILT_DATE_JST === today;
+    if (fresh || Date.now() >= deadline) break;
+    if (n === 0) {
+      say("   配布はまだ " + (r.ok ? man.BUILT_DATE_JST + " のもの" : "出ていません")
+        + "。今日（" + today + "）のぶんを待ちます（最大 " + WAIT_MIN + "分）。");
+      say("   クラウド側のビルドは 07:30 に始まり、07:40 前後にそろいます。この窓は閉じないでください。");
+    } else if (n % 5 === 0) {
+      say("   待っています… " + nowLocal());
+    }
+    sleepSync(60000);
+  }
+
   if (!r.ok) {
     say("   " + glide + " はまだ配布されていません。何もコピーしていません。");
+    if (WAIT_MIN > 0) say("   " + WAIT_MIN + "分待っても出ませんでした。もう一度このファイルを実行してください。");
     return 0; // 他のイベントを止めない
-  }
-  const man = {};
-  for (const line of r.body.split(/\r?\n/)) {
-    const i = line.indexOf("=");
-    if (i > 0) man[line.slice(0, i)] = line.slice(i + 1);
   }
   if (man.GLIDE !== glide) { say("STATUS: FAIL manifest-mismatch " + man.GLIDE); return 4; }
 
-  const today = todayLocal();
   say("   ビルド " + man.BUILT_AT_JST + " JST  /  今日 " + today);
   if (man.BUILT_DATE_JST !== today) {
     say("STATUS: SKIP stale-dist");
     say("   配布されている最新は " + man.BUILT_DATE_JST + " のもので、今日のものではない。");
-    say("   何もコピーしない。クラウド側はメールを見送る。");
-    say("   これは意図した動作。前日のファイルを置き直して");
-    say("   「本日更新しました」と書いたメールを出さないため。");
+    say("   **1ファイルもコピーしていません。** 故障ではありません。");
+    say("   前日のファイルを置き直して「本日更新しました」と書いたメールを");
+    say("   出さないため、わざと止めています。");
+    say("   ");
+    say("   対処: 07:45 以降にもう一度このファイルを実行してください。");
+    say("   クラウド側のビルドは 07:30 に始まり、07:40 前後にそろいます。");
     // **飛ばしたことを、クラウドからも見えるようにする。**
     // 以前はここで何も書かずに終わっていたので、クラウド側からは
     // 「PCが動いて飛ばした」のか「PCが動いていない」のかが区別できなかった。
@@ -588,6 +623,16 @@ function relaxTaskPower() {
     say("   「コンピューターをAC電源で使用している場合のみ...」のチェックを外す。");
   }
 }
+// 同期で待つ。**非同期に書き換えない。** この処理は上から下へ読める形を保つと決めてある。
+function sleepSync(ms) {
+  try {
+    Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms);
+  } catch (_) {
+    const end = Date.now() + ms;
+    while (Date.now() < end) { /* 最後の手段 */ }
+  }
+}
+
 function taskExists(args) {
   args = args || ["/query", "/tn", TASKNAME];
   try { execFileSync("schtasks", args, { encoding: "utf8", stdio: "pipe" }); return true; }

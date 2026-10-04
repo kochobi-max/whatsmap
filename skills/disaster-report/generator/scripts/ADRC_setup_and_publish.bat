@@ -60,5 +60,12 @@ if not exist "%RUNNER%" (
 
 REM  --setup registers the daily task as well. Everything else,
 REM  including whether to keep this window open, is decided in there.
-node "%RUNNER%" --no-pull --setup
+REM
+REM  --wait 30: the cloud build starts at 07:30 JST and the three events
+REM  land in dist around 07:40. A person double-clicking this file at an
+REM  arbitrary time would otherwise get "SKIP stale-dist" and no files,
+REM  which looks like nothing happened. Wait for today's build instead.
+REM  2026-10-05: run at 06:57, build at 07:39, zero files copied.
+REM  The daily scheduled task does NOT pass --wait (it must not hang).
+node "%RUNNER%" --no-pull --setup --wait 30
 exit /b %ERRORLEVEL%
