@@ -415,7 +415,7 @@ python skills/ldi-cms-report/scripts/ldi_state.py --dir "<マウントしたLate
 
 優先順: ReliefWeb（**サイトを組み込みブラウザで**。APIは不可、Step 1.6参照） → ADINet（ASEAN） → USGS（地震）
 → FDMA（日本・最新報 PDF）→ 各国防災機関 → 報道（発表機関名とas-of日付が明記されたもの）
-（旧版が参照していた `references/sources.md` は同期コピーに存在しない。）
+経路・到達可否・罠は **`references/sources.md`**（2026-10-06 作成）。ReliefWeb が curl で読める環境では、Step 1.6 のブラウザ内PDF復号は不要（同 §4）。
 
 > 💡 **取得経路の実測メモ（2026-09-30）**
 > - FDMA の被害報PDF（`fdma.go.jp/disaster/info/items/...pdf`）は WebFetch で読める。最新報番号は
