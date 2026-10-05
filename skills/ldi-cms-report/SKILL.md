@@ -24,9 +24,9 @@ description: >
 | ゲート | 出力すべき内容 | 欠けると |
 |--------|-------------|---------|
 | Step 1完了時 | LDI最新Reportエントリ日付を含むトラッキング表（全件） | Step 3.5が実施不能 |
-| Step 3.5実施前 | 全Keyについて `view_disaster_en.php?Key=XXXX` を個別に開き、Report/Articles最新ソースを直接確認 | LDI掲載済みを見落とす |
+| Step 3.5実施前 | 全Keyについて Report/Articles の**最新エントリの全文**を確認（`fetch_adrc.js` の `extract: "OK"`、FAIL のKeyは個別ページを開く） | LDI掲載済みを見落とす |
 | Step 3.5完了時 | スキップ判定結果表（全件・全列埋め） | Step 4以降に進めない |
-| **Step 8（送信前）** | **`report-qa` の判定。FAIL が1件でもあればメールを送らない** | **誤った内容が担当者に届き、CMSへ登録される** |
+| **Step 8（送信前）** | **`scripts/qa_ldi.py` の判定。FAIL が1件でもあればメールを送らない** | **誤った内容が担当者に届き、CMSへ登録される** |
 
 ## 自律度
 
@@ -68,15 +68,26 @@ description: >
 
 ### Step 1: ADRCリスト取得
 
-ADRC LDIの一覧ページ（`https://www.adrc.asia/latest/` または Chrome MCP で確認した実URL）に navigate し、
+ADRC LDIの一覧ページ `https://www.adrc.asia/latest/` に navigate し、
 **`scripts/fetch_adrc.js`** を `javascript_tool` で実行する。
 
-このスクリプトは各災害の詳細ページ（`view_disaster_en.php?Key=XXXX`）を並列 fetch し、
-**Report/Articles セクションの最新エントリ日付と冒頭テキスト**を返す。
-これが Step 3.5 のスキップ判定の一次スクリーニングになる。
+**必ずブラウザの中で動かす。** `www.adrc.asia` は中間証明書を添えずに出しているため、
+クラウドから curl / node fetch で叩くと TLS の検証で落ちる
+（`CONNECT` は 200 で通り、その先で `TLS alert, unknown CA`）。
+ポリシーの拒否ではない。**TLSの検証は外さない。** ブラウザは中間証明書を自分で取りに行く。
 
-> ⚠️ **fetch_adrc.js の要約は一次スクリーニングに過ぎない。** Step 3.5 では全Keyの個別ページを
-> 改めて開いて確認すること（後述の必須手順）。要約だけで最終判定してはならない。
+このスクリプトは全Keyの個別ページを並列に取り、
+**Report/Articles セクションの全エントリ（日付・ソース名・本文の全文）**を返す。
+**要約ではない。切り詰めていない。** だから Step 3.5 の判定にそのまま使える。
+
+返り値のうち `extract: "FAIL"` のKeyは**取り出せていない。**
+そのKeyは従来どおり `view_disaster_en.php?Key=XXXX` を個別に開いて確認する。
+`failures` が空でなければ、何件をどう処理したかを報告に書く。
+
+> ⚠️ **`reports` が0件なのを「更新が無い」と読まない。** 取り出せていないだけである。
+> **DOMの形に合わせた部分は実機で未検証**（クラウドから adrc.asia を開けないため）。
+> 初回は `failures` が出る前提で動かし、出たKeyの構造を見て
+> `SECTION_HEADINGS` / `parseReports` を直すこと。
 
 完了時に出力するトラッキング表:
 
@@ -116,6 +127,20 @@ https://glidenumber.net/glide/public/search/search.jsp
 
 ### Step 3: 一次情報源調査
 
+**まず、前回までに使った記事を確認する。**
+
+```bash
+python skills/ldi-cms-report/scripts/ldi_state.py --show
+```
+
+定期タスクは毎回まっさらなセッションで始まるので、前日の記憶が何も残らない。
+この台帳が無いと、毎朝同じ災害の同じ記事を読み直すことになる
+（2026-10-05 の実測で1回 $15.87、読み込み2,000万トークン超。その相当部分がこれだった）。
+
+- 台帳に載っている記事（同じURL）は**読み直さない。**より新しい記事を探すほうに時間を使う
+- `STATUS: EMPTY` なら台帳が無い。**その日はすべて読む**（「前回と同じ」と判断できない）
+- **これは Step 3.5 の代わりではない。** LDI個別ページの確認は毎回・全Key・省略不可
+
 各災害の最新被害数値を収集し、**sourceDate（情報源の日付）とsourceURL（情報源のURL）を必ず記録する**。
 
 優先順: ReliefWeb → ADINet（ASEAN） → USGS（地震） → FDMA（日本・最終報 PDF）→ 各国防災機関
@@ -145,11 +170,17 @@ URL1は「今回の情報源」を示すものであり、「以前のレポー�
 
 各エントリについて以下を順番に実施する:
 
-1. **【必須】各Keyについて `view_disaster_en.php?Key=XXXX` を個別に開き**（`navigate` → `get_page_text`。
-   javascript_tool でクエリ文字列がブロックされない場合は fetch でも可）、
-   **Report/Articles セクションの最新ソース名・日付・本文を必ず読む。**
-   一覧ページ(`/latest/`)の日付や fetch_adrc.js の要約だけで判定してはならない。
-   このLDI個別ページ確認は全Key・省略不可。
+1. **【必須】全Keyについて Report/Articles の最新エントリの「ソース名・日付・本文」を読む。**
+
+   | Keyの状態 | 読み方 |
+   |---|---|
+   | `fetch_adrc.js` が `extract: "OK"` | 返ってきた `reports[0]` の**全文**を読む。これは個別ページの本文そのもので、要約ではない |
+   | `extract: "FAIL"` | **個別ページを開く**（`view_disaster_en.php?Key=XXXX` を `navigate` → `get_page_text`） |
+
+   **要約で判定してはならない、という定めは変えていない。**
+   変えたのは「全文をどう手に入れるか」だけである（2026-10-05）。
+   一覧ページ(`/latest/`)の日付で判定してはならない点も変わらない。
+   **全文が手元に無いKeyを、読んだことにしない。**
 2. 最新エントリの**ソース名・日付**と**本文冒頭**を読む
 3. 今回収集した一次情報源の日付・内容と照合する
 
@@ -265,11 +296,49 @@ LDIエントリとして小さくても、大規模災害レポート（`disaste
 
 ### Step 7: docx生成
 
-`skills/docx/SKILL.md` 参照。
+**体裁は書かない。中身だけをJSONに書き、組み立てはスクリプトに渡す。**
+
+```bash
+python skills/ldi-cms-report/scripts/build_ldi_docx.py <判定JSON> --out LDI_CMS_Reports_YYYY-MM-DD.docx
+```
 
 - **ファイル名**: `LDI_CMS_Reports_YYYY-MM-DD.docx`
 - **保存先**: `C:\Users\arakida\LatestDisasterInfo\`
-- **書式確認**: 前日のファイルが保存先にある場合は必ず書式を参照してから生成すること
+- **前日のファイルを開いて書式を参照する必要はない。** 書式はスクリプトに固定した
+
+#### なぜこうしたか（2026-10-05）
+
+1回の実行コストが **$15.87（毎日）**、うち出力が **99,413トークン**だった。
+その大半が「表の罫線・背景色・ラベル列の文字・フッタの体裁」で、**毎日同じものである。**
+
+**モデルが書くのは中身だけにする。判定（Step 3.5 / 5 / 5.5）は1つも機械に渡していない。**
+
+#### 渡すJSONの形
+
+```json
+{
+  "created_date": "2026-10-05",
+  "verified_total": 23,
+  "skip_table": [
+    {"ldi_id": "2821", "disaster": "フィリピン地震",
+     "ldi_current": "NDRRMC 7/16「26 dead, 14 missing」",
+     "today_source": "7/18 NDRRMC（28人死亡）", "decision": "含める"}
+  ],
+  "entries": [
+    {"ldi_id": "2821",
+     "title_ja": "フィルスター 7/18", "title_en": "Philstar 18 Jul",
+     "body_ja": "NDRRMC（7/18、比国防省）：死者28人…",
+     "body_en": "NDRRMC (18 Jul): 28 dead…",
+     "url1": "https://...", "url2": "—"}
+  ]
+}
+```
+
+- **件数（更新必要・スキップ）は書かない。** スクリプトが `entries` と `skip_table` から数える。
+  二重に持たせると、片方だけ直して食い違う
+- 必須欄（`ldi_id` / `title_ja` / `title_en` / `body_ja` / `body_en` / `url1`）が空だと
+  **docxを作らずに `STATUS: FAIL input` で止まる。** 空欄のまま出力させない
+- `url2` が無いときは `"—"`
 
 #### エントリのタイトル・内容の記述形式（重要・厳守）
 
@@ -285,6 +354,10 @@ docxのエントリもこれに合わせる。
   - 例（英語）: `NDRRMC (16 Jul): 26 dead (Sarangani 10, Lanao del Sur 7…); 14 missing. Over 244,000 families displaced; 5,000+ families in 86 evacuation centres. PHP 73 million in food and non-food assistance distributed.`
 
 #### 出力フォーマット（固定）
+
+**この様式は `scripts/build_ldi_docx.py` が実装している。**
+様式を変えるときは**この節とスクリプトの両方**を直す。片方だけ直すと食い違う。
+背景色も固定した（節見出し `2F5496` / ラベル列 `D9E2F3` / 使用方法ボックス `FFF2CC`）。
 
 ```
 1. タイトル行（中央揃え）
@@ -321,8 +394,19 @@ docxのエントリもこれに合わせる。
 ### 🚦 Step 8: 機械QA（BLOCKING GATE）
 
 ```bash
-python skills/report-qa/scripts/qa_report.py "<生成したdocxのパス>" --type ldi
+python skills/ldi-cms-report/scripts/qa_ldi.py "<生成したdocxのパス>" --today YYYY-MM-DD
 ```
+
+> **2026-10-05 まで、このゲートは存在しなかった。**
+> SKILL.md は `skills/report-qa/scripts/qa_report.py --type ldi` を呼べと書いていたが、
+> **そのファイルが無かった。** つまり毎朝のレポートは機械検証を1度も通っていなかった。
+> ゲートがあるつもりで、無かった。`report-qa` スキルには実体が無いため、
+> 検証はこのスキルの中に置く（外に置くと、また無いまま参照し続ける）。
+>
+> 見るもの: 7行テーブルの行数とラベル / 必須欄の空欄 / URLの形 /
+> 言語の取り違え（英語欄に日本語・日本語欄に日本語なし）/ 内容欄のメタ情報（GLIDE・GDACS等）/
+> プレースホルダ残存 / **件数の表記と中身の一致**。
+> `確認中` `TBC` とタイトルの日付欠落は WARN（人が判断する）。
 
 | QA結果 | 動作 |
 |--------|------|
@@ -418,6 +502,21 @@ Superhuman の `create_or_update_draft`（`body` に完成HTMLを渡す）→ `s
 
 **事実以上の評価・演出を含む表現を使わない。** 観測された数値・公表内容と、その出典だけを書く。
 「深刻」「懸念される」「急務」等、書き手の評価や情緒を足す語を使わない。
+
+---
+
+### Step 11: 台帳を残す（省略不可）
+
+```bash
+python skills/ldi-cms-report/scripts/ldi_state.py --record <判定JSON>
+git add skills/ldi-cms-report/_state/ && git commit -m "ldi: 台帳更新" && git push
+```
+
+**コミットとプッシュまでやって初めて残る。** 定期タスクは毎回まっさらなセッションで
+clone して始まるので、**押し忘れると翌朝また同じ記事を読み直す。**
+
+メールを送らなかった日（更新0件・QA FAIL で止めた日）も記録する。
+読んだ記事は読んだのであり、次の朝に読み直す理由は無い。
 
 ---
 
