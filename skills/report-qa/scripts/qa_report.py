@@ -26,13 +26,23 @@ def check_ldi(doc):
         res.append(result("タイトル行", "FAIL", "「ADRC LDI CMS レポート入力データ」が見つからない"))
 
     # 3. date freshness
-    today = datetime.date.today().isoformat()
+    # 作成日は **JST で見る。**
+    #
+    # 2026-10-06、実物に「作成日が今日ではない」WARN が出続けていた。
+    # 文書の日付は JST（2026-10-06）、`date.today()` を呼んだコンテナは UTC（2026-10-05）。
+    # **ずれていたのは日付ではなく、時間帯である。**
+    # この業務は全部 JST で回っているので JST を基準にする。
+    # どこで動かしても通るよう、UTC の今日も許容する。
+    _utc = datetime.datetime.now(datetime.timezone.utc)
+    _jst = _utc + datetime.timedelta(hours=9)
+    ok_dates = {_utc.date().isoformat(), _jst.date().isoformat()}
+    today = _jst.date().isoformat()
     m = re.search(r"作成日[:：]?\s*(\d{4}-\d{2}-\d{2})", all_text)
     if m:
-        if m.group(1) == today:
+        if m.group(1) in ok_dates:
             res.append(result("作成日", "PASS", m.group(1)))
         else:
-            res.append(result("作成日", "WARN", f"作成日 {m.group(1)} ≠ 今日 {today}"))
+            res.append(result("作成日", "WARN", f"作成日 {m.group(1)} ≠ 今日 {today}（JST）"))
     else:
         res.append(result("作成日", "WARN", "作成日が抽出できない"))
 
@@ -133,11 +143,33 @@ def check_ldi(doc):
         # length checks
         jp = next((v for k, v in rows.items() if k.startswith("内容（日本語")), "")
         en = next((v for k, v in rows.items() if k.startswith("内容（英語")), "")
-        if jp and not (30 <= len(jp) <= 120):
-            res.append(result(f"No.{i} 内容(日)文字数", "WARN", f"{len(jp)}文字（目安50-80）"))
+        # 長さの目安（2026-10-06 に実測で設定）
+        #
+        # それまでは JA 30-120字 / EN 30-100語 を見ていたが、**表示していた文は
+        # 「目安50-80」で、コードの閾値と食い違っていた。** そして
+        # どちらの数字も根拠が無かった（SKILL.md に長さの定めは無い）。
+        #
+        # 実物（LDI_CMS_Reports_2026-10-06）の2件を測ると
+        #
+        #     内容（日本語）  196字 / 282字
+        #     内容（英語）     77語 / 106語
+        #
+        # で、**毎日 WARN が出続ける状態だった。** 鳴り続ける警報は読まれない。
+        # 荒木田さんの判断（2026-10-06）で、実態に合わせて目安を直した。
+        #
+        # 何を捕まえたいのか: 短すぎ＝被害と対応が書けていない、
+        # 長すぎ＝複数の報を1エントリに混ぜている（1エントリ=1ソースの形が崩れている）。
+        #
+        # **根拠は実物2件だけである。** 日数が溜まったら見直すこと。
+        JA_MIN, JA_MAX = 60, 400
+        EN_MIN, EN_MAX = 25, 180
+        if jp and not (JA_MIN <= len(jp) <= JA_MAX):
+            res.append(result(f"No.{i} 内容(日)文字数", "WARN",
+                              f"{len(jp)}字（目安{JA_MIN}-{JA_MAX}字）"))
         wc = len(en.split())
-        if en and not (30 <= wc <= 100):
-            res.append(result(f"No.{i} 内容(英)語数", "WARN", f"{wc}語（目安40-80）"))
+        if en and not (EN_MIN <= wc <= EN_MAX):
+            res.append(result(f"No.{i} 内容(英)語数", "WARN",
+                              f"{wc}語（目安{EN_MIN}-{EN_MAX}語）"))
         # 言語の取り違え（2026-10-06 追加）。このリポジトリで実際に起きた事故の型。
         if jp and not re.search(r"[\u3040-\u30ff\u4e00-\u9fff]", jp):
             res.append(result(f"No.{i} 内容(日)の言語", "FAIL", "日本語が1文字も無い"))
