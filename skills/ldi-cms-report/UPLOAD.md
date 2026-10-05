@@ -15,7 +15,26 @@ ldi-cms-report/
   SKILL.md                        ← 差し替え（Step 3 / 7 / 11 を追記）
   scripts/ldi_state.py            ← 新規
   scripts/fetch_adrc.js           ← 新規（ブラウザの中で動かす。DOM依存部分は未検証）
+  references/sources.md           ← 新規（Step 3 の参照先）
 ```
+
+**UPLOAD.md（このファイル）は上げない。** リポジトリ側の作業メモである。
+
+### 上げ方（2026-10-06 確立）
+
+1. セッション側で `.skill` を作る（AI）。スキルのフォルダを zip にしたもの。
+   `skill-creator` の `scripts/package_skill.py` を使い、先に `quick_validate.py` を通す
+2. `SendUserFile` でファイルカードとして渡す（AI）
+3. **カードの「Save skill」を押す（人）。** これだけで同期スキルが差し替わる
+4. 次のセッションで `~/.claude/skills/synced/*/ldi-cms-report/` を `diff` して届いたか確かめる（AI）
+
+`report-qa` は 2026-10-06 時点で同期済み（`qa_report.py` がリポジトリと一致）。
+
+### スクリプトの呼び方（2026-10-06 修正）
+
+同期スキルはリポジトリの外に置かれる。`skills/ldi-cms-report/scripts/...` とは書かない。
+**スキルを読み込んだときに表示される Base directory（`$SKILL_DIR`）からの相対パス**で呼ぶ。
+`report-qa` は同じ親フォルダの隣なので `$SKILL_DIR/../report-qa/` で届く（実測）。
 
 ## どこで動くか
 

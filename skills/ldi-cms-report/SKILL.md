@@ -395,8 +395,12 @@ await (await fetch(`https://api.reliefweb.int/v2/reports?appname=${APP}`,
 **まず、前回までに使った記事を確認する。**
 
 ```bash
-python skills/ldi-cms-report/scripts/ldi_state.py --dir "<マウントしたLatestDisasterInfo>" --show
+python "$SKILL_DIR/scripts/ldi_state.py" --dir "<マウントしたLatestDisasterInfo>" --show
 ```
+
+> 📝 **`$SKILL_DIR` はこのスキルを読み込んだときに表示される「Base directory for this skill」である。**
+> 定期タスクはリポジトリを clone しないので、`skills/ldi-cms-report/...` という書き方では見つからない
+> （2026-10-06 修正）。`report-qa` は同じ親フォルダにある隣のスキルなので `$SKILL_DIR/../report-qa/` で届く。
 
 **台帳は docx と同じフォルダに置く。**
 スキルのフォルダに書いても次の朝には残らない（毎回アカウントから配られるものなので）。
@@ -711,7 +715,7 @@ SKILL.md のどこにも長さの定めは無く、QAスクリプトの表示文
 ### 🚦 Step 8: 機械QA（BLOCKING GATE）
 
 ```bash
-python skills/report-qa/scripts/qa_report.py "<生成したdocxのパス>" --type ldi
+python "$SKILL_DIR/../report-qa/scripts/qa_report.py" "<生成したdocxのパス>" --type ldi
 ```
 
 | QA結果 | 動作 |
@@ -821,7 +825,7 @@ Superhuman の `create_or_update_draft`（`body` に完成HTMLを渡す）→ `s
 ### Step 11: 台帳を残す（省略不可・2026-10-06 追加）
 
 ```bash
-python skills/ldi-cms-report/scripts/ldi_state.py --dir "<マウントしたLatestDisasterInfo>" --record <判定JSON>
+python "$SKILL_DIR/scripts/ldi_state.py" --dir "<マウントしたLatestDisasterInfo>" --record <判定JSON>
 ```
 
 **メールを送らなかった日（更新0件・QA FAILで止めた日）も記録する。**
