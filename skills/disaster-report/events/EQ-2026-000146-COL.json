@@ -62,14 +62,14 @@
     ]
   },
   "_prev": {
-    "_comment": "2026-09-28 08:59 JST 送信済み（第26報）。UNGRD 9月16日06:30 COT 締め（IOM「コロンビア地震対応状況報告第11号」経由、9月25日投稿）。死者+4（331→335）・負傷+11（4,505→4,516）・行方不明-6（111→105）。行方不明は非monotonicフィールドのためゲートに掛からず、同時に死者が+4であることから身元確認・救出に伴う整理として本文に明記した。なお、この回は 08:50 の送信タスクが送り落としていたため、手で送っている（原因は Routines 画面のプロンプトが古いこと）。翌日の数値急変ゲートの基準。",
+    "_comment": "2026-10-06 08:53 JST 送信済み（第28報、delivered確認済み）。UNGRD 9月28日集計（IOM状況報告第12号経由）。主要数値は9月16日集計から横ばい。翌日の数値急変ゲートの基準。",
     "deaths": 335,
     "injured": 4516,
     "missing": 105,
     "houses_destroyed": 36478,
     "evacuees": null,
     "tier": "official",
-    "as_of": "16 Sep 2026 06:30 COT cut (UNGRD, via IOM Colombia Earthquake Response Situation Report #11, posted 25 Sep 2026); housing/affected/municipalities unchanged from the 15 Sep RUD cut"
+    "as_of": "28 Sep 2026 (UNGRD, via IOM Colombia Earthquake Response Situation Report #12, 29 Sep, posted 1 Oct): 335 deaths, 105 missing, 364 rescued, 4,516 injured, 486,917 affected, 206,931 homes damaged and 36,478 destroyed, 500 municipalities in 16 departments - all unchanged from the 16 Sep cut. RUD as of 2 Oct (UNGRD on X, 2 Oct 15:09 COT): 364,664 families / 778,285 people."
   },
   "event": {
     "origin_time_local": "10 Aug 2026, 07:34:28 COT (UTC-5)",
