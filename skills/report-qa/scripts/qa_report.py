@@ -60,28 +60,44 @@ def check_ldi(doc):
         m = re.search(pat, where)
         return int(m.group(1)) if m else None
 
-    verified = _num(r"全\s*(\d+)\s*件検証", all_text) or _num(r"全\s*(\d+)\s*件", all_text)
-    upd_head = _num(r"更新必要\s*(\d+)\s*件", all_text)          # サブヘッダ
-    foot = next((p for p in paras if p.startswith("--- 更新必要")), "")
-    upd_foot = _num(r"更新必要\s*(\d+)\s*件", foot)
-    skip_foot = _num(r"スキップ\s*(\d+)\s*件", foot)
+    # 実物の文面（2026-10-06 の LDI_CMS_Reports を実機で確認）に合わせる。
+    #
+    #   サブヘッダ: 作成日: … ／ LDI全13Key検証 → 更新必要 全2件・スキップ 11件 ／ 自動生成
+    #   フッタ    : --- 以上 2件（更新必要 2件：既存Key更新2件 / スキップ 11件）---
+    #
+    # SKILL.md の「出力フォーマット（固定）」とは文面が違う（仕様は
+    # 「全N件検証」「--- 更新必要 X件 / スキップ Y件 ---」）。**実物のほうが運用されている。**
+    # どちらでも読めるようにする。
+    #
+    # 2026-10-06 以前の版は `全\s*(\d+)\s*件` で期待件数を取っていた。実物では
+    # これが「更新必要 **全2件**」の中の 2 に当たって**偶然通っていた。**
+    # 「LDI全13Key検証」のほうは `件` が無いので当たらない。
+    # 仕様どおりの「全13件検証」に書き換えられた日に、黙って FAIL に変わる作りだった。
+    verified = (_num(r"全\s*(\d+)\s*(?:件|Key)\s*検証", all_text)
+                or _num(r"LDI\s*全\s*(\d+)", all_text))
 
-    if upd_head is None and upd_foot is None:
+    # **「どれか1つが合っている」では足りない。** サブヘッダとフッタに同じ件数が
+    # 2回3回出てくるので、**全部が実エントリ数と一致していること**を見る。
+    # 2026-10-06、最初の実装は最初に見つかった1つだけを見ており、
+    # フッタだけを書き換えた文書を合格にしていた（実測で判明）。
+    upd_all = [int(x) for x in re.findall(r"更新必要\s*全?\s*(\d+)\s*件", all_text)]
+    upd_all += [int(x) for x in re.findall(r"以上\s*(\d+)\s*件", all_text)]
+    skip_foot = _num(r"スキップ\s*(\d+)\s*件", all_text)
+    upd = upd_all[0] if upd_all else None
+
+    if upd is None:
         res.append(result("件数整合", "FAIL",
-                          f"「更新必要 X件」が読めない（実エントリ{entries}件）。サブヘッダとフッタを確認"))
+                          f"更新必要件数が読めない（実エントリ{entries}件）。"
+                          "サブヘッダかフッタに「更新必要 X件」または「以上 X件」を書くこと"))
+    elif any(u != entries for u in upd_all):
+        res.append(result("件数整合", "FAIL",
+                          f"文書内の更新必要件数の表記 {sorted(set(upd_all))} が"
+                          f"実エントリ{entries}件と合わない"))
     else:
-        bad = []
-        if upd_head is not None and upd_head != entries:
-            bad.append(f"サブヘッダ{upd_head}≠実{entries}")
-        if upd_foot is not None and upd_foot != entries:
-            bad.append(f"フッタ{upd_foot}≠実{entries}")
-        if bad:
-            res.append(result("件数整合", "FAIL", " / ".join(bad)))
-        else:
-            detail = f"更新必要{upd_head if upd_head is not None else upd_foot}=実{entries}"
-            if verified is not None:
-                detail += f" / 全{verified}件検証"
-            res.append(result("件数整合", "PASS", detail))
+        detail = f"更新必要{upd}=実{entries}"
+        if verified is not None:
+            detail += f" / 全{verified}件検証"
+        res.append(result("件数整合", "PASS", detail))
         # 全件数が内訳と合わないのは注意喚起にとどめる（検証総数の定義に幅がある）
         if verified is not None and skip_foot is not None and verified < entries + skip_foot:
             res.append(result("検証総数", "WARN",
