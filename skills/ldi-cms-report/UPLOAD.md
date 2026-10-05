@@ -16,8 +16,26 @@ ldi-cms-report/
   scripts/build_ldi_docx.py       ← 新規
   scripts/ldi_state.py            ← 新規
   scripts/fetch_adrc.js           ← 新規（ブラウザの中で動かす。DOM依存部分は未検証）
-  _state/README.md                ← 新規（台帳の置き場）
 ```
+
+## どこで動くか
+
+| もの | 走る場所 | 要るもの |
+|---|---|---|
+| `build_ldi_docx.py` | **Cowork セッション**（`python` で実行） | python-docx |
+| `qa_report.py` | **Cowork セッション** | python-docx |
+| `ldi_state.py` | **Cowork セッション** | なし（標準ライブラリのみ） |
+| `fetch_adrc.js` | **ブラウザの中**（`javascript_tool`） | 組み込みブラウザ / Chrome MCP |
+
+`docx` スキルが同じやり方で `python scripts/...` を日常的に動かしているので、
+python と python-docx はある前提でよい。無ければスクリプトが
+`STATUS: FAIL no-python-docx` と `pip install python-docx` を出して止まる。
+
+**台帳（`ldi_seen.json`）はスキルのフォルダに置かない。残らない。**
+同期スキルのフォルダは毎回アカウントから配られるもので、書き込んだものは次の朝に無い。
+docx を毎日置いている `C:\Users\arakida\OneDrive - adrc.asia\LatestDisasterInfo\`
+（`request_cowork_directory` でマウント）に置く。`--dir` で渡す。
+見つからないときはスクリプトが**「この場所は残らない」と警告する。**
 
 ### 2. `report-qa`
 

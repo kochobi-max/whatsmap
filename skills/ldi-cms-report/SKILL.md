@@ -395,8 +395,14 @@ await (await fetch(`https://api.reliefweb.int/v2/reports?appname=${APP}`,
 **まず、前回までに使った記事を確認する。**
 
 ```bash
-python skills/ldi-cms-report/scripts/ldi_state.py --show
+python skills/ldi-cms-report/scripts/ldi_state.py --dir "<マウントしたLatestDisasterInfo>" --show
 ```
+
+**台帳は docx と同じフォルダに置く。**
+スキルのフォルダに書いても次の朝には残らない（毎回アカウントから配られるものなので）。
+残るのは `C:\Users\arakida\OneDrive - adrc.asia\LatestDisasterInfo\` だけである。
+`--dir` を省くとこのパスを自動で探し、見つからなければ
+**「この場所は残らない」と警告を出す。**
 
 定期タスクは毎回まっさらなセッションで始まるので、前日の記憶が残らない。
 この台帳が無いと毎朝同じ記事を読み直す。
@@ -811,13 +817,14 @@ Superhuman の `create_or_update_draft`（`body` に完成HTMLを渡す）→ `s
 ### Step 11: 台帳を残す（省略不可・2026-10-06 追加）
 
 ```bash
-python skills/ldi-cms-report/scripts/ldi_state.py --record <判定JSON>
+python skills/ldi-cms-report/scripts/ldi_state.py --dir "<マウントしたLatestDisasterInfo>" --record <判定JSON>
 ```
 
 **メールを送らなかった日（更新0件・QA FAILで止めた日）も記録する。**
 読んだ記事は読んだのであり、翌朝に読み直す理由は無い。
 
-同期スキルの `_state/` に残るので、**次の朝のセッションがそれを読む。**
+**docx を置いたのと同じフォルダに `ldi_seen.json` が残る。**
+「この場所は残らない」と出たら台帳は効いていない。報告に書くこと。
 
 ---
 

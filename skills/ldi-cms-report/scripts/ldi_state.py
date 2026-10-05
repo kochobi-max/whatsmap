@@ -36,7 +36,43 @@ from datetime import date
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SKILL = os.path.dirname(HERE)
-LEDGER = os.path.join(SKILL, "_state", "ldi_seen.json")
+
+# 台帳をどこに置くか
+# ------------------
+# **スキルのフォルダに書いても残らない。** 2026-10-06 に気づいた。
+#
+# このスキルは Cowork 環境で動く。セッションはリポジトリを clone しないし、
+# アカウントから同期されたスキルのフォルダは**毎回配られるもの**で、
+# こちらが書いたものが次の朝まで残る場所ではない。
+#
+# 残るのは、docx を毎日置いている場所だけである。
+#
+#   C:\Users\arakida\OneDrive - adrc.asia\LatestDisasterInfo\
+#
+# ここは OneDrive の同期フォルダで、Cowork からは `request_cowork_directory` で
+# マウントして書き込んでいる（SKILL.md 上部「共有フォルダ」）。
+# **docx が残っているのだから、台帳も残る。** 同じ場所に置く。
+CANDIDATES = [
+    os.environ.get("LDI_STATE_DIR"),
+    r"C:\Users\arakida\OneDrive - adrc.asia\LatestDisasterInfo",
+    "/mnt/user-data/outputs/LatestDisasterInfo",
+    r"C:\Users\arakida\LatestDisasterInfo",
+]
+
+
+def ledger_path(explicit=None):
+    """台帳のパスと、それが残る場所かどうかを返す。"""
+    if explicit:
+        return os.path.join(explicit, "ldi_seen.json"), True
+    for d in CANDIDATES:
+        if d and os.path.isdir(d):
+            return os.path.join(d, "ldi_seen.json"), True
+    # **見つからなかったことを黙らない。** ここに書いても次の朝には無い。
+    return os.path.join(SKILL, "_state", "ldi_seen.json"), False
+
+
+LEDGER = None          # main() で決める
+PERSISTS = False
 
 
 def load():
@@ -60,6 +96,11 @@ def save(d):
 def show(d):
     keys = d["keys"]
     print("── 前回までに使った記事  （%s）" % LEDGER)
+    if not PERSISTS:
+        print("   ⚠ **この場所は次の朝まで残らない。**"
+              " OneDrive の LatestDisasterInfo が見えていない。")
+        print("     `request_cowork_directory` でマウントしてから、"
+              "`--dir <マウント先>` を付けて呼び直すこと。")
     if not keys:
         print("   台帳が空。初回、または定期タスクが台帳をコミットしていない。")
         print("   **「前回と同じ」と判断できないので、今回はすべて読む。**")
@@ -80,11 +121,14 @@ def show(d):
 
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("--dir", help="台帳を置くフォルダ（既定: OneDrive の LatestDisasterInfo）")
     g = ap.add_mutually_exclusive_group(required=True)
     g.add_argument("--show", action="store_true")
     g.add_argument("--seen", metavar="URL")
     g.add_argument("--record", metavar="JSON")
     a = ap.parse_args()
+    global LEDGER, PERSISTS
+    LEDGER, PERSISTS = ledger_path(a.dir)
     d = load()
 
     if a.show:
@@ -127,8 +171,12 @@ def main():
         n += 1
     save(d)
     print("   %d件を台帳に書いた（%s）" % (n, today))
-    print("   **送信タスクと同じく、_state/ をコミットしてプッシュすること。**")
-    print("   押し忘れると、翌朝また同じ記事を読み直す。")
+    print("   置いた場所: %s" % LEDGER)
+    if PERSISTS:
+        print("   docx と同じフォルダなので、次の朝のセッションから読める。")
+    else:
+        print("   ⚠ **この場所は残らない。** 翌朝また同じ記事を読み直すことになる。")
+        print("     OneDrive の LatestDisasterInfo をマウントして `--dir` で指定し直すこと。")
     print("STATUS: RECORDED %d" % n)
     return 0
 
