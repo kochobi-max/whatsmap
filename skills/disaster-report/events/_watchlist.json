@@ -68,6 +68,68 @@
       "sources": [
         "https://sentinel-asia.org/"
       ]
+    },
+    {
+      "id": "SA-00661",
+      "country_ja": "タイ",
+      "country_en": "Thailand",
+      "iso3": "THA",
+      "adrc_member": true,
+      "criteria_set": "ADRC加盟国",
+      "hazard_ja": "洪水",
+      "hazard_en": "Flood",
+      "requested": "2026-09-26",
+      "decision": "not-covered",
+      "decided_on": "2026-10-07",
+      "decided_by": "荒木田",
+      "decision_ja": "現時点では基準を満たさず、大規模災害レポート化は行わない。",
+      "why_not_ja": "センチネルアジアのEO要請は出ているが、基準を満たすと確認できていない。",
+      "reconsider_if": {
+        "deaths_at_least": 100,
+        "magnitude_at_least": 7.0,
+        "charter_activated": true,
+        "adrc_is_requester": true,
+        "jdr_dispatched": true
+      },
+      "observed": {
+        "deaths": null,
+        "as_of": null,
+        "note_ja": "判断時点で公式の死者数を確認していない。次に数値が分かった時点で埋めること。"
+      },
+      "sources": [
+        "https://sentinel-asia.org/"
+      ]
+    },
+    {
+      "id": "SA-00662",
+      "country_ja": "ミャンマー",
+      "country_en": "Myanmar",
+      "iso3": "MMR",
+      "adrc_member": true,
+      "criteria_set": "ADRC加盟国",
+      "hazard_ja": "洪水・地滑り",
+      "hazard_en": "Flood / Landslide",
+      "requested": "2026-10-01",
+      "decision": "not-covered",
+      "decided_on": "2026-10-07",
+      "decided_by": "荒木田",
+      "decision_ja": "現時点では基準を満たさず、大規模災害レポート化は行わない。",
+      "why_not_ja": "センチネルアジアのEO要請は出ているが、基準を満たすと確認できていない。",
+      "reconsider_if": {
+        "deaths_at_least": 100,
+        "magnitude_at_least": 7.0,
+        "charter_activated": true,
+        "adrc_is_requester": true,
+        "jdr_dispatched": true
+      },
+      "observed": {
+        "deaths": null,
+        "as_of": null,
+        "note_ja": "判断時点で公式の死者数を確認していない。次に数値が分かった時点で埋めること。"
+      },
+      "sources": [
+        "https://sentinel-asia.org/"
+      ]
     }
   ]
 }
