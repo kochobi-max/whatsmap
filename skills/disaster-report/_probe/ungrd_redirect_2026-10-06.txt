@@ -1,0 +1,32 @@
+2026-10-06T02:05:22Z
+== https://portal.gestiondelriesgo.gov.co/
+HTTP/1.1 200 Connection Established
+HTTP/1.1 200 OK
+Server: Microsoft-IIS/8.5
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir="ltr" lang="es-ES">
+<head id="ctl00_Head1"><meta name="GENERATOR" content="Microsoft SharePoint" /><meta http-equiv="Content-type" content="text/html; charset=utf-8" /><meta http
+== https://portal.gestiondelriesgo.gov.co
+HTTP/1.1 200 Connection Established
+HTTP/1.1 200 OK
+Server: Microsoft-IIS/8.5
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir="ltr" lang="es-ES">
+<head id="ctl00_Head1"><meta name="GENERATOR" content="Microsoft SharePoint" /><meta http-equiv="Content-type" content="text/html; charset=utf-8" /><meta http
+== http://portal.gestiondelriesgo.gov.co/
+HTTP/1.1 200 OK
+server: Microsoft-IIS/8.5
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir="ltr" lang="es-ES">
+<head id="ctl00_Head1"><meta name="GENERATOR" content="Microsoft SharePoint" /><meta http-equiv="Content-type" content="text/html; charset=utf-8" /><meta http
+== https://x.com/UNGRD
+HTTP/1.1 200 Connection Established
+HTTP/2 200 
+server: cloudflare envoy
+<!DOCTYPE html><html lang="en" dir="ltr" data-app-env="prod" data-app-version="29747cf2b081a5498d9b4f5c3a7275eaf8c36f5a"><head><meta charSet="utf-8" nonce="6A0c5bTATrJLLq4e7uOTcA=="/><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover"
