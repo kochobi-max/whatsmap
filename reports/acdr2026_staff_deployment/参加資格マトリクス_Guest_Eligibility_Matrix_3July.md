@@ -1323,3 +1323,11 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
 2. 同伴者の扱いを 1006 版のマトリクスに反映（本記録で実施）。公邸の入場は安達書記官の判断（児玉さん経由で確認中）。
 3. Dorsett 10% の件は「待ち」から外す。COSEM のメール本文は田中さんから入手して保存する。
 - 10/6 荒木田の指示（恒久、肩書）: 内閣府の林氏は日本語文書では「林室長」（国内向けの肩書。内閣府の 260928 スケジュールも同じ）、英語では「Deputy Minister for Disaster Management, Cabinet Office of Japan」。「林副大臣」は使わない。9/30 以降の本記録の「林副大臣」はこの意味で読む。
+
+### 10/6（火）午後 RT・TS の発言順リスト
+- 安達書記官主催の Teams 打合せは日程変更（児玉さん 13:28: 本日 15:30-16:00 と 10/8）。荒木田は本日 15:00 までのため 10/8 のみ出席と回答（13:33）、児玉さん了解。
+- 10/6 荒木田「現段階の RT と TS の発言順のリストをそれぞれ作成して」→ `ACDR2026_発言順_RT_TS_1006.xlsx`（2 シート）。
+  - RT: 29 枠（Part 1 21 枠＋Part 2 8 枠）を 9/29 の順序原則で並べ、登録状況で色分け。登録済み 16＝メンバー国 12（Armenia, Bhutan, Cambodia, Japan, Maldives, Pakistan, ROK, Singapore, Sri Lanka, Thailand, Turkiye, Viet Nam）＋仙台市・NZ・ADPC・Google。未登録のメンバー国 10（Bangladesh, Brunei, Fiji, India, Indonesia, Malaysia, Mongolia, Myanmar, PNG, Uzbekistan）。登録済みのみなら Part 1 は 13:03-14:03、Part 2 は 09:02-09:19。**Indonesia はシナリオに行がない**（BNPB 参加時は India の後に追加）。
+  - TS: 1 Google（Sirada 氏）、2 JAXA（松尾氏、池田さん 10/5 確定）、3 BRIN（Yenni 氏）、4 YI-Lab（Pradip 氏）、5 Uzbekistan [TBC]、6 内閣府（中根補佐の導入＋Spectee・WOTA、企業発表者は確認中）。
+  - 不一致: 10/2 所内打合せで「ウズベキスタンは TS の 2〜3 番目」としたが、シナリオと英語進行表 draft1006 は 5 番目。荒木田の判断待ち。
+- 進行シナリオ 案1006 の Day2 を修正: TS 発表 2 の JAXA を松尾氏に（「2 名から選定中」のままだった）、RT Part 2 の注記「タイ・ウズベキスタンは参加未確定」を「Thailand は登録済み（Part 1）」に。
