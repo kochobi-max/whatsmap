@@ -1355,3 +1355,7 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
   - RT の未登録国・機関（Bangladesh、Brunei、Fiji、India、Indonesia、Malaysia、Mongolia、Myanmar、PNG、Uzbekistan、ADB、AHA Centre、オンライン）は「非表示スライド」にした。登録されたら表示に戻すだけで使える。発言者の氏名は Japan（中根補佐）と仙台市（高橋副市長）のみ。他は国名だけを大きく出し、氏名はノートに「名簿確定後に追記」。
   - 未確定の登壇者名は入れていない（SCDF 閉会挨拶、Uzbekistan、Spectee・WOTA の発表者）。各スライドのノートに時刻と操作の注意を日本語で記載。
   - 検証: validate PASS（2 ファイル）。LibreOffice はこの環境でテキストファイルも読めないため、Arial 互換フォントで自作のプレビューを描いて文字のはみ出しを確認（見出しの Cambria は幅の広い代替フォントで確認したので実機ではさらに余裕がある）。
+- 10/7 荒木田指摘: 右肩のロゴ（葉の形）は内閣府のもの。SIDEX-ACDR の co-brand 開催なので、バナーと同じロゴ（シンガポール国旗、SCDF、COSEM、ADRC、日本国旗）を使う。→ 荒木田が貼ったバナー画像から 5 点を切り出し（背景の街並みを白抜き、3 倍に拡大）、全スライドの右肩に並べた。青のスライドは白い角丸の帯に載せた。内閣府ロゴと「ACDR2026」の文字は削除。見出しは 24pt に下げてロゴ帯と重ならないようにした。ファイル名は同日のため 案1007 のまま上書き。validate PASS。
+  - 前回の報告の誤り: 葉のロゴを ADRC のロゴと説明していた。ADRC のロゴは地球と人の手の円形のもの。
+  - 荒木田「DAY2 の TS が抜けている」→ Day2 の 13〜26 枚目に TS（扉、発表一覧、Moderator、Co-Chair、発表 1〜6、Spectee、WOTA、Q&A、Wrap-up）があることを確認中に、荒木田が「入っていた」と訂正。
+  - ロゴは 1151px 幅のバナー画像からの切り出しのため、大きく映すと粗い。本番前に COSEM から各ロゴの原データ（SCDF、COSEM）をもらうと確実。
