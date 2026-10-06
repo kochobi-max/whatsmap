@@ -41,11 +41,22 @@
  *   failures: ["2899"]
  * }
  *
- * ## 未検証の箇所（正直に書く）
+ * ## 実機での確認（2026-10-06）
  *
- * **DOMの形に合わせた部分（下の SELECTORS と parseReports）は、実機で確認していない。**
- * クラウドから adrc.asia を開けないため、保存したページで突き合わせられなかった。
- * 初回は `failures` が出る前提で動かし、出たKeyのページ構造を見て直すこと。
+ * 実サイトの一覧上位10件（Key 2852〜2862）で、全件 extract: OK。
+ * 2859 の Report/Articles 欄を生のHTMLと1件ずつ突き合わせ、取りこぼし・混入なし。
+ * 試験台は `skills/ldi-cms-report/dev/try_fetch_adrc.js`（クラウドから curl＋jsdom で回す）。
+ *
+ * 実機で分かったこと:
+ * - 欄の途中に小見出し「Geographycal Data」があり、その下は衛星図・地図 → `section: "geo"`
+ * - **並びは新しい順とは限らない** → 最新は `latest`（報告の日付の最大値）で読む
+ * - 詳細ページは `NationCode=` が空でも開ける
+ *
+ * まだ言えないこと:
+ * - 取るのは一覧 `/latest/` の上位10件だけ。SKILL.md Step 1-B（直近120日のアーカイブ検索）は
+ *   このスクリプトの外。**両方やる**
+ * - 組み込みブラウザ / Chrome の中では未実行（ページ構造は同じなので通る見込み）
+ *
  * **「0件だった」を「更新が無い」と読まない。** 取り出せていないだけである。
  */
 (async () => {
@@ -137,11 +148,17 @@
     }
     if (!chunks.length) return { ok: false, error: "セクションの中身が空" };
 
+    // 欄の途中に小見出し「Geographycal Data」（サイト側の綴り）があり、その下は衛星図・地図。
+    // 報告と混ぜない。混ぜると地図の日付で「最新」を誤る（2026-10-06 実機で確認）。
+    const SUBSECTION_GEO = /^Geograph(y|i)cal Data$/i;
+    let section = "report";
+
     // 「ソース名 + 日付」ではじまる塊をエントリとして切る。
     // 日付の表記は複数ありうる（2026/07/16, 16 Jul 2026, 07/16 など）。
     const DATE = /(\d{4}[\/\-.]\d{1,2}[\/\-.]\d{1,2}|\d{1,2}\s+[A-Z][a-z]{2,8}\.?\s+\d{4}|\b\d{1,2}\/\d{1,2}\b)/;
     const reports = [];
     for (const c of chunks) {
+      if (SUBSECTION_GEO.test(c)) { section = "geo"; continue; }
       const m = DATE.exec(c);
       if (!m) {
         // 日付が無い塊は直前のエントリの続きとみなす
@@ -152,10 +169,19 @@
         date: m[1],
         source: c.slice(0, m.index).replace(/[\s:：,，-]+$/, "").trim() || null,
         text: c,                      // **全文をそのまま返す。切り詰めない**
+        section: section,             // "report" | "geo"（衛星図・地図）
       });
     }
     if (!reports.length) return { ok: false, error: "日付を持つエントリが取れない" };
-    return { ok: true, reports: reports };
+    // **並び順は新しい順とは限らない**（2852 で 09/08 が 09/09 より上にあった）。
+    // 最新は日付の最大値で決める。地図（geo）は数えない。
+    const ymd = (s) => { const m = /^(\d{4})[\/\-.](\d{1,2})[\/\-.](\d{1,2})$/.exec(s);
+      return m ? m[1] + "/" + m[2].padStart(2, "0") + "/" + m[3].padStart(2, "0") : null; };
+    const dated = reports.filter((r) => r.section === "report" && ymd(r.date));
+    const latest = dated.length
+      ? dated.reduce((a, b) => (ymd(b.date) > ymd(a.date) ? b : a))
+      : null;
+    return { ok: true, reports: reports, latest: latest ? { date: ymd(latest.date), source: latest.source } : null };
   }
 
   async function pool(items, worker) {
@@ -180,7 +206,7 @@
     try {
       const p = parseReports(doc(await get(r.url)));
       if (!p.ok) return Object.assign({}, r, { extract: "FAIL", error: p.error, reports: [] });
-      return Object.assign({}, r, { extract: "OK", reports: p.reports });
+      return Object.assign({}, r, { extract: "OK", latest: p.latest, reports: p.reports });
     } catch (e) {
       return Object.assign({}, r, { extract: "FAIL", error: String(e && e.message || e), reports: [] });
     }

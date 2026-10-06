@@ -51,7 +51,7 @@ SKILL.md Step 1.6 の「シェルは許可リストで拒否」（2026-09-30）�
 |---|---|---|
 | `reliefweb.int`（一覧・個別レポート・添付PDF） | **200** | **読める。**SKILL.md の「シェルは許可リストで拒否」（2026-09-30）とは食い違う。下の §4 |
 | `api.reliefweb.int` | 400 | ホストには届く。appname 無しで弾かれているだけ（承認制。SKILL.md Step 1.6 末尾） |
-| `www.adrc.asia` | **TLS 失敗**（`unable to get local issuer certificate`） | プロキシの CA を添えても同じ。サイトが中間証明書を送っていない。**検証は外さない。ブラウザで読む** |
+| `www.adrc.asia` | 素の curl は **TLS 失敗**（`unable to get local issuer certificate`） | サイトが中間証明書を送っていない（証明書1枚だけ）。**検証は外さない。** `certs/` の中間証明書を `--cacert` に足すと 200（2026-10-06） |
 | `www.ndma.gov.pk` | `Connection reset by peer` | CONNECT 403 ではない。原因未特定。NDMA の数値は ReliefWeb 経由で取る |
 | `www.gdacs.org`（API） | 200 | 読める |
 | `glidenumber.net` | 200 | 読める |
@@ -75,8 +75,10 @@ SKILL.md Step 3 の優先順に沿う。
 | 5 | 各国防災機関 | 国による | NDMA（PAK）は直接つながらない（§2）。ReliefWeb に SitRep が転載される |
 | 6 | 報道 | 発表機関名と as-of 日付が書いてあるものだけ | ティアは発表機関で決める。タイ DDPM は Nation Thailand が発表時刻つきで転載する |
 
-**LDI自身（Step 1・3.5）** は `www.adrc.asia`。TLS の都合で**ブラウザ一択**。
-`scripts/fetch_adrc.js` は実サイトの DOM で未検証（jsdom の疑似データのみ）。
+**LDI自身（Step 1・3.5）** は `www.adrc.asia`。**定期タスクではブラウザ**（シェルが外へ出られない）。対話用クラウドでは中間証明書つきの curl でも読める。
+`scripts/fetch_adrc.js` は 2026-10-06 に実サイトで確認済み（最新は `latest` で読む。並びは新しい順とは限らない）。
+対話用クラウドからは、中間証明書 `certs/globalsign_gcc_r3_dv_tls_ca_2020.pem` を `--cacert` に足せば
+**検証を外さずに curl で読める**（2029-03-18 まで有効）。
 
 **発見経路（Step 1.5・4）**
 
@@ -146,8 +148,8 @@ Grand Total 65    38      88    191     223   143     182    548
 | 項目 | 状態 |
 |---|---|
 | ~~§4 の curl 経路が Cowork 環境で通るか~~ | **通らない**（2026-10-06 実測、§2-A）。Cowork 側の許可リストを広げられるかは未調査 |
-| ADRC の中間証明書 | 対話用クラウドの許可リストに `secure.globalsign.com` を追加済み（2026-10-06）。**次に立てるセッションから効く**。取れたらリポジトリに置き、`--cacert` で ADRC を curl で読める |
+| ~~ADRC の中間証明書~~ | **取得済み**（2026-10-06）。`certs/globalsign_gcc_r3_dv_tls_ca_2020.pem` |
 | ADINet の記事の取り方 | 未検証 |
-| `fetch_adrc.js` の実DOM検証 | 未了 |
+| ~~`fetch_adrc.js` の実DOM検証~~ | **済み**（2026-10-06、`dev/try_fetch_adrc.js`）。ブラウザ内での実行だけ未確認 |
 | `www.ndma.gov.pk` の connection reset | 原因未特定 |
 | ReliefWeb API appname の申請 | 未申請（SKILL.md Step 1.6 末尾） |
