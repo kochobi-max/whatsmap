@@ -1331,3 +1331,4 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
   - TS: 1 Google（Sirada 氏）、2 JAXA（松尾氏、池田さん 10/5 確定）、3 BRIN（Yenni 氏）、4 YI-Lab（Pradip 氏）、5 Uzbekistan [TBC]、6 内閣府（中根補佐の導入＋Spectee・WOTA、企業発表者は確認中）。
   - 不一致: 10/2 所内打合せで「ウズベキスタンは TS の 2〜3 番目」としたが、シナリオと英語進行表 draft1006 は 5 番目。荒木田の判断待ち。
 - 進行シナリオ 案1006 の Day2 を修正: TS 発表 2 の JAXA を松尾氏に（「2 名から選定中」のままだった）、RT Part 2 の注記「タイ・ウズベキスタンは参加未確定」を「Thailand は登録済み（Part 1）」に。
+- 10/6 荒木田「シンガポールに共有するので英語版で」→ `ACDR2026_Speaking_Order_RT_TS_1006.xlsx`（Roundtable／Technical Session の 2 シート）。対外向けのため内部メモ（督促状況、公用旅券など）は削除。Singapore の RT 発言者、Uzbekistan、内閣府枠の企業は [TBC]（Alan Chow 氏の名は出さない）。登録済み＝Confirmed、未登録＝Not yet confirmed、ADB・AHA Centre・オンライン＝If requested。時刻は全員発言時と登録済みのみの 2 列。TS は現行シナリオどおりウズベキスタン 5 番目（荒木田の判断待ちの件は日本語版に残す）。
