@@ -1333,3 +1333,11 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
 - 進行シナリオ 案1006 の Day2 を修正: TS 発表 2 の JAXA を松尾氏に（「2 名から選定中」のままだった）、RT Part 2 の注記「タイ・ウズベキスタンは参加未確定」を「Thailand は登録済み（Part 1）」に。
 - 10/6 荒木田「シンガポールに共有するので英語版で」→ `ACDR2026_Speaking_Order_RT_TS_1006.xlsx`（Roundtable／Technical Session の 2 シート）。対外向けのため内部メモ（督促状況、公用旅券など）は削除。Singapore の RT 発言者、Uzbekistan、内閣府枠の企業は [TBC]（Alan Chow 氏の名は出さない）。登録済み＝Confirmed、未登録＝Not yet confirmed、ADB・AHA Centre・オンライン＝If requested。時刻は全員発言時と登録済みのみの 2 列。TS は現行シナリオどおりウズベキスタン 5 番目（荒木田の判断待ちの件は日本語版に残す）。
 - 10/6 荒木田「WOTA と Spectee も未確定ながら入れて」→ 英語版 TS 発表 6 を「Cabinet Office of Japan (COJ), with Spectee Inc. and WOTA Corp. [TBC]」、発表者欄「Introduction by the Cabinet Office (1 min), followed by Spectee Inc. and WOTA Corp. [presenters TBC]」、Status は Not yet confirmed に。個人名（根来氏・郷坪氏）は未確定のため入れない。
+
+### 10/7（水）朝 10/6夜の WhatsApp と 10/6 のメールの整理
+- 荒木田「ACDR2026 関連のメールも確認し、最新状況を整理して今日するべきことを列挙して」→ `今日の対応_1007.md`。
+- WhatsApp 10/6 17:46〜22:20（Sylvia⇄田中さん・児玉さん）: 空港送迎は milk run で現名簿の数で車両を予約。一般参加者は ACDR セッションと展示のみ（送迎・食事など対象外）。パスは Sylvia が全員分を登録・印刷して ADRC に渡す（受け渡しの時期・方法は未定）。一般参加者はキオスクでの自己登録案、案内メールを出す。通訳もパスが必要。KNFA（韓国消防庁）が RT・TS 出席希望 → Web 登録で可。アゼルバイジャンのビザ写真追加済み。Logistics Info Kit の修正を田中さんが 10/7 に返す。
+- メール 10/6: 児玉さん（TS: WOTA は 29 日 10:00-10:30 に SIDEX 展示者プレゼン、Spectee は途中退席の可能性、資料締切と事前打合せ）、児玉さん（日本企業の RT・TS 参加、自由席、Coffee Break の料金とメニュー）、田中さん（一般参加者向け案内の案文）、藤中さん（Hotel Mi 10/25 は S$128++／朝食付き S$141++ に値上げ、交渉せず手配）、藤中さん（カンボジア Ma Norith 氏アーリーチェックイン）、田中さん（仙台市の区分、リソースは副市長のみ）、児玉さん→中根補佐（プレスリリースは約 1 週間前、原稿は今週中に確認依頼）、宮木所長（打合せを毎週に→荒木田が毎週金曜 15:00 で設定済み）、藤本さん（Zoom Webinar パネリスト登録）、バナー（児玉さん了承、印刷へ）。
+- 下書き 3 通（未送信、スレッド内）: 田中さん宛 r-3959592548693062789（一般参加者案内の修正 4 点と英文修正案）、児玉さん宛 TS r7648257380459320605（日本の発表は 6 番目 10:50-11:05、枠内は中根補佐→Spectee→WOTA、席は前方の端、締切 10/20、企業との事前打合せなし）、児玉さん宛 r-6240106876098455529（日本企業は Web 登録で参加可、自由席 36 席を KNFA と共用、Coffee Break は 10/8 に Sylvia に確認）。
+- 判断: TS の日本の発表は 6 番目（10:50）のままで WOTA の 10:00-10:30 と重ならない。ウズベキスタンの順番の件とは独立。
+- 英語版発言順（`ACDR2026_Speaking_Order_RT_TS_1006.xlsx`）は枠内の順（Spectee→WOTA）を書いていない。共有前に変える必要はない。
