@@ -1359,3 +1359,4 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
   - 前回の報告の誤り: 葉のロゴを ADRC のロゴと説明していた。ADRC のロゴは地球と人の手の円形のもの。
   - 荒木田「DAY2 の TS が抜けている」→ Day2 の 13〜26 枚目に TS（扉、発表一覧、Moderator、Co-Chair、発表 1〜6、Spectee、WOTA、Q&A、Wrap-up）があることを確認中に、荒木田が「入っていた」と訂正。
   - ロゴは 1151px 幅のバナー画像からの切り出しのため、大きく映すと粗い。本番前に COSEM から各ロゴの原データ（SCDF、COSEM）をもらうと確実。
+- 10/7 荒木田指摘「ADRC ロゴの右側に黒い縦線」→ 原因は切り出し範囲が狭く、右端の「CENTER」の文字が途中で切れて縦線に見えていたこと。範囲を右に広げ（バナー画像 x 795〜915、上端はオレンジの帯を避けて y 30 から）切り直し、2 ファイルを再生成。validate PASS。
