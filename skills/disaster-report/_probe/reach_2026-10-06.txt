@@ -1,0 +1,63 @@
+# 新ネットワーク設定での到達確認 2026-10-06T02:03:11Z
+== EQ-2026-000146-COL
+OK  api.reliefweb.int                 HTTP 400
+OK  disasterscharter.org              HTTP 200
+OK  earthquake.usgs.gov               HTTP 200
+OK  glidenumber.net                   HTTP 200
+NG  portal.gestiondelriesgo.gov.co    HTTP 302（飛び先が許可リストに無い疑い）
+OK  reliefweb.int                     HTTP 200
+OK  sentinel-asia.org                 HTTP 200
+OK  www.gdacs.org                     HTTP 200
+OK  www.ideam.gov.co                  HTTP 200
+OK  www.sgc.gov.co                    HTTP 200
+OK  x.com                             HTTP 200
+
+SOURCES: FAIL unreachable=1/11
+届かない情報源がある。**「変化なし」と結論してはいけない。**
+止めた理由: ポリシー拒否 1件
+
+【許可リストへの追加が要る】ポリシーで拒否されている:
+   portal.gestiondelriesgo.gov.co  — HTTP 302（飛び先が許可リストに無い疑い）
+   www の有無は別のホスト名として扱われる。表示どおりの綴りで足すこと。
+exit=0
+== FF-2026-000162-NPL
+OK  api.reliefweb.int                 HTTP 400
+OK  bipadportal.gov.np                HTTP 200
+OK  dhm.gov.np                        HTTP 200
+OK  disasterscharter.org              HTTP 200
+OK  earthquake.usgs.gov               HTTP 200
+OK  glidenumber.net                   HTTP 200
+OK  icimod.org                        HTTP 200
+OK  moha.gov.np                       HTTP 200
+OK  ndrrma.gov.np                     HTTP 200
+OK  reliefweb.int                     HTTP 200
+OK  sentinel-asia.org                 HTTP 200
+OK  unosat.org                        HTTP 200
+OK  www.gdacs.org                     HTTP 200
+
+SOURCES: OK 13/13 reachable
+exit=0
+== EQ-2026-000150-IDN
+OK  api.reliefweb.int                 HTTP 400
+OK  bnpb.go.id                        HTTP 403
+OK  disasterscharter.org              HTTP 200
+OK  earthquake.usgs.gov               HTTP 200
+OK  glidenumber.net                   HTTP 200
+--  optemis.sentinel-asia.org         接続できない（curl: (60) SSL certificate problem: unable to get local issu）   （参考扱い）
+OK  reliefweb.int                     HTTP 200
+OK  sentinel-asia.org                 HTTP 200
+OK  www.antaranews.com                HTTP 200
+OK  www.bmkg.go.id                    HTTP 200
+OK  www.gdacs.org                     HTTP 200
+
+参考扱いのため、届かなくても止めない: optemis.sentinel-asia.org
+  プロファイルに「要ログイン」または「到達確認の対象外」と書いてあるもの。
+  **数値の出どころではない。** 数値はほかの情報源から取ること。
+
+SOURCES: OK 10/11 reachable
+exit=0
+== globalsign
+HTTP 200 1204
+subject=C = BE, O = GlobalSign nv-sa, CN = GlobalSign GCC R3 DV TLS CA 2020
+issuer=OU = GlobalSign Root CA - R3, O = GlobalSign, CN = GlobalSign
+notAfter=Mar 18 00:00:00 2029 GMT
