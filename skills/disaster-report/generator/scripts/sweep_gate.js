@@ -68,6 +68,31 @@ const org = s.latest_official.replace(/\d{4}-\d{2}-\d{2}/, "").trim();
 const line = "確認日：" + md(s.date_jst) + "（" + s.at_jst.slice(11) + " JST）に一次情報源を確認しました。"
   + (org ? org + " の" : "") + md(s.latest_official) + "の発表が最新で、"
   + (s.changed ? "前報から数値が動いています（下記）。" : "前報から主要な数値に変化はありません。");
+// headline.as_of が7日を超えて古ければ、日付を本文に出す（SKILL.md §5-2・荒木田さんの指示 2026-10-07）。
+// as_of は自由文なので、先頭60字の中の最初の日付（2026-09-30 / 26 Sep 2026）だけを読む。読めなければ黙らず注記する
+const MON = { jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6, jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12 };
+function asOfDate(txt) {
+  const h = String(txt || "").slice(0, 60);
+  let k = /(\d{4})-(\d{2})-(\d{2})/.exec(h);
+  if (k) return { y: +k[1], m: +k[2], d: +k[3] };
+  k = /(\d{1,2})\s+([A-Za-z]{3})[a-z]*\.?\s+(\d{4})/.exec(h);
+  if (k && MON[k[2].toLowerCase()]) return { y: +k[3], m: MON[k[2].toLowerCase()], d: +k[1] };
+  return null;
+}
+const STALE_DAYS = 7;
+const hd = JSON.parse(fs.readFileSync(file, "utf8")).meta.headline || {};
+const ad = asOfDate(hd.as_of);
+let stale = "";
+if (ad) {
+  const t = /(\d{4})-(\d{2})-(\d{2})/.exec(today);
+  const days = Math.round((Date.UTC(+t[1], +t[2] - 1, +t[3]) - Date.UTC(ad.y, ad.m - 1, ad.d)) / 86400000);
+  if (days > STALE_DAYS) {
+    stale = "数値は" + ad.m + "月" + ad.d + "日時点（" + days + "日前）で、以降の更新は見つかっていません。";
+    console.log("STALE-AS-OF: " + days + "日前（" + ad.y + "-" + String(ad.m).padStart(2, "0") + "-" + String(ad.d).padStart(2, "0") + "）");
+  }
+} else {
+  console.log("注意: headline.as_of から日付を読み取れなかった。何日前の数値か、手で確かめること。");
+}
 console.log("STATUS: SWEPT-TODAY " + glide + "  " + s.at_jst + " JST");
-console.log("MAIL_LINE: " + line);
+console.log("MAIL_LINE: " + line + stale);
 process.exit(0);
