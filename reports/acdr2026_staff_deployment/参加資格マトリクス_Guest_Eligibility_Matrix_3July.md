@@ -1375,3 +1375,8 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
 - 10/7 荒木田: ウズベキスタンの返答待ち。スライド・シナリオ等の並べ替えは返答後に行う。
 - 10/7 藤本さん（メール 09:46〜11:17）: セッション画面は COSEM の写真用背景（プロジェクター背景）を全面に使い、文字を載せる案。SIDEX-ACDR 2026 ロゴと SJ60 ロゴ（赤、日星国交 60 周年、必須）を右下に移した案を藤本さんが作成し、児玉さん了承。Sylvia さんに (1) この配置で使ってよいか、(2) 高解像度の JPEG か PNG をもらう、を依頼するよう荒木田に依頼。→ 荒木田指示で Sylvia 宛下書き（r-6420389832386460681、英語、「ACDR 2026 Banner」スレッド内、cc 児玉さん・藤本さん・事務局・Leow 氏・Jillian 氏、未送信）。添付は荒木田が手作業（画像は `進行シナリオ_0929/ACDR2026_session_backdrop_logos_lower_right.jpg` として保存、2000×1134）。
   - 影響: 背景が届いたら進行スライド（Day1・Day2）の背景を差し替える（今は ACDR2025 の背景を加工したもの）。ロゴはこの背景に含まれるので、スライド右肩のロゴ帯は外す。
+- 10/7 TS コンセプトノート更新版（`ACDR2026_TS_Concept_Note_EN_1007_池田.docx`、最終更新者 池田さん、10/7 12:49 JST）を荒木田が共有。0924 rev1.1 public との差:
+  - 発表 8 枠: Google（Sirada 氏）15 分、BRIN（Yenni 氏）15 分、YI-Lab（Pradip 氏）15 分、JAXA（松尾氏）15 分、Uzbekistan（tbd）10 分、内閣府 中根補佐 10 分、WOTA（tbd）10 分、Spectee（tbd）10 分、Q&A 10 分（11:15-11:25）、Moderator のまとめ 5 分。
+  - Moderator は「tbd」、Co-chair の行を削除。言語・形式・版の 3 行を削除。背景から Central Asia と Indonesia・Philippines の離島の段落を削除。
+  - 不一致・要確認: (1) ウズベキスタンは 5 番目（荒木田は同日 1 番目と決定、返答待ち）。(2) Moderator tbd・Co-chair なしは、アジェンダ 1002 版（Moderator SCDF、Co-Chair ADRC）、SCDF への進行表（LTC Chen が TS モデレーター、Mizan さん Co-Chair）と食い違う。(3) 肩書が池田さんの 10/5 メール・進行表と違う（松尾氏: 10/5「地球観測プログラム戦略室 室長」↔ CN「SAOC, Space Technology Directorate I」、Sirada 氏: 進行表「Product Partnership, Google Search & Gemini」↔ CN「COO, Strategic Partnership Development Manager」、Yenni 氏 Researcher↔Senior Researcher、Pradip 氏 Mr↔Dr）。(4) 背景から Central Asia を外したが、発表者にウズベキスタン（中央アジア）がいる。(5) 誤字「a parson」3 か所。(6) JAXA が 2 番目→4 番目、BRIN・YI-Lab が繰上げ。
+  - TS は池田さん・Mizan さんの担当。進行シナリオ・スライド・進行表・発言順の更新はウズベキスタンの返答後にまとめて行う。
