@@ -90,10 +90,10 @@
     ],
     "event_date": "2026-08-26",
     "swept": {
-      "date_jst": "2026-10-07",
-      "at_jst": "2026-10-07 07:36",
-      "latest_official": "NDRRMA SitRep #31 21 Sep (no newer found); Kathmandu Post 2026-10-05",
-      "changed": true,
+      "date_jst": "2026-10-08",
+      "at_jst": "2026-10-08 07:36",
+      "latest_official": "NDRRMA SitRep 2026-09-22 (ReliefWeb/OCHA 2026-09-29 cited 26 Sep cut)",
+      "changed": false,
       "_note": "mark_swept.js が書く。送信側 sweep_gate.js がこの日付を見る。手で書き換えない。"
     }
   },
