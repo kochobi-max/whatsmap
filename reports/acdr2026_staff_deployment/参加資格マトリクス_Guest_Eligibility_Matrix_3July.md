@@ -1367,3 +1367,4 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
   - 別紙１: 更新 1007、VIP ツアーを 10:30-11:45（アジェンダ 1002 版）、共同モデレーターの 2 行を削除（9/30 に置かないと決定）、TS スピーカーを現行の順（Google、JAXA、BRIN、ネパール YI-Lab、ウズベキスタン〈調整中〉、内閣府・株式会社Spectee・WOTA株式会社）、閉会を「まとめ：アジア防災センター所長」「閉会挨拶：三浦センター長、SCDF」に。
   - 別紙２: 変更なし（ファイル名のみ 1007）。
   - 未記入のまま: 発表日（内閣府は通常 1 週間前、原稿確認は児玉さん経由で今週中）、内閣府側の担当者名（〇〇）。
+- 10/7 荒木田がウェビナー登録 URL を提供（https://us02web.zoom.us/webinar/register/WN_FaH_kDC4RYWDZg3dVu5saA）→ 内閣府版・ADRC 版の 1007 案に記入（各 2 か所、同日のため上書き）。validate PASS。
