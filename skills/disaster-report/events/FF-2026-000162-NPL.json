@@ -90,9 +90,9 @@
     ],
     "event_date": "2026-08-26",
     "swept": {
-      "date_jst": "2026-10-08",
-      "at_jst": "2026-10-08 07:36",
-      "latest_official": "NDRRMA SitRep 2026-09-22 (ReliefWeb/OCHA 2026-09-29 cited 26 Sep cut)",
+      "date_jst": "2026-10-09",
+      "at_jst": "2026-10-09 07:36",
+      "latest_official": "NDRRMA 2026-09-22 (SitRep ENG 20); OCHA/UN RC Sitrep#10 29 Sep",
       "changed": false,
       "_note": "mark_swept.js が書く。送信側 sweep_gate.js がこの日付を見る。手で書き換えない。"
     }
@@ -2006,6 +2006,34 @@
       "url": "https://reliefweb.int/report/nepal/nepal-logistics-telecommunications-cluster-02-october-2026-i-1500-kathmandu-meeting-slides",
       "tier": "media",
       "_note": "開いた（2026-10-07）。会議資料のみ。関係なし。"
+    },
+    {
+      "label_en": "ReliefWeb: Direct Relief: health providers care for flood survivors",
+      "label_ja": "ReliefWeb: Direct Relief: health providers care for flood survivors",
+      "url": "https://reliefweb.int/report/nepal/offering-some-hope-and-medical-support-health-providers-care-nepals-flood-survivors",
+      "tier": "media",
+      "_note": "開いた（2026-10-08）。医療支援の現地記事。数値なし。関係なし。"
+    },
+    {
+      "label_en": "ReliefWeb: Logistics Cluster: Meeting minutes 06 Oct",
+      "label_ja": "ReliefWeb: Logistics Cluster: Meeting minutes 06 Oct",
+      "url": "https://reliefweb.int/report/nepal/nepal-meeting-minutes-06-october-2026",
+      "tier": "media",
+      "_note": "開いた（2026-10-08）。NDRRMA の状況報告は9/26以降なし、避難所は縮小中。数値なし。headline不変。"
+    },
+    {
+      "label_en": "ReliefWeb: Logistics Cluster: Coordination meeting slides 06 Oct",
+      "label_ja": "ReliefWeb: Logistics Cluster: Coordination meeting slides 06 Oct",
+      "url": "https://reliefweb.int/report/nepal/nepal-coordination-meeting-slides-06-october-2026",
+      "tier": "media",
+      "_note": "開いた（2026-10-08）。議事録と同内容。headline不変。"
+    },
+    {
+      "label_en": "ReliefWeb: Govt. Australia: Recovery and resilience package (8 Oct)",
+      "label_ja": "ReliefWeb: Govt. Australia: Recovery and resilience package (8 Oct)",
+      "url": "https://reliefweb.int/report/nepal/recovery-and-resilience-package-nepal-8-october-2026",
+      "tier": "media",
+      "_note": "開いた（2026-10-08）。豪州の追加支援15百万豪ドル、豪州人34名が所在不明。headline不変。"
     }
   ],
   "images": {
