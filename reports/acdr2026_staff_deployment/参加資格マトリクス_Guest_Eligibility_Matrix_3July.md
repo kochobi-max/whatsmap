@@ -1436,3 +1436,11 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
 - 10/8 荒木田指示で準備一覧を修正: 進行スライド最終版の補助＝Gerry、配布物はテーブルに置く、評価フォーム＝藤本、配布物・名札・マイク確認は COSEM（LO・MC）に依頼（ADRC は指示・確認）、出発前に COSEM への依頼項目を追加。
 - 10/8 荒木田: 一般参加者は ACDR の登録だけで Peridot に入れる（SIDEX の展示会パスは Hall 3 の展示会に入るときだけ必要）。田中さんの最終案（13:05、Draft Final Announcement for General Participants）は 2 点とも反映済み。追加の修正: 対象外の例に昼食を入れる、Peridot はパス不要と明記、「28 October:」の空白。
 - 10/8 荒木田: ACDR の登録で QR コードが発行され、ACDR（Peridot）と Hall 3 の展示会の両方に入れる。→ 一般参加者案内から SIDEX 展示会パスの自己登録の段落を削除し、昼食と SIDEX/FiSAC の会議は Conference/Workshop Pass の購入と説明するよう田中さんに依頼（文案を荒木田に提示）。
+
+### 10/8 午後 メンバー国 3・4 人目の 3 日目昼食
+- Sylvia（WhatsApp 14:17・14:56、メール 12:55 SGT の Logistics Kit 修正）: 3・4 人目も 28・29 日の昼食、ACDR セッション、Joint Opening は無料（振替不要）。ADRC OC 10 枠の振替は Gala のみ（OC 卓に着席）。30 日の昼食と SIDEX Conference は振替対象外で、Conference Pass の購入が必要。
+- 児玉さん（15:03 WhatsApp）: GI で 3 日間の昼食を案内済みなので、Sylvia 提案の文言は Guideline に入れない。3 人目以上の国とは個別に調整。メールでも同方針（14:40）、荒木田了承（14:41）。
+- 該当（田中さん 14:07）: 韓国 2（3 日目不参加）、トルコ 1（2 名のみの見込み）、インド 1、ベトナム 1 → 実質インド 1・ベトナム 1。
+- 藤中さん（15:07）: 30 日分も ADRC 枠で振り分ける話はなくなったのか。ADRC が提供する姿勢なら最初の案内のままでよい。→ 荒木田名の返信下書き r-5457655999708920968（Sylvia の整理、個別確認の方針、30 日出席希望者の Conference Pass〈S$250 見込み〉を ADRC が負担するかは所長判断）。
+- 判断材料: GI（加盟国向け）に「Lunch will be provided for all three days to member country participants」と記載（9/16 以降の記録）。昼食だけのパスはない（9/25）。2 名分なら約 S$500。
+- ウェザーニューズ（WCFC 協賛）: 10/14 13:00 はオンラインで参加（児玉さん判断、訪問は見送り）。
