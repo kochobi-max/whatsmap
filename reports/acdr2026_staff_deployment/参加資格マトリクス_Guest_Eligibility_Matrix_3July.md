@@ -1460,3 +1460,11 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
 - 10/8 カメラ位置・部屋の修正を他ファイルにも反映: Emcee Run Sheet draft1008（部屋 204-206、側面列 12・12、事務局は AV 卓隣 2 卓、シアター 40、カメラは U 字の内側）、シナリオ案1008 Day1 F5（カメラ U 字内、AV 卓から床配線約 12m）、持参物分担一覧 1008案（新規、カメラ行）。Run Sheet は SCDF へ送付済みの版と差分あり（10/24 版で反映）。
 - 17:01 荒木田が電源図・座席（シアター 40 の問題）・U 字 28 席を WhatsApp で送信。17:02 Sylvia: この群は ADRC＋Sylvia のグループなので、EXPO 側のグループ（Irene ほか）へ Sylvia が転送する。→ 見積とシアター席の回答待ち。
 - 10/8 配席表 最終案 10/8（Peridot 204-206）受領（`ACDR2026_配席表_最終案1008_受領.pptx`）。U 字: 左脚 Singapore×2・NZ・AUS・Azerbaijan・Bangladesh・Bhutan・Brunei・Cambodia・India、底 Indonesia・Japan・Lao PDR・Malaysia・Maldives・Mongolia、右脚（下から）Myanmar・Pakistan・PNG・ROK・Sri Lanka・Thailand・Turkiye・Uzbekistan・Viet Nam・Armenia・ADRC（三浦）＝27。Fiji は U 字から削除済み。左側面列の「Fiji?」は櫻井さんの席（荒木田 10/8）。右側面列上端に ADRC (WebCamera) 席（カメラは U 字内なので不要の可能性）。
+
+### 10/9 AV 業者への問い合わせ（Zoom のマイナスワン、ATEM Mini 持込の可否）
+- 荒木田指示: ハイブリッドのマイナスワン処理を業者に WhatsApp で確認する。業者機材で行う場合（A）と ADRC が ATEM Mini を持ち込む場合（B）の対応可否。
+- 必要な音声の流れ: 会場→Zoom は会場マイク＋発表 PC の音声で、Zoom の戻り音声を含めない（含めるとオンライン側にエコー）。Zoom→会場は Zoom PC の音声を PA の別チャンネルへ。神戸の Sentio はこの Zoom 音声を使うので、会場→Zoom の質が字幕の質に直結する。
+- これまでの依頼（9/29・10/1 の Sylvia 宛）は「ミキサーのライン出力を Zoom PC へ」「Zoom 音声の PA 戻し」で、ライン出力から Zoom の戻りを外すことは明示していない。今回の問い合わせで明示する。
+- B の構成案: 業者スイッチャーの出力（スクリーンと同じ映像）とカメラを ATEM Mini に入れ、USB で Zoom PC へ。スクリーンの切替は業者のまま。ATEM の音声入力（3.5mm）にミキサーのマイナスワン出力を入れ、HDMI に乗る音声は ATEM 側で切る。Zoom PC の音声はヘッドホン端子から業者ミキサーへ。
+- 注意: ATEM Mini の音声入力は 3.5mm のマイク入力で、ミキサーのライン出力をそのまま入れると過大になりうる。ADRC 側で XLR/TRS→3.5mm の変換（必要ならアッテネーター付き）を用意する。ATEM Mini は持参物分担一覧 1008案に未記載（持参者を決めて追加する）。HDMI キャプチャ（項目 6）は B なら不要か予備。
+- 問い合わせ文（英語、ADRC＋Sylvia のグループ。Sylvia が EXPO・業者側へ転送）を作成。見積の形や金額には触れず、対応可否と必要な接続だけを聞く。
