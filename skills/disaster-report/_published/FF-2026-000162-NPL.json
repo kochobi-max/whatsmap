@@ -1,7 +1,7 @@
 {
   "glide": "FF-2026-000162-NPL",
-  "published_at_jst": "2026-10-08 08:30",
-  "published_date_jst": "2026-10-08",
+  "published_at_jst": "2026-10-09 08:30",
+  "published_date_jst": "2026-10-09",
   "destination": "C:\\Users\\arakida\\OneDrive - adrc.asia\\LargeScaleDisasters",
   "edition": "第28報",
   "update_date": "07/10/2026",
@@ -9,28 +9,28 @@
   "files": [
     {
       "name": "ADRC_FL_NPL_Rasuwa_20260826_JA.pptx",
-      "bytes": 10080062,
-      "mtime": "2026-10-07T23:30:22.729Z"
+      "bytes": 10102764,
+      "mtime": "2026-10-08T23:30:16.553Z"
     },
     {
       "name": "ADRC_FL_NPL_Rasuwa_20260826_JA.pdf",
-      "bytes": 3315896,
-      "mtime": "2026-10-07T23:30:23.940Z"
+      "bytes": 3323316,
+      "mtime": "2026-10-08T23:30:17.634Z"
     },
     {
       "name": "ADRC_FL_NPL_Rasuwa_20260826_EN.pptx",
-      "bytes": 10833865,
-      "mtime": "2026-10-07T23:30:25.596Z"
+      "bytes": 10911253,
+      "mtime": "2026-10-08T23:30:18.581Z"
     },
     {
       "name": "ADRC_FL_NPL_Rasuwa_20260826_EN.pdf",
-      "bytes": 3189464,
-      "mtime": "2026-10-07T23:30:26.446Z"
+      "bytes": 3201075,
+      "mtime": "2026-10-08T23:30:19.133Z"
     }
   ],
   "verified": "manifest",
-  "dist_built_at_jst": "2026-10-08 07:39",
-  "dist_built_date_jst": "2026-10-08",
+  "dist_built_at_jst": "2026-10-09 07:38",
+  "dist_built_date_jst": "2026-10-09",
   "task": {
     "registered": true,
     "start_time": "08:30",
