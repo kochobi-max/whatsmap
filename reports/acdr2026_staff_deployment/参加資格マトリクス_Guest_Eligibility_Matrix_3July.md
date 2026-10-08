@@ -1444,3 +1444,4 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
 - 藤中さん（15:07）: 30 日分も ADRC 枠で振り分ける話はなくなったのか。ADRC が提供する姿勢なら最初の案内のままでよい。→ 荒木田はランチの件にコメントしない（10/8 荒木田指示）。返信下書きは削除。
 - 判断材料: GI（加盟国向け）に「Lunch will be provided for all three days to member country participants」と記載（9/16 以降の記録）。昼食だけのパスはない（9/25）。2 名分なら約 S$500。
 - ウェザーニューズ（WCFC 協賛）: 10/14 13:00 はオンラインで参加（児玉さん判断、訪問は見送り）。
+- 15:33-15:36 WhatsApp: Sylvia が個別調整に「ok can」。完全な振替は何度も上に求めたが認められなかった、と。児玉さんが謝意。→ 3 日目昼食の件は児玉さんの個別調整で決着、COSEM 側との協議は終了。
