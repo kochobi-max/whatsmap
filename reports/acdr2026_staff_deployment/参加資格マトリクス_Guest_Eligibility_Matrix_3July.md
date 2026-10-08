@@ -1445,3 +1445,5 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
 - 判断材料: GI（加盟国向け）に「Lunch will be provided for all three days to member country participants」と記載（9/16 以降の記録）。昼食だけのパスはない（9/25）。2 名分なら約 S$500。
 - ウェザーニューズ（WCFC 協賛）: 10/14 13:00 はオンラインで参加（児玉さん判断、訪問は見送り）。
 - 15:33-15:36 WhatsApp: Sylvia が個別調整に「ok can」。完全な振替は何度も上に求めたが認められなかった、と。児玉さんが謝意。→ 3 日目昼食の件は児玉さんの個別調整で決着、COSEM 側との協議は終了。
+- 10/8 EXPO 図面（ACDR Workshop Floorplan 8 Oct、`ACDR_WorkShop_Floorplan_8_Oct_EXPO.pdf`）: 既存コンセント（PP）は左壁沿い（AV 卓・ADRC 事務局の脇を含む）、前方壁の舞台左右、後方壁の中央付近に 4。右側面は可動壁で PP なし。配置は U 字 28、左右側面列 各 12、教室型 30（計 82）、シアター 54、ADRC 事務局は AV 卓の隣（前方左）。業者から「追加が必要な場所を図に示せば見積を絞れる」。
+- 印付き図 `ACDR2026_Peridot_powerpoints_1008.png`: 既存で足りる＝AV 卓・事務局・後方中央カメラ（延長コードのみ）。A 左側面列＝左壁 PP から延長タップ。B 右側面列・C 教室型＝追加 PP、別行で見積、価格を見て判断。U 字は不要。
