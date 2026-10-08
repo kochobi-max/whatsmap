@@ -1420,7 +1420,7 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
 - **SC**: MC 不要、内閣府が議事進行（Plaud 要約の「TS の MC は内閣府」は誤り。荒木田が「SC のこと」と言い直している）。
 - **RT の MC**: 国名・発言者名を呼んで持ち時間を伝える形で了解。
 - **集合写真**: バナー前ではなくステージ上（スクリーン前）。対象は招待者のみ（一般参加者は除く）、メンバー国・アドバイザー（オブザーバー含むか）・招待客。COJ 代表団を入れるか、各国は団長のみか全員か → **ADRC が内部で決めて Sylvia に連絡**。所要 3〜5 分。
-- **シンガポールの RT 発言者**: 「Anancho, Director Fiano」と聞こえる（聞き取り不明瞭、要文字確認）。Sylvia は発言が必要と認識しておらず、本人に伝える。
+- **シンガポールの RT 発言者**: 音声の「Anancho, Director Fiano」は Mr Alan Chow, Director, Planning & Organisation Department, SCDF（荒木田指摘、記録上の SCDF 側候補と一致）。Sylvia は発言が必要と認識しておらず、本人に伝える。
 - **28 日 Joint Opening 後**: 自由見学は合意済み。GOH ツアーと同じブースに同時にいなければよい。Joint Opening の MC が ACDR 参加者を退出させ、隣のランチ会場で日本・SCDF ブースの時間と自由見学を案内、LO が引率。ランチ会場で Peridot へ戻る案内をする。この間、MC 2 名は Peridot で動線確認。
 - **フィールドトリップ**: 13:00 発。CDA から戻って Dorsett で着替え、徒歩でパレードへ行く時間が足りるか Sylvia が懸念。パレードは 17:30 プレ、18:00 本番（Sylvia が再確認）。MC の案内は残す（バス内でも案内）。
 - **Coffee Break・軽食**: COSEM と EXPO のパッケージ。数量と一般参加者を含むかは Sylvia が確認。MC は言及しない。
