@@ -1441,6 +1441,6 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
 - Sylvia（WhatsApp 14:17・14:56、メール 12:55 SGT の Logistics Kit 修正）: 3・4 人目も 28・29 日の昼食、ACDR セッション、Joint Opening は無料（振替不要）。ADRC OC 10 枠の振替は Gala のみ（OC 卓に着席）。30 日の昼食と SIDEX Conference は振替対象外で、Conference Pass の購入が必要。
 - 児玉さん（15:03 WhatsApp）: GI で 3 日間の昼食を案内済みなので、Sylvia 提案の文言は Guideline に入れない。3 人目以上の国とは個別に調整。メールでも同方針（14:40）、荒木田了承（14:41）。
 - 該当（田中さん 14:07）: 韓国 2（3 日目不参加）、トルコ 1（2 名のみの見込み）、インド 1、ベトナム 1 → 実質インド 1・ベトナム 1。
-- 藤中さん（15:07）: 30 日分も ADRC 枠で振り分ける話はなくなったのか。ADRC が提供する姿勢なら最初の案内のままでよい。→ 荒木田名の返信下書き r-5457655999708920968（Sylvia の整理、個別確認の方針、30 日出席希望者の Conference Pass〈S$250 見込み〉を ADRC が負担するかは所長判断）。
+- 藤中さん（15:07）: 30 日分も ADRC 枠で振り分ける話はなくなったのか。ADRC が提供する姿勢なら最初の案内のままでよい。→ 荒木田はランチの件にコメントしない（10/8 荒木田指示）。返信下書きは削除。
 - 判断材料: GI（加盟国向け）に「Lunch will be provided for all three days to member country participants」と記載（9/16 以降の記録）。昼食だけのパスはない（9/25）。2 名分なら約 S$500。
 - ウェザーニューズ（WCFC 協賛）: 10/14 13:00 はオンラインで参加（児玉さん判断、訪問は見送り）。
