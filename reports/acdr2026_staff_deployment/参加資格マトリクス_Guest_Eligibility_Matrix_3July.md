@@ -1435,3 +1435,4 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
 - 田中さん宛追記下書き r-72458430630273093（一般参加者のパスは 1 方式: リンク登録→QR メール→Hall 3 で印刷、展示見学は児玉さん案の表記で可）。
 - 10/8 荒木田指示で準備一覧を修正: 進行スライド最終版の補助＝Gerry、配布物はテーブルに置く、評価フォーム＝藤本、配布物・名札・マイク確認は COSEM（LO・MC）に依頼（ADRC は指示・確認）、出発前に COSEM への依頼項目を追加。
 - 10/8 荒木田: 一般参加者は ACDR の登録だけで Peridot に入れる（SIDEX の展示会パスは Hall 3 の展示会に入るときだけ必要）。田中さんの最終案（13:05、Draft Final Announcement for General Participants）は 2 点とも反映済み。追加の修正: 対象外の例に昼食を入れる、Peridot はパス不要と明記、「28 October:」の空白。
+- 10/8 荒木田: ACDR の登録で QR コードが発行され、ACDR（Peridot）と Hall 3 の展示会の両方に入れる。→ 一般参加者案内から SIDEX 展示会パスの自己登録の段落を削除し、昼食と SIDEX/FiSAC の会議は Conference/Workshop Pass の購入と説明するよう田中さんに依頼（文案を荒木田に提示）。
