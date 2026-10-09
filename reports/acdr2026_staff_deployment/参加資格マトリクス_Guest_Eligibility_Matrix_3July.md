@@ -1515,3 +1515,11 @@ YI-Lab 宛は宛名（Mr Pradip Khatiwada, Founder & Executive Director, Youth I
 - 10/9 acdr2026-context にプロジェクトスキル acdr2026-whatsapp-sync が追加された。実行には PC リンクと Claude in Chrome が要り、このクラウドセッションでは不可。取り込みは PC 側のセッションで行い、こちらは pull して読む。
 - 10/9 荒木田「名札リストを作って。藤本さんにチェックしてもらう」→ `ACDR2026_名札リスト_NameTents_案1009.xlsx`（80 枚: U 字 27、側面列 左 12・右 9、教室型 20、前方卓 12。列: Day、Area、Position、Line 1＝国名・組織名、Line 2＝氏名〈ADRC・リソース・TS 登壇者・JICA・東北大・前方卓のみ〉、Flag〈国名の札のみ Y〉、H 列＝所内メモ〈送付時削除〉）。元資料: 配席表 案1009、参加者リスト（田中さん 10/2 送付の Tentative Participant List、最新シートは 9/16）、RT 登録、TS 時間割。名簿 9/16 で SAKURAI Noriko＝Invited General、JICA DRR Policy Advisor to Fiji を確認。要確認: 9/16 以降の差替え、北本理事の英文肩書、ADPC 4 名に側面列 2 席、TS 登壇者 8 名に右卓 6 席（日本 3 名は教室型 1 列目から登壇案）、SC の前方席。藤本さん宛確認依頼メール下書き（r-2657433006841482425、添付付き、署名なし、未送信）。Sylvia へは 10/13 までに送付。
 - 10/9 運用変更: Gmail の create_draft は attachments（base64）で添付できる（以前の「添付は荒木田が手作業」は未確認のまま引き継いでいた）。数百 KB までの xlsx・docx は下書きに直接添付する。大きなファイル（pptx、図面 PDF など）は手作業か共有リンク。
+
+### 10/9 昼 メールチェック（開会挨拶・参加者リスト 10/9）
+- 児玉さん 11:36（宮木所長・荒木田宛）: 内閣府 中根さんから林室長の開会挨拶の原案（日英、3分以内、「今日中に」）と児玉さんの校正案（変更履歴）。保存: `開会挨拶/林室長_開会挨拶_原案_1009_受領.docx`、`開会挨拶/林室長_開会挨拶_児玉校正案_1009_受領.docx`。校正案は英語の改善として妥当（約400語）。→ 返信下書き（r8599328715981485393、スレッド内、to 児玉さん、cc 宮木所長、未送信）: 冒頭「Thank you Chair.」は MC の紹介で登壇するので「Thank you.」に、呼びかけに SCDF 長官・三浦センター長を加えるかを内閣府に検討依頼、「of the Asian Disaster Reduction Center」、テーマ引用後のピリオド、持ち時間は約3分。
+- 持ち時間の反映: 英語進行表 draft1009（2か所）と進行シナリオ 案1009（4か所）の林室長「4〜5分」を「約3分」に。Opening は長官5・林3・センター長4で 12:45-13:00 に収まる。
+- 藤中さん 11:35（adrc_staff 宛）: `Participant_List_20261009_藤中_受領.xlsx`（99名、うち現地 87）。名札リスト・配席表と照合した結果: (1) 内閣府代表団が未登録、(2) TS のウズベキスタン・WOTA・Spectee が未登録、(3) フィジー Boseiwaqa 氏が Member Onsite のまま（10/8 にオンラインへ変更）、(4) インドネシア（BNPB）未登録だが U 字に席、(5) 誤字（Mininstry、Cheif、Environtment）。→ 返信下書き（r7284015479887938907、スレッド内、to 藤中さん、cc 事務局、未送信）。
+- 藤中さん 11:27: ADPC は Perwaiz 氏・Peeranan 氏が不参加、Weerapon Sripongchai 氏・Apitsada Wetchakit 氏が参加。返信不要。
+- `ACDR2026_名札リスト_NameTents_案1009.xlsx` を名簿 10/9 で更新: ADPC 2名の氏名（側面列2席で足りる）、北本理事「Board Member」、JICA 西川 Senior Advisor、ROK は MOIS 4名（KNFA は一般参加で自由席）、BRIN Yenni 氏の肩書は名簿で Researcher【要確認】、インドネシア・内閣府は未登録とメモ。藤本さん宛の確認依頼下書き（r-2657433006841482425）は荒木田が手を入れているため触っていない。添付していれば旧版なので差し替えが要る。
+- 名簿上の Singapore は 7 名（Commissioner、Alan Chow、Adrian Chong、Zhi Wei Tay、Yong Kai Chen〈MC/モデレーター〉、COSEM 2）。名札は U 字 2・側面 2。席が足りるかは COSEM 側の判断。
