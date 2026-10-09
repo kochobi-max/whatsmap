@@ -90,9 +90,9 @@
     ],
     "event_date": "2026-08-26",
     "swept": {
-      "date_jst": "2026-10-09",
-      "at_jst": "2026-10-09 07:36",
-      "latest_official": "NDRRMA 2026-09-22 (SitRep ENG 20); OCHA/UN RC Sitrep#10 29 Sep",
+      "date_jst": "2026-10-10",
+      "at_jst": "2026-10-10 07:36",
+      "latest_official": "NDRRMA SitRep #31 2026-09-21 (OCHA SitRep 10, 2026-09-29)",
       "changed": false,
       "_note": "mark_swept.js が書く。送信側 sweep_gate.js がこの日付を見る。手で書き換えない。"
     }
@@ -2034,6 +2034,13 @@
       "url": "https://reliefweb.int/report/nepal/recovery-and-resilience-package-nepal-8-october-2026",
       "tier": "media",
       "_note": "開いた（2026-10-08）。豪州の追加支援15百万豪ドル、豪州人34名が所在不明。headline不変。"
+    },
+    {
+      "label_en": "ReliefWeb: UNICEF: Nepal: A long road to recovery (9 Oct)",
+      "label_ja": "ReliefWeb: UNICEF: Nepal: A long road to recovery (9 Oct)",
+      "url": "https://reliefweb.int/report/nepal/nepal-long-road-recovery",
+      "tier": "media",
+      "_note": "開いた（2026-10-10）。UNICEF声明。子ども32,000人超が被災、子どもの死者84人、行方不明5,285人（既存headlineと同値）。headline不変。"
     }
   ],
   "images": {
